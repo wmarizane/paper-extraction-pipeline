@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "total_polymers_found": 2,
+    "validated_polymers": 2,
+    "main_polymers": 1,
+    "total_paragraphs": 24,
+    "extracted_conditions": 0,
+    "processing_time_seconds": 0.4243028163909912,
+    "main_polymers_list": [
+      "polyisoprene"
+    ],
+    "llm_extraction": {
+      "llm_available": true,
+      "chunks": 3,
+      "llm_calls": 4,
+      "conditions": 0,
+      "parse_failures": 0,
+      "mode": "dynamic",
+      "columns_catalog": 0,
+      "consensus_min": 1,
+      "models": [
+        "qwen3:14b"
+      ],
+      "used": true,
+      "model": "qwen3:14b"
+    },
+    "output_mode": "compact",
+    "llm_postprocess": {
+      "used": false,
+      "reason": "empty"
+    }
+  },
+  "LCCC_conditions": [],
+  "tables": {
+    "conditions": [],
+    "polymers": [
+      {
+        "polymer": "polyisoprene",
+        "count": 22
+      },
+      {
+        "polymer": "polystyrene sulfonate",
+        "count": 1
+      }
+    ]
+  }
+}
