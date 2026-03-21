@@ -2,6 +2,19 @@
 .env
 .venv
 
+# project context files
+Docs
+.context
+
+# pipeline outputs (large files, generated data)
+logs/
+results/
+evaluation/
+checkpoint.json
+
+# intermediate files
+*.xml
+*.log
 
 .DS_Store
 
