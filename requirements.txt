@@ -1,1 +1,5 @@
 requests
+pydantic
+pydantic-settings
+python-dotenv
+tiktoken

@@ -55,6 +55,13 @@ Final Dataset
 
 ## Prerequisites
 
+### Development Environment
+
+**Local Development:**
+- Conda environment: `research`
+- Activate with: `conda activate research`
+- All Python dependencies are installed in this environment
+
 ### GPU Cluster Access
 
 **Login:** `ssh login_node`  

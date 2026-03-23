@@ -16,5 +16,9 @@ checkpoint.json
 *.xml
 *.log
 
+# notes (personal)
+explanation.md
+.terminal
+
 .DS_Store
 
