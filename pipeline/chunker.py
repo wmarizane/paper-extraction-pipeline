@@ -71,6 +71,30 @@ class TextChunker:
         # TEI XML namespace
         self.ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
     
+    def _clean_section_name(self, raw_name: str) -> str:
+        """
+        Clean up section names from GROBID TEI XML.
+        
+        Handles common quirks:
+        - Leading/trailing whitespace and quotes
+        - Trailing periods
+        - Empty strings
+        """
+        if not raw_name:
+            return "Unknown Section"
+        
+        # Strip whitespace and quotes
+        cleaned = raw_name.strip().strip("'\"")
+        
+        # Remove trailing period (common in GROBID output)
+        if cleaned.endswith('.'):
+            cleaned = cleaned[:-1]
+        
+        # Final cleanup
+        cleaned = cleaned.strip()
+        
+        return cleaned if cleaned else "Unknown Section"
+    
     def count_tokens(self, text: str) -> int:
         """Count tokens in text using tiktoken."""
         tokens = self.encoder.encode(text)
@@ -119,7 +143,7 @@ class TextChunker:
             # Get section name from <head> tag
             head = section.find('.//tei:head', self.ns)
             if head is not None and head.text:
-                section_name = head.text.strip()
+                section_name = self._clean_section_name(head.text)
             else:
                 section_name = "Unknown Section"
             
