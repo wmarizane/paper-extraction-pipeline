@@ -1,6 +1,7 @@
 # ignore local environment variables
 .env
 .venv
+.env.cluster
 
 # project context files
 Docs
@@ -19,6 +20,7 @@ checkpoint.json
 # notes (personal)
 explanation.md
 .terminal
+CLUSTER_GUIDE.md
 
 .DS_Store
 
