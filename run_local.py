@@ -186,9 +186,9 @@ class PipelineRunner:
     def _check_prerequisites(self):
         """Check that GROBID and Ollama are running."""
         # Check GROBID
-        if not check_grobid_server():
+        if not check_grobid_server(settings.grobid_url):
             raise RuntimeError(
-                "GROBID server not running. Start it with:\n"
+                f"GROBID server not running at {settings.grobid_url}. Start it with:\n"
                 "  docker run -d --rm -p 8070:8070 lfoppiano/grobid:0.8.0"
             )
         
