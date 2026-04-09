@@ -15,10 +15,10 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 from config import settings
-from pipeline.pdf_parser import check_grobid_server, parse_pdf_with_grobid
+from pipeline.pdf_parser import check_grobid_server, parse_pdf_with_grobid, save_tei_xml
 from pipeline.chunker import chunk_pdf
 from pipeline.llm_extractor import LLMExtractor
 
@@ -39,6 +39,7 @@ class PipelineRunner:
         """
         self.pdf_path = Path(pdf_path)
         self.pdf_name = self.pdf_path.name
+        self.tei_xml_path: Optional[Path] = None
         
         if not self.pdf_path.exists():
             raise FileNotFoundError(f"PDF not found: {self.pdf_path}")
@@ -79,19 +80,26 @@ class PipelineRunner:
             print("🔍 Stage 1/4: Checking prerequisites...")
             self._check_prerequisites()
             print("   ✅ GROBID server running")
-            print("   ✅ Ollama server running")
+            print("   ✅ LLM extractor ready")
             print()
             
             # Stage 2: Parse PDF with GROBID
             print("📖 Stage 2/4: Parsing PDF with GROBID...")
             stage_start = time.time()
             xml_content = parse_pdf_with_grobid(str(self.pdf_path))
+            self.tei_xml_path = save_tei_xml(
+                xml_content,
+                str(self.pdf_path),
+                str(settings.tei_xml_dir),
+            )
             stage_time = time.time() - stage_start
             self.metrics["stages"]["grobid_parsing"] = {
                 "time_seconds": stage_time,
-                "success": True
+                "success": True,
+                "tei_xml_path": str(self.tei_xml_path),
             }
             print(f"   ✅ PDF parsed ({stage_time:.2f}s)")
+            print(f"   Saved TEI XML: {self.tei_xml_path}")
             print()
             
             # Stage 3: Chunk text
@@ -126,7 +134,7 @@ class PipelineRunner:
             # Stage 4: Extract with LLM
             print("🤖 Stage 4/4: Extracting data with LLM...")
             stage_start = time.time()
-            results = self.extractor.extract_from_chunks(chunks)
+            results = self._extract_chunks(chunks)
             stage_time = time.time() - stage_start
             
             # Calculate extraction statistics
@@ -184,22 +192,29 @@ class PipelineRunner:
             raise
     
     def _check_prerequisites(self):
-        """Check that GROBID and Ollama are running."""
+        """Check that required services are running."""
         # Check GROBID
         if not check_grobid_server(settings.grobid_url):
             raise RuntimeError(
                 f"GROBID server not running at {settings.grobid_url}. Start it with:\n"
                 "  docker run -d --rm -p 8070:8070 lfoppiano/grobid:0.8.0"
             )
-        
-        # Check Ollama
-        if not self.extractor.test_connection():
-            raise RuntimeError(
-                f"Ollama not running or model '{settings.llm_model}' not available.\n"
-                f"Start Ollama and pull model:\n"
-                f"  ollama serve\n"
-                f"  ollama pull {settings.llm_model}"
-            )
+
+    def _extract_chunks(self, chunks):
+        """Extract data from chunks across supported extractor backends."""
+        if hasattr(self.extractor, "extract_from_chunks"):
+            return self.extractor.extract_from_chunks(chunks)
+
+        if hasattr(self.extractor, "extract_batch"):
+            return self.extractor.extract_batch(chunks)
+
+        if hasattr(self.extractor, "extract"):
+            return [self.extractor.extract(chunk) for chunk in chunks]
+
+        raise RuntimeError(
+            "Extractor does not implement a supported extraction method. "
+            "Expected one of: extract_from_chunks, extract_batch, extract."
+        )
     
     def _aggregate_results(self, chunks, results) -> Dict[str, Any]:
         """
@@ -263,6 +278,7 @@ class PipelineRunner:
                 "extraction_date": datetime.now().isoformat(),
                 "model": settings.llm_model,
                 "chunk_strategy": settings.chunk_strategy,
+                "tei_xml_path": str(self.tei_xml_path) if self.tei_xml_path else None,
                 "total_chunks": len(chunks),
                 "successful_extractions": sum(1 for r in results if r.success),
                 "total_processing_time": self.metrics["total_time_seconds"],

@@ -34,17 +34,71 @@ set -u  # Exit on undefined variable
 # Environment Setup
 # ============================================================================
 
-echo "================================"
-echo "SLURM Job Information"
-echo "================================"
-echo "Job ID: ${SLURM_JOB_ID}"
-echo "Job Name: ${SLURM_JOB_NAME}"
-echo "Node: ${SLURM_NODELIST}"
-echo "Partition: ${SLURM_JOB_PARTITION}"
-echo "CPUs: ${SLURM_CPUS_PER_TASK}"
-echo "Memory: ${SLURM_MEM_PER_NODE}MB"
-echo "Start Time: $(date)"
-echo "================================"
+# Make sure the logs directory exists
+mkdir -p logs
+mkdir -p results
+mkdir -p tei_xml
+
+# ------------------------------------------------------------------------------
+# Conda Environment Setup
+# ------------------------------------------------------------------------------
+ENV_NAME="nlp"
+
+source ~/.bashrc
+source "$(conda info --base)/etc/profile.d/conda.sh"
+
+echo ""
+echo "Activating environment '$ENV_NAME'"
+conda activate $ENV_NAME
+echo "Using conda env: $CONDA_DEFAULT_ENV"
+
+# Use explicit nlp Python to guarantee correct environment
+NLP_PYTHON=/project/wkmrzane/miniconda3/envs/nlp/bin/python
+echo "Python: $NLP_PYTHON"
+echo "Python version: $($NLP_PYTHON --version)"
+
+# Ensure required packages are installed (if not already in conda env)
+echo ""
+echo "Verifying required packages..."
+$NLP_PYTHON -m pip install --quiet --no-cache-dir -r requirements.txt lxml
+
+echo "Package verification complete"
+
+# ------------------------------------------------------------------------------
+# Navigate to project directory
+# ------------------------------------------------------------------------------
+PROJECT_DIR="/project/wkmrzane/research-assistant/paper-extraction-pipeline"
+cd "$PROJECT_DIR" || { echo "ERROR: Cannot cd to $PROJECT_DIR"; exit 1; }
+echo "Working in: $(pwd)"
+
+# ------------------------------------------------------------------------------
+# Load environment variables from .env
+# ------------------------------------------------------------------------------
+if [ -f ".env" ]; then
+    echo ""
+    echo "Loading environment variables from .env..."
+    set -a
+    source <(grep -v '^#' .env | sed 's/#.*//' | sed 's/[[:space:]]*$//')
+    set +a
+else
+    echo "WARNING: .env file not found! Using .env.example..."
+    if [ -f ".env.example" ]; then
+        cp .env.example .env
+        set -a
+        source <(grep -v '^#' .env | sed 's/#.*//' | sed 's/[[:space:]]*$//')
+        set +a
+    else
+        echo "ERROR: Neither .env nor .env.example found!"
+        exit 1
+    fi
+fi
+
+echo ""
+echo "Configuration:"
+echo "  LLM_MODEL: $LLM_MODEL"
+echo "  CHUNK_STRATEGY: $CHUNK_STRATEGY"
+echo "  CHUNK_SIZE: $CHUNK_SIZE"
+echo "  GROBID_URL: $GROBID_URL"
 echo ""
 
 # ============================================================================
@@ -62,28 +116,8 @@ echo "Python version: $(python --version)"
 echo "vLLM installed: $(python -c 'import vllm; print(vllm.__version__)')"
 echo ""
 
-# ============================================================================
-# GPU Check
-# ============================================================================
-
-echo "================================"
-echo "GPU Information"
-echo "================================"
-nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader
-echo ""
-
-# Test CUDA availability
-python << 'PYTEST'
-import torch
-print(f"CUDA available: {torch.cuda.is_available()}")
-if torch.cuda.is_available():
-    print(f"CUDA device: {torch.cuda.get_device_name(0)}")
-    print(f"CUDA version: {torch.version.cuda}")
-else:
-    print("ERROR: CUDA not available!")
-    exit(1)
-PYTEST
-
+# vLLM does direct model loading; no external model server is required.
+echo "Using direct vLLM model loading (no external inference server)."
 echo ""
 
 # ============================================================================
@@ -171,16 +205,7 @@ echo "Input directory: ${INPUT_DIR:-./inputs}"
 echo "Output directory: ${OUTPUT_DIR:-./results}"
 echo ""
 
-# Run pipeline with unbuffered output
-python -u run_local.py
-
-PIPELINE_EXIT_CODE=$?
-
-echo ""
-echo "================================"
-echo "Pipeline Execution Complete"
-echo "================================"
-echo "Exit code: ${PIPELINE_EXIT_CODE}"
+echo "Cleanup complete"
 echo ""
 
 # ============================================================================

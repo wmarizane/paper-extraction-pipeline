@@ -1,4 +1,4 @@
-"""LLM-based extraction using vLLM for GPU inference."""
+"""LLM-based extraction from scientific papers using vLLM."""
 
 import json
 import logging
@@ -38,20 +38,30 @@ class ExtractionResult:
 
 
 class LLMExtractor:
-    """Extract structured data from text chunks using vLLM."""
-
+    """
+    Extracts structured data from text using vLLM.
+    
+    This class handles:
+    - Running local inference with vLLM
+    - Sending prompts to the LLM
+    - Parsing JSON responses
+    - Retry logic for failures
+    - Error handling
+    """
+    
     def __init__(
         self,
         model_name: str = None,
         gpu_memory_utilization: float = None,
-        max_model_len: int = None,
+        max_model_len: int = None
     ):
-        """Initialize vLLM extractor.
+        """
+        Initialize the LLM extractor.
         
         Args:
-            model_name: HuggingFace model ID (e.g., "Qwen/Qwen2.5-27B-Instruct")
-            gpu_memory_utilization: Fraction of GPU memory to use (0.0-1.0)
-            max_model_len: Maximum sequence length (None = auto-detect)
+            model_name: HuggingFace model ID (default: from config)
+            gpu_memory_utilization: Fraction of GPU memory for vLLM
+            max_model_len: Optional model max sequence length override
         """
         self.model_name = model_name or settings.llm_model
         self.gpu_memory = gpu_memory_utilization or settings.vllm_gpu_memory
@@ -63,25 +73,28 @@ class LLMExtractor:
         logger.info(f"GPU memory utilization: {self.gpu_memory}")
         
         # Initialize vLLM model
-        init_start = time.time()
         self.llm = LLM(
             model=self.model_name,
             gpu_memory_utilization=self.gpu_memory,
             max_model_len=self.max_model_len,
-            trust_remote_code=True,  # Required for some models
+            trust_remote_code=True,
         )
-        init_time = time.time() - init_start
-        logger.info(f"vLLM initialization took {init_time:.2f}s")
-
-        # Sampling parameters
         self.sampling_params = SamplingParams(
             temperature=self.temperature,
             max_tokens=settings.vllm_max_tokens,
             top_p=0.95,
         )
-
-    def extract_batch(self, chunks: List[TextChunk]) -> List[ExtractionResult]:
-        """Extract data from multiple chunks in batch (efficient).
+        logger.info("LLM extractor initialized with model: %s", self.model_name)
+    
+    def _build_extraction_prompt(self, chunk: TextChunk) -> str:
+        """
+        Build a prompt for the LLM to extract data from a chunk.
+        
+        This is CRITICAL - the quality of extraction depends heavily on
+        the prompt design. We use a structured prompt that:
+        1. Explains the task clearly
+        2. Gives examples of desired output format
+        3. Asks for JSON response only
         
         Args:
             chunks: List of text chunks to process
@@ -316,8 +329,128 @@ JSON OUTPUT:"""
                     return data
                 except json.JSONDecodeError:
                     pass
+            
+            raise ValueError(f"Could not parse JSON from LLM response: {e}\nResponse: {text[:200]}")
+    
+    def extract_from_chunk(self, chunk: TextChunk) -> ExtractionResult:
+        """
+        Extract structured data from a single text chunk.
+        
+        This is the main method you'll call. It:
+        1. Builds a prompt
+        2. Sends it to the LLM
+        3. Parses the response
+        4. Retries if needed
+        5. Returns structured result
+        
+        Args:
+            chunk: Text chunk to extract from
+            
+        Returns:
+            ExtractionResult with extracted data or error info
+        """
+        start_time = time.time()
+        llm_calls = 0
+        last_error = None
+        
+        for attempt in range(self.max_retries):
+            try:
+                llm_calls += 1
+                
+                # Build prompt
+                prompt = self._build_extraction_prompt(chunk)
+                
+                # Call LLM via vLLM
+                outputs = self.llm.generate([prompt], self.sampling_params)
+                response_text = outputs[0].outputs[0].text
+                
+                extracted_data = self._parse_llm_response(response_text)
+                
+                # Success!
+                processing_time = time.time() - start_time
+                
+                return ExtractionResult(
+                    chunk_index=chunk.chunk_index,
+                    section=chunk.section,
+                    extracted_data=extracted_data,
+                    success=True,
+                    llm_calls=llm_calls,
+                    processing_time=processing_time
+                )
+                
+            except Exception as e:
+                last_error = str(e)
+                
+                if attempt < self.max_retries - 1:
+                    # Wait before retrying (exponential backoff)
+                    wait_time = 2 ** attempt
+                    logger.warning("Attempt %s failed: %s", attempt + 1, e)
+                    time.sleep(wait_time)
+                else:
+                    # Final attempt failed
+                    logger.error("All %s attempts failed for chunk %s", self.max_retries, chunk.chunk_index)
+        
+        # All retries exhausted
+        processing_time = time.time() - start_time
+        
+        return ExtractionResult(
+            chunk_index=chunk.chunk_index,
+            section=chunk.section,
+            extracted_data=None,
+            success=False,
+            error_message=last_error,
+            llm_calls=llm_calls,
+            processing_time=processing_time
+        )
+    
+    def extract_from_chunks(self, chunks: List[TextChunk]) -> List[ExtractionResult]:
+        """
+        Extract data from multiple chunks.
 
-            raise ValueError(f"Could not parse JSON: {e}")
+        Uses vLLM batch generation for throughput while preserving
+        output order with input chunks.
+        
+        Args:
+            chunks: List of text chunks to process
+            
+        Returns:
+            List of ExtractionResult objects
+        """
+        if not chunks:
+            return []
+
+        prompts = [self._build_extraction_prompt(chunk) for chunk in chunks]
+        outputs = self.llm.generate(prompts, self.sampling_params)
+
+        results: List[ExtractionResult] = []
+        for chunk, output in zip(chunks, outputs):
+            response_text = output.outputs[0].text
+            try:
+                extracted_data = self._parse_llm_response(response_text)
+                results.append(
+                    ExtractionResult(
+                        chunk_index=chunk.chunk_index,
+                        section=chunk.section,
+                        extracted_data=extracted_data,
+                        success=True,
+                        llm_calls=1,
+                        processing_time=0.0,
+                    )
+                )
+            except Exception as e:
+                results.append(
+                    ExtractionResult(
+                        chunk_index=chunk.chunk_index,
+                        section=chunk.section,
+                        extracted_data=None,
+                        success=False,
+                        error_message=str(e),
+                        llm_calls=1,
+                        processing_time=0.0,
+                    )
+                )
+
+        return results
 
 
 def extract_from_chunks(chunks: List[TextChunk], use_batch: bool = True) -> List[ExtractionResult]:
@@ -330,9 +463,68 @@ def extract_from_chunks(chunks: List[TextChunk], use_batch: bool = True) -> List
     Returns:
         List of extraction results
     """
-    extractor = LLMExtractor()
+    extractor = LLMExtractor(model_name=model_name)
+    return extractor.extract_from_chunks(chunks)
+
+
+if __name__ == "__main__":
+    """Test the LLM extractor on sample chunks."""
+    import sys
+    from pathlib import Path
+    from pipeline.pdf_parser import parse_pdf_with_grobid, check_grobid_server
+    from pipeline.chunker import chunk_pdf
     
-    if use_batch and len(chunks) > 1:
-        return extractor.extract_batch(chunks)
-    else:
-        return [extractor.extract(chunk) for chunk in chunks]
+    print("Testing LLM Extractor\n")
+    
+    # Check GROBID
+    if not check_grobid_server():
+        print("❌ GROBID server not running")
+        sys.exit(1)
+    extractor = LLMExtractor()
+    print("LLM extractor initialized\n")
+    
+    # Test on first paper
+    test_pdf = "Inputs/polymerPaper1.pdf"
+    
+    if not Path(test_pdf).exists():
+        print(f"❌ Test PDF not found: {test_pdf}")
+        sys.exit(1)
+    
+    print(f"Processing {test_pdf}...\n")
+    
+    # Get chunks
+    xml = parse_pdf_with_grobid(test_pdf)
+    chunks = chunk_pdf(xml, "polymerPaper1.pdf")
+    
+    print(f"Created {len(chunks)} chunks")
+    
+    # Extract data
+    results = extractor.extract_from_chunks(chunks)
+    
+    # Summary
+    print("\n" + "="*60)
+    print("EXTRACTION SUMMARY")
+    print("="*60)
+    
+    successful = sum(1 for r in results if r.success)
+    failed = len(results) - successful
+    total_time = sum(r.processing_time for r in results)
+    total_llm_calls = sum(r.llm_calls for r in results)
+    
+    print(f"Total chunks: {len(results)}")
+    print(f"Successful: {successful}")
+    print(f"Failed: {failed}")
+    print(f"Total LLM calls: {total_llm_calls}")
+    print(f"Total time: {total_time:.2f}s")
+    print(f"Average time per chunk: {total_time/len(results):.2f}s")
+    
+    # Show extracted data
+    print("\n" + "="*60)
+    print("EXTRACTED DATA")
+    print("="*60)
+    
+    for result in results:
+        if result.success:
+            print(f"\nChunk {result.chunk_index} ({result.section}):")
+            print(f"  Polymers: {result.extracted_data.get('polymers', [])}")
+            print(f"  Methods: {result.extracted_data.get('methods', [])}")

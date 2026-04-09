@@ -3,4 +3,5 @@ pydantic
 pydantic-settings
 python-dotenv
 tiktoken
-langchain-ollama
+vllm
+transformers>=4.57.1,<5

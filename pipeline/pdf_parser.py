@@ -3,23 +3,24 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-# Default local GROBID server URL
-GROBID_URL = "http://localhost:8070"
+from config import settings
 
-def check_grobid_server(url: str = GROBID_URL) -> bool:
+def check_grobid_server(url: str = None) -> bool:
     """Check if the GROBID server is up and running."""
+    target_url = url or settings.grobid_url
     try:
-        response = requests.get(f"{url}/api/isalive", timeout=5)
+        response = requests.get(f"{target_url}/api/isalive", timeout=5)
         return response.status_code == 200 and response.text.lower() == "true"
     except requests.RequestException:
         return False
 
-def parse_pdf_with_grobid(pdf_path: str, url: str = GROBID_URL) -> str:
+def parse_pdf_with_grobid(pdf_path: str, url: str = None) -> str:
     """
     Sends a PDF to GROBID's processFulltextDocument endpoint
     and returns the extracted TEI XML.
     """
-    endpoint = f"{url}/api/processFulltextDocument"
+    target_url = url or settings.grobid_url
+    endpoint = f"{target_url}/api/processFulltextDocument"
     
     with open(pdf_path, 'rb') as pdf_file:
         files = {
@@ -40,6 +41,28 @@ def parse_pdf_with_grobid(pdf_path: str, url: str = GROBID_URL) -> str:
             raise Exception(f"GROBID processing failed with status {response.status_code}: {response.text}")
             
         return response.text
+
+
+def save_tei_xml(xml_content: str, pdf_path: str, output_dir: str = "tei_xml") -> Path:
+    """
+    Save raw TEI XML content for future reuse and inspection.
+
+    Args:
+        xml_content: Raw TEI XML returned by GROBID
+        pdf_path: Source PDF path
+        output_dir: Directory where TEI XML files are stored
+
+    Returns:
+        Path to the saved TEI XML file
+    """
+    tei_dir = Path(output_dir)
+    tei_dir.mkdir(parents=True, exist_ok=True)
+
+    pdf_stem = Path(pdf_path).stem
+    tei_path = tei_dir / f"{pdf_stem}_tei.xml"
+
+    tei_path.write_text(xml_content, encoding="utf-8")
+    return tei_path
 
 def process_tei_xml(xml_content: str) -> str:
     """
@@ -85,7 +108,7 @@ if __name__ == "__main__":
     
     print("Checking GROBID server...")
     if not check_grobid_server():
-        print("Error: Local GROBID server is not running on localhost:8070.")
+        print(f"Error: GROBID server is not running at {settings.grobid_url}.")
         print("Please ensure you have started it via Docker.")
         sys.exit(1)
     else:
@@ -94,8 +117,10 @@ if __name__ == "__main__":
     print(f"Sending {target_pdf} to GROBID...")
     try:
         xml_result = parse_pdf_with_grobid(target_pdf)
+        tei_path = save_tei_xml(xml_result, target_pdf)
         clean_text = process_tei_xml(xml_result)
         
+        print(f"Saved TEI XML: {tei_path}")
         print("\n--- Extraction Preview ---")
         print(clean_text[:1000] + "...\n")
         print("--- End of Preview ---")
