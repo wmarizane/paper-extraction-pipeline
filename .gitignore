@@ -9,14 +9,16 @@ Docs
 
 # pipeline outputs (large files, generated data)
 logs/
-results/
 evaluation/
-tei_xml/
 checkpoint.json
 
 # intermediate files
 *.xml
 *.log
+__pycache__/
+*.pyc
+!tei_xml/
+!tei_xml/*.xml
 
 # notes (personal)
 explanation.md

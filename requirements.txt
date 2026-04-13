@@ -3,5 +3,6 @@ pydantic
 pydantic-settings
 python-dotenv
 tiktoken
-vllm
+vllm>=0.19.0,<0.20.0
 transformers>=4.57.1,<5
+openpyxl
