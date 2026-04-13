@@ -128,7 +128,7 @@ class PipelineSettings(BaseSettings):
     )
     
     llm_temperature: float = Field(
-        default=0.1,
+        default=0.0,
         ge=0.0,
         le=2.0,
         description="LLM temperature (0.0=deterministic, 1.0=creative)"

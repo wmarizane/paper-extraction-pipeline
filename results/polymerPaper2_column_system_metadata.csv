@@ -1,1 +1,6 @@
 Paper,Column*,Brand/type*,Stationary phase chemistry*,Pore size (Å)*,Dimensions*,Notes*,Source section,Source text
+Paper1,Jordi Gel DVB 500 RP,Jordi,100% poly(divinylbenzene),500,250x4.6 mm,Used in both systems A and B,Experimental,Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250x4.6 mm; particle diameter 5 mm; nominal pore size 500 A
+Paper1,Discovery HS-PEG,Supelco,silica-based PEG phase,120,250x4.6 mm,Used in both systems A and B,Experimental,"Discovery HS-PEG, silica-based PEG phase; 250x 4.6 mm; particle diameter 5 mm; nominal pore size 120 A"
+Paper1,Nucleosil 100-5 OH,Macherey-Nagel,silica-based Diol phase,100,250x4.6 mm,Used in both systems A and B,Experimental,"Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250x4.6 mm; particle diameter: 5 mm; nominal pore size 100 A"
+Paper1,Styragel HR3,waters,SEC column,N/A,300x7.8 mm,Used in SEC measurements,Experimental,"Styragel HR3 column (300x7.8 mm, waters)"
+Paper1,PLgel,Agilent,SEC column,10^4,300x7.8 mm,"Set of two columns, 10 mm particle diameter",Experimental,"set of two columns PLgel (10 mm), 10^4 A, 300x7.8 mm each (Agilent)"

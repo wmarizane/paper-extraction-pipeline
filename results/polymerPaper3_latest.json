@@ -1,38 +1,38 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper3.pdf",
-    "extraction_date": "2026-04-13T20:00:14.479133",
+    "extraction_date": "2026-04-13T20:48:59.350475",
     "model": "Qwen/Qwen3.5-35B-A3B",
     "chunk_strategy": "section",
     "tei_xml_path": "tei_xml/polymerPaper3_tei.xml",
     "total_chunks": 5,
-    "successful_extractions": 2,
+    "successful_extractions": 5,
     "total_processing_time": 0,
     "pipeline_metrics": {
       "pdf_name": "polymerPaper3.pdf",
-      "start_time": "2026-04-13T20:00:00.580303",
+      "start_time": "2026-04-13T20:48:48.218597",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "grobid_parsing": {
-          "time_seconds": 1.739281177520752,
+          "time_seconds": 1.7616081237792969,
           "success": true,
           "tei_xml_path": "tei_xml/polymerPaper3_tei.xml"
         },
         "chunking": {
-          "time_seconds": 0.8946943283081055,
+          "time_seconds": 0.8633708953857422,
           "success": true,
           "num_chunks": 5,
           "total_tokens": 1971,
           "avg_tokens_per_chunk": 394.2
         },
         "llm_extraction": {
-          "time_seconds": 11.258883953094482,
-          "success": false,
-          "successful_chunks": 2,
-          "failed_chunks": 3,
+          "time_seconds": 8.503377914428711,
+          "success": true,
+          "successful_chunks": 5,
+          "failed_chunks": 0,
           "total_llm_calls": 5,
-          "avg_time_per_chunk": 2.2517767906188966
+          "avg_time_per_chunk": 1.7006755828857423
         }
       },
       "success": false,
@@ -45,33 +45,107 @@
     }
   },
   "summary": {
-    "total_master_rows": 0,
-    "total_separation_mechanism_rows": 0,
-    "total_column_system_metadata_rows": 0
+    "total_master_rows": 2,
+    "total_separation_mechanism_rows": 2,
+    "total_column_system_metadata_rows": 1
   },
   "extracted_data": {
-    "master_table": [],
-    "separation_mechanism": [],
-    "column_system_metadata": []
+    "master_table": [
+      {
+        "paper": "Unknown",
+        "system_id": "H1",
+        "polymer_system": "PEO-b-PLLA and PLLA-b-PEO-b-PLLA block copolymers",
+        "target_at_cc": "PEO block",
+        "architecture_context": "diblock and triblock",
+        "column": "LUNA C18",
+        "stationary_phase": "reversed-phase",
+        "mobile_phase": "acetonitrile, water",
+        "composition": "60/40",
+        "units": "v/v",
+        "temp_c": "68",
+        "additives": "None",
+        "notes": "Critical condition determined by monitoring retention volumes of PEG standards",
+        "source_section": "EXPERIMENTAL SECTION",
+        "source_text": "The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v)."
+      },
+      {
+        "paper": "Paper1",
+        "system_id": "",
+        "polymer_system": "PEO-b-PLLA diblock copolymer and PLLA-b-PEO-b-PLLA triblock copolymer",
+        "target_at_cc": "PEO block",
+        "architecture_context": "diblock and triblock",
+        "column": "",
+        "stationary_phase": "reversed-phase HPLC",
+        "mobile_phase": "ACN, H2O",
+        "composition": "54:46",
+        "units": "v/v",
+        "temp_c": "54",
+        "additives": "",
+        "notes": "Critical condition for PEO block; longer PLLA block analysis required higher ACN content and temperature",
+        "source_section": "RESULTS AND DISCUSSION",
+        "source_text": "For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H 2 O ) 54:46, v/v) and raising the temperature (54 °C)"
+      }
+    ],
+    "separation_mechanism": [
+      {
+        "paper": "Unknown",
+        "system": "H1",
+        "type_of_criticality": "block criticality (PEO)",
+        "driving_variable": "temperature",
+        "non_critical_species_behavior": "Retention time depends on molecular weight",
+        "source_section": "EXPERIMENTAL SECTION",
+        "source_text": "At a given composition of the eluent, the critical condition can be found by adjusting the column temperature until the molecular weight dependence of the retention time disappears."
+      },
+      {
+        "paper": "Paper1",
+        "system": "reversed-phase HPLC",
+        "type_of_criticality": "block criticality (PEO)",
+        "driving_variable": "solvent composition and temperature",
+        "non_critical_species_behavior": "elute independently of molar mass; retention depends on total DP and asymmetry of PLLA blocks",
+        "source_section": "RESULTS AND DISCUSSION",
+        "source_text": "PLLA-b-PEO-b-PLLA triblock copolymers were separated according to the PLLA block length by reversed-phase HPLC at the critical condition of PEO block"
+      }
+    ],
+    "column_system_metadata": [
+      {
+        "paper": "Unknown",
+        "column": "LUNA C18",
+        "brand_type": "LUNA",
+        "stationary_phase_chemistry": "reversed-phase C18",
+        "pore_size_a": "100",
+        "dimensions": "250 × 4.6 mm",
+        "notes": "100-Å pore size",
+        "source_section": "EXPERIMENTAL SECTION",
+        "source_text": "a reversed-phase column (LUNA C18, 100-Å pore size, 250 × 4.6 mm)"
+      }
+    ]
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Unknown Section",
       "token_count": 98,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A short snippet titled \"Unknown Section\" discussing bl"
+      "extracted": {
+        "master_table": 0,
+        "separation_mechanism": 0,
+        "column_system_metadata": 0
+      }
     },
     {
       "chunk_index": 1,
       "section": "EXPERIMENTAL SECTION",
       "token_count": 498,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** An \"EXPERIMENTAL SECTION\" from a scientific paper desc"
+      "extracted": {
+        "master_table": 1,
+        "separation_mechanism": 1,
+        "column_system_metadata": 1
+      }
     },
     {
       "chunk_index": 2,
@@ -90,10 +164,14 @@
       "chunk_index": 3,
       "section": "RESULTS AND DISCUSSION",
       "token_count": 1011,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A section titled \"RESULTS AND DISCUSSION\" from a scien"
+      "extracted": {
+        "master_table": 1,
+        "separation_mechanism": 1,
+        "column_system_metadata": 0
+      }
     },
     {
       "chunk_index": 4,

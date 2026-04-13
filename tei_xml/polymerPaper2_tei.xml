@@ -6,8 +6,8 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 	<teiHeader xml:lang="en">
 		<fileDesc>
 			<titleStmt>
-				<title level="a" type="main" xml:id="_q8g77FE">Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions</title>
-				<funder ref="#_jcRB4sq #_bkN58ce #_q7Vm8By">
+				<title level="a" type="main" xml:id="_NGtZ4nn">Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions</title>
+				<funder ref="#_XTz3BQF #_Bc7rMQQ #_9GSPK9Q">
 					<orgName type="full">unknown</orgName>
 				</funder>
 			</titleStmt>
@@ -33,7 +33,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 								</address>
 							</affiliation>
 						</author>
-						<title level="a" type="main" xml:id="_R4QxWzX">Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions</title>
+						<title level="a" type="main" xml:id="_HchYUNZ">Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions</title>
 					</analytic>
 					<monogr>
 						<imprint>
@@ -48,7 +48,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.8.0" ident="GROBID" when="2026-04-13T20:00+0000">
+				<application version="0.8.0" ident="GROBID" when="2026-04-13T20:57+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<ref target="https://github.com/kermitt2/grobid"/>
 				</application>
@@ -57,49 +57,49 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		<profileDesc>
 			<textClass>
 				<keywords>
-					<term xml:id="_KBngf8d">Block copolymer</term>
-					<term xml:id="_Ft6qacQ">Chromatography</term>
-					<term xml:id="_UyeD8G8">Critical conditions</term>
+					<term xml:id="_EFxKt62">Block copolymer</term>
+					<term xml:id="_vjj26Mn">Chromatography</term>
+					<term xml:id="_sEe6e2A">Critical conditions</term>
 				</keywords>
 			</textClass>
 			<abstract>
-<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_grEHWDf"><p xml:id="_pRuAvuu">Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) for EO on a Diol column in acetone water 78:12 (w/w) and for PO on a poly(divinyl benzene) column in acetone water 92:8 (w/w) or on a silica based poly(ethylene glycol) phase in 45:55 (w/w). Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks. These systems allow also the identification of homopolymers. The results thus obtained are compared to those from size exclusion chromatography (SEC) with coupled density and refractive index (RI) detection, which allows the determination of the entire MMD and the chemical composition along the MMD.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_Mxgm4b8"><p xml:id="_KB44mPc">Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) for EO on a Diol column in acetone water 78:12 (w/w) and for PO on a poly(divinyl benzene) column in acetone water 92:8 (w/w) or on a silica based poly(ethylene glycol) phase in 45:55 (w/w). Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks. These systems allow also the identification of homopolymers. The results thus obtained are compared to those from size exclusion chromatography (SEC) with coupled density and refractive index (RI) detection, which allows the determination of the entire MMD and the chemical composition along the MMD.</p></div>
 			</abstract>
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">
 		<body>
-<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1." xml:id="_ScEy275">Introduction</head><p xml:id="_ychMNEb">Amphiphilic polymers contain chemically different blocks with different solubility or affinity towards other solids or liquids. Consequently, they exhibit surface activity and will be enriched at the interface between immiscible phases (which may be solid, liquid, or gaseous). Typically, the hydrophilic blocks consist of poly(ethylene oxide), while the hydrophobic blocks may be poly(propylene oxide), poly(tetrahydrofuran), a polyester such as poly(lactide, glycolide, caprolactone), etc.</p><p xml:id="_EMYwb5Q">Block copolymers of ethylene oxide and propylene oxide are in widespread use as synthetic lubricants, as emulsifiers, as defoaming agents, and in various other applications, which utilize their amphiphilic nature: The EO block is hydrophilic, and the PO block hydrophobic.</p><p xml:id="_ZVJXu6Q">Especially important are EO-PO-EO triblocks, which are often called poloxamers (the corresponding brand names are Pluronics or Synperonics). These products are produced by ethoxylation of polypropylene glycol (PPG), while PO-EO-PO triblocks are prepared by propoxylation of polyethylene glycol (PEG).</p><p xml:id="_KwFZAqK">The desired triblocks can only be formed, if the alkoxylation proceeds on both ends of the starting material. PEG contains two primary OH groups, which may react with the same probability and rate. PPG can also contain secondary OH groups, which react more slowly, and allyl end groups, which do not react at all. These allyl end groups can be present already in the starting material, but may also be formed during the alkoxylation by hydrogen abstraction from the methyl group of the growing PO chain end, which is thus terminated <ref type="bibr" target="#b0">[1]</ref>. Consequently, chain transfer may result in different side products: Homopolymers and diblocks.</p><p xml:id="_fKPRsPs">In general, EO-PO-diblocks have quite different properties than EO-PO-EO or PO-EO-PO triblocks. They show different micellization behavior <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref> and a different influence on protein adsorption <ref type="bibr" target="#b6">[7]</ref>. Similar differences exist also in other amphiphilic block copolymers, as has been shown experimentally <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref> and by Monte Carlo simulations <ref type="bibr" target="#b9">[10]</ref>.</p><p xml:id="_48sRBKN">The specification given by the producers are generally very limited: the overall molar mass and the overall composition (the average EO content), which are typically calculated from the monomer conversion in the synthesis.</p><p xml:id="_8zGbBAX">Other products are specified by the average number of EO and PO units, or by the average molar mass of the center block and the percentage of the monomer constituting the arms. All of these parameters are typically obtained just as above.</p><p xml:id="_G9unYxE">This information is, however, by far not sufficient: The properties of these products are strongly influenced by the distributions of molar mass, functionality, chemical composition, architecture, and content of homopolymers and diblocks.</p><p xml:id="_dqyYQg4">Hence, a discrimination of polymers with different architecture (e.g. di-and triblock structures) would be highly important.</p><p xml:id="_R9xWpRF">The producer, who knows the molar mass distribution of the starting material (PEG or PPG), will mainly be interested in the content of impurities (homopolymer and diblocks), and in the length of the arms he has added to the center block. The customer, however, must just rely on the information given by the producer, as it is difficult to obtain the desired information by the usual analytical techniques.</p><p xml:id="_6ud6kuE">Consequently, there is a strong need for reliable analytical methods, which allow a full characterization of such products, i.e. an independent determination of the distributions mentioned above. Typically, a two-dimensional separation will be required, in which each dimension separates according to different criteria.</p><p xml:id="_yR8C8fZ">The nature of these separations can be chromatography (liquid or supercritical fluid chromatography) or mass spectrometry (especially MALDI-TOF-MS), and combinations of these techniques. Obviously, the first dimension will always be a chromatographic separation.</p><p xml:id="_R2Zyqrs">The goal of this paper was the development of a method, which should allow a determination of homopolymers in EO-PO block copolymers, and yield information on the molar mass distribution of the individual blocks.</p></div>
-<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2." xml:id="_XStK5qA">Strategies in the separation of block copolymers</head><p xml:id="_xgcYff5">Functional polymers and oligomers can be characterized using different chromatographic techniques, which separate according to different criteria. The type of chromatographic separation is determined by the so-called interaction parameter c, which describes the interaction of a structural unit with the stationary phase <ref type="bibr" target="#b10">[11]</ref>. This parameter is negative in size exclusion chromatography (SEC) and positive in liquid adsorption chromatography (LAC). At the critical adsorption point (CAP) the interaction parameter equals zero, and the corresponding block becomes 'chromatographically invisible' <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>. This effect is utilized in liquid chromatography under critical conditions (LCCC), which allows a separation of polymer homologous series according to their functionality <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>.</p><p xml:id="_EJGUAY7">In the case of amphiphilic polymers the interaction parameters c A and c B of the individual structural units (A and B) may assume different values. Hence, the following options exist:</p><p xml:id="_RxdC6JV">If both c A and c B are negative, the molar mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. With dual detection, the chemical composition along the peak can be obtained <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>.</p><p xml:id="_Ze67REt">If both c A and c B are positive, a separation by LAC (with retention increasing exponentially with the number of repeat units) can be achieved, if one of the blocks is monodisperse. If, however, both blocks are polydisperse and c A sc B , several superimposed series of peaks will be observed, which can hardly be resolved.</p><p xml:id="_A6FwE4W">If one of the parameters is positive and the other one negative, each polymer homologous series will elute in SEC order, but far behind the void volume of the column. This mechanism, which is called liquid exclusion-adsorption chromatography (LEAC) <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>, can be utilized in the separation of monofunctional oligomers with a monodisperse adsorbing block or end group.</p><p xml:id="_qDtCyRc">If one of the interaction parameters (c A or c B ) equals zero, the corresponding block becomes 'chromatographically invisible', and a separation according to the other block can be achieved (liquid chromatography under critical conditions: LCCC). Depending of the corresponding interaction parameter, this separation may follow a SEC <ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> or LAC <ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref> mechanism.</p><p xml:id="_xER5ase">The situation becomes more complicated in the case of triblock copolymers: At the CAP for A, the triblock A-B-A behaves just like the diblock A-B; the B-A-B triblock, however, shows a completely different pattern. Even under critical conditions for the center block (A), a separation according to its size will be observed, as long as A is rather short. For higher polymers, the difference between A-B-A and B-A-B structures may be rather small, but should not be neglected <ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref>. In some cases, these differences may be sufficient to allow a discrimination of polymers with different architecture.</p><p xml:id="_ME766Y9">Applied to the characterization of poloxamers, there are different strategies, depending on their architecture, molar mass and chemical composition.</p><p xml:id="_sNagDeG">SEC yields the overall molar mass distribution (MMD); with dual detection one may obtain information on the chemical composition along the MMD <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39]</ref>. SEC is, however, not capable of discriminating mixture of diblocks, triblocks, and homopolymers! At the CAP for the EO unit, a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.</p><p xml:id="_pDMbYFu">A schematic representation is given in Table <ref type="table" target="#tab_0">1</ref>, which summarizes the (theoretically) possible situations in LCCC of EO-PO copolymers.</p><p xml:id="_6Y9xNdz">On many reversed phase columns, critical conditions for the (more polar) EO block have been found in aqueous methanol, acetone, or acetonitrile. In such a system, the less polar PO block elutes in LAC mode. Such conditions (which correspond to situation 1 in Table <ref type="table" target="#tab_0">1</ref>) have been described by several authors <ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b39">40]</ref>.</p><p xml:id="_yAMSQaM">This approach is not very favorable, if the molar mass of the PO block is high, as molecules with a long PO block may be strongly retained. This problem cannot be solved by gradient elution (regardless the nature of the gradient: Mobile phase composition or temperature <ref type="bibr" target="#b33">[34]</ref>): In both cases the critical conditions would be lost.</p><p xml:id="_BzzSrPb">One may, however, also find critical conditions for the PO unit on a RP column in a different mobile phase composition (with a higher content of organic solvent): In this case EO will elute in SEC mode.</p><p xml:id="_RngdM4W">The opposite may happen on normal phase columns: at the CAP for the EO unit, PO will elute in SEC mode, while EO will elute in LAC mode at the CAP for PO (if such critical points can be found).</p><p xml:id="_8WFUZSn">For the typical molar mass range of poloxamers, situations 1 and 4 are not very favorable, as the retention of the adsorbing block may be too high (or the resolution not sufficient).</p><p xml:id="_539fC9q">A separation of the non-critical blocks by SEC would allow not only the determination of their MMD, but also show the presence of homopolymers, as they should be separated from the block copolymers. This could be achieved, if conditions corresponding to situations 2 and 3 could be realized.</p></div>
-<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3." xml:id="_nPzZrnB">Experimental</head><p xml:id="_rWAPyCN">These investigations were performed using the density detection system DDS70 (CHROMTECH, Graz, Austria). Data acquisition and processing was performed using the software package CHROMA, which has been developed for the DDS70.</p><p xml:id="_SqN6yEr">The columns and density cells were placed in a thermostatted box, in which a temperature of 25.0 8C was maintained for all measurements on both systems (A and B).</p><p xml:id="_qc4Mxaj">In system A, the mobile phase was delivered by a JASCO 880 PU pump (Japan Spectrosopic Company, Tokyo, Japan) at a flow rate of 0.5 ml/min. Samples were injected manually using a Rheodyne 7125 injection valve (Rheodyne, Cotati, CA, USA) equipped with a 50 ml loop.</p><p xml:id="_s8NJHrA">A Bischoff 8110 refractive index (RI) detector (Bischoff, Leonberg, Germany) was connected to the DDS 70. Columns were connected to two column selection valves (Rheodyne 7060).</p><p xml:id="_pynePnX">In system B, the mobile phase was delivered by an ISCO 2350 HPLC pump and an ISCO 2360 gradient programmer (from ISCO, Lincoln, NE, USA) at a flow rate of 0.5 ml/min. Samples were injected using an autosampler Spark SPH 125 Fix (from Spark Holland, Emmen, The Netherlands) equipped with a 20 ml loop.</p><p xml:id="_D8Gz5T7">A SEDEX 45 ELSD (Sedere, France) was connected to the DDS 70. Nitrogen was used as carrier gas, and the pressure at the nebulizer was set to 1.0 bar. Evaporator temperature: 30 8C.</p><p xml:id="_JXr4763">The following columns were used in both systems: † Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 A ˚, (Jordi, Bellingham, MA, USA). † Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 A ˚(Supelco, Bellefonte, PA, USA). † Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250!4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 A ˚(Macherey-Nagel, Dueren, Germany).</p><p xml:id="_vUpFTdV">SEC measurements were performed on a modular SEC system comprising of a Gynkotek 300C pump equipped with a VICI injector (sample loop 100 ml), two column selection valves Rheodyne 7060, a density detection system DDS 70 (Chromtech, Graz, Austria) coupled with an ERC 7512 RI detector. Data acquisition and processing was performed using the software CHROMA. All SEC measurements were performed on a Styragel HR3 column (300!7.8 mm, waters) or a set of two columns PLgel (10 mm), 10 3 C10 4 A ˚, 300!7.8 mm each (Agilent) at a flow-rate of 1.00 ml/min and a column temperature of 30.0 8C. Sample concentrations were 3.0-10.0 g/l.</p><p xml:id="_9TPmY8E">The solvents (chloroform, acetone and water, both HPLC grade) were purchased from Roth (Karlsruhe, Germany) and Merck (Darmstadt, Germany).</p><p xml:id="_zqe2j8k">Mobile phases were mixed by mass and vacuum degassed, their composition was controlled by density measurement using a DMA 60 density meter equipped with a measuring cell DMA 602 M (A. Paar, Graz, Austria).</p><p xml:id="_F8AJn5q">PEG and PPG samples were purchased from Sigma-Aldrich and FLUKA (Buchs, Switzerland), EO-PO block copolymers from Sigma-Aldrich, BASF and SERVA. Several polymer samples were also provided by Dr W. Kolb AG (Hedingen, Switzerland) and by 'Blachownia' Institute of Heavy Organic Synthesis, (Ke ˛dzierzyn-Koz ´le, Poland).</p><p xml:id="_gZpznF9">An overview of the copolymer samples used in this study is given in Tables <ref type="table" target="#tab_2">2</ref> and<ref type="table" target="#tab_1">3</ref>. The parameters specified by the producers (from which the others were calculated) are printed in bold. All samples used in this study are specified as triblock copolymers. </p></div>
-<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4." xml:id="_dDtmbDu">Results and discussion</head><p xml:id="_skvxdvE">The first step in these investigations was the search for critical conditions for the individual monomer units. In the literature, there are numerous papers on critical conditions for the EO unit: most of them use C18 columns, on which a critical adsorption point (CAP) for EO is observed (typically at 25 8C) in methanol-water (80-90%) <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b40">41]</ref>, acetonitrile-water (35-45%) <ref type="bibr" target="#b28">[29,</ref><ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43]</ref>, and acetone-water (25-30%) <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b34">35]</ref>. On CN columns, critical conditions for EO have been reported in methanol-water (85%) <ref type="bibr" target="#b30">[31]</ref> or 44% at 50 8C <ref type="bibr" target="#b30">[31]</ref>), acetonitrile-water (28%) <ref type="bibr" target="#b42">[43]</ref>, and dimethoxyethane-water (21.5%) <ref type="bibr" target="#b42">[43]</ref>.</p><p xml:id="_j2R8EtR">In all of these systems, PO will elute in LAC mode. As we have shown previously <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b34">35]</ref>, a second CAP for EO exists on all silica-based C18 (and C6) columns at high acetone content (90-95%). This can be explained by beginning interaction of the polar EO unit with residual silanol groups in the stationary phase (It must be mentioned, that PEG can be separated by LAC on plain silica at high acetone content). The same conditions (C18, about 90% acetone) are also quite close to a CAP for PO.</p><p xml:id="_S6ApbU9">On polymer-based RP columns, which do not contain silanol groups, EO still elutes in SEC mode under these conditions <ref type="bibr" target="#b34">[35]</ref>. This could be shown for the Jordi column, which consists of 100% poly(divinyl benzene). On this  column, a CAP for PO is found at about 90% acetone, as can be seen in Fig. <ref type="figure">1</ref>. At a composition close to the CAP for PO, the EO unit clearly elutes in SEC mode, as is shown in Fig. <ref type="figure">2</ref>. All PEGs elute in SEC mode, only the lower ones merge with the solvent peak, which is due to the fact, that this column has a rather large pore diameter.</p><p xml:id="_pjHR6HE">Surprisingly, all PPGs elute considerably behind the solvent peak! Obviously, the available pore volume is larger for PPG than for water. This agrees with other findings, which shall be published in another paper. This behaviour is rather favorable: It can be utilized to separate poloxamers with sufficiently large EO blocks from PPG, as is shown in Fig. <ref type="figure">3</ref>.</p><p xml:id="_txRrpsY">Due to the large pore diameter, this column has only a poor selectivity for EO in lower molar mass range. Therefore, we looked for another column with similar properties.</p><p xml:id="_ETaEr7C">As can be seen in Fig. <ref type="figure">4</ref>, a CAP for PO was found on the Discovery HS-PEG column (a silica-based phase with attached PEG chains) in acetone-water with about 45% (w/w) acetone. Under these conditions EO elutes in SEC mode. This becomes also clear from Fig. <ref type="figure">5</ref>, which shows an overlay of several chromatograms of PEGs and PPGs with different molar mass and water. As can be seen, the PPGs elute roughly at the void volume, as the water peak almost coincides with the PPG peaks.</p><p xml:id="_erkBzYt">On this column, the resolution on the low molecular range is somewhat better than on the Jordi column. On the other hand, higher PPGs are no more soluble in a mobile phase composition like that corresponding to the CAP on the HS-PEG column.</p><p xml:id="_EERVHCz">Consequently, the Jordi column will perform better for samples with longer PO blocks, while the HS-PEG column is suitable for the analysis of samples with shorter PO blocks.</p><p xml:id="_suFDAky">In Fig. <ref type="figure">6</ref> several chromatograms of EO-PO block copolymers are shown, which elute at the same positions as the PEGs with corresponding molar mass (The shoulder in the Imbentin and Synperonic sample may be due to the diblock copolymer or a bimodal MMD of the PPG used as starting material). Consequently, these conditions can be utilized in the determination of the MMD of the EO blocks, as will be shown later on.</p><p xml:id="_qzH3wzY">Moreover, the presence of the homopolymer PPG can be shown by this technique. With RI detection, this is not easily achieved: A peak at the void volume (where PPG will elute) may as well be a solvent peak, which results from preferential solvation of the copolymer. Hence, the RI detector was replaced by an ELSD. Even though the peaks are considerably broader with the ELSD, it becomes clear from Fig. <ref type="figure">7</ref>, that the poloxamers do not contain PPG. Only the PO-EO-PO copolymer reaches into the region, where PPG would elute. As will be shown later on, this sample really contains traces of PPG (Fig. <ref type="figure" target="#fig_7">15</ref>).</p><p xml:id="_pAuCaw7">There remained still the question, whether it would be possible to find a system corresponding to situation 3 in Table <ref type="table" target="#tab_0">1</ref>: CAP for EO and SEC for PO. Obviously, this would require a normal phase column.</p><p xml:id="_dy32r4Q">In the literature, critical conditions for EO have been reported on amino-modified silica in methanol-water (86%) Fig. <ref type="figure">6</ref>. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone. Detection: RI. Fig. <ref type="figure">7</ref>. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone. Detection: ELSD.</p><p xml:id="_7SkcR8g">[31], acetonitrile-water (31.8%) <ref type="bibr" target="#b42">[43]</ref>, and dimethoxyethanewater (18.5%) <ref type="bibr" target="#b42">[43]</ref>. No information was, however, given about the elution behaviour of PO in these phases.</p><p xml:id="_DX62DCA">The desired conditions were now found on a Diol phase in acetone-water with about 80 wt% aetone (Fig. <ref type="figure">8</ref>): A CAP for EO exists at 78.54% (w/w) acetone.</p><p xml:id="_D8SZ8AK">As can be seen in Fig. <ref type="figure">9</ref>, PPGs elute in SEC mode, and the peaks of all PEGs (from 400 to 12000) coincide precisely. Again the peak of the 'critical component' elutes considerably behind the solvent peak! These conditions allow a separation of poloxamers according to the length of the PO blocks, and show also the presence of PEG in a sample. The samples shown in Fig. <ref type="figure">10</ref> (which should have a center block of PO with a similar length) show quite similar chromatograms, but contain obviously traces of PEG.</p><p xml:id="_TauR8mW">This can be proven by SEC with dual detection, which yields not only the overall MMD, but also the chemical composition along the peak <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>. As can be seen in Fig. <ref type="figure">11</ref>, there is indeed a lower molecular shoulder in these samples, which contains PEG. The EO content of this fraction is somewhat lower than 100%, as the MMD of the homopolymer PEG overlaps with that of the block copolymer.</p><p xml:id="_jdqPkVg">Combining the techniques described above, one may determine the total MMD by SEC (on a Styragel HR3 column in chloroform), the length of the EO block(s) at the CAP for PO (on the Jordi or the Discovery HS-PEG column), and the length of the PO block at the CAP for EO (on the Nucleosil 100-5 OH column).</p><p xml:id="_ZRPw3gg">The result thus obtained for Synperonic F 68 is shown in Fig. <ref type="figure" target="#fig_4">12</ref>.</p><p xml:id="_kVfX6Ww">On the columns used in this study, homopolymers can be identified, and the MMD of the individual blocks can be determined with good accuracy, if the blocks are long enough. As can be seen in Figs. <ref type="figure" target="#fig_5">13</ref> and<ref type="figure" target="#fig_6">14</ref>, a EO-PO-EO sample containing 50% EO can be characterized quite well. This sample does not contain the homopolymers, as can be concluded from Fig. <ref type="figure" target="#fig_5">13</ref>. The MMD of the individual blocks and the overall MMD are in good agreement with the specification and appear quite reasonable. The MMD of the EO blocks obtained on the Jordi and the Discovery column also agree very well.</p><p xml:id="_4sNMVRZ">The same procedure can also be applied to PO-EO-PO block copolymers: the PO-EO-PO sample 2700 with 40% EO already shown in Figs. <ref type="figure">6</ref> and<ref type="figure">7</ref> indeed contains traces of PPG, as can be seen in Fig. <ref type="figure" target="#fig_7">15</ref>. The MMD of the individual blocks corresponds quite well to the specification, and there is again a good agreement of the distributions of the EO block, which were obtained on the Jordi and the Discovery column (Fig. <ref type="figure" target="#fig_8">16</ref>).</p><p xml:id="_5mNSBrf">In Table <ref type="table" target="#tab_3">4</ref>, the results thus obtained are compared to the specifications of the producers. The weight averages of molar mass were taken from SEC on a set ol PLgel 10 3 C10 4 in chloroform, on the Discovery HS-PEG column in 44.52% acetone, and on the Diol column in 78.54% acetone. It must  be mentioned, that the averages do not reflect the actual molar masses as well as the maximum of the distribution functions: the averages are strongly influenced by the low molecular end of the distribution, which is sometimes hard to identify, and the poor separation power of these columns in the range below a molar mass of 1000. Anyway, a reasonable agreement is found in the samples, which do not contain the homopolymers. If a sample contains homopolymers or diblocks besides the triblocks, the sum of the EO and PO blocks is different from the overall molar mass, as can be expected.</p><p xml:id="_CBPDxkR">The really important information is, however, only reflected by the full MMD: In some cases, the PPG used as a starting material has a bimodal distribution, which will lead to a shoulder in the MMD of the PO block as well as a shoulder in the overall MMD (as determined by SEC), which should have a different EO content. This will be the subject of further investigations.  </p></div>
-<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5." xml:id="_nYdYSuv">Conclusions</head><p xml:id="_SC7tYdA">Under the conditions described above, block copolymers of ethylene oxide (EO) and propylene oxide (PO) can be characterized with respect to the length of the individual blocks. Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks. Homopolymers present in a sample (as residual starting material or as a side product from chain transfer) can be identified. Comparison of the results thus obtained with those from SEC with coupled density and RI detection (which allows the determination of the entire MMD and the chemical composition along the MMD) show good agreement between the different systems.  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2 .Fig. 3 .</head><label>23</label><figDesc xml:id="_WucE9up">Fig. 2. Chromatograms of PEGs, PPGs, and water, as obtained on the Jordi column in 92.42 wt% acetone (CAP for PO). Detection: RI.</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 4 .Fig. 5 .</head><label>45</label><figDesc xml:id="_RegApST">Fig. 4. Elution volumes of PEG and PPG with different molar mass on the HS-PEG column in acetone-water mobile phases of different composition (in wt%).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 8 .Fig. 9 .</head><label>89</label><figDesc xml:id="_mfvtgbj">Fig. 8. Elution volumes of PEG and PPG with different molar mass on the Diol column in aceton-water mobile phases of different composition (in wt%).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 10 .Fig. 11 .</head><label>1011</label><figDesc xml:id="_rGnMfvT">Fig. 10. Chromatograms of several poloxamers and PEGs, as obtained on the Diol column in 78.54 wt% acetone.</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 12 .</head><label>12</label><figDesc xml:id="_XP8rww6">Fig. 12. MMD of synperonic F68 and the individual blocks, as obtained by SEC (Styragel HR3, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 13 .</head><label>13</label><figDesc xml:id="_fDKtKPs">Fig. 13. MMD and chemical composition of EO-PO-EO 1900 (with 50% EO), as obtained by SEC with coupled density and RI detection (PL gel 10 3 C10 4 A ˚, CHCl 3 ).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 14 .</head><label>14</label><figDesc xml:id="_k9vvrpY">Fig. 14. MMD of EO-PO-PO 1900 (with 50% EO) and the individual blocks, as obtained by SEC (PL gel 10 3 C10 4 A ˚, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 15 .</head><label>15</label><figDesc xml:id="_DygeZdb">Fig. 15. MMD and chemical composition of PO-EO-PO 2700 (with 40% EO), as obtained by SEC with coupled density and RI detection (PL gel 10 3 C10 4 A ˚, CHCl 3 ).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 16 .</head><label>16</label><figDesc xml:id="_6jzA6pw">Fig. 16. MMD of PO-EO-PO 2700 (with 40% EO) and the individual blocks, as obtained by SEC (PL gel 10 3 C10 4 A ˚, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc xml:id="_vnrzazW">Possible situation in liquid chromatography of EO-PO block copolymers</figDesc><table><row><cell>Situation</cell><cell>Column</cell><cell>Mobile</cell><cell>EO</cell><cell>PO</cell></row><row><cell></cell><cell></cell><cell>phase</cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>polarity</cell><cell></cell><cell></cell></row><row><cell>1</cell><cell>RP</cell><cell>High</cell><cell>LCCC</cell><cell>LAC</cell></row><row><cell>2</cell><cell>RP</cell><cell>Low</cell><cell>SEC</cell><cell>LCCC</cell></row><row><cell>3</cell><cell>NP</cell><cell>High</cell><cell>LCCC</cell><cell>SEC</cell></row><row><cell>4</cell><cell>NP</cell><cell>Low</cell><cell>LAC</cell><cell>LCCC</cell></row></table></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 3</head><label>3</label><figDesc xml:id="_Rv7uf69">Specifications of PO-EO-PO triblock copolymers given by the producers (specified parameters: bold)</figDesc><table><row><cell>Producer</cell><cell>Sample name</cell><cell>nEO</cell><cell>M(EO)</cell><cell>EO (%)</cell><cell>nPO</cell><cell>M(PO)</cell><cell>M(ges)</cell></row><row><cell>Aldrich</cell><cell>PO-EO-PO 3300 10%</cell><cell>8</cell><cell>330</cell><cell>10</cell><cell>51</cell><cell>2970</cell><cell>3300</cell></row><row><cell>Aldrich</cell><cell>PO-EO-PO 2700 40%</cell><cell>25</cell><cell>1080</cell><cell>40</cell><cell>28</cell><cell>1620</cell><cell>2700</cell></row></table><note><p xml:id="_Rj5NmV5">Fig. 1. Elution volumes of PEG and PPG with different molar mass on the Jordi column in aceton-water mobile phases of different composition (in wt%).</p></note></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc xml:id="_TfC9MUj">Specifications of EO-PO-EO triblock copolymers given by the producers (specified parameters: bold)</figDesc><table><row><cell>Producer</cell><cell>Sample name</cell><cell>nEO</cell><cell>M(EO)</cell><cell>EO (%)</cell><cell>nPO</cell><cell>M(PO)</cell><cell>M(ges)</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6100</cell><cell>4.4</cell><cell>194</cell><cell>10</cell><cell>30.2</cell><cell>1750</cell><cell>1944</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6200</cell><cell>9.9</cell><cell>438</cell><cell>20</cell><cell>30.2</cell><cell>1750</cell><cell>2188</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6800 G</cell><cell>159.1</cell><cell>7000</cell><cell>80</cell><cell>30.2</cell><cell>1750</cell><cell>8750</cell></row><row><cell>KOLB</cell><cell>Imbentin-PA P/10200</cell><cell>18.5</cell><cell>813</cell><cell>20</cell><cell>56.0</cell><cell>3250</cell><cell>4063</cell></row><row><cell>BASF</cell><cell>Pluronic F 68</cell><cell>160</cell><cell>7,040</cell><cell>82</cell><cell>27</cell><cell>1566</cell><cell>8606</cell></row><row><cell>BASF</cell><cell>Pluronic F 108</cell><cell>282</cell><cell>12,408</cell><cell>83</cell><cell>44</cell><cell>2552</cell><cell>14,960</cell></row><row><cell>Serva</cell><cell>Synperonic F 68</cell><cell>159</cell><cell>7000</cell><cell>80</cell><cell>30</cell><cell>1750</cell><cell>8750</cell></row><row><cell>Serva</cell><cell>Synperonic F 108</cell><cell>295</cell><cell>13,000</cell><cell>80</cell><cell>56</cell><cell>3250</cell><cell>16,250</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 1100 10%</cell><cell>3</cell><cell>110</cell><cell>10</cell><cell>17</cell><cell>990</cell><cell>1100</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 1900 50%</cell><cell>22</cell><cell>950</cell><cell>50</cell><cell>16</cell><cell>950</cell><cell>1900</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 4400 30%</cell><cell>30</cell><cell>1320</cell><cell>30</cell><cell>53</cell><cell>3080</cell><cell>4400</cell></row></table></figure>
-<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc xml:id="_BGgGpkP">Specifications and results from complementary chromatographic separations</figDesc><table><row><cell>Product</cell><cell>Specifications</cell><cell></cell><cell></cell><cell>Results</cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>M(EO)</cell><cell>M(PO)</cell><cell>M(total)</cell><cell>M(EO) a</cell><cell>M(PO) b</cell><cell>M(POCEO) c</cell><cell>M(SEC) d</cell></row><row><cell>Imbentin-PAP/6800</cell><cell>7.000</cell><cell>1750</cell><cell>8750</cell><cell>5744</cell><cell>900</cell><cell>6644</cell><cell>5784</cell></row><row><cell>G</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Pluronic F 68</cell><cell>7.040</cell><cell>1566</cell><cell>8624</cell><cell>7367</cell><cell>941</cell><cell>8308</cell><cell>6651</cell></row><row><cell>Pluronic F 108</cell><cell>12.408</cell><cell>2570</cell><cell>14978</cell><cell>10357</cell><cell>1764</cell><cell>12121</cell><cell>14025</cell></row><row><cell>Synperonic F 68</cell><cell>7.000</cell><cell>1750</cell><cell>8750</cell><cell>7089</cell><cell>1217</cell><cell>8306</cell><cell>6740</cell></row><row><cell>Synperonic F 108</cell><cell>13.000</cell><cell>3250</cell><cell>16250</cell><cell>9343</cell><cell>2016</cell><cell>11359</cell><cell>15454</cell></row><row><cell>EO-PO-EO 1900</cell><cell>950</cell><cell>950</cell><cell>1900</cell><cell>1283</cell><cell>656</cell><cell>1939</cell><cell>1932</cell></row><row><cell>50% EO</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>PO-EO-PO 2700</cell><cell>1.080</cell><cell>1620</cell><cell>2700</cell><cell>1320</cell><cell>1517</cell><cell>2837</cell><cell>2338</cell></row><row><cell>40% EO</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table><note><p xml:id="_KXKgDAh">a HS-PEG in 44% acetone. b Diol column in 78.54% acetone. c Sum of M(EO) and M(PO). d Plgel 10 3 C10 4 in chloroform.</p></note></figure>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1." xml:id="_5PUgKAH">Introduction</head><p xml:id="_9mkrhKg">Amphiphilic polymers contain chemically different blocks with different solubility or affinity towards other solids or liquids. Consequently, they exhibit surface activity and will be enriched at the interface between immiscible phases (which may be solid, liquid, or gaseous). Typically, the hydrophilic blocks consist of poly(ethylene oxide), while the hydrophobic blocks may be poly(propylene oxide), poly(tetrahydrofuran), a polyester such as poly(lactide, glycolide, caprolactone), etc.</p><p xml:id="_dBTACTN">Block copolymers of ethylene oxide and propylene oxide are in widespread use as synthetic lubricants, as emulsifiers, as defoaming agents, and in various other applications, which utilize their amphiphilic nature: The EO block is hydrophilic, and the PO block hydrophobic.</p><p xml:id="_rFEZ5u9">Especially important are EO-PO-EO triblocks, which are often called poloxamers (the corresponding brand names are Pluronics or Synperonics). These products are produced by ethoxylation of polypropylene glycol (PPG), while PO-EO-PO triblocks are prepared by propoxylation of polyethylene glycol (PEG).</p><p xml:id="_3pKDqZp">The desired triblocks can only be formed, if the alkoxylation proceeds on both ends of the starting material. PEG contains two primary OH groups, which may react with the same probability and rate. PPG can also contain secondary OH groups, which react more slowly, and allyl end groups, which do not react at all. These allyl end groups can be present already in the starting material, but may also be formed during the alkoxylation by hydrogen abstraction from the methyl group of the growing PO chain end, which is thus terminated <ref type="bibr" target="#b0">[1]</ref>. Consequently, chain transfer may result in different side products: Homopolymers and diblocks.</p><p xml:id="_Ts9KucF">In general, EO-PO-diblocks have quite different properties than EO-PO-EO or PO-EO-PO triblocks. They show different micellization behavior <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref> and a different influence on protein adsorption <ref type="bibr" target="#b6">[7]</ref>. Similar differences exist also in other amphiphilic block copolymers, as has been shown experimentally <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref> and by Monte Carlo simulations <ref type="bibr" target="#b9">[10]</ref>.</p><p xml:id="_DPzNguq">The specification given by the producers are generally very limited: the overall molar mass and the overall composition (the average EO content), which are typically calculated from the monomer conversion in the synthesis.</p><p xml:id="_pGTs4We">Other products are specified by the average number of EO and PO units, or by the average molar mass of the center block and the percentage of the monomer constituting the arms. All of these parameters are typically obtained just as above.</p><p xml:id="_9Ck8dey">This information is, however, by far not sufficient: The properties of these products are strongly influenced by the distributions of molar mass, functionality, chemical composition, architecture, and content of homopolymers and diblocks.</p><p xml:id="_aH5h8YR">Hence, a discrimination of polymers with different architecture (e.g. di-and triblock structures) would be highly important.</p><p xml:id="_psZ8ENE">The producer, who knows the molar mass distribution of the starting material (PEG or PPG), will mainly be interested in the content of impurities (homopolymer and diblocks), and in the length of the arms he has added to the center block. The customer, however, must just rely on the information given by the producer, as it is difficult to obtain the desired information by the usual analytical techniques.</p><p xml:id="_nBkN2hF">Consequently, there is a strong need for reliable analytical methods, which allow a full characterization of such products, i.e. an independent determination of the distributions mentioned above. Typically, a two-dimensional separation will be required, in which each dimension separates according to different criteria.</p><p xml:id="_JSju8An">The nature of these separations can be chromatography (liquid or supercritical fluid chromatography) or mass spectrometry (especially MALDI-TOF-MS), and combinations of these techniques. Obviously, the first dimension will always be a chromatographic separation.</p><p xml:id="_ge9csGj">The goal of this paper was the development of a method, which should allow a determination of homopolymers in EO-PO block copolymers, and yield information on the molar mass distribution of the individual blocks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2." xml:id="_zTHVxmc">Strategies in the separation of block copolymers</head><p xml:id="_wfQNng8">Functional polymers and oligomers can be characterized using different chromatographic techniques, which separate according to different criteria. The type of chromatographic separation is determined by the so-called interaction parameter c, which describes the interaction of a structural unit with the stationary phase <ref type="bibr" target="#b10">[11]</ref>. This parameter is negative in size exclusion chromatography (SEC) and positive in liquid adsorption chromatography (LAC). At the critical adsorption point (CAP) the interaction parameter equals zero, and the corresponding block becomes 'chromatographically invisible' <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>. This effect is utilized in liquid chromatography under critical conditions (LCCC), which allows a separation of polymer homologous series according to their functionality <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>.</p><p xml:id="_H7WVGHu">In the case of amphiphilic polymers the interaction parameters c A and c B of the individual structural units (A and B) may assume different values. Hence, the following options exist:</p><p xml:id="_5QaSRJD">If both c A and c B are negative, the molar mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. With dual detection, the chemical composition along the peak can be obtained <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>.</p><p xml:id="_73gwzhY">If both c A and c B are positive, a separation by LAC (with retention increasing exponentially with the number of repeat units) can be achieved, if one of the blocks is monodisperse. If, however, both blocks are polydisperse and c A sc B , several superimposed series of peaks will be observed, which can hardly be resolved.</p><p xml:id="_mkBYgUS">If one of the parameters is positive and the other one negative, each polymer homologous series will elute in SEC order, but far behind the void volume of the column. This mechanism, which is called liquid exclusion-adsorption chromatography (LEAC) <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>, can be utilized in the separation of monofunctional oligomers with a monodisperse adsorbing block or end group.</p><p xml:id="_2tb7gMm">If one of the interaction parameters (c A or c B ) equals zero, the corresponding block becomes 'chromatographically invisible', and a separation according to the other block can be achieved (liquid chromatography under critical conditions: LCCC). Depending of the corresponding interaction parameter, this separation may follow a SEC <ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> or LAC <ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref> mechanism.</p><p xml:id="_WdsEDxk">The situation becomes more complicated in the case of triblock copolymers: At the CAP for A, the triblock A-B-A behaves just like the diblock A-B; the B-A-B triblock, however, shows a completely different pattern. Even under critical conditions for the center block (A), a separation according to its size will be observed, as long as A is rather short. For higher polymers, the difference between A-B-A and B-A-B structures may be rather small, but should not be neglected <ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref>. In some cases, these differences may be sufficient to allow a discrimination of polymers with different architecture.</p><p xml:id="_fPXQsGn">Applied to the characterization of poloxamers, there are different strategies, depending on their architecture, molar mass and chemical composition.</p><p xml:id="_MBAKnzU">SEC yields the overall molar mass distribution (MMD); with dual detection one may obtain information on the chemical composition along the MMD <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39]</ref>. SEC is, however, not capable of discriminating mixture of diblocks, triblocks, and homopolymers! At the CAP for the EO unit, a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.</p><p xml:id="_9n6KWCe">A schematic representation is given in Table <ref type="table" target="#tab_0">1</ref>, which summarizes the (theoretically) possible situations in LCCC of EO-PO copolymers.</p><p xml:id="_6sTzQDR">On many reversed phase columns, critical conditions for the (more polar) EO block have been found in aqueous methanol, acetone, or acetonitrile. In such a system, the less polar PO block elutes in LAC mode. Such conditions (which correspond to situation 1 in Table <ref type="table" target="#tab_0">1</ref>) have been described by several authors <ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b39">40]</ref>.</p><p xml:id="_S9AdETh">This approach is not very favorable, if the molar mass of the PO block is high, as molecules with a long PO block may be strongly retained. This problem cannot be solved by gradient elution (regardless the nature of the gradient: Mobile phase composition or temperature <ref type="bibr" target="#b33">[34]</ref>): In both cases the critical conditions would be lost.</p><p xml:id="_fAPrvZZ">One may, however, also find critical conditions for the PO unit on a RP column in a different mobile phase composition (with a higher content of organic solvent): In this case EO will elute in SEC mode.</p><p xml:id="_zcyqJTY">The opposite may happen on normal phase columns: at the CAP for the EO unit, PO will elute in SEC mode, while EO will elute in LAC mode at the CAP for PO (if such critical points can be found).</p><p xml:id="_z7Uc6kx">For the typical molar mass range of poloxamers, situations 1 and 4 are not very favorable, as the retention of the adsorbing block may be too high (or the resolution not sufficient).</p><p xml:id="_TKKVyBF">A separation of the non-critical blocks by SEC would allow not only the determination of their MMD, but also show the presence of homopolymers, as they should be separated from the block copolymers. This could be achieved, if conditions corresponding to situations 2 and 3 could be realized.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3." xml:id="_mWQ3XPf">Experimental</head><p xml:id="_Vvt9WJu">These investigations were performed using the density detection system DDS70 (CHROMTECH, Graz, Austria). Data acquisition and processing was performed using the software package CHROMA, which has been developed for the DDS70.</p><p xml:id="_HypEkpx">The columns and density cells were placed in a thermostatted box, in which a temperature of 25.0 8C was maintained for all measurements on both systems (A and B).</p><p xml:id="_tD6y8PR">In system A, the mobile phase was delivered by a JASCO 880 PU pump (Japan Spectrosopic Company, Tokyo, Japan) at a flow rate of 0.5 ml/min. Samples were injected manually using a Rheodyne 7125 injection valve (Rheodyne, Cotati, CA, USA) equipped with a 50 ml loop.</p><p xml:id="_eYhepJ3">A Bischoff 8110 refractive index (RI) detector (Bischoff, Leonberg, Germany) was connected to the DDS 70. Columns were connected to two column selection valves (Rheodyne 7060).</p><p xml:id="_nwgGJD8">In system B, the mobile phase was delivered by an ISCO 2350 HPLC pump and an ISCO 2360 gradient programmer (from ISCO, Lincoln, NE, USA) at a flow rate of 0.5 ml/min. Samples were injected using an autosampler Spark SPH 125 Fix (from Spark Holland, Emmen, The Netherlands) equipped with a 20 ml loop.</p><p xml:id="_4smRtPs">A SEDEX 45 ELSD (Sedere, France) was connected to the DDS 70. Nitrogen was used as carrier gas, and the pressure at the nebulizer was set to 1.0 bar. Evaporator temperature: 30 8C.</p><p xml:id="_NN7GnmR">The following columns were used in both systems: † Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 A ˚, (Jordi, Bellingham, MA, USA). † Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 A ˚(Supelco, Bellefonte, PA, USA). † Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250!4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 A ˚(Macherey-Nagel, Dueren, Germany).</p><p xml:id="_TAh4fEp">SEC measurements were performed on a modular SEC system comprising of a Gynkotek 300C pump equipped with a VICI injector (sample loop 100 ml), two column selection valves Rheodyne 7060, a density detection system DDS 70 (Chromtech, Graz, Austria) coupled with an ERC 7512 RI detector. Data acquisition and processing was performed using the software CHROMA. All SEC measurements were performed on a Styragel HR3 column (300!7.8 mm, waters) or a set of two columns PLgel (10 mm), 10 3 C10 4 A ˚, 300!7.8 mm each (Agilent) at a flow-rate of 1.00 ml/min and a column temperature of 30.0 8C. Sample concentrations were 3.0-10.0 g/l.</p><p xml:id="_WXC3uVK">The solvents (chloroform, acetone and water, both HPLC grade) were purchased from Roth (Karlsruhe, Germany) and Merck (Darmstadt, Germany).</p><p xml:id="_qfR3AQH">Mobile phases were mixed by mass and vacuum degassed, their composition was controlled by density measurement using a DMA 60 density meter equipped with a measuring cell DMA 602 M (A. Paar, Graz, Austria).</p><p xml:id="_9ve7p7u">PEG and PPG samples were purchased from Sigma-Aldrich and FLUKA (Buchs, Switzerland), EO-PO block copolymers from Sigma-Aldrich, BASF and SERVA. Several polymer samples were also provided by Dr W. Kolb AG (Hedingen, Switzerland) and by 'Blachownia' Institute of Heavy Organic Synthesis, (Ke ˛dzierzyn-Koz ´le, Poland).</p><p xml:id="_5DTW3Dq">An overview of the copolymer samples used in this study is given in Tables <ref type="table" target="#tab_2">2</ref> and<ref type="table" target="#tab_1">3</ref>. The parameters specified by the producers (from which the others were calculated) are printed in bold. All samples used in this study are specified as triblock copolymers. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4." xml:id="_qyVVAMB">Results and discussion</head><p xml:id="_K2Rf3sz">The first step in these investigations was the search for critical conditions for the individual monomer units. In the literature, there are numerous papers on critical conditions for the EO unit: most of them use C18 columns, on which a critical adsorption point (CAP) for EO is observed (typically at 25 8C) in methanol-water (80-90%) <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b40">41]</ref>, acetonitrile-water (35-45%) <ref type="bibr" target="#b28">[29,</ref><ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43]</ref>, and acetone-water (25-30%) <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b34">35]</ref>. On CN columns, critical conditions for EO have been reported in methanol-water (85%) <ref type="bibr" target="#b30">[31]</ref> or 44% at 50 8C <ref type="bibr" target="#b30">[31]</ref>), acetonitrile-water (28%) <ref type="bibr" target="#b42">[43]</ref>, and dimethoxyethane-water (21.5%) <ref type="bibr" target="#b42">[43]</ref>.</p><p xml:id="_B9mcBDg">In all of these systems, PO will elute in LAC mode. As we have shown previously <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b34">35]</ref>, a second CAP for EO exists on all silica-based C18 (and C6) columns at high acetone content (90-95%). This can be explained by beginning interaction of the polar EO unit with residual silanol groups in the stationary phase (It must be mentioned, that PEG can be separated by LAC on plain silica at high acetone content). The same conditions (C18, about 90% acetone) are also quite close to a CAP for PO.</p><p xml:id="_pHhwEHK">On polymer-based RP columns, which do not contain silanol groups, EO still elutes in SEC mode under these conditions <ref type="bibr" target="#b34">[35]</ref>. This could be shown for the Jordi column, which consists of 100% poly(divinyl benzene). On this  column, a CAP for PO is found at about 90% acetone, as can be seen in Fig. <ref type="figure">1</ref>. At a composition close to the CAP for PO, the EO unit clearly elutes in SEC mode, as is shown in Fig. <ref type="figure">2</ref>. All PEGs elute in SEC mode, only the lower ones merge with the solvent peak, which is due to the fact, that this column has a rather large pore diameter.</p><p xml:id="_p7mM9FH">Surprisingly, all PPGs elute considerably behind the solvent peak! Obviously, the available pore volume is larger for PPG than for water. This agrees with other findings, which shall be published in another paper. This behaviour is rather favorable: It can be utilized to separate poloxamers with sufficiently large EO blocks from PPG, as is shown in Fig. <ref type="figure">3</ref>.</p><p xml:id="_JzefVRg">Due to the large pore diameter, this column has only a poor selectivity for EO in lower molar mass range. Therefore, we looked for another column with similar properties.</p><p xml:id="_KXqVEG6">As can be seen in Fig. <ref type="figure">4</ref>, a CAP for PO was found on the Discovery HS-PEG column (a silica-based phase with attached PEG chains) in acetone-water with about 45% (w/w) acetone. Under these conditions EO elutes in SEC mode. This becomes also clear from Fig. <ref type="figure">5</ref>, which shows an overlay of several chromatograms of PEGs and PPGs with different molar mass and water. As can be seen, the PPGs elute roughly at the void volume, as the water peak almost coincides with the PPG peaks.</p><p xml:id="_sq9sdDK">On this column, the resolution on the low molecular range is somewhat better than on the Jordi column. On the other hand, higher PPGs are no more soluble in a mobile phase composition like that corresponding to the CAP on the HS-PEG column.</p><p xml:id="_9CBZSWW">Consequently, the Jordi column will perform better for samples with longer PO blocks, while the HS-PEG column is suitable for the analysis of samples with shorter PO blocks.</p><p xml:id="_tzTxcEn">In Fig. <ref type="figure">6</ref> several chromatograms of EO-PO block copolymers are shown, which elute at the same positions as the PEGs with corresponding molar mass (The shoulder in the Imbentin and Synperonic sample may be due to the diblock copolymer or a bimodal MMD of the PPG used as starting material). Consequently, these conditions can be utilized in the determination of the MMD of the EO blocks, as will be shown later on.</p><p xml:id="_nx4b7SQ">Moreover, the presence of the homopolymer PPG can be shown by this technique. With RI detection, this is not easily achieved: A peak at the void volume (where PPG will elute) may as well be a solvent peak, which results from preferential solvation of the copolymer. Hence, the RI detector was replaced by an ELSD. Even though the peaks are considerably broader with the ELSD, it becomes clear from Fig. <ref type="figure">7</ref>, that the poloxamers do not contain PPG. Only the PO-EO-PO copolymer reaches into the region, where PPG would elute. As will be shown later on, this sample really contains traces of PPG (Fig. <ref type="figure" target="#fig_7">15</ref>).</p><p xml:id="_ppcPdmT">There remained still the question, whether it would be possible to find a system corresponding to situation 3 in Table <ref type="table" target="#tab_0">1</ref>: CAP for EO and SEC for PO. Obviously, this would require a normal phase column.</p><p xml:id="_9jQYp4W">In the literature, critical conditions for EO have been reported on amino-modified silica in methanol-water (86%) Fig. <ref type="figure">6</ref>. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone. Detection: RI. Fig. <ref type="figure">7</ref>. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone. Detection: ELSD.</p><p xml:id="_PTcF94u">[31], acetonitrile-water (31.8%) <ref type="bibr" target="#b42">[43]</ref>, and dimethoxyethanewater (18.5%) <ref type="bibr" target="#b42">[43]</ref>. No information was, however, given about the elution behaviour of PO in these phases.</p><p xml:id="_XnDvtdz">The desired conditions were now found on a Diol phase in acetone-water with about 80 wt% aetone (Fig. <ref type="figure">8</ref>): A CAP for EO exists at 78.54% (w/w) acetone.</p><p xml:id="_mkPBH9M">As can be seen in Fig. <ref type="figure">9</ref>, PPGs elute in SEC mode, and the peaks of all PEGs (from 400 to 12000) coincide precisely. Again the peak of the 'critical component' elutes considerably behind the solvent peak! These conditions allow a separation of poloxamers according to the length of the PO blocks, and show also the presence of PEG in a sample. The samples shown in Fig. <ref type="figure">10</ref> (which should have a center block of PO with a similar length) show quite similar chromatograms, but contain obviously traces of PEG.</p><p xml:id="_sM6rcKG">This can be proven by SEC with dual detection, which yields not only the overall MMD, but also the chemical composition along the peak <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>. As can be seen in Fig. <ref type="figure">11</ref>, there is indeed a lower molecular shoulder in these samples, which contains PEG. The EO content of this fraction is somewhat lower than 100%, as the MMD of the homopolymer PEG overlaps with that of the block copolymer.</p><p xml:id="_HSqB6PR">Combining the techniques described above, one may determine the total MMD by SEC (on a Styragel HR3 column in chloroform), the length of the EO block(s) at the CAP for PO (on the Jordi or the Discovery HS-PEG column), and the length of the PO block at the CAP for EO (on the Nucleosil 100-5 OH column).</p><p xml:id="_H4j5Fax">The result thus obtained for Synperonic F 68 is shown in Fig. <ref type="figure" target="#fig_4">12</ref>.</p><p xml:id="_KG4WrWd">On the columns used in this study, homopolymers can be identified, and the MMD of the individual blocks can be determined with good accuracy, if the blocks are long enough. As can be seen in Figs. <ref type="figure" target="#fig_5">13</ref> and<ref type="figure" target="#fig_6">14</ref>, a EO-PO-EO sample containing 50% EO can be characterized quite well. This sample does not contain the homopolymers, as can be concluded from Fig. <ref type="figure" target="#fig_5">13</ref>. The MMD of the individual blocks and the overall MMD are in good agreement with the specification and appear quite reasonable. The MMD of the EO blocks obtained on the Jordi and the Discovery column also agree very well.</p><p xml:id="_mG3yDxq">The same procedure can also be applied to PO-EO-PO block copolymers: the PO-EO-PO sample 2700 with 40% EO already shown in Figs. <ref type="figure">6</ref> and<ref type="figure">7</ref> indeed contains traces of PPG, as can be seen in Fig. <ref type="figure" target="#fig_7">15</ref>. The MMD of the individual blocks corresponds quite well to the specification, and there is again a good agreement of the distributions of the EO block, which were obtained on the Jordi and the Discovery column (Fig. <ref type="figure" target="#fig_8">16</ref>).</p><p xml:id="_Yzt3hS9">In Table <ref type="table" target="#tab_3">4</ref>, the results thus obtained are compared to the specifications of the producers. The weight averages of molar mass were taken from SEC on a set ol PLgel 10 3 C10 4 in chloroform, on the Discovery HS-PEG column in 44.52% acetone, and on the Diol column in 78.54% acetone. It must  be mentioned, that the averages do not reflect the actual molar masses as well as the maximum of the distribution functions: the averages are strongly influenced by the low molecular end of the distribution, which is sometimes hard to identify, and the poor separation power of these columns in the range below a molar mass of 1000. Anyway, a reasonable agreement is found in the samples, which do not contain the homopolymers. If a sample contains homopolymers or diblocks besides the triblocks, the sum of the EO and PO blocks is different from the overall molar mass, as can be expected.</p><p xml:id="_vB4Ctfk">The really important information is, however, only reflected by the full MMD: In some cases, the PPG used as a starting material has a bimodal distribution, which will lead to a shoulder in the MMD of the PO block as well as a shoulder in the overall MMD (as determined by SEC), which should have a different EO content. This will be the subject of further investigations.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5." xml:id="_BPemQDR">Conclusions</head><p xml:id="_SRKSSJe">Under the conditions described above, block copolymers of ethylene oxide (EO) and propylene oxide (PO) can be characterized with respect to the length of the individual blocks. Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks. Homopolymers present in a sample (as residual starting material or as a side product from chain transfer) can be identified. Comparison of the results thus obtained with those from SEC with coupled density and RI detection (which allows the determination of the entire MMD and the chemical composition along the MMD) show good agreement between the different systems.  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2 .Fig. 3 .</head><label>23</label><figDesc xml:id="_kjDwuJj">Fig. 2. Chromatograms of PEGs, PPGs, and water, as obtained on the Jordi column in 92.42 wt% acetone (CAP for PO). Detection: RI.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 4 .Fig. 5 .</head><label>45</label><figDesc xml:id="_duXdCha">Fig. 4. Elution volumes of PEG and PPG with different molar mass on the HS-PEG column in acetone-water mobile phases of different composition (in wt%).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 8 .Fig. 9 .</head><label>89</label><figDesc xml:id="_Ra6CZk9">Fig. 8. Elution volumes of PEG and PPG with different molar mass on the Diol column in aceton-water mobile phases of different composition (in wt%).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 10 .Fig. 11 .</head><label>1011</label><figDesc xml:id="_vPJQ3vB">Fig. 10. Chromatograms of several poloxamers and PEGs, as obtained on the Diol column in 78.54 wt% acetone.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 12 .</head><label>12</label><figDesc xml:id="_k3tD2Qu">Fig. 12. MMD of synperonic F68 and the individual blocks, as obtained by SEC (Styragel HR3, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 13 .</head><label>13</label><figDesc xml:id="_X34B2WP">Fig. 13. MMD and chemical composition of EO-PO-EO 1900 (with 50% EO), as obtained by SEC with coupled density and RI detection (PL gel 10 3 C10 4 A ˚, CHCl 3 ).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 14 .</head><label>14</label><figDesc xml:id="_jbBhHRy">Fig. 14. MMD of EO-PO-PO 1900 (with 50% EO) and the individual blocks, as obtained by SEC (PL gel 10 3 C10 4 A ˚, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 15 .</head><label>15</label><figDesc xml:id="_qyxYHBQ">Fig. 15. MMD and chemical composition of PO-EO-PO 2700 (with 40% EO), as obtained by SEC with coupled density and RI detection (PL gel 10 3 C10 4 A ˚, CHCl 3 ).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 16 .</head><label>16</label><figDesc xml:id="_M47VBEh">Fig. 16. MMD of PO-EO-PO 2700 (with 40% EO) and the individual blocks, as obtained by SEC (PL gel 10 3 C10 4 A ˚, CHCl 3 ) and LCCC (Discovery and Jordi: CAP for PO, SEC for EO; Nucleosil: CAP for EO, SEC for PO).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc xml:id="_y5Umjv6">Possible situation in liquid chromatography of EO-PO block copolymers</figDesc><table><row><cell>Situation</cell><cell>Column</cell><cell>Mobile</cell><cell>EO</cell><cell>PO</cell></row><row><cell></cell><cell></cell><cell>phase</cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>polarity</cell><cell></cell><cell></cell></row><row><cell>1</cell><cell>RP</cell><cell>High</cell><cell>LCCC</cell><cell>LAC</cell></row><row><cell>2</cell><cell>RP</cell><cell>Low</cell><cell>SEC</cell><cell>LCCC</cell></row><row><cell>3</cell><cell>NP</cell><cell>High</cell><cell>LCCC</cell><cell>SEC</cell></row><row><cell>4</cell><cell>NP</cell><cell>Low</cell><cell>LAC</cell><cell>LCCC</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 3</head><label>3</label><figDesc xml:id="_YqrzZex">Specifications of PO-EO-PO triblock copolymers given by the producers (specified parameters: bold)</figDesc><table><row><cell>Producer</cell><cell>Sample name</cell><cell>nEO</cell><cell>M(EO)</cell><cell>EO (%)</cell><cell>nPO</cell><cell>M(PO)</cell><cell>M(ges)</cell></row><row><cell>Aldrich</cell><cell>PO-EO-PO 3300 10%</cell><cell>8</cell><cell>330</cell><cell>10</cell><cell>51</cell><cell>2970</cell><cell>3300</cell></row><row><cell>Aldrich</cell><cell>PO-EO-PO 2700 40%</cell><cell>25</cell><cell>1080</cell><cell>40</cell><cell>28</cell><cell>1620</cell><cell>2700</cell></row></table><note><p xml:id="_mrrXC6W">Fig. 1. Elution volumes of PEG and PPG with different molar mass on the Jordi column in aceton-water mobile phases of different composition (in wt%).</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc xml:id="_KeUskPc">Specifications of EO-PO-EO triblock copolymers given by the producers (specified parameters: bold)</figDesc><table><row><cell>Producer</cell><cell>Sample name</cell><cell>nEO</cell><cell>M(EO)</cell><cell>EO (%)</cell><cell>nPO</cell><cell>M(PO)</cell><cell>M(ges)</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6100</cell><cell>4.4</cell><cell>194</cell><cell>10</cell><cell>30.2</cell><cell>1750</cell><cell>1944</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6200</cell><cell>9.9</cell><cell>438</cell><cell>20</cell><cell>30.2</cell><cell>1750</cell><cell>2188</cell></row><row><cell>KOLB</cell><cell>Imbentin-PAP/6800 G</cell><cell>159.1</cell><cell>7000</cell><cell>80</cell><cell>30.2</cell><cell>1750</cell><cell>8750</cell></row><row><cell>KOLB</cell><cell>Imbentin-PA P/10200</cell><cell>18.5</cell><cell>813</cell><cell>20</cell><cell>56.0</cell><cell>3250</cell><cell>4063</cell></row><row><cell>BASF</cell><cell>Pluronic F 68</cell><cell>160</cell><cell>7,040</cell><cell>82</cell><cell>27</cell><cell>1566</cell><cell>8606</cell></row><row><cell>BASF</cell><cell>Pluronic F 108</cell><cell>282</cell><cell>12,408</cell><cell>83</cell><cell>44</cell><cell>2552</cell><cell>14,960</cell></row><row><cell>Serva</cell><cell>Synperonic F 68</cell><cell>159</cell><cell>7000</cell><cell>80</cell><cell>30</cell><cell>1750</cell><cell>8750</cell></row><row><cell>Serva</cell><cell>Synperonic F 108</cell><cell>295</cell><cell>13,000</cell><cell>80</cell><cell>56</cell><cell>3250</cell><cell>16,250</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 1100 10%</cell><cell>3</cell><cell>110</cell><cell>10</cell><cell>17</cell><cell>990</cell><cell>1100</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 1900 50%</cell><cell>22</cell><cell>950</cell><cell>50</cell><cell>16</cell><cell>950</cell><cell>1900</cell></row><row><cell>Aldrich</cell><cell>EO-PO-EO 4400 30%</cell><cell>30</cell><cell>1320</cell><cell>30</cell><cell>53</cell><cell>3080</cell><cell>4400</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc xml:id="_cV5Tr2Z">Specifications and results from complementary chromatographic separations</figDesc><table><row><cell>Product</cell><cell>Specifications</cell><cell></cell><cell></cell><cell>Results</cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>M(EO)</cell><cell>M(PO)</cell><cell>M(total)</cell><cell>M(EO) a</cell><cell>M(PO) b</cell><cell>M(POCEO) c</cell><cell>M(SEC) d</cell></row><row><cell>Imbentin-PAP/6800</cell><cell>7.000</cell><cell>1750</cell><cell>8750</cell><cell>5744</cell><cell>900</cell><cell>6644</cell><cell>5784</cell></row><row><cell>G</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Pluronic F 68</cell><cell>7.040</cell><cell>1566</cell><cell>8624</cell><cell>7367</cell><cell>941</cell><cell>8308</cell><cell>6651</cell></row><row><cell>Pluronic F 108</cell><cell>12.408</cell><cell>2570</cell><cell>14978</cell><cell>10357</cell><cell>1764</cell><cell>12121</cell><cell>14025</cell></row><row><cell>Synperonic F 68</cell><cell>7.000</cell><cell>1750</cell><cell>8750</cell><cell>7089</cell><cell>1217</cell><cell>8306</cell><cell>6740</cell></row><row><cell>Synperonic F 108</cell><cell>13.000</cell><cell>3250</cell><cell>16250</cell><cell>9343</cell><cell>2016</cell><cell>11359</cell><cell>15454</cell></row><row><cell>EO-PO-EO 1900</cell><cell>950</cell><cell>950</cell><cell>1900</cell><cell>1283</cell><cell>656</cell><cell>1939</cell><cell>1932</cell></row><row><cell>50% EO</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>PO-EO-PO 2700</cell><cell>1.080</cell><cell>1620</cell><cell>2700</cell><cell>1320</cell><cell>1517</cell><cell>2837</cell><cell>2338</cell></row><row><cell>40% EO</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table><note><p xml:id="_w46Jxfk">a HS-PEG in 44% acetone. b Diol column in 78.54% acetone. c Sum of M(EO) and M(PO). d Plgel 10 3 C10 4 in chloroform.</p></note></figure>
 		</body>
 		<back>
 
 			<div type="acknowledgement">
-<div><head xml:id="_ArrJB2j">Acknowledgements</head><p xml:id="_YEk7SZf">This work was supported by the Russian-Austrian cooperation projects I.<rs type="grantNumber">20/2001</rs> and <rs type="grantNumber">RFBR-BWTZ 01-03-02008</rs>, and the Polish-Austrian cooperation projects 17/2001 and <rs type="grantNumber">18/2001</rs>.</p></div>
+<div><head xml:id="_RcAJ6uj">Acknowledgements</head><p xml:id="_hhZjp3Q">This work was supported by the Russian-Austrian cooperation projects I.<rs type="grantNumber">20/2001</rs> and <rs type="grantNumber">RFBR-BWTZ 01-03-02008</rs>, and the Polish-Austrian cooperation projects 17/2001 and <rs type="grantNumber">18/2001</rs>.</p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_jcRB4sq">
+				<org type="funding" xml:id="_XTz3BQF">
 					<idno type="grant-number">20/2001</idno>
 				</org>
-				<org type="funding" xml:id="_bkN58ce">
+				<org type="funding" xml:id="_Bc7rMQQ">
 					<idno type="grant-number">RFBR-BWTZ 01-03-02008</idno>
 				</org>
-				<org type="funding" xml:id="_q7Vm8By">
+				<org type="funding" xml:id="_9GSPK9Q">
 					<idno type="grant-number">18/2001</idno>
 				</org>
 			</listOrg>
@@ -130,7 +130,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_P2PwaR4">Langmuir</title>
+		<title level="j" xml:id="_wHtq78y">Langmuir</title>
 		<imprint>
 			<biblScope unit="volume">13</biblScope>
 			<biblScope unit="issue">22</biblScope>
@@ -155,7 +155,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_3zfbGFd">Macromolecules</title>
+		<title level="j" xml:id="_srfCWvB">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">27</biblScope>
 			<biblScope unit="issue">9</biblScope>
@@ -189,7 +189,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_CNeqcJ8">Langmuir</title>
+		<title level="j" xml:id="_6KvZgtG">Langmuir</title>
 		<imprint>
 			<biblScope unit="volume">11</biblScope>
 			<biblScope unit="issue">12</biblScope>
@@ -223,7 +223,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_y9B4FRG">Colloids Surf, B: Biointerfaces</title>
+		<title level="j" xml:id="_pdTVBhW">Colloids Surf, B: Biointerfaces</title>
 		<imprint>
 			<biblScope unit="volume">16</biblScope>
 			<biblScope unit="issue">1/4</biblScope>
@@ -245,7 +245,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_9mT5Mgs">Macromol Rapid Commun</title>
+		<title level="j" xml:id="_gsecmFv">Macromol Rapid Commun</title>
 		<imprint>
 			<biblScope unit="volume">21</biblScope>
 			<biblScope unit="issue">9</biblScope>
@@ -270,7 +270,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_hDsavng">J Colloid Interf Sci</title>
+		<title level="j" xml:id="_64fmyNh">J Colloid Interf Sci</title>
 		<imprint>
 			<biblScope unit="volume">250</biblScope>
 			<biblScope unit="issue">1</biblScope>
@@ -301,7 +301,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_4BufZpx">Langmuir</title>
+		<title level="j" xml:id="_9FYfxmp">Langmuir</title>
 		<imprint>
 			<biblScope unit="volume">11</biblScope>
 			<biblScope unit="issue">8</biblScope>
@@ -332,7 +332,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_XePH75G">Macromolecules</title>
+		<title level="j" xml:id="_FvJp5sj">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">36</biblScope>
 			<biblScope unit="issue">5</biblScope>
@@ -369,7 +369,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_ZHTPun7">Pure Appl Chem</title>
+		<title level="j" xml:id="_DgV46dy">Pure Appl Chem</title>
 		<imprint>
 			<biblScope unit="volume">41</biblScope>
 			<biblScope unit="issue">6</biblScope>
@@ -392,7 +392,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_PghvVTN">Macromolecules</title>
+		<title level="j" xml:id="_yuyBxfs">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">34</biblScope>
 			<biblScope unit="issue">20</biblScope>
@@ -417,7 +417,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_XUqXfMJ">Polymer</title>
+		<title level="j" xml:id="_Yffa65F">Polymer</title>
 		<imprint>
 			<biblScope unit="volume">39</biblScope>
 			<biblScope unit="issue">3</biblScope>
@@ -439,7 +439,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_Gmc83tY">Vysokomolekulyarnye Soedineniya Seriya A</title>
+		<title level="j" xml:id="_aAEtPJ7">Vysokomolekulyarnye Soedineniya Seriya A</title>
 		<imprint>
 			<biblScope unit="volume">30</biblScope>
 			<biblScope unit="issue">4</biblScope>
@@ -461,7 +461,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_5et8nhC">J Chromatogr</title>
+		<title level="j" xml:id="_AD4cvTh">J Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">507</biblScope>
 			<biblScope unit="page" from="487" to="496" />
@@ -491,7 +491,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_dE2srhS">J Chromatogr</title>
+		<title level="j" xml:id="_Fh6UYbQ">J Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">609</biblScope>
 			<biblScope unit="issue">1/2</biblScope>
@@ -510,7 +510,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_GhMExnB">Macromol Symp</title>
+		<title level="j" xml:id="_7cWVQzy">Macromol Symp</title>
 		<imprint>
 			<biblScope unit="volume">110</biblScope>
 			<biblScope unit="page" from="107" to="120" />
@@ -543,7 +543,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_5R2aWv5">J Chromatogr</title>
+		<title level="j" xml:id="_WjqEmhm">J Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">523</biblScope>
 			<biblScope unit="page" from="91" to="102" />
@@ -564,7 +564,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_Ekh5qhZ">J Chromatogr A</title>
+		<title level="j" xml:id="_n63neVA">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">507</biblScope>
 			<biblScope unit="page" from="487" to="496" />
@@ -585,7 +585,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_g6wZUVw">J Liq Chromatogr</title>
+		<title level="j" xml:id="_CKWhzX4">J Liq Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">17</biblScope>
 			<biblScope unit="issue">14/15</biblScope>
@@ -613,7 +613,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_vKm2Bpc">Polymer</title>
+		<title level="j" xml:id="_jC5chsj">Polymer</title>
 		<imprint>
 			<biblScope unit="volume">39</biblScope>
 			<biblScope unit="issue">2</biblScope>
@@ -632,7 +632,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_VVT8FbA">J Liq Chromatogr</title>
+		<title level="j" xml:id="_qaRdM8r">J Liq Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">13</biblScope>
 			<biblScope unit="issue">9</biblScope>
@@ -651,7 +651,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_C3frzdy">J Chromatogr</title>
+		<title level="j" xml:id="_HzWWjzN">J Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">552</biblScope>
 			<biblScope unit="issue">1/2</biblScope>
@@ -676,7 +676,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_yhEeXhY">J Chromatogr A</title>
+		<title level="j" xml:id="_tppH6VT">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">786</biblScope>
 			<biblScope unit="issue">1</biblScope>
@@ -698,7 +698,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_4dDMNsa">J Chromatogr A</title>
+		<title level="j" xml:id="_gDUATSH">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">910</biblScope>
 			<biblScope unit="issue">2</biblScope>
@@ -717,7 +717,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_uT6cADE">J Chromatogr A</title>
+		<title level="j" xml:id="_dUryEEF">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">915</biblScope>
 			<biblScope unit="issue">1/2</biblScope>
@@ -742,7 +742,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_BE6hbr4">Int J Polym Anal Charact</title>
+		<title level="j" xml:id="_eqQUj2z">Int J Polym Anal Charact</title>
 		<imprint>
 			<biblScope unit="volume">4</biblScope>
 			<biblScope unit="issue">6</biblScope>
@@ -767,7 +767,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_hJXdvJQ">Macromol Chem Phys</title>
+		<title level="j" xml:id="_Ggb49AU">Macromol Chem Phys</title>
 		<imprint>
 			<biblScope unit="volume">195</biblScope>
 			<biblScope unit="issue">2</biblScope>
@@ -792,7 +792,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_5TJwJFt">Polymer</title>
+		<title level="j" xml:id="_EJWMwNQ">Polymer</title>
 		<imprint>
 			<biblScope unit="volume">34</biblScope>
 			<biblScope unit="issue">23</biblScope>
@@ -814,7 +814,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_Qmh54B9">Makromol Chem Macro Chem Phys</title>
+		<title level="j" xml:id="_kMeXPdQ">Makromol Chem Macro Chem Phys</title>
 		<imprint>
 			<biblScope unit="volume">194</biblScope>
 			<biblScope unit="issue">9</biblScope>
@@ -848,7 +848,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_Rgcwe94">J Chromatogr A</title>
+		<title level="j" xml:id="_J5AG8SR">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">523</biblScope>
 			<biblScope unit="page" from="91" to="102" />
@@ -875,7 +875,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_qak44Wz">J Chromatogr A</title>
+		<title level="j" xml:id="_yM5mfw8">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">623</biblScope>
 			<biblScope unit="issue">2</biblScope>
@@ -903,7 +903,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_kHkgaUG">Macromolecules</title>
+		<title level="j" xml:id="_cMaqn4q">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">37</biblScope>
 			<biblScope unit="issue">8</biblScope>
@@ -931,7 +931,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_khnGvZc">Macromolecules</title>
+		<title level="j" xml:id="_35NyWdx">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">29</biblScope>
 			<biblScope unit="issue">17</biblScope>
@@ -953,7 +953,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_DvFrXCj">J Chromatogr A</title>
+		<title level="j" xml:id="_5E4J25x">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">955</biblScope>
 			<biblScope unit="issue">1</biblScope>
@@ -987,7 +987,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_5rgyEpK">Macromolecules</title>
+		<title level="j" xml:id="_x7hmSVm">Macromolecules</title>
 		<imprint>
 			<biblScope unit="volume">36</biblScope>
 			<biblScope unit="issue">22</biblScope>
@@ -1012,7 +1012,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_pJzYxmP">J Chromatogr A</title>
+		<title level="j" xml:id="_MZrUN5Q">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">984</biblScope>
 			<biblScope unit="issue">1</biblScope>
@@ -1040,7 +1040,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_nrnTEv6">Tenside Surfact Det</title>
+		<title level="j" xml:id="_Ay3Ywk7">Tenside Surfact Det</title>
 		<imprint>
 			<biblScope unit="volume">40</biblScope>
 			<biblScope unit="issue">3</biblScope>
@@ -1062,7 +1062,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_jJgwntm">J Chromatogr A</title>
+		<title level="j" xml:id="_stmR7mz">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">1064</biblScope>
 			<biblScope unit="issue">2</biblScope>
@@ -1084,7 +1084,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_h44YBYT">J Appl Polym Sci: Appl Polym Symp</title>
+		<title level="j" xml:id="_pp9mq68">J Appl Polym Sci: Appl Polym Symp</title>
 		<imprint>
 			<biblScope unit="volume">52</biblScope>
 			<biblScope unit="page" from="193" to="203" />
@@ -1096,13 +1096,13 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 
 <biblStruct xml:id="b38">
 	<analytic>
-		<title level="a" type="main" xml:id="_AVrgWJp">Quantitation in polymer analysis by multiple detector SEC</title>
+		<title level="a" type="main" xml:id="_AVRJ5m4">Quantitation in polymer analysis by multiple detector SEC</title>
 		<author>
 			<persName><forename type="first">B</forename><surname>Trathnigg</surname></persName>
 		</author>
 	</analytic>
 	<monogr>
-		<title level="m" xml:id="_8gbdgmD">ACS symposia series</title>
+		<title level="m" xml:id="_8schdFV">ACS symposia series</title>
 		<editor>
 			<persName><forename type="first">T</forename><surname>Provder</surname></persName>
 		</editor>
@@ -1131,7 +1131,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_wjgR299">J Chromatogr A</title>
+		<title level="j" xml:id="_6a6zp3T">J Chromatogr A</title>
 		<imprint>
 			<biblScope unit="volume">667</biblScope>
 			<biblScope unit="issue">1/2</biblScope>
@@ -1156,7 +1156,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_GTvzQnY">J Liq Chromatogr</title>
+		<title level="j" xml:id="_cUpMk3H">J Liq Chromatogr</title>
 		<imprint>
 			<biblScope unit="volume">17</biblScope>
 			<biblScope unit="issue">19</biblScope>
@@ -1169,7 +1169,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 
 <biblStruct xml:id="b41">
 	<monogr>
-		<title level="m" type="main" xml:id="_zSrRwKB">HPLC of polymers</title>
+		<title level="m" type="main" xml:id="_pyKNN5W">HPLC of polymers</title>
 		<author>
 			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
 		</author>
@@ -1199,7 +1199,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 		</author>
 	</analytic>
 	<monogr>
-		<title level="j" xml:id="_9StzUnb">J Chromatogr B</title>
+		<title level="j" xml:id="_y4vfZRJ">J Chromatogr B</title>
 		<imprint>
 			<biblScope unit="volume">753</biblScope>
 			<biblScope unit="issue">1</biblScope>

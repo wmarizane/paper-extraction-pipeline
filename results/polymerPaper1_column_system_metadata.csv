@@ -1,1 +1,3 @@
 Paper,Column*,Brand/type*,Stationary phase chemistry*,Pore size (Å)*,Dimensions*,Notes*,Source section,Source text
+Paper1|Paper2|Paper3 or citation id if explicit,Nucleosil C 18,Macherey-Nagel,reversed phase,"100, 300, 1000",250 x 4.6 mm i.d.,Three columns used in series,INTRODUCTION,"The column system consisted of three reversed phase Nucleosil C 18 columns (100-5, 300-5, and 1000-7) with sizes of 250 Â 4.6 mm i.d. from Macherey-Nagel (D€ uren, Germany)."
+Paper1,"PSS SDV 5 μm precolumn, 10 3 Å, and 10 5 Å",PSS,SEC columns (implied by PSS SDV),3 Å and 5 Å,300 Å 8 mm i.d.,Three columns used for SEC-NMR,SEC-NMR,"Three columns (PSS SDV 5 μm precolumn, 10 3 Å, and 10 5 Å with 300 Â 8 mm i.d.) were used."

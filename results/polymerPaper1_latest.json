@@ -1,38 +1,38 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper1.pdf",
-    "extraction_date": "2026-04-13T20:00:15.177462",
+    "extraction_date": "2026-04-13T20:49:05.858323",
     "model": "Qwen/Qwen3.5-35B-A3B",
     "chunk_strategy": "section",
     "tei_xml_path": "tei_xml/polymerPaper1_tei.xml",
     "total_chunks": 3,
-    "successful_extractions": 0,
+    "successful_extractions": 3,
     "total_processing_time": 0,
     "pipeline_metrics": {
       "pdf_name": "polymerPaper1.pdf",
-      "start_time": "2026-04-13T20:00:00.803808",
+      "start_time": "2026-04-13T20:48:53.503852",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "grobid_parsing": {
-          "time_seconds": 2.1034531593322754,
+          "time_seconds": 1.8506083488464355,
           "success": true,
           "tei_xml_path": "tei_xml/polymerPaper1_tei.xml"
         },
         "chunking": {
-          "time_seconds": 0.8632156848907471,
+          "time_seconds": 0.7845640182495117,
           "success": true,
           "num_chunks": 3,
           "total_tokens": 1332,
           "avg_tokens_per_chunk": 444.0
         },
         "llm_extraction": {
-          "time_seconds": 11.401112794876099,
-          "success": false,
-          "successful_chunks": 0,
-          "failed_chunks": 3,
+          "time_seconds": 9.713775157928467,
+          "success": true,
+          "successful_chunks": 3,
+          "failed_chunks": 0,
           "total_llm_calls": 3,
-          "avg_time_per_chunk": 3.800370931625366
+          "avg_time_per_chunk": 3.2379250526428223
         }
       },
       "success": false,
@@ -45,42 +45,131 @@
     }
   },
   "summary": {
-    "total_master_rows": 0,
-    "total_separation_mechanism_rows": 0,
-    "total_column_system_metadata_rows": 0
+    "total_master_rows": 2,
+    "total_separation_mechanism_rows": 2,
+    "total_column_system_metadata_rows": 2
   },
   "extracted_data": {
-    "master_table": [],
-    "separation_mechanism": [],
-    "column_system_metadata": []
+    "master_table": [
+      {
+        "paper": "Paper1|Paper2|Paper3 or citation id if explicit",
+        "system_id": "H1, L1, T1, ... if inferable, else blank",
+        "polymer_system": "polymer or block system",
+        "target_at_cc": "target species at critical condition",
+        "architecture_context": "diblock/triblock/molar mass independent elution",
+        "column": "Nucleosil C 18",
+        "stationary_phase": "reversed phase",
+        "mobile_phase": "butanone and cyclohexane",
+        "composition": "",
+        "units": "",
+        "temp_c": "",
+        "additives": "",
+        "notes": "LCCC experiments performed with 1H NMR as detector",
+        "source_section": "INTRODUCTION",
+        "source_text": "The column system consisted of three reversed phase Nucleosil C 18 columns (100-5, 300-5, and 1000-7) with sizes of 250 Â 4.6 mm i.d. from Macherey-Nagel (D€ uren, Germany). The mobile phase was a mixture of butanone and cyclohexane. All LCCC experiments were performed with 1 H NMR as the detector."
+      },
+      {
+        "paper": "Paper1",
+        "system_id": "",
+        "polymer_system": "Polyisoprene",
+        "target_at_cc": "1,4-PI",
+        "architecture_context": "microstructure context (1,2-, 1,4-, 3,4-PI)",
+        "column": "RP-18",
+        "stationary_phase": "nonpolar stationary phase RP-18",
+        "mobile_phase": "HPLC grade THF",
+        "composition": "",
+        "units": "",
+        "temp_c": "",
+        "additives": "",
+        "notes": "Critical conditions of 1,4-PI established; samples contained small amounts of other isomeric moieties",
+        "source_section": "RESULTS AND DISCUSSION LCCC-NMR of Blends of Polyisoprene",
+        "source_text": "To establish near-LCCC conditions a nonpolar stationary phase RP-18 was selected."
+      }
+    ],
+    "separation_mechanism": [
+      {
+        "paper": "Paper1|Paper2|Paper3 or citation id if explicit",
+        "system": "LCCC",
+        "type_of_criticality": "microstructure criticality",
+        "driving_variable": "solvent composition",
+        "non_critical_species_behavior": "elute independently of molar mass",
+        "source_section": "INTRODUCTION",
+        "source_text": "Critical condition is reached when polymers of the same microstructure elute independently of molar mass, due to compensation of enthalpic and entropic interactions with the chromatographic system."
+      },
+      {
+        "paper": "Paper1",
+        "system": "LCCC",
+        "type_of_criticality": "microstructure criticality",
+        "driving_variable": "solvent composition",
+        "non_critical_species_behavior": "elute according to molar mass",
+        "source_section": "RESULTS AND DISCUSSION LCCC-NMR of Blends of Polyisoprene",
+        "source_text": "For the separation of polyisoprene according to the microstructure by LCCC critical conditions of one species of polyisoprene, i.e., 1,2-, 1,4-, or 3,4-PI, have to be established."
+      }
+    ],
+    "column_system_metadata": [
+      {
+        "paper": "Paper1|Paper2|Paper3 or citation id if explicit",
+        "column": "Nucleosil C 18",
+        "brand_type": "Macherey-Nagel",
+        "stationary_phase_chemistry": "reversed phase",
+        "pore_size_a": "100, 300, 1000",
+        "dimensions": "250 x 4.6 mm i.d.",
+        "notes": "Three columns used in series",
+        "source_section": "INTRODUCTION",
+        "source_text": "The column system consisted of three reversed phase Nucleosil C 18 columns (100-5, 300-5, and 1000-7) with sizes of 250 Â 4.6 mm i.d. from Macherey-Nagel (D€ uren, Germany)."
+      },
+      {
+        "paper": "Paper1",
+        "column": "PSS SDV 5 μm precolumn, 10 3 Å, and 10 5 Å",
+        "brand_type": "PSS",
+        "stationary_phase_chemistry": "SEC columns (implied by PSS SDV)",
+        "pore_size_a": "3 Å and 5 Å",
+        "dimensions": "300 Å 8 mm i.d.",
+        "notes": "Three columns used for SEC-NMR",
+        "source_section": "SEC-NMR",
+        "source_text": "Three columns (PSS SDV 5 μm precolumn, 10 3 Å, and 10 5 Å with 300 Â 8 mm i.d.) were used."
+      }
+    ]
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "INTRODUCTION",
       "token_count": 352,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A snippet containing parts of an Introduction and Abst"
+      "extracted": {
+        "master_table": 1,
+        "separation_mechanism": 1,
+        "column_system_metadata": 1
+      }
     },
     {
       "chunk_index": 1,
       "section": "SEC-NMR",
       "token_count": 729,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A section titled \"SEC-NMR\" containing experimental det"
+      "extracted": {
+        "master_table": 1,
+        "separation_mechanism": 1,
+        "column_system_metadata": 1
+      }
     },
     {
       "chunk_index": 2,
       "section": "ARTICLE",
       "token_count": 251,
-      "extraction_success": false,
+      "extraction_success": true,
       "llm_calls": 1,
       "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A snippet from a scientific article (Section: ARTICLE)"
+      "extracted": {
+        "master_table": 0,
+        "separation_mechanism": 0,
+        "column_system_metadata": 0
+      }
     }
   ]
 }

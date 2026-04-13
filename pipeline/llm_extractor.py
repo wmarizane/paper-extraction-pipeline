@@ -2,6 +2,7 @@
 
 import json
 import logging
+import re
 import time
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
@@ -85,7 +86,7 @@ class LLMExtractor:
         self.sampling_params = SamplingParams(
             temperature=self.temperature,
             max_tokens=settings.vllm_max_tokens,
-            top_p=0.95,
+            top_p=0.9,
         )
         logger.info("LLM extractor initialized with model: %s", self.model_name)
     
@@ -100,12 +101,15 @@ class LLMExtractor:
         """
         logger.debug(f"Extracting from chunk {chunk.chunk_index} ({chunk.section})")
         
-        prompt = self._build_extraction_prompt(chunk)
-        
         # Try extraction with retries
         for attempt in range(1, self.max_retries + 1):
             try:
                 start_time = time.time()
+                prompt = (
+                    self._build_extraction_prompt(chunk)
+                    if attempt == 1
+                    else self._build_retry_prompt(chunk)
+                )
                 
                 # Generate response
                 outputs = self.llm.generate([prompt], self.sampling_params)
@@ -160,7 +164,8 @@ class LLMExtractor:
         Returns:
             Formatted prompt string
         """
-        prompt = f"""You are a scientific chromatography extraction assistant.
+        prompt = f"""/no_think
+You are a scientific chromatography extraction assistant.
 
 **TEXT TO ANALYZE:**
 Section: {chunk.section}
@@ -228,10 +233,22 @@ Respond with ONLY valid JSON in this exact structure:
 - If no information is found for a table, use an empty list []
 - Do not make up or infer data that isn't explicitly stated
 - Keep source_text concise and verbatim where possible
-- Return ONLY the JSON, no additional text or explanation
+- Do NOT output `<think>`, `<reasoning>`, or any analysis text
+- Do NOT use markdown fences
+- Return ONLY the JSON object, no additional text or explanation
+- Start the response directly with a JSON object
 
 JSON OUTPUT:"""
         return prompt
+
+    def _build_retry_prompt(self, chunk: TextChunk) -> str:
+        """Build stricter retry prompt when prior output was not valid JSON."""
+        return (
+            "/no_think\n"
+            "Your previous output was invalid. Return ONLY one valid JSON object.\n"
+            "No reasoning text. No markdown. No extra commentary.\n\n"
+            f"{self._build_extraction_prompt(chunk)}"
+        )
 
     def _parse_and_create_result(
         self,
@@ -287,12 +304,6 @@ JSON OUTPUT:"""
             ValueError: If JSON cannot be parsed
         """
         text = response_text.strip()
-
-        # Remove markdown code blocks if present
-        if text.startswith("```json"):
-            text = text.split("```json")[1].split("```")[0].strip()
-        elif text.startswith("```"):
-            text = text.split("```")[1].split("```")[0].strip()
 
         def _normalize(data: Dict[str, Any]) -> Dict[str, Any]:
             if not isinstance(data, dict):
@@ -373,25 +384,101 @@ JSON OUTPUT:"""
 
             return data
 
-        # Try to parse JSON
-        try:
-            data = json.loads(text)
-            return _normalize(data)
-            
-        except (json.JSONDecodeError, ValueError) as e:
-            # Try to find JSON object in text
-            start = text.find("{")
-            end = text.rfind("}")
+        def _strip_reasoning_blocks(raw: str) -> str:
+            # Qwen3.5 frequently emits reasoning tags before JSON.
+            cleaned = re.sub(r"(?is)<\s*think\s*>.*?<\s*/\s*think\s*>", " ", raw)
+            cleaned = re.sub(r"(?is)<\s*reasoning\s*>.*?<\s*/\s*reasoning\s*>", " ", cleaned)
+            cleaned = re.sub(r"(?is)<\s*analysis\s*>.*?<\s*/\s*analysis\s*>", " ", cleaned)
 
-            if start >= 0 and end > start:
-                json_text = text[start : end + 1]
+            # If a dangling reasoning preface remains, keep content from first JSON brace onward.
+            lowered = cleaned.lower()
+            if "<think" in lowered or "<reasoning" in lowered or "<analysis" in lowered:
+                first_brace = cleaned.find("{")
+                if first_brace != -1:
+                    cleaned = cleaned[first_brace:]
+            return cleaned.strip()
+
+        def _extract_markdown_fences(raw: str) -> List[str]:
+            blocks = re.findall(r"```(?:json)?\s*(.*?)```", raw, flags=re.IGNORECASE | re.DOTALL)
+            return [b.strip() for b in blocks if b and b.strip()]
+
+        def _extract_balanced_json_objects(raw: str) -> List[str]:
+            objs: List[str] = []
+            depth = 0
+            start = -1
+            in_string = False
+            escaped = False
+
+            for idx, ch in enumerate(raw):
+                if in_string:
+                    if escaped:
+                        escaped = False
+                    elif ch == "\\":
+                        escaped = True
+                    elif ch == "\"":
+                        in_string = False
+                    continue
+
+                if ch == "\"":
+                    in_string = True
+                    continue
+                if ch == "{":
+                    if depth == 0:
+                        start = idx
+                    depth += 1
+                elif ch == "}" and depth > 0:
+                    depth -= 1
+                    if depth == 0 and start >= 0:
+                        objs.append(raw[start:idx + 1].strip())
+                        start = -1
+            return objs
+
+        def _repair_json_text(raw: str) -> str:
+            repaired = raw
+            repaired = repaired.replace("“", "\"").replace("”", "\"").replace("’", "'")
+            # Remove trailing commas before object/array close.
+            repaired = re.sub(r",\s*([}\]])", r"\1", repaired)
+            # Quote unquoted keys like {foo: "x"} or , foo:
+            repaired = re.sub(
+                r'([{\[,]\s*)([A-Za-z_][A-Za-z0-9_\- ]*)(\s*:)',
+                lambda m: f'{m.group(1)}"{m.group(2).strip()}"{m.group(3)}',
+                repaired,
+            )
+            return repaired
+
+        cleaned = _strip_reasoning_blocks(text)
+        parse_candidates: List[str] = []
+        parse_candidates.extend(_extract_markdown_fences(cleaned))
+        parse_candidates.append(cleaned)
+
+        checked = set()
+        errors: List[str] = []
+        for candidate in parse_candidates:
+            if not candidate:
+                continue
+            json_candidates = [candidate]
+            json_candidates.extend(_extract_balanced_json_objects(candidate))
+
+            for json_text in json_candidates:
+                if not json_text or json_text in checked:
+                    continue
+                checked.add(json_text)
                 try:
-                    data = json.loads(json_text)
-                    return _normalize(data)
-                except (json.JSONDecodeError, ValueError):
-                    pass
-            
-            raise ValueError(f"Could not parse JSON from LLM response: {e}\nResponse: {text[:200]}")
+                    return _normalize(json.loads(json_text))
+                except (json.JSONDecodeError, ValueError) as e:
+                    errors.append(str(e))
+                    repaired = _repair_json_text(json_text)
+                    if repaired != json_text:
+                        try:
+                            return _normalize(json.loads(repaired))
+                        except (json.JSONDecodeError, ValueError) as e2:
+                            errors.append(str(e2))
+
+        preview = cleaned[:280].replace("\n", " ")
+        last_error = errors[-1] if errors else "no JSON object found"
+        raise ValueError(
+            f"Could not parse JSON from LLM response: {last_error}\nResponse: {preview}"
+        )
     
     def extract_from_chunk(self, chunk: TextChunk) -> ExtractionResult:
         """
@@ -480,38 +567,71 @@ JSON OUTPUT:"""
         if not chunks:
             return []
 
-        prompts = [self._build_extraction_prompt(chunk) for chunk in chunks]
-        outputs = self.llm.generate(prompts, self.sampling_params)
+        results: List[Optional[ExtractionResult]] = [None] * len(chunks)
+        llm_calls = [0] * len(chunks)
+        pending_indices = list(range(len(chunks)))
 
-        results: List[ExtractionResult] = []
-        for chunk, output in zip(chunks, outputs):
-            response_text = output.outputs[0].text
-            try:
-                extracted_data = self._parse_llm_response(response_text)
-                results.append(
-                    ExtractionResult(
+        for attempt in range(1, self.max_retries + 1):
+            if not pending_indices:
+                break
+
+            prompts = [
+                self._build_extraction_prompt(chunks[idx])
+                if attempt == 1
+                else self._build_retry_prompt(chunks[idx])
+                for idx in pending_indices
+            ]
+            outputs = self.llm.generate(prompts, self.sampling_params)
+
+            next_pending: List[int] = []
+            for idx, output in zip(pending_indices, outputs):
+                llm_calls[idx] += 1
+                chunk = chunks[idx]
+                response_text = output.outputs[0].text
+                try:
+                    extracted_data = self._parse_llm_response(response_text)
+                    results[idx] = ExtractionResult(
                         chunk_index=chunk.chunk_index,
                         section=chunk.section,
                         extracted_data=extracted_data,
                         success=True,
-                        llm_calls=1,
+                        llm_calls=llm_calls[idx],
                         processing_time=0.0,
                     )
-                )
-            except Exception as e:
-                results.append(
-                    ExtractionResult(
-                        chunk_index=chunk.chunk_index,
-                        section=chunk.section,
-                        extracted_data=None,
-                        success=False,
-                        error_message=str(e),
-                        llm_calls=1,
-                        processing_time=0.0,
-                    )
-                )
+                except Exception as e:
+                    if attempt < self.max_retries:
+                        next_pending.append(idx)
+                    else:
+                        results[idx] = ExtractionResult(
+                            chunk_index=chunk.chunk_index,
+                            section=chunk.section,
+                            extracted_data=None,
+                            success=False,
+                            error_message=str(e),
+                            llm_calls=llm_calls[idx],
+                            processing_time=0.0,
+                        )
+            pending_indices = next_pending
 
-        return results
+        finalized: List[ExtractionResult] = []
+        for idx, result in enumerate(results):
+            if result is not None:
+                finalized.append(result)
+                continue
+            chunk = chunks[idx]
+            finalized.append(
+                ExtractionResult(
+                    chunk_index=chunk.chunk_index,
+                    section=chunk.section,
+                    extracted_data=None,
+                    success=False,
+                    error_message="Unknown extraction failure",
+                    llm_calls=llm_calls[idx],
+                    processing_time=0.0,
+                )
+            )
+
+        return finalized
 
 
 def extract_from_chunks(chunks: List[TextChunk], use_batch: bool = True) -> List[ExtractionResult]:
