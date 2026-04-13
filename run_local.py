@@ -21,6 +21,7 @@ from config import settings
 from pipeline.pdf_parser import check_grobid_server, parse_pdf_with_grobid, save_tei_xml
 from pipeline.chunker import chunk_pdf
 from pipeline.llm_extractor import LLMExtractor
+from pipeline.csv_exporter import export_extraction_to_csv
 
 
 class PipelineRunner:
@@ -227,11 +228,10 @@ class PipelineRunner:
         Returns:
             Dictionary with aggregated data and metadata
         """
-        # Collect all extracted data
-        all_polymers = []
-        all_conditions = []
-        all_measurements = []
-        all_methods = set()
+        # Collect all extracted table rows
+        all_master_rows = []
+        all_mechanism_rows = []
+        all_metadata_rows = []
         
         chunk_details = []
         
@@ -247,29 +247,36 @@ class PipelineRunner:
             
             if result.success and result.extracted_data:
                 data = result.extracted_data
-                
-                # Aggregate polymers
-                all_polymers.extend(data.get("polymers", []))
-                
-                # Aggregate conditions
-                all_conditions.extend(data.get("conditions", []))
-                
-                # Aggregate measurements
-                all_measurements.extend(data.get("measurements", []))
-                
-                # Aggregate methods
-                all_methods.update(data.get("methods", []))
+                all_master_rows.extend(data.get("master_table", []))
+                all_mechanism_rows.extend(data.get("separation_mechanism", []))
+                all_metadata_rows.extend(data.get("column_system_metadata", []))
                 
                 chunk_info["extracted"] = {
-                    "polymers": len(data.get("polymers", [])),
-                    "conditions": len(data.get("conditions", [])),
-                    "measurements": len(data.get("measurements", [])),
-                    "methods": len(data.get("methods", []))
+                    "master_table": len(data.get("master_table", [])),
+                    "separation_mechanism": len(data.get("separation_mechanism", [])),
+                    "column_system_metadata": len(data.get("column_system_metadata", [])),
                 }
             else:
                 chunk_info["error"] = result.error_message
             
             chunk_details.append(chunk_info)
+
+        def _dedupe_rows(rows):
+            seen = set()
+            deduped = []
+            for row in rows:
+                if not isinstance(row, dict):
+                    continue
+                key = tuple((k, str(v).strip()) for k, v in sorted(row.items()) if k not in {"source_text"})
+                if key in seen:
+                    continue
+                seen.add(key)
+                deduped.append(row)
+            return deduped
+
+        all_master_rows = _dedupe_rows(all_master_rows)
+        all_mechanism_rows = _dedupe_rows(all_mechanism_rows)
+        all_metadata_rows = _dedupe_rows(all_metadata_rows)
         
         # Build final output
         output = {
@@ -285,16 +292,14 @@ class PipelineRunner:
                 "pipeline_metrics": self.metrics
             },
             "summary": {
-                "total_polymers": len(all_polymers),
-                "total_conditions": len(all_conditions),
-                "total_measurements": len(all_measurements),
-                "methods_used": sorted(list(all_methods))
+                "total_master_rows": len(all_master_rows),
+                "total_separation_mechanism_rows": len(all_mechanism_rows),
+                "total_column_system_metadata_rows": len(all_metadata_rows),
             },
             "extracted_data": {
-                "polymers": all_polymers,
-                "conditions": all_conditions,
-                "measurements": all_measurements,
-                "methods": sorted(list(all_methods))
+                "master_table": all_master_rows,
+                "separation_mechanism": all_mechanism_rows,
+                "column_system_metadata": all_metadata_rows,
             },
             "chunk_details": chunk_details
         }
@@ -329,6 +334,14 @@ class PipelineRunner:
         
         # Also save a "latest" version for easy access
         latest_path = output_dir / f"{base_name}_latest.json"
+        with open(latest_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+        csv_paths = export_extraction_to_csv(data, output_dir, base_name)
+        data["metadata"]["csv_exports"] = csv_paths
+
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
         with open(latest_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         

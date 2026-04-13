@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" xml:id="_B6ZAYu5">Separation Analysis of Polyisoprenes Regarding Microstructure by Online LCCC-NMR and SEC-NMR</title>
+				<funder ref="#_Bgedm7D">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2011-02-24">February 24, 2011</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wolf</forename><surname>Hiller</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Chemistry</orgName>
+								<orgName type="institution">TU Dortmund</orgName>
+								<address>
+									<addrLine>Otto-Hahn-Str. 6</addrLine>
+									<postCode>44227</postCode>
+									<settlement>Dortmund</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pritish</forename><surname>Sinha</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry and Polymer Science</orgName>
+								<orgName type="institution">University of Stellenbosch</orgName>
+								<address>
+									<addrLine>Private Bag X1</addrLine>
+									<postCode>7602</postCode>
+									<settlement>Matieland</settlement>
+									<country key="ZA">South Africa</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mathias</forename><surname>Hehn</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Chemistry</orgName>
+								<orgName type="institution">TU Dortmund</orgName>
+								<address>
+									<addrLine>Otto-Hahn-Str. 6</addrLine>
+									<postCode>44227</postCode>
+									<settlement>Dortmund</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Harald</forename><surname>Pasch</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry and Polymer Science</orgName>
+								<orgName type="institution">University of Stellenbosch</orgName>
+								<address>
+									<addrLine>Private Bag X1</addrLine>
+									<postCode>7602</postCode>
+									<settlement>Matieland</settlement>
+									<country key="ZA">South Africa</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thorsten</forename><surname>Hofe</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">PSS Polymer Standards Service GmbH</orgName>
+								<address>
+									<addrLine>In der Dalheimer Wiese 5</addrLine>
+									<postCode>55120</postCode>
+									<settlement>Mainz</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main" xml:id="_uKTWurT">Separation Analysis of Polyisoprenes Regarding Microstructure by Online LCCC-NMR and SEC-NMR</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2011-02-24">February 24, 2011</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D958992D65D0D147329CC8A92D1E9EB1</idno>
+					<idno type="DOI">10.1021/ma102750s</idno>
+					<note type="submission">Received: December 2, 2010 Revised: January 24, 2011</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2026-04-13T20:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_GSRdPbY">EXPERIMENTAL SECTION</head><p xml:id="_ADBBmyZ">Samples. Two series of polyisoprenes of different molar masses were used (Table <ref type="table">1</ref>). One series consists of samples containing predominantly 1,4-isoprene units with a small content of 3,4-isoprene units (samples 1-5), and the other series is samples containing predominantly 3,4-isoprene units and additionally 1,2-and 1,4-isoprene units (samples 6-10). The corresponding structures are drawn in Scheme 1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_RZFyNQJ">LCCC.</head><p xml:id="_z4Pchfc">The LCCC experiments were performed with an Agilent 1100 HPLC system (Agilent Technologies GmbH, B€ oblingen, Germany)</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_aZ4Kd75">' INTRODUCTION</head><p xml:id="_HpbkbSn">A comprehensive analysis of polymers includes not only structure elucidation of the bulk sample; it also requires analysis of the different parameters of molecular heterogeneity, which is typically conducted by liquid chromatography. Depending on the separation method, <ref type="bibr" target="#b0">1</ref> it is possible to obtain the molar mass distribution (MMD), chemical composition distribution (CCD), and functionality type distribution (FTD). In particular, liquid chromatography at critical conditions (LCCC) is an elegant method to separate polymers regarding chemical heterogeneity. <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> In this case polymers of the same composition and microstructure elute independently of their molar mass at the same retention volume. This status was also called "chromatographic invisibility" by Gorbunov and Skvortsov <ref type="bibr" target="#b5">6</ref> and is characterized by compensating enthalpic and entropic interactions between the macromolecules and the chromatographic system. Meanwhile, many applications of LCCC to block copolymers <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> and blends of homopolymers <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr">[15]</ref> have been reported. Most of the references report critical conditions achieved by using solvent mixtures as the mobile phase. However, critical conditions can also be obtained by varying the temperature. <ref type="bibr" target="#b7">8</ref> In this case even single solvents can establish critical conditions as shown by Chang, <ref type="bibr" target="#b14">16</ref> Macko, <ref type="bibr" target="#b15">17</ref> and the present authors. <ref type="bibr" target="#b16">18</ref> However, not all molecular details can be determined by liquid chromatography and concentration detection. The hyphenation of LCCC with NMR is of great interest for the polymer characterization. It can provide true molar masses and true chemical compositions of block copolymers <ref type="bibr" target="#b16">[18]</ref><ref type="bibr" target="#b17">[19]</ref><ref type="bibr" target="#b18">[20]</ref> and can analyze end groups of polymers. <ref type="bibr" target="#b19">21</ref> In the present work we focus on liquid chromatographic separations according to microstructure and the analysis of the microstructures by <ref type="bibr" target="#b0">1</ref> H NMR spectroscopy. The first separation and analysis of polymer microstructures by HPLC-NMR was reported by Pasch, Hiller, and Haner <ref type="bibr" target="#b20">22</ref> describing the analysis of low molar mass polystyrenes. However, LCCC is also capable of separating higher molar mass polymers regarding microstructure. Berek et al. <ref type="bibr" target="#b21">23</ref> separated poly(methyl methacrylate) regarding tacticity, while Kitayama et al. <ref type="bibr" target="#b22">24</ref> analyzed poly(ethyl methacrylate) according to the tactic triads by LCCC-NMR. The separation according to microstructure is always a challenge. Now, we want to demonstrate that LCCC-NMR is a powerful tool for the separation and analysis of polyisoprene (PI) regarding its different isomeric microstructures.</p><p xml:id="_vUjNbUV">ABSTRACT: It is shown that online coupling of liquid chromatography at critical conditions (LCCC) and <ref type="bibr" target="#b0">1</ref> H NMR spectroscopy can be used to separate and analyze polyisoprenes with respect to their isomeric microstructures. It was possible to separate blends of copolymers consisting predominantly of 3,4-and 1,4-isoprene units by using critical conditions of 1,4-PI. Critical conditions of 1,4-PI were established such that polymers containing predominantly 3,4-PI elute in the size exclusion mode. Furthermore, on-flow NMR detection allows for the complete eluate analysis and the detection of all three isomeric species, such as 1,2-, 1,4-, and 3,4-isoprene, in the eluting fractions. These three individual moieties were correctly quantified in the individual blend components. It was also found that the 3,4-PI samples were random terpolymers of 1,2-, 1,4-, and 3,4-isoprene, whereas the 1,4-PI samples were copolymers of 1,4-and 3,4-isoprene. In addition, SEC-NMR allowed for a fast and precise molar mass calibration and the calculation of the relevant molar mass parameters M w and M n . See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p><p xml:id="_QWj6Rff">consisting of a pump with degasser, UV detector, column oven, and autosampler. The column system consisted of three reversed phase Nucleosil C 18 columns (100-5, 300-5, and 1000-7) with sizes of 250 Â 4.6 mm i.d. from Macherey-Nagel (D€ uren, Germany). The mobile phase was a mixture of butanone and cyclohexane. All LCCC experiments were performed with 1 H NMR as the detector.</p><p xml:id="_E2qmC65">LCCC-NMR. The LCCC-NMR experiments were performed with a DRX-500 NMR spectrometer (Bruker BioSpin GmbH, Germany) attached to the Agilent 1100 HPLC system. Hystar software was controlling the HPLC. The NMR experiments were carried out with a z-gradient inverse triple resonance flow probe ( 1 H 90°pulse of 7.7 μs). The flow cell had an active volume of 60 μL. The LCCC-NMR experiments were performed with a concentration of 5 mg mL -1 for each PI sample. 100 μL was injected. The flow rate was 0.5 mL min -1 .</p><p xml:id="_Wn2ezeY">On-flow HPLC-NMR experiments were carried out by using protonated HPLC solvents. WET solvent suppression <ref type="bibr" target="#b23">25</ref> was applied to the HPLC solvents. Eight scans per FID with 8 kB data, 6 kHz spectral width, and 0.79 s recycle delay (0.68 s acquisition time) were acquired. The series of FIDs were Fourier transformed via one time domain (zero filling to 16 kb) and plotted as 2D contour plots of retention times vs 1 H chemical shifts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_MQeAaFw">SEC-NMR.</head><p xml:id="_SJTDaTd">On-flow SEC-NMR experiments were performed with the same system and same acquisition parameters as described above. Three columns (PSS SDV 5 μm precolumn, 10 3 Å, and 10 5 Å with 300 Â 8 mm i.d.) were used. The data were processed as 2D contour plots. The accuracy of the NMR retention time was (2 s.</p><p xml:id="_rugsPKn">The sample concentration was 2.7 mg mL -1 . 100 μL was injected. HPLC grade THF was used as mobile phase with a flow rate of 0.8 mL min -1 . WET solvent suppression was applied to THF.</p><p xml:id="_3EdX36F">' RESULTS AND DISCUSSION LCCC-NMR of Blends of Polyisoprene. For the separation of polyisoprene according to the microstructure by LCCC critical conditions of one species of polyisoprene, i.e., 1,2-, 1,4-, or 3,4-PI, have to be established. As is known, critical conditions depend on the different polarities of the sample, the stationary phase, and the mobile phase. In the case of different microstructures the polarities of the different microstructural units are very similar. Therefore, to find a suitable separation procedure is more challenging.</p><p xml:id="_qe5HSUC">It was the goal of the present study to find critical conditions of 1,4-PI. Unfortunately, the available samples are not pure 1,4-PI but contain small amounts of the other isomeric moieties. As is shown in Table <ref type="table" target="#tab_0">1</ref>, the samples under investigation contain at least 93 mol % of 1,4-isoprene units. Strictly speaking, there cannot be one single critical point for all these samples. It can be assumed, however, that the elution behavior of the samples is mainly driven by the 1,4-isoprene units.</p><p xml:id="_ddCqJRr">For establishing near-LCCC conditions a nonpolar stationary phase RP-18 was selected. Figure <ref type="figure" target="#fig_1">1</ref> shows the elution behavior of the 1,4-PI samples as a function of eluent composition. It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 °C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses. If the mobile phase contains more cyclohexane (&gt;8 vol %), the molar mass dependence corresponds to show size exclusion chromatography (SEC) behavior. If the mobile phase contains less cyclohexane (&lt;8 vol %), the 1,4-PI samples are eluted in the liquid adsorption chromatography (LAC) mode. It is important to note that the near-critical conditions of the 1,4-PI   <ref type="bibr" target="#b25">27</ref> and Sinha et al. <ref type="bibr" target="#b26">28</ref> for the separation of blends of PI and polystyrene as well as polybutadiene.</p><p xml:id="_5yV9Vqs">To evaluate the separation capabilities of the present LCCC mode, samples of different molar masses containing predominantly 3,4-isoprene units (see Table <ref type="table" target="#tab_0">1</ref>) are investigated under the same conditions. Critical conditions are only useful if one molecular moiety (the one at LCCC conditions) shows a molar mass independence, and other species are experiencing a molar mass dependence such as SEC (or LAC). SEC is preferred since it allows for a molar mass calibration of the component which is not under critical conditions.</p><p xml:id="_WUMTmBu">The behavior of 3,4-PI samples can be tested by preparing blends of samples with predominantly 1,4-and 3,4-isoprene units. Three blends were prepared containing three different 3,4-PI polymers. In order to evaluate the accuracy of the critical conditions, we also conducted measurements at both LCCC conditions of 1,4-PI and SEC conditions of 3,4-PI at different injected sample concentrations. The concentrations were varied between 1 and 14 mg mL -1 . No differences were found for the elution times and for the calculated molar mass distributions at low and high concentrations. Therefore, a concentration of 5 mg mL -1 was used for the blends.</p><p xml:id="_zndmSx3">The main problem for the characterization of these blends is the fact that common chromatographic detectors (RI, ELSD, UV) are unable to differentiate between 1,4-and 3,4-PI. Therefore, the online coupling of LCCC and NMR is preferred. Figure <ref type="figure" target="#fig_4">2</ref> shows the on-flow experiments performed on the three blends.</p><p xml:id="_fYTG7mu">Figure <ref type="figure" target="#fig_4">2</ref>     <ref type="figure" target="#fig_4">2</ref> was used to determine the chemical composition distribution of 1,2-, 1,4-, and 3,4-isoprene units for the three blends. In order to ensure quantitative data, we have also used the method of relaxation corrected intensities as was proposed by Hiller et al. <ref type="bibr" target="#b27">29</ref> For this purpose, 20 mg of polyisoprene dissolved in 100 mL of butanone/cyclohexane (92/8 vol %) was pumped through a closed system consisting of pump and flow probe. This setup allowed for the precise measurement of the NMR intensities of all olefinic species in dependence of flow rate and NMR recycle delay. Figure <ref type="figure" target="#fig_6">3</ref> shows the NMR intensities of the olefinic moieties as a function of the recycle delays at flow rates of 0 and 0.5 mL min -1 (by using 90°p ulses). Figure <ref type="figure" target="#fig_6">3</ref> clearly shows that the olefinic protons have very different relaxation times. The 3,4-protons are the fastest relaxing protons, and the 1,4-protons are the slowest. As a consequence, the raw data of NMR intensities for a recycle delay of 0.79 s deviate significantly from the correct quantification. Accordingly, this figure is used to calculate correction factors for the NMR intensities by comparing the flow data to a stop-flow relaxation. The factors are determined to be 1.6 for 1,2-PI, 2.2 for 1,4-PI, and 1.3 for 3,4-PI. Using these correction factors, the correct chemical compositions can be calculated for these microstructures. Figure <ref type="figure" target="#fig_7">4</ref> shows the microstructure distributions for the three blends at critical conditions of 1,4-PI. In comparison to the blends, Figure <ref type="figure" target="#fig_9">5</ref>      <ref type="figure" target="#fig_9">5a</ref> it is obvious that also the 1,4-PI sample has a constant distribution of the isomers which indicates a random copolymer. (v) Since the chemical composition of the three isomeric moieties in the 3,4-PI samples is constant, the entire elution curve for each single isomeric species for both blend components can be calculated (see dashed lines of Figure <ref type="figure" target="#fig_7">4</ref>). This is possible because the 1,2-isoprene unit curve is eluting without any overlapping and allows for a simulation of the complete elution of the other two isomeric species due to their constant ratios to each other.</p><p xml:id="_eh5cqHT">The simulation provides even the complete detection of the lower intensity species, i.e., the low-intensity 3,4isoprene component in the 1,4-PI sample as well as the low intensity 1,4-isoprene component in the 3,4-PI samples. (vi) The simulated elution of the individual microstructures allows for a correct determination of the molar composition of the blends since the total elution of the predominantly 1,4-PI and predominantly 3,4-PI samples can be perfectly separated. Adding the individual elution traces, the true individual contents of each isomer and finally the true molar composition of the blends can be calculated (see Table <ref type="table" target="#tab_1">2</ref>). These data differ significantly if the molar composition is only determined by a graphical separation, where the two samples are separated by the experimental minimum of the total elution. Molar Mass Distributions by LCCC-NMR and SEC-NMR. As discussed before, the 3,4-PI samples elute in SEC mode. This behavior provokes the question if a molar mass calibration regarding 3,4-PI can be obtained. In order to obtain this calibration, on-flow experiments were carried out for all 3,4-PI (samples 6-10) of Table <ref type="table" target="#tab_0">1</ref> under critical conditions of 1,4-PI. Figure <ref type="figure" target="#fig_10">6</ref> shows the on-flow runs. By taking the maximum traces of the eluting species of Figure <ref type="figure" target="#fig_10">6</ref>, the calibration curve of Figure <ref type="figure" target="#fig_11">7</ref> could be constructed.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_gnhfC7N">Macromolecules</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_FRNxGq6">ARTICLE</head><p xml:id="_SewPA2f">This calibration curve shall now be used for the calculation of the MMD of the 3,4-PI samples.</p><p xml:id="_kPCmYgK">Unfortunately, the number of available 3,4-PI samples was limited. However, the data points could be used for calculating a SEC calibration curve. Even with this limited selection of samples, we tried to derive the molar mass distribution and calculated the number-average M n and weight-average M w molar mass parameters for the NMR detector (as the mass sensitive detector). According to Striegel, 30 they are given by</p><formula xml:id="formula_0">M n ¼ ∑ n i ¼ 1 I i ∑ n i ¼ 1 I i M i<label>ð1Þ</label></formula><formula xml:id="formula_1">M w ¼ ∑ n i ¼ 1 ðI i M i Þ ∑ n i ¼ 1 I i<label>ð2Þ</label></formula><p xml:id="_bRfCpN3">where I i = N i M i is the NMR intensity, N i is the number of macromolecules, and M i is the molar mass of the ith volume element of the SEC curve of each monomer species. Using eqs 1 and 2 and the calibration of Figure <ref type="figure" target="#fig_11">7</ref>, M n , M w , and the polydispersity were determined. It was found that the calculated molar masses of LCCC-NMR agreed well with the supplier values only in a few cases of M w (see Table <ref type="table" target="#tab_2">3</ref>). The main problem, however, is the tailing of the chromatograms of the 3,4-PI samples as seen in Figure <ref type="figure" target="#fig_9">5b</ref>, which causes lower M n values.</p><p xml:id="_92pHHtX">To evaluate the tailing, classical SEC-NMR and SEC-RI measurements of the polyisoprenes were carried out. All 1,4-PI and 3,4-PI samples were measured in THF. Again, all olefinic species can be easily detected with NMR. Figure <ref type="figure" target="#fig_12">8</ref> shows the individual NMR chromatograms of an on-flow SEC-NMR run of a 3,4-PI sample (sample 8).</p><p xml:id="_7YEuSdc">It is seen from Figure <ref type="figure" target="#fig_12">8</ref> that all three isomers show a homogeneous distribution along the elution peak. The chemical composition of these species is constant. In this case the sum of them can be used for constructing the entire elution which should correspond to the refractive index measurements. In order to obtain a molar mass calibation, all PI samples were measured with SEC-NMR and SEC-RI. Figure <ref type="figure" target="#fig_13">9</ref> shows the molar mass calibration obtained with SEC-NMR for both 1,4-PI and 3,4-PI.</p><p xml:id="_3N3vVBX">The calibration curves in Figures <ref type="figure" target="#fig_11">7</ref> and<ref type="figure" target="#fig_13">9</ref> were used for the determination of the molar mass distributions of the 3,4-PI samples. Figure <ref type="figure" target="#fig_14">10</ref> shows the comparison of the MMD of sample 8 from SEC-NMR, SEC-RI, and LCCC-NMR data. It shows a similar distribution for SEC-NMR and SEC-RI. The distribution of the SEC-NMR is slightly broader than that from SEC-RI. However, the tailing of the LCCC-NMR curve is significantly more pronounced than for SEC-NMR. Therefore, it was not caused by the larger volume of the NMR flow cell as initially expected. It is rather possible that the 1,4-isoprene units of the 3,4-PI samples affect the total elution of these samples. It is assumed that the 3,4-isoprene units do not interact with the stationary phase while the 1,4-isoprene units show weak adsorption as is suggested by the LCCC mode for the 1,4-PI samples. As      </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc xml:id="_ff9sWg7">Downloaded via UNIV OF MEMPHIS on August 5, 2024 at 22:10:27 (UTC).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Scheme 1 .</head><label>1</label><figDesc xml:id="_M3ETMs6">Scheme 1. Structures of (a) 1,2-PI, (b) 1,4-PI, and (c) 3,4-PI</figDesc><graphic coords="2,90.65,285.90,163.33,230.51" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc xml:id="_bzcTVHz">provides several conclusions: (a) Common near-critical conditions can be found for copolymers containing roughly 94 mol % of 1,4-isoprene units. At these conditions, 1,4-PI samples with different molar masses coelute. Samples that contain predominantly 3,4isoprene units elute at lower elution times. (b) Blends of 1,4-PI and 3,4-PI samples can be well separated by LCCC-NMR. These samples are copolymers containing predominantly 1,4-and 3,4-isoprene units, respectively. The 1,4-PI sample elutes at the highest retention time which corresponds to the critical conditions of 1,4-PI. The 3,4-PI samples elute earlier indicating that for these samples a SEC mode is operating. (c) The elution peak of the 1,4-PI sample indicates simultaneous appearance of 1,4-isoprene relevant olefinic signals</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 1 .</head><label>1</label><figDesc xml:id="_HK6T6YQ">Figure 1. Critical diagram of 1,4-PI showing molar mass versus retention time at a mobile phase composition of butanone/cyclohexane: 9, 70:30; b, 92:8; 2, 97:3. Stationary phase: three RP columns of C18 (100-5, 300-5, 1000-7); detector: NMR, flow rate 0.5 mL min -1 ; SEC = size exclusion chromatography, LCCC = liquid chromatography at critical conditions, LAC = liquid adsorption chromatography.</figDesc><graphic coords="3,70.19,67.64,204.27,132.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 2 .</head><label>2</label><figDesc xml:id="_NT9cWnF">Figure 2. On-flow LCCC-NMR of blends of 1,4-PI (M n = 20.7 kg mol -1 ) and 3,4-PI: (a) M n = 9.1 kg mol -1 , (b) 33.0 kg mol -1 , and (c) 72.8 kg mol -1 measured at critical conditions of 1,4-PI (100 μL injection, flow rate 0.5 mL min -1 ). The blue dotted lines represent the maximum of the elution of the 1,4-PI sample (containing also a small amount 3,4-PI), and the red dotted lines show the maximum of the elution of the 3,4-PI samples (containing also 1,2-PI and 1,4-PI).</figDesc><graphic coords="3,319.98,67.64,230.68,514.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc xml:id="_JmRN4sz">also shows the LCCC-NMR on-flow runs of the 1,4-PI and 3,4-PI samples separately.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 3 .</head><label>3</label><figDesc xml:id="_4keFVhF">Figure 3. NMR intensities of the olefinic protons as a function of the recycle delay for 0.5 mL min -1 (solid lines) and 0 mL min -1 (dashed lines): (b, 2, 9) data points for 0.5 mL min -1 ; (O, 4, 0) data points for 0.0 mL min -1 .</figDesc><graphic coords="4,61.57,67.64,221.56,164.18" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 4 .</head><label>4</label><figDesc xml:id="_rhfFRmr">Figure 4. Normalized NMR intensities and chemical composition distributions of 1,2-, 1,4-, and 3,4-isoprene units for the three blends consisting of 1,4-PI (M n = 20.7 kg mol -1 ) and 3,4-PI: (a) M n = 9.1 kg mol -1 , (b) 33.0 kg mol -1 , and (c) 72.8 kg mol -1 measured at critical conditions of 1,4-PI; blue solid line = NMR elution of 1,2-PI, red solid line = NMR elution of 1,4-PI, green solid line = NMR elution of 3,4-PI, [ = molar content of 1,2-isoprene units, 9 = molar content of 1,4isoprene units, and 2 = molar content of 3,4-isoprene units; dashed lines are calculated elution curves.</figDesc><graphic coords="4,321.17,67.64,228.30,481.83" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figures 4</head><label>4</label><figDesc xml:id="_27y7N4u">Figures 4 and 5 provide a number of interesting conclusions: (i) The 1,4-PI sample (with predominantly 1,4-isoprene units) elutes at critical conditions of 1,4-PI. Both 1,4and 3,4-PI samples can be sufficiently separated. The best separation is achieved for the third blend (Figure 4c). The other two blends show partial coelution of both samples. This is due to the different molar masses of the 3,4-PI samples. (ii) The 3,4-PI samples elute at shorter retention times with increasing molar mass as indicated by the maximum intensities. (iii) The individual three isomeric structures present in the 3,4-PI samples appear completely simultaneously as indicated by the maxima which are at the same time for 1,2-, 1,4-, and 3,4-isoprene units. The 1,2-PI curve (only present in the 3,4-PI samples) is eluting without any overlapping. (iv) The chemical composition is totally constant for the individual isomers of the 3,4-PI samples. This indicates that the 3,4-PI samples are random terpolymers. From Figure 5a it is obvious that also the 1,4-PI sample has a constant distribution of the isomers which indicates a random copolymer. (v) Since the chemical composition of the three isomeric moieties in the 3,4-PI samples is constant, the entire elution curve for each single isomeric species for both</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 5 .</head><label>5</label><figDesc xml:id="_JBN7mcA">Figure 5. NMR chromatograms (normalized to 100%) at critical conditions of 1,4-PI for (a) 1,4-PI sample (M n = 20.7 kg mol -1 ) and (b) 3,4-PI sample (M n = 33.0 kg mol -1 ); blue solid line = NMR elution of 1,2-isoprene units, red solid line = NMR elution of 1,4-isoprene units, green solid line = NMR elution of 3,4-isoprene units, [ = molar content of 1,2-PI, 9 = molar content of 1,4-PI, and 2 = molar content of 3,4-PI.</figDesc><graphic coords="5,58.90,369.13,226.89,162.77" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 6 .</head><label>6</label><figDesc xml:id="_ytMWJcP">Figure 6. On-flow LCCC-NMR of 3,4-PI samples of different molar masses at critical conditions of 1,4-PI.</figDesc><graphic coords="5,323.83,419.30,223.03,152.45" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 7 .</head><label>7</label><figDesc xml:id="_SjVscrw">Figure 7. Molar mass calibration obtained from LCCC-NMR of 3,4-PI samples at critical conditions of 1,4-PI (9 = data points; solid line = fitted to a polynomial of third order).</figDesc><graphic coords="6,72.00,429.51,200.69,142.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 8 .</head><label>8</label><figDesc xml:id="_UNkAAn8">Figure 8. SEC-NMR chromatograms of sample 8 (M w = 33.9 kg mol -1 ) using THF with a flow rate of 0.8 mL min -1 , concentration 2.7 mg mL -1 , 100 μL injection, SDV columns 10 3 Å and 10 5 Å 8 Â 300 i.d., PSS GmbH, Mainz, Germany: black solid line = total NMR elution of the 3,4-PI sample, [ = molar content of 1,2-isoprene units, 9 = molar content of 1,4-isoprene units, and 2 = molar content of 3,4-isoprene units.</figDesc><graphic coords="6,335.23,401.78,200.18,140.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 9 .</head><label>9</label><figDesc xml:id="_Qcynwvy">Figure 9. SEC-NMR calibration of 1,4-PI (9) and 3,4-PI (b) samples; solid lines = fitted to third-order polynomials.</figDesc><graphic coords="7,72.34,67.64,199.96,146.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 10 .</head><label>10</label><figDesc xml:id="_Y5DfmD2">Figure 10. Comparison of the molar mass distribution of sample 8 obtained by SEC-RI (black line), SEC-NMR (blue line), and LCCC-NMR (red line).</figDesc><graphic coords="7,72.23,264.93,200.18,146.89" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 11 .</head><label>11</label><figDesc xml:id="_EEVPxNq">Figure 11. Molar mass distributions of 3,4-PI samples 6-10 measured by SEC-NMR.</figDesc><graphic coords="7,75.57,476.11,193.49,139.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc xml:id="_bEC8DHs">Microstructures of 1,4-PI Samples and 3,4-PI Samples Measured by Off-Line 1 H NMR of the Bulk Sample and LCCC-NMR (SEC = Nominal Molar Masses Given by the Supplier)</figDesc><table><row><cell></cell><cell>SEC</cell><cell></cell><cell>1 H NMR</cell><cell></cell><cell></cell><cell>LCCC-NMR</cell><cell></cell></row><row><cell>sample no.</cell><cell>M p (kg/mol)</cell><cell>1,2-PI (mol %)</cell><cell>1,4-PI (mol %)</cell><cell>3,4-PI (mol %)</cell><cell>1,2-PI (mol %)</cell><cell>1,4-PI (mol %)</cell><cell>3,4-PI (mol %)</cell></row><row><cell>1</cell><cell>1.0</cell><cell></cell><cell>93.2</cell><cell>6.8</cell><cell></cell><cell>94.0</cell><cell>6.0</cell></row><row><cell>2</cell><cell>4.5</cell><cell></cell><cell>93.9</cell><cell>6.1</cell><cell></cell><cell>94.4</cell><cell>5.6</cell></row><row><cell>3</cell><cell>9.9</cell><cell></cell><cell>94.2</cell><cell>5.8</cell><cell></cell><cell>94.6</cell><cell>5.4</cell></row><row><cell>4</cell><cell>21.6</cell><cell></cell><cell>94.2</cell><cell>5.8</cell><cell></cell><cell>94.5</cell><cell>5.5</cell></row><row><cell>5</cell><cell>47.5</cell><cell></cell><cell>94.2</cell><cell>5.8</cell><cell></cell><cell>95.1</cell><cell>4.9</cell></row><row><cell>6</cell><cell>1.1</cell><cell>24.9</cell><cell>10.6</cell><cell>64.5</cell><cell>25.3</cell><cell>14.9</cell><cell>59.8</cell></row><row><cell>7</cell><cell>8.5</cell><cell>26.4</cell><cell>12.0</cell><cell>61.6</cell><cell>28.5</cell><cell>13.4</cell><cell>58.1</cell></row><row><cell>8</cell><cell>34.8</cell><cell>28.2</cell><cell>13.4</cell><cell>58.4</cell><cell>30.1</cell><cell>16.4</cell><cell>53.5</cell></row><row><cell>9</cell><cell>43.7</cell><cell>30.3</cell><cell>14.8</cell><cell>54.9</cell><cell>31.3</cell><cell>17.3</cell><cell>51.4</cell></row><row><cell>10</cell><cell>79.2</cell><cell>34.6</cell><cell>15.6</cell><cell>49.8</cell><cell>34.5</cell><cell>18.7</cell><cell>46.8</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc xml:id="_e7bdtT5">Chemical Composition and Microstructures of Blends of 1,4-PI Sample and 3,4-PI Samples Measured by LCCC-NMR and Compared to Simulated LCCC-NMR Elution</figDesc><table><row><cell></cell><cell></cell><cell cols="2">chemical composition</cell><cell></cell><cell>expt microstructure</cell><cell></cell><cell></cell><cell>calcd microstructure</cell><cell></cell></row><row><cell></cell><cell></cell><cell cols="2">of blends (mol %)</cell><cell></cell><cell cols="2">(separated via total curves)</cell><cell></cell><cell cols="2">(calculated via 1,2 curves)</cell></row><row><cell>blend samples</cell><cell>M p (kg/mol)</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>1,4/3,4</cell><cell>of 3,4-PI a</cell><cell>expt</cell><cell>calcd</cell><cell cols="6">1,2-PI (mol %) 1,4-PI (mol %) 3,4-PI (mol %) 1,2-PI (mol %) 1,4-PI (mol %) 3,4-PI (mol %)</cell></row><row><cell>4/7</cell><cell>10.3</cell><cell>58.4/41.6</cell><cell>56.0/44.0</cell><cell>0/22.6</cell><cell>80.4/24.5</cell><cell>19.6/52.9</cell><cell>0/24.6</cell><cell>100/17.6</cell><cell>0/57.8</cell></row><row><cell>4/8</cell><cell>39.0</cell><cell>55.5/44.5</cell><cell>49.9/50.1</cell><cell>0/27.3</cell><cell>90.4/20.4</cell><cell>9.6/52.3</cell><cell>0/28.0</cell><cell>97.9/17.4</cell><cell>2.1/54.6</cell></row><row><cell>4/10</cell><cell>78.2</cell><cell>51.4/48.6</cell><cell>51.7/48.3</cell><cell>0/32.8</cell><cell>92.3/20.9</cell><cell>7.7/46.3</cell><cell>0/32.9</cell><cell>96.8/18.8</cell><cell>3.2/48.3</cell></row></table><note><p xml:id="_u8jpvYm">a Determined from LCCC-NMR experiments.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc xml:id="_U6dkQga">Molar Masses Determined by SEC, SEC-NMR, and LCCC-NMR</figDesc><table><row><cell></cell><cell></cell><cell>SEC</cell><cell></cell><cell></cell><cell>SEC-NMR</cell><cell></cell><cell></cell><cell>LCCC-NMR</cell><cell></cell></row><row><cell>sample no. M 6</cell><cell>0.97</cell><cell>1.1</cell><cell>1.1</cell><cell>1.37</cell><cell>1.44</cell><cell>1.2</cell><cell>(1.9)</cell><cell>(2.5)</cell><cell>(1.2)</cell></row><row><cell>7</cell><cell>9.1</cell><cell>9.4</cell><cell>8.5</cell><cell>8.9</cell><cell>9.5</cell><cell>9.8</cell><cell>5.1</cell><cell>9.4</cell><cell>8.7</cell></row><row><cell>8</cell><cell>33.0</cell><cell>33.9</cell><cell>34.8</cell><cell>30.4</cell><cell>31.9</cell><cell>33.5</cell><cell>17.8</cell><cell>31.2</cell><cell>37.1</cell></row><row><cell>9</cell><cell>41.7</cell><cell>42.8</cell><cell>43.7</cell><cell>38.6</cell><cell>41.3</cell><cell>44.8</cell><cell>20.1</cell><cell>35.3</cell><cell>41.6</cell></row><row><cell>10</cell><cell>72.8</cell><cell>76.7</cell><cell>79.2</cell><cell>68.3</cell><cell>73.7</cell><cell>78.0</cell><cell>(26.7)</cell><cell>(45.7)</cell><cell>(55.0)</cell></row></table><note><p xml:id="_jhVZYTf">n (kg/mol) M w (kg/mol) M p (kg/mol) M n (kg/mol) M w (kg/mol) M p (kg/mol) M n (kg/mol) M w (kg/mol) M p (kg/mol)</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p xml:id="_vgxyjMB">dx.doi.org/10.1021/ma102750s |Macromolecules 2011, 44, 1311-1318</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xml:id="_t77GGFq"><p xml:id="_sRb8Dmx">We thank the <rs type="institution">Deutsche Forschungsgemeinschaft</rs> for supporting this project (Project No. <rs type="grantNumber">HI 1362/1-2</rs>).</p><p xml:id="_HSsQbxM">' REFERENCES</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_Bgedm7D">
+					<idno type="grant-number">HI 1362/1-2</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_CBSm7Rr"><p xml:id="_SrhxS9d">Macromolecules ARTICLE a result, the 1,4-isoprene units in the 3,4-PI samples introduce a certain tailing of the elution profiles.</p><p xml:id="_WKju5t9">As a consequence a correct calculation of M w and M n of the 3,4-PI samples cannot be achieved with LCCC-NMR. In particular M n is affected by the tailing which results in smaller values. Furthermore, the limited number of 3,4-PI samples does not provide reliable data for the smallest and highest molar masses. Thus, these data are put into parentheses in Table <ref type="table">3</ref>.</p><p xml:id="_Jk3HkSv">As an alternative the SEC-NMR experiments were used for calculating these parameters. Table <ref type="table">3</ref> shows the molar masses in comparison to the data provided by the supplier. The data are in good agreement. In addition, a complete MMD of all 3,4-PI samples obtained with SEC-NMR is shown in Figure <ref type="figure">11</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_KGpJhX2">' CONCLUSIONS</head><p xml:id="_233ub7j">It was possible to use LCCC-NMR to chromatographically separate polyisoprenes according to their microstructure. Blends of samples containing predominantly 1,4-isoprene and 3,4-isoprene monomer units were well separated by obtaining critical conditions of 1,4-PI. Under these conditions, the 3,4-PI samples elute in the SEC mode which was used for a molar mass calibration and calculation of the molar masses of 3,4-PI. The different isomeric species could be individually observed and allowed for the reconstruction of the entire elution of each homopolymer even for coeluting polymers. LCCC-NMR of PI provides also the quantification of the individual microstructures. Therefore, LCCC-NMR is a very powerful tool since other detectors would not be able to individually analyze the isomeric details of PI.</p><p xml:id="_NzXaWxC">The authors are aware of the fact that using NMR as a concentration detector for LCCC and SEC separations has its limitations. The larger size of the NMR flow cell as compared to a standard RI or UV detector increases band broadening and decreases resolution. On the other hand, NMR as a detector provides information on the chemical composition and the concentration of each species at the same time. For LCCC this has the advantage that not a global concentration (as with a RI detector) but the concentration of the component of interest (e.g., one block in a block copolymer) can be determined. It was, therefore, one of the aims of this paper to discuss the merits but also the limits of this approach.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_bvAEsDA">' AUTHOR INFORMATION</head><p xml:id="_jAYkxYB">Corresponding Author *E-mail: wolf.hiller@tu-dortmund.de.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main" xml:id="_YDsrMCt">HPLC of Polymers</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Trathnigg</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<publisher>Berlin</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Trathnigg, B. HPLC of Polymers; Springer-Verlag: Berlin, 1997.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Entelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Evreinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Gorshkov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_EEjszz7">Adv. Polym. Sci</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="129" to="175" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Entelis, S. G.; Evreinov, V. V.; Gorshkov, A. V. Adv. Polym. Sci. 1986, 76, 129-175.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Entelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Evreinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Kuzaev</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Oligomer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+			<publisher>Moscow</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Entelis, S. G.; Evreinov, V. V.; Kuzaev, A. I. Reactive Oligomer; Khimyia: Moscow, 1985.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Tennikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Nefedov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Lazareva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Frenkel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vysokomol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Soedin</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1977">1977</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="657" to="660" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Tennikov, M. B.; Nefedov, P. P.; Lazareva, M. A.; Frenkel, S. J. Vysokomol. Soedin. 1977, A19, 657-660.</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Belenkii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Gankina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Tennikov</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Velenchik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_SCsPFKY">L. Z. Dokl. Acad. Nauk USSR</title>
+		<imprint>
+			<biblScope unit="volume">231</biblScope>
+			<biblScope unit="page" from="1147" to="1149" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Belenkii, B. G.; Gankina, G. S.; Tennikov, M. B.; Velenchik, L. Z. Dokl. Acad. Nauk USSR 1976, 231, 1147-1149.</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Gorbunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Skvortsov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_MyTFmcm">Vysokomol. Soedin., Ser. A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="895" to="899" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gorbunov, A. A.; Skvortsov, A. M. Vysokomol. Soedin., Ser. A 1988, 30, 895-899.</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Falkenhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Much</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Stauf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>M€ Uller</surname></persName>
+		</author>
+		<title level="m" xml:id="_qFzBMSb">Macromolecules</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="3687" to="3693" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Falkenhagen, J.; Much, H.; Stauf, W.; M€ uller, A. H. E. Macro- molecules 2000, 33, 3687-3693.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Hanley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lodge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_vcQMVGD">P. Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="2353" to="2358" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, W.; Cho, D.; Chang, T.; Hanley, K. J.; Lodge, T. P. Macromolecules 2001, 34, 2353-2358.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Brinkmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gallot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_DT55YUy">Polymer</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="4100" to="4104" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Brinkmann, C.; Gallot, Y. Polymer 1993, 34, 4100- 4104.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Augenstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Makromol</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chem</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+			<biblScope unit="volume">194</biblScope>
+			<biblScope unit="page" from="2533" to="2541" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Augenstein, M. Makromol. Chem. 1993, 194, 2533- 2541.</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Baran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Laugier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Cramail</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="volume">753</biblScope>
+			<biblScope unit="page" from="139" to="149" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Baran, K.; Laugier, S.; Cramail, H. J. Chromatogr. B 2001, 753, 139-149.</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_mMESZar">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="7514" to="7520" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jiang, W.; Khan, S.; Wang, Y. Macromolecules 2005, 38, 7514-7520.</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Esser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_sWbeauK">Int. J. Polym. Anal. Charact</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="501" to="516" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Braun, D.; Esser, E.; Pasch, H. Int. J. Polym. Anal. Charact. 1998, 4, 501-516.</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rode</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rode</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_ERNT35W">Macromol. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">197</biblScope>
+			<biblScope unit="page" from="6377" to="6383" />
+			<date type="published" when="1996">1996. 1998</date>
+		</imprint>
+	</monogr>
+	<note>Polymer</note>
+	<note type="raw_reference">Pasch, H.; Rode, K. Macromol. Chem. Phys. 1996, 197, 2691- 2701. (15) Pasch, H.; Rode, K. Polymer 1998, 39, 6377-6383.</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_gPDg8FC">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="3884" to="3889" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, W.; Park, S.; Chang, T. Anal. Chem. 2001, 73, 3884-3889.</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Macko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hunkeler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_fmZfMPA">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="1797" to="1804" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Macko, T.; Hunkeler, D.; Berek, D. Macromolecules 2002, 35, 1797-1804.</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thiel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>M€ Ullen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_J4yyCpg">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="4853" to="4863" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hiller, W.; Pasch, H.; Sinha, P.; Wagner, T.; Thiel, J.; Wagner, M.; M€ ullen, K. Macromolecules 2010, 43, 4853-4863.</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_efuaSeN">Macromol. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">208</biblScope>
+			<biblScope unit="page" from="1965" to="1978" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hiller, W.; Sinha, P.; Pasch, H. Macromol. Chem. Phys. 2007, 208, 1965-1978.</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_Fax9KV7">Macromol. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">210</biblScope>
+			<biblScope unit="page" from="605" to="613" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hiller, W.; Sinha, P.; Pasch, H. Macromol. Chem. Phys. 2009, 210, 605-613.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Br€ Ull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Argyropoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Magn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_V2Xk7Hq">Reson. Chem</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="729" to="735" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hiller, W.; Br€ ull, A.; Argyropoulos, D.; Hoffmann, E.; Pasch, H. Magn. Reson. Chem. 2005, 43, 729-735.</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Haner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_cRBMsjs">Polymer</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1515" to="1523" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Hiller, W.; Haner, R. Polymer 1998, 39, 1515-1523.</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Janco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hatada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kitayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fujimoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_gMGnrEF">Polym. J</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1029" to="1033" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Berek, D.; Janco, M.; Hatada, K.; Kitayama, T.; Fujimoto, N. Polym. J. 1997, 29, 1029-1033.</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kitayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Janco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ute</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Niimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hatada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_aEfCprB">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="1518" to="1522" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kitayama, T.; Janco, M.; Ute, K.; Niimi, R.; Hatada, K.; Berek, D. Anal. Chem. 2000, 72, 1518-1522.</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Smallcombe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Patt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Keifer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_eHSuujX">J. Magn. Res., Ser. A</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="292" to="303" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Smallcombe, S. H.; Patt, S. L.; Keifer, P. A. J. Magn. Res., Ser. A 1995, 117, 292-303.</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Brun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Alden</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">966</biblScope>
+			<biblScope unit="page" from="25" to="40" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Brun, Y.; Alden, P. J. Chromatogr., A 2002, 966, 25-40.</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Esser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kloninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Iatrou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hadjichristidis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_GZQpNjw">Macromol. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">202</biblScope>
+			<biblScope unit="page" from="1424" to="1429" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Esser, E.; Kloninger, C.; Iatrou, H.; Hadjichristidis, H. Macromol. Chem. Phys. 2001, 202, 1424-1429.</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_4DnEfQe">J. Sep. Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="3494" to="3500" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Sinha, P.; Hiller, W.; Pasch, H. J. Sep. Sci. 2010, 33, 3494-3500.</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hofe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Oleschko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_FbjfDC7">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="8244" to="8250" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hiller, W.; Hehn, M.; Hofe, T.; Oleschko, K. Anal. Chem. 2010, 82, 8244-8250.</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Striegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Yau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Kirkland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Bly</surname></persName>
+		</author>
+		<title level="m" xml:id="_GgqQmbM">Modern Size-Exclusion Liquid Chromatography: Practice of Gel Permeation and Gel Filtration Chromatography</title>
+		<meeting><address><addrLine>Hoboken, NJ</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Striegel, A. M.; Yau, W. W.; Kirkland, J. J.; Bly, D. D. Modern Size-Exclusion Liquid Chromatography: Practice of Gel Permeation and Gel Filtration Chromatography, 2nd ed.; Wiley: Hoboken, NJ, 2009.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

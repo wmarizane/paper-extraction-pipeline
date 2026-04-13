@@ -66,17 +66,20 @@ class LLMExtractor:
         self.model_name = model_name or settings.llm_model
         self.gpu_memory = gpu_memory_utilization or settings.vllm_gpu_memory
         self.max_model_len = max_model_len or settings.vllm_max_model_len
+        self.gdn_prefill_backend = settings.vllm_gdn_prefill_backend
         self.max_retries = settings.llm_retry_attempts
         self.temperature = settings.llm_temperature
 
         logger.info(f"Initializing vLLM with model: {self.model_name}")
         logger.info(f"GPU memory utilization: {self.gpu_memory}")
+        logger.info(f"GDN prefill backend: {self.gdn_prefill_backend}")
         
         # Initialize vLLM model
         self.llm = LLM(
             model=self.model_name,
             gpu_memory_utilization=self.gpu_memory,
             max_model_len=self.max_model_len,
+            additional_config={"gdn_prefill_backend": self.gdn_prefill_backend},
             trust_remote_code=True,
         )
         self.sampling_params = SamplingParams(
@@ -86,48 +89,6 @@ class LLMExtractor:
         )
         logger.info("LLM extractor initialized with model: %s", self.model_name)
     
-    def _build_extraction_prompt(self, chunk: TextChunk) -> str:
-        """
-        Build a prompt for the LLM to extract data from a chunk.
-        
-        This is CRITICAL - the quality of extraction depends heavily on
-        the prompt design. We use a structured prompt that:
-        1. Explains the task clearly
-        2. Gives examples of desired output format
-        3. Asks for JSON response only
-        
-        Args:
-            chunks: List of text chunks to process
-            
-        Returns:
-            List of extraction results (one per chunk)
-        """
-        logger.info(f"Processing batch of {len(chunks)} chunks")
-        
-        # Build prompts for all chunks
-        prompts = [self._build_extraction_prompt(chunk) for chunk in chunks]
-        
-        # Batch generation with vLLM (much faster than sequential)
-        batch_start = time.time()
-        outputs = self.llm.generate(prompts, self.sampling_params)
-        batch_time = time.time() - batch_start
-        
-        logger.info(f"Batch generation took {batch_time:.2f}s for {len(chunks)} chunks")
-        
-        # Parse each output
-        results = []
-        for chunk, output in zip(chunks, outputs):
-            response_text = output.outputs[0].text
-            result = self._parse_and_create_result(
-                chunk=chunk,
-                response_text=response_text,
-                llm_calls=1,
-                processing_time=batch_time / len(chunks),  # Average time per chunk
-            )
-            results.append(result)
-        
-        return results
-
     def extract(self, chunk: TextChunk) -> ExtractionResult:
         """Extract data from a single text chunk.
         
@@ -199,7 +160,7 @@ class LLMExtractor:
         Returns:
             Formatted prompt string
         """
-        prompt = f"""You are a scientific data extraction assistant. Your task is to extract structured information from scientific papers about polymers.
+        prompt = f"""You are a scientific chromatography extraction assistant.
 
 **TEXT TO ANALYZE:**
 Section: {chunk.section}
@@ -207,33 +168,66 @@ Section: {chunk.section}
 {chunk.text}
 
 **EXTRACTION TASK:**
-Extract the following information from the text above:
-
-1. **Polymers mentioned**: List all polymer names, chemical formulas, or abbreviations
-2. **Experimental conditions**: Temperature, pressure, pH, time, concentration, etc.
-3. **Measurements**: Any quantitative data (molecular weight, yield, conversion, etc.)
-4. **Methods used**: Analytical techniques (NMR, SEC, MALDI, etc.)
+Extract structured rows for three tables.
+Critical condition definition:
+"Critical condition is reached when polymers of the same microstructure elute independently of molar mass, due to compensation of enthalpic and entropic interactions with the chromatographic system."
+Focus on chromatography systems for critical condition.
 
 **OUTPUT FORMAT:**
 Respond with ONLY valid JSON in this exact structure:
 
 {{
-  "polymers": [
-    {{"name": "polymer name", "abbreviation": "abbreviation if any", "formula": "chemical formula if mentioned"}}
+  "master_table": [
+    {{
+      "paper": "Paper1|Paper2|Paper3 or citation id if explicit",
+      "system_id": "H1, L1, T1, ... if inferable, else blank",
+      "polymer_system": "polymer or block system",
+      "target_at_cc": "target species at critical condition",
+      "architecture_context": "diblock/triblock/microstructure context",
+      "column": "column name",
+      "stationary_phase": "stationary phase description",
+      "mobile_phase": "solvent names",
+      "composition": "ratio values",
+      "units": "v/v or w/w etc.",
+      "temp_c": "temperature in Celsius",
+      "additives": "additives if present",
+      "notes": "short note",
+      "source_section": "section name",
+      "source_text": "verbatim supporting quote"
+    }}
   ],
-  "conditions": [
-    {{"parameter": "temperature", "value": "25", "unit": "°C"}}
+  "separation_mechanism": [
+    {{
+      "paper": "paper identifier",
+      "system": "system or system range",
+      "type_of_criticality": "e.g., block criticality (PEO), microstructure criticality",
+      "driving_variable": "solvent composition / temperature / column type",
+      "non_critical_species_behavior": "what non-target species do",
+      "source_section": "section name",
+      "source_text": "verbatim supporting quote"
+    }}
   ],
-  "measurements": [
-    {{"type": "molecular weight", "value": "45000", "unit": "g/mol"}}
+  "column_system_metadata": [
+    {{
+      "paper": "paper identifier",
+      "column": "column name",
+      "brand_type": "manufacturer or column type",
+      "stationary_phase_chemistry": "chemistry",
+      "pore_size_a": "pore size in angstrom",
+      "dimensions": "column dimensions",
+      "notes": "short reproducibility note",
+      "source_section": "section name",
+      "source_text": "verbatim supporting quote"
+    }}
   ],
-  "methods": ["NMR", "SEC"]
+  "chunk_section": "{chunk.section}"
 }}
 
 **RULES:**
 - Extract only factual information present in the text
-- If no information is found for a category, use an empty list []
+- If no information is found for a table, use an empty list []
 - Do not make up or infer data that isn't explicitly stated
+- Keep source_text concise and verbatim where possible
 - Return ONLY the JSON, no additional text or explanation
 
 JSON OUTPUT:"""
@@ -300,18 +294,91 @@ JSON OUTPUT:"""
         elif text.startswith("```"):
             text = text.split("```")[1].split("```")[0].strip()
 
+        def _normalize(data: Dict[str, Any]) -> Dict[str, Any]:
+            if not isinstance(data, dict):
+                raise ValueError("Response root must be a JSON object")
+
+            data.setdefault("master_table", [])
+            data.setdefault("separation_mechanism", [])
+            data.setdefault("column_system_metadata", [])
+            data.setdefault("chunk_section", "")
+
+            if not isinstance(data["master_table"], list):
+                data["master_table"] = []
+            if not isinstance(data["separation_mechanism"], list):
+                data["separation_mechanism"] = []
+            if not isinstance(data["column_system_metadata"], list):
+                data["column_system_metadata"] = []
+
+            normalized_master = []
+            for row in data["master_table"]:
+                if not isinstance(row, dict):
+                    continue
+                normalized_master.append(
+                    {
+                        "paper": row.get("paper", ""),
+                        "system_id": row.get("system_id", ""),
+                        "polymer_system": row.get("polymer_system", ""),
+                        "target_at_cc": row.get("target_at_cc", ""),
+                        "architecture_context": row.get("architecture_context", ""),
+                        "column": row.get("column", ""),
+                        "stationary_phase": row.get("stationary_phase", ""),
+                        "mobile_phase": row.get("mobile_phase", ""),
+                        "composition": row.get("composition", ""),
+                        "units": row.get("units", ""),
+                        "temp_c": row.get("temp_c", ""),
+                        "additives": row.get("additives", ""),
+                        "notes": row.get("notes", ""),
+                        "source_section": row.get("source_section", ""),
+                        "source_text": row.get("source_text", ""),
+                    }
+                )
+            data["master_table"] = normalized_master
+
+            normalized_mechanism = []
+            for row in data["separation_mechanism"]:
+                if not isinstance(row, dict):
+                    continue
+                normalized_mechanism.append(
+                    {
+                        "paper": row.get("paper", ""),
+                        "system": row.get("system", ""),
+                        "type_of_criticality": row.get("type_of_criticality", ""),
+                        "driving_variable": row.get("driving_variable", ""),
+                        "non_critical_species_behavior": row.get("non_critical_species_behavior", ""),
+                        "source_section": row.get("source_section", ""),
+                        "source_text": row.get("source_text", ""),
+                    }
+                )
+            data["separation_mechanism"] = normalized_mechanism
+
+            normalized_meta = []
+            for row in data["column_system_metadata"]:
+                if not isinstance(row, dict):
+                    continue
+                normalized_meta.append(
+                    {
+                        "paper": row.get("paper", ""),
+                        "column": row.get("column", ""),
+                        "brand_type": row.get("brand_type", ""),
+                        "stationary_phase_chemistry": row.get("stationary_phase_chemistry", ""),
+                        "pore_size_a": row.get("pore_size_a", ""),
+                        "dimensions": row.get("dimensions", ""),
+                        "notes": row.get("notes", ""),
+                        "source_section": row.get("source_section", ""),
+                        "source_text": row.get("source_text", ""),
+                    }
+                )
+            data["column_system_metadata"] = normalized_meta
+
+            return data
+
         # Try to parse JSON
         try:
             data = json.loads(text)
+            return _normalize(data)
             
-            # Validate structure
-            expected_keys = {"polymers", "conditions", "measurements", "methods"}
-            if not all(key in data for key in expected_keys):
-                raise ValueError(f"Missing required keys. Expected {expected_keys}, got {set(data.keys())}")
-            
-            return data
-            
-        except json.JSONDecodeError as e:
+        except (json.JSONDecodeError, ValueError) as e:
             # Try to find JSON object in text
             start = text.find("{")
             end = text.rfind("}")
@@ -320,14 +387,8 @@ JSON OUTPUT:"""
                 json_text = text[start : end + 1]
                 try:
                     data = json.loads(json_text)
-                    
-                    # Validate structure
-                    expected_keys = {"polymers", "conditions", "measurements", "methods"}
-                    if not all(key in data for key in expected_keys):
-                        raise ValueError(f"Missing required keys")
-                    
-                    return data
-                except json.JSONDecodeError:
+                    return _normalize(data)
+                except (json.JSONDecodeError, ValueError):
                     pass
             
             raise ValueError(f"Could not parse JSON from LLM response: {e}\nResponse: {text[:200]}")
@@ -463,7 +524,7 @@ def extract_from_chunks(chunks: List[TextChunk], use_batch: bool = True) -> List
     Returns:
         List of extraction results
     """
-    extractor = LLMExtractor(model_name=model_name)
+    extractor = LLMExtractor()
     return extractor.extract_from_chunks(chunks)
 
 
@@ -526,5 +587,5 @@ if __name__ == "__main__":
     for result in results:
         if result.success:
             print(f"\nChunk {result.chunk_index} ({result.section}):")
-            print(f"  Polymers: {result.extracted_data.get('polymers', [])}")
-            print(f"  Methods: {result.extracted_data.get('methods', [])}")
+            print(f"  Master rows: {len(result.extracted_data.get('master_table', []))}")
+            print(f"  Separation rows: {len(result.extracted_data.get('separation_mechanism', []))}")

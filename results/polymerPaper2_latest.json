@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper2.pdf",
+    "extraction_date": "2026-04-13T20:00:15.354848",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "chunk_strategy": "section",
+    "tei_xml_path": "tei_xml/polymerPaper2_tei.xml",
+    "total_chunks": 5,
+    "successful_extractions": 2,
+    "total_processing_time": 0,
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper2.pdf",
+      "start_time": "2026-04-13T20:00:00.772139",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "grobid_parsing": {
+          "time_seconds": 1.8665814399719238,
+          "success": true,
+          "tei_xml_path": "tei_xml/polymerPaper2_tei.xml"
+        },
+        "chunking": {
+          "time_seconds": 0.8640961647033691,
+          "success": true,
+          "num_chunks": 5,
+          "total_tokens": 3505,
+          "avg_tokens_per_chunk": 701.0
+        },
+        "llm_extraction": {
+          "time_seconds": 11.847707271575928,
+          "success": false,
+          "successful_chunks": 2,
+          "failed_chunks": 3,
+          "total_llm_calls": 5,
+          "avg_time_per_chunk": 2.3695414543151854
+        }
+      },
+      "success": false,
+      "error": null
+    },
+    "csv_exports": {
+      "master_table_csv": "results/polymerPaper2_master_table.csv",
+      "separation_mechanism_csv": "results/polymerPaper2_separation_mechanism.csv",
+      "column_system_metadata_csv": "results/polymerPaper2_column_system_metadata.csv"
+    }
+  },
+  "summary": {
+    "total_master_rows": 0,
+    "total_separation_mechanism_rows": 5,
+    "total_column_system_metadata_rows": 0
+  },
+  "extracted_data": {
+    "master_table": [],
+    "separation_mechanism": [
+      {
+        "paper": "Text",
+        "system": "Amphiphilic polymers (A-B)",
+        "type_of_criticality": "Block criticality (LCCC)",
+        "driving_variable": "Mobile phase composition (aqueous methanol, acetone, acetonitrile)",
+        "non_critical_species_behavior": "The non-critical block elutes in LAC mode (retention increasing exponentially) or SEC mode depending on the critical block",
+        "source_section": "Strategies in the separation of block copolymers",
+        "source_text": "If one of the interaction parameters (c A or c B ) equals zero, the corresponding block becomes 'chromatographically invisible', and a separation according to the other block can be achieved (liquid chromatography under critical conditions: LCCC)."
+      },
+      {
+        "paper": "Text",
+        "system": "Poloxamers on reversed phase columns",
+        "type_of_criticality": "Block criticality (EO block)",
+        "driving_variable": "Mobile phase composition (aqueous methanol, acetone, or acetonitrile)",
+        "non_critical_species_behavior": "The less polar PO block elutes in LAC mode",
+        "source_section": "Strategies in the separation of block copolymers",
+        "source_text": "On many reversed phase columns, critical conditions for the (more polar) EO block have been found in aqueous methanol, acetone, or acetonitrile. In such a system, the less polar PO block elutes in LAC mode."
+      },
+      {
+        "paper": "Text",
+        "system": "Poloxamers on reversed phase columns (high organic)",
+        "type_of_criticality": "Block criticality (PO block)",
+        "driving_variable": "Mobile phase composition (higher content of organic solvent)",
+        "non_critical_species_behavior": "EO will elute in SEC mode",
+        "source_section": "Strategies in the separation of block copolymers",
+        "source_text": "One may, however, also find critical conditions for the PO unit on a RP column in a different mobile phase composition (with a higher content of organic solvent): In this case EO will elute in SEC mode."
+      },
+      {
+        "paper": "Text",
+        "system": "Poloxamers on normal phase columns",
+        "type_of_criticality": "Block criticality (EO or PO block)",
+        "driving_variable": "Mobile phase composition (implied by column type)",
+        "non_critical_species_behavior": "At CAP for EO, PO elutes in SEC mode; at CAP for PO, EO elutes in LAC mode",
+        "source_section": "Strategies in the separation of block copolymers",
+        "source_text": "The opposite may happen on normal phase columns: at the CAP for the EO unit, PO will elute in SEC mode, while EO will elute in LAC mode at the CAP for PO (if such critical points can be found)."
+      },
+      {
+        "paper": "unspecified",
+        "system": "block copolymers of ethylene oxide (EO) and propylene oxide (PO)",
+        "type_of_criticality": "block criticality (one block elutes in exclusion mode, other at critical condition)",
+        "driving_variable": "chromatographic conditions (implied solvent/column selection)",
+        "non_critical_species_behavior": "the non-critical block elutes in exclusion mode, allowing independent determination of molar mass distribution",
+        "source_section": "Conclusions",
+        "source_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks."
+      }
+    ],
+    "column_system_metadata": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Introduction",
+      "token_count": 796,
+      "extraction_success": false,
+      "llm_calls": 1,
+      "processing_time": 0.0,
+      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A section titled \"Introduction\" from a scientific pape"
+    },
+    {
+      "chunk_index": 1,
+      "section": "Strategies in the separation of block copolymers",
+      "token_count": 843,
+      "extraction_success": true,
+      "llm_calls": 1,
+      "processing_time": 0.0,
+      "extracted": {
+        "master_table": 0,
+        "separation_mechanism": 4,
+        "column_system_metadata": 0
+      }
+    },
+    {
+      "chunk_index": 2,
+      "section": "Experimental",
+      "token_count": 905,
+      "extraction_success": false,
+      "llm_calls": 1,
+      "processing_time": 0.0,
+      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Task:** Extract structured rows for three tables (`master_table`, `s"
+    },
+    {
+      "chunk_index": 3,
+      "section": "Results and discussion",
+      "token_count": 817,
+      "extraction_success": false,
+      "llm_calls": 1,
+      "processing_time": 0.0,
+      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\n\n</think>\n\n{\n  \"master_table\": [\n    {\n      \"paper\": \"Literature\",\n      \"system_id\": \"\",\n      \"polymer_system\": \"EO unit\",\n      \"target_at_cc\": \"EO\",\n      \"architecture_context\": \"monomer"
+    },
+    {
+      "chunk_index": 4,
+      "section": "Conclusions",
+      "token_count": 144,
+      "extraction_success": true,
+      "llm_calls": 1,
+      "processing_time": 0.0,
+      "extracted": {
+        "master_table": 0,
+        "separation_mechanism": 1,
+        "column_system_metadata": 0
+      }
+    }
+  ]
+}

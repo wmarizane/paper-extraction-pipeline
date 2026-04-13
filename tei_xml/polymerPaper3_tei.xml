@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" xml:id="_q5UnV7y">Characterization of Poly(L-lactide)-block-Poly-(ethylene oxide)-block-Poly(L-lactide) Triblock Copolymer by Liquid Chromatography at the Critical Condition and by MALDI-TOF Mass Spectrometry</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hyunjung</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Taihyun</forename><surname>Chang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Doosung</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Myung</forename><forename type="middle">Seob</forename><surname>Shim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haining</forename><surname>Ji</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><forename type="middle">K</forename><surname>Nonidez</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jimmy</forename><forename type="middle">W</forename><surname>Mays</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemistry and Polymer Research Institute</orgName>
+								<orgName type="institution">Pohang University of Science and Technology</orgName>
+								<address>
+									<postCode>790-784</postCode>
+									<settlement>Pohang</settlement>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Polymer Science and Engineering</orgName>
+								<orgName type="institution">Sungkyunkwan University</orgName>
+								<address>
+									<postCode>440-746</postCode>
+									<settlement>Suwon</settlement>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Alabama at Birmingham</orgName>
+								<address>
+									<postCode>35294</postCode>
+									<settlement>Birmingham</settlement>
+									<country>Alabama</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main" xml:id="_h35BqqX">Characterization of Poly(L-lactide)-block-Poly-(ethylene oxide)-block-Poly(L-lactide) Triblock Copolymer by Liquid Chromatography at the Critical Condition and by MALDI-TOF Mass Spectrometry</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8434ACC2C46C136640F4053D224B0F66</idno>
+					<idno type="DOI">10.1021/ac001219z</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2026-04-13T20:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_kzbUYVA"><p xml:id="_UdqgcMX">Poly(L-lactide)-block-poly(ethylene oxide)-block-poly(Llactide) triblock copolymers (PLLA-b-PEO-b-PLLA) were fractionated in terms of the number of LLA units by liquid chromatography at the critical condition (LCCC) of PEO block. The fractionated samples were identified using MALDI-TOF mass spectrometry. The dependence of the LCCC retention of the diblock and triblock copolymers on the degree of polymerization of PLLA block(s) follows Martin's rule very well. Unlike the case of PEO-b-PLLA diblock copolymer reported earlier (Lee, H.; et al. Macromolecules 1999, 32, 4143), however, a splitting of the elution peaks containing the same number of LLA units was found. The peak splitting was ascribed to the different length distributions of PLLA blocks at the two ends of the PEO block. From the relative intensities of the peaks, the split peaks were assigned to different isomeric structures of the PLLA blocks. From these results we conclude that the interaction of the triblock copolymers with the stationary phase is affected by the distribution of the interacting blocks at the two ends of the center PEO block, in addition to the total number of LLA units in the triblock copolymer.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_P3MNzDt"><p xml:id="_ezFdngs">Block copolymers consisting of hydrophilic components (e.g., poly(ethylene oxide) (PEO)) and hydrophobic components (e.g., poly(L-lactide) (PLLA), poly(propylene oxide) (PPO), poly(butylene oxide) (PBO)) can form micelles and hydrogels in water. <ref type="bibr">[1]</ref><ref type="bibr">[2]</ref><ref type="bibr">[3]</ref><ref type="bibr">[4]</ref> Such amphiphilc block copolymers are of growing interest in the pharmaceutical and biomedical fields due to their biodegradability and biocompatability. <ref type="bibr">[5]</ref><ref type="bibr">[6]</ref><ref type="bibr">[7]</ref><ref type="bibr">[8]</ref> The physical properties of such block copolymers depend on the composition and chain architecture. 2,6-15 For example, Jeong et al. investigated the temperature-dependent reversible sol-gel transitions for aqueous solutions of the block copolymers, poly(ethylene oxide)-block-poly(L-lactide) (PEO-b-PLLA) and poly(L-lactide)-block-poly(ethylene oxide)-block-poly(Llactide) (PEO-b-PLLA-b-PEO). <ref type="bibr">6</ref> They found that the association behavior of the block copolymers is strongly dependent on the PLLA block length. As the PLLA block length gets longer, the critical aggregation concentration becomes lower and the solgel transition temperature higher.</p><p xml:id="_xpPVMNB">Not only the block length but also the architecture of block copolymers has a large impact on properties. <ref type="bibr">1,</ref><ref type="bibr">[6]</ref><ref type="bibr">[7]</ref><ref type="bibr">[8]</ref><ref type="bibr">[9]</ref><ref type="bibr">[10]</ref><ref type="bibr">[11]</ref> For example, in a study by Yang et al., the association behavior of triblock copolymers (EO 21 BO 8 EO 21 and BO 4 EO 40 BO 4 ) was compared with that of a diblock copolymer EO 41 BO 8 . <ref type="bibr">9</ref> The critical micelle (5) Gref, R.; Minamitake, Y.; Peracchia, M. T.; Trubetskoy, V.; Torchilin, V.; Langer, R. The strong sensitivity of the association and the phase transition behavior of amphiphilic block copolymers to block length and chain architecture demonstrates the importance of accurate structural analysis of block copolymers. Rigorous characterization of synthetic block copolymers is very complicated mainly because they exhibit distributions in molecular weight as well as in chemical composition. In addition, ABA-type triblock copolymers can have another distribution in the chain architecture, i.e., difference in length or isomerism of the two end blocks. In previous work, we carried out a precise characterization of both blocks of a PEO-b-PLLA diblock copolymer by liquid chromatography at the critical condition (LCCC) combined with matrixassisted laser desorption/ionization mass spectrometry (MALDI-TOF MS). <ref type="bibr" target="#b0">16</ref> The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption (or partition) when a porous column packing material is used for the separation of macromolecules. At the critical point of a particular polymer species, retention of that polymer becomes independent of the molecular weight. <ref type="bibr" target="#b1">[17]</ref><ref type="bibr" target="#b2">[18]</ref><ref type="bibr" target="#b3">[19]</ref><ref type="bibr" target="#b4">[20]</ref><ref type="bibr" target="#b5">[21]</ref><ref type="bibr" target="#b6">[22]</ref><ref type="bibr" target="#b7">[23]</ref><ref type="bibr" target="#b8">[24]</ref><ref type="bibr" target="#b9">[25]</ref><ref type="bibr" target="#b10">[26]</ref><ref type="bibr" target="#b11">[27]</ref><ref type="bibr" target="#b12">[28]</ref> LCCC has been often employed for the analysis of block copolymers under the premise that a specific block can be made "chromatographically invisible" at the critical condition and that the chromatographic retention is determined by the rest of the polymer molecule. <ref type="bibr" target="#b2">[18]</ref><ref type="bibr" target="#b3">[19]</ref><ref type="bibr" target="#b4">[20]</ref><ref type="bibr" target="#b5">[21]</ref><ref type="bibr" target="#b6">[22]</ref><ref type="bibr" target="#b7">[23]</ref><ref type="bibr" target="#b12">28</ref> Also the recent advent of the MALDI-TOF MS method has dramatically enhanced the capability for analysis of copolymers. <ref type="bibr" target="#b6">22,</ref><ref type="bibr" target="#b13">[29]</ref><ref type="bibr" target="#b14">[30]</ref><ref type="bibr" target="#b15">[31]</ref><ref type="bibr" target="#b16">[32]</ref><ref type="bibr" target="#b17">[33]</ref><ref type="bibr" target="#b18">[34]</ref><ref type="bibr" target="#b19">[35]</ref><ref type="bibr" target="#b20">[36]</ref><ref type="bibr" target="#b21">[37]</ref> MALDI-TOF MS analysis combined with LCCC separation has been used to successfully characterize each block of block copolymers to the molecular level. <ref type="bibr" target="#b0">16,</ref><ref type="bibr" target="#b6">22</ref> In the previous study on PEO-b-PLLA, we carried out a high-resolution separation by LCCC in terms of the PLLA block length under the critical condition of PEO and a precise characterization of the PEO block by MALDI-TOF MS analysis of the LCCC fractionated samples. <ref type="bibr" target="#b0">16</ref> In this study, we employed the same strategy for the characterization of the PLLA-b-PEO-b-PLLA triblock copolymer system. We found that not only the molecular weight and composition distribution but also the distribution of two end blocks affects the chromatographic retention. The isomeric structure of the triblock copolymers can be resolved by this method.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_T5RpSBj">EXPERIMENTAL SECTION</head><p xml:id="_gMspTST">Synthesis. PEO-b-PLLA and PLLA-b-PEO-b-PLLA block copolymers were prepared by ring-opening polymerization of L- lactide (LLA) initiated by hydroxyl end group(s) of methoxy endcapped poly(ethylene oxide) (MPEO) and poly(ethylene glycol) (PEG), respectively. The schematic diagrams of the synthesis and the chemical structures of the block copolymers are shown in Figure <ref type="figure" target="#fig_0">1</ref>, and the detailed synthesis procedure was published elsewhere. <ref type="bibr">38</ref> Copolymers were synthesized by adding recrystallized L-lactide (Boehringer Ingellheim) and tin(II) bis(2-ethylhexanoate) (Sn(Oct) 2 , Sigma) to a toluene solution of MPEO or PEG and refluxing under dry nitrogen atmosphere for 12 (for diblock) or 24 h (for triblock). After the reaction was completed, the polymer was precipitated in diethyl ether and dried under vacuum at ambient temperature for 24 h. If necessary, the block copolymer was reprecipitated in methylene chloride. The weight-average molecular weight (M w ) and polydispersity (M w /M n ) of the block copolymers were determined by size exclusion chromatography (SEC) using two mixed-bed columns (Polymer Lab., mixed C) and tetrahydrofuran (Fisher, HPLC grade) as eluent. A calibration curve was made with eight polystyrene (PS) standards covering the molecular weight range from 580 to 384 000. The characteristics of the polymers used in this study are summarized in Table <ref type="table">1</ref>.</p><p xml:id="_2E6D7bt">HPLC. The characterization by HPLC at the critical condition of PEO block was carried out on a HPLC system comprising an isocratic pump (LDC, CM 3200), a reversed-phase column (LUNA C18, 100-Å pore size, 250 × 4.6 mm), a refractive index detector (Shodex RI 71), and a UV-visible absorption detector (LDC, SM 3200). A mixture of acetonitrile (ACN, Aldrich HPLC grade) and water (deionized and filtered with a 0.45-µm filter) was used as the eluent, and the temperature of the column was controlled to within (0.1 °C of the desired temperature by circulating fluid through a column jacket from a bath/circulator (Neslab, RTE-111). The critical condition of PEO block was determined by monitoring the retention volumes of three different molecular weight PEG standards (M n : 1500, 3400, and 8000). At a given composition of the eluent, the critical condition can be found by adjusting the column temperature until the molecular weight dependence of the retention time disappears. The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v). <ref type="bibr" target="#b0">16</ref> In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H 2 O ) 47:53 (v/v); 54 °C, ACN: H 2 O ) 54:46 (v/v)), which will be detailed later.</p><p xml:id="_neqRYym">For the fractionation of individual peaks for the MALDI-TOF MS experiment, polymer solutions were prepared at 50-70 mg/ mL and a 100 µL of the solution was injected. The injected amount was a few tens of times larger than the analytical separation condition, which deteriorated the resolution, but still a reasonable peak separation was possible. The fractionations were collected in small vials and dried before the preparation of the solutions for the MALDI-TOF MS analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_s7ja3xW">MALDI-TOF MS.</head><p xml:id="_4nTXfck">All HPLC fractionated samples were analyzed using a Voyager Elite MALDI-TOF MS (Perkin-Elmer PerSeptive Biosystems, Framingham, MA) equipped with 337nm N 2 laser. All the spectra were obtained using an accelerating voltage of 20-25 kV and a laser intensity of ∼10% greater than threshold. The grid voltage, guide wire voltage, delay time, and mode (linear or reflector) were chosen for each spectrum to achieve a good signal-to-noise ratio. Mass calibration was performed using protein standards (Sequazyme Peptide Mass Standard Kit) purchased from PerSeptive Biosystems. While polymer samples were run with equal success in either indoleacrylic acid (IAA, Aldrich) or 2,5-dihydroxybenzoic acid (DHB, Aldrich) doping with potassium trifluoroacetate (KTFA) salt, all spectra shown in this paper were run in IAA. A 15 mg/mL solution of IAA and 5 mg/mL solution of KTFA were prepared in THF. These solutions were further diluted (1:100) to prepare a 0.15 mg/mL IAA and a 0.05 mg/mL KTFA solution. A volume of 20 µL of the IAA solution and 1 µL of the KTFA was added to each of the polymer fractions. The sample solutions were then spotted on a MALDI sample plate and air-dried before analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_rnd4QdK">RESULTS AND DISCUSSION</head><p xml:id="_6AYD4W7">LCCC Retention and Peak Identification. We previously reported the characterization of the PLLA block in PEO-b-PLLA diblock copolymer at the critical condition of the PEO block. <ref type="bibr" target="#b0">16</ref> The chromatogram for PEO-b-PLLA under the critical condition of PEO block is shown in Figure <ref type="figure" target="#fig_3">2</ref>. The critical condition was achieved with a mixture of acetonitrile and water (60/40, v/v) at a column temperature of 68 °C. At this condition, the PEO block becomes "chromatographically invisible" in principle and the PEOb-PLLA block copolymer is expected to behave like a PLLA homopolymer having molecular weight equivalent to the PLLA block as far as the chromatographic retention is concerned. The materials corresponding to individual elution peaks in Figure <ref type="figure" target="#fig_3">2</ref> were subjected to MALDI-TOF MS analysis in order to assign the number of LLA residues, as labeled in Figure <ref type="figure" target="#fig_3">2</ref>. The same method can be employed for the analysis of triblock copolymer.   different from the condition for the diblock copolymer shown in Figure <ref type="figure" target="#fig_3">2</ref>. Under the experimental conditions as in Figure <ref type="figure" target="#fig_3">2</ref>, the triblock copolymers elute too fast for the peaks to be well resolved. The critical condition can be established by adjusting two variables, either the solvent composition or temperature. <ref type="bibr" target="#b0">16,</ref><ref type="bibr" target="#b1">17</ref> By manipulating the two variables, the retention of the triblock copolymer can be changed while maintaining the critical condition of PEO block. We increased the retention of the triblock copolymers by decreasing the concentration of ACN and simultaneously lowering the temperature.</p><p xml:id="_fgWp2Fj">Materials corresponding to individual peaks in Figure <ref type="figure" target="#fig_1">3</ref>  Each major peak in the mass spectrum corresponds to a polymer species that has x EO units (MW ) 44.05) and y LLA units (MW ) 72.06) in addition to the end groups (one hydrogen and one hydroxyl, MW ) 18.02) and a K + ion (MW ) 39.10). The small subsidiary peaks can be assigned to either polymers that had lost one (or two) LLA unit(s) by degradation or Na + ions captured instead of K + ion. <ref type="bibr" target="#b0">16</ref> The conspicuous series of subsidiary peaks of lower molecular weight distribution in (a) seems to be caused by contamination of peak 6 since the resolution in the fractionation condition is not as good as the chromatogram shown in Figure <ref type="figure" target="#fig_1">3</ref> and the contamination should be more serious due to the low intensity of the peak 7.</p><p xml:id="_nXWtcdq">From the molecular weight of the major peaks, the number of EO units and LLA units (x and y) can be uniquely determined. For example, the major peaks of the three spectra in Figure <ref type="figure" target="#fig_10">4</ref> are best represented as follows.</p><p xml:id="_F2frP2X">Through the analysis scheme of the MALDI-TOF MS spectra, the number of LLA units in the triblock copolymers in each elution peak was determined and the elution peaks in Figure <ref type="figure" target="#fig_1">3</ref> are labeled with the corresponding number of LLA units. In the chromatogram for diblock copolymer (Figure <ref type="figure" target="#fig_3">2</ref>) and triblock copolymer (Figure <ref type="figure" target="#fig_1">3</ref>), the block copolymer species with an even number of LLA units are much more abundant than ones with odd numbers of LLA units. This is due to the fact that one L-lactide monomer generates two repeat units of LLA as shown in Figure <ref type="figure" target="#fig_0">1</ref>. <ref type="bibr" target="#b0">16</ref> If the reaction proceeded ideally so that two units of the lactide moiety were added in each growing step, and if side reactions were absent, only the species with an even number of lactide units would be found. Therefore, from now on we will focus our discussion on polymer species with even numbers of lactide units.</p><p xml:id="_TCFpRXv">An interesting observation in the chromatogram displayed in Figure <ref type="figure" target="#fig_1">3</ref> is that multiple peaks corresponding to the same number of LLA units appear for triblock copolymer species with eight or more LLA units. Polymers with four or six LLA units exhibit only one peak. As shown in Figure <ref type="figure" target="#fig_3">2</ref>, this phenomenon was not found in the diblock copolymers. The MALDI-TOF MS spectra for the two elution peaks containing eight LLA units, displayed in Figure <ref type="figure" target="#fig_10">4b</ref> and<ref type="figure">c</ref>, show a similar distribution that corresponds to the distribution of the middle PEO blocks. Since the PEO block is at its critical condition and does not affect the retention, the peak splitting must originate from a difference in the PLLA blocks. Also it is only found in triblock copolymers, not in diblock copolymers. Recalling the structure of the triblock copolymers, which have two PLLA blocks at both ends of the PEO block, the only way to explain the peak splitting is a different distribution of LLA units at the two ends of the middle PEO block while keeping the total number of LLA units the same.</p><p xml:id="_Z4FPDJ8">To substantiate this speculation, another PLLA-b-PEO-b-PLLA triblock copolymer with a longer PLLA block length was made and analyzed by the same method. For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H 2 O ) 54:46, v/v) and raising the temperature (54 °C) as compared to Figure <ref type="figure" target="#fig_1">3</ref>. As displayed in Figure <ref type="figure" target="#fig_11">5</ref>, at this new critical condition, the peaks elute faster than in Figure <ref type="figure" target="#fig_1">3</ref>. All the materials corresponding to elution peaks in Figure <ref type="figure" target="#fig_11">5</ref> were collected and analyzed by MALDI-TOF MS. As labeled in Figure <ref type="figure" target="#fig_11">5</ref>, we could identify the groups consisting of two to three peaks having identical numbers of LLA units up to 20 LLA units.</p><p xml:id="_bRWWZju">Separation Mechanism of Block Copolymer. Retention in interaction chromatography is generally expressed by the capacity factor (k′), which is defined as 39 where K is the distribution coefficient of an analyte between the stationary and mobile phases, V o is the retention volume of the injection sample solvent (the total mobile-phase volume in a column), V R is the retention volume of the analyte, and V s and V m are the volumes of the stationary and mobile phases, respectively. K is related to the standard Gibbs free energy (∆G°) associated with the distribution process of the analyte.    </p><formula xml:id="formula_0">k′ ≡ K(V s /V m ) ) (V R -V o )/V o (<label>1</label></formula><formula xml:id="formula_1">)</formula><p xml:id="_WvhzeFT">According to well-known empirical observations, the so-called Martin's rule, ∆G°is proportional to the degree of polymerization (DP).  the assumption that the peak splitting is due to the structural isomerism of two PLLA end blocks. To match the number of structural isomers to the number of elution peaks, we need to make two further assumptions. First, we have not considered the possibility of odd-numbered PLLA blocks since they are side products and their amounts are very small. Therefore, the presence of triblock copolymers with odd-numbered LLA blocks or diblock copolymers such as LLA 3 -PEO-LLA 5 or LLA 0 -PEO-LLA 8 was not considered. In addition, we assumed that both hydroxyl end groups of the PEO block react much faster than the hydroxyl end group of L-lactide due to the higher reactivity of the primary alcohol as compared to the secondary alcohol (see molecular structures in Figure <ref type="figure" target="#fig_0">1</ref>). This assumption seems somewhat crude but good enough to compare the relative peak intensity qualitatively as detailed later. Based upon these assumptions, the possibility of the triblock copolymer structure with eight LLA units is reduced to two structures in the distribution of LLA units, LLA 2 -PEO-LLA 6 , and LLA 4 -PEO-LLA 4 , which is consistent with the number of elution peaks found in Figure <ref type="figure" target="#fig_1">3</ref>. Thus, we are able to construct a schematic diagram for the possible structures of the triblock copolymers with even-numbered LLA units as shown in Figure <ref type="figure" target="#fig_14">8</ref>. Up to 10 LLA units, under the assumptions we made, there exist only two structural possibilities, which is consistent with the number of elution peaks in the chromatograms shown in Figures <ref type="figure" target="#fig_7">3</ref> and<ref type="figure" target="#fig_11">5</ref>.</p><p xml:id="_vwFduYg">Next we need to interpret the correspondence between the elution peaks and structure. Table <ref type="table" target="#tab_2">2</ref> includes the probabilities calculated from the combinatorial numbers for the possible    structures in Figure <ref type="figure" target="#fig_14">8</ref>, assuming equal reactivity of the end hydroxyl group of the PLLA block. Comparing these probability values with the peak areas, the peaks 8 and 8′ show comparable areas, which are consistent with the probabilities in Table <ref type="table" target="#tab_2">2</ref>. Fractions 10 and 10′ are expected to be in 3:1 ratio, which is again consistent with the ratio of the peak areas shown in Figure <ref type="figure" target="#fig_1">3</ref>. Now we can explain the two distinct features of Figure <ref type="figure" target="#fig_13">7</ref> as compared with Figure <ref type="figure" target="#fig_12">6</ref> mentioned earlier. The deviation found for DP ) 2 can be attributed to the effect of the different end group on the interaction free energy since the DP ) 2 oligomer is the only species that contains a primary hydroxyl end group for PEG. <ref type="bibr">42,</ref><ref type="bibr">43</ref> The deviation of the open symbols from DP ) 6 is also understandable since these are species containing four LLA blocks at one end and varying sizes of the other block. The filled symbols represent species containing two LLA units at one end and varying lengths of the other block.</p><p xml:id="_H73VGrC">Although the proposed peak identification is consistent with the experimental results, self-consistency sometimes is not enough to constitute a proof. However, we cannot find any other analytical means to identify the detailed chain structure. Instead we tested the proposed scheme of the peak identification once more by a plot of k′ vs total DP of the two LLA blocks of the triblock copolymer with longer PLLA blocks, whose chromatogram is shown in Figure <ref type="figure" target="#fig_11">5</ref>. In Figure <ref type="figure" target="#fig_15">9</ref>, the squares represent peaks identified as having two LLA units at one end and variable numbers of LLA units at the other ends based upon the relative abundance in Table <ref type="table" target="#tab_2">2</ref>. The circles and triangles represent elution peaks of triblock copolymers having four and six LLA units at one end, respectively. Three different symbols represent three linear lines, obeying Martin's rule nicely with slightly different slopes, for the three different groups of the triblock copolymers.</p><p xml:id="_7bMfKYy">Provided that Martin's rule holds for the triblock copolymers as found in diblock copolymers, the split three straight lines are in strong support of our proposition that the peak splitting found in the triblock copolymers is due to the isomerism of the PLLA blocks at both ends of the PEO block. The capacity factor, i.e., the interaction strength of the triblock copolymer, increases as one of the PLLA block length increases (more asymmetric) at the same total number of LLA units. In other words, a longer interactive chain is more efficient than two short chains in interacting with the stationary phase. This is consistent with the finding that diblock copolymers form micelles much more easily than triblock copolymers with the same total number of hydrophobic units.</p><p xml:id="_NqZ6mjT">In summary, PLLA-b-PEO-b-PLLA triblock copolymers were separated according to the PLLA block length by reversed-phase HPLC at the critical condition of PEO block, and the total numbers of LLA units for the materials corresponding to the fractionated peaks were determined by MALDI-TOF MS analysis. We found that not only the total number of LLA units but also the relative block lengths at two ends affect the retention of the triblock copolymers. The interaction with the stationary phase increases as the end PLLA blocks become more asymmetric, which indicates that longer chains interact more strongly with the stationary phase. This analysis technique may be employed for rigorous characterization of block copolymers, as well as degradation for studying or synthesis mechanisms of PEO-PLLA block copolymers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_6EzaJUf">ACKNOWLEDGMENT</head><p xml:id="_9t7TB3h">T.C. acknowledges the support from the Center for Integrated Molecular Systems (KOSEF) and the BK21 program (KRF). D.L. acknowledges the support from the Center for Advanced Functional Polymers.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_7TaPfrm">Received for review</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc xml:id="_Cku46WA">Figure 1. Synthesis scheme for (a) PEO-b-PLLA diblock copolymer and (b) PLLA-b-PEO-b-PLLA triblock copolymer.</figDesc><graphic coords="2,321.05,40.09,233.52,238.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3</head><label>3</label><figDesc xml:id="_rYr8gBJ">displays the chromatogram of a PLLA-b-PEO-b-PLLA triblock copolymer under the critical condition of PEO block. The critical condition in Figure 3 was obtained with an ACN/water mixture (47/53, v/v) at 37 °C column temperature, which is (38) Choi, S. W.; Choi, S. Y.; Jeong, B.; Kim, S. W.; Lee, D. S. J. Polym. Sci., Polym. Chem. 1999, 37, 2207-2218.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc xml:id="_6yTMz6H">homemade PLLA-b-PEO-b-PLLA e 8100 1.08 homemade PLLA-b-PEO-b-PLLA f 9400 1.11 homemade a Determined by size exclusion chromatography relative to polystyrene standards. b Used in the synthesis of PEO-b-PLLA diblock copolymer. c Used in the synthesis of PLLA-b-PEO-b-PLLA triblock copolymer. d Corresponds to the chromatogram shown in Figure 2. e Corresponds to the chromatogram shown in Figure 3. f Corresponds to the chromatogram shown in Figure 5.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc xml:id="_WHUaapr">Figure 2. LCCC chromatogram of a PEO-b-PLLA diblock copolymer at the critical condition of PEO block. The number on top of each peak is the total number of LLA units in the diblock copolymer determined by MALDI-TOF MS analysis.</figDesc><graphic coords="3,327.38,40.09,220.80,147.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc xml:id="_b9rkPQv">were also collected and subjected to MALDI-TOF MS analysis. Typical examples of MALDI-TOF MS spectra of fractionated samples are shown in Figure 4: (a) peak 7, (b) peak 8, and (c) peak 8′ in Figure 3. In all the spectra in Figure 4, the mass difference between the major peaks is 44, indicating that the peak envelope represents the molecular weight distribution of the PEO block.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc xml:id="_ByNsPuP">39    </figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>( 39 )</head><label>39</label><figDesc xml:id="_CW2BEQm">Snyder, L. R.; Kirkland, J. J. Introduction to modern liquid chromatography, 2nd ed.; John Wiley &amp; Sons: New York, 1979.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 3 .</head><label>3</label><figDesc xml:id="_Ce8J34K">Figure 3. LCCC chromatogram of a PLLA-b-PEO-b-PLLA triblock copolymer at the critical condition of PEO block. The number labeled on top of each peak is the total number of LLA units in the triblock copolymer determined by MALDI-TOF MS analysis.</figDesc><graphic coords="4,61.29,40.09,226.08,146.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>(</head><label></label><figDesc xml:id="_KbhQXF3">a) x(44.05) + 7(72.06) + 18.02 + 39.10: 5010 (x ) 101), 5099 (x ) 103), 5187 (x ) 105), etc. (b), (c) x(44.05) + 8(72.06) + 18.02 + 39.10: 5215 (x ) 104), 5303 (x ) 106), 5391 (x ) 108), etc.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head></head><label></label><figDesc xml:id="_cRg78S6">40,41 Therefore k′ (also K) changes exponentially with DP of the polymer molecules. In the chromatograms shown in Figures2, 3, and 5, a log scale abscissa was used for the retention volume to place the peaks in a regular interval according to Martin's rule. To examine how well Martin's rule works in this system, ln k′ obtained from the chromatogram of the PEO-b-PLLA in Figure2was plotted in Figure6against DP of the PLLA block. This plot exhibits an excellent linear relationship, which indicates that the interaction strength of the diblock copolymer with the stationary phase is precisely proportional to the number of LLA units according to Martin's rule. Although Martin's rule has long been known to be a good empirical relationship, it is striking that the diblock copolymers obey the rule so perfectly despite the presence (40) Martin, A. J. P. Biochim. Soc. Symp. 1949, 3, 4. (41) Karger, B. L.; Snyder, L. R.; Horvath, C. An Introduction to Separation Science; Willey-Interscience: New York, 1973.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 4 .</head><label>4</label><figDesc xml:id="_zJxWkup">Figure 4. MALDI-TOF MS spectra for the PLLA-b-PEO-b-PLLA triblock copolymer fractionated at the critical condition of PEO block: (a) fraction 7, (b) fraction 8, and (c) fraction 8′ shown in Figure 3.</figDesc><graphic coords="5,135.34,40.09,341.52,535.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 5 .</head><label>5</label><figDesc xml:id="_uxvWX6M">Figure 5. LCCC chromatogram of a PLLA-b-PEO-b-PLLA triblock copolymer with longer PLLA blocks than the one used in Figure 3 at the critical condition of PEO block. The number of LLA units was determined by MALDI-TOF MS and labeled on individual peaks.</figDesc><graphic coords="6,70.59,40.09,207.60,152.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 6 .</head><label>6</label><figDesc xml:id="_W6Bc3Sv">Figure 6. Dependence of k′ on the PLLA block length in PEO-b-PLLA diblock copolymer at the critical condition of PEO block from the chromatogram shown in Figure 2. It shows an excellent linear relationship in accordance with the Martin rule.</figDesc><graphic coords="6,79.74,245.98,189.12,157.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 7 .</head><label>7</label><figDesc xml:id="_mavDK5s">Figure 7. Dependence of k′ on PLLA total block length in PLLAb-PEO-b-PLLA triblock copolymer at the critical condition of PEO block from the chromatogram shown in Figure 3. The filled and open circles represent peaks showing a longer (marked with solid arrows) and a shorter retention (dashed arrows) among the same number of LLA units in Figure 3, respectively.</figDesc><graphic coords="6,340.19,40.09,195.12,154.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 8 .</head><label>8</label><figDesc xml:id="_ezwgjZF">Figure 8. Schematic diagram of possible structures of PLLA-b-PEOb-PLLA triblock copolymers having even numbers of LLA units. The ellipsoids represent PEO block and the rectangles represent 2 LLA units.</figDesc><graphic coords="6,322.16,267.79,231.12,143.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 9 .</head><label>9</label><figDesc xml:id="_vHGpd4h">Figure 9. Dependence of k′ on PLLA total block length in PLLAb-PEO-b-PLLA triblock copolymer at the critical condition of PEO block from the chromatogram shown in Figure 5. Squares, circles, and triangles are assigned to each series of triblock copolymers with two, four, and six PLLA units at one end and a varying block length at the other end of the PEO block, respectively.</figDesc><graphic coords="7,337.49,40.09,200.64,158.46" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc xml:id="_NWCA5sV">Science 1994, 263, 1600. (6) Jeong, B.; Bae, Y. H.; Lee, D. S.; Kim, S. W. Nature 1997, 388, 860-862. (7) Tanodekaew, S.; Pannu, R.; Heatley, F.; Attwood, D.; Booth, C. Macromol. Chem. Phys. 1997, 198, 927-944. (8) Li, S. M.; Rashkov, I.; Espartero, J. L.; Manolova, N.; Vert, M. Macromolecules 1996, 29, 57-62. (9) Yang, Z.; Pickard, S.; Deng, N.-J.; Barlow, R. J.; Attwood, D.; Booth, C. Macromolecules 1994, 27, 2371-2379. (10) Guttman, C. M.; Dimarzio, E. A.; Douglas, J. F. Macromolecules 1996, 29, 5723-5733. (11) Yu, G.-E.; Yang, Y.-W.; Attwood, D.; Booth, C. Langmuir 1996, 12, 3404-3412. (12) Almgren, M.; Brown, W.; Hvidt, S. Colloid Polym. Sci. 1995, 273, 2-15. (13) Wanka, G.; Hoffmann, H.; Ulbricht, W. Macromolecules 1994, 27, 4145-4159. (14) Malmsten, M.; Lindman, B. Macromolecules 1992, 25, 5440-5445. Anal. Chem. 2001, 73, 1726-1732concentration (cmc) of BO 4 EO 40 BO 4 (30 g/dm 3 ) was much higher than that of EO 41 BO 8 (0.3 g/dm 3 ). The mass-average association number, N w , at 35 °C was 78 for EO 41 BO 8 but only 5 for EO 21 - BO 8 EO 21 .9  The unfavorable micellization of the triblock copolymer BO 4 EO 40 BO 4 was ascribed to the entropy loss associated with the looping of the water-soluble PEO block in order that the hydrophobic PBO blocks associate at the core of a micelle. They also reported that a thermally reversible sol-gel-sol transition was observed on heating or cooling for concentrated solutions of diblock copolymer EO 41 BO 8 , but concentrated solutions of triblock copolymers did not show a gel phase. Yu et al. pointed out the significant effect of the block length distribution on the association properties. 11 They found that a copolymer with a wide EO block length distribution has a low cmc and a high N w relative to a copolymer with a narrow EO block length distribution.</figDesc><table /><note><p xml:id="_KbjKvFC">(15) Hvidt, S.; Jørgensen, E. B.; Brown, W.; Schille ´n, K. J. Phys. Chem. 1994, 98, 12320-12328.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc xml:id="_sBEM9vm">October 16, 2000. Accepted February 5, 2001. AC001219Z (42) Jandera, P.; Rozkos ˇna ´, J. J. Chromatogr. 1986, 362, 325-343. (43) Philipsen, H. J. A.; Claessens, H. A.; Lind, H.; Klumperman, B.; German, A.</figDesc><table /><note><p xml:id="_SqtxrPs">L. J. Chromatogr., A 1997, 790, 101-116.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 .</head><label>2</label><figDesc xml:id="_4F9dn79">Probability for Different Isomeric Structures of PLLA-b-PEO-b-PLLA total no. of LLA units</figDesc><table><row><cell></cell><cell>structure of triblock copolymer</cell><cell>probability a</cell></row><row><cell>4</cell><cell>LLA2-PEO-LLA2</cell><cell>1</cell></row><row><cell>6</cell><cell>LLA2-PEO-LLA4</cell><cell>1</cell></row><row><cell>8</cell><cell>LLA2-PEO-LLA6</cell><cell>0.5</cell></row><row><cell></cell><cell>LLA4-PEO-LLA4</cell><cell>0.5</cell></row><row><cell>10</cell><cell>LLA2-PEO-LLA8</cell><cell>0.25</cell></row><row><cell></cell><cell>LLA4-PEO-LLA6</cell><cell>0.75</cell></row><row><cell>12</cell><cell>LLA2-PEO-LLA10</cell><cell>0.125</cell></row><row><cell></cell><cell>LLA4-PEO-LLA8</cell><cell>0.500</cell></row><row><cell></cell><cell>LLA6-PEO-LLA6</cell><cell>0.375</cell></row><row><cell>14</cell><cell>LLA2-PEO-LLA12</cell><cell>0.062</cell></row><row><cell></cell><cell>LLA4-PEO-LLA10</cell><cell>0.313</cell></row><row><cell></cell><cell>LLA6-PEO-LLA8</cell><cell>0.625</cell></row><row><cell>16</cell><cell>LLA2-PEO-LLA14</cell><cell>0.031</cell></row><row><cell></cell><cell>LLA4-PEO-LLA12</cell><cell>0.188</cell></row><row><cell></cell><cell>LLA6-PEO-LLA10</cell><cell>0.469</cell></row><row><cell></cell><cell>LLA8-PEO-LLA8</cell><cell>0.312</cell></row><row><cell>18</cell><cell>LLA2-PEO-LLA16</cell><cell>0.016</cell></row><row><cell></cell><cell>LLA4-PEO-LLA14</cell><cell>0.095</cell></row><row><cell></cell><cell>LLA6-PEO-LLA12</cell><cell>0.333</cell></row><row><cell></cell><cell>LLA8-PEO-LLA10</cell><cell>0.556</cell></row></table><note><p xml:id="_zZWr5He">a Calculated by assuming equal reactivity of the LLA end hydroxyl groups.</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p xml:id="_t8sfhsg">10.1021/ac001219z CCC: $20.00 © 2001 American Chemical Society Published on Web 03/17/2001 Downloaded via UNIV OF MEMPHIS on June 19, 2024 at 17:26:46 (UTC). See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Nonidez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Mays</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_vbMybu2">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="4143" to="4146" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, H.; Lee, W.; Chang, T.; Choi, S.; Lee, D.; Ji, H.; Nonidez, W. K.; Mays, J. W. Macromolecules 1999, 32, 4143-4146.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J A</forename><surname>Philipsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Klumperman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M V</forename><surname>Herk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>German</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_rUvu93Y">J. Chromatogr., A</title>
+		<imprint>
+			<biblScope unit="volume">727</biblScope>
+			<biblScope unit="page" from="13" to="25" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Philipsen, H. J. A.; Klumperman, B.; Herk, A. M. V.; German, A. L. J. Chromatogr., A 1996, 727, 13-25.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Gorshkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Much</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">V</forename><surname>Evreinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G J</forename><surname>Entelis</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="volume">523</biblScope>
+			<biblScope unit="page" from="91" to="102" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gorshkov, A. V.; Much, H.; Becker, H.; Pasch, H.; Evreinov, V. V.; Entelis, S. G. J. Chromatogr. 1990, 523, 91-102.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Zimina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Kever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">Y</forename><surname>Melenavskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F J</forename><surname>Fell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">593</biblScope>
+			<biblScope unit="page" from="233" to="241" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Zimina, T. M.; Kever, J. J.; Melenavskaya, E. Y.; Fell, A. F. J. Chromatogr. 1992, 593, 233-241.</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Brinkmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Much</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">J</forename><surname>Just</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">623</biblScope>
+			<biblScope unit="page" from="315" to="322" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Brinkmann, C.; Much, H.; Just, U. J. Chromatogr. 1992, 623, 315-322.</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mori</surname></persName>
+		</author>
+		<title level="m" xml:id="_rDQxMS9">Trends Polym. Sci</title>
+		<meeting><address><addrLine>Cambridge, U. K.</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="0208">1994, 2, 208</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Mori, S. Trends Polym. Sci. (Cambridge, U. K.) 1994, 2, 208.</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Rode</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chromatogr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="volume">699</biblScope>
+			<biblScope unit="page" from="21" to="29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pasch, H.; Rode, K. J. Chromatogr., A 1995, 699, 21-29.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R.-P</forename><surname>Kruger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Much</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Schulz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_XX4RNbh">Int. J. Polym. Anal. Charact</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="221" to="235" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kruger, R.-P.; Much, H.; Schulz, G. Int. J. Polym. Anal. Charact. 1996, 2, 221-235.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berek</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Macromolecules</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="8517" to="8521" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Berek, D. Macromolecules 1998, 31, 8517-8521.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kitayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Janco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ute</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Niimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hatada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_PAcmdUQ">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page">1518</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kitayama, T.; Janco, M.; Ute, K.; Niimi, R.; Hatada, K.; Berek, D. Anal. Chem. 2000, 72, 1518.</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Olesik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H J</forename><surname>Marti</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Microcolumn</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999-09">Sep. 1999</date>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="53" to="62" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yun, H.; Olesik, S. V.; Marti, E. H. J. Microcolumn Sep. 1999, 11, 53-62.</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Souvignet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Olesik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_xqGt6h8">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="page">66</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Souvignet, I.; Olesik, S. V. Anal. Chem. 1997, 69, 66.</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Falkenhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Much</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Stauf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Muller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_WVCmDe4">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">3687</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Falkenhagen, J.; Much, H.; Stauf, W.; Muller, A. H. E. Macromolecules 2000, 33, 3687.</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W F</forename><surname>Nielen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_nAD29FY">Mass Spectrom. Rev</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="309" to="344" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Nielen, M. W. F. Mass Spectrom. Rev. 1999, 18, 309-344.</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_D9qbfUM">Anal. Chem. News Features</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="456" to="461" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wu, K. J.; Odom, R. W. Anal. Chem. News Features 1998, 70, 456-461.</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Montaudo</surname></persName>
+		</author>
+		<title level="m" xml:id="_kjuytrr">Trends Polym. Sci</title>
+		<meeting><address><addrLine>Cambridge, U. K.</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="81" to="86" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Montaudo, G. Trends Polym. Sci. (Cambridge, U. K.) 1996, 4, 81-86.</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Schadler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spickermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Rader</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Wiesner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_FDF4wde">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="4865" to="4870" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Schadler, V.; Spickermann, J.; Rader, H. J.; Wiesner, U. Macromolecules 1996, 29, 4865-4870.</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wilczek-Vera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Danis</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="4036" to="4044" />
+			<pubPlace>Eisenberg, A. Macromolecules</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wilczek-Vera, G.; Danis, P. O.; Eisenberg, A. Macromolecules 1996, 29, 4036-4044.</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Schriemer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Whittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_N4VyECZ">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1955" to="1963" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Schriemer, D. C.; Whittal, R. M.; Li, L. Macromolecules 1997, 30, 1955- 1963.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Servaty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rosenauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spickermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Rader</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wegner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Weier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_JJWf4zG">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="2468" to="2474" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Servaty, S.; Kohler, W.; Meyer, W. H.; Rosenauer, C.; Spickermann, J.; Rader, H. J.; Wegner, G.; Weier, A. Macromolecules 1998, 31, 2468-2474.</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J V</forename><surname>Rooij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Duursma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G D</forename><surname>Koster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M A</forename><surname>Heeren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Boon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J W</forename><surname>Schuyl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R E V</forename><surname>Hage</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_xn2BQvz">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="843" to="850" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Rooij, G. J. v.; Duursma, M. C.; Koster, C. G. d.; Heeren, R. M. A.; Boon, J. J.; Schuyl, P. J. W.; Hage, E. R. E. v. d. Anal. Chem. 1998, 70, 843-850.</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Vladimirov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M J</forename><surname>Frechet</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Macromolecules</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="5186" to="5192" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yu, D.; Vladimirov, N.; Frechet, J. M. J. Macromolecules 1999, 32, 5186- 5192.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
