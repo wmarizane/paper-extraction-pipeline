@@ -20,14 +20,8 @@ set -u  # Exit on undefined variable
 mkdir -p logs results
 
 # Conda Environment Setup
-ENV_NAME="nlp"
-
-source ~/.bashrc
-source "$(conda info --base)/etc/profile.d/conda.sh" || true
-
-echo "Activating environment '$ENV_NAME'"
-conda activate $ENV_NAME
-
+source /project/wkmrzane/miniconda3/etc/profile.d/conda.sh
+conda activate nlp
 NLP_PYTHON=$(which python)
 echo "Python: $NLP_PYTHON"
 echo "Python version: $($NLP_PYTHON --version)"
