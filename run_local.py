@@ -206,6 +206,9 @@ def main():
         runner.run()
         sys.exit(0)
     except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"FATAL ERROR: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
