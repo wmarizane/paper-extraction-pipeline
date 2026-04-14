@@ -52,7 +52,6 @@ class LLMExtractor:
         self.model_name = model_name or settings.llm_model
         self.gpu_memory = gpu_memory_utilization or settings.vllm_gpu_memory
         self.max_model_len = max_model_len or settings.vllm_max_model_len
-        self.gdn_prefill_backend = settings.vllm_gdn_prefill_backend
         self.max_retries = settings.llm_retry_attempts
         self.temperature = settings.llm_temperature
 
