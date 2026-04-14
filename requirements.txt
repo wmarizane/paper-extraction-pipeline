@@ -1,4 +1,5 @@
 requests
+pymupdf4llm
 pydantic
 pydantic-settings
 python-dotenv
