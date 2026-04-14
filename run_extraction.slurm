@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=64G
+#SBATCH --mem=128G
 #SBATCH --gres=gpu:1
 #SBATCH --time=04:00:00
 #SBATCH --output=logs/output_%x-%j.log
@@ -32,12 +32,11 @@ PROJECT_DIR="/project/wkmrzane/research-assistant/paper-extraction-pipeline"
 cd "$PROJECT_DIR" || { echo "ERROR: Cannot cd to $PROJECT_DIR"; exit 1; }
 echo "Working in: $(pwd)"
 
-if [ -f ".env" ]; then
-    echo "Loading environment variables from .env..."
-    set -a
-    source <(grep -v '^#' .env | sed 's/#.*//' | sed 's/[[:space:]]*$//')
-    set +a
-fi
+echo "Loading environment variables from .env.cluster..."
+cp .env.cluster .env
+set -a
+source <(grep -v '^#' .env | sed 's/#.*//' | sed 's/[[:space:]]*$//')
+set +a
 
 echo "================================"
 echo "Starting Extraction Pipeline"
