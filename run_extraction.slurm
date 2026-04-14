@@ -15,7 +15,6 @@
 # ============================================================================
 
 set -e  # Exit on error
-set -u  # Exit on undefined variable
 
 mkdir -p logs results
 
