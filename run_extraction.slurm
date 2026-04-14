@@ -21,7 +21,7 @@ mkdir -p logs results
 
 # Conda Environment Setup
 source /project/wkmrzane/miniconda3/etc/profile.d/conda.sh
-conda activate nlp
+conda activate research-assistant
 NLP_PYTHON=$(which python)
 echo "Python: $NLP_PYTHON"
 echo "Python version: $($NLP_PYTHON --version)"
