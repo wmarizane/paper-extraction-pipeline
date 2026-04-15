@@ -64,6 +64,7 @@ class LLMExtractor:
             gpu_memory_utilization=self.gpu_memory,
             max_model_len=self.max_model_len,
             tensor_parallel_size=num_gpus,
+            max_num_seqs=16,
             trust_remote_code=True,
         )
         self.sampling_params = SamplingParams(
