@@ -32,6 +32,8 @@ PROJECT_DIR="/project/wkmrzane/research-assistant/paper-extraction-pipeline"
 cd "$PROJECT_DIR" || { echo "ERROR: Cannot cd to $PROJECT_DIR"; exit 1; }
 echo "Working in: $(pwd)"
 
+export LIBRARY_PATH=/project/wkmrzane/miniconda3/envs/research-assistant/lib/stubs:$LIBRARY_PATH
+
 if [ -f ".env" ]; then
     echo "Loading environment variables from .env..."
     set -a
