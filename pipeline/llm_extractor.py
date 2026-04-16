@@ -7,7 +7,6 @@ import time
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
-import torch
 from vllm import LLM, SamplingParams
 
 from config.settings import settings
@@ -56,16 +55,12 @@ class LLMExtractor:
         self.max_retries = settings.llm_retry_attempts
         self.temperature = settings.llm_temperature
 
-        num_gpus = torch.cuda.device_count()
-        logger.info(f"Initializing vLLM with model: {self.model_name} on {num_gpus} GPUs")
+        logger.info(f"Initializing vLLM with model: {self.model_name}")
         
         self.llm = LLM(
             model=self.model_name,
             gpu_memory_utilization=self.gpu_memory,
             max_model_len=self.max_model_len,
-            tensor_parallel_size=num_gpus,
-            max_num_seqs=16,
-            enforce_eager=True,
             trust_remote_code=True,
         )
         self.sampling_params = SamplingParams(
