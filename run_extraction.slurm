@@ -32,6 +32,14 @@ PROJECT_DIR="/project/wkmrzane/research-assistant/paper-extraction-pipeline"
 cd "$PROJECT_DIR" || { echo "ERROR: Cannot cd to $PROJECT_DIR"; exit 1; }
 echo "Working in: $(pwd)"
 
+export LD_LIBRARY_PATH=/project/wkmrzane/miniconda3/envs/research-assistant/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/project/wkmrzane/miniconda3/envs/research-assistant/lib/stubs:$LIBRARY_PATH
+export LD_PRELOAD=/project/wkmrzane/miniconda3/envs/research-assistant/lib/libstdc++.so.6
+
+# Delete stale FlashInfer GDN kernel cache so it recompiles with correct libstdc++
+echo "Clearing stale FlashInfer kernel cache..."
+rm -rf /project/wkmrzane/.cache/flashinfer/
+echo "Cache cleared."
 
 if [ -f ".env" ]; then
     echo "Loading environment variables from .env..."
