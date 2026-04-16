@@ -120,10 +120,18 @@ Identify all polymer systems and their associated chromatography parameters.
         try:
             tokenizer = self.llm.get_tokenizer()
             if hasattr(tokenizer, "apply_chat_template"):
+                messages = [
+                    {
+                        "role": "system",
+                        "content": "You are a JSON extraction assistant. Output ONLY valid JSON. Do not think, reason, or explain. Start your response with { and end with }."
+                    },
+                    {"role": "user", "content": raw_prompt}
+                ]
                 return tokenizer.apply_chat_template(
-                    [{"role": "user", "content": raw_prompt}], 
+                    messages,
                     tokenize=False, 
-                    add_generation_prompt=True
+                    add_generation_prompt=True,
+                    enable_thinking=False
                 )
         except Exception as e:
             logger.warning(f"Could not apply chat template: {e}")
@@ -132,13 +140,14 @@ Identify all polymer systems and their associated chromatography parameters.
     def _parse_llm_response(self, response_text: str) -> Dict[str, Any]:
         text = response_text.strip()
         
-        # Clean reasoning tags that might leak
+        # Clean reasoning/thinking tags that might leak
         text = re.sub(r"(?is)<\s*think\s*>.*?<\s*/\s*think\s*>", "", text)
         text = re.sub(r"```json\s*(.*?)\s*```", r"\1", text, flags=re.IGNORECASE | re.DOTALL)
         text = re.sub(r"```\s*(.*?)\s*```", r"\1", text, flags=re.IGNORECASE | re.DOTALL)
         
         text = text.strip()
         
+        # Try direct parse first
         try:
             data = json.loads(text)
             if not isinstance(data, dict):
@@ -146,8 +155,26 @@ Identify all polymer systems and their associated chromatography parameters.
             if "extracted_conditions" not in data:
                 data["extracted_conditions"] = []
             return data
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Failed to decode JSON: {str(e)}\nRaw Response: {text[:200]}")
+        except json.JSONDecodeError:
+            pass
+        
+        # Fallback: find the first JSON object in mixed output (reasoning + JSON)
+        first_brace = text.find("{")
+        last_brace = text.rfind("}")
+        if first_brace != -1 and last_brace > first_brace:
+            json_candidate = text[first_brace:last_brace + 1]
+            try:
+                data = json.loads(json_candidate)
+                if not isinstance(data, dict):
+                    raise ValueError("Root must be a JSON object")
+                if "extracted_conditions" not in data:
+                    data["extracted_conditions"] = []
+                logger.info("Extracted JSON from mixed LLM output")
+                return data
+            except json.JSONDecodeError:
+                pass
+        
+        raise ValueError(f"Failed to decode JSON: no valid JSON found\nRaw Response: {text[:300]}")
 
     def extract_from_chunks(self, chunks: List[TextChunk]) -> List[ExtractionResult]:
         if not chunks:
