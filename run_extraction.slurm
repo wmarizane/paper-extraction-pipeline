@@ -54,11 +54,18 @@ echo "================================"
 
 export PYTHONPATH=.
 
-# Using run_local.py to test the pipeline on polymerPaper1.pdf
-# For batch processing across the inputs folder, you can use a loop later.
-$NLP_PYTHON run_local.py Inputs/polymerPaper1.pdf
-
-PIPELINE_EXIT_CODE=$?
+# Process all papers in Inputs/
+PIPELINE_EXIT_CODE=0
+for PDF in Inputs/polymerPaper1.pdf Inputs/polymerPaper2.pdf Inputs/polymerPaper3.pdf; do
+    echo ""
+    echo ">>> Processing: $PDF"
+    $NLP_PYTHON run_local.py "$PDF"
+    EXIT=$?
+    if [ $EXIT -ne 0 ]; then
+        echo "WARNING: $PDF failed with exit code $EXIT"
+        PIPELINE_EXIT_CODE=$EXIT
+    fi
+done
 
 echo "================================"
 echo "Job Summary"
