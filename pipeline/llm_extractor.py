@@ -61,6 +61,7 @@ class LLMExtractor:
             model=self.model_name,
             gpu_memory_utilization=self.gpu_memory,
             max_model_len=self.max_model_len,
+            gdn_prefill_backend="triton",
             trust_remote_code=True,
         )
         self.sampling_params = SamplingParams(
