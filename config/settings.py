@@ -25,7 +25,7 @@ class PipelineSettings(BaseSettings):
     
     # === LLM Configuration ===
     llm_model: str = Field(
-        default="Qwen/Qwen2.5-7B-Instruct",
+        default="Qwen/Qwen3.5-35B-A3B",
         description="HuggingFace model ID for extraction"
     )
     
@@ -151,6 +151,11 @@ class PipelineSettings(BaseSettings):
         default=1200,
         ge=1,
         description="Maximum tokens generated per vLLM call"
+    )
+
+    vllm_gdn_prefill_backend: Literal["auto", "flashinfer", "triton"] = Field(
+        default="triton",
+        description="GDN prefill backend for vLLM mamba models"
     )
     
     # === Extraction Schema ===
