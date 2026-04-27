@@ -1,86 +1,77 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper1.pdf",
-    "extraction_date": "2026-04-13T20:00:15.177462",
-    "model": "Qwen/Qwen3.5-35B-A3B",
-    "chunk_strategy": "section",
-    "tei_xml_path": "tei_xml/polymerPaper1_tei.xml",
-    "total_chunks": 3,
-    "successful_extractions": 0,
-    "total_processing_time": 0,
+    "extraction_date": "2026-04-27T15:40:54.632985",
+    "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "polymerPaper1.pdf",
-      "start_time": "2026-04-13T20:00:00.803808",
+      "start_time": "2026-04-27T15:39:28.600076",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
-        "grobid_parsing": {
-          "time_seconds": 2.1034531593322754,
-          "success": true,
-          "tei_xml_path": "tei_xml/polymerPaper1_tei.xml"
+        "parsing": {
+          "time_seconds": 10.815407276153564,
+          "success": true
         },
         "chunking": {
-          "time_seconds": 0.8632156848907471,
+          "time_seconds": 0.15211701393127441,
           "success": true,
-          "num_chunks": 3,
-          "total_tokens": 1332,
-          "avg_tokens_per_chunk": 444.0
+          "num_chunks": 2,
+          "total_tokens": 10078
         },
         "llm_extraction": {
-          "time_seconds": 11.401112794876099,
-          "success": false,
-          "successful_chunks": 0,
-          "failed_chunks": 3,
-          "total_llm_calls": 3,
-          "avg_time_per_chunk": 3.800370931625366
+          "time_seconds": 75.06526827812195,
+          "success": true
         }
       },
       "success": false,
       "error": null
-    },
-    "csv_exports": {
-      "master_table_csv": "results/polymerPaper1_master_table.csv",
-      "separation_mechanism_csv": "results/polymerPaper1_separation_mechanism.csv",
-      "column_system_metadata_csv": "results/polymerPaper1_column_system_metadata.csv"
     }
   },
   "summary": {
-    "total_master_rows": 0,
-    "total_separation_mechanism_rows": 0,
-    "total_column_system_metadata_rows": 0
+    "total_conditions": 1
   },
   "extracted_data": {
-    "master_table": [],
-    "separation_mechanism": [],
-    "column_system_metadata": []
+    "conditions": [
+      {
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "copolymer (predominantly 1,4- and 3,4-isoprene)",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "reversed phase C18 (RP-18)",
+        "mobile_phase_solvent_1": "butanone",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "92/8",
+        "mobile_phase_ratio_units": "vol %",
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100-5, 300-5, 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "notes": "Three columns in series (100-5, 300-5, 1000-7). Samples contain ~94 mol% 1,4-PI and ~6 mol% 3,4-PI."
+      }
+    ]
   },
   "chunk_details": [
     {
       "chunk_index": 0,
-      "section": "INTRODUCTION",
-      "token_count": 352,
-      "extraction_success": false,
-      "llm_calls": 1,
-      "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A snippet containing parts of an Introduction and Abst"
+      "section": "Part 1",
+      "token_count": 8622,
+      "extraction_success": true,
+      "processing_time": 75.04142045974731,
+      "extracted_count": 1
     },
     {
       "chunk_index": 1,
-      "section": "SEC-NMR",
-      "token_count": 729,
-      "extraction_success": false,
-      "llm_calls": 1,
-      "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A section titled \"SEC-NMR\" containing experimental det"
-    },
-    {
-      "chunk_index": 2,
-      "section": "ARTICLE",
-      "token_count": 251,
-      "extraction_success": false,
-      "llm_calls": 1,
-      "processing_time": 0.0,
-      "error": "Could not parse JSON from LLM response: Expecting value: line 1 column 1 (char 0)\nResponse: <think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Scientific chromatography extraction assistant.\n    *   **Input Text:** A snippet from a scientific article (Section: ARTICLE)"
+      "section": "Part 2",
+      "token_count": 1456,
+      "extraction_success": true,
+      "processing_time": 75.04142045974731,
+      "extracted_count": 0
     }
   ]
 }

@@ -148,14 +148,9 @@ class PipelineSettings(BaseSettings):
     )
 
     vllm_max_tokens: int = Field(
-        default=1200,
+        default=2048,
         ge=1,
         description="Maximum tokens generated per vLLM call"
-    )
-
-    vllm_gdn_prefill_backend: Literal["auto", "flashinfer", "triton"] = Field(
-        default="triton",
-        description="GDN prefill backend for vLLM mamba models"
     )
     
     # === Extraction Schema ===

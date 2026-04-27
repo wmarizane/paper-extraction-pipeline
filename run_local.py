@@ -2,14 +2,16 @@
 """
 End-to-end PDF extraction pipeline.
 
-Takes a PDF, natively extracts Markdown (preserving tables), wrappers it as a Chunk,
-extracts data using Qwen Chat templates via vLLM, and saves structured JSON.
+Takes a PDF, natively extracts Markdown (preserving tables), wraps it as a Chunk,
+extracts data via vLLM, and saves structured JSON.
 
 Usage:
     python run_local.py <path_to_pdf>
-    python run_local.py Inputs/polymerPaper1.pdf
+    python run_local.py Inputs/polymerPaper1.pdf --model qwen3.5-27b
+    python run_local.py Inputs/polymerPaper1.pdf --model deepseek-r1-14b
 """
 
+import argparse
 import json
 import sys
 import time
@@ -18,6 +20,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 from config.settings import settings
+from config.model_registry import get_model_config, list_models
 from pipeline.pdf_parser import parse_pdf_to_markdown, check_parser_ready
 from pipeline.chunker import chunk_pdf
 from pipeline.llm_extractor import LLMExtractor
@@ -25,15 +28,16 @@ from pipeline.llm_extractor import LLMExtractor
 class PipelineRunner:
     """Orchestrates the end-to-end extraction pipeline."""
     
-    def __init__(self, pdf_path: str):
+    def __init__(self, pdf_path: str, model_name: str = None):
         self.pdf_path = Path(pdf_path)
         self.pdf_name = self.pdf_path.name
+        self.model_name = model_name
         
         if not self.pdf_path.exists():
             raise FileNotFoundError(f"PDF not found: {self.pdf_path}")
         
-        # Initialize LLM
-        self.extractor = LLMExtractor()
+        # Initialize LLM with optional model override
+        self.extractor = LLMExtractor(model_name=model_name)
         
         # Metrics
         self.metrics = {
@@ -195,14 +199,30 @@ class PipelineRunner:
         return output_path
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python run_local.py <path_to_pdf>")
-        sys.exit(1)
-    
-    pdf_path = sys.argv[1]
+    parser = argparse.ArgumentParser(
+        description="Extract LCCC conditions from polymer papers",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument("pdf_path", help="Path to the input PDF file")
+    parser.add_argument(
+        "--model", "-m",
+        default=None,
+        help="Model to use (e.g., 'qwen3.5-27b', 'deepseek-r1-14b'). "
+             "Defaults to LLM_MODEL in .env"
+    )
+    parser.add_argument(
+        "--list-models",
+        action="store_true",
+        help="List available models and exit"
+    )
+    args = parser.parse_args()
+
+    if args.list_models:
+        list_models()
+        sys.exit(0)
     
     try:
-        runner = PipelineRunner(pdf_path)
+        runner = PipelineRunner(args.pdf_path, model_name=args.model)
         runner.run()
         sys.exit(0)
     except Exception as e:
