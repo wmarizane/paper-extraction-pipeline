@@ -49,21 +49,74 @@ class TextChunker:
     
     def process_markdown(self, md_content: str, source_pdf: str) -> List[TextChunk]:
         """
-        Main entry point: return the entire markdown as one chunk.
+        Main entry point: return the entire markdown as one chunk if it fits.
+        If it exceeds the context window, intelligently split by Markdown headers.
         """
         token_count = self.count_tokens(md_content)
         
-        # We pass the full text; if for some miraculous reason it exceeds Qwen's context 
-        # (32k), vLLM might complain, but normal papers are 5k-15k tokens.
-        chunk = TextChunk(
-            text=md_content,
-            section="Full Paper",
-            chunk_index=0,
-            token_count=token_count,
-            source_pdf=source_pdf
-        )
+        # Max tokens allowed for input. We cap this at 9000 tokens because the 
+        # community AWQ quantization degrades and hallucinates EOS tokens on 
+        # contexts > 11k tokens.
+        max_input_tokens = min(9000, settings.vllm_max_model_len - 2048)
         
-        return [chunk]
+        # Fast path: fits in one chunk
+        if token_count <= max_input_tokens:
+            return [TextChunk(
+                text=md_content,
+                section="Full Paper",
+                chunk_index=0,
+                token_count=token_count,
+                source_pdf=source_pdf
+            )]
+            
+        # Fallback path: document is too large, split by main Markdown headers
+        print(f"⚠️ Document too large ({token_count} > {max_input_tokens}). Using smart fallback chunking.")
+        
+        chunks = []
+        current_text = ""
+        current_tokens = 0
+        chunk_idx = 0
+        
+        # Split by H2 headers (standard PyMuPDF4LLM section dividers)
+        sections = md_content.split("\n## ")
+        
+        for i, section in enumerate(sections):
+            # Re-add the header prefix if it's not the very first split
+            if i > 0:
+                section = "\n## " + section
+                
+            section_tokens = self.count_tokens(section)
+            
+            # If a single section is too big, we just have to append it and hope it doesn't break vLLM too badly
+            # (or we could further split by '\n### ' but usually H2 is fine)
+            if current_tokens + section_tokens > max_input_tokens and current_text:
+                # Save current chunk
+                chunks.append(TextChunk(
+                    text=current_text,
+                    section=f"Part {chunk_idx + 1}",
+                    chunk_index=chunk_idx,
+                    token_count=current_tokens,
+                    source_pdf=source_pdf
+                ))
+                # Start new chunk
+                chunk_idx += 1
+                current_text = section
+                current_tokens = section_tokens
+            else:
+                current_text += section
+                current_tokens += section_tokens
+                
+        # Append the final chunk
+        if current_text:
+            chunks.append(TextChunk(
+                text=current_text,
+                section=f"Part {chunk_idx + 1}",
+                chunk_index=chunk_idx,
+                token_count=current_tokens,
+                source_pdf=source_pdf
+            ))
+            
+        return chunks
 
 
 # Convenience function for simple usage

@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "Pasch1993.pdf",
+    "extraction_date": "2026-04-27T15:35:00.072430",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "Pasch1993.pdf",
+      "start_time": "2026-04-27T15:34:49.339440",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 7.800377368927002,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11248445510864258,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 663
+        },
+        "llm_extraction": {
+          "time_seconds": 2.8199944496154785,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 663,
+      "extraction_success": true,
+      "processing_time": 2.7977423667907715,
+      "extracted_count": 0
+    }
+  ]
+}
