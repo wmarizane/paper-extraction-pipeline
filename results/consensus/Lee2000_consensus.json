@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "source_pdf": "Lee2000.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polystyrene",
+        "critical_component": "Linear polystyrene",
+        "architecture": "Linear",
+        "critical_condition_basis": "Chromatographic critical condition of linear PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18AB",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvent_1": "CH2Cl2",
+        "mobile_phase_solvent_2": "CH3CN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": null,
+        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 \u00c5 pore, 250 \u00d7 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 \u00b0C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "notes": "Linear precursors elute at about the same retention time (5.4 min) independent of the molecular weight."
+      }
+    ]
+  }
+}

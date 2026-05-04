@@ -98,55 +98,22 @@ class TextChunker:
 
     def process_markdown(self, md_content: str, source_pdf: str) -> List[TextChunk]:
         """
-        Main entry point: return the entire markdown as one chunk if it fits.
-        If it exceeds the context window, use Recursive Splitting and Contextual Retrieval.
+        Main entry point: return the entire markdown as one single chunk.
+        We now rely on massive multi-GPU context windows (32k+) to process
+        the document globally and enable native LLM deduplication.
         """
         token_count = self.count_tokens(md_content)
         
-        # Max tokens allowed for input (cap at 9000 to prevent OOM/hallucinations)
-        max_input_tokens = min(9000, settings.vllm_max_model_len - 2048)
+        # We no longer chunk. We send the entire document.
+        print(f"📦 Packaging entire document ({token_count} tokens) into a single chunk for global context.")
         
-        # Fast path: fits in one chunk
-        if token_count <= max_input_tokens:
-            return [TextChunk(
-                text=md_content,
-                section="Full Paper",
-                chunk_index=0,
-                token_count=token_count,
-                source_pdf=source_pdf
-            )]
-            
-        # Fallback path: Document too large. 
-        print(f"⚠️ Document too large ({token_count} > {max_input_tokens}). Using Contextual Map-Reduce chunking.")
-        
-        # Extract Global Anchor (First 500 tokens, typically the Abstract)
-        first_section = md_content.split("\n## ")[0]
-        anchor_tokens = self.encoder.encode(first_section)[:500]
-        global_anchor = self.encoder.decode(anchor_tokens)
-        
-        # Determine remaining budget for the body
-        body_max_tokens = max_input_tokens - self.count_tokens(global_anchor) - 50 # 50 for formatting buffer
-        
-        # Recursively split the document
-        raw_chunks = self._recursive_split(md_content, body_max_tokens)
-        
-        chunks = []
-        for i, raw_text in enumerate(raw_chunks):
-            # Contextual Retrieval: Prepend the global anchor to subsequent chunks
-            if i == 0 or global_anchor in raw_text:
-                final_text = raw_text
-            else:
-                final_text = f"--- GLOBAL CONTEXT (ABSTRACT/INTRO) ---\n{global_anchor}\n--- END GLOBAL CONTEXT ---\n\n{raw_text}"
-                
-            chunks.append(TextChunk(
-                text=final_text,
-                section=f"Part {i + 1}",
-                chunk_index=i,
-                token_count=self.count_tokens(final_text),
-                source_pdf=source_pdf
-            ))
-            
-        return chunks
+        return [TextChunk(
+            text=md_content,
+            section="Full Paper",
+            chunk_index=0,
+            token_count=token_count,
+            source_pdf=source_pdf
+        )]
 
 
 # Convenience function for simple usage

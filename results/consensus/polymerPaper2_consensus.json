@@ -1,35 +1,14 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper2.pdf",
-    "extraction_date": "2026-05-04T18:53:36.848454",
-    "model": "qwen3.5-27b",
-    "pipeline_metrics": {
-      "pdf_name": "polymerPaper2.pdf",
-      "start_time": "2026-05-04T18:50:28.653305",
-      "end_time": null,
-      "total_time_seconds": 0,
-      "stages": {
-        "parsing": {
-          "time_seconds": 16.79286241531372,
-          "success": true
-        },
-        "chunking": {
-          "time_seconds": 0.12668943405151367,
-          "success": true,
-          "num_chunks": 1,
-          "total_tokens": 9773
-        },
-        "llm_extraction": {
-          "time_seconds": 171.27550864219666,
-          "success": true
-        }
-      },
-      "success": false,
-      "error": null
-    }
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
@@ -95,17 +74,49 @@
         "detector": "RI or ELSD",
         "evidence_text": "for PO on a silica based poly(ethylene glycol) phase in 45:55 (w/w)",
         "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC). Specific composition mentioned in text as 44.52% or 45.58% acetone."
+      },
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "C18 column",
+        "stationary_phase_chemistry": "silica-based C18",
+        "mobile_phase_solvent_1": "methanol",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80-90%",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "On many reversed phase columns, critical conditions for the (more polar) EO block have been found in aqueous methanol, acetone, or acetonitrile.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "CN column",
+        "stationary_phase_chemistry": "amino-modified silica",
+        "mobile_phase_solvent_1": "methanol",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "85%",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "On CN columns, critical conditions for EO have been reported in methanol-water (85%)",
+        "notes": null
       }
     ]
-  },
-  "chunk_details": [
-    {
-      "chunk_index": 0,
-      "section": "Full Paper",
-      "token_count": 9773,
-      "extraction_success": true,
-      "processing_time": 171.25363183021545,
-      "extracted_count": 3
-    }
-  ]
+  }
 }

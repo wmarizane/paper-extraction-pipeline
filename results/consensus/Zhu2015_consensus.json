@@ -1,32 +1,11 @@
 {
   "metadata": {
     "source_pdf": "Zhu2015.pdf",
-    "extraction_date": "2026-05-04T18:45:41.200515",
-    "model": "qwen3.5-27b",
-    "pipeline_metrics": {
-      "pdf_name": "Zhu2015.pdf",
-      "start_time": "2026-05-04T18:42:09.026685",
-      "end_time": null,
-      "total_time_seconds": 0,
-      "stages": {
-        "parsing": {
-          "time_seconds": 51.92106080055237,
-          "success": true
-        },
-        "chunking": {
-          "time_seconds": 0.12396430969238281,
-          "success": true,
-          "num_chunks": 1,
-          "total_tokens": 10545
-        },
-        "llm_extraction": {
-          "time_seconds": 160.12870359420776,
-          "success": true
-        }
-      },
-      "success": false,
-      "error": null
-    }
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
   },
   "summary": {
     "total_conditions": 3
@@ -97,15 +76,5 @@
         "notes": "Monte Carlo simulation setup described in Section 2. Pore size is defined as a slit pore with dimensions 250a x 250a x 30a."
       }
     ]
-  },
-  "chunk_details": [
-    {
-      "chunk_index": 0,
-      "section": "Full Paper",
-      "token_count": 10545,
-      "extraction_success": true,
-      "processing_time": 160.106201171875,
-      "extracted_count": 3
-    }
-  ]
+  }
 }

@@ -1,26 +1,26 @@
 {
   "metadata": {
     "source_pdf": "Lee2000.pdf",
-    "extraction_date": "2026-05-04T04:32:52.526975",
+    "extraction_date": "2026-05-04T18:37:02.012773",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "Lee2000.pdf",
-      "start_time": "2026-05-04T04:31:36.932437",
+      "start_time": "2026-05-04T18:35:46.557561",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 8.064706325531006,
+          "time_seconds": 6.5365564823150635,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12661075592041016,
+          "time_seconds": 0.12246036529541016,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 4264
         },
         "llm_extraction": {
-          "time_seconds": 67.40312933921814,
+          "time_seconds": 68.79610204696655,
           "success": true
         }
       },
@@ -62,7 +62,7 @@
       "section": "Full Paper",
       "token_count": 4264,
       "extraction_success": true,
-      "processing_time": 67.38075041770935,
+      "processing_time": 68.77354669570923,
       "extracted_count": 1
     }
   ]

@@ -1,26 +1,26 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper3.pdf",
-    "extraction_date": "2026-05-04T05:25:47.096197",
+    "extraction_date": "2026-05-04T19:00:30.316833",
     "model": "llama3.3-70b",
     "pipeline_metrics": {
       "pdf_name": "polymerPaper3.pdf",
-      "start_time": "2026-05-04T05:09:21.212802",
+      "start_time": "2026-05-04T18:44:38.208160",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 902.5989463329315,
+          "time_seconds": 902.597978591919,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.137251615524292,
+          "time_seconds": 0.11049342155456543,
           "success": true,
-          "num_chunks": 2,
-          "total_tokens": 14019
+          "num_chunks": 1,
+          "total_tokens": 13984
         },
         "llm_extraction": {
-          "time_seconds": 83.1470263004303,
+          "time_seconds": 49.400039196014404,
           "success": true
         }
       },
@@ -29,7 +29,7 @@
     }
   },
   "summary": {
-    "total_conditions": 6
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
@@ -37,73 +37,10 @@
         "analyte_polymer": "PEO-b-PLLA diblock copolymer",
         "critical_component": "PEO block",
         "architecture": "diblock",
-        "critical_condition_basis": "LCCC",
+        "critical_condition_basis": "liquid chromatography at critical condition",
         "critical_condition_confidence": "explicit",
         "column_name": "LUNA C18",
         "stationary_phase_chemistry": "reversed-phase",
-        "mobile_phase_solvent_1": "acetonitrile",
-        "mobile_phase_solvent_2": "water",
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": "60:40",
-        "mobile_phase_ratio_units": "v/v",
-        "temperature_celsius": "68",
-        "flow_rate": null,
-        "pore_size": "100-Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "refractive index detector and UV-visible absorption detector",
-        "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/v).",
-        "notes": null
-      },
-      {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
-        "critical_component": "PEO block",
-        "architecture": "triblock",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "LUNA C18",
-        "stationary_phase_chemistry": "reversed-phase",
-        "mobile_phase_solvent_1": "acetonitrile",
-        "mobile_phase_solvent_2": "water",
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": "47:53",
-        "mobile_phase_ratio_units": "v/v",
-        "temperature_celsius": "37",
-        "flow_rate": null,
-        "pore_size": "100-Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "refractive index detector and UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v);",
-        "notes": null
-      },
-      {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
-        "critical_component": "PEO block",
-        "architecture": "triblock",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "LUNA C18",
-        "stationary_phase_chemistry": "reversed-phase",
-        "mobile_phase_solvent_1": "acetonitrile",
-        "mobile_phase_solvent_2": "water",
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": "54:46",
-        "mobile_phase_ratio_units": "v/v",
-        "temperature_celsius": "54",
-        "flow_rate": null,
-        "pore_size": "100-Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "refractive index detector and UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v))",
-        "notes": null
-      },
-      {
-        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
-        "critical_component": "PEO block",
-        "architecture": "diblock",
-        "critical_condition_basis": "critical condition of PEO block",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
         "mobile_phase_solvent_1": "acetonitrile",
         "mobile_phase_solvent_2": "water",
         "mobile_phase_other_components": null,
@@ -111,9 +48,9 @@
         "mobile_phase_ratio_units": "v/v",
         "temperature_celsius": "68",
         "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector",
         "evidence_text": "The critical condition was achieved with a mixture of acetonitrile and water (60/40, v/v) at a column temperature of 68 °C.",
         "notes": null
       },
@@ -121,10 +58,10 @@
         "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
         "critical_component": "PEO block",
         "architecture": "triblock",
-        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_basis": "liquid chromatography at critical condition",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "LUNA C18",
+        "stationary_phase_chemistry": "reversed-phase",
         "mobile_phase_solvent_1": "acetonitrile",
         "mobile_phase_solvent_2": "water",
         "mobile_phase_other_components": null,
@@ -132,20 +69,20 @@
         "mobile_phase_ratio_units": "v/v",
         "temperature_celsius": "37",
         "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector",
         "evidence_text": "The critical condition in Figure 3 was obtained with an ACN/water mixture (47/53, v/v) at 37 °C column temperature",
         "notes": null
       },
       {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer with longer PLLA blocks",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
         "critical_component": "PEO block",
         "architecture": "triblock",
-        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_basis": "liquid chromatography at critical condition",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "LUNA C18",
+        "stationary_phase_chemistry": "reversed-phase",
         "mobile_phase_solvent_1": "acetonitrile",
         "mobile_phase_solvent_2": "water",
         "mobile_phase_other_components": null,
@@ -153,9 +90,9 @@
         "mobile_phase_ratio_units": "v/v",
         "temperature_celsius": "54",
         "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector",
         "evidence_text": "For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H2O = 54:46, v/v) and raising the temperature (54 °C) as compared to Figure 3.",
         "notes": null
       }
@@ -164,18 +101,10 @@
   "chunk_details": [
     {
       "chunk_index": 0,
-      "section": "Part 1",
-      "token_count": 7901,
+      "section": "Full Paper",
+      "token_count": 13984,
       "extraction_success": true,
-      "processing_time": 83.13144850730896,
-      "extracted_count": 3
-    },
-    {
-      "chunk_index": 1,
-      "section": "Part 2",
-      "token_count": 6118,
-      "extraction_success": true,
-      "processing_time": 83.13144850730896,
+      "processing_time": 49.385804653167725,
       "extracted_count": 3
     }
   ]

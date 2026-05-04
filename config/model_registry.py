@@ -25,7 +25,7 @@ class ModelConfig:
     quantization: str  # "fp8", "awq", "bf16", "gptq"
     vram_gb: float
     min_gpu_vram_gb: float
-    max_model_len: int = 16384
+    max_model_len: int = 32768
     has_thinking_mode: bool = False
     vllm_kwargs: Dict[str, Any] = field(default_factory=dict)
     description: str = ""
@@ -46,7 +46,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="awq",
         vram_gb=14,
         min_gpu_vram_gb=24,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=True,
         vllm_kwargs={"gdn_prefill_backend": "triton", "quantization": "awq"},
         description="Qwen3.5 27B AWQ 4-bit — fits all GPUs (RTX 5000/6000/H100)",
@@ -58,7 +58,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="fp8",
         vram_gb=28.5,
         min_gpu_vram_gb=60,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=True,
         vllm_kwargs={"gdn_prefill_backend": "triton"},
         description="Qwen3.5 27B FP8 — higher quality, needs H100 (80GB)",
@@ -71,7 +71,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="bf16",
         vram_gb=28,
         min_gpu_vram_gb=40,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=True,
         vllm_kwargs={},
         description="DeepSeek R1 distilled from Qwen2.5-14B, BF16",
@@ -83,7 +83,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="bf16",
         vram_gb=64,
         min_gpu_vram_gb=80,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=True,
         vllm_kwargs={"tensor_parallel_size": 2},
         description="DeepSeek R1 distilled from Qwen2.5-32B, BF16 — needs 2 GPUs (TP=2)",
@@ -96,7 +96,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="bf16",
         vram_gb=16,
         min_gpu_vram_gb=24,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=False,
         vllm_kwargs={},
         description="LLaMA 3.1 8B Instruct, BF16 — baseline model",
@@ -108,7 +108,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         quantization="bf16",
         vram_gb=140,
         min_gpu_vram_gb=160,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=False,
         vllm_kwargs={"tensor_parallel_size": 4},
         description="LLaMA 3.3 70B Instruct, BF16 — SOTA, needs 4 GPUs (TP=4)",
@@ -136,7 +136,7 @@ def get_model_config(model_key: str) -> ModelConfig:
         quantization="unknown",
         vram_gb=0,
         min_gpu_vram_gb=0,
-        max_model_len=16384,
+        max_model_len=32768,
         has_thinking_mode=False,
         vllm_kwargs={},
         description=f"Unknown model: {model_key}",

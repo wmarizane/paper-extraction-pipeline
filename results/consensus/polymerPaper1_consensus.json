@@ -1,32 +1,11 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper1.pdf",
-    "extraction_date": "2026-05-04T18:49:09.092780",
-    "model": "qwen3.5-27b",
-    "pipeline_metrics": {
-      "pdf_name": "polymerPaper1.pdf",
-      "start_time": "2026-05-04T18:47:25.322556",
-      "end_time": null,
-      "total_time_seconds": 0,
-      "stages": {
-        "parsing": {
-          "time_seconds": 28.833508729934692,
-          "success": true
-        },
-        "chunking": {
-          "time_seconds": 0.11762452125549316,
-          "success": true,
-          "num_chunks": 1,
-          "total_tokens": 9800
-        },
-        "llm_extraction": {
-          "time_seconds": 74.81898760795593,
-          "success": true
-        }
-      },
-      "success": false,
-      "error": null
-    }
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
   },
   "summary": {
     "total_conditions": 1
@@ -35,9 +14,9 @@
     "conditions": [
       {
         "analyte_polymer": "Polyisoprene (1,4-PI)",
-        "critical_component": "1,4-isoprene units",
+        "critical_component": "1,4-PI",
         "architecture": "Copolymer (predominantly 1,4- and 3,4-isoprene units)",
-        "critical_condition_basis": "Solvent composition (butanone/cyclohexane mixture)",
+        "critical_condition_basis": "Solvent composition (butanone/cyclohexane mixture) leading to elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "Reversed phase C18 (RP-18)",
@@ -47,7 +26,7 @@
         "mobile_phase_ratio": "92:8",
         "mobile_phase_ratio_units": "vol %",
         "temperature_celsius": "29",
-        "flow_rate": "0.5 mL min-1",
+        "flow_rate": "0.5 mL/min",
         "pore_size": "100-5, 300-5, 1000-7",
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
@@ -55,15 +34,5 @@
         "notes": "Samples contain ~94 mol% 1,4-PI and ~6 mol% 3,4-PI. Critical conditions established for the 1,4-isoprene moiety."
       }
     ]
-  },
-  "chunk_details": [
-    {
-      "chunk_index": 0,
-      "section": "Full Paper",
-      "token_count": 9800,
-      "extraction_success": true,
-      "processing_time": 74.79659080505371,
-      "extracted_count": 1
-    }
-  ]
+  }
 }
