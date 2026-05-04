@@ -181,7 +181,9 @@ class PipelineRunner:
         return output
     
     def _save_output(self, data: Dict[str, Any]) -> Path:
-        output_dir = Path(settings.output_dir)
+        # Create a model-specific subdirectory (e.g., results/qwen3.5-27b/)
+        model_key = self.model_name or settings.llm_model
+        output_dir = Path(settings.output_dir) / model_key
         output_dir.mkdir(parents=True, exist_ok=True)
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
