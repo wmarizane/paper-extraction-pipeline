@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "source_pdf": "Banerjee2015.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyisobutylene (PIB)",
+        "critical_component": "end groups",
+        "architecture": "Telechelic (diol, monool, diallyl, dichloride, diolefin)",
+        "critical_condition_basis": "THF/methanol 80.5/19.5 (w/w) established as critical solvent composition where elution is independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "Reversed phase C18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "Methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "Refractive Index (RI) detector (Waters 2414) and UV detector (Waters 2996)",
+        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": "RI detector identified as the preferred concentration detector for quantitative analysis under these conditions."
+      }
+    ]
+  }
+}

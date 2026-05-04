@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper2.pdf",
+    "extraction_date": "2026-05-04T18:53:36.848454",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper2.pdf",
+      "start_time": "2026-05-04T18:50:28.653305",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 16.79286241531372,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12668943405151367,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9773
+        },
+        "llm_extraction": {
+          "time_seconds": 171.27550864219666,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poloxamers (EO-PO block copolymers)",
+        "critical_component": "Ethylene oxide (EO) block",
+        "architecture": "Triblock (EO-PO-EO) or Diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "Silica-based Diol phase",
+        "mobile_phase_solvent_1": "Acetone",
+        "mobile_phase_solvent_2": "Water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "78:12",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI or ELSD",
+        "evidence_text": "characterized by liquid chromatography under critical conditions (LCCC) for EO on a Diol column in acetone water 78:12 (w/w)",
+        "notes": "Under these conditions, the PO block elutes in exclusion mode (SEC)."
+      },
+      {
+        "analyte_polymer": "Poloxamers (EO-PO block copolymers)",
+        "critical_component": "Propylene oxide (PO) block",
+        "architecture": "Triblock (EO-PO-EO) or Diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "mobile_phase_solvent_1": "Acetone",
+        "mobile_phase_solvent_2": "Water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI or ELSD",
+        "evidence_text": "for PO on a poly(divinyl benzene) column in acetone water 92:8 (w/w)",
+        "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC)."
+      },
+      {
+        "analyte_polymer": "Poloxamers (EO-PO block copolymers)",
+        "critical_component": "Propylene oxide (PO) block",
+        "architecture": "Triblock (EO-PO-EO) or Diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS-PEG",
+        "stationary_phase_chemistry": "Silica-based poly(ethylene glycol) phase",
+        "mobile_phase_solvent_1": "Acetone",
+        "mobile_phase_solvent_2": "Water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI or ELSD",
+        "evidence_text": "for PO on a silica based poly(ethylene glycol) phase in 45:55 (w/w)",
+        "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC). Specific composition mentioned in text as 44.52% or 45.58% acetone."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9773,
+      "extraction_success": true,
+      "processing_time": 171.25363183021545,
+      "extracted_count": 3
+    }
+  ]
+}

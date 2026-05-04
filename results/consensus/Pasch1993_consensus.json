@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source_pdf": "Pasch1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "diblock copolymer",
+        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvent_1": "methyl ethyl ketone",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min-1",
+        "pore_size": "100 A",
+        "column_dimensions": "200 x 4 mm",
+        "detector": "RI and UV (280 nm)",
+        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane. At this point one retention time is obtained for all molar masses of PMMA.",
+        "notes": "Used to analyze the polystyrene block while the PMMA block is 'invisible'."
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "diblock copolymer",
+        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrospher Si-300 and Si-1000",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvent_1": "methyl ethyl ketone",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min-1",
+        "pore_size": "300 A and 1000 A",
+        "column_dimensions": "self-packed",
+        "detector": "UV (280 nm)",
+        "evidence_text": "As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane.",
+        "notes": "Used for higher molar mass samples where the Si-100 column reached exclusion limits."
+      }
+    ]
+  }
+}

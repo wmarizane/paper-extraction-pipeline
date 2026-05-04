@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "extraction_date": "2026-05-04T06:29:32.339507",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "Zhu2015.pdf",
+      "start_time": "2026-05-04T06:27:58.297386",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 55.168901443481445,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13024187088012695,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10582
+        },
+        "llm_extraction": {
+          "time_seconds": 38.74281072616577,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "A-g-B graft copolymers",
+        "critical_component": "B side chains",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "B side chains at the critical condition of the corresponding homopolymer",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "the B blocks have a small, but noticeable, impact on the overall elution of the graft copolymer. This influence exists even when the chains are modeled as RWs, indicating that its fundamental origin is due to chain connectivity, not excluded volume interactions.",
+        "notes": "Monte Carlo simulations of A-g-B graft copolymers with B side chains at the critical condition."
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymers",
+        "critical_component": "B side chains",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "B side chains at the critical condition of the corresponding homopolymer",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "the B side chains are at the critical condition (w(B) = -0.18232 for RW chains and w(B) = -0.276 for SAW chains).",
+        "notes": "Monte Carlo simulations of A-g-B graft copolymers with B side chains at the critical condition for both RW and SAW chain models."
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymers",
+        "critical_component": "A backbone",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "elution influenced by invisible B branches",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "In the current study, both RW and SAW chain models were used to investigate the LCCC separation of A-g-B graft copolymers containing a 'visible' A backbone and a series of 'invisible' B branches. We found that the invisible B branches influence the elution of A-g-B graft copolymers when the visible A backbone is in both SEC and LAC modes.",
+        "notes": "Critical condition is related to the A backbone in both SEC and LAC modes, affecting the elution of A-g-B copolymers."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8841,
+      "extraction_success": true,
+      "processing_time": 38.729610443115234,
+      "extracted_count": 2
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 1741,
+      "extraction_success": true,
+      "processing_time": 38.729610443115234,
+      "extracted_count": 1
+    }
+  ]
+}

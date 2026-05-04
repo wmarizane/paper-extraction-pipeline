@@ -1,26 +1,26 @@
 {
   "metadata": {
     "source_pdf": "Lee2000.pdf",
-    "extraction_date": "2026-04-27T15:33:33.601313",
-    "model": "qwen3.5-27b",
+    "extraction_date": "2026-05-04T06:24:46.192736",
+    "model": "deepseek-r1-32b",
     "pipeline_metrics": {
       "pdf_name": "Lee2000.pdf",
-      "start_time": "2026-04-27T15:32:19.626379",
+      "start_time": "2026-05-04T06:24:13.838525",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 4.332194089889526,
+          "time_seconds": 7.379083633422852,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11130857467651367,
+          "time_seconds": 0.10866570472717285,
           "success": true,
           "num_chunks": 1,
-          "total_tokens": 4296
+          "total_tokens": 4264
         },
         "llm_extraction": {
-          "time_seconds": 69.53131341934204,
+          "time_seconds": 24.866312503814697,
           "success": true
         }
       },
@@ -34,9 +34,9 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear polystyrene",
-        "architecture": "linear",
+        "analyte_polymer": "cyclic polystyrene (PSs)",
+        "critical_component": "linear PS",
+        "architecture": "cyclic",
         "critical_condition_basis": "chromatographic critical condition of linear PS",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18AB",
@@ -49,10 +49,10 @@
         "temperature_celsius": "43",
         "flow_rate": "0.5 mL/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": null,
-        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 Å pore, 250 × 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
-        "notes": "The text states that at this condition, linear PS elutes independent of molecular weight (around 5.4 min), while cyclic PS retention increases with molecular weight."
+        "evidence_text": "In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "notes": null
       }
     ]
   },
@@ -60,9 +60,9 @@
     {
       "chunk_index": 0,
       "section": "Full Paper",
-      "token_count": 4296,
+      "token_count": 4264,
       "extraction_success": true,
-      "processing_time": 69.5095887184143,
+      "processing_time": 24.853765964508057,
       "extracted_count": 1
     }
   ]

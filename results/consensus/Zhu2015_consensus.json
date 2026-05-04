@@ -1,41 +1,20 @@
 {
   "metadata": {
     "source_pdf": "Zhu2015.pdf",
-    "extraction_date": "2026-04-27T15:38:11.048426",
-    "model": "qwen3.5-27b",
-    "pipeline_metrics": {
-      "pdf_name": "Zhu2015.pdf",
-      "start_time": "2026-04-27T15:36:15.247401",
-      "end_time": null,
-      "total_time_seconds": 0,
-      "stages": {
-        "parsing": {
-          "time_seconds": 9.745797634124756,
-          "success": true
-        },
-        "chunking": {
-          "time_seconds": 0.12446427345275879,
-          "success": true,
-          "num_chunks": 2,
-          "total_tokens": 10646
-        },
-        "llm_extraction": {
-          "time_seconds": 105.93065237998962,
-          "success": true
-        }
-      },
-      "success": false,
-      "error": null
-    }
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "hPS-g-dPS",
-        "critical_component": "dPS",
+        "critical_component": "dPS side chains",
         "architecture": "graft copolymer",
         "critical_condition_basis": "critical condition of the corresponding homopolymer",
         "critical_condition_confidence": "explicit",
@@ -51,12 +30,12 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible, while the visible hPS backbone interacts more strongly with the stationary phase and is in LAC mode.",
+        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible",
         "notes": "Experimental study cited in the introduction; specific mobile phase composition not provided in text."
       },
       {
         "analyte_polymer": "hPS-b-dPS",
-        "critical_component": "dPS",
+        "critical_component": "dPS block",
         "architecture": "block copolymer",
         "critical_condition_basis": "critical condition of the corresponding homopolymer",
         "critical_condition_confidence": "explicit",
@@ -74,25 +53,28 @@
         "detector": null,
         "evidence_text": "Chang and coworkers [22] examined the retention behavior of a hPS-b-dPS block copolymer under similar conditions and observed the same interesting retention behavior, namely, a decrease in retention time as the invisible block length increases when the overall retention of the block copolymer is in LAC mode.",
         "notes": "Experimental study cited in the introduction; specific mobile phase composition not provided in text."
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymer",
+        "critical_component": "B side chains",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "critical condition of a homopolymer",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": "250a x 250a x 30a (slit pore)",
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The B side chains are made 'invisible' by setting w(B) to the critical condition of a homopolymer. Our previous simulation studies [23-25] have established that the polymer surface interaction energy at the critical condition, wcc, is -0.18232 for an RW chain and -0.276 for a SAW chain, respectively.",
+        "notes": "Monte Carlo simulation setup described in Section 2. Pore size is defined as a slit pore with dimensions 250a x 250a x 30a."
       }
     ]
-  },
-  "chunk_details": [
-    {
-      "chunk_index": 0,
-      "section": "Part 1",
-      "token_count": 8938,
-      "extraction_success": true,
-      "processing_time": 105.9084324836731,
-      "extracted_count": 2
-    },
-    {
-      "chunk_index": 1,
-      "section": "Part 2",
-      "token_count": 1708,
-      "extraction_success": true,
-      "processing_time": 105.9084324836731,
-      "extracted_count": 0
-    }
-  ]
+  }
 }

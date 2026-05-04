@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source_pdf": "Hiller2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "llama3.3-70b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PS-b-PMMA",
+        "critical_component": "PS block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18 300-5 and 1000-7",
+        "stationary_phase_chemistry": "C18 (reversed-phase)",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "ACN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 and 1000",
+        "column_dimensions": "250 x 4 mm inner diameter",
+        "detector": "UV and 1H NMR",
+        "evidence_text": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA. ... The critical conditions correspond to a mobile phase composition of THF\u2013ACN of 48:52 v/v ... stationary phase: RP-18 Nucleosil 300 \u00fb 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1; ... at ambient temperature (22 8C).",
+        "notes": "PS is chromatographically invisible; PMMA elutes in SEC mode."
+      },
+      {
+        "analyte_polymer": "Blends of PS and PMMA",
+        "critical_component": "PS",
+        "architecture": "blend",
+        "critical_condition_basis": "critical point of adsorption of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18 300-5 and 1000-7",
+        "stationary_phase_chemistry": "C18 (reversed-phase)",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "ACN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 and 1000",
+        "column_dimensions": "250 x 4 mm inner diameter",
+        "detector": "UV and 1H NMR",
+        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. ... stationary phase: RP-18 Nucleosil 300 \u00fb 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1",
+        "notes": "PS elutes at critical retention time (12.7 min); PMMA elutes in SEC mode."
+      }
+    ]
+  }
+}
