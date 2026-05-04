@@ -7,14 +7,15 @@ echo "🚀 Submitting Phase 2 Multi-Model Evaluation..."
 cd /project/wkmrzane/research-assistant/paper-extraction-pipeline
 
 models=(
-    "qwen3.5-27b"
-    "deepseek-r1-32b"
-    "llama3.3-70b"
+    "qwen3.5-27b:1"       # 1 GPU
+    "deepseek-r1-32b:2"   # 2 GPUs
+    "llama3.3-70b:4"      # 4 GPUs
 )
 
-for model in "${models[@]}"; do
-    echo "Submitting job for: $model"
-    sbatch --export=ALL,MODEL=$model run_extraction.slurm
+for entry in "${models[@]}"; do
+    IFS=':' read -r model gpus <<< "$entry"
+    echo "Submitting job for: $model with $gpus GPUs"
+    sbatch --export=ALL,MODEL=$model --gres=gpu:rtx_6000:$gpus run_extraction.slurm
 done
 
 echo "✅ All models submitted. Run 'squeue -u $USER' to monitor progress."

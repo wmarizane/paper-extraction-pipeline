@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "source_pdf": "Banerjee2015.pdf",
+    "extraction_date": "2026-05-04T04:24:49.058575",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "Banerjee2015.pdf",
+      "start_time": "2026-05-04T04:22:20.475774",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 71.47965931892395,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.5379588603973389,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 9417
+        },
+        "llm_extraction": {
+          "time_seconds": 76.56506609916687,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyisobutylene (PIB)",
+        "critical_component": "PIB backbone",
+        "architecture": "Telechelic (diol, monool, non-functional, diallyl, dichloride)",
+        "critical_condition_basis": "THF/methanol 80.5/19.5 (w/w) established as critical solvent composition where elution is independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "Reversed phase C18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "Methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "Refractive Index (RI) detector (Waters 2414) and UV detector (Waters 2996)",
+        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": "RI detector identified as the better concentration detector for quantitative analysis under these conditions. ELS detector also used but noted to have non-linear response."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 6892,
+      "extraction_success": true,
+      "processing_time": 76.54232478141785,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 2525,
+      "extraction_success": true,
+      "processing_time": 76.54232478141785,
+      "extracted_count": 0
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "extraction_date": "2026-05-04T04:45:45.637641",
+    "model": "llama3.3-70b",
+    "pipeline_metrics": {
+      "pdf_name": "Zhu2015.pdf",
+      "start_time": "2026-05-04T04:43:32.767223",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 56.56241798400879,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1477198600769043,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10582
+        },
+        "llm_extraction": {
+          "time_seconds": 76.16013216972351,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "hPS-g-dPS comb-shaped copolymers",
+        "critical_component": "dPS branches",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Chang's experiment on LCCC separation of hPS-g-dPS comb-shaped copolymers",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymer",
+        "critical_component": "B branches",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": "30a",
+        "column_dimensions": "250a × 250a × 30a",
+        "detector": null,
+        "evidence_text": "Monte Carlo simulations of A-g-B graft copolymer",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "hPS-b-dPS block copolymer",
+        "critical_component": "dPS block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Chang's experiment on LCCC separation of hPS-b-dPS block copolymer",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymer",
+        "critical_component": "A backbone",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "When the A backbone is in SEC mode, the presence of B branches near the critical condition leads to an increase in the attraction between the polymer and the pore surfaces",
+        "notes": "Critical condition for A backbone in SEC mode"
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymer",
+        "critical_component": "A backbone",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "When the A backbone is in LAC mode, connecting a B branch to the A backbone increases the entropic repulsion between the polymer and the pore surfaces",
+        "notes": "Critical condition for A backbone in LAC mode"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8841,
+      "extraction_success": true,
+      "processing_time": 76.14530396461487,
+      "extracted_count": 3
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 1741,
+      "extraction_success": true,
+      "processing_time": 76.14530396461487,
+      "extracted_count": 2
+    }
+  ]
+}

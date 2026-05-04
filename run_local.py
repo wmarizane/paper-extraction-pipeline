@@ -162,11 +162,12 @@ class PipelineRunner:
             
             chunk_details.append(chunk_info)
         
+        model_key = self.model_name or settings.llm_model
         output = {
             "metadata": {
                 "source_pdf": self.pdf_name,
                 "extraction_date": datetime.now().isoformat(),
-                "model": settings.llm_model,
+                "model": model_key,
                 "pipeline_metrics": self.metrics
             },
             "summary": {

@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper3.pdf",
+    "extraction_date": "2026-05-04T06:50:33.783120",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper3.pdf",
+      "start_time": "2026-05-04T06:34:20.753415",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 916.8221411705017,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14014077186584473,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 14019
+        },
+        "llm_extraction": {
+          "time_seconds": 56.067253828048706,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "critical_condition_basis": "explicit mention of critical condition for PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "reversed-phase column (LUNA C18)",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "60/40",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "68",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector and UV-visible absorption detector",
+        "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v).",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "explicit mention of two different critical conditions for PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "reversed-phase column (LUNA C18)",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "37",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector and UV-visible absorption detector",
+        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v)), which will be detailed later.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "explicit mention of two different critical conditions for PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "reversed-phase column (LUNA C18)",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "54",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector and UV-visible absorption detector",
+        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v)), which will be detailed later.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "60/40",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "68",
+        "evidence_text": "The critical condition was achieved with a mixture of acetonitrile and water (60/40, v/v) at a column temperature of 68 °C."
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "47/53",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "37",
+        "evidence_text": "The critical condition in Figure 3 was obtained with an ACN/water mixture (47/53, v/v) at 37 °C column temperature."
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "mobile_phase_solvent_1": "acetonitrile",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "54/46",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "54",
+        "evidence_text": "For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H2O = 54:46, v/v) and raising the temperature (54 °C) as compared to Figure 3."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 7901,
+      "extraction_success": true,
+      "processing_time": 56.05368900299072,
+      "extracted_count": 3
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 6118,
+      "extraction_success": true,
+      "processing_time": 56.05368900299072,
+      "extracted_count": 3
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "source_pdf": "Hiller2007.pdf",
+    "extraction_date": "2026-05-04T04:18:34.372778",
+    "model": "llama3.3-70b",
+    "pipeline_metrics": {
+      "pdf_name": "Hiller2007.pdf",
+      "start_time": "2026-05-04T04:17:12.219863",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 18.216326236724854,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.16115450859069824,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10291
+        },
+        "llm_extraction": {
+          "time_seconds": 63.77525568008423,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PS-b-PMMA",
+        "critical_component": "PS",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "RP-18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "ACN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 4 mm",
+        "detector": "NMR",
+        "evidence_text": "Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PS-b-PMMA",
+        "critical_component": "PS",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300 + 1000",
+        "stationary_phase_chemistry": "RP-18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "ACN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "NMR",
+        "evidence_text": "Figure 3 shows the HPLC-NMR on-flow run of a blend of PS, PMMA and the PS-b-PMMA block copolymer sample 5. The on-flow run is presented as a contour plot, which is processed as a two-dimensional NMR spectrum.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PS-b-PMMA",
+        "critical_component": "PS block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "chromatographic conditions that correspond to the critical point of the PS block",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "NMR",
+        "evidence_text": "It was found that the PS-b-PMMA copolymers are chemically heterogeneous and contain fractions of PS homopolymer as well as copolymer fractions of different compositions. The molar masses of the PMMA blocks were determined by using a calibration procedure that is based on on-flow experiments.",
+        "notes": "HPLC-NMR is used for the analysis of block copolymers"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8886,
+      "extraction_success": true,
+      "processing_time": 63.76025056838989,
+      "extracted_count": 2
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 1405,
+      "extraction_success": true,
+      "processing_time": 63.76025056838989,
+      "extracted_count": 1
+    }
+  ]
+}

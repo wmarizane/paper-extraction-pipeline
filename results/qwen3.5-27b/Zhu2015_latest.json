@@ -1,26 +1,26 @@
 {
   "metadata": {
     "source_pdf": "Zhu2015.pdf",
-    "extraction_date": "2026-04-27T15:38:11.048426",
+    "extraction_date": "2026-05-04T04:43:04.044127",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "Zhu2015.pdf",
-      "start_time": "2026-04-27T15:36:15.247401",
+      "start_time": "2026-05-04T04:40:27.762469",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 9.745797634124756,
+          "time_seconds": 53.62685298919678,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12446427345275879,
+          "time_seconds": 0.17417240142822266,
           "success": true,
           "num_chunks": 2,
-          "total_tokens": 10646
+          "total_tokens": 10582
         },
         "llm_extraction": {
-          "time_seconds": 105.93065237998962,
+          "time_seconds": 102.48053193092346,
           "success": true
         }
       },
@@ -35,7 +35,7 @@
     "conditions": [
       {
         "analyte_polymer": "hPS-g-dPS",
-        "critical_component": "dPS",
+        "critical_component": "dPS branches",
         "architecture": "graft copolymer",
         "critical_condition_basis": "critical condition of the corresponding homopolymer",
         "critical_condition_confidence": "explicit",
@@ -51,12 +51,12 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible, while the visible hPS backbone interacts more strongly with the stationary phase and is in LAC mode.",
+        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible",
         "notes": "Experimental study cited in the introduction; specific mobile phase composition not provided in text."
       },
       {
         "analyte_polymer": "hPS-b-dPS",
-        "critical_component": "dPS",
+        "critical_component": "dPS block",
         "architecture": "block copolymer",
         "critical_condition_basis": "critical condition of the corresponding homopolymer",
         "critical_condition_confidence": "explicit",
@@ -81,17 +81,17 @@
     {
       "chunk_index": 0,
       "section": "Part 1",
-      "token_count": 8938,
+      "token_count": 8841,
       "extraction_success": true,
-      "processing_time": 105.9084324836731,
+      "processing_time": 102.45712018013,
       "extracted_count": 2
     },
     {
       "chunk_index": 1,
       "section": "Part 2",
-      "token_count": 1708,
+      "token_count": 1741,
       "extraction_success": true,
-      "processing_time": 105.9084324836731,
+      "processing_time": 102.45712018013,
       "extracted_count": 0
     }
   ]

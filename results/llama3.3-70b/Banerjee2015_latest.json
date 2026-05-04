@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "source_pdf": "Banerjee2015.pdf",
+    "extraction_date": "2026-05-04T04:03:36.367152",
+    "model": "llama3.3-70b",
+    "pipeline_metrics": {
+      "pdf_name": "Banerjee2015.pdf",
+      "start_time": "2026-05-04T04:01:39.979244",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 21.392813682556152,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.5476396083831787,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 9488
+        },
+        "llm_extraction": {
+          "time_seconds": 94.44728755950928,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PIB-diol",
+        "critical_component": "hydroxyl end groups",
+        "architecture": "telechelic",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI detector",
+        "evidence_text": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PIB-diol",
+        "critical_component": "hydroxyl end groups",
+        "architecture": "telechelic",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ELS detector",
+        "evidence_text": "The same THF/methanol 80.5/19.5 (w/w) composition has already been employed by Mueller and coworkers for the LCCC analysis of PIB block copolymers.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Reduced sample recovery in liquid chromatography at critical adsorption point of high molar mass polystyrene",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "poly(l-lactide)-block-poly(ethylene oxide)-block-poly(l-lactide)",
+        "critical_component": "poly(l-lactide)",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "liquid chromatography at critical condition",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Characterization of poly(l-lactide)-block-poly(ethylene oxide)-block-poly(l-lactide) triblock copolymer by liquid chromatography at the critical condition",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "polyisobutylene",
+        "critical_component": "polyisobutylene",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "critical condition",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Liquid chromatography at critical conditions of polyisobutylene",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "ring polystyrene",
+        "critical_component": "ring polystyrene",
+        "architecture": "cyclic",
+        "critical_condition_basis": "liquid chromatography at the critical condition",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Structural characterization of ring polystyrene by liquid chromatography at the critical condition and MALDI-TOF mass spectrometry",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 6934,
+      "extraction_success": true,
+      "processing_time": 94.43201017379761,
+      "extracted_count": 2
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 2554,
+      "extraction_success": true,
+      "processing_time": 94.43201017379761,
+      "extracted_count": 4
+    }
+  ]
+}

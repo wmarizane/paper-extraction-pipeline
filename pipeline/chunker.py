@@ -47,16 +47,63 @@ class TextChunker:
         tokens = self.encoder.encode(text)
         return len(tokens)
     
+    def _recursive_split(self, text: str, max_tokens: int, level: int = 1) -> List[str]:
+        """Recursively splits text until all chunks are <= max_tokens."""
+        if self.count_tokens(text) <= max_tokens:
+            return [text]
+            
+        # Define split strategies by level
+        if level == 1:
+            delimiter = "\n## "
+        elif level == 2:
+            delimiter = "\n### "
+        elif level == 3:
+            delimiter = "\n\n"
+        else:
+            # Level 4: Hard split by characters as a last resort
+            hard_limit = max_tokens * 3  # safe approximation
+            return [text[i:i+hard_limit] for i in range(0, len(text), hard_limit)]
+            
+        sections = text.split(delimiter)
+        result_chunks = []
+        current_chunk = ""
+        
+        for i, section in enumerate(sections):
+            # Re-add delimiter if not first
+            if i > 0 and level in [1, 2]:
+                section = delimiter + section
+            elif i > 0 and level == 3:
+                section = "\n\n" + section
+                
+            section_tokens = self.count_tokens(section)
+            
+            if section_tokens > max_tokens:
+                # Save current if exists
+                if current_chunk:
+                    result_chunks.append(current_chunk)
+                    current_chunk = ""
+                # Recursively split this oversized section
+                result_chunks.extend(self._recursive_split(section, max_tokens, level + 1))
+            else:
+                if self.count_tokens(current_chunk + section) > max_tokens:
+                    result_chunks.append(current_chunk)
+                    current_chunk = section
+                else:
+                    current_chunk += section
+                    
+        if current_chunk:
+            result_chunks.append(current_chunk)
+            
+        return result_chunks
+
     def process_markdown(self, md_content: str, source_pdf: str) -> List[TextChunk]:
         """
         Main entry point: return the entire markdown as one chunk if it fits.
-        If it exceeds the context window, intelligently split by Markdown headers.
+        If it exceeds the context window, use Recursive Splitting and Contextual Retrieval.
         """
         token_count = self.count_tokens(md_content)
         
-        # Max tokens allowed for input. We cap this at 9000 tokens because the 
-        # community AWQ quantization degrades and hallucinates EOS tokens on 
-        # contexts > 11k tokens.
+        # Max tokens allowed for input (cap at 9000 to prevent OOM/hallucinations)
         max_input_tokens = min(9000, settings.vllm_max_model_len - 2048)
         
         # Fast path: fits in one chunk
@@ -69,50 +116,33 @@ class TextChunker:
                 source_pdf=source_pdf
             )]
             
-        # Fallback path: document is too large, split by main Markdown headers
-        print(f"⚠️ Document too large ({token_count} > {max_input_tokens}). Using smart fallback chunking.")
+        # Fallback path: Document too large. 
+        print(f"⚠️ Document too large ({token_count} > {max_input_tokens}). Using Contextual Map-Reduce chunking.")
+        
+        # Extract Global Anchor (First 500 tokens, typically the Abstract)
+        first_section = md_content.split("\n## ")[0]
+        anchor_tokens = self.encoder.encode(first_section)[:500]
+        global_anchor = self.encoder.decode(anchor_tokens)
+        
+        # Determine remaining budget for the body
+        body_max_tokens = max_input_tokens - self.count_tokens(global_anchor) - 50 # 50 for formatting buffer
+        
+        # Recursively split the document
+        raw_chunks = self._recursive_split(md_content, body_max_tokens)
         
         chunks = []
-        current_text = ""
-        current_tokens = 0
-        chunk_idx = 0
-        
-        # Split by H2 headers (standard PyMuPDF4LLM section dividers)
-        sections = md_content.split("\n## ")
-        
-        for i, section in enumerate(sections):
-            # Re-add the header prefix if it's not the very first split
-            if i > 0:
-                section = "\n## " + section
-                
-            section_tokens = self.count_tokens(section)
-            
-            # If a single section is too big, we just have to append it and hope it doesn't break vLLM too badly
-            # (or we could further split by '\n### ' but usually H2 is fine)
-            if current_tokens + section_tokens > max_input_tokens and current_text:
-                # Save current chunk
-                chunks.append(TextChunk(
-                    text=current_text,
-                    section=f"Part {chunk_idx + 1}",
-                    chunk_index=chunk_idx,
-                    token_count=current_tokens,
-                    source_pdf=source_pdf
-                ))
-                # Start new chunk
-                chunk_idx += 1
-                current_text = section
-                current_tokens = section_tokens
+        for i, raw_text in enumerate(raw_chunks):
+            # Contextual Retrieval: Prepend the global anchor to subsequent chunks
+            if i == 0 or global_anchor in raw_text:
+                final_text = raw_text
             else:
-                current_text += section
-                current_tokens += section_tokens
+                final_text = f"--- GLOBAL CONTEXT (ABSTRACT/INTRO) ---\n{global_anchor}\n--- END GLOBAL CONTEXT ---\n\n{raw_text}"
                 
-        # Append the final chunk
-        if current_text:
             chunks.append(TextChunk(
-                text=current_text,
-                section=f"Part {chunk_idx + 1}",
-                chunk_index=chunk_idx,
-                token_count=current_tokens,
+                text=final_text,
+                section=f"Part {i + 1}",
+                chunk_index=i,
+                token_count=self.count_tokens(final_text),
                 source_pdf=source_pdf
             ))
             

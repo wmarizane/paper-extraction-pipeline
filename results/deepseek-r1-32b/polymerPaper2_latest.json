@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper2.pdf",
+    "extraction_date": "2026-05-04T06:33:29.373345",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper2.pdf",
+      "start_time": "2026-05-04T06:32:17.168269",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 18.944140911102295,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.15689611434936523,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 9843
+        },
+        "llm_extraction": {
+          "time_seconds": 53.10388970375061,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "EO–PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "CAP for EO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Diol column",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "mobile_phase_solvent_1": "acetone",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "78:12",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A˚",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+        "notes": "Used for separating poloxamers by analyzing the PO block under critical conditions for EO."
+      },
+      {
+        "analyte_polymer": "EO–PO block copolymers",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "CAP for PO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "mobile_phase_solvent_1": "acetone",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A˚",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "At a composition close to the CAP for PO, the EO unit clearly elutes in SEC mode.",
+        "notes": "Used for separating poloxamers by analyzing the EO block under critical conditions for PO."
+      },
+      {
+        "analyte_polymer": "EO–PO block copolymers",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "CAP for PO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS-PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "mobile_phase_solvent_1": "acetone",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A˚",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+        "notes": "Used for separating poloxamers by analyzing the EO block under critical conditions for PO."
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "abstract",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "reference [23]",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex K-803",
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "30",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": null,
+        "column_dimensions": "30 cm × 7.8 mm",
+        "detector": "UV",
+        "evidence_text": "poloxamers were analyzed under critical conditions using Shodex K-803 column with THF/water (90:10 v/v) at 30°C, flow rate 1.0 mL/min, UV detection.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "reference [24]",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex K-805",
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "water",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "30",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": null,
+        "column_dimensions": "30 cm × 7.8 mm",
+        "detector": "UV",
+        "evidence_text": "poloxamers were analyzed under critical conditions using Shodex K-805 column with THF/water (80:20 v/v) at 30°C, flow rate 1.0 mL/min, UV detection.",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8121,
+      "extraction_success": true,
+      "processing_time": 53.091062784194946,
+      "extracted_count": 3
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 1722,
+      "extraction_success": true,
+      "processing_time": 53.091062784194946,
+      "extracted_count": 3
+    }
+  ]
+}

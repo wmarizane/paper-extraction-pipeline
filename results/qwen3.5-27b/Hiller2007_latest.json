@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "source_pdf": "Hiller2007.pdf",
+    "extraction_date": "2026-05-04T04:29:00.776843",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "Hiller2007.pdf",
+      "start_time": "2026-05-04T04:26:51.570307",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 57.78085279464722,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1707439422607422,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10445
+        },
+        "llm_extraction": {
+          "time_seconds": 71.25482392311096,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PS-b-PMMA and Blends of PS and PMMA",
+        "critical_component": "PS",
+        "architecture": "block copolymer and blend",
+        "critical_condition_basis": "critical point of adsorption of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey-Nagel Nucleosil C18 300-5 and 1000-7",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "ACN",
+        "mobile_phase_solvent_2": "THF",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 and 1000",
+        "column_dimensions": "250 x 4 mm",
+        "detector": "UV detector and 400 MHz NMR",
+        "evidence_text": "Blends and copolymers of PS and PMMA were analysed by LC coupled to[1] H NMR at the critical point of adsorption. The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+        "notes": "The text mentions the use of ACN and THF as mobile phase but does not specify the exact ratio required to achieve the critical condition for PS."
+      },
+      {
+        "analyte_polymer": "PS-b-PMMA copolymers and blends of PS and PMMA",
+        "critical_component": "PS block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-18",
+        "stationary_phase_chemistry": "C18 (reversed stationary phase)",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "ACN",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "HPLC-NMR (400 MHz)",
+        "evidence_text": "Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v... These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers.",
+        "notes": "PMMA elutes in SEC mode under these conditions."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 1953,
+      "extraction_success": true,
+      "processing_time": 71.2314088344574,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 8492,
+      "extraction_success": true,
+      "processing_time": 71.2314088344574,
+      "extracted_count": 1
+    }
+  ]
+}

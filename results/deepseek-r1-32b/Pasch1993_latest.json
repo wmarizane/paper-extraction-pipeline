@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "source_pdf": "Pasch1993.pdf",
+    "extraction_date": "2026-05-04T06:27:07.608565",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "Pasch1993.pdf",
+      "start_time": "2026-05-04T06:25:36.002729",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 37.396146059036255,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11081171035766602,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6481
+        },
+        "llm_extraction": {
+          "time_seconds": 54.09873723983765,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvent_1": "methyl ethyl ketone (MEK)",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "200x4mm",
+        "detector": "refractive index detector",
+        "evidence_text": "Liquid chromatography at the critical point of adsorption was carried out on a modular h.p.Lc. system... The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane.",
+        "notes": "Setup used for analyzing the polystyrene block in the block copolymer."
+      },
+      {
+        "analyte_polymer": "poly(methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": null,
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvent_1": "methyl ethyl ketone (MEK)",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "200x4mm",
+        "detector": "refractive index detector",
+        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane.",
+        "notes": "Critical conditions for PMMA analysis."
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrospher Si-300 and Si-1000",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvent_1": "methyl ethyl ketone (MEK)",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ultraviolet/visible photometer (280 nm)",
+        "evidence_text": "For this column system... the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane.",
+        "notes": "Setup used for analyzing the polystyrene block with UV detection."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6481,
+      "extraction_success": true,
+      "processing_time": 54.086028814315796,
+      "extracted_count": 3
+    }
+  ]
+}

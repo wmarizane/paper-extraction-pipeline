@@ -78,15 +78,15 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
     ),
 
     "deepseek-r1-32b": ModelConfig(
-        hf_id="hugging-quants/DeepSeek-R1-Distill-Qwen-32B-AWQ",
+        hf_id="deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
         short_name="deepseek-r1-32b",
-        quantization="awq",
-        vram_gb=18,
-        min_gpu_vram_gb=40,
+        quantization="bf16",
+        vram_gb=64,
+        min_gpu_vram_gb=80,
         max_model_len=16384,
         has_thinking_mode=True,
-        vllm_kwargs={"quantization": "awq"},
-        description="DeepSeek R1 distilled from Qwen2.5-32B, AWQ 4-bit — fits RTX 6000",
+        vllm_kwargs={"tensor_parallel_size": 2},
+        description="DeepSeek R1 distilled from Qwen2.5-32B, BF16 — needs 2 GPUs (TP=2)",
     ),
 
     # --- LLaMA ---
@@ -103,15 +103,15 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
     ),
 
     "llama3.3-70b": ModelConfig(
-        hf_id="casperhansen/llama-3.3-70b-instruct-awq",
+        hf_id="meta-llama/Llama-3.3-70B-Instruct",
         short_name="llama3.3-70b",
-        quantization="awq",
-        vram_gb=36,
-        min_gpu_vram_gb=48,
+        quantization="bf16",
+        vram_gb=140,
+        min_gpu_vram_gb=160,
         max_model_len=16384,
         has_thinking_mode=False,
-        vllm_kwargs={"quantization": "awq"},
-        description="LLaMA 3.3 70B Instruct, AWQ 4-bit — SOTA, fits RTX 6000",
+        vllm_kwargs={"tensor_parallel_size": 4},
+        description="LLaMA 3.3 70B Instruct, BF16 — SOTA, needs 4 GPUs (TP=4)",
     ),
 }
 

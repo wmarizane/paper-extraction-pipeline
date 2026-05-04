@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper1.pdf",
+    "extraction_date": "2026-05-04T04:46:34.459152",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper1.pdf",
+      "start_time": "2026-05-04T04:44:48.996726",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 29.721588850021362,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.15256357192993164,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10318
+        },
+        "llm_extraction": {
+          "time_seconds": 75.58817410469055,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "copolymers containing predominantly 1,4- and 3,4-isoprene units",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "reversed phase C18 (RP-18)",
+        "mobile_phase_solvent_1": "butanone",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "92/8",
+        "mobile_phase_ratio_units": "vol %",
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100-5, 300-5, and 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "notes": "Samples contain ~94 mol % 1,4-isoprene and ~6 mol % 3,4-isoprene. 3,4-PI elutes in SEC mode under these conditions."
+      },
+      {
+        "analyte_polymer": "polyisoprenes",
+        "critical_component": "1,4-PI",
+        "architecture": "copolymers consisting of 1,2-PI, 1,4-PI and 3,4-PI",
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "on-flow NMR",
+        "evidence_text": "It was possible to separate blends of copolymers consisting of 1,2-PI, 1,4-PI and 3,4-PI predominantly of 3,4- and 1,4-isoprene units by using critical conditions of 1,4-PI. Critical conditions of 1,4-PI were established such that polymers containing predominantly 3,4-PI elute in the size exclusion mode.",
+        "notes": "The text mentions the use of critical conditions for 1,4-PI to separate blends, but does not provide specific experimental parameters (solvents, ratios, temperature, column type)."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8200,
+      "extraction_success": true,
+      "processing_time": 75.56528449058533,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 2118,
+      "extraction_success": true,
+      "processing_time": 75.56528449058533,
+      "extracted_count": 1
+    }
+  ]
+}
