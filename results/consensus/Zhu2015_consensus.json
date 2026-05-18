@@ -4,77 +4,13 @@
     "model": "deepseek-r1-32b-consensus",
     "inputs": [
       "qwen3.5-27b",
-      "llama3.3-70b"
+      "mistral-small-24b"
     ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "hPS-g-dPS",
-        "critical_component": "dPS side chains",
-        "architecture": "graft copolymer",
-        "critical_condition_basis": "critical condition of the corresponding homopolymer",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvent_1": null,
-        "mobile_phase_solvent_2": null,
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible",
-        "notes": "Experimental study cited in the introduction; specific mobile phase composition not provided in text."
-      },
-      {
-        "analyte_polymer": "hPS-b-dPS",
-        "critical_component": "dPS block",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical condition of the corresponding homopolymer",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvent_1": null,
-        "mobile_phase_solvent_2": null,
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "Chang and coworkers [22] examined the retention behavior of a hPS-b-dPS block copolymer under similar conditions and observed the same interesting retention behavior, namely, a decrease in retention time as the invisible block length increases when the overall retention of the block copolymer is in LAC mode.",
-        "notes": "Experimental study cited in the introduction; specific mobile phase composition not provided in text."
-      },
-      {
-        "analyte_polymer": "A-g-B graft copolymer",
-        "critical_component": "B side chains",
-        "architecture": "graft copolymer",
-        "critical_condition_basis": "critical condition of a homopolymer",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvent_1": null,
-        "mobile_phase_solvent_2": null,
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": "250a x 250a x 30a (slit pore)",
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "The B side chains are made 'invisible' by setting w(B) to the critical condition of a homopolymer. Our previous simulation studies [23-25] have established that the polymer surface interaction energy at the critical condition, wcc, is -0.18232 for an RW chain and -0.276 for a SAW chain, respectively.",
-        "notes": "Monte Carlo simulation setup described in Section 2. Pore size is defined as a slit pore with dimensions 250a x 250a x 30a."
-      }
-    ]
+    "conditions": []
   }
 }

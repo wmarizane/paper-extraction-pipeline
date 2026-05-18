@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper1.pdf",
+    "extraction_date": "2026-05-04T06:31:25.947956",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper1.pdf",
+      "start_time": "2026-05-04T06:30:23.027463",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 29.570064306259155,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14861822128295898,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10318
+        },
+        "llm_extraction": {
+          "time_seconds": 33.20165276527405,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyisoprene",
+        "critical_component": "1,4-PI",
+        "architecture": "copolymer",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "reversed phase",
+        "mobile_phase_solvent_1": "butanone",
+        "mobile_phase_solvent_2": "cyclohexane",
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol%",
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL/min",
+        "detector": "[1]H NMR",
+        "evidence_text": "The LCCC experiments were performed with an Agilent 1100 HPLC system... The mobile phase was a mixture of butanone and cyclohexane. All LCCC experiments were performed with [1]H NMR as the detector. ... Figure 1 shows the elution behavior of the 1,4-PI samples as a function of eluent composition. It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C.",
+        "notes": "Setup used for separating blends of 1,4-PI and 3,4-PI under near-critical conditions."
+      },
+      {
+        "analyte_polymer": "polyisoprenes",
+        "critical_component": "1,4-PI",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "It was possible to separate blends of copolymers consisting predominantly of 3,4- and 1,4-isoprene units by using critical conditions of 1,4-PI. Critical conditions of 1,4-PI were established such that polymers containing predominantly 3,4-PI elute in the size exclusion mode.",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 8200,
+      "extraction_success": true,
+      "processing_time": 33.18839120864868,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 2118,
+      "extraction_success": true,
+      "processing_time": 33.18839120864868,
+      "extracted_count": 1
+    }
+  ]
+}

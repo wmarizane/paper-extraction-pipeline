@@ -4,7 +4,7 @@
     "model": "deepseek-r1-32b-consensus",
     "inputs": [
       "qwen3.5-27b",
-      "llama3.3-70b"
+      "mistral-small-24b"
     ]
   },
   "summary": {
@@ -13,25 +13,32 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polyisoprene (1,4-PI)",
-        "critical_component": "1,4-PI",
-        "architecture": "Copolymer (predominantly 1,4- and 3,4-isoprene units)",
-        "critical_condition_basis": "Solvent composition (butanone/cyclohexane mixture) leading to elution independent of molar mass",
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "copolymers containing predominantly 1,4-isoprene units",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "Reversed phase C18 (RP-18)",
-        "mobile_phase_solvent_1": "Butanone",
-        "mobile_phase_solvent_2": "Cyclohexane",
-        "mobile_phase_other_components": null,
-        "mobile_phase_ratio": "92:8",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92/8",
         "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
         "temperature_celsius": "29",
-        "flow_rate": "0.5 mL/min",
+        "flow_rate": "0.5 mL min-1",
         "pore_size": "100-5, 300-5, 1000-7",
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
         "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
-        "notes": "Samples contain ~94 mol% 1,4-PI and ~6 mol% 3,4-PI. Critical conditions established for the 1,4-isoprene moiety."
+        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol %). The text states these are 'near-critical conditions' but explicitly describes the molar mass independence characteristic of LCCC."
       }
     ]
   }
