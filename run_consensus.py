@@ -23,7 +23,7 @@ def main():
     consensus_dir.mkdir(parents=True, exist_ok=True)
     
     qwen_dir = results_dir / "qwen3.5-27b"
-    llama_dir = results_dir / "llama3.3-70b"
+    llama_dir = results_dir / "mistral-small-24b"
     
     if not qwen_dir.exists() or not llama_dir.exists():
         print("Missing required model results directories.")
@@ -62,7 +62,7 @@ def main():
                 "metadata": {
                     "source_pdf": f"{paper}.pdf",
                     "model": "deepseek-r1-32b-consensus",
-                    "inputs": ["qwen3.5-27b", "llama3.3-70b"]
+                    "inputs": ["qwen3.5-27b", "mistral-small-24b"]
                 },
                 "summary": {
                     "total_conditions": len(final_conds)

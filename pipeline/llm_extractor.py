@@ -115,30 +115,37 @@ IMPORTANT INTERPRETATION RULES:
 - Distinguish between the full analyte polymer and the specific component/species at critical condition.
 - If a block copolymer is analyzed under critical conditions for one block, record the analyte polymer and also the specific critical component.
 - **DEDUPLICATION**: If the exact same experimental setup is mentioned multiple times in the text (e.g. in the abstract, methods, and conclusion), merge them into a single entry. Do not create duplicate records for identical setups.
+- **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
+- **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers (e.g., PS/PMMA blends and PS-b-PMMA), create ONE critical condition record and list all the polymers in the analyte_polymer field, separated by commas.
+- **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
 - Use null for missing information.
 - Preserve reported wording where exact normalization is not possible.
 - Do not guess units or compositions.
 - If evidence is suggestive but not explicit, mark confidence accordingly.
 
 OUTPUT FORMAT:
-Return ONLY valid JSON matching this schema. No markdown. No explanations. Start with {{{{}}.
+Return ONLY valid JSON matching this schema. No markdown. No explanations. Start with {{.
 
 JSON SCHEMA:
-{{{{
+{{
   "extracted_conditions": [
-    {{{{
-      "analyte_polymer": "string or null",
+    {{
+      "analyte_polymer": "string (comma-separated if multiple) or null",
       "critical_component": "string or null",
       "architecture": "string or null",
       "critical_condition_basis": "string or null",
       "critical_condition_confidence": "explicit | strong_inference | unclear",
       "column_name": "string or null",
       "stationary_phase_chemistry": "string or null",
-      "mobile_phase_solvent_1": "string or null",
-      "mobile_phase_solvent_2": "string or null",
-      "mobile_phase_other_components": "string or null",
+      "mobile_phase_solvents": "array of strings or null",
       "mobile_phase_ratio": "string or null",
       "mobile_phase_ratio_units": "string or null",
+      "aqueous_parameters": {{
+        "pH": "string or null",
+        "salt_added": "boolean",
+        "salt_type": "string or null",
+        "salt_concentration": "string or null"
+      }},
       "temperature_celsius": "string or null",
       "flow_rate": "string or null",
       "pore_size": "string or null",
@@ -146,9 +153,9 @@ JSON SCHEMA:
       "detector": "string or null",
       "evidence_text": "string or null",
       "notes": "string or null"
-    }}}}
+    }}
   ]
-}}}}
+}}
 """
         return prompt
 

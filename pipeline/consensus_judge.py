@@ -60,24 +60,31 @@ INSTRUCTIONS:
 3. Identify and merge duplicates into a single comprehensive record.
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
-6. Output ONLY valid JSON matching the 19-field LCCC schema.
+6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors.
+7. **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers, merge them into ONE record and list all polymers in `analyte_polymer` separated by commas.
+8. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
+9. Output ONLY valid JSON matching the schema below.
 
 JSON SCHEMA:
 {{
   "extracted_conditions": [
     {{
-      "analyte_polymer": "string or null",
+      "analyte_polymer": "string (comma-separated if multiple) or null",
       "critical_component": "string or null",
       "architecture": "string or null",
       "critical_condition_basis": "string or null",
       "critical_condition_confidence": "explicit | strong_inference | unclear",
       "column_name": "string or null",
       "stationary_phase_chemistry": "string or null",
-      "mobile_phase_solvent_1": "string or null",
-      "mobile_phase_solvent_2": "string or null",
-      "mobile_phase_other_components": "string or null",
+      "mobile_phase_solvents": "array of strings or null",
       "mobile_phase_ratio": "string or null",
       "mobile_phase_ratio_units": "string or null",
+      "aqueous_parameters": {{
+        "pH": "string or null",
+        "salt_added": "boolean",
+        "salt_type": "string or null",
+        "salt_concentration": "string or null"
+      }},
       "temperature_celsius": "string or null",
       "flow_rate": "string or null",
       "pore_size": "string or null",

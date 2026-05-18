@@ -67,6 +67,10 @@ echo "================================"
 
 export PYTHONPATH=.
 
+# Offline mode flags
+export HF_HUB_OFFLINE=1
+export TIKTOKEN_CACHE_DIR=/project/wkmrzane/.cache/tiktoken
+
 # Build model flag
 MODEL_FLAG=""
 if [ -n "${MODEL:-}" ]; then

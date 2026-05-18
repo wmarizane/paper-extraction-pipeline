@@ -102,16 +102,16 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         description="LLaMA 3.1 8B Instruct, BF16 — baseline model",
     ),
 
-    "llama3.3-70b": ModelConfig(
-        hf_id="meta-llama/Llama-3.3-70B-Instruct",
-        short_name="llama3.3-70b",
+    "mistral-small-24b": ModelConfig(
+        hf_id="mistralai/Mistral-Small-24B-Instruct-2501",
+        short_name="mistral-small-24b",
         quantization="bf16",
-        vram_gb=140,
-        min_gpu_vram_gb=160,
+        vram_gb=48,
+        min_gpu_vram_gb=80,
         max_model_len=32768,
         has_thinking_mode=False,
-        vllm_kwargs={"tensor_parallel_size": 4},
-        description="LLaMA 3.3 70B Instruct, BF16 — SOTA, needs 4 GPUs (TP=4)",
+        vllm_kwargs={"tensor_parallel_size": 2},
+        description="Mistral Small 24B Instruct, BF16 — strict schema adherence, 2 GPUs (TP=2)",
     ),
 }
 
