@@ -181,3 +181,40 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                     pass
         
         raise ValueError("DeepSeek failed to return valid JSON.")
+
+    def run_bidirectional_consensus(self, qwen_data: List[Dict], llama_data: List[Dict]) -> Dict[str, Any]:
+        logger.info("Running Bidirectional Consensus (Swap and Intersect)...")
+        # Run A: Qwen -> Mistral
+        logger.info("Run A (Qwen -> Mistral)")
+        out_a = self.run_consensus(qwen_data, llama_data)
+        
+        # Run B: Mistral -> Qwen
+        logger.info("Run B (Mistral -> Qwen)")
+        out_b = self.run_consensus(llama_data, qwen_data)
+        
+        conds_a = out_a.get("final_consensus", {}).get("extracted_conditions", [])
+        conds_b = out_b.get("final_consensus", {}).get("extracted_conditions", [])
+        
+        # Intersect identically matching conditions
+        str_a = {json.dumps(c, sort_keys=True) for c in conds_a}
+        str_b = {json.dumps(c, sort_keys=True) for c in conds_b}
+        
+        intersected_strs = str_a.intersection(str_b)
+        intersected_conds = [json.loads(s) for s in intersected_strs]
+        
+        requires_retry = out_a.get("requires_retry", False) or out_b.get("requires_retry", False)
+        fb_mistral = out_a.get("feedback_for_models", {}).get("mistral-small-24b") or out_b.get("feedback_for_models", {}).get("mistral-small-24b")
+        fb_qwen = out_a.get("feedback_for_models", {}).get("qwen3.5-27b") or out_b.get("feedback_for_models", {}).get("qwen3.5-27b")
+        
+        logger.info(f"Bidirectional intersection complete: {len(intersected_conds)} conditions retained from {len(conds_a)} (A) and {len(conds_b)} (B).")
+        
+        return {
+            "requires_retry": requires_retry,
+            "feedback_for_models": {
+                "mistral-small-24b": fb_mistral,
+                "qwen3.5-27b": fb_qwen
+            },
+            "final_consensus": {
+                "extracted_conditions": intersected_conds
+            }
+        }

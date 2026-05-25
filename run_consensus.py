@@ -52,7 +52,7 @@ def main():
         print(f"Loaded {len(qwen_conds)} conditions from Qwen, {len(llama_conds)} from LLaMA.")
         
         try:
-            final_data = judge.run_consensus(qwen_conds, llama_conds)
+            final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
             
             # Phase 2 Feedback Loop Orchestration (Max 1 Retry)
             if final_data.get("requires_retry"):
@@ -81,7 +81,7 @@ def main():
                 llama_conds = load_json(llama_file)
                 
                 # Run consensus again (2nd pass, no further retries)
-                final_data = judge.run_consensus(qwen_conds, llama_conds)
+                final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
             
             final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
             print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")

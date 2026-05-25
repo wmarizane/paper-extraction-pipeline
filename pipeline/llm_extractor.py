@@ -57,14 +57,20 @@ EXTRACTION_SCHEMA = {
                     "detector": {"type": ["string", "null"]},
                     "evidence_text": {"type": ["string", "null"]},
                     "notes": {"type": ["string", "null"]},
-                    "paper_doi": {"type": ["string", "null"]}
+                    "paper_doi": {"type": ["string", "null"]},
+                    "corresponding_author_name": {"type": ["string", "null"]},
+                    "corresponding_email_address": {"type": ["string", "null"]},
+                    "physical_address": {"type": ["string", "null"]},
+                    "publication_year": {"type": ["string", "null"]}
                 },
                 "required": [
                     "analyte_polymer", "critical_component", "architecture", "critical_condition_basis",
                     "critical_condition_confidence", "column_name", "stationary_phase_chemistry",
                     "mobile_phase_solvents", "mobile_phase_ratio", "mobile_phase_ratio_units",
                     "aqueous_parameters", "temperature_celsius", "flow_rate", "pore_size",
-                    "column_dimensions", "detector", "evidence_text", "notes", "paper_doi"
+                    "column_dimensions", "detector", "evidence_text", "notes", "paper_doi",
+                    "corresponding_author_name", "corresponding_email_address", "physical_address",
+                    "publication_year"
                 ]
             }
         }
@@ -183,6 +189,7 @@ IMPORTANT INTERPRETATION RULES:
 - **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
 - **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers (e.g., PS/PMMA blends and PS-b-PMMA), create ONE critical condition record and list all the polymers in the analyte_polymer field, separated by commas.
 - **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
+- **END-GROUPS**: If different end-groups on the same polymer architecture result in different critical conditions, extract them as separate entries and specify the end-group in the analyte_polymer or architecture field.
 - Use null for missing information.
 - Preserve reported wording where exact normalization is not possible.
 - Do not guess units or compositions.
@@ -218,7 +225,11 @@ JSON SCHEMA:
       "detector": "string or null",
       "evidence_text": "string or null",
       "notes": "string or null",
-      "paper_doi": "string or null"
+      "paper_doi": "string or null",
+      "corresponding_author_name": "string or null",
+      "corresponding_email_address": "string or null",
+      "physical_address": "string or null",
+      "publication_year": "string or null"
     }}
   ]
 }}
