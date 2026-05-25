@@ -28,16 +28,17 @@ from pipeline.llm_extractor import LLMExtractor
 class PipelineRunner:
     """Orchestrates the end-to-end extraction pipeline."""
     
-    def __init__(self, pdf_path: str, model_name: str = None):
+    def __init__(self, pdf_path: str, model_name: str = None, feedback: str = None):
         self.pdf_path = Path(pdf_path)
         self.pdf_name = self.pdf_path.name
         self.model_name = model_name
+        self.feedback = feedback
         
         if not self.pdf_path.exists():
             raise FileNotFoundError(f"PDF not found: {self.pdf_path}")
         
         # Initialize LLM with optional model override
-        self.extractor = LLMExtractor(model_name=model_name)
+        self.extractor = LLMExtractor(model_name=model_name, feedback=self.feedback)
         
         # Metrics
         self.metrics = {
@@ -214,6 +215,11 @@ def main():
              "Defaults to LLM_MODEL in .env"
     )
     parser.add_argument(
+        "--feedback", "-f",
+        default=None,
+        help="Optional feedback string from the Consensus Judge to improve extraction."
+    )
+    parser.add_argument(
         "--list-models",
         action="store_true",
         help="List available models and exit"
@@ -225,7 +231,7 @@ def main():
         sys.exit(0)
     
     try:
-        runner = PipelineRunner(args.pdf_path, model_name=args.model)
+        runner = PipelineRunner(args.pdf_path, model_name=args.model, feedback=args.feedback)
         runner.run()
         sys.exit(0)
     except Exception as e:

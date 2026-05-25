@@ -8,12 +8,69 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
 from vllm import LLM, SamplingParams
+from vllm.sampling_params import StructuredOutputsParams
 
 from config.settings import settings
 from config.model_registry import get_model_config, ModelConfig
 from pipeline.chunker import TextChunk
 
 logger = logging.getLogger(__name__)
+
+EXTRACTION_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "extracted_conditions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "analyte_polymer": {"type": ["string", "null"]},
+                    "critical_component": {"type": ["string", "null"]},
+                    "architecture": {"type": ["string", "null"]},
+                    "critical_condition_basis": {"type": ["string", "null"]},
+                    "critical_condition_confidence": {
+                        "type": "string",
+                        "enum": ["explicit", "strong_inference", "unclear"]
+                    },
+                    "column_name": {"type": ["string", "null"]},
+                    "stationary_phase_chemistry": {"type": ["string", "null"]},
+                    "mobile_phase_solvents": {
+                        "type": ["array", "null"],
+                        "items": {"type": "string"}
+                    },
+                    "mobile_phase_ratio": {"type": ["string", "null"]},
+                    "mobile_phase_ratio_units": {"type": ["string", "null"]},
+                    "aqueous_parameters": {
+                        "type": "object",
+                        "properties": {
+                            "pH": {"type": ["string", "null"]},
+                            "salt_added": {"type": "boolean"},
+                            "salt_type": {"type": ["string", "null"]},
+                            "salt_concentration": {"type": ["string", "null"]}
+                        },
+                        "required": ["pH", "salt_added", "salt_type", "salt_concentration"]
+                    },
+                    "temperature_celsius": {"type": ["string", "null"]},
+                    "flow_rate": {"type": ["string", "null"]},
+                    "pore_size": {"type": ["string", "null"]},
+                    "column_dimensions": {"type": ["string", "null"]},
+                    "detector": {"type": ["string", "null"]},
+                    "evidence_text": {"type": ["string", "null"]},
+                    "notes": {"type": ["string", "null"]},
+                    "paper_doi": {"type": ["string", "null"]}
+                },
+                "required": [
+                    "analyte_polymer", "critical_component", "architecture", "critical_condition_basis",
+                    "critical_condition_confidence", "column_name", "stationary_phase_chemistry",
+                    "mobile_phase_solvents", "mobile_phase_ratio", "mobile_phase_ratio_units",
+                    "aqueous_parameters", "temperature_celsius", "flow_rate", "pore_size",
+                    "column_dimensions", "detector", "evidence_text", "notes", "paper_doi"
+                ]
+            }
+        }
+    },
+    "required": ["extracted_conditions"]
+}
 
 
 @dataclass
@@ -51,7 +108,8 @@ class LLMExtractor:
         self,
         model_name: str = None,
         gpu_memory_utilization: float = None,
-        max_model_len: int = None
+        max_model_len: int = None,
+        feedback: str = None
     ):
         self.model_name = model_name or settings.llm_model
         self.model_config: ModelConfig = get_model_config(self.model_name)
@@ -59,6 +117,7 @@ class LLMExtractor:
         self.max_model_len = max_model_len or settings.vllm_max_model_len or self.model_config.max_model_len
         self.max_retries = settings.llm_retry_attempts
         self.temperature = settings.llm_temperature
+        self.feedback = feedback
 
         logger.info(f"Initializing vLLM with model: {self.model_config.hf_id}")
         logger.info(f"  Quantization: {self.model_config.quantization}")
@@ -80,6 +139,7 @@ class LLMExtractor:
             temperature=self.temperature,
             max_tokens=settings.vllm_max_tokens,
             top_p=0.9,
+            structured_outputs=StructuredOutputsParams(json=EXTRACTION_SCHEMA)
         )
         logger.info("LLM extractor initialized.")
 
@@ -95,7 +155,11 @@ TEXT TO ANALYZE:
 
 TASK:
 Extract all explicitly mentioned or strongly supported liquid chromatography critical conditions (LCCC) experimental setups from the text.
+"""
+        if self.feedback:
+            prompt += f"\nSUPERVISOR FEEDBACK FROM PREVIOUS RUN:\n{self.feedback}\nPLEASE CORRECT YOUR MISTAKES BASED ON THIS FEEDBACK.\n"
 
+        prompt += f"""
 DEFINITION OF WHAT TO EXTRACT:
 Extract a record only if the text indicates one of the following:
 1. it explicitly mentions "critical condition", "liquid chromatography at critical condition", "LCCC", "critical adsorption point", or equivalent terminology; OR
@@ -152,7 +216,8 @@ JSON SCHEMA:
       "column_dimensions": "string or null",
       "detector": "string or null",
       "evidence_text": "string or null",
-      "notes": "string or null"
+      "notes": "string or null",
+      "paper_doi": "string or null"
     }}
   ]
 }}

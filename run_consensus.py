@@ -5,6 +5,7 @@ Finds extracted JSON files, aggregates them, and runs the DeepSeek Judge.
 """
 
 import json
+import subprocess
 from pathlib import Path
 from pipeline.consensus_judge import ConsensusJudge
 
@@ -52,7 +53,37 @@ def main():
         
         try:
             final_data = judge.run_consensus(qwen_conds, llama_conds)
-            final_conds = final_data.get("extracted_conditions", [])
+            
+            # Phase 2 Feedback Loop Orchestration (Max 1 Retry)
+            if final_data.get("requires_retry"):
+                print("⚠️ Judge requested a retry based on quality feedback!")
+                feedback_dict = final_data.get("feedback_for_models", {})
+                
+                for model_name, feedback_str in feedback_dict.items():
+                    if feedback_str:
+                        print(f"🔄 Retrying {model_name} with feedback: {feedback_str}")
+                        pdf_path = Path("Inputs/Papers") / f"{paper}.pdf"
+                        if not pdf_path.exists():
+                            print(f"Warning: PDF not found for retry at {pdf_path}")
+                            continue
+                            
+                        cmd = [
+                            "python", "run_local.py", 
+                            str(pdf_path), 
+                            "--model", model_name, 
+                            "--feedback", feedback_str
+                        ]
+                        subprocess.run(cmd, check=False)
+                
+                # Reload JSONs after retry
+                print(f"🔄 Re-running consensus after retry...")
+                qwen_conds = load_json(qwen_file)
+                llama_conds = load_json(llama_file)
+                
+                # Run consensus again (2nd pass, no further retries)
+                final_data = judge.run_consensus(qwen_conds, llama_conds)
+            
+            final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
             print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")
             
             output_file = consensus_dir / f"{paper}_consensus.json"
