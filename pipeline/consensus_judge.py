@@ -83,10 +83,11 @@ INSTRUCTIONS:
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
 6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors.
-7. **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers, merge them into ONE record and list all polymers in `analyte_polymer` separated by commas.
-8. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
-9. **QUALITY FEEDBACK**: If either extraction is severely corrupted, hallucinated, or completely failed due to a missing section, set "requires_retry" to true and provide explicit string feedback for that model in "feedback_for_models" so they can try again. If both are fine, set requires_retry to false.
-10. Output ONLY valid JSON matching the schema below.
+7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations. The database MUST only contain real, physical, laboratory chromatography experiments. If the candidates extracted simulation parameters, reject them and set "final_consensus" to an empty list (with no conditions).
+8. **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers, merge them into ONE record and list all polymers in `analyte_polymer` separated by commas.
+9. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
+10. **QUALITY FEEDBACK**: If either extraction is severely corrupted, hallucinated, or completely failed due to a missing section, set "requires_retry" to true and provide explicit string feedback for that model in "feedback_for_models" so they can try again. If both are fine, set requires_retry to false.
+11. Output ONLY valid JSON matching the schema below.
 
 JSON SCHEMA:
 {{

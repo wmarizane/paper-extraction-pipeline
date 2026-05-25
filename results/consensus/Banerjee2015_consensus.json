@@ -38,7 +38,8 @@
         "column_dimensions": "4.6 mm x 250 mm",
         "detector": "Refractive Index (RI) detector",
         "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... LCCC chromatograms of PIB samples of different functionality but similar MW ... under critical condition using RI detector ... THF/methanol 80.5/19.5 (w/w).",
-        "notes": "The text explicitly states this composition allows separation based on chemical functionality independent of MW. The RI detector was used for quantitative analysis."
+        "notes": "The text explicitly states this composition allows separation based on chemical functionality independent of MW. The RI detector was used for quantitative analysis.",
+        "paper_doi": null
       }
     ]
   }

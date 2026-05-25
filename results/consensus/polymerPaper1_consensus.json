@@ -14,7 +14,7 @@
     "conditions": [
       {
         "analyte_polymer": "polyisoprene (1,4-PI)",
-        "critical_component": "1,4-isoprene units",
+        "critical_component": "1,4-PI",
         "architecture": "copolymers containing predominantly 1,4-isoprene units",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
@@ -38,7 +38,8 @@
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
         "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
-        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol %). The text states these are 'near-critical conditions' but explicitly describes the molar mass independence characteristic of LCCC."
+        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol %). The text states these are 'near-critical conditions' but explicitly describes the molar mass independence characteristic of LCCC.",
+        "paper_doi": null
       }
     ]
   }

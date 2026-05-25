@@ -38,7 +38,8 @@
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI, ELSD",
         "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) ... for PO on a poly(divinyl benzene) column in acetone water 92:8 (w/w).",
-        "notes": "EO block elutes in SEC mode. Used for determination of EO block MMD and identification of PPG homopolymers."
+        "notes": "EO block elutes in SEC mode. Used for determination of EO block MMD and identification of PPG homopolymers.",
+        "paper_doi": "10.1039/..."
       },
       {
         "analyte_polymer": "Poloxamers (EO-PO-EO), PO-EO-PO triblocks, PPG",
@@ -66,7 +67,8 @@
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI, ELSD",
         "evidence_text": "Block copolymers ... for PO on ... a silica based poly(ethylene glycol) phase in 45:55 (w/w).",
-        "notes": "EO block elutes in SEC mode. Suitable for samples with shorter PO blocks."
+        "notes": "EO block elutes in SEC mode. Suitable for samples with shorter PO blocks.",
+        "paper_doi": "10.1039/..."
       },
       {
         "analyte_polymer": "Poloxamers (EO-PO-EO), PO-EO-PO triblocks, PEG",
@@ -94,7 +96,8 @@
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
         "evidence_text": "Block copolymers ... for EO on a Diol column in acetone water 78:12 (w/w).",
-        "notes": "PO block elutes in SEC mode. Used for determination of PO block MMD and identification of PEG homopolymers."
+        "notes": "PO block elutes in SEC mode. Used for determination of PO block MMD and identification of PEG homopolymers.",
+        "paper_doi": "10.1039/..."
       }
     ]
   }

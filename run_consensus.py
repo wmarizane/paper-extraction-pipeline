@@ -62,7 +62,7 @@ def main():
                 for model_name, feedback_str in feedback_dict.items():
                     if feedback_str:
                         print(f"🔄 Retrying {model_name} with feedback: {feedback_str}")
-                        pdf_path = Path("Inputs/Papers") / f"{paper}.pdf"
+                        pdf_path = Path("Inputs") / f"{paper}.pdf"
                         if not pdf_path.exists():
                             print(f"Warning: PDF not found for retry at {pdf_path}")
                             continue

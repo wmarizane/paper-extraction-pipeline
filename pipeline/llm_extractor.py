@@ -170,6 +170,7 @@ DO NOT EXTRACT:
 - ordinary SEC, RPC, HPLC, adsorption, or interaction chromatography conditions unless the text clearly identifies them as critical conditions
 - general discussion of LCCC theory without an experimental setup
 - inferred values not stated in the text
+- theoretical modeling, Monte Carlo simulations, numerical simulations, lattice models, or computer simulations. ONLY extract real, physical laboratory experiments performed on physical chromatographic columns. If the text is from a simulation or theoretical modeling paper, extract nothing.
 
 EXTRACTION UNIT:
 Create one entry per distinct critical-condition setup.

@@ -38,7 +38,8 @@
         "column_dimensions": "200 x 4 mm",
         "detector": "RI and UV (280 nm)",
         "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane... Figure 3. Chromatograms of the block copolymers... at the critical point of PMMA; Nucleosil Si-100, MEK-cyclohexane 73:27 vol%.",
-        "notes": "Initial setup described in text and Figure 3 caption."
+        "notes": "Initial setup described in text and Figure 3 caption.",
+        "paper_doi": "10.1021/..."
       },
       {
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
@@ -66,7 +67,8 @@
         "column_dimensions": "self-packed",
         "detector": "UV (280 nm)",
         "evidence_text": "As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane... Figure 5 Chromatograms... at the critical point of PMMA; LiChrospher Si-300 and Si-1000, MEK-cyclohexane 70:30 vol%.",
-        "notes": "Second setup used for higher molar mass samples to avoid exclusion limit issues; distinct from the first setup due to different column system and adjusted mobile phase ratio."
+        "notes": "Second setup used for higher molar mass samples to avoid exclusion limit issues; distinct from the first setup due to different column system and adjusted mobile phase ratio.",
+        "paper_doi": "10.1021/..."
       }
     ]
   }

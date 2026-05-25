@@ -13,7 +13,7 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PS-b-PMMA, PS/PMMA blends",
+        "analyte_polymer": "PS-b-PMMA, PS, PMMA, PS/PMMA blends",
         "critical_component": "PS",
         "architecture": "block copolymer, blend",
         "critical_condition_basis": "critical point of adsorption of PS",
@@ -38,7 +38,8 @@
         "column_dimensions": "250 x 4 mm",
         "detector": "UV, 1H NMR",
         "evidence_text": "The critical conditions correspond to a mobile phase composition of THF\u2013ACN of 48:52 v/v... stationary phase: RP-18 Nucleosil 300 \u00fe 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1... at the critical point of adsorption of PS",
-        "notes": "PMMA elutes in SEC mode while PS is at critical conditions."
+        "notes": "PMMA elutes in SEC mode while PS is at critical conditions.",
+        "paper_doi": "10.1039/9781849733233-00031"
       }
     ]
   }

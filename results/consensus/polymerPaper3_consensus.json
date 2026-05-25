@@ -13,7 +13,7 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
+        "analyte_polymer": "PEO-b-PLLA",
         "critical_component": "PEO block",
         "architecture": "diblock",
         "critical_condition_basis": "critical condition of PEO block",
@@ -38,10 +38,11 @@
         "column_dimensions": "250 x 4.6 mm",
         "detector": "refractive index detector, UV-visible absorption detector",
         "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 \u00b0C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v).",
-        "notes": "Used for characterization of PEO-b-PLLA diblock copolymer."
+        "notes": "Used for characterization of PEO-b-PLLA diblock copolymer.",
+        "paper_doi": null
       },
       {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
         "critical_component": "PEO block",
         "architecture": "triblock",
         "critical_condition_basis": "critical condition of PEO block",
@@ -65,11 +66,12 @@
         "pore_size": "100-\u00c5",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "refractive index detector, UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 \u00b0C, ACN:H2O ) 47:53 (v/v); 54 \u00b0C, ACN: H2O ) 54:46 (v/v))",
-        "notes": "First condition used for triblock copolymer with shorter PLLA blocks (Figure 3)."
+        "evidence_text": "The critical condition in Figure 3 was obtained with an ACN/water mixture (47/53, v/v) at 37 \u00b0C column temperature, which is different from the condition for the diblock copolymer shown in Figure 2.",
+        "notes": "First condition used for triblock copolymer with shorter PLLA blocks (Figure 3).",
+        "paper_doi": null
       },
       {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
         "critical_component": "PEO block",
         "architecture": "triblock",
         "critical_condition_basis": "critical condition of PEO block",
@@ -93,8 +95,9 @@
         "pore_size": "100-\u00c5",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "refractive index detector, UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 \u00b0C, ACN:H2O ) 47:53 (v/v); 54 \u00b0C, ACN: H2O ) 54:46 (v/v))",
-        "notes": "Second condition used for triblock copolymer with longer PLLA blocks (Figure 5)."
+        "evidence_text": "For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H2O ) 54:46, v/v) and raising the temperature (54 \u00b0C) as compared to Figure 3.",
+        "notes": "Second condition used for triblock copolymer with longer PLLA blocks (Figure 5).",
+        "paper_doi": null
       }
     ]
   }
