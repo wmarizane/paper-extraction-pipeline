@@ -15,13 +15,38 @@ def check_parser_ready() -> bool:
 def parse_pdf_to_markdown(pdf_path: str) -> str:
     """
     Parses a PDF natively to Markdown, preserving tabular structures.
+    Retries without OCR if default extraction fails (e.g. due to OCR engine bugs),
+    and falls back to standard page-by-page plain text extraction as a last resort.
     """
     if not Path(pdf_path).exists():
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
         
     logger.info(f"Parsing PDF to markdown natively: {pdf_path}")
-    md_text = pymupdf4llm.to_markdown(pdf_path)
-    return md_text
+    try:
+        # Attempt standard layout-aware markdown extraction
+        md_text = pymupdf4llm.to_markdown(pdf_path)
+        return md_text
+    except Exception as e:
+        logger.warning(f"pymupdf4llm failed with default settings on {pdf_path}: {e}. Retrying with use_ocr=False...")
+        try:
+            # Retry with OCR explicitly disabled (prevents OCR-related fitz insert_pdf crashes)
+            md_text = pymupdf4llm.to_markdown(pdf_path, use_ocr=False)
+            return md_text
+        except Exception as e_inner:
+            logger.error(f"pymupdf4llm failed even with use_ocr=False on {pdf_path}: {e_inner}. Falling back to standard PyMuPDF plain text...")
+            try:
+                import fitz
+                doc = fitz.open(pdf_path)
+                pages_text = []
+                for i, page in enumerate(doc):
+                    pages_text.append(f"\n## Page {i+1}\n")
+                    pages_text.append(page.get_text())
+                doc.close()
+                return "\n".join(pages_text)
+            except Exception as e_deep:
+                logger.error(f"All native PDF parsing methods failed for {pdf_path}: {e_deep}")
+                raise RuntimeError(f"Failed to parse PDF {pdf_path}: {e_deep}") from e_deep
+
 
 def save_markdown(md_content: str, pdf_path: str, output_dir: str = "parsed_md") -> Path:
     """

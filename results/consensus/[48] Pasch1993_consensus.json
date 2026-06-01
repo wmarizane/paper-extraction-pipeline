@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "source_pdf": "[48] Pasch1993.pdf",
+    "model": "local-programmatic-consensus",
+    "inputs": [
+      "deepseek-r1-32b",
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvents": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Block copolymers of decyl and methyl methacrylate were analyzed by liquid chromatography at the critical point of adsorption. The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
+        "critical_component": "decyl methacrylate block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvents": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  }
+}

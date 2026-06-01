@@ -1,22 +1,122 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper2.pdf",
-    "model": "deepseek-r1-32b-consensus",
+    "model": "local-programmatic-consensus",
     "inputs": [
+      "deepseek-r1-32b",
       "qwen3.5-27b",
       "mistral-small-24b"
     ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 7
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Poloxamers (EO-PO-EO), PO-EO-PO triblocks, PPG",
+        "mobile_phase_solvents": [
+          "water",
+          "acetone"
+        ],
+        "evidence_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+        "analyte_polymer": "EO–PO block copolymers",
+        "flow_rate": "0.5 ml/min",
+        "mobile_phase_ratio": "78:12",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2005",
+        "notes": null,
+        "detector": "RI",
+        "pore_size": "100 A˚",
+        "column_name": "Diol column",
+        "column_dimensions": "250 x 4.6 mm",
+        "architecture": "block copolymer",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "w/w",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "temperature_celsius": "25.0",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "critical_component": "EO"
+      },
+      {
+        "mobile_phase_solvents": [
+          "water",
+          "acetone"
+        ],
+        "evidence_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+        "analyte_polymer": "EO–PO block copolymers",
+        "flow_rate": "0.5 ml/min",
+        "mobile_phase_ratio": "92:8",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2005",
+        "notes": null,
+        "detector": "RI",
+        "pore_size": "500 A˚",
+        "column_name": "poly(divinyl benzene) column",
+        "column_dimensions": "250 x 4.6 mm",
+        "architecture": "block copolymer",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "w/w",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "stationary_phase_chemistry": "poly(divinyl benzene)",
+        "temperature_celsius": "25.0",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "critical_component": "PO"
+      },
+      {
+        "analyte_polymer": "EO–PO block copolymers",
+        "critical_component": "PO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS-PEG column",
+        "stationary_phase_chemistry": "silica-based poly(ethylene glycol) phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A˚",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "Poloxamers (EO-PO-EO and PO-EO-PO triblock copolymers), PPG",
         "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Triblock copolymer",
-        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "architecture": "Triblock copolymer (EO-PO-EO or PO-EO-PO)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "100% poly(divinylbenzene)",
@@ -36,16 +136,20 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI, ELSD",
+        "detector": "RI (Refractive Index) or ELSD",
         "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) ... for PO on a poly(divinyl benzene) column in acetone water 92:8 (w/w).",
-        "notes": "EO block elutes in SEC mode. Used for determination of EO block MMD and identification of PPG homopolymers.",
-        "paper_doi": "10.1039/..."
+        "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC).",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
       },
       {
-        "analyte_polymer": "Poloxamers (EO-PO-EO), PO-EO-PO triblocks, PPG",
+        "analyte_polymer": "Poloxamers (EO-PO-EO and PO-EO-PO triblock copolymers), PPG",
         "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Triblock copolymer",
-        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "architecture": "Triblock copolymer (EO-PO-EO or PO-EO-PO)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Discovery HS-PEG",
         "stationary_phase_chemistry": "Silica-based poly(ethylene glycol) phase",
@@ -65,16 +169,20 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "120 A",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI, ELSD",
-        "evidence_text": "Block copolymers ... for PO on ... a silica based poly(ethylene glycol) phase in 45:55 (w/w).",
-        "notes": "EO block elutes in SEC mode. Suitable for samples with shorter PO blocks.",
-        "paper_doi": "10.1039/..."
+        "detector": "RI (Refractive Index) or ELSD",
+        "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) ... for PO on ... a silica based poly(ethylene glycol) phase in 45:55 (w/w).",
+        "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC). Suitable for samples with shorter PO blocks.",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
       },
       {
-        "analyte_polymer": "Poloxamers (EO-PO-EO), PO-EO-PO triblocks, PEG",
+        "analyte_polymer": "Poloxamers (EO-PO-EO and PO-EO-PO triblock copolymers), PEG",
         "critical_component": "Ethylene oxide (EO) block",
-        "architecture": "Triblock copolymer",
-        "critical_condition_basis": "Critical adsorption point (CAP) for EO",
+        "architecture": "Triblock copolymer (EO-PO-EO or PO-EO-PO)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
         "stationary_phase_chemistry": "Silica-based Diol phase",
@@ -94,10 +202,47 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 A",
         "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI (Refractive Index)",
+        "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) for EO on a Diol column in acetone water 78:12 (w/w).",
+        "notes": "Under these conditions, the PO block elutes in exclusion mode (SEC).",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "EO–PO block copolymers",
+        "critical_component": "PO",
+        "architecture": "EO–PO diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "silica based poly(ethylene glycol) phase",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A[˚]",
+        "column_dimensions": "250!4.6 mm",
         "detector": "RI",
-        "evidence_text": "Block copolymers ... for EO on a Diol column in acetone water 78:12 (w/w).",
-        "notes": "PO block elutes in SEC mode. Used for determination of PO block MMD and identification of PEG homopolymers.",
-        "paper_doi": "10.1039/..."
+        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
       }
     ]
   }

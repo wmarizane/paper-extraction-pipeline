@@ -9,7 +9,7 @@ cd /project/wkmrzane/research-assistant/paper-extraction-pipeline
 models=(
     "qwen3.5-27b:1"       # 1 GPU
     "deepseek-r1-32b:2"   # 2 GPUs
-    "llama3.3-70b:4"      # 4 GPUs
+    "mistral-small-24b:2" # 2 GPUs
 )
 
 for entry in "${models[@]}"; do

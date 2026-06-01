@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "source_pdf": "[233] Malik2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2012",
+        "mobile_phase_ratio": "18-82",
+        "critical_component": "Polystyrene (PS) block",
+        "notes": "Used as first dimension for 2D-LC. PEO block elutes in SEC mode.",
+        "analyte_polymer": "Polystyrene (PS), PS-b-PEO block copolymers",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "Homopolymer and Block Copolymer",
+        "critical_condition_confidence": "explicit",
+        "pore_size": "300 A",
+        "evidence_text": "The CAP of PS was realised in a DMF\u2013THF mobile phase on a RP octadecyl column... (THF\u2013DMF: 18\u201382)... all PS standards elute at more or less the same elution volume irrespective of their molar masses.",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase (RP)",
+        "temperature_celsius": "30",
+        "column_name": "Symmetry 300",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) / Critical Adsorption Point (CAP)",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "detector": "UV (254 nm) and ELSD",
+        "corresponding_author_name": "Muhammad Imran Malik"
+      },
+      {
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2012",
+        "mobile_phase_ratio": "96-4",
+        "critical_component": "Polyethylene oxide (PEO) block",
+        "notes": "Used as first dimension for 2D-LC. PS block elutes in SEC mode.",
+        "analyte_polymer": "Polyethylene oxide (PEO), PS-b-PEO block copolymers",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "Homopolymer and Block Copolymer",
+        "critical_condition_confidence": "explicit",
+        "pore_size": "300 A",
+        "evidence_text": "The CAP of PEO was realised on a normal phase Si column... At a mobile phase composition of 96\u20134 (THF\u2013DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
+        "stationary_phase_chemistry": "Plain silica (Normal Phase)",
+        "temperature_celsius": "30",
+        "column_name": "Nucleosil Si 300",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) / Critical Adsorption Point (CAP)",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "detector": "UV (254 nm) and ELSD",
+        "corresponding_author_name": "Muhammad Imran Malik"
+      }
+    ]
+  }
+}

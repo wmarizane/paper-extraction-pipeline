@@ -1,22 +1,56 @@
 {
   "metadata": {
     "source_pdf": "polymerPaper1.pdf",
-    "model": "deepseek-r1-32b-consensus",
+    "model": "local-programmatic-consensus",
     "inputs": [
+      "deepseek-r1-32b",
       "qwen3.5-27b",
       "mistral-small-24b"
     ]
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "evidence_text": "Figure 1 shows the elution behavior of the 1,4-PI samples as a function of eluent composition. It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "analyte_polymer": "polyisoprene",
+        "flow_rate": "0.5 mL/min",
+        "mobile_phase_ratio": "92:8",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2011",
+        "notes": "Critical conditions established for 1,4-PI with mobile phase ratio 92:8 vol % butanone:cyclohexane at 29°C.",
+        "detector": "NMR",
+        "pore_size": null,
+        "column_name": "Nucleosil C18",
+        "column_dimensions": "250 x 4.6 mm",
+        "architecture": "copolymer",
+        "paper_doi": "10.1021/ma102750s",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "vol %",
+        "corresponding_author_name": "Wolf Hiller",
+        "stationary_phase_chemistry": "reversed phase",
+        "temperature_celsius": "29",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "critical_component": "1,4-PI"
+      },
+      {
         "analyte_polymer": "polyisoprene (1,4-PI)",
-        "critical_component": "1,4-PI",
-        "architecture": "copolymers containing predominantly 1,4-isoprene units",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "copolymers containing predominantly 1,4- and 3,4-isoprene units",
+        "critical_condition_basis": "elution independent of molar mass for 1,4-PI samples",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "reversed phase C18",
@@ -34,12 +68,16 @@
         },
         "temperature_celsius": "29",
         "flow_rate": "0.5 mL min-1",
-        "pore_size": "100-5, 300-5, 1000-7",
+        "pore_size": "100-5, 300-5, and 1000-7",
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
         "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
-        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol %). The text states these are 'near-critical conditions' but explicitly describes the molar mass independence characteristic of LCCC.",
-        "paper_doi": null
+        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol%).",
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011"
       }
     ]
   }

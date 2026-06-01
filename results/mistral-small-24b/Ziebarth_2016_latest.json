@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "source_pdf": "Ziebarth_2016.pdf",
+    "extraction_date": "2026-05-25T20:49:02.089150",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "Ziebarth_2016.pdf",
+      "start_time": "2026-05-25T20:45:39.395474",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 38.41338801383972,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13302922248840332,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12665
+        },
+        "llm_extraction": {
+          "time_seconds": 164.14709186553955,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "linear",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "19",
+        "flow_rate": "2 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 9.8 mm",
+        "detector": "light scattering detector",
+        "evidence_text": "For fractionation of ring PS, two C18 bonded silica columns (Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm and Nucleosil C18, 250 × 9.8 mm, 300 Å pore, 5 μm) and a mixed eluent of CH2Cl2/CH3CN (58/42, v/v, Samchun, HPLC grade) at a flow rate of 2 mL/min were used. The temperature of the columns was set at 19 °C at which different molar mass linear PS precursors coelute.",
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "ring",
+        "architecture": "ring",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "19",
+        "flow_rate": "2 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 9.8 mm",
+        "detector": "light scattering detector",
+        "evidence_text": "For fractionation of ring PS, two C18 bonded silica columns (Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm and Nucleosil C18, 250 × 9.8 mm, 300 Å pore, 5 μm) and a mixed eluent of CH2Cl2/CH3CN (58/42, v/v, Samchun, HPLC grade) at a flow rate of 2 mL/min were used. The temperature of the columns was set at 19 °C at which different molar mass linear PS precursors coelute.",
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "linear",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "19",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "light scattering detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition for the polymers of interest.",
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "ring",
+        "architecture": "ring",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "19",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "light scattering detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition for the polymers of interest.",
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": "2016"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12665,
+      "extraction_success": true,
+      "processing_time": 46.74126625061035,
+      "extracted_count": 4
+    }
+  ]
+}

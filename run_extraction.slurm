@@ -43,8 +43,9 @@ export LIBRARY_PATH=/project/wkmrzane/miniconda3/envs/research-assistant/lib/stu
 export LD_PRELOAD=/project/wkmrzane/miniconda3/envs/research-assistant/lib/libstdc++.so.6
 
 # Delete stale FlashInfer GDN kernel cache so it recompiles with correct libstdc++
+# Delete stale FlashInfer GDN kernel cache so it recompiles with correct libstdc++
 echo "Clearing stale FlashInfer kernel cache..."
-rm -rf /project/wkmrzane/.cache/flashinfer/
+rm -rf /project/wkmrzane/.cache/flashinfer/ || true
 echo "Cache cleared."
 
 if [ -f ".env" ]; then
@@ -71,6 +72,11 @@ export PYTHONPATH=.
 export HF_HUB_OFFLINE=1
 export TIKTOKEN_CACHE_DIR=/project/wkmrzane/.cache/tiktoken
 
+# Set a job-specific FlashInfer workspace directory to prevent concurrent jobs from colliding
+export FLASHINFER_WORKSPACE_BASE="/project/wkmrzane/.cache/flashinfer/${SLURM_JOB_ID:-standalone}"
+mkdir -p "$FLASHINFER_WORKSPACE_BASE"
+echo "Isolated FlashInfer Workspace: $FLASHINFER_WORKSPACE_BASE"
+
 # Build model flag
 MODEL_FLAG=""
 if [ -n "${MODEL:-}" ]; then
@@ -83,8 +89,11 @@ PIPELINE_EXIT_CODE=0
 for PDF in Inputs/*.pdf; do
     echo ""
     echo ">>> Processing: $PDF"
+    # Temporarily disable exit-on-error to handle failures gracefully
+    set +e
     $NLP_PYTHON run_local.py "$PDF" $MODEL_FLAG
     EXIT=$?
+    set -e
     if [ $EXIT -ne 0 ]; then
         echo "WARNING: $PDF failed with exit code $EXIT"
         PIPELINE_EXIT_CODE=$EXIT

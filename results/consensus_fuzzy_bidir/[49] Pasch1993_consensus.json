@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "source_pdf": "[49] Pasch1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "corresponding_email_address": null,
+        "publication_year": "1993",
+        "mobile_phase_ratio": "73:27",
+        "critical_component": "PMMA",
+        "notes": "Used for separation of blends where PMMA is one component. Other components elute in size exclusion mode.",
+        "analyte_polymer": "PMMA, PS, PVC, PCHMA, poly(styrene-co-acrylonitrile), poly(styrene-co-methyl methacrylate)",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "flow_rate": null,
+        "architecture": "homopolymer, copolymer",
+        "critical_condition_confidence": "explicit",
+        "pore_size": null,
+        "evidence_text": "At the critical point of PMMA (73 vol% MEK/27 vol% cyclohexane) a complete separation of the elution zones of PMMA and PS is achieved. ... for PMMA regardless of its molar mass one retention time is obtained corresponding to Ky=1 for all molar masses.",
+        "stationary_phase_chemistry": "silica gel",
+        "temperature_celsius": null,
+        "column_name": "Nucleosil Si-100",
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_basis": "critical point of adsorption",
+        "paper_doi": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "detector": "Waters differential RI detector R401, Knauer u.v./vis. filter photometer",
+        "corresponding_author_name": "H. Pasch"
+      },
+      {
+        "corresponding_email_address": null,
+        "publication_year": "1993",
+        "mobile_phase_ratio": "70:30",
+        "critical_component": "PMMA",
+        "notes": "Two-column system with slightly different silica surface characteristics. Resolution noted as lower than Si-100 due to larger particle size (10 um).",
+        "analyte_polymer": "PMMA, PS, PVC",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "flow_rate": null,
+        "architecture": "homopolymer",
+        "critical_condition_confidence": "explicit",
+        "pore_size": null,
+        "evidence_text": "As can be seen, the critical point of PMMA is shifted to a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane (Figure 5, upper right corner). At this point PS-PMMA and PVC-PMMaA blends may be separated into their components.",
+        "stationary_phase_chemistry": "silica gel",
+        "temperature_celsius": null,
+        "column_name": "LiChrospher Si2300 and Si-1000",
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_basis": "critical point of adsorption",
+        "paper_doi": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "detector": "Waters differential RI detector R401, Knauer u.v./vis. filter photometer",
+        "corresponding_author_name": "H. Pasch"
+      }
+    ]
+  }
+}

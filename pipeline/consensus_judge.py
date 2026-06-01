@@ -122,7 +122,11 @@ JSON SCHEMA:
         "detector": "string or null",
         "evidence_text": "string or null",
         "notes": "string or null",
-        "paper_doi": "string or null"
+        "paper_doi": "string or null",
+        "corresponding_author_name": "string or null",
+        "corresponding_email_address": "string or null",
+        "physical_address": "string or null",
+        "publication_year": "string or null"
       }}
     ]
   }}
@@ -182,6 +186,156 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         
         raise ValueError("DeepSeek failed to return valid JSON.")
 
+    @staticmethod
+    def _norm(val):
+        """Normalize a string value for comparison: lowercase, strip, collapse whitespace."""
+        if not val:
+            return ""
+        return re.sub(r'\s+', ' ', str(val).lower().strip())
+
+    @staticmethod
+    def _norm_solvents(solv):
+        """Normalize solvent list to a sorted set of lowercase strings."""
+        if not solv:
+            return set()
+        if isinstance(solv, str):
+            return {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
+        return {str(s).strip().lower() for s in solv if s}
+
+    @staticmethod
+    def _norm_ratio(ratio):
+        """Normalize mobile phase ratio by stripping spaces and lowering."""
+        if not ratio:
+            return ""
+        return re.sub(r'\s+', '', str(ratio).lower().strip())
+
+    @staticmethod
+    def _word_jaccard(a: str, b: str) -> float:
+        """Word-level Jaccard similarity between two strings."""
+        if not a or not b:
+            return 0.0
+        words_a = set(re.findall(r'[a-z0-9]+', a.lower()))
+        words_b = set(re.findall(r'[a-z0-9]+', b.lower()))
+        if not words_a or not words_b:
+            return 0.0
+        intersection = words_a & words_b
+        union = words_a | words_b
+        return len(intersection) / len(union)
+
+    @staticmethod
+    def _chromatographic_match(ca: Dict, cb: Dict) -> bool:
+        """
+        Fuzzy chromatographic fingerprint matching.
+        
+        Uses a multi-signal scoring approach across hard experimental parameters
+        (column, solvents, ratio, temperature) and soft semantic fields 
+        (critical_component). Two items describing the same experiment phrased
+        differently should still match.
+        
+        Returns True if the conditions likely describe the same experimental setup.
+        """
+        norm = ConsensusJudge._norm
+        norm_solvents = ConsensusJudge._norm_solvents
+        norm_ratio = ConsensusJudge._norm_ratio
+        word_jaccard = ConsensusJudge._word_jaccard
+
+        col_a = norm(ca.get("column_name"))
+        col_b = norm(cb.get("column_name"))
+        solv_a = norm_solvents(ca.get("mobile_phase_solvents"))
+        solv_b = norm_solvents(cb.get("mobile_phase_solvents"))
+        ratio_a = norm_ratio(ca.get("mobile_phase_ratio"))
+        ratio_b = norm_ratio(cb.get("mobile_phase_ratio"))
+        temp_a = norm(ca.get("temperature_celsius"))
+        temp_b = norm(cb.get("temperature_celsius"))
+        comp_a = norm(ca.get("critical_component"))
+        comp_b = norm(cb.get("critical_component"))
+
+        # --- Signal 1: Column name (substring containment or word overlap) ---
+        if col_a and col_b:
+            col_match = (col_a in col_b) or (col_b in col_a) or (word_jaccard(col_a, col_b) >= 0.4)
+        else:
+            col_match = True  # If either is missing, don't penalize
+
+        # --- Signal 2: Solvents (set overlap) ---
+        if solv_a and solv_b:
+            solv_match = len(solv_a & solv_b) > 0
+        else:
+            solv_match = True
+
+        # --- Signal 3: Mobile phase ratio (exact after normalization) ---
+        if ratio_a and ratio_b:
+            ratio_match = (ratio_a == ratio_b)
+        else:
+            ratio_match = True
+
+        # --- Signal 4: Temperature (exact after normalization) ---
+        if temp_a and temp_b:
+            # Strip unit suffixes for comparison
+            temp_a_clean = re.sub(r'[°c\s]', '', temp_a)
+            temp_b_clean = re.sub(r'[°c\s]', '', temp_b)
+            temp_match = (temp_a_clean == temp_b_clean)
+        else:
+            temp_match = True
+
+        # --- Signal 5: Critical component (word-level Jaccard, lenient) ---
+        if comp_a and comp_b:
+            comp_match = (comp_a == comp_b) or (comp_a in comp_b) or (comp_b in comp_a) or (word_jaccard(comp_a, comp_b) >= 0.2)
+        else:
+            comp_match = True
+
+        # Count how many hard signals are present (i.e., both sides have data)
+        hard_signals = []
+        if col_a and col_b:
+            hard_signals.append(col_match)
+        if solv_a and solv_b:
+            hard_signals.append(solv_match)
+        if ratio_a and ratio_b:
+            hard_signals.append(ratio_match)
+        if temp_a and temp_b:
+            hard_signals.append(temp_match)
+        if comp_a and comp_b:
+            hard_signals.append(comp_match)
+
+        # If no hard signals are comparable, fall back to True (rare edge case)
+        if not hard_signals:
+            return True
+
+        # Require: all present signals agree (no contradictions)
+        # A contradiction = a signal where both sides have data but values disagree
+        contradictions = sum(1 for s in hard_signals if not s)
+        
+        # Allow at most 1 contradiction (accounts for minor rephrasing in one field)
+        return contradictions <= 1
+
+    @staticmethod
+    def _merge_conditions(ca: Dict, cb: Dict) -> Dict:
+        """Merge two conditions, preferring non-null values from ca, filling from cb."""
+        merged = {}
+        for k in set(ca.keys()) | set(cb.keys()):
+            va = ca.get(k)
+            vb = cb.get(k)
+            if va is not None and va != "" and va != [] and va != {}:
+                merged[k] = va
+            else:
+                merged[k] = vb
+        return merged
+
+    @staticmethod
+    def _dedup_conditions(conds: List[Dict]) -> List[Dict]:
+        """Remove duplicate conditions based on chromatographic fingerprint."""
+        if not conds:
+            return []
+        deduped = []
+        for c in conds:
+            is_dup = False
+            for existing in deduped:
+                if ConsensusJudge._chromatographic_match(c, existing):
+                    is_dup = True
+                    break
+            if not is_dup:
+                deduped.append(c)
+        return deduped
+
     def run_bidirectional_consensus(self, qwen_data: List[Dict], llama_data: List[Dict]) -> Dict[str, Any]:
         logger.info("Running Bidirectional Consensus (Swap and Intersect)...")
         # Run A: Qwen -> Mistral
@@ -195,18 +349,60 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         conds_a = out_a.get("final_consensus", {}).get("extracted_conditions", [])
         conds_b = out_b.get("final_consensus", {}).get("extracted_conditions", [])
         
-        # Intersect identically matching conditions
-        str_a = {json.dumps(c, sort_keys=True) for c in conds_a}
-        str_b = {json.dumps(c, sort_keys=True) for c in conds_b}
+        logger.info(f"Run A produced {len(conds_a)} conditions, Run B produced {len(conds_b)} conditions.")
         
-        intersected_strs = str_a.intersection(str_b)
-        intersected_conds = [json.loads(s) for s in intersected_strs]
+        # --- Fuzzy Chromatographic Fingerprint Intersection ---
+        # Phase 1: Find matched pairs (present in both runs)
+        matched_conds = []
+        used_b = set()
+        
+        for i, ca in enumerate(conds_a):
+            best_j = -1
+            for j, cb in enumerate(conds_b):
+                if j in used_b:
+                    continue
+                if self._chromatographic_match(ca, cb):
+                    best_j = j
+                    break
+            
+            if best_j >= 0:
+                merged = self._merge_conditions(ca, conds_b[best_j])
+                matched_conds.append(merged)
+                used_b.add(best_j)
+                logger.info(f"  Matched A[{i}] <-> B[{best_j}]: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
+        
+        # Phase 2: Collect unmatched conditions from both runs
+        unmatched_a = [ca for i, ca in enumerate(conds_a) if not any(
+            self._chromatographic_match(ca, conds_b[j]) for j in range(len(conds_b)) if j not in used_b
+        ) and i >= len(matched_conds)]  # already matched ones won't be here
+        
+        unmatched_b_indices = set(range(len(conds_b))) - used_b
+        unmatched_b = [conds_b[j] for j in unmatched_b_indices]
+        
+        # Phase 3: Include unmatched conditions (they appeared in only one run direction,
+        # but were still judged valid by DeepSeek). Include them but log a note.
+        all_conds = matched_conds.copy()
+        
+        for ca in conds_a:
+            already_in = any(self._chromatographic_match(ca, m) for m in all_conds)
+            if not already_in:
+                logger.info(f"  Including unmatched from Run A: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
+                all_conds.append(ca)
+        
+        for cb in [conds_b[j] for j in unmatched_b_indices]:
+            already_in = any(self._chromatographic_match(cb, m) for m in all_conds)
+            if not already_in:
+                logger.info(f"  Including unmatched from Run B: {self._norm(cb.get('column_name', ''))} / {self._norm(cb.get('critical_component', ''))}")
+                all_conds.append(cb)
+        
+        # Phase 4: Deduplicate the final set
+        final_conds = self._dedup_conditions(all_conds)
         
         requires_retry = out_a.get("requires_retry", False) or out_b.get("requires_retry", False)
         fb_mistral = out_a.get("feedback_for_models", {}).get("mistral-small-24b") or out_b.get("feedback_for_models", {}).get("mistral-small-24b")
         fb_qwen = out_a.get("feedback_for_models", {}).get("qwen3.5-27b") or out_b.get("feedback_for_models", {}).get("qwen3.5-27b")
         
-        logger.info(f"Bidirectional intersection complete: {len(intersected_conds)} conditions retained from {len(conds_a)} (A) and {len(conds_b)} (B).")
+        logger.info(f"Bidirectional consensus complete: {len(matched_conds)} matched + {len(final_conds) - len(matched_conds)} unmatched = {len(final_conds)} total (from {len(conds_a)} A, {len(conds_b)} B).")
         
         return {
             "requires_retry": requires_retry,
@@ -215,6 +411,6 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                 "qwen3.5-27b": fb_qwen
             },
             "final_consensus": {
-                "extracted_conditions": intersected_conds
+                "extracted_conditions": final_conds
             }
         }
