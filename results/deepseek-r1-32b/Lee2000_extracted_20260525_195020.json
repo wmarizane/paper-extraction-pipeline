@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "Lee2000.pdf",
+    "extraction_date": "2026-05-25T19:50:20.838000",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "Lee2000.pdf",
+      "start_time": "2026-05-25T19:49:54.095695",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 7.309943675994873,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10626482963562012,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 4264
+        },
+        "llm_extraction": {
+          "time_seconds": 19.32594084739685,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "cyclic polystyrenes",
+        "critical_component": "linear polystyrene",
+        "architecture": "cyclic",
+        "critical_condition_basis": "LCCC at the critical condition of linear PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18AB",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": null,
+        "evidence_text": "In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "notes": "The setup was used to fractionate cyclic polystyrenes from linear precursors.",
+        "paper_doi": "10.1021/ma000807b",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2000"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 4264,
+      "extraction_success": true,
+      "processing_time": 19.313502550125122,
+      "extracted_count": 1
+    }
+  ]
+}

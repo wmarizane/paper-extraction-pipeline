@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "Banerjee2015.pdf",
+    "extraction_date": "2026-05-04T18:27:27.176794",
+    "model": "llama3.3-70b",
+    "pipeline_metrics": {
+      "pdf_name": "Banerjee2015.pdf",
+      "start_time": "2026-05-04T18:25:30.856235",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 76.72708415985107,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.5645966529846191,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9348
+        },
+        "llm_extraction": {
+          "time_seconds": 39.028728723526,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PIB-diol",
+        "critical_component": "hydroxyl end groups",
+        "architecture": "telechelic",
+        "critical_condition_basis": "elution independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI detector",
+        "evidence_text": "Fig. 9",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PIB-diol",
+        "critical_component": "hydroxyl end groups",
+        "architecture": "telechelic",
+        "critical_condition_basis": "elution independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ELS detector",
+        "evidence_text": "Fig. 6",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "PIB",
+        "critical_component": "end groups",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": "THF",
+        "mobile_phase_solvent_2": "methanol",
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9348,
+      "extraction_success": true,
+      "processing_time": 39.014349937438965,
+      "extracted_count": 3
+    }
+  ]
+}

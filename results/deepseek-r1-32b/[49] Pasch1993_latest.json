@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "[49] Pasch1993.pdf",
+    "extraction_date": "2026-05-25T21:04:59.632610",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "[49] Pasch1993.pdf",
+      "start_time": "2026-05-25T21:03:42.987511",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 32.12962889671326,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.15947675704956055,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 4300
+        },
+        "llm_extraction": {
+          "time_seconds": 44.35581183433533,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PMMA",
+        "critical_component": "PMMA",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "explicit mention of critical point of adsorption for PMMA",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone (MEK)",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "200 µm × 4 mm i.d.",
+        "detector": "differential RI detector",
+        "evidence_text": "At the critical point of PMMA (73 vol% MEK/27 vol% cyclohexane) a complete separation of the elution zones of PMMA and PS is achieved.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "explicit mention of critical point of adsorption for PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone (MEK)",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "200 µm × 4 mm i.d.",
+        "detector": "differential RI detector",
+        "evidence_text": "At the critical point of PMMA (73 vol% MEK/27 vol% cyclohexane) a complete separation of the elution zones of PMMA and PS is achieved.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "PVC",
+        "critical_component": "PVC",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "explicit mention of critical point of adsorption for PVC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone (MEK)",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "200 µm × 4 mm i.d.",
+        "detector": "differential RI detector",
+        "evidence_text": "Figure 4 shows the behaviour of poly(vinyl chloride) (PVC)/PMMA blends in the size exclusion mode for both components (100 vol% MEK) and in the critical mode for PMMA (73 vol% MEK/27 vol% cyclohexane).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 4300,
+      "extraction_success": true,
+      "processing_time": 44.34037709236145,
+      "extracted_count": 3
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "extraction_date": "2026-05-04T03:26:09.657332",
+    "model": "deepseek-r1-32b",
+    "pipeline_metrics": {
+      "pdf_name": "Zhu2015.pdf",
+      "start_time": "2026-05-04T03:25:21.526737",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 12.752377271652222,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.20028138160705566,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 10685
+        },
+        "llm_extraction": {
+          "time_seconds": 35.17773079872131,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "hPS-g-dPS comb-shaped copolymers",
+        "critical_component": "dPS branches",
+        "architecture": "graft copolymers",
+        "critical_condition_basis": "liquid chromatography at the critical condition (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Chang and coworkers [21] investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible, while the visible hPS backbone interacts more strongly with the stationary phase and is in LAC mode.",
+        "notes": "Experimental setup involving LCCC for graft copolymers with dPS branches at critical condition."
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymer",
+        "critical_component": "B block",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "w(B) = -0.276",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "w[(B)][is][at][the][critical][condition][of][a][B] homopolymer ( w[(B)][¼][�][0.276).",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 6793,
+      "extraction_success": true,
+      "processing_time": 35.16194462776184,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 3892,
+      "extraction_success": true,
+      "processing_time": 35.16194462776184,
+      "extracted_count": 1
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "Lee2000.pdf",
+    "extraction_date": "2026-05-25T20:42:02.921365",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "Lee2000.pdf",
+      "start_time": "2026-05-25T20:41:44.710541",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 7.509205341339111,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.16412901878356934,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 4264
+        },
+        "llm_extraction": {
+          "time_seconds": 10.537339687347412,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "linear",
+        "architecture": "null",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18AB",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": null,
+        "evidence_text": "In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2000"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 4264,
+      "extraction_success": true,
+      "processing_time": 10.529366970062256,
+      "extracted_count": 1
+    }
+  ]
+}

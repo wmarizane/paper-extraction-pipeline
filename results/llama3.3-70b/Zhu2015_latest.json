@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "extraction_date": "2026-05-04T18:37:59.476471",
+    "model": "llama3.3-70b",
+    "pipeline_metrics": {
+      "pdf_name": "Zhu2015.pdf",
+      "start_time": "2026-05-04T18:36:20.878283",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 52.458935260772705,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11671042442321777,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10545
+        },
+        "llm_extraction": {
+          "time_seconds": 46.02239465713501,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "hPS-g-dPS copolymers",
+        "critical_component": "dPS branches",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Chang and coworkers investigated the separation of deuterated PS-graft-hydrogenous PS (hPS-g-dPS) copolymers having a single hPS backbone and a few dPS side chains. In that work, the graft copolymer is separated under conditions in which dPS branches are at the critical condition and are purportedly chromatographically invisible, while the visible hPS backbone interacts more strongly with the stationary phase and is in LAC mode.",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "A-g-B graft copolymers",
+        "critical_component": "B branches",
+        "architecture": "graft copolymer",
+        "critical_condition_basis": "critical condition of the corresponding homopolymer",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "LCCC has been shown to be a very effective method to characterize individual blocks in linear block copolymers as well as graft copolymers. Separation of block or graft copolymers with LCCC is based on the assumption that one of the blocks in the copolymer can be made chromatographically “invisible” at the critical condition of the corresponding homopolymer;",
+        "notes": null
+      },
+      {
+        "analyte_polymer": "hPS-b-dPS block copolymer",
+        "critical_component": "dPS block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvent_1": null,
+        "mobile_phase_solvent_2": null,
+        "mobile_phase_other_components": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "More recently, Chang and coworkers examined the retention behavior of a hPS-b-dPS block copolymer under similar conditions and observed the same interesting retention behavior, namely, a decrease in retention time as the invisible block length increases when the overall retention of the block copolymer is in LAC mode.",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10545,
+      "extraction_success": true,
+      "processing_time": 46.00800132751465,
+      "extracted_count": 3
+    }
+  ]
+}

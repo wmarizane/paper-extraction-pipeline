@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper1.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "publication_year": "2011",
+        "mobile_phase_ratio": "92/8",
+        "critical_component": "1,4-isoprene units",
+        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol%).",
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "flow_rate": "0.5 mL min-1",
+        "architecture": "copolymers containing predominantly 1,4- and 3,4-isoprene units",
+        "critical_condition_confidence": "explicit",
+        "pore_size": "100-5, 300-5, and 1000-7",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "temperature_celsius": "29",
+        "column_name": "Nucleosil C18",
+        "mobile_phase_ratio_units": "vol %",
+        "critical_condition_basis": "elution independent of molar mass for 1,4-PI samples",
+        "paper_doi": "10.1021/ma102750s",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "detector": "1H NMR",
+        "corresponding_author_name": "Wolf Hiller"
+      }
+    ]
+  }
+}

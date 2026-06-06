@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "source_pdf": "[49] Pasch1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "corresponding_author_name": "H. Pasch",
+        "evidence_text": "At the critical point of PMMA (73 vol% MEK/27 vol% cyclohexane) a complete separation of the elution zones of PMMA and PS is achieved. ... for PMMA regardless of its molar mass one retention time is obtained corresponding to Ky=1 for all molar masses.",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "flow_rate": null,
+        "analyte_polymer": "PMMA, PS, PVC, PCHMA, poly(styrene-co-acrylonitrile), poly(styrene-co-methyl methacrylate)",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_ratio_units": "vol%",
+        "detector": "Waters differential RI detector R401, Knauer u.v./vis. filter photometer",
+        "critical_component": "PMMA",
+        "publication_year": "1993",
+        "paper_doi": null,
+        "critical_condition_basis": "critical point of adsorption",
+        "pore_size": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "architecture": "homopolymer, copolymer",
+        "critical_condition_confidence": "explicit",
+        "mobile_phase_ratio": "73:27",
+        "column_name": "Nucleosil Si-100",
+        "notes": "Used for separation of blends where PMMA is one component. Other components elute in size exclusion mode.",
+        "corresponding_email_address": null,
+        "temperature_celsius": null,
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        }
+      }
+    ]
+  }
+}

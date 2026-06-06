@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "Lee2000.pdf",
+    "extraction_date": "2026-05-25T20:58:40.120209",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "Lee2000.pdf",
+      "start_time": "2026-05-25T20:56:57.279829",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 7.041749715805054,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1320176124572754,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 4264
+        },
+        "llm_extraction": {
+          "time_seconds": 95.66648530960083,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polystyrene (linear precursor)",
+        "critical_component": "Linear polystyrene",
+        "architecture": "Linear",
+        "critical_condition_basis": "Chromatographic critical condition of linear PS where enthalpic interaction and entropic exclusion are compensated",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18AB",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": null,
+        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 Å pore, 250 × 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "notes": "This condition was used to fractionate cyclic PS from linear precursors. Linear precursors elute independent of molecular weight at this condition.",
+        "paper_doi": "10.1021/ma000807b",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2000"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 4264,
+      "extraction_success": true,
+      "processing_time": 95.64358973503113,
+      "extracted_count": 1
+    }
+  ]
+}
