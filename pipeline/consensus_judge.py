@@ -83,10 +83,12 @@ INSTRUCTIONS:
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
 6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors.
-7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations. The database MUST only contain real, physical, laboratory chromatography experiments. If the candidates extracted simulation parameters, reject them and set "final_consensus" to an empty list (with no conditions).
-8. **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers, merge them into ONE record and list all polymers in `analyte_polymer` separated by commas.
-9. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
-10. **QUALITY FEEDBACK**: If either extraction is severely corrupted, hallucinated, or completely failed due to a missing section, set "requires_retry" to true and provide explicit string feedback for that model in "feedback_for_models" so they can try again. If both are fine, set requires_retry to false.
+7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations.
+8. **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, DO NOT comma-separate them. Output a SEPARATE condition record for EACH analyte polymer, duplicating the other fields.
+9. **CRITICAL COMPONENT & ARCHITECTURE**: If the condition is established on a specific polymer (e.g., linear) but used to analyze a different polymer (e.g., cyclic), `critical_component` and `architecture` MUST reflect the polymer used to **establish** the condition.
+10. **TEMPERATURES**: Only output temperatures explicitly stated as the column/system temperature during the actual LCCC analysis. Do NOT output temperatures from preparative fractionation steps, ambient conditions, or detectors unless explicitly linked.
+11. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
+12. **QUALITY FEEDBACK**: If either extraction is severely corrupted, set "requires_retry" to true and provide string feedback. Otherwise false.
 11. Output ONLY valid JSON matching the schema below.
 
 JSON SCHEMA:
@@ -307,18 +309,94 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         # Allow at most 1 contradiction (accounts for minor rephrasing in one field)
         return contradictions <= 1
 
-    @staticmethod
-    def _merge_conditions(ca: Dict, cb: Dict) -> Dict:
-        """Merge two conditions, preferring non-null values from ca, filling from cb."""
+    def _merge_conditions(self, ca: Dict, cb: Dict) -> Dict:
+        """Merge two conditions, resolving conflicts via Dispute Resolution if necessary."""
         merged = {}
+        disputes = []
         for k in set(ca.keys()) | set(cb.keys()):
             va = ca.get(k)
             vb = cb.get(k)
-            if va is not None and va != "" and va != [] and va != {}:
+            
+            # Simple cases
+            if va == vb:
+                merged[k] = va
+            elif not va and vb:
+                merged[k] = vb
+            elif va and not vb:
                 merged[k] = va
             else:
-                merged[k] = vb
+                # Conflict! va and vb are both present and different.
+                # Use Dispute Resolution if it's a critical field, otherwise default to Run A.
+                # For now, we will track them and resolve them.
+                disputes.append((k, va, vb))
+                merged[k] = va # Temporary fallback
+                
+        if disputes and self.llm:
+            for k, va, vb in disputes:
+                # Exclude dicts/lists from simple string dispute resolution for now
+                if isinstance(va, str) and isinstance(vb, str) and len(va) < 200:
+                    resolved = self._resolve_dispute(k, va, vb, ca.get("evidence_text", ""), cb.get("evidence_text", ""))
+                    merged[k] = resolved
+                    
         return merged
+
+    def _resolve_dispute(self, field: str, val_a: str, val_b: str, ev_a: str, ev_b: str) -> str:
+        """Runs a tiny focused prompt to resolve a field contradiction."""
+        prompt = f"""You are resolving a conflict between two AI extractions for the field '{field}'.
+Option A: "{val_a}"
+Evidence A: "{ev_a}"
+
+Option B: "{val_b}"
+Evidence B: "{ev_b}"
+
+Based on the evidence, which value is more scientifically accurate? 
+Return ONLY a valid JSON object: {{"resolved_value": "chosen string or null"}}"""
+        
+        schema = {
+            "type": "object",
+            "properties": {"resolved_value": {"type": ["string", "null"]}},
+            "required": ["resolved_value"]
+        }
+        
+        try:
+            formatted = self._format_prompt(prompt)
+            params = SamplingParams(temperature=0.0, max_tokens=100, structured_outputs=StructuredOutputsParams(json=schema))
+            out = self.llm.generate([formatted], params, use_tqdm=False)
+            data = json.loads(re.sub(r"```json|```", "", out[0].outputs[0].text).strip())
+            return data.get("resolved_value", val_a)
+        except Exception as e:
+            logger.warning(f"Dispute resolution failed for {field}: {e}")
+            return val_a
+
+    def _validate_unmatched(self, cond: Dict) -> bool:
+        """Validates if an unmatched condition is a hallucination or real."""
+        if not self.llm:
+            return True
+            
+        prompt = f"""An AI extracted the following condition, but another AI completely missed it.
+Condition:
+```json
+{json.dumps(cond, indent=2)}
+```
+
+Is this a valid, physically performed experimental LCCC condition based on its own evidence_text, or is it a hallucination/simulation/literature reference?
+Return ONLY a valid JSON object: {{"is_valid": true/false}}"""
+        
+        schema = {
+            "type": "object",
+            "properties": {"is_valid": {"type": "boolean"}},
+            "required": ["is_valid"]
+        }
+        
+        try:
+            formatted = self._format_prompt(prompt)
+            params = SamplingParams(temperature=0.0, max_tokens=50, structured_outputs=StructuredOutputsParams(json=schema))
+            out = self.llm.generate([formatted], params, use_tqdm=False)
+            data = json.loads(re.sub(r"```json|```", "", out[0].outputs[0].text).strip())
+            return data.get("is_valid", True)
+        except Exception as e:
+            logger.warning(f"Validation failed for unmatched condition: {e}")
+            return True
 
     @staticmethod
     def _dedup_conditions(conds: List[Dict]) -> List[Dict]:
@@ -379,24 +457,43 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         unmatched_b_indices = set(range(len(conds_b))) - used_b
         unmatched_b = [conds_b[j] for j in unmatched_b_indices]
         
-        # Phase 3: Include unmatched conditions (they appeared in only one run direction,
-        # but were still judged valid by DeepSeek). Include them but log a note.
+        # Phase 3: Include and validate unmatched conditions
         all_conds = matched_conds.copy()
         
         for ca in conds_a:
             already_in = any(self._chromatographic_match(ca, m) for m in all_conds)
             if not already_in:
-                logger.info(f"  Including unmatched from Run A: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
-                all_conds.append(ca)
+                if self._validate_unmatched(ca):
+                    logger.info(f"  Including validated unmatched from Run A: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
+                    all_conds.append(ca)
+                else:
+                    logger.info(f"  Rejected unmatched from Run A (Validation failed).")
         
         for cb in [conds_b[j] for j in unmatched_b_indices]:
             already_in = any(self._chromatographic_match(cb, m) for m in all_conds)
             if not already_in:
-                logger.info(f"  Including unmatched from Run B: {self._norm(cb.get('column_name', ''))} / {self._norm(cb.get('critical_component', ''))}")
-                all_conds.append(cb)
+                if self._validate_unmatched(cb):
+                    logger.info(f"  Including validated unmatched from Run B: {self._norm(cb.get('column_name', ''))} / {self._norm(cb.get('critical_component', ''))}")
+                    all_conds.append(cb)
+                else:
+                    logger.info(f"  Rejected unmatched from Run B (Validation failed).")
         
         # Phase 4: Deduplicate the final set
         final_conds = self._dedup_conditions(all_conds)
+        
+        # Phase 5: Trace back confidences to Qwen and Mistral inputs
+        for fc in final_conds:
+            qwen_conf = "missed"
+            mistral_conf = "missed"
+            for qc in qwen_data:
+                if self._chromatographic_match(fc, qc):
+                    qwen_conf = qc.get("critical_condition_confidence", "unclear")
+                    break
+            for mc in llama_data:
+                if self._chromatographic_match(fc, mc):
+                    mistral_conf = mc.get("critical_condition_confidence", "unclear")
+                    break
+            fc["model_confidences"] = {"qwen": qwen_conf, "mistral": mistral_conf}
         
         requires_retry = out_a.get("requires_retry", False) or out_b.get("requires_retry", False)
         fb_mistral = out_a.get("feedback_for_models", {}).get("mistral-small-24b") or out_b.get("feedback_for_models", {}).get("mistral-small-24b")
