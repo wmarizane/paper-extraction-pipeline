@@ -41,5 +41,12 @@ echo "================================"
 python run_consensus.py
 
 echo "================================"
+echo "Exporting CSV Summaries for all folders"
+echo "================================"
+python pipeline/csv_exporter.py results/qwen3.5-27b results/qwen_summary.csv
+python pipeline/csv_exporter.py results/mistral-small-24b results/mistral_summary.csv
+python pipeline/csv_exporter.py results/consensus results/consensus_summary.csv
+
+echo "================================"
 echo "Job Complete"
 echo "================================"
