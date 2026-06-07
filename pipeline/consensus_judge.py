@@ -251,6 +251,13 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         temp_b = norm(cb.get("temperature_celsius"))
         comp_a = norm(ca.get("critical_component"))
         comp_b = norm(cb.get("critical_component"))
+        
+        analyte_a = norm(ca.get("analyte_polymer"))
+        analyte_b = norm(cb.get("analyte_polymer"))
+        
+        # Strict exclusion: If analyte polymers are distinctly different, they are different conditions.
+        if analyte_a and analyte_b and analyte_a != analyte_b:
+            return False
 
         # --- Signal 1: Column name (substring containment or word overlap) ---
         if col_a and col_b:
