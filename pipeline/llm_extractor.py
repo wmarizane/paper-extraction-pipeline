@@ -187,8 +187,10 @@ IMPORTANT INTERPRETATION RULES:
 - If a block copolymer is analyzed under critical conditions for one block, record the analyte polymer and also the specific critical component.
 - **DEDUPLICATION**: If the exact same experimental setup is mentioned multiple times in the text (e.g. in the abstract, methods, and conclusion), merge them into a single entry. Do not create duplicate records for identical setups.
 - **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
-- **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers (e.g., PS/PMMA blends and PS-b-PMMA), create ONE critical condition record and list all the polymers in the analyte_polymer field, separated by commas.
+- **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, DO NOT comma-separate them. Create a SEPARATE condition record for EACH analyte polymer, duplicating the other fields.
+- **CRITICAL COMPONENT & ARCHITECTURE**: If the critical condition is established using a specific polymer (e.g., linear PS) but used to analyze a different polymer (e.g., cyclic PS), the `critical_component` and `architecture` fields MUST reflect the polymer used to **establish** the condition (e.g., linear).
 - **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
+- **TEMPERATURES**: Only extract temperatures explicitly stated as the column or system temperature during the actual LCCC analysis. Do NOT extract temperatures from completely separate experimental procedures (e.g., preparative fractionation, synthesis, preliminary steps), detector temperatures, or general ambient conditions unless explicitly linked to the LCCC run.
 - **END-GROUPS**: If different end-groups on the same polymer architecture result in different critical conditions, extract them as separate entries and specify the end-group in the analyte_polymer or architecture field.
 - Use null for missing information.
 - Preserve reported wording where exact normalization is not possible.

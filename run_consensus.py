@@ -30,84 +30,106 @@ def main():
         print("Missing required model results directories.")
         return
         
-    papers = set()
-    for f in qwen_dir.glob("*_latest.json"):
-        papers.add(f.stem.replace("_latest", ""))
-        
-    if not papers:
-        print("No papers found to process.")
-        return
-        
-    print(f"Initializing Consensus Judge for {len(papers)} papers...")
+    print(f"Initializing Consensus Judge...")
     judge = ConsensusJudge()
     
-    for paper in sorted(list(papers)):
-        print(f"\n>>> Running Consensus for: {paper}")
-        qwen_file = qwen_dir / f"{paper}_latest.json"
-        llama_file = llama_dir / f"{paper}_latest.json"
+    # Loop over subfolders in the Qwen directory
+    subfolders = [p.name for p in qwen_dir.iterdir() if p.is_dir()]
+    if not subfolders:
+        subfolders = [""]  # fallback to root if no subfolders exist
         
-        qwen_conds = load_json(qwen_file)
-        llama_conds = load_json(llama_file)
+    for subfolder in subfolders:
+        print(f"\n{'='*50}\nProcessing Subfolder: {subfolder or 'ROOT'}\n{'='*50}")
+        qwen_sub_dir = qwen_dir / subfolder if subfolder else qwen_dir
+        llama_sub_dir = llama_dir / subfolder if subfolder else llama_dir
+        consensus_sub_dir = consensus_dir / subfolder if subfolder else consensus_dir
         
-        print(f"Loaded {len(qwen_conds)} conditions from Qwen, {len(llama_conds)} from LLaMA.")
+        consensus_sub_dir.mkdir(parents=True, exist_ok=True)
         
-        try:
-            final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
+        papers = set()
+        for f in qwen_sub_dir.glob("*_latest.json"):
+            papers.add(f.stem.replace("_latest", ""))
             
-            # Phase 2 Feedback Loop Orchestration (Max 1 Retry)
-            if final_data.get("requires_retry"):
-                print("⚠️ Judge requested a retry based on quality feedback!")
-                feedback_dict = final_data.get("feedback_for_models", {})
-                
-                for model_name, feedback_str in feedback_dict.items():
-                    if feedback_str:
-                        print(f"🔄 Retrying {model_name} with feedback: {feedback_str}")
-                        pdf_path = Path("Inputs") / f"{paper}.pdf"
-                        if not pdf_path.exists():
-                            print(f"Warning: PDF not found for retry at {pdf_path}")
-                            continue
-                            
-                        cmd = [
-                            "python", "run_local.py", 
-                            str(pdf_path), 
-                            "--model", model_name, 
-                            "--feedback", feedback_str
-                        ]
-                        subprocess.run(cmd, check=False)
-                
-                # Reload JSONs after retry
-                print(f"🔄 Re-running consensus after retry...")
-                qwen_conds = load_json(qwen_file)
-                llama_conds = load_json(llama_file)
-                
-                # Run consensus again (2nd pass, no further retries)
+        if not papers:
+            print(f"No papers found in {subfolder}.")
+            continue
+            
+        print(f"Found {len(papers)} papers in {subfolder}.")
+        
+        for paper in sorted(list(papers)):
+            print(f"\n>>> Running Consensus for: {paper}")
+            qwen_file = qwen_sub_dir / f"{paper}_latest.json"
+            llama_file = llama_sub_dir / f"{paper}_latest.json"
+            
+            qwen_conds = load_json(qwen_file)
+            llama_conds = load_json(llama_file)
+            
+            print(f"Loaded {len(qwen_conds)} conditions from Qwen, {len(llama_conds)} from LLaMA.")
+            
+            try:
                 final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
-            
-            final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
-            print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")
-            
-            output_file = consensus_dir / f"{paper}_consensus.json"
-            
-            # Wrap in our standard format
-            out_json = {
-                "metadata": {
-                    "source_pdf": f"{paper}.pdf",
-                    "model": "deepseek-r1-32b-consensus",
-                    "inputs": ["qwen3.5-27b", "mistral-small-24b"]
-                },
-                "summary": {
-                    "total_conditions": len(final_conds)
-                },
-                "extracted_data": {
-                    "conditions": final_conds
-                }
-            }
-            
-            with open(output_file, 'w', encoding='utf-8') as f:
-                json.dump(out_json, f, indent=2)
                 
-        except Exception as e:
-            print(f"❌ Consensus failed for {paper}: {e}")
+                # Phase 2 Feedback Loop Orchestration (Max 1 Retry)
+                if final_data.get("requires_retry"):
+                    print("⚠️ Judge requested a retry based on quality feedback!")
+                    feedback_dict = final_data.get("feedback_for_models", {})
+                    
+                    for model_name, feedback_str in feedback_dict.items():
+                        if feedback_str:
+                            print(f"🔄 Retrying {model_name} with feedback: {feedback_str}")
+                            if subfolder:
+                                pdf_path = Path("Inputs") / subfolder / f"{paper}.pdf"
+                            else:
+                                pdf_path = Path("Inputs") / f"{paper}.pdf"
+                                
+                            if not pdf_path.exists():
+                                print(f"Warning: PDF not found for retry at {pdf_path}")
+                                continue
+                                
+                            cmd = [
+                                "python", "run_local.py", 
+                                str(pdf_path), 
+                                "--model", model_name, 
+                                "--feedback", feedback_str
+                            ]
+                            if subfolder:
+                                cmd.extend(["--subfolder", subfolder])
+                                
+                            subprocess.run(cmd, check=False)
+                    
+                    # Reload JSONs after retry
+                    print(f"🔄 Re-running consensus after retry...")
+                    qwen_conds = load_json(qwen_file)
+                    llama_conds = load_json(llama_file)
+                    
+                    # Run consensus again (2nd pass, no further retries)
+                    final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
+                
+                final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
+                print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")
+                
+                output_file = consensus_sub_dir / f"{paper}_consensus.json"
+                
+                # Wrap in our standard format
+                out_json = {
+                    "metadata": {
+                        "source_pdf": f"{paper}.pdf",
+                        "model": "deepseek-r1-32b-consensus",
+                        "inputs": ["qwen3.5-27b", "mistral-small-24b"]
+                    },
+                    "summary": {
+                        "total_conditions": len(final_conds)
+                    },
+                    "extracted_data": {
+                        "conditions": final_conds
+                    }
+                }
+                
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    json.dump(out_json, f, indent=2)
+                    
+            except Exception as e:
+                print(f"❌ Consensus failed for {paper}: {e}")
 
 if __name__ == "__main__":
     main()

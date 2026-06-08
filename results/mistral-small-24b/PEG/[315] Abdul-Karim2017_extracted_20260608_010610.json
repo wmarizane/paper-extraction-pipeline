@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[315] Abdul-Karim2017.pdf",
+    "extraction_date": "2026-06-08T01:06:10.983849",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[315] Abdul-Karim2017.pdf",
+      "start_time": "2026-06-08T01:04:23.631511",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 86.54124021530151,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10926437377929688,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9539
+        },
+        "llm_extraction": {
+          "time_seconds": 20.70167326927185,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene ether-carbonate)",
+        "critical_component": "poly(ethylene ether-carbonate)",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ZORBAX ODS",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "64:35",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "70 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
+        "notes": "null",
+        "paper_doi": "10.1002/pola.28559",
+        "corresponding_author_name": "M. I. Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2017"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Ultisil diol",
+        "stationary_phase_chemistry": "diol",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "65:35",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone.",
+        "notes": "null",
+        "paper_doi": "10.1002/pola.28559",
+        "corresponding_author_name": "M. I. Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2017"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9539,
+      "extraction_success": true,
+      "processing_time": 20.687906503677368,
+      "extracted_count": 2
+    }
+  ]
+}

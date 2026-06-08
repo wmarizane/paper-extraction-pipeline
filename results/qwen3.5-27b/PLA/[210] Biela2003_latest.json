@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[210] Biela2003.pdf",
+    "extraction_date": "2026-06-07T22:31:48.321217",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[210] Biela2003.pdf",
+      "start_time": "2026-06-07T22:29:24.753839",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 40.5523681640625,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11782050132751465,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12492
+        },
+        "llm_extraction": {
+          "time_seconds": 102.89708185195923,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "linear poly(L-lactide)",
+        "critical_component": "poly(L-lactide) backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volumes showed no dependence on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Si-100 and Si-300",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "56.25/43.75",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 and 300 A",
+        "column_dimensions": null,
+        "detector": "Waters 486 tunable UV detector",
+        "evidence_text": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 £ 10[3] to 7.4 £ 10[4] ... showed no dependence of the elution volumes on molar mass. ... LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase.",
+        "notes": "Critical conditions established for linear PLA used to analyze star-shaped PLA.",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_author_name": "Andrzej Duda",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
+        "publication_year": "2003"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12492,
+      "extraction_success": true,
+      "processing_time": 102.87403845787048,
+      "extracted_count": 1
+    }
+  ]
+}

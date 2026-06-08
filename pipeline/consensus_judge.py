@@ -14,6 +14,85 @@ from pipeline.llm_extractor import EXTRACTION_SCHEMA
 
 logger = logging.getLogger(__name__)
 
+CANONICAL_POLYMERS = {
+    "ps": "polystyrene",
+    "polystyrene": "polystyrene",
+    "pmma": "poly(methyl methacrylate)",
+    "poly(methyl methacrylate)": "poly(methyl methacrylate)",
+    "polymethylmethacrylate": "poly(methyl methacrylate)",
+    "polymethyl methacrylate": "poly(methyl methacrylate)",
+    "pnbma": "poly(n-butyl methacrylate)",
+    "poly(n-butyl methacrylate)": "poly(n-butyl methacrylate)",
+    "pe": "polyethylene",
+    "polyethylene": "polyethylene",
+    "pp": "polypropylene",
+    "polypropylene": "polypropylene",
+    "it-pp": "polypropylene",
+    "itpp": "polypropylene",
+    "isotactic polypropylene": "polypropylene",
+    "peg": "poly(ethylene glycol)",
+    "peo": "poly(ethylene glycol)",
+    "poly(ethylene glycol)": "poly(ethylene glycol)",
+    "poly(ethylene oxide)": "poly(ethylene glycol)",
+    "polyethylene glycol": "poly(ethylene glycol)",
+    "polyethylene oxide": "poly(ethylene glycol)",
+    "ppo": "poly(propylene glycol)",
+    "ppg": "poly(propylene glycol)",
+    "poly(propylene glycol)": "poly(propylene glycol)",
+    "poly(propylene oxide)": "poly(propylene glycol)",
+    "polypropylene glycol": "poly(propylene glycol)",
+    "polypropylene oxide": "poly(propylene glycol)",
+    "propylene oxide": "poly(propylene glycol)",
+    "po": "poly(propylene glycol)",
+    "pbo": "poly(butene oxide)",
+    "poly(butene oxide)": "poly(butene oxide)",
+    "bo": "poly(butene oxide)",
+    "butene oxide": "poly(butene oxide)",
+    "pho": "poly(hexene oxide)",
+    "poly(hexene oxide)": "poly(hexene oxide)",
+    "ho": "poly(hexene oxide)",
+    "hexene oxide": "poly(hexene oxide)",
+    "pib": "polyisobutylene",
+    "polyisobutylene": "polyisobutylene",
+    "pla": "poly(lactic acid)",
+    "plla": "poly(lactic acid)",
+    "poly(lactic acid)": "poly(lactic acid)",
+    "poly(l-lactic acid)": "poly(lactic acid)",
+    "poly(lactide)": "poly(lactic acid)",
+    "polylactide": "poly(lactic acid)",
+    "pi": "polyisoprene",
+    "polyisoprene": "polyisoprene",
+    "1,4-pi": "polyisoprene",
+    "polyisoprene (1,4-pi)": "polyisoprene",
+    "polyisoprene (1,4-isoprene)": "polyisoprene",
+}
+
+CANONICAL_SOLVENTS = {
+    "odcb": "1,2-dichlorobenzene",
+    "ortho-dichlorobenzene": "1,2-dichlorobenzene",
+    "1,2-dichlorobenzene": "1,2-dichlorobenzene",
+    "tcb": "1,2,4-trichlorobenzene",
+    "1,2,4-trichlorobenzene": "1,2,4-trichlorobenzene",
+    "acn": "acetonitrile",
+    "acetonitrile": "acetonitrile",
+    "ch3cn": "acetonitrile",
+    "thf": "tetrahydrofuran",
+    "tetrahydrofuran": "tetrahydrofuran",
+    "mek": "butanone",
+    "methyl ethyl ketone": "butanone",
+    "butanone": "butanone",
+    "dmf": "dimethylformamide",
+    "dimethylformamide": "dimethylformamide",
+    "n,n-dimethylformamide": "dimethylformamide",
+    "ipa": "isopropyl alcohol",
+    "isopropyl alcohol": "isopropyl alcohol",
+    "isopropanol": "isopropyl alcohol",
+    "2-propanol": "isopropyl alcohol",
+    "dcm": "dichloromethane",
+    "dichloromethane": "dichloromethane",
+    "ch2cl2": "dichloromethane",
+}
+
 CONSENSUS_SCHEMA = {
     "type": "object",
     "properties": {
@@ -83,10 +162,12 @@ INSTRUCTIONS:
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
 6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors.
-7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations. The database MUST only contain real, physical, laboratory chromatography experiments. If the candidates extracted simulation parameters, reject them and set "final_consensus" to an empty list (with no conditions).
-8. **MULTIPLE ANALYTES**: If the exact same critical condition is applied to multiple analyte polymers, merge them into ONE record and list all polymers in `analyte_polymer` separated by commas.
-9. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
-10. **QUALITY FEEDBACK**: If either extraction is severely corrupted, hallucinated, or completely failed due to a missing section, set "requires_retry" to true and provide explicit string feedback for that model in "feedback_for_models" so they can try again. If both are fine, set requires_retry to false.
+7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations.
+8. **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, DO NOT comma-separate them. Output a SEPARATE condition record for EACH analyte polymer, duplicating the other fields.
+9. **CRITICAL COMPONENT & ARCHITECTURE**: If the condition is established on a specific polymer (e.g., linear) but used to analyze a different polymer (e.g., cyclic), `critical_component` and `architecture` MUST reflect the polymer used to **establish** the condition.
+10. **TEMPERATURES**: Only output temperatures explicitly stated as the column/system temperature during the actual LCCC analysis. Do NOT output temperatures from preparative fractionation steps, ambient conditions, or detectors unless explicitly linked.
+11. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
+12. **QUALITY FEEDBACK**: If either extraction is severely corrupted, set "requires_retry" to true and provide string feedback. Otherwise false.
 11. Output ONLY valid JSON matching the schema below.
 
 JSON SCHEMA:
@@ -195,12 +276,27 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
     @staticmethod
     def _norm_solvents(solv):
-        """Normalize solvent list to a sorted set of lowercase strings."""
+        """Normalize solvent list to a sorted set of lowercase strings with synonym replacement."""
         if not solv:
             return set()
         if isinstance(solv, str):
-            return {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
-        return {str(s).strip().lower() for s in solv if s}
+            raw_set = {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
+        else:
+            raw_set = {str(s).strip().lower() for s in solv if s}
+            
+        norm_set = set()
+        for s in raw_set:
+            s_clean = re.sub(r'[^a-z0-9]', '', s)
+            matched = False
+            for key, canonical in CANONICAL_SOLVENTS.items():
+                key_clean = re.sub(r'[^a-z0-9]', '', key)
+                if s_clean == key_clean or s_clean == key or s == key:
+                    norm_set.add(canonical)
+                    matched = True
+                    break
+            if not matched:
+                norm_set.add(s)
+        return norm_set
 
     @staticmethod
     def _norm_ratio(ratio):
@@ -223,13 +319,86 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         return len(intersection) / len(union)
 
     @staticmethod
+    def _canonicalize_polymer(val: str) -> str:
+        """Canonicalize polymer names using mapping, falling back to clean lowercase."""
+        if not val:
+            return ""
+        val_norm = val.lower().strip()
+        val_clean = re.sub(r'[^a-z0-9]', '', val_norm)
+        for key, canonical in CANONICAL_POLYMERS.items():
+            key_clean = re.sub(r'[^a-z0-9]', '', key)
+            if val_clean == key_clean or val_clean == key or val_norm == key:
+                return canonical
+        return val_norm
+
+    @staticmethod
+    def _is_abbreviation(a: str, b: str) -> bool:
+        """
+        Check if one string is a prefix or acronym/abbreviation of another.
+        e.g., 'PS' and 'Polystyrene' -> True
+              'PMMA' and 'Poly(methyl methacrylate)' -> True
+        """
+        if not a or not b:
+            return False
+        a = a.lower().strip()
+        b = b.lower().strip()
+        
+        if a == b:
+            return True
+            
+        # Ensure a is the shorter one
+        if len(a) > len(b):
+            a, b = b, a
+            
+        if len(a) < 2:
+            return False
+            
+        # Clean special chars
+        a_clean = re.sub(r'[^a-z0-9]', '', a)
+        b_clean = re.sub(r'[^a-z0-9]', '', b)
+        
+        if not a_clean or not b_clean:
+            return False
+            
+        # Prefix check (e.g., "polyisop" and "polyisoprene")
+        if b_clean.startswith(a_clean):
+            return True
+            
+        # Acronym check:
+        # e.g., 'pmma' and 'poly(methyl methacrylate)'
+        # Split b into words/parts on non-alphanumeric
+        parts = [p for p in re.split(r'[^a-z0-9]', b) if p]
+        if len(parts) >= len(a_clean):
+            # Check if initials match
+            initials = "".join(p[0] for p in parts)
+            if initials.startswith(a_clean) or a_clean == initials:
+                return True
+                
+        # Handle 'p' prefix for 'poly'
+        # e.g., 'pnbma' -> 'poly(n-butyl methacrylate)'
+        if a.startswith('p') and b.startswith('poly'):
+            a_sub = a[1:]
+            b_sub = b[4:]
+            a_sub_clean = re.sub(r'[^a-z0-9]', '', a_sub)
+            b_sub_clean = re.sub(r'[^a-z0-9]', '', b_sub)
+            if b_sub_clean.startswith(a_sub_clean):
+                return True
+            parts_sub = [p for p in re.split(r'[^a-z0-9]', b_sub) if p]
+            if len(parts_sub) >= len(a_sub_clean):
+                initials_sub = "".join(p[0] for p in parts_sub)
+                if initials_sub.startswith(a_sub_clean) or a_sub_clean == initials_sub:
+                    return True
+                    
+        return False
+
+    @staticmethod
     def _chromatographic_match(ca: Dict, cb: Dict) -> bool:
         """
-        Fuzzy chromatographic fingerprint matching.
+        Fuzzy chromatographic fingerprint matching with abbreviation and synonym support.
         
         Uses a multi-signal scoring approach across hard experimental parameters
         (column, solvents, ratio, temperature) and soft semantic fields 
-        (critical_component). Two items describing the same experiment phrased
+        (critical_component, analyte_polymer). Two items describing the same experiment phrased
         differently should still match.
         
         Returns True if the conditions likely describe the same experimental setup.
@@ -238,6 +407,8 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         norm_solvents = ConsensusJudge._norm_solvents
         norm_ratio = ConsensusJudge._norm_ratio
         word_jaccard = ConsensusJudge._word_jaccard
+        canon_poly = ConsensusJudge._canonicalize_polymer
+        is_abbrev = ConsensusJudge._is_abbreviation
 
         col_a = norm(ca.get("column_name"))
         col_b = norm(cb.get("column_name"))
@@ -247,8 +418,16 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         ratio_b = norm_ratio(cb.get("mobile_phase_ratio"))
         temp_a = norm(ca.get("temperature_celsius"))
         temp_b = norm(cb.get("temperature_celsius"))
+        
         comp_a = norm(ca.get("critical_component"))
         comp_b = norm(cb.get("critical_component"))
+        analyte_a = norm(ca.get("analyte_polymer"))
+        analyte_b = norm(cb.get("analyte_polymer"))
+        
+        comp_a_canon = canon_poly(comp_a)
+        comp_b_canon = canon_poly(comp_b)
+        analyte_a_canon = canon_poly(analyte_a)
+        analyte_b_canon = canon_poly(analyte_b)
 
         # --- Signal 1: Column name (substring containment or word overlap) ---
         if col_a and col_b:
@@ -279,46 +458,148 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
         # --- Signal 5: Critical component (word-level Jaccard, lenient) ---
         if comp_a and comp_b:
-            comp_match = (comp_a == comp_b) or (comp_a in comp_b) or (comp_b in comp_a) or (word_jaccard(comp_a, comp_b) >= 0.2)
+            comp_match = (
+                (comp_a_canon == comp_b_canon) or 
+                (comp_a_canon in comp_b_canon) or 
+                (comp_b_canon in comp_a_canon) or 
+                is_abbrev(comp_a, comp_b) or 
+                (word_jaccard(comp_a, comp_b) >= 0.2)
+            )
         else:
             comp_match = True
+            
+        # --- Signal 6: Analyte polymer (word-level Jaccard, lenient) ---
+        if analyte_a and analyte_b:
+            analyte_match = (
+                (analyte_a_canon == analyte_b_canon) or 
+                (analyte_a_canon in analyte_b_canon) or 
+                (analyte_b_canon in analyte_a_canon) or 
+                is_abbrev(analyte_a, analyte_b) or 
+                (word_jaccard(analyte_a, analyte_b) >= 0.2)
+            )
+        else:
+            analyte_match = True
 
-        # Count how many hard signals are present (i.e., both sides have data)
-        hard_signals = []
+        # Split signals into chromatographic and polymer naming parts
+        chrom_signals = []
         if col_a and col_b:
-            hard_signals.append(col_match)
+            chrom_signals.append(col_match)
         if solv_a and solv_b:
-            hard_signals.append(solv_match)
+            chrom_signals.append(solv_match)
         if ratio_a and ratio_b:
-            hard_signals.append(ratio_match)
+            chrom_signals.append(ratio_match)
         if temp_a and temp_b:
-            hard_signals.append(temp_match)
+            chrom_signals.append(temp_match)
+
+        poly_signals = []
         if comp_a and comp_b:
-            hard_signals.append(comp_match)
+            poly_signals.append(comp_match)
+        if analyte_a and analyte_b:
+            poly_signals.append(analyte_match)
 
         # If no hard signals are comparable, fall back to True (rare edge case)
-        if not hard_signals:
+        if not chrom_signals and not poly_signals:
             return True
 
-        # Require: all present signals agree (no contradictions)
-        # A contradiction = a signal where both sides have data but values disagree
-        contradictions = sum(1 for s in hard_signals if not s)
-        
-        # Allow at most 1 contradiction (accounts for minor rephrasing in one field)
-        return contradictions <= 1
+        chrom_contradictions = sum(1 for s in chrom_signals if not s)
+        poly_contradictions = sum(1 for s in poly_signals if not s)
 
-    @staticmethod
-    def _merge_conditions(ca: Dict, cb: Dict) -> Dict:
-        """Merge two conditions, preferring non-null values from ca, filling from cb."""
+        # OVERRIDE RULE: If chromatographic setup matches perfectly, allow name mismatches.
+        # Requires at least 2 comparable chromatographic parameters to be active.
+        if len(chrom_signals) >= 2 and chrom_contradictions == 0:
+            return True
+
+        # Standard rule: allow at most 1 contradiction overall
+        return (chrom_contradictions + poly_contradictions) <= 1
+
+    def _merge_conditions(self, ca: Dict, cb: Dict) -> Dict:
+        """Merge two conditions, resolving conflicts via Dispute Resolution if necessary."""
         merged = {}
+        disputes = []
         for k in set(ca.keys()) | set(cb.keys()):
             va = ca.get(k)
             vb = cb.get(k)
-            if va is not None and va != "" and va != [] and va != {}:
+            
+            # Simple cases
+            if va == vb:
+                merged[k] = va
+            elif not va and vb:
+                merged[k] = vb
+            elif va and not vb:
                 merged[k] = va
             else:
-                merged[k] = vb
+                # Conflict! va and vb are both present and different.
+                # Use Dispute Resolution if it's a critical field, otherwise default to Run A.
+                # For now, we will track them and resolve them.
+                disputes.append((k, va, vb))
+                merged[k] = va # Temporary fallback
+                
+        if disputes and self.llm:
+            for k, va, vb in disputes:
+                # Exclude dicts/lists from simple string dispute resolution for now
+                if isinstance(va, str) and isinstance(vb, str) and len(va) < 200:
+                    resolved = self._resolve_dispute(k, va, vb, ca.get("evidence_text", ""), cb.get("evidence_text", ""))
+                    merged[k] = resolved
+                    
         return merged
+
+    def _resolve_dispute(self, field: str, val_a: str, val_b: str, ev_a: str, ev_b: str) -> str:
+        """Runs a tiny focused prompt to resolve a field contradiction."""
+        prompt = f"""You are resolving a conflict between two AI extractions for the field '{field}'.
+Option A: "{val_a}"
+Evidence A: "{ev_a}"
+
+Option B: "{val_b}"
+Evidence B: "{ev_b}"
+
+Based on the evidence, which value is more scientifically accurate? 
+Return ONLY a valid JSON object: {{"resolved_value": "chosen string or null"}}"""
+        
+        schema = {
+            "type": "object",
+            "properties": {"resolved_value": {"type": ["string", "null"]}},
+            "required": ["resolved_value"]
+        }
+        
+        try:
+            formatted = self._format_prompt(prompt)
+            params = SamplingParams(temperature=0.0, max_tokens=100, structured_outputs=StructuredOutputsParams(json=schema))
+            out = self.llm.generate([formatted], params, use_tqdm=False)
+            data = json.loads(re.sub(r"```json|```", "", out[0].outputs[0].text).strip())
+            return data.get("resolved_value", val_a)
+        except Exception as e:
+            logger.warning(f"Dispute resolution failed for {field}: {e}")
+            return val_a
+
+    def _validate_unmatched(self, cond: Dict) -> bool:
+        """Validates if an unmatched condition is a hallucination or real."""
+        if not self.llm:
+            return True
+            
+        prompt = f"""An AI extracted the following condition, but another AI completely missed it.
+Condition:
+```json
+{json.dumps(cond, indent=2)}
+```
+
+Is this a valid, physically performed experimental LCCC condition based on its own evidence_text, or is it a hallucination/simulation/literature reference?
+Return ONLY a valid JSON object: {{"is_valid": true/false}}"""
+        
+        schema = {
+            "type": "object",
+            "properties": {"is_valid": {"type": "boolean"}},
+            "required": ["is_valid"]
+        }
+        
+        try:
+            formatted = self._format_prompt(prompt)
+            params = SamplingParams(temperature=0.0, max_tokens=50, structured_outputs=StructuredOutputsParams(json=schema))
+            out = self.llm.generate([formatted], params, use_tqdm=False)
+            data = json.loads(re.sub(r"```json|```", "", out[0].outputs[0].text).strip())
+            return data.get("is_valid", True)
+        except Exception as e:
+            logger.warning(f"Validation failed for unmatched condition: {e}")
+            return True
 
     @staticmethod
     def _dedup_conditions(conds: List[Dict]) -> List[Dict]:
@@ -379,24 +660,43 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         unmatched_b_indices = set(range(len(conds_b))) - used_b
         unmatched_b = [conds_b[j] for j in unmatched_b_indices]
         
-        # Phase 3: Include unmatched conditions (they appeared in only one run direction,
-        # but were still judged valid by DeepSeek). Include them but log a note.
+        # Phase 3: Include and validate unmatched conditions
         all_conds = matched_conds.copy()
         
         for ca in conds_a:
             already_in = any(self._chromatographic_match(ca, m) for m in all_conds)
             if not already_in:
-                logger.info(f"  Including unmatched from Run A: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
-                all_conds.append(ca)
+                if self._validate_unmatched(ca):
+                    logger.info(f"  Including validated unmatched from Run A: {self._norm(ca.get('column_name', ''))} / {self._norm(ca.get('critical_component', ''))}")
+                    all_conds.append(ca)
+                else:
+                    logger.info(f"  Rejected unmatched from Run A (Validation failed).")
         
         for cb in [conds_b[j] for j in unmatched_b_indices]:
             already_in = any(self._chromatographic_match(cb, m) for m in all_conds)
             if not already_in:
-                logger.info(f"  Including unmatched from Run B: {self._norm(cb.get('column_name', ''))} / {self._norm(cb.get('critical_component', ''))}")
-                all_conds.append(cb)
+                if self._validate_unmatched(cb):
+                    logger.info(f"  Including validated unmatched from Run B: {self._norm(cb.get('column_name', ''))} / {self._norm(cb.get('critical_component', ''))}")
+                    all_conds.append(cb)
+                else:
+                    logger.info(f"  Rejected unmatched from Run B (Validation failed).")
         
         # Phase 4: Deduplicate the final set
         final_conds = self._dedup_conditions(all_conds)
+        
+        # Phase 5: Trace back confidences to Qwen and Mistral inputs
+        for fc in final_conds:
+            qwen_conf = "missed"
+            mistral_conf = "missed"
+            for qc in qwen_data:
+                if self._chromatographic_match(fc, qc):
+                    qwen_conf = qc.get("critical_condition_confidence", "unclear")
+                    break
+            for mc in llama_data:
+                if self._chromatographic_match(fc, mc):
+                    mistral_conf = mc.get("critical_condition_confidence", "unclear")
+                    break
+            fc["model_confidences"] = {"qwen": qwen_conf, "mistral": mistral_conf}
         
         requires_retry = out_a.get("requires_retry", False) or out_b.get("requires_retry", False)
         fb_mistral = out_a.get("feedback_for_models", {}).get("mistral-small-24b") or out_b.get("feedback_for_models", {}).get("mistral-small-24b")

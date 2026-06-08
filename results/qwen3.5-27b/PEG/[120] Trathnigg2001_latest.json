@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[120] Trathnigg2001.pdf",
+    "extraction_date": "2026-06-07T22:58:20.610240",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[120] Trathnigg2001.pdf",
+      "start_time": "2026-06-07T22:55:41.384342",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 37.627856731414795,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1202092170715332,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9107
+        },
+        "llm_extraction": {
+          "time_seconds": 121.47772264480591,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Fatty alcohol ethoxylates (Brij 30, Brij 52, Brij 76)",
+        "critical_component": "Polyoxyethylene chain",
+        "architecture": "Block copolymer (hydrophobic alkyl chain - polyoxyethylene chain)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for polyoxyethylene on ODS columns",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS (Octadecylsilane)",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "SICON LCD 201 RI detector and DDS70 density detector",
+        "evidence_text": "In system C (LCCC), a of 2.0 ml/min was maintained... A semi-preparative column was used... Spherisorb ODS2 (250x10 mm, 5 mm, 80 A)... 35.08C on system C... In LCCC, fatty alcohols are eluted slightly in front of the ethoxylate peaks even at the critical adsorption point (CAP) on ODS columns in methanol–water, which is typically found between 95 and 97% (w/w) of methanol... if the mobile phase composition is slightly changed... the fatty alcohol can be separated from the ethoxylates (on most columns, this can be effected at approximately 90% (w/w) of methanol). Fig. 3. shows a separation of Brij 30 on the semipreparative column in methanol–water (90:10).",
+        "notes": "The text states the CAP is typically 95-97% methanol, but the specific experiment described for separation of fatty alcohols from ethoxylates was performed at 90% methanol. The text explicitly links this setup to LCCC analysis of fatty alcohol ethoxylates.",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2001"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9107,
+      "extraction_success": true,
+      "processing_time": 121.45544862747192,
+      "extracted_count": 1
+    }
+  ]
+}

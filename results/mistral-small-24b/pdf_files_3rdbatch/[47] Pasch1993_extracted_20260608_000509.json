@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[47] Pasch1993.pdf",
+    "extraction_date": "2026-06-08T00:05:09.573402",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[47] Pasch1993.pdf",
+      "start_time": "2026-06-08T00:04:14.591870",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 36.291324853897095,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10322380065917969,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6481
+        },
+        "llm_extraction": {
+          "time_seconds": 18.586867809295654,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey-Nagel Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min^-1",
+        "pore_size": null,
+        "column_dimensions": "200x4mm",
+        "detector": "differential RI detector",
+        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Merck LiChrospher Si-300 and Si-1000",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min^-1",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "u.v./vis. filter photometer",
+        "evidence_text": "For this column system, which has slightly different silica gel surface characteristics, the mobile phase composition has to be adjusted accordingly. As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6481,
+      "extraction_success": true,
+      "processing_time": 18.57783269882202,
+      "extracted_count": 2
+    }
+  ]
+}

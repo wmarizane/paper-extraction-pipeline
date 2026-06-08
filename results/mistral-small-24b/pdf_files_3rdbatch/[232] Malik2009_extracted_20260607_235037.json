@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "source_pdf": "[232] Malik2009.pdf",
+    "extraction_date": "2026-06-07T23:50:37.695407",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[232] Malik2009.pdf",
+      "start_time": "2026-06-07T23:44:51.840202",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 9.400733947753906,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1165018081665039,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8013
+        },
+        "llm_extraction": {
+          "time_seconds": 336.33783316612244,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 7
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.01",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "At the transition point of these two mechanisms, which is often termed the “critical adsorption point” (CAP), there is a special mobile-phase composition (at a given temperature), where the interaction parameter has a value of zero: under such conditions, the polymer is eluted—independent of its molar mass—at the void volume of the column. In other words, at the CAP the polymer chain becomes chromatographically invisible [2–5]. This situation can be utilized in the characterization of functional oligomers, block and graft copolymers, as it allows the separation of polymer homologues according to other structural units, such as their end groups or other blocks [3, 6– 11] (M.I. Malik, B. Trathnigg, and C.O. Kappe, unpublished results). Especially interesting are amphiphilic polymers, which contain a hydrophilic block [such as poly(ethylene oxide)] linked to a hydrophobic block [such as poly(propylene oxide), a higher poly(alkylene oxide), and polycaprolactone, PCL]. These materials have applications in many fields, such as nonionic surfactants and emulsifiers, in which the hydrophilic (water-soluble) polyoxyethylene chain is linked to lipophilic (oil-soluble) groups or blocks. Hence, these products are surface-active: they arrange themselves at the surface of water or at the oil–water interface and thus lower the surface tension. Amphiphilic block copolymers of ε-caprolactone and ethylene oxide (EO) have special properties [12]. As the poly (ethylene glycol) (PEG) block minimizes platelet deposition onto surfaces exposed to the bloodstream [13], they can be used to produce blood-contacting implant devices having low protein adsorption, membranes for separation processes, biosensors, chromatographic supports, contact lenses, and in blood and protein storage applications, etc. [14]. These polymers may contain various impurities (such as the homopolymers, residual monomer, and initiator), which may influence the properties of the products. Consequently, there is a strong need for reliable characterization methods. Owing to the complex nature of amphiphilic polymers, this will also require complex techniques, such as two-dimensional liquid chromatography. There have also been attempts to apply pyrolysis gas chromatography [15, 16] and mass spectroscopy [mainly matrix-assisted laser desorption/ionization time of flight (MALDI-TOF) mass spectroscopy] [17– 19]. Pyrolysis gas chromatography is very useful in the analysis of cross-linked polymers, but it cannot be considered as a standard technique in the characterization of block copolymers: since 2000, there have been very few papers in the literature. MALDI-TOF mass spectroscopy is problematic in the analysis of highly polydisperse samples; it works very well, however, with samples with a narrow molar mass distribution. When applied to fractions from a chromatographic separation, it yields highly valuable information. In liquid chromatography, one may use different separation modes, which separate species according to different criteria (corresponding to the interaction parameters of the components), and combine them to achieve a two-dimensional separation. In the case of block copolymers, the interaction parameters cA and cB of the individual structural units (A and B) will typically have different values. If both cA and cB are negative, the overall molar mass distribution can be determined by SEC. In SEC, retention decreases with increasing molar mass and shows only a minor influence of chemical composition. It must be mentioned that the SEC calibration functions of different polymers can be considerably different (as may be the interaction parameters). In this case the chemical composition along the peak is required, which can be obtained from dual detection [20–22]. If both cA and cB are positive, a reasonable separation by LAC (with retention increasing exponentially with the number of repeat units) can only be achieved if one block is monodisperse [6, 23]. If, however, both blocks are polydisperse and cA ≠ cB, several superimposed series of peaks will be obtained, and these cannot be resolved. If one of the interaction parameters for one repeat unit is positive and the other one is negative, each polymer homologue is eluted in SEC order, but far behind the void volume of the column. This mechanism, which is called “liquid exclusion–adsorption chromatography” (LEAC) [24, 25], can be utilized in the separation of monofunctional oligomers with a monodisperse adsorbing block or end group. In the analysis of block copolymers, LEAC may only be applied as the second dimension in two-dimensional chromatography. If one of the interaction parameters (cA or cB) is zero, the corresponding block becomes “chromatographically invisible” and separation according to the other block can be achieved (liquid chromatography under critical conditions, LCCC). Depending on the interaction parameter of the other repeat unit, this separation may follow a SEC [7, 26–28] (situation A) or a LAC [6, 9, 29, 30] mechanism (situation B). There could be different options, as has been discussed previously [31, 32] (see Table 1). On reversed-phase columns, there may be critical conditions for the hydrophilic block in a mobile phase with rather high polarity. In such a mobile phase the hydrophobic block will be eluted in LAC mode. On the other hand, critical conditions may also be found for the hydrophobic block in a rather nonpolar mobile phase. In this case, the hydrophilic block will be eluted in SEC mode. On normal-phase columns, a CAP for the hydrophilic block may be found in a polar mobile phase, in which the hydrophobic block will be eluted in SEC mode. In a mobile phase with low polarity, a CAP may exist for the hydrophobic block: in this case the hydrophilic block will be eluted in LAC mode. In this study these possible situations were evaluated with respect of advantages and limitations. As practical examples — we chose various block copolymers based on epoxide EO, propylene oxide (PO), butene oxide (BO), hexene oxide — (HO), lactone (caprolactone, CL) repeat units or polymers with terminal alkyl groups. These samples were analyzed on various columns of different nature and in different mobile phases.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(propylene glycol)",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi RP column",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "Critical conditions for PO (at SEC conditions for EO) can be realized on the Jordi column in 90 wt% acetone, as has already been described previously [31, 32], but also in THF–water.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "BO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi RP column",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.5",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "For PBO, a CAP exists on the Jordi column in 84.5 wt% THF (Fig. 4), and on the Prodigy column in above 90 wt% THF (Fig. 5). It is interesting to note that at very high THF concentrations PBO no longer goes in the exclusion regime but is more or less critical (from 88 to 95 wt% THF); this may be due to a change of the column behavior in eluents with a high organic solvent content, where the influence of residual silanol groups increases dramatically. In such a mobile phase, silica-based reversed-phase columns start behaving as normal-phase columns [33].",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "BO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "For PBO, a CAP exists on the Jordi column in 84.5 wt% THF (Fig. 4), and on the Prodigy column in above 90 wt% THF (Fig. 5). It is interesting to note that at very high THF concentrations PBO no longer goes in the exclusion regime but is more or less critical (from 88 to 95 wt% THF); this may be due to a change of the column behavior in eluents with a high organic solvent content, where the influence of residual silanol groups increases dramatically. In such a mobile phase, silica-based reversed-phase columns start behaving as normal-phase columns [33].",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(hexene oxide)",
+        "critical_component": "HO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi RP column",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "For PHO, a CAP is observed on the Jordi column at 87 wt% THF, as can be seen in Fig. 6. In such a mobile phase various PHOs with different degrees of polymerization are eluted at the same volume.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(propylene glycol)",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb S5P",
+        "stationary_phase_chemistry": "phenyl",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "A completely different situation is observed on the Spherisorb S5P column in 90 wt % methanol–water: in such a mobile phase PPG is eluted at the CAP, while PEG is eluted in LAC mode (see Fig. 9)! Under such conditions a separation according to the number of EO units (regardless of the length of the PO block) can be achieved. It must be mentioned that the Spherisorb S5P column (which can normally be considered as a reversed-phase column) behaves in such a mobile phase like a normal-phase column. This seems to be due to the residual silanol groups on this stationary phase. On other phenyl phases (with a more complete end capping) such a separation could not be achieved.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Ǻ",
+        "column_dimensions": "250 mm×4.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "The combination of critical conditions and LAC can also be utilized in the analysis of EO–-CL block copolymers: on the Prodigy column a CAP for EO exists at 90 wt% methanol. In such a mobile phase, PCL oligomers can be resolved to the baseline. As can be seen in Fig. 10, the chromatograms of a PCL initiated with methanol and a diblock copolymer (initiated with PEG-MME 2000) show exactly the same peak pattern. The focus of our current work in this context is to fractionate all these amphiphilic block copolymers using LCCC (at the CAP for one block) and to analyze these fractions by using SEC, LAC, and MALDI-TOF in the second dimension. The results thus obtained will be communicated soon.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8013,
+      "extraction_success": true,
+      "processing_time": 107.50835418701172,
+      "extracted_count": 7
+    }
+  ]
+}

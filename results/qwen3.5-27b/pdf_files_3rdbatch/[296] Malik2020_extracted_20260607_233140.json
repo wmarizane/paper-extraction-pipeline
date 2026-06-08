@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[296] Malik2020.pdf",
+    "extraction_date": "2026-06-07T23:31:40.167057",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[296] Malik2020.pdf",
+      "start_time": "2026-06-07T22:55:32.101828",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 90.72202634811401,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11971473693847656,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 16945
+        },
+        "llm_extraction": {
+          "time_seconds": 2077.2233860492706,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 16945,
+      "extraction_success": false,
+      "processing_time": 693.364337682724,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEO-PMMA block copolymers\",\n      \"critical_component\": \"PMMA\",\n      \"architecture\": \"di-block and tri-block\",\n      \"critical_condition_basis\": \"CCP of PMMA\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"column_name\": \"Prod"
+    }
+  ]
+}

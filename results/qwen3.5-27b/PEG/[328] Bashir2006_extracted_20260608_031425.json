@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[328] Bashir2006.pdf",
+    "extraction_date": "2026-06-08T03:14:25.874378",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[328] Bashir2006.pdf",
+      "start_time": "2026-06-08T03:12:21.513957",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 36.619998931884766,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12595033645629883,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13603
+        },
+        "llm_extraction": {
+          "time_seconds": 87.6143627166748,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poly(ethylene glycol)",
+        "critical_component": "Poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "Elution time independent of molar mass at 83% MeOH",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "UV-detector",
+        "evidence_text": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+        "notes": "Critical composition determined from isocratic experiments on high molar mass PEGs (2010 to 40,000 g/mol).",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13603,
+      "extraction_success": true,
+      "processing_time": 87.59132266044617,
+      "extracted_count": 1
+    }
+  ]
+}

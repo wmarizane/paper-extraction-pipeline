@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "source_pdf": "[321] Malik2009.pdf",
+    "extraction_date": "2026-06-08T00:15:40.759026",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[321] Malik2009.pdf",
+      "start_time": "2026-06-08T00:14:27.045210",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 23.56049942970276,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12801909446716309,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8467
+        },
+        "llm_extraction": {
+          "time_seconds": 50.025132179260254,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "poly(butene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi DVB 500A RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55",
+        "mobile_phase_ratio_units": "% w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "As we have shown previously, critical conditions for PO could be realized on a Jordi Gel DVB 500 RP column in acetone–water (92.42%, w/w acetone) [2] or in THF–water (80.22%, w/w THF) [22,23]. Under these conditions, PEG elutes in SEC mode. Moreover, PPG diols (from chain transfer to water) and allyl-PPG (from chain transfer to the monomer) could not only be separated from the block copolymer, but also from each other [22,23]. We have also found critical conditions for poly(butene oxide) and poly(hexene oxide) on the same column in a comparatively more non-polar mobile phase composition. As can be seen, a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6), for HO on the same column in 87.04%, w/w THF (Fig. 7).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(hexene oxide)",
+        "critical_component": "poly(hexene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi DVB 500A RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04",
+        "mobile_phase_ratio_units": "% w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "As we have shown previously, critical conditions for PO could be realized on a Jordi Gel DVB 500 RP column in acetone–water (92.42%, w/w acetone) [2] or in THF–water (80.22%, w/w THF) [22,23]. Under these conditions, PEG elutes in SEC mode. Moreover, PPG diols (from chain transfer to water) and allyl-PPG (from chain transfer to the monomer) could not only be separated from the block copolymer, but also from each other [22,23]. We have also found critical conditions for poly(butene oxide) and poly(hexene oxide) on the same column in a comparatively more non-polar mobile phase composition. As can be seen, a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6), for HO on the same column in 87.04%, w/w THF (Fig. 7).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "poly(butene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi DVB 500A RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55",
+        "mobile_phase_ratio_units": "% w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for BO, the first block (PEG-MME) and possible diblocks (PEG-MME–PO and PEG-MME–BO) are well separated from the BO homopolymer. A shoulder in the chromatograms of the diblocks indicates the presence of some homopolymer.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(hexene oxide)",
+        "critical_component": "poly(hexene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi DVB 500A RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04",
+        "mobile_phase_ratio_units": "% w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for HO, all other structures elute in SEC mode and are thus clearly separated from the HO homopolymer.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8467,
+      "extraction_success": true,
+      "processing_time": 50.01347899436951,
+      "extracted_count": 4
+    }
+  ]
+}

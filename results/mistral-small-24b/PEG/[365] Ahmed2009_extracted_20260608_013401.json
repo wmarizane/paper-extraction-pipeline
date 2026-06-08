@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "[365] Ahmed2009.pdf",
+    "extraction_date": "2026-06-08T01:34:01.996297",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[365] Ahmed2009.pdf",
+      "start_time": "2026-06-08T01:29:13.027052",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 20.3945894241333,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10169196128845215,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10231
+        },
+        "llm_extraction": {
+          "time_seconds": 268.47281432151794,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "critical_component": "EO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.12",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 3 mm",
+        "detector": "density",
+        "evidence_text": "In 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "critical_component": "EO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.06",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 3 mm",
+        "detector": "density",
+        "evidence_text": "A separation of the non-polar PCL under critical conditions for the polar EO unit can only be possible on reversed phases. On typical RP columns, a CAP for EO exists in 85–95 wt-% methanol–water [60]; in acetone–water two critical points have been observed: at 26–30 wt-% and at 90–93 wt-% (the latter exists only on silica–based stationary phases) [60, 61]. In 90 wt-% methanol–water low molecular PCL samples could be reasonably separated, but higher PCLs are not soluble in such a mobile phase. PCL is also insoluble in 30% acetone, and in 90% acetone the retention of PCL is not sufficient. On RP phases, critical conditions for EO exist also in acetonitrile–water. We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "critical_component": "EO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.06",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 3 mm",
+        "detector": "density",
+        "evidence_text": "A separation of the non-polar PCL under critical conditions for the polar EO unit can only be possible on reversed phases. On typical RP columns, a CAP for EO exists in 85–95 wt-% methanol–water [60]; in acetone–water two critical points have been observed: at 26–30 wt-% and at 90–93 wt-% (the latter exists only on silica–based stationary phases) [60, 61]. In 90 wt-% methanol–water low molecular PCL samples could be reasonably separated, but higher PCLs are not soluble in such a mobile phase. PCL is also insoluble in 30% acetone, and in 90% acetone the retention of PCL is not sufficient. On RP phases, critical conditions for EO exist also in acetonitrile–water. We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10231,
+      "extraction_success": true,
+      "processing_time": 36.349833250045776,
+      "extracted_count": 3
+    }
+  ]
+}

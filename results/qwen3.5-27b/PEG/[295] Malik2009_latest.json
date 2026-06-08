@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[295] Malik2009.pdf",
+    "extraction_date": "2026-06-08T01:57:58.060466",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[295] Malik2009.pdf",
+      "start_time": "2026-06-08T01:54:25.920579",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 27.7681782245636,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12539076805114746,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9580
+        },
+        "llm_extraction": {
+          "time_seconds": 184.24619555473328,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PPO on reversed phase columns in THF-water mobile phases containing about 80% THF",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.99",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "As we have shown in a previous paper [7], a CAP for the hydrophobic PPO block can be found on reversed phase columns in THF–water mobile phases containing about 80% THF... As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF. In such a mobile phase, a separation of the block copolymer from PPGs and PPOs with allylic end group can be achieved (Fig. 5).",
+        "notes": "Analytical scale LCCC used to establish CAP for PPO block. Fig 5 shows separation at 84.99 wt% THF.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "MeO-PEG 2000-b-PPO",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "Critical conditions for PPO on semipreparative ODS column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "300 mm x 25 mm",
+        "detector": "density detection system DDS 70",
+        "evidence_text": "A similar separation is also possible on a semipreparative column... LCCC of a diblock copolymer (MeO-PEG 2000-b-PPO) on Spherisorb ODS2 (semipreparative) in 81.14 wt% THF (CAP of PPO); detection: density.",
+        "notes": "Semipreparative scale LCCC used for fractionation of the diblock copolymer. The condition is defined as the CAP of PPO.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9580,
+      "extraction_success": true,
+      "processing_time": 184.22340154647827,
+      "extracted_count": 2
+    }
+  ]
+}

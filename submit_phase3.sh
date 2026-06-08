@@ -41,5 +41,22 @@ echo "================================"
 python run_consensus.py
 
 echo "================================"
+echo "Exporting CSV Summaries for all subfolders"
+echo "================================"
+for SUBDIR in results/consensus/*/; do
+    [ -d "$SUBDIR" ] || continue
+    SUBFOLDER=$(basename "$SUBDIR")
+    echo "Exporting CSVs for subfolder: $SUBFOLDER"
+    
+    if [ -d "results/qwen3.5-27b/$SUBFOLDER" ]; then
+        python pipeline/csv_exporter.py "results/qwen3.5-27b/$SUBFOLDER" "results/${SUBFOLDER}_qwen_summary.csv"
+    fi
+    if [ -d "results/mistral-small-24b/$SUBFOLDER" ]; then
+        python pipeline/csv_exporter.py "results/mistral-small-24b/$SUBFOLDER" "results/${SUBFOLDER}_mistral_summary.csv"
+    fi
+    python pipeline/csv_exporter.py "$SUBDIR" "results/${SUBFOLDER}_consensus_summary.csv"
+done
+
+echo "================================"
 echo "Job Complete"
 echo "================================"

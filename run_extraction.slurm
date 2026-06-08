@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:rtx_6000:1
-#SBATCH --time=04:00:00
+#SBATCH --time=12:00:00
 #SBATCH --output=logs/output_%x-%j.log
 #SBATCH --error=logs/error_%x-%j.log
 
@@ -84,14 +84,27 @@ if [ -n "${MODEL:-}" ]; then
     MODEL_FLAG="--model $MODEL"
 fi
 
-# Process all PDFs in Inputs/
+# Process all PDFs in Inputs/$SUBFOLDER/
 PIPELINE_EXIT_CODE=0
-for PDF in Inputs/*.pdf; do
+
+if [ -z "${SUBFOLDER:-}" ]; then
+    echo "ERROR: SUBFOLDER environment variable is required."
+    exit 1
+fi
+
+TARGET_DIR="Inputs/$SUBFOLDER"
+if [ ! -d "$TARGET_DIR" ]; then
+    echo "ERROR: Target directory $TARGET_DIR does not exist."
+    exit 1
+fi
+
+for PDF in "$TARGET_DIR"/*.pdf; do
+    [ -f "$PDF" ] || continue
     echo ""
-    echo ">>> Processing: $PDF"
+    echo ">>> Processing: $PDF (Subfolder: $SUBFOLDER)"
     # Temporarily disable exit-on-error to handle failures gracefully
     set +e
-    $NLP_PYTHON run_local.py "$PDF" $MODEL_FLAG
+    $NLP_PYTHON run_local.py "$PDF" $MODEL_FLAG --subfolder "$SUBFOLDER"
     EXIT=$?
     set -e
     if [ $EXIT -ne 0 ]; then
