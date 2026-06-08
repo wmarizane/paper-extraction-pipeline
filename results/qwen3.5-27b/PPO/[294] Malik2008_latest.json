@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[294] Malik2008.pdf",
+    "extraction_date": "2026-06-07T23:13:04.339733",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[294] Malik2008.pdf",
+      "start_time": "2026-06-07T23:11:12.872729",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 13.464020013809204,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13481760025024414,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9565
+        },
+        "llm_extraction": {
+          "time_seconds": 97.86806535720825,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(propylene oxide)",
+        "critical_component": "poly(propylene oxide) repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass for PPG diols and allyl-terminated PPGs",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% poly-divinylbenzene",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "All separations in LCCC were performed on a Jordi Gel DVB 500 RP column... in 80 wt% THF-water... As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation...",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used for LCCC separation based on end groups.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9565,
+      "extraction_success": true,
+      "processing_time": 97.8454008102417,
+      "extracted_count": 1
+    }
+  ]
+}

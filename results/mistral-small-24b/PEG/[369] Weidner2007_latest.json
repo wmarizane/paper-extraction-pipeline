@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[369] Weidner2007.pdf",
+    "extraction_date": "2026-06-08T01:44:48.688785",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[369] Weidner2007.pdf",
+      "start_time": "2026-06-08T01:39:43.500503",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 44.01050901412964,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1210019588470459,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8584
+        },
+        "llm_extraction": {
+          "time_seconds": 261.0566327571869,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-co-PPO",
+        "critical_component": "PEO",
+        "architecture": "mono-n-butyl ether",
+        "critical_condition_basis": "critical conditions of separation of one polymer unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": "C18 phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "85:15",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "In LACCC mode a polymer elutes independently of its molar mass according to its chemical heterogeneity, e.p. end groups. This particular mode is nearly exclusively applied in the 1° dimension of the 2D chromatography. By means of a switching valve fractions are taken and transferred into the 2™ dimension, which is SEC. Using commercially available software (WINGPC™: Polymer Standard Service, Mainz, Germany) 2D plots can be created showing molar mass versus end group distribution. The analysis of copolymers can also be performed without this often Lime-consuming combination of methods. First the ‘critical’ conditions of separation of one polymer unit have to be ascertained. At these conditions separation according to the mass of the second polymer unit must be achieved. The same procedure, ie. separation at ‘critical’ conditions, has also to be performed for the second polymer unit. After calibration of SEC for both units the molar mass and molar mass distribution (MMD) of the copolymer units can be obtained within a certain mass range, which is different for various polymer systems. An example for a PEO-a-PPo mono-n-butyl ether polymer is shown in Figs. 1(a)—-1(d). Hence, one has to ascertain ‘critical’ conditions of adsorption for each single copolymer structure and, simultaneously, to ensure a separation according to molar mass for the corresponding second polymer unit. This cannot be achieved for all copolymers. Sometimes, at ‘critical’ conditions for the first unit, the second unit elutes in adsorption mode, and a SEC separation cannot be obtained. Furthermore, especially at higher masses, the solubility of one structural unit at ‘critical’ conditions of the other is limited, which results in precipitation at the top of the separation columns. Furthermore, the separation at ‘critical’ conditions of adsorption is achieved in most cases using binary (or ternary) solvent mixtures, which might contain salt to avoid aggregation. Thus, the transfer of fractions from LACCC mode to SEC mode can lead to strong additional signals in the size exclusion chromatograms. In conjunction with a drastically lower polymer concentration in the second dimension due to fractionation (up to 1M) single fractions) of the original amount of sample, clear peak detection cannot always be assured. Another important drawback is the lack of standards for calibrating the SEC. For this reason a matrix mixture as well as structure-dependent ionization completely different approach was recently presented. The probabilities in MALDI-TOF MS, the signal intensity chromatographic separation in LACCC was shifted to LAC near ‘critical’, LAC,.,,CC) mode. This resulted in a used (see Fig. 2). Therefore, after baseline subtraction, each broadening of peaks due to increased interactions of polymer MALDI spectrum was normalized in a second step to an absolute intensity of 100%. Por the construction of 2D plots separation conditions have to be very carefully adjusted, because the risk of precipitation of molecules always exists. Simultaneously, the second chromatographic dimension - (SEC) was replaced by matrix-assisted laser desorption/ionization time-of-flight mass spectrometry mass spectrometry (MALDI-TOF MS). For MALDI coupling, fractions taken from LAC).C were transferred by means ofa spray device onto the MALDI sample target. Using the new MassChrom2D software tool the copolymer composition of each fraction can be calculated from mass spectra. This software was developed to replace the inconvenient and time-consuming calculation procedure previously performed in Microsoft Excel. The practicability of the chosen mathematical procedure for the analysis of copolyesters was presented recently. The procedure is based on the assignment of observed masses by MALDI-TOF MS to calculated masses in a matrix formed by both monomer units, normalization and subsequent correction by chromatographic intensity information. Depending on the Figure 2. Evaporative light scattering detector (ELSD) signal peak resolution in MALDI-TOF MS, which can be significantly improved by a previous chromatographic separation, and total ion current (TIC) of a series of 667 MALDI mass copolymers with masses up to m/z 11000 could be investigated. Due to inhomogeneities in the solid sample/ deposition onto the MALDI target.",
+        "notes": null,
+        "paper_doi": "10.1002/rom.314h",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8584,
+      "extraction_success": true,
+      "processing_time": 31.005916357040405,
+      "extracted_count": 1
+    }
+  ]
+}

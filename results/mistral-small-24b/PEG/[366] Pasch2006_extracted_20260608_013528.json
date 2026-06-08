@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[366] Pasch2006.pdf",
+    "extraction_date": "2026-06-08T01:35:28.843619",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[366] Pasch2006.pdf",
+      "start_time": "2026-06-08T01:34:42.233666",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 28.36918830871582,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10030126571655273,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8023
+        },
+        "llm_extraction": {
+          "time_seconds": 18.140297889709473,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG-g-PMAA",
+        "critical_component": "PEG",
+        "architecture": "graft",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "81/19",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ELSD",
+        "evidence_text": "The reaction products PEG-g-PMAA and PMAA having a higher polarity than PEG should elute under these conditions prior the PEG peak.",
+        "notes": null,
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG-g-PVA",
+        "critical_component": "PEG",
+        "architecture": "graft",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "82.5:17.5",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume.",
+        "notes": null,
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "publication_year": "2006"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8023,
+      "extraction_success": true,
+      "processing_time": 18.1288423538208,
+      "extracted_count": 2
+    }
+  ]
+}

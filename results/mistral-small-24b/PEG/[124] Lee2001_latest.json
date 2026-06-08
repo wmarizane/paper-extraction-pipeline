@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "[124] Lee2001.pdf",
+    "extraction_date": "2026-06-08T00:04:38.340202",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[124] Lee2001.pdf",
+      "start_time": "2026-06-08T00:03:20.732918",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 47.94295358657837,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1043546199798584,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10006
+        },
+        "llm_extraction": {
+          "time_seconds": 29.55979561805725,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "critical_component": "PEO",
+        "architecture": "triblock",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "68",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The critical condition of PEO block was determined by monitoring the retention volumes of three different molecular weight PEG standards (Mn: 1500, 3400, and 8000). At a given composition of the eluent, the critical condition can be found by adjusting the column temperature until the molecular weight dependence of the retention time disappears. The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/v).",
+        "notes": null,
+        "paper_doi": "10.1021/ac001219z",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "critical_component": "PEO",
+        "architecture": "triblock",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "37",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The critical condition in Figure 3 was obtained with an ACN/water mixture (47/53, v/v) at 37 °C column temperature, which is different from the condition for the diblock copolymer shown in Figure 2.",
+        "notes": null,
+        "paper_doi": "10.1021/ac001219z",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "critical_component": "PEO",
+        "architecture": "triblock",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "54",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "For the analysis of the longer PLLA blocks, the critical condition was changed again by increasing the content of ACN (ACN:H2O 54:46, v/v) and raising the temperature (54 °C) as compared to Figure 3.",
+        "notes": null,
+        "paper_doi": "10.1021/ac001219z",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "publication_year": "2001"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10006,
+      "extraction_success": true,
+      "processing_time": 29.546282291412354,
+      "extracted_count": 3
+    }
+  ]
+}

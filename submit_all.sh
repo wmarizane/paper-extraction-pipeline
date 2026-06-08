@@ -26,9 +26,17 @@ JOB_IDS=()
 for MODEL in "${MODELS[@]}"; do
     for SUBFOLDER in "${SUBFOLDERS[@]}"; do
         echo "Submitting extraction job for $MODEL on $SUBFOLDER..."
+        
+        # Mistral needs 2 GPUs (tensor_parallel_size=2)
+        if [ "$MODEL" == "mistral-small-24b" ]; then
+            GPU_REQ="gpu:rtx_6000:2"
+        else
+            GPU_REQ="gpu:rtx_6000:1"
+        fi
+        
         # Extract job ID from parsable output
-        JOB_ID=$(sbatch --parsable --export=ALL,MODEL=$MODEL,SUBFOLDER=$SUBFOLDER run_extraction.slurm)
-        echo "  -> Job ID: $JOB_ID"
+        JOB_ID=$(sbatch --parsable --gres=$GPU_REQ --export=ALL,MODEL=$MODEL,SUBFOLDER=$SUBFOLDER run_extraction.slurm)
+        echo "  -> Job ID: $JOB_ID (GPUs: $GPU_REQ)"
         JOB_IDS+=("$JOB_ID")
     done
 done

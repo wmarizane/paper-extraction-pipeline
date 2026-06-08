@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[365] Ahmed2009.pdf",
+    "extraction_date": "2026-06-08T03:58:12.329599",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[365] Ahmed2009.pdf",
+      "start_time": "2026-06-08T03:55:03.709843",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 19.29609179496765,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14943194389343262,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10231
+        },
+        "llm_extraction": {
+          "time_seconds": 169.17412042617798,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG, PEG-MME",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.12 wt-% acetonitrile",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "DDS 70 density detection system",
+        "evidence_text": "We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": "Used as first dimension for LCCC separation of block copolymers. The text states PEG elutes close to CAP in this composition.",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PEG-MME 350 initiated block copolymer",
+        "critical_component": "EO",
+        "architecture": "diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.06 wt-% acetonitrile",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "DDS 70 density detection system",
+        "evidence_text": "Fractionation of the sample initiated with PEG-MME 350 (see Fig. 1) by LCCC on Spherisorb ODS (prep) in 69.06 wt% acetonitrile–water. Detection: density.",
+        "notes": "Specific fractionation experiment for the block copolymer. The text implies this composition is at the CAP for the EO block to separate based on CL block length.",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10231,
+      "extraction_success": true,
+      "processing_time": 169.15120482444763,
+      "extracted_count": 2
+    }
+  ]
+}

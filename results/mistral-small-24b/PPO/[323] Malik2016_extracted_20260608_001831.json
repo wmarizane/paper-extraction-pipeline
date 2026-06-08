@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "source_pdf": "[323] Malik2016.pdf",
+    "extraction_date": "2026-06-08T00:18:31.528943",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[323] Malik2016.pdf",
+      "start_time": "2026-06-08T00:16:20.377896",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 105.80436730384827,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11859893798828125,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12890
+        },
+        "llm_extraction": {
+          "time_seconds": 25.227847576141357,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": "PEO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "37/63 v/v, 87/13 v/v",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
+        "evidence_text": "Reversed phase (RP) LC separates with regard to PO units of the copolymers at the critical conditions of PEO. On the contrary, Normal phase (NP) LC separates with respect to EO units of the copolymers with minimal effect of PPO block at its critical conditions.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": "PPO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "80/20 v/v",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
+        "evidence_text": "On the contrary, NPLC can be used to achieve CAP of PPO and interaction of PEO. In this study, we realized critical conditions of PPO on Nucleosil columns in acetonitrile-water mobile phase. PPOs show molar mass independent elution in the range of interest for this study (up to 2500 g/mol) in acetonitrile/water (80/20 v/v).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12890,
+      "extraction_success": true,
+      "processing_time": 25.207186460494995,
+      "extracted_count": 2
+    }
+  ]
+}

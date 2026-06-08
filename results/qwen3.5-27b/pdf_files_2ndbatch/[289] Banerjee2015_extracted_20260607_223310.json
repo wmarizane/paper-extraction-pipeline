@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[289] Banerjee2015.pdf",
+    "extraction_date": "2026-06-07T22:33:10.993343",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[289] Banerjee2015.pdf",
+      "start_time": "2026-06-07T22:28:56.794412",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 73.54078602790833,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11510944366455078,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9349
+        },
+        "llm_extraction": {
+          "time_seconds": 180.54291343688965,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PIB-diol, PIB-diallyl",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "ELS detector (Varian 385-LC) and UV detector (Waters 2996)",
+        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": "Used for determination of critical conditions. ELS detector used for analysis in Fig 6-8.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf.Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": "2015"
+      },
+      {
+        "analyte_polymer": "PIB-diol, PIB-monool, PIB-diallyl, PIB-dichloride, PIB-diolefin",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI detector (Waters 2414) and UV detector (Waters 2996)",
+        "evidence_text": "Fig. 9 depicts LCCC chromatograms of PIB samples of different functionality but similar MW (approximately 2000) under critical condition using RI detector as the concentration detector. ... The LCCC chromatogram of PIBOL014 revealed three peaks (Fig. 11) with elution times correlating to PIB-diol, PIB-monool and PIB without OH functionality.",
+        "notes": "Used for quantitative analysis of chemical heterogeneity. RI detector identified as better concentration detector than ELS.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf.Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": "2015"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9349,
+      "extraction_success": true,
+      "processing_time": 180.52038526535034,
+      "extracted_count": 2
+    }
+  ]
+}

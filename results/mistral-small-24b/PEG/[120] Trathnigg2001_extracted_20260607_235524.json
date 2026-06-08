@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[120] Trathnigg2001.pdf",
+    "extraction_date": "2026-06-07T23:55:24.961599",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[120] Trathnigg2001.pdf",
+      "start_time": "2026-06-07T23:54:32.138529",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 37.754621267318726,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10381054878234863,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9107
+        },
+        "llm_extraction": {
+          "time_seconds": 14.964475870132446,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "fatty alcohol ethoxylates",
+        "critical_component": "polyoxyethylene",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "30.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x10 mm",
+        "detector": "SICON LCD 201 RI detector",
+        "evidence_text": "In system C (LCCC), a of 2.0 ml/min was maintained with an LDC Constametric IIG HPLC pump (Milton Roy, Riviera Beach, FL, USA). A semi-preparative column was used for all measure- ments: Spherisorb ODS2 (250x10 mm, 5 µm, 80 A) from PhaseSep (Deeside, UK). A SICON LCD 201 RI detector was combined with the DDS70. An Advantec SF 2120 fraction collector (Advantec, Dublin, CA, USA). was used for sampling of different fractions. The solvents (methanol and water, both HPLC grade) were purchased from Riedel–de Haen (Seelze, Germany).",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2001"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9107,
+      "extraction_success": true,
+      "processing_time": 14.952103614807129,
+      "extracted_count": 1
+    }
+  ]
+}

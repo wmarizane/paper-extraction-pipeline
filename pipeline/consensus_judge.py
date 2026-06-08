@@ -14,6 +14,85 @@ from pipeline.llm_extractor import EXTRACTION_SCHEMA
 
 logger = logging.getLogger(__name__)
 
+CANONICAL_POLYMERS = {
+    "ps": "polystyrene",
+    "polystyrene": "polystyrene",
+    "pmma": "poly(methyl methacrylate)",
+    "poly(methyl methacrylate)": "poly(methyl methacrylate)",
+    "polymethylmethacrylate": "poly(methyl methacrylate)",
+    "polymethyl methacrylate": "poly(methyl methacrylate)",
+    "pnbma": "poly(n-butyl methacrylate)",
+    "poly(n-butyl methacrylate)": "poly(n-butyl methacrylate)",
+    "pe": "polyethylene",
+    "polyethylene": "polyethylene",
+    "pp": "polypropylene",
+    "polypropylene": "polypropylene",
+    "it-pp": "polypropylene",
+    "itpp": "polypropylene",
+    "isotactic polypropylene": "polypropylene",
+    "peg": "poly(ethylene glycol)",
+    "peo": "poly(ethylene glycol)",
+    "poly(ethylene glycol)": "poly(ethylene glycol)",
+    "poly(ethylene oxide)": "poly(ethylene glycol)",
+    "polyethylene glycol": "poly(ethylene glycol)",
+    "polyethylene oxide": "poly(ethylene glycol)",
+    "ppo": "poly(propylene glycol)",
+    "ppg": "poly(propylene glycol)",
+    "poly(propylene glycol)": "poly(propylene glycol)",
+    "poly(propylene oxide)": "poly(propylene glycol)",
+    "polypropylene glycol": "poly(propylene glycol)",
+    "polypropylene oxide": "poly(propylene glycol)",
+    "propylene oxide": "poly(propylene glycol)",
+    "po": "poly(propylene glycol)",
+    "pbo": "poly(butene oxide)",
+    "poly(butene oxide)": "poly(butene oxide)",
+    "bo": "poly(butene oxide)",
+    "butene oxide": "poly(butene oxide)",
+    "pho": "poly(hexene oxide)",
+    "poly(hexene oxide)": "poly(hexene oxide)",
+    "ho": "poly(hexene oxide)",
+    "hexene oxide": "poly(hexene oxide)",
+    "pib": "polyisobutylene",
+    "polyisobutylene": "polyisobutylene",
+    "pla": "poly(lactic acid)",
+    "plla": "poly(lactic acid)",
+    "poly(lactic acid)": "poly(lactic acid)",
+    "poly(l-lactic acid)": "poly(lactic acid)",
+    "poly(lactide)": "poly(lactic acid)",
+    "polylactide": "poly(lactic acid)",
+    "pi": "polyisoprene",
+    "polyisoprene": "polyisoprene",
+    "1,4-pi": "polyisoprene",
+    "polyisoprene (1,4-pi)": "polyisoprene",
+    "polyisoprene (1,4-isoprene)": "polyisoprene",
+}
+
+CANONICAL_SOLVENTS = {
+    "odcb": "1,2-dichlorobenzene",
+    "ortho-dichlorobenzene": "1,2-dichlorobenzene",
+    "1,2-dichlorobenzene": "1,2-dichlorobenzene",
+    "tcb": "1,2,4-trichlorobenzene",
+    "1,2,4-trichlorobenzene": "1,2,4-trichlorobenzene",
+    "acn": "acetonitrile",
+    "acetonitrile": "acetonitrile",
+    "ch3cn": "acetonitrile",
+    "thf": "tetrahydrofuran",
+    "tetrahydrofuran": "tetrahydrofuran",
+    "mek": "butanone",
+    "methyl ethyl ketone": "butanone",
+    "butanone": "butanone",
+    "dmf": "dimethylformamide",
+    "dimethylformamide": "dimethylformamide",
+    "n,n-dimethylformamide": "dimethylformamide",
+    "ipa": "isopropyl alcohol",
+    "isopropyl alcohol": "isopropyl alcohol",
+    "isopropanol": "isopropyl alcohol",
+    "2-propanol": "isopropyl alcohol",
+    "dcm": "dichloromethane",
+    "dichloromethane": "dichloromethane",
+    "ch2cl2": "dichloromethane",
+}
+
 CONSENSUS_SCHEMA = {
     "type": "object",
     "properties": {
@@ -197,12 +276,27 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
     @staticmethod
     def _norm_solvents(solv):
-        """Normalize solvent list to a sorted set of lowercase strings."""
+        """Normalize solvent list to a sorted set of lowercase strings with synonym replacement."""
         if not solv:
             return set()
         if isinstance(solv, str):
-            return {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
-        return {str(s).strip().lower() for s in solv if s}
+            raw_set = {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
+        else:
+            raw_set = {str(s).strip().lower() for s in solv if s}
+            
+        norm_set = set()
+        for s in raw_set:
+            s_clean = re.sub(r'[^a-z0-9]', '', s)
+            matched = False
+            for key, canonical in CANONICAL_SOLVENTS.items():
+                key_clean = re.sub(r'[^a-z0-9]', '', key)
+                if s_clean == key_clean or s_clean == key or s == key:
+                    norm_set.add(canonical)
+                    matched = True
+                    break
+            if not matched:
+                norm_set.add(s)
+        return norm_set
 
     @staticmethod
     def _norm_ratio(ratio):
@@ -225,13 +319,86 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         return len(intersection) / len(union)
 
     @staticmethod
+    def _canonicalize_polymer(val: str) -> str:
+        """Canonicalize polymer names using mapping, falling back to clean lowercase."""
+        if not val:
+            return ""
+        val_norm = val.lower().strip()
+        val_clean = re.sub(r'[^a-z0-9]', '', val_norm)
+        for key, canonical in CANONICAL_POLYMERS.items():
+            key_clean = re.sub(r'[^a-z0-9]', '', key)
+            if val_clean == key_clean or val_clean == key or val_norm == key:
+                return canonical
+        return val_norm
+
+    @staticmethod
+    def _is_abbreviation(a: str, b: str) -> bool:
+        """
+        Check if one string is a prefix or acronym/abbreviation of another.
+        e.g., 'PS' and 'Polystyrene' -> True
+              'PMMA' and 'Poly(methyl methacrylate)' -> True
+        """
+        if not a or not b:
+            return False
+        a = a.lower().strip()
+        b = b.lower().strip()
+        
+        if a == b:
+            return True
+            
+        # Ensure a is the shorter one
+        if len(a) > len(b):
+            a, b = b, a
+            
+        if len(a) < 2:
+            return False
+            
+        # Clean special chars
+        a_clean = re.sub(r'[^a-z0-9]', '', a)
+        b_clean = re.sub(r'[^a-z0-9]', '', b)
+        
+        if not a_clean or not b_clean:
+            return False
+            
+        # Prefix check (e.g., "polyisop" and "polyisoprene")
+        if b_clean.startswith(a_clean):
+            return True
+            
+        # Acronym check:
+        # e.g., 'pmma' and 'poly(methyl methacrylate)'
+        # Split b into words/parts on non-alphanumeric
+        parts = [p for p in re.split(r'[^a-z0-9]', b) if p]
+        if len(parts) >= len(a_clean):
+            # Check if initials match
+            initials = "".join(p[0] for p in parts)
+            if initials.startswith(a_clean) or a_clean == initials:
+                return True
+                
+        # Handle 'p' prefix for 'poly'
+        # e.g., 'pnbma' -> 'poly(n-butyl methacrylate)'
+        if a.startswith('p') and b.startswith('poly'):
+            a_sub = a[1:]
+            b_sub = b[4:]
+            a_sub_clean = re.sub(r'[^a-z0-9]', '', a_sub)
+            b_sub_clean = re.sub(r'[^a-z0-9]', '', b_sub)
+            if b_sub_clean.startswith(a_sub_clean):
+                return True
+            parts_sub = [p for p in re.split(r'[^a-z0-9]', b_sub) if p]
+            if len(parts_sub) >= len(a_sub_clean):
+                initials_sub = "".join(p[0] for p in parts_sub)
+                if initials_sub.startswith(a_sub_clean) or a_sub_clean == initials_sub:
+                    return True
+                    
+        return False
+
+    @staticmethod
     def _chromatographic_match(ca: Dict, cb: Dict) -> bool:
         """
-        Fuzzy chromatographic fingerprint matching.
+        Fuzzy chromatographic fingerprint matching with abbreviation and synonym support.
         
         Uses a multi-signal scoring approach across hard experimental parameters
         (column, solvents, ratio, temperature) and soft semantic fields 
-        (critical_component). Two items describing the same experiment phrased
+        (critical_component, analyte_polymer). Two items describing the same experiment phrased
         differently should still match.
         
         Returns True if the conditions likely describe the same experimental setup.
@@ -240,6 +407,8 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         norm_solvents = ConsensusJudge._norm_solvents
         norm_ratio = ConsensusJudge._norm_ratio
         word_jaccard = ConsensusJudge._word_jaccard
+        canon_poly = ConsensusJudge._canonicalize_polymer
+        is_abbrev = ConsensusJudge._is_abbreviation
 
         col_a = norm(ca.get("column_name"))
         col_b = norm(cb.get("column_name"))
@@ -249,15 +418,16 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         ratio_b = norm_ratio(cb.get("mobile_phase_ratio"))
         temp_a = norm(ca.get("temperature_celsius"))
         temp_b = norm(cb.get("temperature_celsius"))
+        
         comp_a = norm(ca.get("critical_component"))
         comp_b = norm(cb.get("critical_component"))
-        
         analyte_a = norm(ca.get("analyte_polymer"))
         analyte_b = norm(cb.get("analyte_polymer"))
         
-        # Strict exclusion: If analyte polymers are distinctly different, they are different conditions.
-        if analyte_a and analyte_b and analyte_a != analyte_b:
-            return False
+        comp_a_canon = canon_poly(comp_a)
+        comp_b_canon = canon_poly(comp_b)
+        analyte_a_canon = canon_poly(analyte_a)
+        analyte_b_canon = canon_poly(analyte_b)
 
         # --- Signal 1: Column name (substring containment or word overlap) ---
         if col_a and col_b:
@@ -288,33 +458,59 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
         # --- Signal 5: Critical component (word-level Jaccard, lenient) ---
         if comp_a and comp_b:
-            comp_match = (comp_a == comp_b) or (comp_a in comp_b) or (comp_b in comp_a) or (word_jaccard(comp_a, comp_b) >= 0.2)
+            comp_match = (
+                (comp_a_canon == comp_b_canon) or 
+                (comp_a_canon in comp_b_canon) or 
+                (comp_b_canon in comp_a_canon) or 
+                is_abbrev(comp_a, comp_b) or 
+                (word_jaccard(comp_a, comp_b) >= 0.2)
+            )
         else:
             comp_match = True
+            
+        # --- Signal 6: Analyte polymer (word-level Jaccard, lenient) ---
+        if analyte_a and analyte_b:
+            analyte_match = (
+                (analyte_a_canon == analyte_b_canon) or 
+                (analyte_a_canon in analyte_b_canon) or 
+                (analyte_b_canon in analyte_a_canon) or 
+                is_abbrev(analyte_a, analyte_b) or 
+                (word_jaccard(analyte_a, analyte_b) >= 0.2)
+            )
+        else:
+            analyte_match = True
 
-        # Count how many hard signals are present (i.e., both sides have data)
-        hard_signals = []
+        # Split signals into chromatographic and polymer naming parts
+        chrom_signals = []
         if col_a and col_b:
-            hard_signals.append(col_match)
+            chrom_signals.append(col_match)
         if solv_a and solv_b:
-            hard_signals.append(solv_match)
+            chrom_signals.append(solv_match)
         if ratio_a and ratio_b:
-            hard_signals.append(ratio_match)
+            chrom_signals.append(ratio_match)
         if temp_a and temp_b:
-            hard_signals.append(temp_match)
+            chrom_signals.append(temp_match)
+
+        poly_signals = []
         if comp_a and comp_b:
-            hard_signals.append(comp_match)
+            poly_signals.append(comp_match)
+        if analyte_a and analyte_b:
+            poly_signals.append(analyte_match)
 
         # If no hard signals are comparable, fall back to True (rare edge case)
-        if not hard_signals:
+        if not chrom_signals and not poly_signals:
             return True
 
-        # Require: all present signals agree (no contradictions)
-        # A contradiction = a signal where both sides have data but values disagree
-        contradictions = sum(1 for s in hard_signals if not s)
-        
-        # Allow at most 1 contradiction (accounts for minor rephrasing in one field)
-        return contradictions <= 1
+        chrom_contradictions = sum(1 for s in chrom_signals if not s)
+        poly_contradictions = sum(1 for s in poly_signals if not s)
+
+        # OVERRIDE RULE: If chromatographic setup matches perfectly, allow name mismatches.
+        # Requires at least 2 comparable chromatographic parameters to be active.
+        if len(chrom_signals) >= 2 and chrom_contradictions == 0:
+            return True
+
+        # Standard rule: allow at most 1 contradiction overall
+        return (chrom_contradictions + poly_contradictions) <= 1
 
     def _merge_conditions(self, ca: Dict, cb: Dict) -> Dict:
         """Merge two conditions, resolving conflicts via Dispute Resolution if necessary."""
