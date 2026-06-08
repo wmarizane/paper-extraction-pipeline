@@ -58,3 +58,25 @@ As the pipeline scaled to run autonomously on the GPU cluster, we encountered se
 ### 5. Finalizing the Map-Reduce Verification Architecture
 - **Issue:** How do we guarantee the extraction of *novel* experiments and catch theoretical hallucinations? During testing, `Mistral-Small` hallucinated a full LCCC experiment from `Zhu2015` simply because the paper discussed LCCC theory and simulations in the text.
 - **Pivot:** We deployed a final **Phase 3 Consensus Judge** (`DeepSeek-R1-32B`). DeepSeek acts as the Verification Layer. It reads the separate JSON outputs from both Qwen and Mistral, uses its `<think>` reasoning tokens to debate discrepancies, and applies strict rules. In the `Zhu2015` case, DeepSeek successfully identified that Mistral's extraction was based on theoretical simulations, rejected it, and output a perfectly clean `0 conditions` JSON.
+
+---
+
+## Phase 4: Subfolder-Aware Scaling & Robust Duplicate Merging (June 1 - June 8, 2026)
+
+**Objective:** Scale the pipeline to process 93 PDFs organized by polymer subfolders on the cluster and resolve remaining duplicate chromatographic entries in the consensus summaries.
+
+### 1. Subfolder-Aware Pipeline Reorganization (June 1 - June 4, 2026)
+- **Folder Restructuring:** Reorganized input PDFs into 6 subfolders (`PEG`, `PLA`, `PPO`, and three sequential batches) totaling 93 PDFs.
+- **Pipeline Modifications:** Modified `run_local.py`, `run_extraction.slurm`, and `run_consensus.py` to accept and preserve a `--subfolder` structure, outputting results and summaries per subfolder.
+- **SLURM Orchestration:** Developed `submit_all.sh` to run 12 extraction jobs (6 subfolders × 2 models) in parallel with dynamic SLURM dependencies, automatically triggering the Phase 3 consensus run upon completion.
+
+### 2. Resolving Consensus Duplicate Merging (June 7 - June 8, 2026)
+- **Issue:** The Python-based chromatographic matching algorithm `_chromatographic_match` (which filters and groups entries before LLM consensus and during final deduplication) was failing to merge identical experiments when polymer names used varying nomenclature (e.g. `PS` vs `Polystyrene`, `PMMA` vs `Poly(methyl methacrylate)`) or solvent abbreviations (e.g., `ODCB` vs `1,2-Dichlorobenzene`). This resulted in redundant rows in the final summaries.
+- **Pivot (Three-Pronged Matching Strategy):**
+  1. **Synonym Maps**: Added static dictionaries mapping common polymer abbreviations and solvent synonyms to canonical forms.
+  2. **Dynamic Acronym Matcher (`_is_abbreviation`)**: Implemented a dynamic fallback to check if one polymer name is a prefix or acronym of another to handle new, never-before-seen polymers.
+  3. **Chromatographic Override**: Introduced a rule that if the physical setup matches perfectly (0 contradictions across at least 2 comparable parameters of column, solvents, ratio, and temperature), we merge the rows regardless of naming discrepancies.
+- **Validation**: Successfully reran the consensus pipeline on the cluster. The new matching logic successfully merged 25 duplicate rows across the dataset. For instance:
+  - `[6] Macko2002.pdf` was consolidated from 8 rows to **4 clean rows**.
+  - `[209] Bhati2016.pdf` was consolidated to **4 clean rows** with unified solvent naming.
+
