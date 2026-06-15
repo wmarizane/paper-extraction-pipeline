@@ -36,6 +36,8 @@ CANONICAL_POLYMERS = {
     "poly(ethylene oxide)": "poly(ethylene glycol)",
     "polyethylene glycol": "poly(ethylene glycol)",
     "polyethylene oxide": "poly(ethylene glycol)",
+    "eo": "poly(ethylene glycol)",
+    "ethylene oxide": "poly(ethylene glycol)",
     "ppo": "poly(propylene glycol)",
     "ppg": "poly(propylene glycol)",
     "poly(propylene glycol)": "poly(propylene glycol)",
@@ -93,6 +95,13 @@ CANONICAL_SOLVENTS = {
     "ch2cl2": "dichloromethane",
 }
 
+# Architecture/topology prefixes stripped before canonical polymer lookup (for MATCHING only).
+# The original specific name (e.g. "Ring-PS") is preserved in the final output via source_model priority.
+ARCH_PREFIX_RE = re.compile(
+    r'^(ring|cyclic|linear|star|comb|ls|lu|it|at|st|dendri|hyper|branched)[_\-\s]+',
+    re.IGNORECASE
+)
+
 CONSENSUS_SCHEMA = {
     "type": "object",
     "properties": {
@@ -145,30 +154,36 @@ Two independent AI agents have extracted liquid chromatography critical conditio
 
 Your task is to review both extractions, rigorously debate their discrepancies, and output a single GROUND TRUTH list of conditions.
 
-EXTRACTION 1:
+EXTRACTION 1 (Model: Qwen3.5-27B - HIGH RELIABILITY PRIORS):
 ```json
 {json.dumps(qwen_data, indent=2)}
 ```
 
-EXTRACTION 2:
+EXTRACTION 2 (Model: Mistral-Small-24B - LOWER RELIABILITY PRIORS, PRONE TO HALLUCINATION):
 ```json
 {json.dumps(llama_data, indent=2)}
 ```
 
 INSTRUCTIONS:
-1. Review both extractions impartially. 
+1. **MODEL RELIABILITY PRIORS**: Qwen3.5-27B has higher extraction fidelity and precision. Mistral-small-24B is more prone to hallucinations and merging unrelated conditions. When the two extractions disagree:
+   a. Prefer the extraction whose evidence_text directly and specifically supports the claim.
+   b. If evidence quality is ambiguous or comparable, prefer Qwen's extraction.
+   c. Only override Qwen when Mistral provides clearly stronger evidence_text that directly quotes or closely paraphrases the source paper.
+   d. If Mistral contains a record that Qwen completely missed, validate it carefully against its own evidence_text before including it.
 2. Use your <think> tags to debate discrepancies. Look closely at the "evidence_text" provided by each extraction to deduce which agent correctly interpreted the paper.
 3. Identify and merge duplicates into a single comprehensive record.
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
-6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors.
+6. **LITERATURE IGNORE**: Reject any conditions that are merely referenced as background literature or previous studies. ONLY output novel experiments performed by the authors. A strong signal of a literature reference is when column_name, flow_rate, AND detector are ALL null — this almost always means the condition was extracted from a cited table, not the authors' own work. Reject it unless the evidence_text explicitly confirms it as a novel author experiment.
 7. **SIMULATION REJECTION**: Reject any conditions that are based on computer simulations, Monte Carlo modeling, theoretical lattices, or numerical calculations.
-8. **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, DO NOT comma-separate them. Output a SEPARATE condition record for EACH analyte polymer, duplicating the other fields.
+8. **MULTIPLE ANALYTES**: If a critical condition has comma-separated analyte polymers, you MUST split them into SEPARATE records — one per polymer — duplicating all other fields. NEVER output comma-separated polymer names in analyte_polymer. Exception: commas that are part of the chemical name itself (e.g. "1,4-polyisoprene", "H(EO),(PO),(EO),OH").
 9. **CRITICAL COMPONENT & ARCHITECTURE**: If the condition is established on a specific polymer (e.g., linear) but used to analyze a different polymer (e.g., cyclic), `critical_component` and `architecture` MUST reflect the polymer used to **establish** the condition.
-10. **TEMPERATURES**: Only output temperatures explicitly stated as the column/system temperature during the actual LCCC analysis. Do NOT output temperatures from preparative fractionation steps, ambient conditions, or detectors unless explicitly linked.
+10. **FRACTIONATION/PREPARATIVE REJECTION**: Reject any condition whose primary purpose is preparative fractionation or sample preparation — even if it operates at critical conditions. Only include ANALYTICAL LCCC measurements. Strong rejection signals: (a) semi-preparative/preparative column dimensions (inner diameter > 8mm), (b) evidence_text describes "fractionation" or "preparative" as the PURPOSE, (c) the setup is used to isolate fractions, not characterize the sample. A semi-preparative column used specifically for LCCC analysis (not fractionation) IS valid.
 11. **RANGES**: If a range is extracted but a specific optimal percentage is also given, prioritize the specific percentage.
 12. **QUALITY FEEDBACK**: If either extraction is severely corrupted, set "requires_retry" to true and provide string feedback. Otherwise false.
-11. Output ONLY valid JSON matching the schema below.
+13. **POLYMER SPECIFICITY**: Always preserve the most specific polymer name from the source paper. Prefer topology-specific names (Ls-PS, Lu-PS, Ring-PS over generic "polystyrene"), stereospecific names (it-PP over "polypropylene"), and end-group-specific names over generic base polymer names. The more specific name is almost always the correct one.
+14. **MULTIPLE AUTHORS**: If the paper has multiple corresponding authors, include all of them in `corresponding_author_name` separated by '; '. Same for `corresponding_email_address` and `physical_address`.
+15. Output ONLY valid JSON matching the schema below.
 
 JSON SCHEMA:
 {{
@@ -187,6 +202,7 @@ JSON SCHEMA:
         "critical_condition_confidence": "explicit | strong_inference | unclear",
         "column_name": "string or null",
         "stationary_phase_chemistry": "string or null",
+        "column_mode": "string or null — e.g. 'Reversed Phase', 'Normal Phase', 'Size Exclusion', 'Hydrophilic Interaction'",
         "mobile_phase_solvents": "array of strings or null",
         "mobile_phase_ratio": "string or null",
         "mobile_phase_ratio_units": "string or null",
@@ -204,9 +220,9 @@ JSON SCHEMA:
         "evidence_text": "string or null",
         "notes": "string or null",
         "paper_doi": "string or null",
-        "corresponding_author_name": "string or null",
-        "corresponding_email_address": "string or null",
-        "physical_address": "string or null",
+        "corresponding_author_name": "string or null — if multiple, join with '; '",
+        "corresponding_email_address": "string or null — if multiple, join with '; '",
+        "physical_address": "string or null — if multiple, join with '; '",
         "publication_year": "string or null"
       }}
     ]
@@ -300,10 +316,12 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
     @staticmethod
     def _norm_ratio(ratio):
-        """Normalize mobile phase ratio by stripping spaces and lowering."""
+        """Normalize mobile phase ratio by stripping spaces, lowering, and unifying separators."""
         if not ratio:
             return ""
-        return re.sub(r'\s+', '', str(ratio).lower().strip())
+        ratio = str(ratio).lower().strip()
+        ratio = re.sub(r'[/\\-]', ':', ratio)
+        return re.sub(r'\s+', '', ratio)
 
     @staticmethod
     def _word_jaccard(a: str, b: str) -> float:
@@ -324,11 +342,31 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         if not val:
             return ""
         val_norm = val.lower().strip()
+
+        # Step 1: Strip descriptor suffixes commonly appended to critical_component values.
+        # e.g. "BO block" -> "BO", "EO repeat unit" -> "EO", "PS backbone" -> "PS"
+        val_norm = re.sub(
+            r'\s+(block|repeat\s*unit|repeating\s*unit|unit|segment|chain|backbone)$',
+            '', val_norm, flags=re.IGNORECASE
+        ).strip()
+
+        # Step 2: Try direct canonical lookup first (handles exact matches like "ps", "peo", etc.)
         val_clean = re.sub(r'[^a-z0-9]', '', val_norm)
         for key, canonical in CANONICAL_POLYMERS.items():
             key_clean = re.sub(r'[^a-z0-9]', '', key)
             if val_clean == key_clean or val_clean == key or val_norm == key:
                 return canonical
+
+        # Step 3: Strip architecture/topology prefixes and retry.
+        # e.g. "Ring-PS" -> "PS" -> "polystyrene", "Ls-PS" -> "PS" -> "polystyrene"
+        val_stripped = ARCH_PREFIX_RE.sub('', val_norm).strip()
+        if val_stripped and val_stripped != val_norm:
+            val_stripped_clean = re.sub(r'[^a-z0-9]', '', val_stripped)
+            for key, canonical in CANONICAL_POLYMERS.items():
+                key_clean = re.sub(r'[^a-z0-9]', '', key)
+                if val_stripped_clean == key_clean or val_stripped_clean == key or val_stripped == key:
+                    return canonical
+
         return val_norm
 
     @staticmethod
@@ -361,7 +399,7 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
             return False
             
         # Prefix check (e.g., "polyisop" and "polyisoprene")
-        if b_clean.startswith(a_clean):
+        if b_clean.startswith(a_clean) and len(a_clean) >= 4:
             return True
             
         # Acronym check:
@@ -463,7 +501,7 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                 (comp_a_canon in comp_b_canon) or 
                 (comp_b_canon in comp_a_canon) or 
                 is_abbrev(comp_a, comp_b) or 
-                (word_jaccard(comp_a, comp_b) >= 0.2)
+                (word_jaccard(comp_a, comp_b) >= 0.6)
             )
         else:
             comp_match = True
@@ -475,7 +513,7 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                 (analyte_a_canon in analyte_b_canon) or 
                 (analyte_b_canon in analyte_a_canon) or 
                 is_abbrev(analyte_a, analyte_b) or 
-                (word_jaccard(analyte_a, analyte_b) >= 0.2)
+                (word_jaccard(analyte_a, analyte_b) >= 0.6)
             )
         else:
             analyte_match = True
@@ -504,13 +542,39 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         chrom_contradictions = sum(1 for s in chrom_signals if not s)
         poly_contradictions = sum(1 for s in poly_signals if not s)
 
-        # OVERRIDE RULE: If chromatographic setup matches perfectly, allow name mismatches.
-        # Requires at least 2 comparable chromatographic parameters to be active.
+        # OVERRIDE RULE: If chromatographic setup matches perfectly AND polymer identity
+        # is compatible, allow soft naming mismatches. Requires analyte OR critical_component
+        # to agree (or at least one to be missing) to prevent merging distinct analytes
+        # that share the same column/solvent setup (e.g., PEG vs PEG-MME).
         if len(chrom_signals) >= 2 and chrom_contradictions == 0:
-            return True
+            # Use STRICT analyte identity for the override (no lenient Jaccard).
+            # Two analytes must be canonically equal to merge via chromatographic override.
+            strict_analyte_ok = (
+                not analyte_a or not analyte_b or  # one side missing — OK
+                analyte_a_canon == analyte_b_canon  # canonical match — OK
+            )
+            strict_comp_ok = (
+                not comp_a or not comp_b or  # one side missing — OK
+                comp_a_canon == comp_b_canon  # canonical match — OK
+            )
+            if strict_analyte_ok and strict_comp_ok:
+                return True
+            # Otherwise fall through to standard rule
 
-        # Standard rule: allow at most 1 contradiction overall
-        return (chrom_contradictions + poly_contradictions) <= 1
+        # GUARD: If raw analyte names differ AND temperature differs, these are
+        # distinct experiments on the same column setup — do NOT merge.
+        # Example: "Ls-PS" at 14.8°C vs "Ring-PS" at 17.3°C on the same Nucleosil C18
+        # column with the same mobile phase. Both canonicalize to "polystyrene" but
+        # they are separate critical conditions for different polymer topologies.
+        if (analyte_a and analyte_b and analyte_a != analyte_b and
+                temp_a and temp_b and not temp_match):
+            return False
+
+        # Standard rule: polymer identity mismatches are hard blockers.
+        # Chromatographic contradictions are allowed (at most 1) only if polymers agree.
+        if poly_contradictions > 0:
+            return False
+        return chrom_contradictions <= 1
 
     def _merge_conditions(self, ca: Dict, cb: Dict) -> Dict:
         """Merge two conditions, resolving conflicts via Dispute Resolution if necessary."""
@@ -529,10 +593,17 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                 merged[k] = va
             else:
                 # Conflict! va and vb are both present and different.
-                # Use Dispute Resolution if it's a critical field, otherwise default to Run A.
-                # For now, we will track them and resolve them.
-                disputes.append((k, va, vb))
-                merged[k] = va # Temporary fallback
+                source_a = ca.get("source_model")
+                source_b = cb.get("source_model")
+                
+                if source_a == "qwen" and source_b == "mistral":
+                    merged[k] = va
+                elif source_b == "qwen" and source_a == "mistral":
+                    merged[k] = vb
+                else:
+                    # Fallback to Dispute Resolution
+                    disputes.append((k, va, vb))
+                    merged[k] = va # Temporary fallback
                 
         if disputes and self.llm:
             for k, va, vb in disputes:

@@ -5,6 +5,14 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
+def _clean(val):
+    """Convert None and string 'null' to empty string for CSV output."""
+    if val is None:
+        return ""
+    if isinstance(val, str) and val.lower() == "null":
+        return ""
+    return val
+
 FIELDNAMES = [
     "Paper",
     "DOI",
@@ -18,6 +26,7 @@ FIELDNAMES = [
     "Critical Condition Basis",
     "Column Name",
     "Stationary Phase Chemistry",
+    "Column Mode",
     "Pore Size",
     "Column Dimensions",
     "Mobile Phase Solvents",
@@ -63,34 +72,35 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
                 
                 rows.append({
                     "Paper": paper_name,
-                    "DOI": c.get("paper_doi", ""),
-                    "Publication Year": c.get("publication_year", ""),
-                    "Corresponding Author": c.get("corresponding_author_name", ""),
-                    "Email": c.get("corresponding_email_address", ""),
-                    "Physical Address": c.get("physical_address", ""),
-                    "Analyte Polymer": c.get("analyte_polymer", ""),
-                    "Critical Component": c.get("critical_component", ""),
-                    "Architecture": c.get("architecture", ""),
-                    "Critical Condition Basis": c.get("critical_condition_basis", ""),
-                    "Column Name": c.get("column_name", ""),
-                    "Stationary Phase Chemistry": c.get("stationary_phase_chemistry", ""),
-                    "Pore Size": c.get("pore_size", ""),
-                    "Column Dimensions": c.get("column_dimensions", ""),
-                    "Mobile Phase Solvents": ", ".join(solvents) if isinstance(solvents, list) else str(solvents),
-                    "Mobile Phase Ratio": c.get("mobile_phase_ratio", ""),
-                    "Mobile Phase Ratio Units": c.get("mobile_phase_ratio_units", ""),
-                    "Aqueous pH": aq.get("pH", ""),
-                    "Aqueous Salt Added": aq.get("salt_added", ""),
-                    "Aqueous Salt Type": aq.get("salt_type", ""),
-                    "Aqueous Salt Concentration": aq.get("salt_concentration", ""),
-                    "Temperature (°C)": c.get("temperature_celsius", ""),
-                    "Flow Rate": c.get("flow_rate", ""),
-                    "Detector": c.get("detector", ""),
-                    "Consensus Confidence": c.get("critical_condition_confidence", ""),
-                    "Qwen Confidence": conf.get("qwen", ""),
-                    "Mistral Confidence": conf.get("mistral", ""),
-                    "Evidence Text": c.get("evidence_text", ""),
-                    "Notes": c.get("notes", "")
+                    "DOI": _clean(c.get("paper_doi")),
+                    "Publication Year": _clean(c.get("publication_year")),
+                    "Corresponding Author": _clean(c.get("corresponding_author_name")),
+                    "Email": _clean(c.get("corresponding_email_address")),
+                    "Physical Address": _clean(c.get("physical_address")),
+                    "Analyte Polymer": _clean(c.get("analyte_polymer")),
+                    "Critical Component": _clean(c.get("critical_component")),
+                    "Architecture": _clean(c.get("architecture")),
+                    "Critical Condition Basis": _clean(c.get("critical_condition_basis")),
+                    "Column Name": _clean(c.get("column_name")),
+                    "Stationary Phase Chemistry": _clean(c.get("stationary_phase_chemistry")),
+                    "Column Mode": _clean(c.get("column_mode")),
+                    "Pore Size": _clean(c.get("pore_size")),
+                    "Column Dimensions": _clean(c.get("column_dimensions")),
+                    "Mobile Phase Solvents": _clean(", ".join(solvents) if isinstance(solvents, list) else (str(solvents) if solvents else "")),
+                    "Mobile Phase Ratio": _clean(c.get("mobile_phase_ratio")),
+                    "Mobile Phase Ratio Units": _clean(c.get("mobile_phase_ratio_units")),
+                    "Aqueous pH": _clean(aq.get("pH")),
+                    "Aqueous Salt Added": _clean(aq.get("salt_added") if aq.get("salt_added") is not None else ""),
+                    "Aqueous Salt Type": _clean(aq.get("salt_type")),
+                    "Aqueous Salt Concentration": _clean(aq.get("salt_concentration")),
+                    "Temperature (°C)": _clean(c.get("temperature_celsius")),
+                    "Flow Rate": _clean(c.get("flow_rate")),
+                    "Detector": _clean(c.get("detector")),
+                    "Consensus Confidence": _clean(c.get("critical_condition_confidence")),
+                    "Qwen Confidence": _clean(conf.get("qwen")),
+                    "Mistral Confidence": _clean(conf.get("mistral")),
+                    "Evidence Text": _clean(c.get("evidence_text")),
+                    "Notes": _clean(c.get("notes"))
                 })
         except Exception as e:
             print(f"Error processing {json_file}: {e}")

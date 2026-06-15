@@ -34,6 +34,10 @@ EXTRACTION_SCHEMA = {
                     },
                     "column_name": {"type": ["string", "null"]},
                     "stationary_phase_chemistry": {"type": ["string", "null"]},
+                    "column_mode": {
+                        "type": ["string", "null"],
+                        "description": "HPLC column separation mode. Common values: 'Reversed Phase', 'Normal Phase', 'Size Exclusion', 'Ion Exchange', 'Hydrophilic Interaction'. Infer from stationary_phase_chemistry and column_name if not explicitly stated."
+                    },
                     "mobile_phase_solvents": {
                         "type": ["array", "null"],
                         "items": {"type": "string"}
@@ -65,7 +69,7 @@ EXTRACTION_SCHEMA = {
                 },
                 "required": [
                     "analyte_polymer", "critical_component", "architecture", "critical_condition_basis",
-                    "critical_condition_confidence", "column_name", "stationary_phase_chemistry",
+                    "critical_condition_confidence", "column_name", "stationary_phase_chemistry", "column_mode",
                     "mobile_phase_solvents", "mobile_phase_ratio", "mobile_phase_ratio_units",
                     "aqueous_parameters", "temperature_celsius", "flow_rate", "pore_size",
                     "column_dimensions", "detector", "evidence_text", "notes", "paper_doi",
@@ -187,11 +191,15 @@ IMPORTANT INTERPRETATION RULES:
 - If a block copolymer is analyzed under critical conditions for one block, record the analyte polymer and also the specific critical component.
 - **DEDUPLICATION**: If the exact same experimental setup is mentioned multiple times in the text (e.g. in the abstract, methods, and conclusion), merge them into a single entry. Do not create duplicate records for identical setups.
 - **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
-- **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, DO NOT comma-separate them. Create a SEPARATE condition record for EACH analyte polymer, duplicating the other fields.
+- **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, you MUST create a SEPARATE condition record for EACH analyte polymer, duplicating all other fields (column, ratio, temperature, etc.). NEVER comma-separate polymer names in the analyte_polymer field. The ONLY exception is when the comma is part of the polymer's chemical name itself (e.g. "H(EO)x(PO)y(EO)xOH" or "1,4-polyisoprene"). If you find yourself writing a comma between two distinct polymer names, STOP and split into separate records.
 - **CRITICAL COMPONENT & ARCHITECTURE**: If the critical condition is established using a specific polymer (e.g., linear PS) but used to analyze a different polymer (e.g., cyclic PS), the `critical_component` and `architecture` fields MUST reflect the polymer used to **establish** the condition (e.g., linear).
 - **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
 - **TEMPERATURES**: Only extract temperatures explicitly stated as the column or system temperature during the actual LCCC analysis. Do NOT extract temperatures from completely separate experimental procedures (e.g., preparative fractionation, synthesis, preliminary steps), detector temperatures, or general ambient conditions unless explicitly linked to the LCCC run.
+- **FRACTIONATION/PREPARATIVE REJECTION**: Do NOT extract conditions whose primary purpose is preparative fractionation, semi-preparative separation, or sample preparation — even if they use critical conditions. Only extract ANALYTICAL LCCC measurements. A strong signal is: (a) semi-preparative or preparative column dimensions (ID > 8mm), (b) the word "fractionation" or "preparative" describing the PURPOSE of the experiment, (c) the setup is used to isolate fractions for later analysis rather than to characterize the sample. If the paper uses a semi-preparative column specifically for LCCC analysis (not fractionation), that IS valid — include it.
 - **END-GROUPS**: If different end-groups on the same polymer architecture result in different critical conditions, extract them as separate entries and specify the end-group in the analyte_polymer or architecture field.
+- **POLYMER SPECIFICITY**: Always use the most specific polymer name from the paper. Use topology-specific names like "Ls-PS", "Ring-PS" rather than generic "polystyrene". Use stereospecific names like "it-PP" rather than generic "polypropylene". Preserve end-group distinctions when the paper makes them.
+- **COLUMN MODE**: Classify the column separation mode based on the stationary phase chemistry. C18, C8, phenyl, RP = "Reversed Phase". Bare silica, diol, NH2, CN = "Normal Phase". Report as null only if the column type cannot be determined.
+- **MULTIPLE AUTHORS**: If the paper has more than one corresponding author, list ALL of them in corresponding_author_name separated by '; '. Same for corresponding_email_address and physical_address.
 - Use null for missing information.
 - Preserve reported wording where exact normalization is not possible.
 - Do not guess units or compositions.
@@ -211,6 +219,7 @@ JSON SCHEMA:
       "critical_condition_confidence": "explicit | strong_inference | unclear",
       "column_name": "string or null",
       "stationary_phase_chemistry": "string or null",
+      "column_mode": "string or null — e.g. 'Reversed Phase' (C18, C8, phenyl, RP), 'Normal Phase' (bare silica, diol, NH2, CN), 'Size Exclusion', 'Hydrophilic Interaction'",
       "mobile_phase_solvents": "array of strings or null",
       "mobile_phase_ratio": "string or null",
       "mobile_phase_ratio_units": "string or null",
@@ -228,9 +237,9 @@ JSON SCHEMA:
       "evidence_text": "string or null",
       "notes": "string or null",
       "paper_doi": "string or null",
-      "corresponding_author_name": "string or null",
-      "corresponding_email_address": "string or null",
-      "physical_address": "string or null",
+      "corresponding_author_name": "string or null — if multiple, join with '; '",
+      "corresponding_email_address": "string or null — if multiple, join with '; '",
+      "physical_address": "string or null — if multiple, join with '; '",
       "publication_year": "string or null"
     }}
   ]

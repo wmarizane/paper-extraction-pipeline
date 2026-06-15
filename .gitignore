@@ -26,3 +26,7 @@ explanation.md
 CLUSTER_GUIDE.md
 .DS_Store
 venv/
+
+# Ignored results
+results/**/*.json
+results/**/**/*.json

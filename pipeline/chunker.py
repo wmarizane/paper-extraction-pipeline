@@ -104,7 +104,24 @@ class TextChunker:
         """
         token_count = self.count_tokens(md_content)
         
-        # We no longer chunk. We send the entire document.
+        # We no longer chunk by default, but we MUST respect the model's 32k hard limit.
+        # Leave 7768 tokens for system prompts, instructions, and output generation.
+        MAX_SAFE_TOKENS = 25000
+        
+        if token_count > MAX_SAFE_TOKENS:
+            print(f"⚠️ Document too large ({token_count} tokens). Falling back to splitting at {MAX_SAFE_TOKENS} tokens.")
+            split_texts = self._recursive_split(md_content, MAX_SAFE_TOKENS)
+            chunks = []
+            for i, txt in enumerate(split_texts):
+                chunks.append(TextChunk(
+                    text=txt,
+                    section=f"Part {i+1}",
+                    chunk_index=i,
+                    token_count=self.count_tokens(txt),
+                    source_pdf=source_pdf
+                ))
+            return chunks
+            
         print(f"📦 Packaging entire document ({token_count} tokens) into a single chunk for global context.")
         
         return [TextChunk(
