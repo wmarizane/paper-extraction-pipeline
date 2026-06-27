@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "source_pdf": "[128] Gorshkov1986",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.093959Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": null,
+        "flow_rate": null,
+        "physical_address": null,
+        "corresponding_email_address": null,
+        "column_dimensions": "250 mm x 4.6 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "5/95",
+        "column_name": "LiChrosorb Si 100",
+        "notes": "The text lists several ratios (20/80, 10/90, 7/93, 5/95, 0/100) in Figure 4 caption to determine critical conditions. The text states critical conditions are reached by stepwise addition. The 5/95 ratio is the specific composition closest to the critical point mentioned in the list where independence is achieved (implied by the context of finding the point). The analyte is Poly(oxypropylenpolyolen) but the condition is established using difunctional Poly(propylenglykol) standards.",
+        "publication_year": 1986,
+        "mobile_phase_solvents": [
+          "Methylethylketon",
+          "Ethylacetat"
+        ],
+        "evidence_text": "Bei dem von uns angewandten Gemisch Methylethylketon/Ethylacetat werden die kritischen Bedingungen durch stufenweise Zugabe von Ethylacetat zu Methylethylketon erreicht... 5/95 (4)... Unter diesen Bedingungen ist das Elutionsvolumen unabhängig von der Molmasse... Zur Auffindung der kritischen Bedingungen für Poly(oxypropylenpolyole) werden definiert difunktionelle Produkte unterschiedlicher Molmasse mittels HPLC an einem Lichrosorb Si 100 als stationären Phase chromatographiert. Als difunktionelle Polyole werden Poly(propylenglykol)-Eichstandards der Fa. Waters eingesetzt.",
+        "corresponding_author_name": "A. V. Gorškov",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Poly(oxypropylenpolyol)",
+        "detector": "RIDK 101",
+        "stationary_phase_chemistry": "LiChrosorb Si 100",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "Poly(propylenglykol)",
+        "architecture": null,
+        "model_confidences": {
+          "qwen": "strong_inference",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "Vol-%",
+        "mobile_phase_ratio_raw": "5/95",
+        "mobile_phase_ratio_components": [
+          5.0,
+          95.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null,
+        "architecture_raw": "difunktionell"
+      }
+    ]
+  }
+}

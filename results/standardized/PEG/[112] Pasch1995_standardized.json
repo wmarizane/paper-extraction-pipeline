@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[112] Pasch1995",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.079895Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "technical fatty alcohol ethoxylate (FAE)",
+        "critical_component": "ethylene oxide block",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100 RP-18",
+        "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "125 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "evidence_text": "The separation of a technical fatty alcohol ethoxylate (FAE) by liquid chromatography under conditions such that the chain length as well as the end-groups direct the separation [26,27] is presented in Fig. 4. ... Column, Nucleosil 100 RP-18 (125 x 4 mm I.D.); eluent, acetonitrile water (70:30, v/v).",
+        "notes": "Separation directed by chain length and end-groups implies critical condition for the ethylene oxide block.",
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": 1995,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "70:30",
+        "mobile_phase_ratio_components": [
+          70.0,
+          30.0
+        ],
+        "flow_rate_raw": "1 ml/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "triblock copolymer H(EO)x(PO)y(EO)xOH",
+        "critical_component": "ethylene oxide block",
+        "architecture": "triblock",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100 RP-18",
+        "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "evidence_text": "Fig. 6 represents the separation of a triblock copolymer H(EO)x(PO)y(EO)xOH at the critical point of the ethylene oxide blocks. ... Column, Nucleosil 100 RP-18 (250 x 4 mm I.D.); eluent, acetonitrile-water (42:58, v/v).",
+        "notes": "Operating at the critical point of PEG makes the ethylene oxide block chromatographically 'invisible'.",
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": 1995,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "42:58",
+        "mobile_phase_ratio_components": [
+          42.0,
+          58.0
+        ],
+        "flow_rate_raw": "1 ml/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "triblock copolymer H(EO),(PO),(EO),OH",
+        "critical_component": "ethylene oxide block",
+        "architecture": null,
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100 RP-18",
+        "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250x4 mm I.D.",
+        "detector": null,
+        "evidence_text": "The separation of a triblock copolymer H(EO),(PO),(EO),OH at the critical point of the ethylene oxide blocks.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": 1995,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "42:58",
+        "mobile_phase_ratio_components": [
+          42.0,
+          58.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

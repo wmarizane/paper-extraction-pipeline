@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "source_pdf": "[330] Wei2016",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.077829Z"
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1039/c6py01653g",
+        "flow_rate": "1.2 mL min-1",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "column_dimensions": "100 mm × 2.1 mm",
+        "temperature_celsius": 25.0,
+        "mobile_phase_ratio": "40:60",
+        "column_name": "UPLC BEH C18",
+        "notes": "UPLC conditions inferred to match the HPLC critical composition (40% ACN) established earlier in the text for C18 columns, as the text confirms molar mass independence.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "evidence_text": "Separation of PEGs and benzaldehyde-substituted PEGs under LCCC was also studied by UPLC (with C18 column). ... The retention times were almost the same for PEG 2k and PEG 6k confirming no influence of the molar mass on the retention time.",
+        "corresponding_author_name": "X.-L. Jiang",
+        "pore_size": "130 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG 2k, PEG 6k, MPEGCHO 5k, PEGDCHO 6k",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Separation of PEGs and benzaldehyde-substituted PEGs under LCCC by UPLC (with C18 column)",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "40:60",
+        "mobile_phase_ratio_components": [
+          40.0,
+          60.0
+        ],
+        "flow_rate_raw": "1.2 mL min-1",
+        "flow_rate_ml_per_min": 1.2,
+        "pore_size_raw": "130 Å",
+        "pore_size_angstrom": 130.0
+      },
+      {
+        "analyte_polymer": "PEG 6k, MPEGOH 5k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical composition for non-functional PEGs obtained at 40% acetonitrile in water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+        "notes": "Used as the basis for LCCC to separate benzaldehyde-functionalized PEGs independent of molar mass.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "40:60",
+        "mobile_phase_ratio_components": [
+          40.0,
+          60.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "PEG 2k, PEG 4k, PEG 6k, MPEGOH 5k, PEGCHO 4k, MPEGCHO 5k, PEGDCHO 2k, PEGDCHO 4k, PEGDCHO 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC for PEGs on the XB-phenyl column presented at 45% acetonitrile in water at 30 °C",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C. ... It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times.",
+        "notes": "Separation based on number of benzaldehyde end-groups independent of molar mass.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "45:55",
+        "mobile_phase_ratio_components": [
+          45.0,
+          55.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": null,
+        "critical_condition_basis": "isocratic elution",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 mm × 4.6 mm I.D., 5 µm particle size",
+        "detector": "ELSD",
+        "evidence_text": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+        "notes": "null",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "40",
+        "mobile_phase_ratio_components": [
+          40.0,
+          60.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0,
+        "architecture_raw": "null"
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": null,
+        "critical_condition_basis": "isocratic elution",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D., 5 µm particle size",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+        "notes": "null",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "45",
+        "mobile_phase_ratio_components": [
+          45.0,
+          55.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0,
+        "architecture_raw": "null"
+      }
+    ]
+  }
+}

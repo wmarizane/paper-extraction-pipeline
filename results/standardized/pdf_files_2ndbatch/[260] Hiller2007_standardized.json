@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[260] Hiller2007",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.055634Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/macp.200700166",
+        "flow_rate": "0.5 mL min-1",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "column_dimensions": "250 x 4 mm",
+        "temperature_celsius": 22.0,
+        "mobile_phase_ratio": "48:52",
+        "column_name": "Nucleosil RP-18",
+        "notes": "PMMA elutes in SEC mode while PS is at critical conditions.",
+        "publication_year": 2007,
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "evidence_text": "The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v... stationary phase: RP-18 Nucleosil 300 μm 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1... at the critical point of adsorption of PS",
+        "corresponding_author_name": "Wolf Hiller",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PS-b-PMMA, PS, PMMA",
+        "detector": "UV, 1H NMR",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical point of adsorption",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PS",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "48:52",
+        "mobile_phase_ratio_components": [
+          48.0,
+          52.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 22.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm",
+        "detector": "UV",
+        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200700166",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": 2007,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "48:52",
+        "mobile_phase_ratio_components": [
+          48.0,
+          52.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "PMMA",
+        "critical_component": "PMMA",
+        "architecture": "linear",
+        "critical_condition_basis": "size-exclusion mode",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 22.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm",
+        "detector": "UV",
+        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200700166",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": 2007,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "48:52",
+        "mobile_phase_ratio_components": [
+          48.0,
+          52.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

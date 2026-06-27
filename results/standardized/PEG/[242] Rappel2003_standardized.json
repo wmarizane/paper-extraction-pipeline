@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[242] Rappel2003",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.065283Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": null,
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250x4.6 mm",
+        "temperature_celsius": 25.0,
+        "mobile_phase_ratio": "28",
+        "column_name": "Prodigy ODS(3)",
+        "notes": null,
+        "publication_year": 2003,
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "As can be seen, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol",
+        "detector": "refractive index (RI) detector",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical interaction point",
+        "mobile_phase_ratio_units": "w/w",
+        "column_mode": "Reversed Phase",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt.%",
+        "mobile_phase_ratio_raw": "28",
+        "mobile_phase_ratio_components": [
+          28.0,
+          72.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 A",
+        "pore_size_angstrom": 100.0
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical interaction point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Sphereclone C6",
+        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "28.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "refractive index (RI) detector",
+        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": 2003,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt.%",
+        "mobile_phase_ratio_raw": "28.5",
+        "mobile_phase_ratio_components": [
+          28.5,
+          71.5
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "80 A",
+        "pore_size_angstrom": 80.0
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical interaction point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb S5X C6",
+        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "30",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "refractive index (RI) detector",
+        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": 2003,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt.%",
+        "mobile_phase_ratio_raw": "30",
+        "mobile_phase_ratio_components": [
+          30.0,
+          70.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 A",
+        "pore_size_angstrom": 300.0
+      }
+    ]
+  }
+}

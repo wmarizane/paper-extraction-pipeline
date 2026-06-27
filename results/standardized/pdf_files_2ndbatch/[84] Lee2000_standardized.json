@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "source_pdf": "[84] Lee2000",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.056195Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/ma000807b",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": 43.0,
+        "mobile_phase_ratio": "57/43",
+        "column_name": "Nucleosil C18AB",
+        "notes": "The critical condition was established for linear PS (elution independent of MW at ~5.4 min) to separate cyclic PS contaminants.",
+        "publication_year": 2000,
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 Å pore, 250 × 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "corresponding_author_name": "Taihyun Chang",
+        "pore_size": "100 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Cyclic Polystyrene",
+        "detector": null,
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Chromatographic critical condition of linear PS",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "Linear Polystyrene",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "57/43",
+        "mobile_phase_ratio_components": [
+          57.0,
+          43.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0,
+        "architecture_raw": "Linear"
+      }
+    ]
+  }
+}

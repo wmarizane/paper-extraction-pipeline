@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[252] Trathnigg2007",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.096302Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "oxypropylene unit",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) identified at intersection of interaction parameter line with x-axis",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "85",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "SEDEX 45 ELSD",
+        "evidence_text": "On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF). The intersection point of the line for THF agrees well with the CAP",
+        "notes": "Critical condition established for the repeat unit (oxypropylene).",
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": 2007,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "wt.% THF",
+        "mobile_phase_ratio_raw": "85",
+        "mobile_phase_ratio_components": [
+          85.0,
+          15.0
+        ],
+        "flow_rate_raw": "0.5 mL min-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 A",
+        "pore_size_angstrom": 100.0
+      },
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PPG",
+        "architecture": null,
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "85",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 mL min⁻¹",
+        "pore_size": "100 A",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "SEDEX 45 ELSD",
+        "evidence_text": "In the range covered by our measurements the data fall onto straight lines with a similar slope. On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF).",
+        "notes": "Critical condition established for the polymer PPG.",
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": 2007,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt.% THF",
+        "mobile_phase_ratio_raw": "85",
+        "mobile_phase_ratio_components": [
+          85.0,
+          15.0
+        ],
+        "flow_rate_raw": "0.5 mL min⁻¹",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 A",
+        "pore_size_angstrom": 100.0,
+        "architecture_raw": "null"
+      }
+    ]
+  }
+}

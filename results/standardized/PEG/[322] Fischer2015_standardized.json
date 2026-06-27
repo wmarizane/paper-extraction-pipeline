@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "source_pdf": "[322] Fischer2015",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.080649Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poly(ethylene glycol)",
+        "critical_component": "Poly(ethylene glycol)",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl silica column",
+        "stationary_phase_chemistry": "octadecyl silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL min⁻¹",
+        "pore_size": "120 Å",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL⁻¹, and 10 μL of the sample was injected at a flow rate of 0.5 mL min⁻¹. The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer temp 90°C, evaporator temp 110°C.",
+        "paper_doi": "10.1007/s13361-015-1233-8",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@chem.wayne.edu",
+        "physical_address": "Department of Chemistry, Wayne State University, Detroit, MI 48202, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v:v",
+        "mobile_phase_ratio_raw": "47:53",
+        "mobile_phase_ratio_components": [
+          47.0,
+          53.0
+        ],
+        "flow_rate_raw": "0.5 mL min⁻¹",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 Å",
+        "pore_size_angstrom": 120.0,
+        "architecture_raw": "null"
+      },
+      {
+        "analyte_polymer": "Eu-PEG",
+        "critical_component": "PEG",
+        "architecture": "star",
+        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl silica column",
+        "stationary_phase_chemistry": "octadecyl silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL min⁻¹",
+        "pore_size": "120 Å",
+        "column_dimensions": "250×4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "LCCC was performed on an Agilent 1100/1200 Series HPLC equipped with an evaporative light scattering detector (ELSD) (PL-ELS 1000; Polymer Labs, now Agilent Technologies, Santa Clara (CA), USA). The ELSD nebulizer temperature was set to 90°C and the evaporator temperature to 110°C. The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL⁻¹, and 10 μL of the sample was injected at a flow rate of 0.5 mL min⁻¹. The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer temp 90°C, evaporator temp 110°C.",
+        "paper_doi": "10.1007/s13361-015-1233-8",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@chem.wayne.edu",
+        "physical_address": "Department of Chemistry, Wayne State University, Detroit, MI 48202, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v:v",
+        "mobile_phase_ratio_raw": "47:53",
+        "mobile_phase_ratio_components": [
+          47.0,
+          53.0
+        ],
+        "flow_rate_raw": "0.5 mL min⁻¹",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 Å",
+        "pore_size_angstrom": 120.0,
+        "architecture_raw": "2-arm"
+      }
+    ]
+  }
+}

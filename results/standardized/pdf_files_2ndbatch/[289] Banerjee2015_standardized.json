@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "source_pdf": "[289] Banerjee2015",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.054080Z"
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PIB-diol, PIB-diallyl",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "ELS detector (Varian 385-LC) and UV detector (Waters 2996)",
+        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "notes": "Used for determination of critical conditions. ELS detector used for analysis in Fig 6-8.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf.Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      },
+      {
+        "analyte_polymer": "PIB-diol, PIB-monool, PIB-diallyl, PIB-dichloride, PIB-diolefin",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI detector (Waters 2414) and UV detector (Waters 2996)",
+        "evidence_text": "Fig. 9 depicts LCCC chromatograms of PIB samples of different functionality but similar MW (approximately 2000) under critical condition using RI detector as the concentration detector. ... The LCCC chromatogram of PIBOL014 revealed three peaks (Fig. 11) with elution times correlating to PIB-diol, PIB-monool and PIB without OH functionality.",
+        "notes": "Used for quantitative analysis of chemical heterogeneity. RI detector identified as better concentration detector than ELS.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf.Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      },
+      {
+        "analyte_polymer": "PIB-diol",
+        "critical_component": "PIB-diol",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI",
+        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. ... The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      },
+      {
+        "analyte_polymer": "PIB-monool",
+        "critical_component": "PIB-monool",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI",
+        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. ... The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      },
+      {
+        "analyte_polymer": "PIB-diallyl",
+        "critical_component": "PIB-diallyl",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI",
+        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. ... The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      },
+      {
+        "analyte_polymer": "PIB-dichloride",
+        "critical_component": "PIB-dichloride",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 35.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI",
+        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. ... The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "corresponding_email_address": "Rudolf Faust@uml.edu",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "publication_year": 2015,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80.5/19.5",
+        "mobile_phase_ratio_components": [
+          80.5,
+          19.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "120 A",
+        "pore_size_angstrom": 120.0
+      }
+    ]
+  }
+}

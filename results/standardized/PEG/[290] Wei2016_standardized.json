@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "source_pdf": "[290] Wei2016",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.068059Z"
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG 2k, PEG 4k, PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-Phenyl",
+        "stationary_phase_chemistry": "Silica-based phenyl reversed-phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "Ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C. At this critical composition, nearly identical elution time for the lower molar mass PEG 2k and the higher molar mass PEG 6k was obtained... mobile phase contained 45% acetonitrile in water with 2 mmol/L CH3COONH4 at 30[◦] C.",
+        "notes": "Used for separation of amino-functional PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "45:55",
+        "mobile_phase_ratio_components": [
+          45.0,
+          55.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "PEG 2k, PEG 4k, PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex-C18",
+        "stationary_phase_chemistry": "Silica-based C18 reversed-phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "Ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C... mobile phase contained 40% acetonitrile in water with 2 mmol/L CH3COONH4 at 25[◦] C.",
+        "notes": "Used for separation of amino-functional PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "40:60",
+        "mobile_phase_ratio_components": [
+          40.0,
+          60.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-Phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": null,
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "evidence_text": "To obtain the LCCC, the effect of the composition of mobile phase (volume percentage of acetonitrile in water) on the interaction between PEG chain and XB-Phenyl column packing was investigated and shown in Fig. 2. Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "%",
+        "mobile_phase_ratio_raw": "45",
+        "mobile_phase_ratio_components": [
+          45.0,
+          55.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": 25.0,
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "%",
+        "mobile_phase_ratio_raw": "40",
+        "mobile_phase_ratio_components": [
+          40.0,
+          60.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "source_pdf": "[368] Girod2009",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.076133Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/rcm.4028",
+        "flow_rate": "1 mL min-1",
+        "physical_address": "Universités Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrométries Appliquées à la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "150 x 4 mm",
+        "temperature_celsius": 25.0,
+        "mobile_phase_ratio": "88.8:11.2",
+        "column_name": "Equisil",
+        "notes": "The critical condition was established for the PEO block to make it chromatographically 'invisible', allowing separation based on the PS block size. The text states that varying LiCl concentration between 0.1 and 1 mM did not change the critical conditions.",
+        "publication_year": 2009,
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "The critical conditions were established for hydroxyl-terminated PEG standards... using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr = 2.33 min) independently of their molecular mass. LiCl concentration in the range 0.1–1 mM led to the same critical conditions being obtained.",
+        "corresponding_author_name": "Laurence Charles",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "0.1–1 mM"
+        },
+        "analyte_polymer": "PEO-b-PS",
+        "detector": "ESI-MS (QStar Elite)",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "established using hydroxyl-terminated PEG standards",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO block",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "%, v/v",
+        "mobile_phase_ratio_raw": "88.8:11.2",
+        "mobile_phase_ratio_components": [
+          88.8,
+          11.2
+        ],
+        "flow_rate_raw": "1 mL min-1",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "100 A",
+        "pore_size_angstrom": 100.0
+      }
+    ]
+  }
+}

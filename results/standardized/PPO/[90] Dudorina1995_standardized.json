@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "source_pdf": "[90] Dudorina1995",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.096072Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": null,
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "corresponding_email_address": null,
+        "column_dimensions": null,
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "94.65:5.35",
+        "column_name": "Lichrosphere Si-300",
+        "notes": "Used in isocratic separation where PS is in critical mode and PPO is in exclusion mode.",
+        "publication_year": 1995,
+        "mobile_phase_solvents": [
+          "CCl4",
+          "CHCl3"
+        ],
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+        "corresponding_author_name": "null",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polystyrene",
+        "detector": "UV (270 nm)",
+        "stationary_phase_chemistry": "silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol. %",
+        "mobile_phase_ratio_raw": "94.65:5.35",
+        "mobile_phase_ratio_components": [
+          94.65,
+          5.35
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "paper_doi": null,
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "corresponding_email_address": null,
+        "column_dimensions": null,
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "29:71",
+        "column_name": "Lichrosphere Si-300",
+        "notes": "Used in isocratic separation where PPO is in critical mode and PS is in exclusion mode.",
+        "publication_year": 1995,
+        "mobile_phase_solvents": [
+          "CCl4",
+          "CHCl3"
+        ],
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 29: 71 vol. % for polyphenylene oxide.",
+        "corresponding_author_name": "S. G. Entelis",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyphenylene oxide",
+        "detector": "UV (270 nm)",
+        "stationary_phase_chemistry": "silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "polyphenylene oxide",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol. %",
+        "mobile_phase_ratio_raw": "29:71",
+        "mobile_phase_ratio_components": [
+          29.0,
+          71.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

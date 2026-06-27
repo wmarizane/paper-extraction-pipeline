@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "source_pdf": "[111] Gorshkov1990",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.078889Z"
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "1 ml/min",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "null",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "58:42",
+        "column_name": "RP-18",
+        "notes": "Used to separate PEO by functionality types (terminal groups).",
+        "publication_year": 1990,
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "evidence_text": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (v/v). In this instance the retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000 (Fig. 2).",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyethylene oxide (PEO)",
+        "detector": "refractometric",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58:42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "1 ml/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null,
+        "architecture_raw": "Linear homopolymer with various end groups (HO-OH, HO-OC4H9, CH2=CH-OH)"
+      },
+      {
+        "paper_doi": "null",
+        "flow_rate": "1 ml/min",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "null",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "58:42",
+        "column_name": "Chromapak RP-18",
+        "notes": "Same mobile phase composition as the PEO homopolymer critical condition. Used to analyze PPO block molecular weight distribution.",
+        "publication_year": 1990,
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "evidence_text": "Conditions as in Fig. 3... Disappearance of PEO blocks and the MWD of PPO blocks for two-block PEO-PPO copolymers... At the critical point for PEO the outer blocks disappear, irrespective of their length.",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-PPO block copolymers (AB and ABA types)",
+        "detector": "Refractometric detection",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "PEO blocks disappear (critical condition for PEO), separation based on PPO block size",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO blocks",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58:42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "1 ml/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null,
+        "architecture_raw": "Block copolymer (PEO blocks are 'invisible' at critical condition)"
+      },
+      {
+        "paper_doi": "null",
+        "flow_rate": "1 ml/min",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "null",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "58:42",
+        "column_name": "Chromapak RP-18",
+        "notes": "Used to distinguish random vs block ordering. Random copolymers elute earlier than block copolymers of same composition under these conditions.",
+        "publication_year": 1990,
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "evidence_text": "Chromatograms of a block and a random copolymer of similar composition under the critical conditions for one of the PEO homopolymers. Separation conditions as in Fig. 3.",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-PPO random copolymers",
+        "detector": "Refractometric detection",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Comparison with block copolymers under critical conditions for PEO",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO backbone",
+        "architecture": "random copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58:42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "1 ml/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null,
+        "architecture_raw": "Random copolymer"
+      },
+      {
+        "analyte_polymer": "polypropylene oxide",
+        "critical_component": "polypropylene oxide",
+        "architecture": null,
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "tetrahydrofuran"
+        ],
+        "mobile_phase_ratio": "null",
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": null,
+        "flow_rate": "null",
+        "pore_size": "null",
+        "column_dimensions": "null",
+        "detector": "null",
+        "evidence_text": "To solve a similar problem for PPO on a reversed phase it is necessary to choose a different mixture, e.g., water-tetrahydrofuran (THF), as in 100% acetonitrile a weak adsorption regime occurs with PPO.",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": "null",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": 1990,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "null",
+        "mobile_phase_ratio_raw": "null",
+        "mobile_phase_ratio_components": null,
+        "flow_rate_raw": "null",
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null,
+        "architecture_raw": "null"
+      }
+    ]
+  }
+}

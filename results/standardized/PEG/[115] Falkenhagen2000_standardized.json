@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[115] Falkenhagen2000",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.059145Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-co-PM oligomers",
+        "critical_component": "PEO unit",
+        "architecture": "diblock",
+        "critical_condition_basis": "Critical point of adsorption for PEO unit where samples with same chemical composition but different molecular weight elute in one peak",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-5",
+        "stationary_phase_chemistry": "Silica (Nucleosil)",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "78.5/21.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 45.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4 mm",
+        "detector": "ELSD (SEDEX 45)",
+        "evidence_text": "The 'critical point of adsorption' was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak. For the investigated polymer system these 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%.",
+        "notes": "Used for LACCC mode to separate according to PM chain length (end groups) independent of PEO molecular weight.",
+        "paper_doi": "10.1080/10236660008034644",
+        "corresponding_author_name": "St. Weidner",
+        "corresponding_email_address": null,
+        "physical_address": "Federal Institute for Materials Research and Testing, (BAM), Dept. VI. 3, Unter den Eichen 87, D-12205 Berlin, Germany",
+        "publication_year": 2000,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "wt%",
+        "mobile_phase_ratio_raw": "78.5/21.5",
+        "mobile_phase_ratio_components": [
+          78.5,
+          21.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 A",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide) (PEO)-co-polymethylene (PM)",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-5",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "78.5/21.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 45.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300A",
+        "column_dimensions": "250mm length and 4mm i.d.",
+        "detector": "evaporative light scattering detector (ELSD) SEDEX 45 (Sedere), and a refractive index detector, HP 1047A (Hewlett-Packard)",
+        "evidence_text": "The 'critical point of adsorption' was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak. For the investigated polymer system these 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%",
+        "notes": "Used for separating according to PM chain length independent of PEO molecular weight.",
+        "paper_doi": "10.1080/10236660008034644",
+        "corresponding_author_name": "St. Weidner",
+        "corresponding_email_address": null,
+        "physical_address": "Federal Institute for Materials Research and Testing, (BAM), Dept. VI. 3, Unter den Eichen 87, D-12205 Berlin, Germany",
+        "publication_year": 2000,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt%",
+        "mobile_phase_ratio_raw": "78.5/21.5",
+        "mobile_phase_ratio_components": [
+          78.5,
+          21.5
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300A",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide) (PEO)-co-polymethylene (PM)",
+        "critical_component": "PM",
+        "architecture": "diblock",
+        "critical_condition_basis": "near critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-5",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "73.7/26.3",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 45.0,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300A",
+        "column_dimensions": "250mm length and 4mm i.d.",
+        "detector": "evaporative light scattering detector (ELSD) SEDEX 45 (Sedere), and a refractive index detector, HP 1047A (Hewlett-Packard)",
+        "evidence_text": "The LACyearCC mode was obtained by successive addition of water up to an amount of 26.3 wt% in the eluent.",
+        "notes": null,
+        "paper_doi": "10.1080/10236660008034644",
+        "corresponding_author_name": "St. Weidner",
+        "corresponding_email_address": null,
+        "physical_address": "Federal Institute for Materials Research and Testing, (BAM), Dept. VI. 3, Unter den Eichen 87, D-12205 Berlin, Germany",
+        "publication_year": 2000,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt%",
+        "mobile_phase_ratio_raw": "73.7/26.3",
+        "mobile_phase_ratio_components": [
+          73.7,
+          26.3
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300A",
+        "pore_size_angstrom": 300.0
+      }
+    ]
+  }
+}

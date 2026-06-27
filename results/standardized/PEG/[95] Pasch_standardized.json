@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "source_pdf": "[95] Pasch",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.079380Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene oxide (PEO)",
+        "critical_component": "polyethylene oxide block",
+        "architecture": "linear",
+        "critical_condition_basis": "disappearance of molar mass dependence of retention time",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "43:57",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "R-401 differential refractometer",
+        "evidence_text": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile—water (43:57, v/v); see Fig. 1.",
+        "notes": "Condition established using PEO calibration standards on a Macherey-Nagel 5C18 column. Used to separate a triblock polymer HO(EO)n(PO)m(EO)nOH based on the PPO block length.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany",
+        "publication_year": 1992,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "43:57",
+        "mobile_phase_ratio_components": [
+          43.0,
+          57.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide–block–propylene oxide)",
+        "critical_component": "polypropylene oxide",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "43:57",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm",
+        "detector": "R-401 differential refractometer",
+        "evidence_text": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile–water (43:57, v/v); see Fig. 1.",
+        "notes": "Condition established using PEO calibration standards on a Macherey-Nagel 5C18 column. Used to separate a triblock polymer HO(EO)n(PO)m(EO)nOH based on the PPO block length.",
+        "paper_doi": null,
+        "corresponding_author_name": "Dr. H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany",
+        "publication_year": 1992,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "43:57",
+        "mobile_phase_ratio_components": [
+          43.0,
+          57.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

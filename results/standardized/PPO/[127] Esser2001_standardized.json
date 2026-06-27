@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "source_pdf": "[127] Esser2001",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.094815Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "null",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "92:8",
+        "column_name": "Macherey Nagel Nucleosil 5 NH2",
+        "notes": "The critical condition was established using PPG (poly(propylene glycol)) to analyze PPO-triols. The text states LC-CC separates functionally heterogeneous samples with regard to their functional groups irrespective of the molar mass.",
+        "publication_year": 2001,
+        "mobile_phase_solvents": [
+          "hexane",
+          "isopropyl alcohol"
+        ],
+        "evidence_text": "In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%. The functionality type separation of sample 1 under these conditions is shown in Figure 6.",
+        "corresponding_author_name": "H. Pasch",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(propylene oxide)",
+        "detector": "null",
+        "stationary_phase_chemistry": "NH2 (Amino)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "eluent composition determined by running PPGs with different molar masses in binary eluents",
+        "mobile_phase_ratio_units": "w/w",
+        "column_mode": "Normal Phase",
+        "critical_component": "poly(propylene glycol)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol.-%",
+        "mobile_phase_ratio_raw": "92:8",
+        "mobile_phase_ratio_components": [
+          92.0,
+          8.0
+        ],
+        "flow_rate_raw": "null",
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

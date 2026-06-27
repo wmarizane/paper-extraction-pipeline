@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "source_pdf": "[363] Falkenhagen2009",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.090818Z"
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/ac8019784",
+        "flow_rate": "0.35 mL/min",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "column_dimensions": "50 mm x 2.1 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "15.7/84.3",
+        "column_name": "BEH C18",
+        "notes": "Mobile phase A is water with 0.1% formic acid; Mobile phase B is acetonitrile/methanol 30:70 (v/v). Determined using ethoxylated fatty acid C18 alcohol (Mw 700 g/mol).",
+        "publication_year": 2009,
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile",
+          "methanol"
+        ],
+        "evidence_text": "Using a mixture of 15.7/ 84.3 (A/B, v/v) \"critical\" separation conditions were realized. The ESI-TOF mass spectra recorded at 10.5, 10.9, and 11.5 min (Figure 2, upper middle) did not show any change of the maximum of the mass peak distribution.",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null,
+          "pH_modifier": "0.1% formic acid"
+        },
+        "analyte_polymer": "poly(ethylene oxide)",
+        "detector": "ESI-TOF MS",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v (A/B)",
+        "mobile_phase_ratio_raw": "15.7/84.3",
+        "mobile_phase_ratio_components": [
+          15.7,
+          84.3
+        ],
+        "flow_rate_raw": "0.35 mL/min",
+        "flow_rate_ml_per_min": 0.35,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "paper_doi": "10.1021/ac8019784",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "column_dimensions": "50 mm x 2.1 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "85:15",
+        "column_name": "BEH C18",
+        "notes": "Mobile phase A is water with 0.2% formic acid; Mobile phase B is tetrahydrofuran. Determined using PPO homopolymer (Mp 1020 g/mol).",
+        "publication_year": 2009,
+        "mobile_phase_solvents": [
+          "water",
+          "tetrahydrofuran"
+        ],
+        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null,
+          "pH_modifier": "0.2% formic acid"
+        },
+        "analyte_polymer": "poly(propylene oxide)",
+        "detector": "ESI-TOF MS",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(propylene oxide)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v (THF/water)",
+        "mobile_phase_ratio_raw": "85:15",
+        "mobile_phase_ratio_components": [
+          85.0,
+          15.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "paper_doi": "10.1021/ac8019784",
+        "flow_rate": "0.35 mL/min",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "column_dimensions": "50 mm x 2.1 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "15.7/84.3",
+        "column_name": "BEH C18",
+        "notes": "Separation based on end-group structure (fatty acid chain length) under PEO critical conditions.",
+        "publication_year": 2009,
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile",
+          "methanol"
+        ],
+        "evidence_text": "These \"critical\" conditions were applied for a separation of a mixture of 8 fatty acid ethoxylated alcohols. As presented in Figure 3 (left) the mixture could be separated in 10 min...",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null,
+          "pH_modifier": "0.1% formic acid"
+        },
+        "analyte_polymer": "ethoxylated fatty acid alcohols",
+        "detector": "ESI-TOF MS",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "application of critical conditions determined for PEO",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "ethylene oxide repeating unit",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v (A/B)",
+        "mobile_phase_ratio_raw": "15.7/84.3",
+        "mobile_phase_ratio_components": [
+          15.7,
+          84.3
+        ],
+        "flow_rate_raw": "0.35 mL/min",
+        "flow_rate_ml_per_min": 0.35,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "paper_doi": "10.1021/ac8019784",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "column_dimensions": "50 mm x 2.1 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "85:15",
+        "column_name": "BEH C18",
+        "notes": "Separation based on PEO block length/composition under PPO critical conditions.",
+        "publication_year": 2009,
+        "mobile_phase_solvents": [
+          "water",
+          "tetrahydrofuran"
+        ],
+        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null,
+          "pH_modifier": "0.2% formic acid"
+        },
+        "analyte_polymer": "PPO/PEO copolymer",
+        "detector": "ESI-TOF MS",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "application of critical conditions determined for PPO",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "propylene oxide repeating unit",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v (THF/water)",
+        "mobile_phase_ratio_raw": "85:15",
+        "mobile_phase_ratio_components": [
+          85.0,
+          15.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}
