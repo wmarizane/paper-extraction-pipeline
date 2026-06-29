@@ -6,6 +6,25 @@ set -e
 MODELS=("qwen3.5-27b" "mistral-small-24b")
 SUBFOLDERS=()
 
+# Archive old results and logs if they exist
+if [ -d "results" ]; then
+    ARCHIVE_NUM=1
+    while [ -d "results_archive_v$ARCHIVE_NUM" ]; do
+        ((ARCHIVE_NUM++))
+    done
+    echo "Archiving previous results to results_archive_v$ARCHIVE_NUM..."
+    mv results "results_archive_v$ARCHIVE_NUM"
+fi
+
+if [ -d "logs" ]; then
+    ARCHIVE_NUM=1
+    while [ -d "logs_archive_v$ARCHIVE_NUM" ]; do
+        ((ARCHIVE_NUM++))
+    done
+    echo "Archiving previous logs to logs_archive_v$ARCHIVE_NUM..."
+    mv logs "logs_archive_v$ARCHIVE_NUM"
+fi
+
 # Find all subfolders in Inputs
 for SUBDIR in Inputs/*/; do
     [ -d "$SUBDIR" ] || continue

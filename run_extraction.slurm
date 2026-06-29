@@ -7,8 +7,8 @@
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:rtx_6000:1
 #SBATCH --time=12:00:00
-#SBATCH --output=logs/output_%x-%j.log
-#SBATCH --error=logs/error_%x-%j.log
+#SBATCH --output=logs_v2/output_%x-%j.log
+#SBATCH --error=logs_v2/error_%x-%j.log
 
 # ============================================================================
 # Paper Extraction Pipeline - v3 Model-Agnostic (vLLM + PyMuPDF)
@@ -21,7 +21,7 @@
 
 set -e  # Exit on error
 
-mkdir -p logs results
+mkdir -p logs_v2 results
 
 # Conda Environment Setup
 source /project/wkmrzane/miniconda3/etc/profile.d/conda.sh

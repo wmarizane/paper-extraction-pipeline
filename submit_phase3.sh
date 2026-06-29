@@ -7,12 +7,12 @@
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:rtx_6000:2
 #SBATCH --time=04:00:00
-#SBATCH --output=logs/output_%x-%j.log
-#SBATCH --error=logs/error_%x-%j.log
+#SBATCH --output=logs_v2/output_%x-%j.log
+#SBATCH --error=logs_v2/error_%x-%j.log
 
 set -e
 
-mkdir -p logs results/consensus
+mkdir -p logs_v2 results/consensus
 
 source /project/wkmrzane/miniconda3/etc/profile.d/conda.sh
 conda activate research-assistant

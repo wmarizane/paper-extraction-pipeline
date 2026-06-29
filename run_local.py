@@ -17,7 +17,9 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+import subprocess
 from typing import Dict, Any
+import torch
 
 from config.settings import settings
 from config.model_registry import get_model_config, list_models
@@ -99,6 +101,15 @@ class PipelineRunner:
             
             print(f"   ✅ Wrapped full document: {total_tokens:,} tokens ({stage_time:.2f}s)\n")
             
+            # Pre-LLM nvidia-smi check
+            nvidia_smi_start = "N/A"
+            try:
+                nvidia_smi_start = subprocess.check_output(["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"], text=True).strip()
+            except Exception:
+                pass
+            
+            torch.cuda.reset_peak_memory_stats()
+            
             # Stage 4
             print("🤖 Stage 4/4: Extracting data with LLM...")
             stage_start = time.time()
@@ -111,7 +122,27 @@ class PipelineRunner:
                 "success": successful == len(results),
             }
             
-            print(f"\n   ✅ Extraction complete ({stage_time:.2f}s)\n")
+            # Post-LLM tracking
+            total_llm_calls = sum(r.llm_calls for r in results if r is not None)
+            self.metrics["stages"]["llm_extraction"]["total_llm_calls"] = total_llm_calls
+            
+            try:
+                nvidia_smi_end = subprocess.check_output(["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"], text=True).strip()
+            except Exception:
+                nvidia_smi_end = "N/A"
+                
+            peak_memory_gb = 0.0
+            if torch.cuda.is_available():
+                peak_memory_gb = torch.cuda.max_memory_allocated() / (1024 ** 3)
+                
+            self.metrics["gpu_memory"] = {
+                "pytorch_peak_gb": round(peak_memory_gb, 2),
+                "nvidia_smi_pre_mb": nvidia_smi_start,
+                "nvidia_smi_post_mb": nvidia_smi_end
+            }
+            
+            print(f"\n   ✅ Extraction complete ({stage_time:.2f}s) - {total_llm_calls} LLM calls made")
+            print(f"   ✅ Peak PyTorch Memory: {peak_memory_gb:.2f} GB")
             
             print("📦 Aggregating results...")
             final_data = self._aggregate_results(chunks, results)
@@ -162,6 +193,7 @@ class PipelineRunner:
             else:
                 chunk_info["error"] = result.error_message
             
+            chunk_info["llm_calls"] = result.llm_calls
             chunk_details.append(chunk_info)
         
         model_key = self.model_name or settings.llm_model
