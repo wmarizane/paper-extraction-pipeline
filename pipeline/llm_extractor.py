@@ -255,7 +255,7 @@ JSON SCHEMA:
       "pore_size": "string or null",
       "column_dimensions": "string or null",
       "detector": "string or null",
-      "field_evidence": {
+      "field_evidence": {{
         "critical_condition_basis": "Direct quote from text establishing this IS a critical condition, or null",
         "critical_component":       "Direct quote naming which polymer/block/component is at critical condition, or null",
         "column_name":              "Direct quote stating the column name/model, or null",
@@ -264,7 +264,7 @@ JSON SCHEMA:
         "temperature_celsius":      "Direct quote stating the column temperature, or null",
         "pore_size":                "Direct quote stating the column pore size, or null",
         "flow_rate":                "Direct quote stating the flow rate, or null"
-      },
+      }},
       "notes": "string or null",
       "paper_doi": "string or null",
       "corresponding_author_name": "string or null — if multiple, join with '; '",
