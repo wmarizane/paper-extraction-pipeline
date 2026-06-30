@@ -30,3 +30,5 @@ venv/
 # Ignored results
 results/**/*.json
 results/**/**/*.json
+logs/*.jsonl
+logs/*.csv

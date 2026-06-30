@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "model": "local-programmatic-consensus",
+    "inputs": [
+      "deepseek-r1-32b",
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  }
+}

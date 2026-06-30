@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[148] Wachsen.pdf",
+    "extraction_date": "2026-06-14T09:17:49.065031",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[148] Wachsen.pdf",
+      "start_time": "2026-06-14T09:16:09.427100",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 84.08274912834167,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12463688850402832,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7025
+        },
+        "llm_extraction": {
+          "time_seconds": 15.430377006530762,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "oligo-L-lactide",
+        "critical_component": "oligo-L-lactide",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of polymer adsorption in the liquid chromatography",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-S",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250mm x 4mm ID",
+        "detector": "Diode-Array-Detector (type UVD 3205, Gynkotek, Germering, Germany) and a UV-detector (type SPD-10A, Shimadzu Europa GmbH, Duisburg, Germany)",
+        "evidence_text": "The ‘critical’ conditions for poly-L-lactide were realised by a mixture of 60vol.% dioxane and 40vol.% n-hexane which was used as solvent and mobile phase. A Nucleosil 300-S column (250mm 4mm ID, Macharey-Nagel, Diuren, Germany) was used. The column was thermostated at 30°C.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "O. Wachsen; K. H. Reichert; R. P. Krüger; H. Much; G. Schulz",
+        "corresponding_email_address": null,
+        "physical_address": "Technical University of Berlin, Institute of Technical Chemistry, Sekr. TC 3, Str. d. 17. Juni 135, D-10623 Berlin, Germany; Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": "1997"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7025,
+      "extraction_success": true,
+      "processing_time": 15.41907787322998,
+      "extracted_count": 1
+    }
+  ]
+}

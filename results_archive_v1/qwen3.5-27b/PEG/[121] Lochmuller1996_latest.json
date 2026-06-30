@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[121] Lochmuller1996.pdf",
+    "extraction_date": "2026-06-14T10:04:57.809131",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[121] Lochmuller1996.pdf",
+      "start_time": "2026-06-14T10:02:25.427225",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 138.2003629207611,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12175559997558594,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 19944
+        },
+        "llm_extraction": {
+          "time_seconds": 14.05966567993164,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 19944,
+      "extraction_success": true,
+      "processing_time": 14.035890579223633,
+      "extracted_count": 0
+    }
+  ]
+}

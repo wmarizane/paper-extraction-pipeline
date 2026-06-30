@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[126] Trathnigg1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "null",
+        "physical_address": "Institute of Organic Chemistry, University of Graz, A-8010 Graz, Heinrichstrasse 28, Austria",
+        "corresponding_email_address": "null",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "80:20",
+        "column_name": "ODS 2",
+        "notes": "Under these conditions, elution volumes of diols, mono- and dimethylethers are quite similar, indicating independence from chain length for the PEG block.",
+        "publication_year": "1993",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
+        "corresponding_author_name": "B. Trathnigg",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "detector": "density and RI",
+        "stationary_phase_chemistry": "C-18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
+        "mobile_phase_ratio_units": "V/V",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polyethylene glycol backbone",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

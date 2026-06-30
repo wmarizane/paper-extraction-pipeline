@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[113] Pasch.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "null",
+        "physical_address": "Deutsches Kunststoff-Institut Schlo\u00dfgartenstra\u00dfe 6 64289 Darmstadt, Germany",
+        "corresponding_email_address": "null",
+        "column_dimensions": "60x4mm I.D.",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "46:54",
+        "column_name": "Nucleosil RP-18",
+        "notes": "Used for separation of functional PEOs with different terminal groups (alkyloxy and aryloxy).",
+        "publication_year": "1994",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "evidence_text": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this 'critical point of adsorption' separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
+        "corresponding_author_name": "H. Pasch",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene oxide (PEO)",
+        "detector": "Waters differential refractometer R401, Knauer u.v./vis filter photometer",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical point of adsorption",
+        "mobile_phase_ratio_units": "% by volume",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polyethylene oxide",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

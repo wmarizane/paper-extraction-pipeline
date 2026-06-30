@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "source_pdf": "[301] Tufail2017",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.076937Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1039/c7ra08804c",
+        "flow_rate": "0.5 mL min^-1",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "93/6/1",
+        "column_name": "Jupiter C18",
+        "notes": "Used for analysis of block copolymers containing PMMA and PEO. PEO is non-critical under these conditions.",
+        "publication_year": 2017,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "tetrahydrofuran",
+          "trimethylamine"
+        ],
+        "evidence_text": "In mobile phase composition of ACN/THF/TEA: 93/6/1 v/v, all PMMAs eluted at the same elution volume irrespective of large difference in their molar masses, Fig. 4C. These conditions are termed as liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP).",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PMMA",
+        "detector": "ELS",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PMMA",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "93/6/1",
+        "mobile_phase_ratio_components": [
+          93.0,
+          6.0,
+          1.0
+        ],
+        "flow_rate_raw": "0.5 mL min^-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 A",
+        "pore_size_angstrom": 300.0
+      },
+      {
+        "paper_doi": "10.1039/c7ra08804c",
+        "flow_rate": "0.5 mL min^-1",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "97.5/2.5",
+        "column_name": "PerfectSil",
+        "notes": "Used for analysis of block copolymers containing PEO and PMMA. PMMA is non-critical under these conditions.",
+        "publication_year": 2017,
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "evidence_text": "Chromatographic critical conditions for PEGs are realized in a mobile phase composition THF/DMF: 97.50/2.50 (v/v), Fig. 7C. PEGs are chromatographically inseparable and whole molar mass range eluted at a sharp point (4.1 mL).",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "detector": "evaporative light scattering detector",
+        "stationary_phase_chemistry": "silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "molar mass independent elution",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "97.5/2.5",
+        "mobile_phase_ratio_components": [
+          97.5,
+          2.5
+        ],
+        "flow_rate_raw": "0.5 mL min^-1",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "300 A",
+        "pore_size_angstrom": 300.0
+      }
+    ]
+  }
+}

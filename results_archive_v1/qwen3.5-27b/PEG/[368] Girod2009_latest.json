@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[368] Girod2009.pdf",
+    "extraction_date": "2026-06-14T16:07:07.929196",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[368] Girod2009.pdf",
+      "start_time": "2026-06-14T16:04:45.083042",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 40.009334325790405,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12467551231384277,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8159
+        },
+        "llm_extraction": {
+          "time_seconds": 102.71203136444092,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "SG1-capped PEO-b-PS",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "Retention of PEO block is independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Equisil",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "88.8:11.2",
+        "mobile_phase_ratio_units": "%, v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "0.1–1 mM"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 mL min-1",
+        "pore_size": "100 A",
+        "column_dimensions": "150 x 4 mm",
+        "detector": "ESI-MS (QStar Elite)",
+        "evidence_text": "The critical conditions were established for hydroxyl-terminated PEG standards... using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr = 2.33 min) independently of their molecular mass. LiCl concentration in the range 0.1–1 mM led to the same critical conditions being obtained.",
+        "notes": "Critical conditions established for PEO block to make it chromatographically invisible, separating the copolymer by PS block size.",
+        "paper_doi": "10.1002/rcm.4028",
+        "corresponding_author_name": "Laurence Charles",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8159,
+      "extraction_success": true,
+      "processing_time": 102.68954300880432,
+      "extracted_count": 1
+    }
+  ]
+}

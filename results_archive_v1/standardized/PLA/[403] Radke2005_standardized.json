@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "source_pdf": "[403] Radke2005",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.083769Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/j.polymer.2005.05.028",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "0.46x20 cm and 0.46x25 cm",
+        "temperature_celsius": 50.0,
+        "mobile_phase_ratio": "57.1/42.9",
+        "column_name": "Nucleosil",
+        "notes": "Columns connected in series. Used to analyze star-shaped PLAs.",
+        "publication_year": 2005,
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
+        "corresponding_author_name": "Wolfgang Radke",
+        "pore_size": "100 A and 300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(lactide)",
+        "detector": "RI, MALLS, UV, ELSD",
+        "stationary_phase_chemistry": "bare silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions determined for linear PLAs",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "poly(lactide)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "57.1/42.9",
+        "mobile_phase_ratio_components": [
+          57.1,
+          42.9
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 A and 300 A",
+        "pore_size_angstrom": [
+          100.0,
+          300.0
+        ]
+      }
+    ]
+  }
+}

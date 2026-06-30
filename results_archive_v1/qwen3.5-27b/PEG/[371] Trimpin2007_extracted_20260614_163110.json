@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "source_pdf": "[371] Trimpin2007.pdf",
+    "extraction_date": "2026-06-14T16:31:10.355776",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[371] Trimpin2007.pdf",
+      "start_time": "2026-06-14T16:22:39.520583",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 16.79602837562561,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12096071243286133,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6470
+        },
+        "llm_extraction": {
+          "time_seconds": 493.9180836677551,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO 4250",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC) used to separate components differing by end groups",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "2 x 150 mm",
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "Adsorption Chromatography at Critical Conditions of Adsorption (LACCC) for Off-Line Fractionation. The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L",
+        "notes": "The text explicitly states LACCC separates components differing by end groups, implying the backbone is at critical conditions. The setup is used for fractionation, but the conditions themselves are the critical conditions for the PEO backbone.",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "dimethoxy-PEO 500",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC) used to separate components differing by end groups",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "2 x 150 mm",
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "Adsorption Chromatography at Critical Conditions of Adsorption (LACCC) for Off-Line Fractionation. The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L",
+        "notes": "The text explicitly states LACCC separates components differing by end groups, implying the backbone is at critical conditions. The setup is used for fractionation, but the conditions themselves are the critical conditions for the PEO backbone.",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "monomethoxy-monomethacrylate-PEO 1000",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC) used to separate components differing by end groups",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "2 x 150 mm",
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "Adsorption Chromatography at Critical Conditions of Adsorption (LACCC) for Off-Line Fractionation. The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L",
+        "notes": "The text explicitly states LACCC separates components differing by end groups, implying the backbone is at critical conditions. The setup is used for fractionation, but the conditions themselves are the critical conditions for the PEO backbone.",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "dimethacrylate-PEO 1000",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC) used to separate components differing by end groups",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "2 x 150 mm",
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "Adsorption Chromatography at Critical Conditions of Adsorption (LACCC) for Off-Line Fractionation. The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L",
+        "notes": "The text explicitly states LACCC separates components differing by end groups, implying the backbone is at critical conditions. The setup is used for fractionation, but the conditions themselves are the critical conditions for the PEO backbone.",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PEO 6000",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC) used to separate components differing by end groups",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "2 x 150 mm",
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "Adsorption Chromatography at Critical Conditions of Adsorption (LACCC) for Off-Line Fractionation. The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L",
+        "notes": "The text explicitly states LACCC separates components differing by end groups, implying the backbone is at critical conditions. The setup is used for fractionation, but the conditions themselves are the critical conditions for the PEO backbone.",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6470,
+      "extraction_success": true,
+      "processing_time": 493.8957624435425,
+      "extracted_count": 5
+    }
+  ]
+}

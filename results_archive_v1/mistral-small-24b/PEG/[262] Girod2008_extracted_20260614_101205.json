@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[262] Girod2008.pdf",
+    "extraction_date": "2026-06-14T10:12:05.870920",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[262] Girod2008.pdf",
+      "start_time": "2026-06-14T10:10:38.826354",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 60.56368637084961,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11067867279052734,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 11507
+        },
+        "llm_extraction": {
+          "time_seconds": 26.370056867599487,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl-silica Equisil",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "water"
+        ],
+        "mobile_phase_ratio": "88.8:11.2",
+        "mobile_phase_ratio_units": "% v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 mL/min",
+        "pore_size": "100 A",
+        "column_dimensions": "150 x 4 mm",
+        "detector": "ESI-MS",
+        "evidence_text": "The critical composition of the MeOH/water eluent was determined for hydroxyl-terminated PEG standards, using a 1 mM LiCl concentration. The elution volumes of small PEG standards (200 g mol 1 < Mw < 2000 g mol 1) are reported in Fig. 1 for three tested experimental conditions. For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve ¼ 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
+        "notes": null,
+        "paper_doi": "10.1002/rcm.3796",
+        "corresponding_author_name": "L. Charles",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "SG1-capped PEO-b-PS",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl-silica Equisil",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "water"
+        ],
+        "mobile_phase_ratio": "88.8:11.2",
+        "mobile_phase_ratio_units": "% v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 mL/min",
+        "pore_size": "100 A",
+        "column_dimensions": "150 x 4 mm",
+        "detector": "ESI-MS",
+        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block.",
+        "notes": null,
+        "paper_doi": "10.1002/rcm.3796",
+        "corresponding_author_name": "L. Charles",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "publication_year": "2008"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 11507,
+      "extraction_success": true,
+      "processing_time": 26.353783130645752,
+      "extracted_count": 2
+    }
+  ]
+}

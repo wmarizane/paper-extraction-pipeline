@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[302] Abdul-Karim2019.pdf",
+    "extraction_date": "2026-06-14T10:41:40.722332",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[302] Abdul-Karim2019.pdf",
+      "start_time": "2026-06-14T10:40:51.636399",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 19.26757287979126,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14395880699157715,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10554
+        },
+        "llm_extraction": {
+          "time_seconds": 29.674194812774658,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(propylene ether carbonate)",
+        "critical_component": "poly(propylene ether carbonate)",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ZORBAX ODS",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "92/7",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "trimethylamine",
+          "salt_concentration": "1.0%"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "70 Å",
+        "column_dimensions": "250×4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "LCCC of PPEC was performed by using above HPLC instrueas ment with ZORBAX ODS, 70 Å pore, 5 µm particle, 250×4.6 mm EE GED a=» =D dimensions (Phenomenex, USA). The mobile phase for RP analCe) ysis was a mixture of acetonitrile (ACN) and double deionizedwater with 1.0% trimethylamine (TEA) as an additive. ee)a=» Ee a=» LCCC of PPEC was performed by using mobile phase containing 92% ACN, 7% water and 1% TEA (2.8 mL), E. These are so called chromatographic critical conditions of PPEC on RP column.",
+        "notes": null,
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2019"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PhenoSphere-Next 5u Sil",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "mobile_phase_ratio": "98.5/1.5",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 Å",
+        "column_dimensions": "250×4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "LCCC of PEG was performed by using the HPLC instrument GD elaborated above with PhenoSphere-Next 5u Sil column, 120 Å E(EwUoU(w(ww wes au=» pore, 5 µm particle, 250×4.6 mm dimensions (Phenomenex, USA). a=» qa EE The mobile phase used for NP analysis was a mixture of THF a=» and DMF. a=» LCCC of PEGs in a given solvent/sorbent system. It is pertinent to mention here that the elution volume of critical PEGs is ahead of expected void volume of the column. The late elution of PEGs at their critical conditions can be attributed to the presence of polar hydroxyl end-groups that strongly interact with the stationary phase. The assumption is further supported by elution behaviour of MeO-PEGs of varying molar masses eluted earlier than PEGs independent of molar mass, Figure 6(F).",
+        "notes": null,
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2019"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10554,
+      "extraction_success": true,
+      "processing_time": 29.65973210334778,
+      "extracted_count": 2
+    }
+  ]
+}

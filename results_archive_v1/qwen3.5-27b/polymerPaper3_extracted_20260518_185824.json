@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper3.pdf",
+    "extraction_date": "2026-05-18T18:58:24.560727",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper3.pdf",
+      "start_time": "2026-05-18T18:40:26.652421",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 892.0756485462189,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11039400100708008,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13984
+        },
+        "llm_extraction": {
+          "time_seconds": 185.72215867042542,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LUNA C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "60/40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "68",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "refractive index detector, UV-visible absorption detector",
+        "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v).",
+        "notes": "Used for characterization of PEO-b-PLLA diblock copolymer."
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LUNA C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "37",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "refractive index detector, UV-visible absorption detector",
+        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v))",
+        "notes": "First condition used for triblock copolymer with shorter PLLA blocks (Figure 3)."
+      },
+      {
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical condition of PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LUNA C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "54",
+        "flow_rate": null,
+        "pore_size": "100-Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "refractive index detector, UV-visible absorption detector",
+        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v))",
+        "notes": "Second condition used for triblock copolymer with longer PLLA blocks (Figure 5)."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13984,
+      "extraction_success": true,
+      "processing_time": 185.6999580860138,
+      "extracted_count": 3
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[123] Lee1999.pdf",
+    "extraction_date": "2026-06-14T10:12:04.384420",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[123] Lee1999.pdf",
+      "start_time": "2026-06-14T10:09:53.210853",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 19.57319140434265,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12637805938720703,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6203
+        },
+        "llm_extraction": {
+          "time_seconds": 111.47388315200806,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-PLLA diblock copolymer",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "critical_condition_basis": "Retention of PEG standards independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Phenomenex Luna C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "60/40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "68",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Refractive Index detector (Shodex RI 71) and UV-vis detector (LDC spectroMonitor 3200)",
+        "evidence_text": "The middle chromatograms in Figure 1a,b display the separation at the critical condition of PEG, the mobile phase of acetonitrile/water (60/40, v/v), and the column temperature of 68 °C. The critical condition of PEG is obtained empirically by monitoring the retention volume (VR) of three different molecular weight PEG standards (Mn: 1500, 3400, and 8000). At this condition, the retention of PEG is independent of molecular weight and eluted at the injection solvent peak position, the PEO block is 'invisible' in principle, and the PEO PLLA block copolymer behaves like a PLLA homopolymer of the molecular weight equivalent to the PLLA block as far as the HPLC retention behavior is concerned.",
+        "notes": "Critical condition established using PEG standards but applied to PEO block of PEO-PLLA. Text notes that MPEO critical condition is slightly different due to end effects but PEG condition was used for satisfactory separation.",
+        "paper_doi": "10.1021/ma9900028",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784, Korea",
+        "publication_year": "1999"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6203,
+      "extraction_success": true,
+      "processing_time": 111.45058798789978,
+      "extracted_count": 1
+    }
+  ]
+}

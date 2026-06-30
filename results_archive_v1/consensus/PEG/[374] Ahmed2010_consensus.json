@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[374] Ahmed2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/jssc.200900847",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePoL), Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "32 vol%",
+        "column_name": "Synergi Fusion RP",
+        "notes": "Used as the first dimension in 2-D LC for separation of PEG and PEG-MME based on end-group functionality.",
+        "publication_year": "2010",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "A much better resolution could be achieved on the same column in 32 vol% acetone\u2013water at the same temperature (Fig. 1). ... Both pumps were operated in the same mobile phase, which corresponds to the CAP for EO (32% acetone).",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "80 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical point of adsorption (CAP) for EO",
+        "mobile_phase_ratio_units": "vol%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "PEG-MME",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "In PEG 350 one may expect a PEG similar to PEG 600, in PEG-MME 550 similar to PEG 900. In both cases, an excellent separation could be achieved.",
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePoL), Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

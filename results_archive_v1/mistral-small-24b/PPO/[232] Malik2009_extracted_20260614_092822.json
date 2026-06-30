@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[232] Malik2009.pdf",
+    "extraction_date": "2026-06-14T09:28:22.519032",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[232] Malik2009.pdf",
+      "start_time": "2026-06-14T09:22:30.938171",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 9.46776819229126,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.0997469425201416,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8013
+        },
+        "llm_extraction": {
+          "time_seconds": 342.01319694519043,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8013,
+      "extraction_success": false,
+      "processing_time": 112.33622598648071,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"poly(ethylene glycol)\",\"critical_component\":\"EO\",\"architecture\":\"null\",\"critical_condition_basis\":\"LCCC\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Nucleosil 100-5 OH\",\"stationary_phase_chemistry\":\"diol\",\"column_mode\":\"Normal Phase\",\"mobile"
+    }
+  ]
+}

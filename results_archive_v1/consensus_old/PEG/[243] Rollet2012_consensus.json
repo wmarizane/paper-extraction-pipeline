@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[243] Rollet2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Chloroform",
+          "Methanol",
+          "n-Heptane"
+        ],
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "evidence_text": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column. ... The mobile phase composition to reach the critical conditions was determined to be 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v).",
+        "detector": "ELSD",
+        "pore_size": "100 \u00c5",
+        "critical_component": "PEO backbone",
+        "publication_year": "2012",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "critical_condition_basis": "Elution independent of molar mass for PEO standards",
+        "column_name": "Nucleosil C8 HD",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "Poly(ethylene oxide) (PEO)",
+        "corresponding_email_address": "didier.gigmes@univ-provence.fr",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "paper_doi": "10.1021/ma301199m",
+        "corresponding_author_name": "Didier Gigmes",
+        "notes": "Elution mechanism governed by interaction of polar endgroup with residual silanols. Critical conditions reached for Mn < 12,000 g/mol.",
+        "flow_rate": "0.8 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[210] Biela2003.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
+        "evidence_text": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 \u00d7 10\u00b3 to 7.4 \u00d7 10\u2074 ... showed no dependence of the elution volumes on molar mass. ... LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 \u00b0C as the mobile phase.",
+        "detector": "Waters 486 tunable UV detector at 235 nm",
+        "pore_size": "100 and 300 A",
+        "critical_component": "poly(L-lactide)",
+        "publication_year": "2003",
+        "temperature_celsius": "50",
+        "mobile_phase_ratio": "56.25/43.75",
+        "critical_condition_basis": "elution volumes showed no dependence on molar mass",
+        "column_name": "Si-100 and Si-300",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "linear poly(L-lactide)",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl",
+        "column_dimensions": null,
+        "stationary_phase_chemistry": "silica gel",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_author_name": "Andrzej Duda",
+        "notes": "Critical conditions established for linear PLA used to analyze star-shaped PLA.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

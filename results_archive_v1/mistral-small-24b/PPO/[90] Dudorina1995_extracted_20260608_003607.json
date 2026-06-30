@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[90] Dudorina1995.pdf",
+    "extraction_date": "2026-06-08T00:36:07.055158",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[90] Dudorina1995.pdf",
+      "start_time": "2026-06-08T00:35:19.931404",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 28.98291802406311,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11621475219726562,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8081
+        },
+        "llm_extraction": {
+          "time_seconds": 18.02441668510437,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrospere Si-300",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "carbon tetrachloride",
+          "chloroform"
+        ],
+        "mobile_phase_ratio": "94.65:5.35",
+        "mobile_phase_ratio_units": "vol. %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "UV (270 nm)",
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A. V. Dudorina",
+        "corresponding_email_address": null,
+        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "publication_year": "1995"
+      },
+      {
+        "analyte_polymer": "polyphenylene oxide",
+        "critical_component": "polyphenylene oxide",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrospere Si-300",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "carbon tetrachloride",
+          "chloroform"
+        ],
+        "mobile_phase_ratio": "29:71",
+        "mobile_phase_ratio_units": "vol. %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "UV (270 nm)",
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 29: 71 vol. % for polyphenylene oxide",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A. V. Dudorina",
+        "corresponding_email_address": null,
+        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "publication_year": "1995"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8081,
+      "extraction_success": true,
+      "processing_time": 18.013264179229736,
+      "extracted_count": 2
+    }
+  ]
+}

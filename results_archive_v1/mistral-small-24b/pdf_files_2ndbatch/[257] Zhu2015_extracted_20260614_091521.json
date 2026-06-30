@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[257] Zhu2015.pdf",
+    "extraction_date": "2026-06-14T09:15:21.007924",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[257] Zhu2015.pdf",
+      "start_time": "2026-06-14T09:14:18.672636",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 58.80101466178894,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1373581886291504,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10545
+        },
+        "llm_extraction": {
+          "time_seconds": 3.3967440128326416,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10545,
+      "extraction_success": true,
+      "processing_time": 3.381301164627075,
+      "extracted_count": 0
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "source_pdf": "[370] Falkenhagen2005.pdf",
+    "extraction_date": "2026-06-14T16:21:27.086318",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[370] Falkenhagen2005.pdf",
+      "start_time": "2026-06-14T16:14:44.571078",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 21.871346950531006,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.17545843124389648,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 5812
+        },
+        "llm_extraction": {
+          "time_seconds": 380.4683151245117,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO with H end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear",
+        "critical_condition_basis": "Elution of polymers with same chemical composition but different molecular weight in one peak",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. The chromatographic systems were kept at a constant temperature of 458C. The eluent flow was 20 mL/min.",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. The text mentions 458C which is interpreted as 45°C based on context of typical chromatography temperatures, though the text literally says 458C. The flow rate is listed as 20 mL/min in the text for m-HPLC, which is unusually high for 0.5mm ID, but extracted as stated.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with OCH3 end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear",
+        "critical_condition_basis": "Elution of polymers with same chemical composition but different molecular weight in one peak",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. Functionalised PEOs with different end groups, however, elute at different times.",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. Separate entry for OCH3 end group as it elutes at a different time than H end groups under the same critical solvent composition.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with CH3 end groups (branched)",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear with branched end group",
+        "critical_condition_basis": "Elution of polymers with same chemical composition but different molecular weight in one peak",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. Functionalised PEOs with different end groups, however, elute at different times.",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. Separate entry for CH3 end group (Sample 4 in Fig 3) as it elutes at a different time.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with C(CH3)2 end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear with branched end group",
+        "critical_condition_basis": "Elution of polymers with same chemical composition but different molecular weight in one peak",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. Functionalised PEOs with different end groups, however, elute at different times.",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. Separate entry for C(CH3)2 end group (Sample 5 in Fig 3) as it elutes at a different time.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 5812,
+      "extraction_success": true,
+      "processing_time": 380.4459924697876,
+      "extracted_count": 4
+    }
+  ]
+}

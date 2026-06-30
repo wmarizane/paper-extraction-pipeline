@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[294] Malik2008.pdf",
+    "extraction_date": "2026-06-14T09:33:48.297631",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[294] Malik2008.pdf",
+      "start_time": "2026-06-14T09:33:09.737730",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 14.382552146911621,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.09983682632446289,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9565
+        },
+        "llm_extraction": {
+          "time_seconds": 24.077361822128296,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt%",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 ",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. PPG diols and allylic PPG are separated from each other (due to the adsorption of the allyl group). If the alkyl group is long enough, it is adsorbed more strongly than the allylic group, and the alkyl-terminated PPG can also be separated from the allylic PPG.",
+        "notes": null,
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt%",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 ",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. PPG diols and allylic PPG are separated from each other (due to the adsorption of the allyl group). If the alkyl group is long enough, it is adsorbed more strongly than the allylic group, and the alkyl-terminated PPG can also be separated from the allylic PPG.",
+        "notes": null,
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9565,
+      "extraction_success": true,
+      "processing_time": 24.063729524612427,
+      "extracted_count": 2
+    }
+  ]
+}

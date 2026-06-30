@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "source_pdf": "polymerPaper1.pdf",
+    "extraction_date": "2026-05-18T18:34:30.169949",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "polymerPaper1.pdf",
+      "start_time": "2026-05-18T18:32:44.713334",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 28.197937488555908,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1294715404510498,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9800
+        },
+        "llm_extraction": {
+          "time_seconds": 77.1290991306305,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "copolymers containing predominantly 1,4-isoprene units",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92/8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100-5, 300-5, 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "notes": "Samples contain small amounts of 3,4-isoprene units (approx 6 mol %). The text states these are 'near-critical conditions' but explicitly describes the molar mass independence characteristic of LCCC."
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9800,
+      "extraction_success": true,
+      "processing_time": 77.10668969154358,
+      "extracted_count": 1
+    }
+  ]
+}

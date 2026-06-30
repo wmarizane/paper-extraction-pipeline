@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[47] Pasch1993.pdf",
+    "extraction_date": "2026-06-14T11:34:24.269277",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[47] Pasch1993.pdf",
+      "start_time": "2026-06-14T11:30:56.949651",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 35.595760107040405,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11461377143859863,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6481
+        },
+        "llm_extraction": {
+          "time_seconds": 171.60912585258484,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min-1",
+        "pore_size": "100 A",
+        "column_dimensions": "200 x 4 mm",
+        "detector": "RI",
+        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane. At this point one retention time is obtained for all molar masses of PMMA. ... The chromatograms of the block copolymer B3 at the critical point of PMMA ... are given in Figure 3.",
+        "notes": "Analysis performed on block copolymer using critical conditions for the PMMA block to determine PS block properties.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrospher Si-300 and LiChrospher Si-1000",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min-1",
+        "pore_size": "300 A and 1000 A",
+        "column_dimensions": "200 x 4 mm",
+        "detector": "u.v./vis. filter photometer",
+        "evidence_text": "As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane. ... Figure 5 shows the chromatograms of the block copolymers and their precursors, measured with a column system of silica gel Si-300 and Si-1000 and u.v. detection",
+        "notes": "Analysis performed on block copolymer using critical conditions for the PMMA block. UV detection at 280 nm used for selective detection of PS block.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6481,
+      "extraction_success": true,
+      "processing_time": 171.58641624450684,
+      "extracted_count": 2
+    }
+  ]
+}

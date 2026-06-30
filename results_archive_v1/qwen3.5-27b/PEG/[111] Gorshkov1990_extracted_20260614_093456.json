@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[111] Gorshkov1990.pdf",
+    "extraction_date": "2026-06-14T09:34:56.450024",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[111] Gorshkov1990.pdf",
+      "start_time": "2026-06-14T09:29:50.406604",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 56.093233585357666,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11642289161682129,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6867
+        },
+        "llm_extraction": {
+          "time_seconds": 249.83362674713135,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene oxide (PEO)",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear homopolymer with various end groups (HO-OH, HO-OC4H9, CH2=CH-OH)",
+        "critical_condition_basis": "Retention volume independent of molecular weight up to 20000",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chromapak RP-18",
+        "stationary_phase_chemistry": "C18 (Reversed Phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "mobile_phase_ratio": "58:42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml min-1",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "Refractometric detector (RIDK 101)",
+        "evidence_text": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (water-acetonitrile). In this instance the retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000 (Fig. 2).",
+        "notes": "Used to separate PEO by functionality types (end groups).",
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "Polypropylene oxide (PPO)",
+        "critical_component": "PPO block",
+        "architecture": "Block copolymer (PEO-PPO-PEO)",
+        "critical_condition_basis": "Critical conditions for PEO block (outer blocks invisible), separation by PPO block size",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chromapak RP-18",
+        "stationary_phase_chemistry": "C18 (Reversed Phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "mobile_phase_ratio": "58:42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml min-1",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "Refractometric detector (RIDK 101)",
+        "evidence_text": "At the critical point for PEO the outer blocks disappear, irrespective of their length... This phenomenon is illustrated in Figs. 5 and 6. Note the correspondence between the PPO homopolymer homologues and the macromolecules with a different degree of polymerization in the inner block B in the copolymer.",
+        "notes": "Critical condition established for PEO block, resulting in separation of the PPO block by size. Used for ABA' block copolymers.",
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "Polypropylene oxide (PPO)",
+        "critical_component": "PPO block",
+        "architecture": "Block copolymer (PEO-PPO-PEO)",
+        "critical_condition_basis": "Attempted critical conditions for PPO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chromapak RP-18",
+        "stationary_phase_chemistry": "C18 (Reversed Phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Water",
+          "Tetrahydrofuran (THF)"
+        ],
+        "mobile_phase_ratio": "Small water content",
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "It is now of interest to find the critical point for the inner PPO block in a three-block copolymer... Unfortunately, on PPO in a THF-water mixture with a small water content. Under these conditions the unmodified sites of the reversed phase, containing -SiOH groups, become significant. Because of the extremely strong interaction of PEO with these sites, the chromatograms... are strongly distorted by elongated tails.",
+        "notes": "Critical condition for PPO block could not be successfully realized due to strong interaction of PEO blocks with unmodified silica sites (-SiOH) on the RP-18 column.",
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": "1990"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6867,
+      "extraction_success": true,
+      "processing_time": 249.81073999404907,
+      "extracted_count": 3
+    }
+  ]
+}

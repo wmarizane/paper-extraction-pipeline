@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "source_pdf": "[372] Trathnigg2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in methanol\u2013water containing 85.8 wt.% methanol... On the Zorbax column in methanol/water at 85.8 wt.% of methanol we varied the temperature between 15.0 and 35.0 C.",
+        "detector": "Density detection system (DDS70) with ELSD",
+        "pore_size": "300 A",
+        "critical_component": "oxyethylene unit",
+        "publication_year": "2005",
+        "temperature_celsius": "15.0\u201335.0",
+        "mobile_phase_ratio": "85.8",
+        "critical_condition_basis": "Critical adsorption point (CAP) for the oxyethylene unit",
+        "column_name": "Zorbax 300 C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.% methanol",
+        "critical_condition_confidence": "explicit",
+        "architecture": "homopolymer",
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "150 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Temperature dependence is almost negligible in this system.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "Critical conditions for the oxyethylene unit were realized on octadecyl phases... in acetone\u2013water at 89.6 wt.% acetone. For the Prodigy ODS3 column these critical points are localized at about 27 and 90 wt.% acetone, and for this study we have selected the mobile phase composition of 89.6% acetone.",
+        "detector": "Density detection system (DDS70) with ELSD",
+        "pore_size": "100 A",
+        "critical_component": "oxyethylene unit",
+        "publication_year": "2005",
+        "temperature_celsius": "15.0\u201335.0",
+        "mobile_phase_ratio": "89.6",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Prodigy ODS3",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "critical_condition_confidence": "explicit",
+        "architecture": "homopolymer",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Temperature dependence is much more pronounced in this system; critical temperature determined as 11.0\u00b0C.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "In methanol\u2013water AB structures can be analyzed very well at the CAP... Among the tested columns, the wide-pore Zorbax 300 C18 was the column of choice for the methanol\u2013water system.",
+        "detector": "Density detection system (DDS70) with ELSD",
+        "pore_size": "300 A",
+        "critical_component": "oxyethylene unit",
+        "publication_year": "2005",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "85.8",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Zorbax 300 C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.% methanol",
+        "critical_condition_confidence": "explicit",
+        "architecture": "AB block copolymer",
+        "analyte_polymer": "fatty alcohol ethoxylates",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "150 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Analyzed under critical conditions for the EO unit established with PEG.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "At the second CAP (at 90\u201392 wt.% acetone) retention is in the desired range for BAB with an alkyl chain length of 12\u201318 carbon atoms. Among the tested columns, the narrow-pore Prodigy ODS3 performed best: baseline-resolved peaks were obtained for the diesters with 1\u201310 EO units.",
+        "detector": "Density detection system (DDS70) with ELSD",
+        "pore_size": "100 A",
+        "critical_component": "oxyethylene unit",
+        "publication_year": "2005",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "89.6",
+        "critical_condition_basis": "critical adsorption point (CAP) for the oxyethylene unit",
+        "column_name": "Prodigy ODS3",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "critical_condition_confidence": "explicit",
+        "architecture": "BAB block copolymer",
+        "analyte_polymer": "fatty acid polyglycol esters (PEG diesters)",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Analyzed under critical conditions for the EO unit established with PEG.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

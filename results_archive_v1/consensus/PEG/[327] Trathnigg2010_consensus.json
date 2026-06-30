@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[327] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Ethylene oxide (EO) repeat unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 \u00b0C.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "82%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": null,
+        "evidence_text": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 \u00b0C. Under these conditions, the retention times of PEGs and PEGMMEs are sufficiently different to allow such a separation (not shown).",
+        "notes": "The text states the separation was achieved but notes the chromatogram is 'not shown'. The flow rate is taken from the general experimental section for System B (gradient system) where this column was used.",
+        "paper_doi": "10.1007/s00216-010-3951-x",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), 8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "82%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 \u00b0C.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-010-3951-x",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), 8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

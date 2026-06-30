@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "source_pdf": "[312] Malik2023.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1039/d3ra05912j",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "82/17/01",
+        "column_name": "ZORBAX ODS",
+        "notes": "1% TEA added to avoid polar interactions with free silanols. Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers.",
+        "publication_year": "2023",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "THF",
+          "Triethylamine"
+        ],
+        "evidence_text": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions. Under these conditions, P(EpTEGMME) eluted in order of decreasing molar mass earlier than the void volume of the column",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "pore_size": "70 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PCL",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "chromatographic critical point",
+        "mobile_phase_ratio_units": "V%",
+        "column_mode": "Reverse Phase",
+        "critical_component": "PCL",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1039/d3ra05912j",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "68/32",
+        "column_name": "Ultisil diol",
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers to determine PCL block length and free macroinitiator content.",
+        "publication_year": "2023",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "evidence_text": "In between these two opposing elution orders, there is a point at 68% acetone where P(Ep-TEGMME) of a molar mass range 500\u20133000 eluted at the same elution volume irrespective of its molar mass. This is the CCP of P(Ep-TEGMME) under current conditions.",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "P(Ep-TEGMME)",
+        "detector": "ELS",
+        "stationary_phase_chemistry": "diol",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "chromatographic critical point",
+        "mobile_phase_ratio_units": "V%",
+        "column_mode": "Normal Phase",
+        "critical_component": "P(Ep-TEGMME)",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

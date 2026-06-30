@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[120] Trathnigg2001.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": null,
+        "flow_rate": "2.0 ml/min",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "column_dimensions": "250x10 mm",
+        "temperature_celsius": "35.0",
+        "mobile_phase_ratio": "90:10",
+        "column_name": "Spherisorb ODS2",
+        "notes": "The text states the CAP is typically 95-97% methanol, but the specific experiment described for separation of fatty alcohols from ethoxylates was performed at 90% methanol. The text explicitly links this setup to LCCC analysis of fatty alcohol ethoxylates.",
+        "publication_year": "2001",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "In system C (LCCC), a flow rate of 2.0 ml/min was maintained... A semi-preparative column was used... Spherisorb ODS2 (250x10 mm, 5 \u03bcm, 80 A)... 35.0\u00b0C on system C... In LCCC, fatty alcohols are eluted slightly in front of the ethoxylate peaks even at the critical adsorption point (CAP) on ODS columns in methanol\u2013water, which is typically found between 95 and 97% (w/w) of methanol... if the mobile phase composition is slightly changed... the fatty alcohol can be separated from the ethoxylates (on most columns, this can be effected at approximately 90% (w/w) of methanol). Fig. 3 shows a separation of Brij 30 on the semipreparative column in methanol\u2013water (90:10).",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "80 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "fatty alcohol ethoxylates (Brij 30, Brij 52, Brij 76)",
+        "detector": "SICON LCD 201 RI detector",
+        "stationary_phase_chemistry": "ODS",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical adsorption point (CAP) for polyoxyethylene on ODS columns",
+        "mobile_phase_ratio_units": "w/w",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polyoxyethylene",
+        "architecture": "block copolymer (hydrophobic alkyl chain - polyoxyethylene chain)",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

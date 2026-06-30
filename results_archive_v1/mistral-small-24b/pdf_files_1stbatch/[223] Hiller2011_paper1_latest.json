@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[223] Hiller2011_paper1.pdf",
+    "extraction_date": "2026-06-14T09:31:31.580958",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[223] Hiller2011_paper1.pdf",
+      "start_time": "2026-06-14T09:30:38.370179",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 29.30321979522705,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13190436363220215,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9800
+        },
+        "llm_extraction": {
+          "time_seconds": 23.77550959587097,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "1,4-polyisoprene",
+        "critical_component": "1,4-polyisoprene",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": null,
+        "column_dimensions": "250 4.6 mm i.d.",
+        "detector": "NMR",
+        "evidence_text": "As is known, critical conditions depend on the different polarities of the sample, the stationary phase, and the mobile phase. In the case of different microstructures the polarities of the different microstructural units are very similar. Therefore, to find a suitable separation procedure is more challenging.",
+        "notes": null,
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "3,4-polyisoprene",
+        "critical_component": "1,4-polyisoprene",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": null,
+        "column_dimensions": "250 4.6 mm i.d.",
+        "detector": "NMR",
+        "evidence_text": "As is known, critical conditions depend on the different polarities of the sample, the stationary phase, and the mobile phase. In the case of different microstructures the polarities of the different microstructural units are very similar. Therefore, to find a suitable separation procedure is more challenging.",
+        "notes": null,
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9800,
+      "extraction_success": true,
+      "processing_time": 23.76250410079956,
+      "extracted_count": 2
+    }
+  ]
+}

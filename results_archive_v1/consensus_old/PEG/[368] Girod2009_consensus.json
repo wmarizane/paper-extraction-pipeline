@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[368] Girod2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Universite\u00b4s Aix-Marseille I, II & III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome\u00b4tries Applique\u00b4es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "evidence_text": "The critical conditions were established for hydroxyl-terminated PEG standards... using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr = 2.33 min) independently of their molecular mass. LiCl concentration in the range 0.1\u20131 mM led to the same critical conditions being obtained.",
+        "detector": "ESI-MS (QStar Elite)",
+        "pore_size": "100 A",
+        "critical_component": "PEO block",
+        "publication_year": "2009",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "88.8:11.2",
+        "critical_condition_basis": "established using hydroxyl-terminated PEG standards",
+        "column_name": "Equisil",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "0.1\u20131 mM"
+        },
+        "mobile_phase_ratio_units": "%, v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "block copolymer",
+        "analyte_polymer": "PEO-b-PS",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "150 x 4 mm",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "paper_doi": "10.1002/rcm.4028",
+        "corresponding_author_name": "Laurence Charles",
+        "notes": "The critical condition was established for the PEO block to make it chromatographically 'invisible', allowing separation based on the PS block size. The text states that varying LiCl concentration between 0.1 and 1 mM did not change the critical conditions.",
+        "flow_rate": "1 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "source_pdf": "[256] Zdovc2022",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.093314Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "flow_rate": null,
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "temperature_celsius": 25.0,
+        "mobile_phase_ratio": "15.6:84.4",
+        "column_name": "PS-DVB",
+        "notes": "Used for LCCC analysis of copolymers where separation is governed by the PPO constituent.",
+        "publication_year": 2022,
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "evidence_text": "The critical conditions for the P(POPA) homopolymers were at 25 °C at the mobile phase composition of THF: ACN = 15.6:84.4 vol %. The P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "pore_size": "100 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "P(POPA) homopolymers",
+        "detector": "UV (283 nm) and ELS",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions for P(POPA)",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "P(POPA)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol %",
+        "mobile_phase_ratio_raw": "15.6:84.4",
+        "mobile_phase_ratio_components": [
+          15.6,
+          84.4
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0,
+        "architecture_raw": "homopolymer"
+      }
+    ]
+  }
+}

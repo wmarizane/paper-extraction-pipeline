@@ -59,7 +59,24 @@ EXTRACTION_SCHEMA = {
                     "pore_size": {"type": ["string", "null"]},
                     "column_dimensions": {"type": ["string", "null"]},
                     "detector": {"type": ["string", "null"]},
-                    "evidence_text": {"type": ["string", "null"]},
+                    "field_evidence": {
+                        "type": "object",
+                        "properties": {
+                            "critical_condition_basis":  {"type": ["string", "null"]},
+                            "critical_component":        {"type": ["string", "null"]},
+                            "column_name":               {"type": ["string", "null"]},
+                            "mobile_phase_solvents":     {"type": ["string", "null"]},
+                            "mobile_phase_ratio":        {"type": ["string", "null"]},
+                            "temperature_celsius":       {"type": ["string", "null"]},
+                            "pore_size":                 {"type": ["string", "null"]},
+                            "flow_rate":                 {"type": ["string", "null"]},
+                        },
+                        "required": [
+                            "critical_condition_basis", "critical_component", "column_name",
+                            "mobile_phase_solvents", "mobile_phase_ratio", "temperature_celsius",
+                            "pore_size", "flow_rate"
+                        ]
+                    },
                     "notes": {"type": ["string", "null"]},
                     "paper_doi": {"type": ["string", "null"]},
                     "corresponding_author_name": {"type": ["string", "null"]},
@@ -72,7 +89,7 @@ EXTRACTION_SCHEMA = {
                     "critical_condition_confidence", "column_name", "stationary_phase_chemistry", "column_mode",
                     "mobile_phase_solvents", "mobile_phase_ratio", "mobile_phase_ratio_units",
                     "aqueous_parameters", "temperature_celsius", "flow_rate", "pore_size",
-                    "column_dimensions", "detector", "evidence_text", "notes", "paper_doi",
+                    "column_dimensions", "detector", "field_evidence", "notes", "paper_doi",
                     "corresponding_author_name", "corresponding_email_address", "physical_address",
                     "publication_year"
                 ]
@@ -93,6 +110,9 @@ class ExtractionResult:
     error_message: Optional[str] = None
     llm_calls: int = 0
     processing_time: float = 0.0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    is_retry: bool = False
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -204,6 +224,7 @@ IMPORTANT INTERPRETATION RULES:
 - Preserve reported wording where exact normalization is not possible.
 - Do not guess units or compositions.
 - If evidence is suggestive but not explicit, mark confidence accordingly.
+- **FIELD EVIDENCE**: For each field in `field_evidence`, copy the shortest exact quote from the text (verbatim, do not paraphrase) that directly supports the extracted value. If no text supports a field, set it to null. Do NOT repeat the same long sentence for every field — find the smallest span of text that is specific to that field.
 
 OUTPUT FORMAT:
 Return ONLY valid JSON matching this schema. No markdown. No explanations. Start with {{.
@@ -234,7 +255,16 @@ JSON SCHEMA:
       "pore_size": "string or null",
       "column_dimensions": "string or null",
       "detector": "string or null",
-      "evidence_text": "string or null",
+      "field_evidence": {
+        "critical_condition_basis": "Direct quote from text establishing this IS a critical condition, or null",
+        "critical_component":       "Direct quote naming which polymer/block/component is at critical condition, or null",
+        "column_name":              "Direct quote stating the column name/model, or null",
+        "mobile_phase_solvents":    "Direct quote naming the solvents, or null",
+        "mobile_phase_ratio":       "Direct quote giving the mobile phase composition/ratio, or null",
+        "temperature_celsius":      "Direct quote stating the column temperature, or null",
+        "pore_size":                "Direct quote stating the column pore size, or null",
+        "flow_rate":                "Direct quote stating the flow rate, or null"
+      },
       "notes": "string or null",
       "paper_doi": "string or null",
       "corresponding_author_name": "string or null — if multiple, join with '; '",
@@ -351,6 +381,15 @@ JSON SCHEMA:
                 response_text = outputs[i].outputs[0].text
                 
                 try:
+                    input_tok = len(outputs[i].prompt_token_ids)
+                except Exception:
+                    input_tok = 0
+                try:
+                    output_tok = len(outputs[i].outputs[0].token_ids)
+                except Exception:
+                    output_tok = 0
+                
+                try:
                     data = self._parse_llm_response(response_text)
                     results[idx] = ExtractionResult(
                         chunk_index=idx,
@@ -358,7 +397,10 @@ JSON SCHEMA:
                         extracted_data=data,
                         success=True,
                         llm_calls=llm_calls[idx],
-                        processing_time=time_taken
+                        processing_time=time_taken,
+                        input_tokens=input_tok,
+                        output_tokens=output_tok,
+                        is_retry=(attempt > 1)
                     )
                 except Exception as e:
                     if attempt < self.max_retries:
@@ -371,7 +413,10 @@ JSON SCHEMA:
                             success=False,
                             error_message=str(e),
                             llm_calls=llm_calls[idx],
-                            processing_time=time_taken
+                            processing_time=time_taken,
+                            input_tokens=input_tok,
+                            output_tokens=output_tok,
+                            is_retry=(attempt > 1)
                         )
             
             pending_indices = next_pending

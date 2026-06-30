@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[242] Rappel2003.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "As can be seen, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI) detector",
+        "pore_size": "100 A",
+        "critical_component": "EO",
+        "publication_year": "2003",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "28",
+        "critical_condition_basis": "critical interaction point",
+        "column_name": "Prodigy ODS(3)",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250x4.6 mm",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": null,
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone\u2013water instead of methanol\u2013water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI) detector",
+        "pore_size": "80 A",
+        "critical_component": "EO",
+        "publication_year": "2003",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "28.5",
+        "critical_condition_basis": "critical interaction point",
+        "column_name": "Sphereclone C6",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250x4.6 mm",
+        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": null,
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone\u2013water instead of methanol\u2013water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI) detector",
+        "pore_size": "300 A",
+        "critical_component": "EO",
+        "publication_year": "2003",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "30",
+        "critical_condition_basis": "critical interaction point",
+        "column_name": "Spherisorb S5X C6",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250x4.6 mm",
+        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": null,
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

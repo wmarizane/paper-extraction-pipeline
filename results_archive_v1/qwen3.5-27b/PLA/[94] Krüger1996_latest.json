@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[94] Krüger1996.pdf",
+    "extraction_date": "2026-06-14T09:40:15.503392",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[94] Krüger1996.pdf",
+      "start_time": "2026-06-14T09:39:13.941747",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 57.89402508735657,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11995863914489746,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 342
+        },
+        "llm_extraction": {
+          "time_seconds": 3.5475456714630127,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 342,
+      "extraction_success": true,
+      "processing_time": 3.523536443710327,
+      "extracted_count": 0
+    }
+  ]
+}

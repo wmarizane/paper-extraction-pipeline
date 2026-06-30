@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[117] Murgasova1998.pdf",
+    "extraction_date": "2026-06-14T09:51:36.729848",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[117] Murgasova1998.pdf",
+      "start_time": "2026-06-14T09:48:26.322217",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 21.487599849700928,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12087535858154297,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 5672
+        },
+        "llm_extraction": {
+          "time_seconds": 168.79904770851135,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-MA macromonomers",
+        "critical_component": "PEO-MA macromonomers",
+        "architecture": "linear",
+        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 um",
+        "column_dimensions": "7.8 x 300 mm",
+        "detector": "evaporative light-scattering detector (ELSD)",
+        "evidence_text": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+        "notes": "This condition was established for PEO-MA macromonomers and subsequently applied to analyze the PEO side chains in polystyrene-graft-poly(ethylene oxide) copolymers.",
+        "paper_doi": null,
+        "corresponding_author_name": "R. Murgasova",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Dubravska cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998"
+      },
+      {
+        "analyte_polymer": "polystyrene-graft-poly(ethylene oxide) copolymers",
+        "critical_component": "poly(ethylene oxide) side chains",
+        "architecture": "graft",
+        "critical_condition_basis": "Retention volume independent of molar mass of side chains",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 um",
+        "column_dimensions": "7.8 x 300 mm",
+        "detector": "evaporative light-scattering detector (ELSD)",
+        "evidence_text": "The dashed line shows the 'critical' composition of eluent for which CAP of PEO-MA macromonomers was reached... Under these conditions the retention volumes of eluted copolymers are shifted to higher values. It means that under this 'critical adsorption point' separation is accomplished exclusively with respect to molar mass of PS backbones regardless of the molar mass of PEO-MA macromonomers.",
+        "notes": "The critical condition for the PEO side chains (established using PEO-MA macromonomers) allows the PS backbone to be separated by SEC mechanism.",
+        "paper_doi": null,
+        "corresponding_author_name": "R. Murgasova",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Dubravska cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 5672,
+      "extraction_success": true,
+      "processing_time": 168.7749478816986,
+      "extracted_count": 2
+    }
+  ]
+}

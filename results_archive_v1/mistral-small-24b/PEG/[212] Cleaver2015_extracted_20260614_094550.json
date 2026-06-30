@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "source_pdf": "[212] Cleaver2015.pdf",
+    "extraction_date": "2026-06-14T09:45:50.399497",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[212] Cleaver2015.pdf",
+      "start_time": "2026-06-14T09:45:17.848276",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 9.222246885299683,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12070655822753906,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 2815
+        },
+        "llm_extraction": {
+          "time_seconds": 23.208102703094482,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "polyethylene glycol",
+        "architecture": "null",
+        "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "mobile_phase_ratio": "49% Acetonitrile in Water",
+        "mobile_phase_ratio_units": "null",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "null",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "100Å",
+        "column_dimensions": "150 x 4.6 mm",
+        "detector": "Agilent ELSD",
+        "evidence_text": "Analysis of PEG Eluent: 49% Acetonitrile in Water",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "null",
+        "corresponding_email_address": "null",
+        "physical_address": "null",
+        "publication_year": "null"
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "polystyrene",
+        "architecture": "null",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Polystyrene",
+          "Acetonitrile",
+          "THF"
+        ],
+        "mobile_phase_ratio": "47% ACN in THF",
+        "mobile_phase_ratio_units": "null",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "null",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "100Å",
+        "column_dimensions": "150 x 4.6 mm",
+        "detector": "Agilent ELSD",
+        "evidence_text": "Analysis of PMMA Eluent: Polystyrene - 47% ACN in THF",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "null",
+        "corresponding_email_address": "null",
+        "physical_address": "null",
+        "publication_year": "null"
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "polymethyl methacrylate",
+        "architecture": "null",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water",
+          "THF"
+        ],
+        "mobile_phase_ratio": "17% ACN, 17% Water, 66% THF",
+        "mobile_phase_ratio_units": "null",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "null",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "100Å",
+        "column_dimensions": "150 x 4.6 mm",
+        "detector": "Agilent ELSD",
+        "evidence_text": "Analysis of PMMA Eluent: Polymethylmethacrylate - 17% ACN, 17% Water, 66% THF",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "null",
+        "corresponding_email_address": "null",
+        "physical_address": "null",
+        "publication_year": "null"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 2815,
+      "extraction_success": true,
+      "processing_time": 23.201008081436157,
+      "extracted_count": 3
+    }
+  ]
+}

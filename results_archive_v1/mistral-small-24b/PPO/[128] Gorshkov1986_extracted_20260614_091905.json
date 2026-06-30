@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[128] Gorshkov1986.pdf",
+    "extraction_date": "2026-06-14T09:19:05.255131",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[128] Gorshkov1986.pdf",
+      "start_time": "2026-06-14T09:18:38.618812",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 17.074399709701538,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10167312622070312,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 2050
+        },
+        "llm_extraction": {
+          "time_seconds": 9.460100650787354,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poly(oxypropylenpolyol)",
+        "critical_component": "Poly(propylenglykol)",
+        "architecture": "linear",
+        "critical_condition_basis": "Elutionsvolumen unabhangig von der Molmasse und der Polaritat der Polymerkette",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrosorb Si 100",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Methylethylketon",
+          "Ethylacetat"
+        ],
+        "mobile_phase_ratio": "20/80",
+        "mobile_phase_ratio_units": "Vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "RIDK 101",
+        "evidence_text": "Die kritischen Bedingungen werden durch stufenweise Zugabe von Ethylacetat zu Methylethylketon erreicht, wobei die Bewertung der Annaherung an die kritischen Bedingungen anhand von lg M — V,-Diagrammen erfolgt.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A. V. Gorškov",
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "1986"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 2050,
+      "extraction_success": true,
+      "processing_time": 9.453865051269531,
+      "extracted_count": 1
+    }
+  ]
+}

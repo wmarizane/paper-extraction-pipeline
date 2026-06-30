@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "source_pdf": "[212] Cleaver2015.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "1.0 mL/min",
+        "physical_address": "null",
+        "corresponding_email_address": "null",
+        "column_dimensions": "150 x 4.6 mm",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "49% Acetonitrile in Water",
+        "column_name": "PLRP-S",
+        "notes": "Used to analyze amine end-group modified PEG. At critical point, elution is independent of molecular weight.",
+        "publication_year": "null",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "evidence_text": "Analysis of PEG Eluent: 49% Acetonitrile in Water... Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+        "corresponding_author_name": "null",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "detector": "Agilent ELSD",
+        "stationary_phase_chemistry": "Reversed-phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+        "mobile_phase_ratio_units": "%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEG",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "null",
+        "flow_rate": "1.0 mL/min",
+        "physical_address": "null",
+        "corresponding_email_address": "null",
+        "column_dimensions": "150 x 4.6 mm",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "47% ACN in THF",
+        "column_name": "PLRP-S",
+        "notes": "Critical condition established for Polystyrene block to render it invisible, allowing analysis of the PMMA block.",
+        "publication_year": "null",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Tetrahydrofuran (THF)"
+        ],
+        "evidence_text": "Analysis of PMMA Eluent: Polystyrene - 47% ACN in THF... The poly(styrene-b-methyl methacrylate) sample was analyzed under the critical conditions for polystyrene. Using these conditions, the elution is controlled purely by the molecular weight of the methyl methacrylate block of copolymer, the polystyrene block is 'chromatographically invisible'.",
+        "corresponding_author_name": "null",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "detector": "Agilent ELSD",
+        "stationary_phase_chemistry": "Reversed-phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "mobile_phase_ratio_units": "%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polystyrene",
+        "architecture": "Block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "null",
+        "flow_rate": "1.0 mL/min",
+        "physical_address": "null",
+        "corresponding_email_address": "null",
+        "column_dimensions": "150 x 4.6 mm",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "17% ACN, 17% Water, 66% THF",
+        "column_name": "PLRP-S",
+        "notes": "Critical condition established for PMMA block. Used to analyze the PS block (which elutes by adsorption under these conditions).",
+        "publication_year": "null",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water",
+          "Tetrahydrofuran (THF)"
+        ],
+        "evidence_text": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "corresponding_author_name": "null",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "detector": "Agilent ELSD",
+        "stationary_phase_chemistry": "Reversed-phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "mobile_phase_ratio_units": "%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polymethyl methacrylate",
+        "architecture": "Block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "source_pdf": "Zhu2015.pdf",
+    "extraction_date": "2026-05-18T19:35:43.048517",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "Zhu2015.pdf",
+      "start_time": "2026-05-18T19:34:36.906773",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 56.43162989616394,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13837122917175293,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10545
+        },
+        "llm_extraction": {
+          "time_seconds": 9.571593999862671,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "A-g-B",
+        "critical_component": "B",
+        "architecture": "graft",
+        "critical_condition_basis": "critical condition of the corresponding homopolymer",
+        "critical_condition_confidence": "explicit",
+        "mobile_phase_solvents": [
+          "null"
+        ],
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "The simulations show that, in agreement with recent experimental results, the B blocks have a small, but noticeable, impact on the overall elution of the graft copolymer. This influence exists even when the chains are modeled as RWs, indicating that its fundamental origin is due to chain connectivity, not excluded volume interactions. In general, both models show that grafting B blocks to an A backbone in SEC mode tends to increase copolymer retention, while grafting B blocks to an A backbone in LAC mode tends to decrease copolymer retention.",
+        "notes": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10545,
+      "extraction_success": true,
+      "processing_time": 9.556925773620605,
+      "extracted_count": 1
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[49] Pasch1993.pdf",
+    "extraction_date": "2026-05-25T21:01:45.403008",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[49] Pasch1993.pdf",
+      "start_time": "2026-05-25T21:01:04.279183",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 31.708271265029907,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11714911460876465,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 4300
+        },
+        "llm_extraction": {
+          "time_seconds": 9.298241376876831,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PS,PMMA",
+        "critical_component": "PMMA",
+        "architecture": null,
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si-100",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "73:27",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "200%4mm i.d.",
+        "detector": "Waters differential RI detector R401",
+        "evidence_text": "At the critical point of PMMA (73 vol% MEK/27 vol% cyclohexane) a complete separation of the elution zones of PMMA and PS is achieved.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 4300,
+      "extraction_success": true,
+      "processing_time": 9.289822101593018,
+      "extracted_count": 1
+    }
+  ]
+}

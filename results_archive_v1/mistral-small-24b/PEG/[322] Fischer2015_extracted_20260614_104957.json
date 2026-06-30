@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[322] Fischer2015.pdf",
+    "extraction_date": "2026-06-14T10:49:57.167224",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[322] Fischer2015.pdf",
+      "start_time": "2026-06-14T10:49:00.680257",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 36.58853268623352,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11432266235351562,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13939
+        },
+        "llm_extraction": {
+          "time_seconds": 19.783945560455322,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl silica",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v:v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL min[−][1]",
+        "pore_size": "120 Å",
+        "column_dimensions": "250×4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "LCCC was performed on an Agilent 1100/1200 Series HPLC equipped with an evaporative light scattering detector (ELSD) (PL-ELS 1000; Polymer Labs, now Agilent Technologies, Santa Clara (CA), USA). The ELSD nebulizer temperature was set to 90°C and the evaporator temperature to 110°C. The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL[−][1] , and 10 μL of the sample was injected at a flow rate of 0.5 mL min[−][1] . The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
+        "notes": null,
+        "paper_doi": "10.1007/s13361-015-1233-8",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen",
+        "corresponding_email_address": "strimpin@chem.wayne.edu; steffen.weidner@bam.de; jana.falkenhagen@bam.de",
+        "physical_address": "Department of Chemistry, Wayne State University, Detroit, MI 48202, USA; BAM Federal Institute for Materials Research and Testing, D-12489, Berlin, Germany; BAM Federal Institute for Materials Research and Testing, D-12489, Berlin, Germany",
+        "publication_year": "2015"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13939,
+      "extraction_success": true,
+      "processing_time": 19.766347408294678,
+      "extracted_count": 1
+    }
+  ]
+}

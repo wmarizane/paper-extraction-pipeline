@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[365] Ahmed2009.pdf",
+    "extraction_date": "2026-06-14T11:26:16.153043",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[365] Ahmed2009.pdf",
+      "start_time": "2026-06-14T11:20:05.208833",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 25.404738664627075,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13442182540893555,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10231
+        },
+        "llm_extraction": {
+          "time_seconds": 345.4048647880554,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10231,
+      "extraction_success": false,
+      "processing_time": 113.11097836494446,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"poly(ethylene glycol)-b-poly(e-caprolactone)\",\"critical_component\":\"EO\",\"architecture\":\"diblock\",\"critical_condition_basis\":\"critical adsorption point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Spherisorb ODS2\",\"stationary_phase_chemistry\""
+    }
+  ]
+}

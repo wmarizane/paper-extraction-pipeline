@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[3] Belenkii1976.pdf",
+    "extraction_date": "2026-06-14T11:44:18.164591",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[3] Belenkii1976.pdf",
+      "start_time": "2026-06-14T11:43:19.591405",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 55.83360552787781,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12984371185302734,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7273
+        },
+        "llm_extraction": {
+          "time_seconds": 2.6095902919769287,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7273,
+      "extraction_success": true,
+      "processing_time": 2.5981762409210205,
+      "extracted_count": 0
+    }
+  ]
+}

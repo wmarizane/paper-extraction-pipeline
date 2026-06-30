@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "[125] Gorbunov1997.pdf",
+    "extraction_date": "2026-06-14T09:39:31.485024",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[125] Gorbunov1997.pdf",
+      "start_time": "2026-06-14T09:34:25.194439",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 43.24500846862793,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11264324188232422,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7866
+        },
+        "llm_extraction": {
+          "time_seconds": 262.932820558548,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Butyl-Toyopearl 650 M",
+        "stationary_phase_chemistry": "butyl methacrylate copolymer",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "aqueous buffer"
+        ],
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": "6",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.2 ml/min",
+        "pore_size": "20-28 nm",
+        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
+        "detector": "differential refractometer",
+        "evidence_text": "Figures 5 and 6 show pH and temperature dependencies of c obtained for PEG macromolecules and three different adsorbents. These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
+        "notes": "The text describes determining critical conditions by finding where the adsorption parameter c equals zero. Specific temperature values for the critical point are not explicitly stated for the Butyl-Toyopearl system at pH 6, only that the relationship is approximately linear.",
+        "paper_doi": "10.1016/S0032-3861(97)00282-6",
+        "corresponding_author_name": "A. A. Gorbunov",
+        "corresponding_email_address": null,
+        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
+        "publication_year": "1998"
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "SOLOZA K-0",
+        "stationary_phase_chemistry": "methacrylic acid and butyl methacrylate copolymer (0% butyl methacrylate)",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "aqueous buffer"
+        ],
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": "4.5",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.2 ml/min",
+        "pore_size": "20-28 nm",
+        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
+        "detector": "differential refractometer",
+        "evidence_text": "Figures 5 and 6 show pH and temperature dependencies of c obtained for PEG macromolecules and three different adsorbents. These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
+        "notes": "Specific temperature for the critical point is not explicitly stated for SOLOZA K-0 at pH 4.5.",
+        "paper_doi": "10.1016/S0032-3861(97)00282-6",
+        "corresponding_author_name": "A. A. Gorbunov",
+        "corresponding_email_address": null,
+        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
+        "publication_year": "1998"
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": null,
+        "architecture": null,
+        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "SOLOZA K-33",
+        "stationary_phase_chemistry": "methacrylic acid and butyl methacrylate copolymer (33% butyl methacrylate)",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "aqueous buffer"
+        ],
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": "5",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.2 ml/min",
+        "pore_size": "20-28 nm",
+        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
+        "detector": "differential refractometer",
+        "evidence_text": "Figures 5 and 6 show pH and temperature dependencies of c obtained for PEG macromolecules and three different adsorbents. These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
+        "notes": "Specific temperature for the critical point is not explicitly stated for SOLOZA K-33 at pH 5.",
+        "paper_doi": "10.1016/S0032-3861(97)00282-6",
+        "corresponding_author_name": "A. A. Gorbunov",
+        "corresponding_email_address": null,
+        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
+        "publication_year": "1998"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7866,
+      "extraction_success": true,
+      "processing_time": 262.9097137451172,
+      "extracted_count": 3
+    }
+  ]
+}

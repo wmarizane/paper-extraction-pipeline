@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[117] Murgasova1998.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-MA macromonomers",
+        "critical_component": "PEO-MA",
+        "architecture": "linear",
+        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 um",
+        "column_dimensions": "7.8 x 300 mm",
+        "detector": "evaporative light-scattering detector (ELSD)",
+        "evidence_text": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+        "notes": "Critical condition established for PEO-MA macromonomers to analyze polystyrene-graft-poly(ethylene oxide) copolymers.",
+        "paper_doi": null,
+        "corresponding_author_name": "R. Murgasova",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Dubravska cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "polystyrene-graft-poly(ethylene oxide)",
+        "critical_component": "polystyrene backbone",
+        "architecture": "graft",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 um",
+        "column_dimensions": "7.8 \u00d7 300 mm",
+        "detector": "ELSD",
+        "evidence_text": "The critical diagram of molar mass vs retention scattering volume for PEO-MA macromonomers is shown in Fig. 1. At hexane concentrations less than 29% by weight in the solvent mixture the retention volume decreases as the molar mass increases. The reverse behaviour is observed at hexane concentrations higher than 29% by weight, where retention volume increases with increasing molar mass. At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+        "notes": "Critical condition established for polystyrene-graft-poly(ethylene oxide) copolymers using PEO-MA macromonomers.",
+        "paper_doi": null,
+        "corresponding_author_name": "Dusan Berek",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Du\u00b4 bravska\u00b4 cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

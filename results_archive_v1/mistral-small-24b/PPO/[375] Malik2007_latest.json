@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "source_pdf": "[375] Malik2007.pdf",
+    "extraction_date": "2026-06-14T09:48:44.507531",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[375] Malik2007.pdf",
+      "start_time": "2026-06-14T09:46:30.732952",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 63.34513807296753,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13329672813415527,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13718
+        },
+        "llm_extraction": {
+          "time_seconds": 70.29599237442017,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone"
+        ],
+        "mobile_phase_ratio": "44%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "null",
+        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar-mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD; with dual detection[[33–35]] one may obtain information on the chemical composition along the MMD.[[35–37]] SEC is, however, not capable of discriminating a mixture of block copolymers and homopolymers. At the CAP for the ethylene oxide (EO) unit, a separation according to the PO block(s) may be achieved by an SEC or LAC mechanism, while at the CAP for PO, the length of the EO block(s) may be obtained. The application of these methods to PEO-block-PPO block copolymers has been described recently.[[38,39]] In the case of PPG one may expect, that, at the CAP for PO, a separation of the (non-functional) PPG diols and the allyl-terminated polyoxypropylenes may be possible if the interaction of the allyl group with the stationary phase is sufficiently strong.",
+        "notes": "null",
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "null",
+        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar-mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD; with dual detection[[33–35]] one may obtain information on the chemical composition along the MMD.[[35–37]] SEC is, however, not capable of discriminating a mixture of block copolymers and homopolymers. At the CAP for the ethylene oxide (EO) unit, a separation according to the PO block(s) may be achieved by an SEC or LAC mechanism, while at the CAP for PO, the length of the EO block(s) may be obtained. The application of these methods to PEO-block-PPO block copolymers has been described recently.[[38,39]] In the case of PPG one may expect, that, at the CAP for PO, a separation of the (non-functional) PPG diols and the allyl-terminated polyoxypropylenes may be possible if the interaction of the allyl group with the stationary phase is sufficiently strong.",
+        "notes": "null",
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PO",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "null",
+        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar-mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD; with dual detection[[33–35]] one may obtain information on the chemical composition along the MMD.[[35–37]] SEC is, however, not capable of discriminating a mixture of block copolymers and homopolymers. At the CAP for the ethylene oxide (EO) unit, a separation according to the PO block(s) may be achieved by an SEC or LAC mechanism, while at the CAP for PO, the length of the EO block(s) may be obtained. The application of these methods to PEO-block-PPO block copolymers has been described recently.[[38,39]] In the case of PPG one may expect, that, at the CAP for PO, a separation of the (non-functional) PPG diols and the allyl-terminated polyoxypropylenes may be possible if the interaction of the allyl group with the stationary phase is sufficiently strong.",
+        "notes": "null",
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PO",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone"
+        ],
+        "mobile_phase_ratio": "44%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "null",
+        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar-mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD; with dual detection[[33–35]] one may obtain information on the chemical composition along the MMD.[[35–37]] SEC is, however, not capable of discriminating a mixture of block copolymers and homopolymers. At the CAP for the ethylene oxide (EO) unit, a separation according to the PO block(s) may be achieved by an SEC or LAC mechanism, while at the CAP for PO, the length of the EO block(s) may be obtained. The application of these methods to PEO-block-PPO block copolymers has been described recently.[[38,39]] In the case of PPG one may expect, that, at the CAP for PO, a separation of the (non-functional) PPG diols and the allyl-terminated polyoxypropylenes may be possible if the interaction of the allyl group with the stationary phase is sufficiently strong.",
+        "notes": "null",
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13718,
+      "extraction_success": true,
+      "processing_time": 70.27772569656372,
+      "extracted_count": 4
+    }
+  ]
+}

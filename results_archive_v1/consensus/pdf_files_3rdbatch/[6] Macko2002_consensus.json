@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "source_pdf": "[6] Macko2002.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/ma010994t",
+        "flow_rate": "0.4 to 1 mL/min",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 6 mm",
+        "temperature_celsius": "66",
+        "mobile_phase_ratio": null,
+        "column_name": "Nucleosil C18 LS ST",
+        "notes": "Also used for separation of stereoregularity (isotactic vs syndiotactic).",
+        "publication_year": "2002",
+        "mobile_phase_solvents": [
+          "acetonitrile"
+        ],
+        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 \u00b0C and dimethylformamide for PnBMA at 154 \u00b0C and for PS at 95 \u00b0Csall with C18 bonded silica gel.",
+        "corresponding_author_name": "T. Macko",
+        "pore_size": "30 nm",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PMMA",
+        "detector": "Evaporative light scattering detector DDL-21",
+        "stationary_phase_chemistry": "C18 bonded silica gel",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Temperature adjustment in single eluent (acetonitrile) on C18 bonded silica",
+        "mobile_phase_ratio_units": null,
+        "column_mode": "Reversed Phase",
+        "critical_component": "PMMA",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1021/ma010994t",
+        "flow_rate": "0.4 to 1 mL/min",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 6 mm",
+        "temperature_celsius": "154",
+        "mobile_phase_ratio": null,
+        "column_name": "Nucleosil C18 LS ST",
+        "notes": "Temperature is far above tabulated Theta point; system may exhibit two Theta points.",
+        "publication_year": "2002",
+        "mobile_phase_solvents": [
+          "dimethylformamide"
+        ],
+        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 \u00b0C and dimethylformamide for PnBMA at 154 \u00b0C and for PS at 95 \u00b0Csall with C18 bonded silica gel.",
+        "corresponding_author_name": "T. Macko",
+        "pore_size": "30 nm",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PnBMA",
+        "detector": "Evaporative light scattering detector DDL-21",
+        "stationary_phase_chemistry": "silica C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Temperature adjustment in single eluent (dimethylformamide) on C18 bonded silica",
+        "mobile_phase_ratio_units": null,
+        "column_mode": "Reversed Phase",
+        "critical_component": "PnBMA",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1021/ma010994t",
+        "flow_rate": "0.4 to 1 mL/min",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 6 mm",
+        "temperature_celsius": "95",
+        "mobile_phase_ratio": null,
+        "column_name": "Nucleosil C18 LS ST",
+        "notes": "Used for separation of block and graft copolymers of styrene and methyl methacrylate.",
+        "publication_year": "2002",
+        "mobile_phase_solvents": [
+          "dimethylformamide"
+        ],
+        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 \u00b0C and dimethylformamide for PnBMA at 154 \u00b0C and for PS at 95 \u00b0Csall with C18 bonded silica gel.",
+        "corresponding_author_name": "T. Macko",
+        "pore_size": "30 nm",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PS",
+        "detector": "Evaporative light scattering detector DDL-21",
+        "stationary_phase_chemistry": "silica C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Temperature adjustment in single eluent (dimethylformamide) on C18 bonded silica",
+        "mobile_phase_ratio_units": null,
+        "column_mode": "Reversed Phase",
+        "critical_component": "PS",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1021/ma010994t",
+        "flow_rate": "0.4 to 1 mL/min",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 6 mm",
+        "temperature_celsius": "9",
+        "mobile_phase_ratio": null,
+        "column_name": "Nucleosil C18 LS ST",
+        "notes": "Described as 'criticallike' elution; higher molar masses underwent phase separation.",
+        "publication_year": "2002",
+        "mobile_phase_solvents": [
+          "cyclohexane"
+        ],
+        "evidence_text": "A 'criticallike' elution was also observed in cyclohexane for PS at 9 \u00b0C with silica gel C18 packing, which is well below the \u0398 temperature.",
+        "corresponding_author_name": "T. Macko",
+        "pore_size": "30 nm",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polystyrene",
+        "detector": "Evaporative light scattering detector DDL-21",
+        "stationary_phase_chemistry": "silica C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical",
+        "mobile_phase_ratio_units": null,
+        "column_mode": "Reversed Phase",
+        "critical_component": "PS",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

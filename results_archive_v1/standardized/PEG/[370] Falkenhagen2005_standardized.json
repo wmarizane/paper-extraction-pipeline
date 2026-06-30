@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "source_pdf": "[370] Falkenhagen2005",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.073689Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/rcm.2256",
+        "flow_rate": "20 mL/min",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "temperature_celsius": 45.0,
+        "mobile_phase_ratio": "84:16",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. Text mentions 458C which is interpreted as 45°C based on context of typical chromatography temperatures.",
+        "publication_year": 2005,
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. The chromatographic systems were kept at a constant temperature of 458C. The eluent flow was 20 mL/min.",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyethylene oxide (PEO)",
+        "detector": "SEDEX 75 ELSD",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "mobile_phase_ratio_units": "w/w",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt %",
+        "mobile_phase_ratio_raw": "84:16",
+        "mobile_phase_ratio_components": [
+          84.0,
+          16.0
+        ],
+        "flow_rate_raw": "20 mL/min",
+        "flow_rate_ml_per_min": 20.0,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null,
+        "architecture_raw": "Linear"
+      }
+    ]
+  }
+}

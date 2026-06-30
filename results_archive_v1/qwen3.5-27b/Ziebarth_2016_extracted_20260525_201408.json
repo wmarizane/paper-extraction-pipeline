@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "Ziebarth_2016.pdf",
+    "extraction_date": "2026-05-25T20:14:08.206408",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "Ziebarth_2016.pdf",
+      "start_time": "2026-05-25T20:08:33.852993",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 36.86812162399292,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13237571716308594,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12665
+        },
+        "llm_extraction": {
+          "time_seconds": 297.35281562805176,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Ls-PS (linear polystyrene with saturated DPE end-groups)",
+        "critical_component": null,
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "14.8",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "light scattering detector and UV absorption detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition for the polymers of interest. TCAP and tE,CAP of Ls-PS... are measured as 14.8 °C/7.4 min",
+        "notes": "Ls-PS refers to linear PS with saturated end-groups recovered from ring purification.",
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang, Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu, tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "Lu-PS (linear polystyrene with unsaturated DPE end-groups)",
+        "critical_component": null,
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "14.95",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "light scattering detector and UV absorption detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Lu-PS... are measured as 14.95 °C/7.6 min",
+        "notes": "Lu-PS refers to linear PS precursors with unsaturated reactive end groups.",
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang, Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu, tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "Ring-PS (cyclic polystyrene)",
+        "critical_component": null,
+        "architecture": "ring",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "17.3",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "light scattering detector and UV absorption detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Ring-PS... are measured as 17.3 °C/ 8.23 min",
+        "notes": "Ring-PS refers to cyclic polystyrene unimers fractionated from the cyclization product.",
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang, Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu, tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
+        "publication_year": "2016"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12665,
+      "extraction_success": true,
+      "processing_time": 297.32937932014465,
+      "extracted_count": 3
+    }
+  ]
+}

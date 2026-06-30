@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[90] Dudorina1995.pdf",
+    "extraction_date": "2026-06-14T12:58:03.936848",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[90] Dudorina1995.pdf",
+      "start_time": "2026-06-14T12:54:55.152731",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 28.91856336593628,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11999750137329102,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8081
+        },
+        "llm_extraction": {
+          "time_seconds": 159.74544048309326,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polystyrene",
+        "critical_component": "Polystyrene",
+        "architecture": "Linear",
+        "critical_condition_basis": "Disappearance of division of macromolecules by size",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrosphere Si-300",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "CCl4",
+          "Chloroform"
+        ],
+        "mobile_phase_ratio": "94.65:5.35",
+        "mobile_phase_ratio_units": "vol. %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "UV detector (270 nm)",
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+        "notes": "Used in isocratic separation where PS is in critical mode and PPO is in exclusion mode.",
+        "paper_doi": null,
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences, 117977 Moscow, st. Kosygina, 4",
+        "publication_year": "1995"
+      },
+      {
+        "analyte_polymer": "Polyphenylene oxide",
+        "critical_component": "Polyphenylene oxide",
+        "architecture": "Linear",
+        "critical_condition_basis": "Disappearance of division of macromolecules by size",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrosphere Si-300",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "CCl4",
+          "Chloroform"
+        ],
+        "mobile_phase_ratio": "29:71",
+        "mobile_phase_ratio_units": "vol. %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "UV detector (270 nm)",
+        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = ... 29: 71 vol. % for polyphenylene oxide.",
+        "notes": "Used in isocratic separation where PPO is in critical mode and PS is in exclusion mode.",
+        "paper_doi": null,
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences, 117977 Moscow, st. Kosygina, 4",
+        "publication_year": "1995"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8081,
+      "extraction_success": true,
+      "processing_time": 159.72313594818115,
+      "extracted_count": 2
+    }
+  ]
+}

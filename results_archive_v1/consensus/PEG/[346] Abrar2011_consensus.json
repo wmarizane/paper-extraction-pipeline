@@ -1,0 +1,397 @@
+{
+  "metadata": {
+    "source_pdf": "[346] Abrar2011.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 10
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Luna HILIC",
+        "stationary_phase_chemistry": "Polyglycidol modified silica",
+        "column_mode": "Hydrophilic Interaction",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "97",
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "200 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "The best results were obtained with the Luna HILIC column... as can be seen in Fig. 8, polyoxyethylenes with different number of hydroxy groups could be very well separated from each other... The question was now, whether these conditions really corresponded to the CAP for PEG. This is indeed the case, as can be seen in Fig. 10. The slight deviation from critical behavior in 97% acetone is no problem for samples with similar molar mass.",
+        "notes": "Used for separation of PEG derivatives according to number of hydroxy end groups. Also used for PEG methacrylates and ethoxylated glycerides.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrosorb Diol",
+        "stationary_phase_chemistry": "Silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "As has already been described previously [40], a CAP for PEG could be found on a diol phase in about 80 wt.% acetone\u2013water. Under such conditions, polypropylene glycol (PPG) eluted in SEC mode. The same behavior is also observed on diol phases in 90% acetone (Fig. 4). We have thus analyzed polyoxyethylenes with different functionality on such a column and found, that they were really separated according to the number of hydroxy groups (Fig. 5).",
+        "notes": "Text mentions 80% as a previously described CAP, but explicitly states the 90% condition was used for the analysis of polyoxyethylenes with different functionality in this study.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "Silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "95",
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "We have thus analyzed polyoxyethylenes with different functionality on such a column and found, that they were really separated according to the number of hydroxy groups (Fig. 5).",
+        "notes": "Figure 5 caption specifies 'Nucleosil Diol, 95 wt-% acetone'. The text links this to the separation of polyoxyethylenes according to hydroxy groups under conditions where PEG is at CAP.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "Silica-based PEG phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "95.9",
+        "mobile_phase_ratio_units": "wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "on the Discovery column, the same elution order was observed, but with much poorer efficiency (Fig. 7).",
+        "notes": "Figure 7 caption specifies 'Discovery HS PEG, 95.9 wt-% acetone'. The text implies this is a critical condition setup for PEG to separate by end groups, though with poorer efficiency.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Luna HILIC",
+        "stationary_phase_chemistry": "polyglycidol",
+        "column_mode": "Hydrophilic Interaction",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "97",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "200 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The best results were obtained with the Luna HILIC column (which is typically used for other purposes [41\u201344]): as can be seen in Fig. 8, polyoxyethylenes with different number of hydroxy groups could be very well separated from each other.",
+        "notes": "Used for separation of PEG derivatives according to number of hydroxy end groups. Also used for PEG methacrylates and ethoxylated glycerides.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "PEG",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "95.9",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "The same elution order was observed, but with much poorer efficiency (Fig. 7).",
+        "notes": "Figure 7 caption specifies 'Discovery HS PEG, 95.9 wt-% acetone'. The text implies this is a critical condition setup for PEG to separate by end groups, though with poorer efficiency.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "95",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "We have thus analyzed polyoxyethylenes with different functionality on such a column and found, that they were really separated according to the number of hydroxy groups (Fig. 5).",
+        "notes": "Figure 5 caption specifies 'Nucleosil Diol, 95 wt-% acetone'. The text links this to the separation of polyoxyethylenes according to hydroxy groups under conditions where PEG is at CAP.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrosorb Diol",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "As has already been described previously [40], a CAP for PEG could be found on a diol phase in about 80 wt.% acetone\u2013water. Under such conditions, polypropylene glycol (PPG) eluted in SEC mode. The same behavior is also observed on diol phases in 90% acetone (Fig. 4).",
+        "notes": "Text mentions 80% as a previously described CAP, but explicitly states the 90% condition was used for the analysis of polyoxyethylenes with different functionality in this study.",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb Si",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "93.23",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 \u00d7 4.0 mm",
+        "detector": "RI detector RI 101",
+        "evidence_text": "In the case of PEG derivatives, this means, that retention depends on these parameters, on the number of ethylene oxide (EO) units and the number of hydroxy groups. As is shown in Fig. 1, the individual oligomers of PEG derivatives can be resolved on a silica column in 90\u201395% acetone, and retention increases in the order polyethylene glycol dimethyl ether < polyethylene glycol monomethyl ether (PEG-MME) < PEG.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi MAX RP",
+        "stationary_phase_chemistry": "dodecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "On a reversed phase column, this can even be achieved, if the end groups are not very different from the repeat unit, as is the case with PEG and PEG-MME: under critical conditions for PEG on a reversed phase column in acetonitrile\u2013water, acetone\u2013water or methanol\u2013water mobile phases both series elute as narrow peaks, which are well separated from each other [4, 19, 20].",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

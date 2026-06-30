@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[120] Trathnigg2001.pdf",
+    "extraction_date": "2026-06-14T10:01:11.746112",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[120] Trathnigg2001.pdf",
+      "start_time": "2026-06-14T09:56:00.608723",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 42.26495146751404,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1211543083190918,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9107
+        },
+        "llm_extraction": {
+          "time_seconds": 268.75116443634033,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Fatty alcohol ethoxylates (Brij 30)",
+        "critical_component": "Polyoxyethylene chain",
+        "architecture": "Linear block copolymer (hydrophobe-PEO)",
+        "critical_condition_basis": "Critical adsorption point for polyoxyethylene",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "Density and Refractive Index (RI)",
+        "evidence_text": "In system C (LCCC), a of 2.0 ml/min was maintained... Spherisorb ODS2 (250x10 mm, 5 mm, 80 A)... 35.08C on system C... In LCCC, fatty alcohols are eluted slightly in front of the ethoxylate peaks even at the critical adsorption point (CAP) on ODS columns in methanol–water... if the mobile phase composition is slightly changed... fatty alcohol can be separated from the ethoxylates (on most columns, this can be effected at approximately 90% (w/w) of methanol). Fig. 3. shows a separation of Brij 30 on the semipreparative column in methanol–water (90:10).",
+        "notes": "Semi-preparative column used for analytical LCCC separation of homologous series. Temperature 35.0 C specified for System C.",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "Fatty alcohol ethoxylates (Brij 52)",
+        "critical_component": "Polyoxyethylene chain",
+        "architecture": "Linear block copolymer (hydrophobe-PEO)",
+        "critical_condition_basis": "Critical adsorption point for polyoxyethylene",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "Density and Refractive Index (RI)",
+        "evidence_text": "Fig. 11. Semipreparative LCCC of Brij 52 on a Spherisorb ODS 2 column (system C) in methanol–water (90:10, w/w).",
+        "notes": "Same setup as Brij 30, applied to Brij 52 (C16/C18 series).",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "Fatty alcohol ethoxylates (Brij 76)",
+        "critical_component": "Polyoxyethylene chain",
+        "architecture": "Linear block copolymer (hydrophobe-PEO)",
+        "critical_condition_basis": "Critical adsorption point for polyoxyethylene",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "Density and Refractive Index (RI)",
+        "evidence_text": "Fig. 15. Semipreparative LCCC of Brij 76 on a ODS 2 column (system C) in methanol–water (90:10, w/w).",
+        "notes": "Same setup as Brij 30/52, applied to Brij 76 (C18 series).",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2001"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9107,
+      "extraction_success": true,
+      "processing_time": 268.7278106212616,
+      "extracted_count": 3
+    }
+  ]
+}

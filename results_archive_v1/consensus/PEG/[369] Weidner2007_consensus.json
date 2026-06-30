@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[369] Weidner2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/rcm.314h",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I 'Analytical Chemistry, Reference Materials', Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "column_dimensions": "250+125 mm length, 4.6 mm id",
+        "temperature_celsius": "45",
+        "mobile_phase_ratio": "85:15",
+        "column_name": "YMC RP 2-3 18",
+        "notes": "The text implies the 85:15 THF/water ratio is the critical condition for PEO, as the gradient starts here and shifts to LAC mode. The text explicitly links the 65:35 ratio to PPO critical conditions, and the 85:15 ratio is the starting point for PEO separation before shifting.",
+        "publication_year": "2007",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "evidence_text": "In isocratic mode... solvent composition... of 85:15v/v... for the separation of PPO... was changed to 65:35v/v... which represents the 'critical' ratio. In gradient mode 'critical' conditions of separation of PEO... were initially adjusted.",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-co-PPO mono-n-butyl ether",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C18 phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions of separation of one polymer unit",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO",
+        "architecture": "block copolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEO-co-PPO mono-n-butyl ether",
+        "critical_component": "PPO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "explicit mention of critical conditions for PPO separation",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 2-3 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "mobile_phase_ratio": "65:35",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250+125 mm length, 4.6 mm id",
+        "detector": "ELSD",
+        "evidence_text": "In isocratic mode... solvent composition... was changed to 65:35v/v tetrahydrofuran (THF)/ water, which represents the 'critical' ratio.",
+        "notes": "Used for separation of PPO in isocratic mode. The text states this ratio represents the critical condition for PPO.",
+        "paper_doi": "10.1002/rcm.314h",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I 'Analytical Chemistry, Reference Materials', Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany",
+        "publication_year": "2007",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[210] Biela2003.pdf",
+    "extraction_date": "2026-06-14T09:19:31.820982",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[210] Biela2003.pdf",
+      "start_time": "2026-06-14T09:18:29.247847",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 44.328476428985596,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14825701713562012,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12492
+        },
+        "llm_extraction": {
+          "time_seconds": 18.096229076385498,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(L-lactide)",
+        "critical_component": "poly(L-lactide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volumes independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Si-100, Si-300",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "56.25:43.75",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "Waters 486 tunable UV detector operating at 235 nm",
+        "evidence_text": "For the analysis of the PLA’s LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase. At the critical point of adsorption, a series of linear C4H9-PLA-OH’s having molar masses (Mn) in the range from 2.3 £ 10[3] to 7.4 £ 10[4] , prepared by ringopening polymerization of LA initiated with Sn(OC4H9)2 (THF, 80 8C), showed no dependence of the elution volumes on molar mass.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2003"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12492,
+      "extraction_success": true,
+      "processing_time": 18.079894304275513,
+      "extracted_count": 1
+    }
+  ]
+}

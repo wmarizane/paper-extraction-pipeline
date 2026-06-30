@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[38] Chang1999.pdf",
+    "extraction_date": "2026-06-08T00:03:36.355467",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[38] Chang1999.pdf",
+      "start_time": "2026-06-08T00:02:01.684253",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 80.30776047706604,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10992145538330078,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 18127
+        },
+        "llm_extraction": {
+          "time_seconds": 14.253391981124878,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "critical_condition_basis": "chromatographic critical point",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30.5",
+        "flow_rate": null,
+        "pore_size": "100 A",
+        "column_dimensions": "250 6 4.6 mm",
+        "detector": null,
+        "evidence_text": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784 KOREA",
+        "publication_year": "1999"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 18127,
+      "extraction_success": true,
+      "processing_time": 14.230865001678467,
+      "extracted_count": 1
+    }
+  ]
+}

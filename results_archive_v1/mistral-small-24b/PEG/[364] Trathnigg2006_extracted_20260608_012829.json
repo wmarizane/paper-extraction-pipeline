@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "source_pdf": "[364] Trathnigg2006.pdf",
+    "extraction_date": "2026-06-08T01:28:29.226548",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[364] Trathnigg2006.pdf",
+      "start_time": "2026-06-08T01:27:37.503019",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 19.211007118225098,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.16136693954467773,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6731
+        },
+        "llm_extraction": {
+          "time_seconds": 32.35098433494568,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "EO-PO diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.73",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A[˚]",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On polymer-based RP columns, which do not contain silanol groups, the CAP for PO (at about 90% acetone) can be utilized, as PEG elutes under these conditions in SEC mode, as can be seen in Figure 3.",
+        "notes": null,
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "EO-PO diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "78.54",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A[˚]",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "This can be achieved on a normal phase column, PO would elute in SEC mode aat the CAP for EO (situation 3 in Table 1). This can be achieved on a diol column in about 80 wt-% acetone, as we have shown previously[[32]] . Under these conditions, one can see, that there is some PEG in these samples, but also a shoulder, which should contain the diblock.",
+        "notes": null,
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "EO-PO diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Novapak C18",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "60 A[˚]",
+        "column_dimensions": "300 x 3.9 mm",
+        "detector": "ELSD",
+        "evidence_text": "In such a mobile phase, PPG with an average molar mass of up to 1000 can be separated by LAC almost to the baseline. Compared to the chromatograms obtained with two EO-PO-EO triblocks with a similar PO block, but different EO blocks shows a remarkable pattern: The peaks of the individual oligomers with the same number of PO units elute at the same position, only for the polymer with long EO blocks they are slightly shifted towards lower elution volumes.",
+        "notes": null,
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6731,
+      "extraction_success": true,
+      "processing_time": 32.34062623977661,
+      "extracted_count": 3
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[370] Falkenhagen2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. The chromatographic systems were kept at a constant temperature of 458C. The eluent flow was 20 mL/min.",
+        "detector": "SEDEX 75 ELSD",
+        "pore_size": null,
+        "critical_component": "PEO",
+        "publication_year": "2005",
+        "temperature_celsius": "45",
+        "mobile_phase_ratio": "84:16",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt %",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEO",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "notes": "System 2 (m-HPLC) used for LACCC mode. Text mentions 458C which is interpreted as 45\u00b0C based on context of typical chromatography temperatures.",
+        "flow_rate": "20 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

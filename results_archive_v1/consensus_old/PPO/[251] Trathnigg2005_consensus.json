@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[251] Trathnigg2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "On this column, a CAP for PO is found at about 90% acetone... At a composition close to the CAP for PO... Fig. 2. Chromatograms of PEGs, PPGs, and water, as obtained on the Jordi column in 92.42 wt% acetone (CAP for PO).",
+        "detector": "RI",
+        "pore_size": "500 \u00c5",
+        "critical_component": "PO",
+        "publication_year": "2005",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "92.42",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "EO-PO diblock",
+        "analyte_polymer": "EO-PO block copolymers",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "As can be seen in Fig. 4, a CAP for PO was found on the Discovery HS-PEG column... in acetone\u2013water with about 45% (w/w) acetone... Fig. 6. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone.",
+        "detector": "RI",
+        "pore_size": "120 \u00c5",
+        "critical_component": "PO",
+        "publication_year": "2005",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "44.52",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "column_name": "Discovery HS-PEG",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "EO-PO diblock",
+        "analyte_polymer": "EO-PO block copolymers",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode. Suitable for shorter PO blocks.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "The desired conditions were now found on a Diol phase in acetone\u2013water with about 80 wt% aetone (Fig. 8): A CAP for EO exists at 78.54% (w/w) acetone. As can be seen in Fig. 9, PPGs elute in SEC mode, and the peaks of all PEGs (from 400 to 12000) coincide precisely.",
+        "detector": "RI",
+        "pore_size": "100 \u00c5",
+        "critical_component": "EO",
+        "publication_year": "2005",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "78.54",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO",
+        "column_name": "Nucleosil 100-5 OH",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear homopolymer",
+        "analyte_polymer": "Poly(ethylene oxide)",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used to analyze EO-PO block copolymers where PO elutes in SEC mode.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[127] Esser2001.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "hexane",
+          "isopropyl alcohol"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "evidence_text": "In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%. The functionality type separation of sample 1 under these conditions is shown in Figure 6.",
+        "detector": "refractive index detector",
+        "pore_size": "null",
+        "critical_component": "poly(propylene glycol)",
+        "publication_year": "2001",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "92:8",
+        "critical_condition_basis": "eluent composition determined by running PPGs with different molar masses in binary eluents",
+        "column_name": "Macherey Nagel Nucleosil 5 NH2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol.-%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(propylene oxide)",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "stationary_phase_chemistry": "NH2 (Amino)",
+        "paper_doi": "null",
+        "corresponding_author_name": "H. Pasch",
+        "notes": "The critical condition was established using PPG (poly(propylene glycol)) to analyze PPO-triols. The text states LC-CC separates functionally heterogeneous samples with regard to their functional groups irrespective of the molar mass.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

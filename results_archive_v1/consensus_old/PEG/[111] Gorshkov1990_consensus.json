@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[111] Gorshkov1990.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Water",
+          "Acetonitrile"
+        ],
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "evidence_text": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (v/v). In this instance the retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000 (Fig. 2).",
+        "detector": "Refractometric detection",
+        "pore_size": "null",
+        "critical_component": "PEO blocks",
+        "publication_year": "1990",
+        "temperature_celsius": "null",
+        "mobile_phase_ratio": "58:42",
+        "critical_condition_basis": "PEO blocks disappear (critical condition for PEO), separation based on PPO block size",
+        "column_name": "Chromapak RP-18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Block copolymer (PEO blocks are 'invisible' at critical condition)",
+        "analyte_polymer": "PEO-PPO block copolymers (AB and ABA types)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "null",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "paper_doi": "null",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "notes": "Used to separate PEO by functionality types (terminal groups).",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "polyethylene oxide",
+        "critical_component": "polyethylene oxide",
+        "architecture": "null",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "null",
+        "flow_rate": "1 ml/min",
+        "pore_size": "null",
+        "column_dimensions": "null",
+        "detector": "refractometric",
+        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": "null",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": "1990",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

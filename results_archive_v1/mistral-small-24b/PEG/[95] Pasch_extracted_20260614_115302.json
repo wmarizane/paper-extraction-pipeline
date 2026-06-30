@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[95] Pasch.pdf",
+    "extraction_date": "2026-06-14T11:53:02.141190",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[95] Pasch.pdf",
+      "start_time": "2026-06-14T11:51:42.994202",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 65.86539673805237,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11218976974487305,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8738
+        },
+        "llm_extraction": {
+          "time_seconds": 13.169244050979614,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "HO(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
+        "architecture": "block",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "43:57",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm",
+        "detector": "refractive index",
+        "evidence_text": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey—Nagel 5C18 column.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; C. Brinkmann; H. Much; U. Just",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany; Centre of Macromolecular Chemistry, Rudower Chaussee 5, O-1199, Berlin, Germany; Federal Institute of Materials Research and Testing, Department 3, Unter den Eichen 87, W-1000 Berlin 45, Germany",
+        "publication_year": "1992"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8738,
+      "extraction_success": true,
+      "processing_time": 13.155654907226562,
+      "extracted_count": 1
+    }
+  ]
+}

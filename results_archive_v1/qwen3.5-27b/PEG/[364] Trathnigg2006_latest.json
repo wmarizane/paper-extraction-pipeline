@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "source_pdf": "[364] Trathnigg2006.pdf",
+    "extraction_date": "2026-06-14T15:41:20.302161",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[364] Trathnigg2006.pdf",
+      "start_time": "2026-06-14T15:34:53.645637",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 21.147518396377563,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12358236312866211,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6731
+        },
+        "llm_extraction": {
+          "time_seconds": 365.3853061199188,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.73",
+        "mobile_phase_ratio_units": "wt-% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On polymer-based RP columns, which do not contain silanol groups, the CAP for PO (at about 90% acetone) can be utilized, as PEG elutes under these conditions in SEC mode... Figure 4. Chromatograms of PPG 1000, water, and two poloxamers, as obtained on the Jordi column in 91.73 wt-% acetone – water.",
+        "notes": "Used for analysis of poloxamers (EO-PO-EO) where EO is at CAP and PO elutes in SEC mode. Text mentions 'about 90%' generally but Figure 4 caption specifies 91.73 wt-%.",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "EO-PO-EO triblock copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "78.54",
+        "mobile_phase_ratio_units": "wt-% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "This can be achieved on a diol column in about 80 wt-% acetone... Figure 5. Chromatograms of poloxamers and PEGs, as obtained on the Diol column in 78.54 wt-% acetone - water.",
+        "notes": "Situation 3 in Table 1: CAP for EO, PO elutes in SEC mode. Used for analysis of poloxamers.",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "EO-PO-EO triblock copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "30",
+        "mobile_phase_ratio_units": "wt-% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "This can be achieved on RP columns at the first critical point in acetone – water with about 30 wt-% acetone... Figure 6. Chromatograms of different diblock and triblock oligomers and dipropylene glycol monomethyl ether, as obtained on the Jordi column in 30 wt-% acetone – water.",
+        "notes": "Situation 1 in Table 1: CAP for EO, PO elutes in LAC mode. Used for analysis of oligomers with short PO blocks.",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "EO-PO-EO triblock copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Novapak C18",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80",
+        "mobile_phase_ratio_units": "wt-% methanol",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "60 A",
+        "column_dimensions": "300 x 3.9 mm",
+        "detector": "ELSD",
+        "evidence_text": "as can be seen in Figure 7, a CAP for EO exits on the Novapak column in 80 wt-% methanol... Figure 8. Chromatograms of PPG 1000 and different triblock copolymers, as obtained on the Novapak column in 80 wt-% acetone – water.",
+        "notes": "Text states CAP for EO on Novapak in 80 wt-% methanol (Figure 7). Figure 8 caption mentions 80 wt-% acetone, but the text discussion preceding Figure 8 refers to the methanol system for separating PPG up to 1000 Da. The text explicitly links the 80% methanol condition to the CAP for EO on Novapak. The Figure 8 caption likely contains a typo (acetone vs methanol) or refers to a different run, but the text explicitly identifies the 80% methanol condition as the CAP for EO on Novapak. I will extract the methanol condition as the primary LCCC setup described for this column in the text.",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6731,
+      "extraction_success": true,
+      "processing_time": 365.36277174949646,
+      "extracted_count": 4
+    }
+  ]
+}

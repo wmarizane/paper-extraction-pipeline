@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[365] Ahmed2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile\u2013water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "detector": "DDS 70 density detection system",
+        "pore_size": "80 \u00c5",
+        "critical_component": "EO",
+        "publication_year": "2009",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "69.12 wt-% acetonitrile",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "column_name": "Spherisorb ODS2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt-%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG, PEG-MME",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 10 mm",
+        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used as first dimension for LCCC separation of block copolymers. The text states PEG elutes close to CAP in this composition.",
+        "flow_rate": "2.0 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "source_pdf": "[294] Malik2008.pdf",
+    "extraction_date": "2026-06-14T11:11:29.919880",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[294] Malik2008.pdf",
+      "start_time": "2026-06-14T10:49:40.181539",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 13.958281755447388,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13030481338500977,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9565
+        },
+        "llm_extraction": {
+          "time_seconds": 1295.64963555336,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG diols",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "Allyl-terminated PPG",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "n-Decyl-PPG",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "n-Dodecyl-PPG",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "n-Hexadecyl-PPG",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "n-Octadecyl-PPG",
+        "critical_component": "PO repeat unit",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. ... Fig. 6 shows the elution volumes of the individual homologous series with different molar mass (M vs. Ve). As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass ... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation of PPGs with an end group of 10 or more carbon atoms from the allyl-termined PPGs and the PPG diols.",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used to separate based on end groups under conditions where PO is at/near critical conditions.",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2008"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9565,
+      "extraction_success": true,
+      "processing_time": 601.3109378814697,
+      "extracted_count": 6
+    }
+  ]
+}

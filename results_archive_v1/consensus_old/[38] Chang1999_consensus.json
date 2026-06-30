@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "source_pdf": "[38] Chang1999.pdf",
+    "model": "local-programmatic-consensus",
+    "inputs": [
+      "deepseek-r1-32b",
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "CH3CN",
+          "CH2Cl2"
+        ],
+        "evidence_text": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other.",
+        "analyte_polymer": "polystyrene",
+        "flow_rate": "0.5 mL/min",
+        "mobile_phase_ratio": "57/43",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "1999",
+        "notes": "Critical condition for polystyrene separation.",
+        "detector": "RI and LALLS",
+        "pore_size": "100 A˚",
+        "column_name": "C18-bonded silica",
+        "column_dimensions": "250 6 4.6 mm",
+        "architecture": "linear",
+        "paper_doi": "10.1002/(SICI)1098-2760(199910)200:10<2188::AID-MACP2188>3.0.CO;2-8",
+        "critical_condition_basis": "chromatographic critical point",
+        "mobile_phase_ratio_units": "v/v",
+        "corresponding_author_name": "Taihyun Chang",
+        "stationary_phase_chemistry": "C18",
+        "temperature_celsius": "30.5",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784 KOREA",
+        "critical_component": "CH2Cl2/CH3CN"
+      },
+      {
+        "analyte_polymer": "Polystyrene",
+        "critical_component": null,
+        "architecture": "Linear",
+        "critical_condition_basis": "Chromatographic critical point where enthalpic and entropic terms compensate, resulting in loss of separation selectivity according to molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Alltech, Nucleosil",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "57/43",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30.5",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "evidence_text": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other. This compensation results in the loss of separation selectivity according to the polymer molecular weight, and all the PS standards are eluted near the injection solvent peak position regardless of their molecular weights.",
+        "notes": "Also observed at 30.5 C with fixed composition 57/43 in Fig 3.",
+        "paper_doi": "10.1002/(SICI)1098-2760(199910)200:10<2188::AID-MACP2188>3.0.CO;2-8",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784 KOREA",
+        "publication_year": "1999"
+      }
+    ]
+  }
+}

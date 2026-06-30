@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[296] Malik2020.pdf",
+    "extraction_date": "2026-06-14T09:38:14.832114",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[296] Malik2020.pdf",
+      "start_time": "2026-06-14T09:30:44.334917",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 93.82015872001648,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1113443374633789,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 16945
+        },
+        "llm_extraction": {
+          "time_seconds": 356.5655539035797,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 16945,
+      "extraction_success": false,
+      "processing_time": 115.522469997406,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEO\",\"critical_component\":\"PEO\",\"architecture\":\"linear\",\"critical_condition_basis\":\"chromatographic critical point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"octadecyl\",\"column_mode\":\"Reversed Ph"
+    }
+  ]
+}

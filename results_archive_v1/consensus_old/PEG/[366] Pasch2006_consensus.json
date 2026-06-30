@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[366] Pasch2006.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "evidence_text": "Another technique to separate the reaction products PEG-g-PMAA and PMAA from residual non-grafted PEG is liquid chromatography at critical conditions (LC-CC) for PEG. At such LC-CC conditions separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass. ... stationary phase: Knauer Nucleosil RP18-100, mobile phase: methanol/water 81/19 (w/w), detector: ELSD",
+        "detector": "ELSD",
+        "pore_size": null,
+        "critical_component": "PEG",
+        "publication_year": "2006",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "81/19",
+        "critical_condition_basis": "LC-CC for PEG",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w",
+        "critical_condition_confidence": "explicit",
+        "architecture": "graft",
+        "analyte_polymer": "PEG-g-PMAA",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "column_dimensions": null,
+        "stationary_phase_chemistry": "RP18",
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Used for separation of PEG-g-PMAA graft products from non-grafted PEG.",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "MeOH",
+          "H2O"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "evidence_text": "The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume.",
+        "detector": null,
+        "pore_size": null,
+        "critical_component": "PEO",
+        "publication_year": "2006",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "82.5:17.5",
+        "critical_condition_basis": "critical point for PEO",
+        "column_name": "Nucleosil C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% by volume",
+        "critical_condition_confidence": "explicit",
+        "architecture": "graft",
+        "analyte_polymer": "PEO",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "column_dimensions": null,
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Used for separation of PEO-g-PVA graft copolymers from free PEO.",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[28] Braun1998.pdf",
+    "extraction_date": "2026-05-25T21:27:26.266329",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[28] Braun1998.pdf",
+      "start_time": "2026-05-25T21:23:15.842379",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 62.80340027809143,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13283801078796387,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8283
+        },
+        "llm_extraction": {
+          "time_seconds": 187.48757338523865,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Styrene-butadiene block copolymers (Samples 1, 2, 3, 4, 5)",
+        "critical_component": "Polystyrene (PS)",
+        "architecture": "Diblock and Triblock (PS-PB, PS-PB-PS)",
+        "critical_condition_basis": "Critical point of adsorption of polystyrene",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrospher Si-300 + Si-1000",
+        "stationary_phase_chemistry": "Silica gel",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "43.4 : 56.6",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": "300 A + 1000 A",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "detector": "Differential refractometer, UV detector, FTIR (LC Transform)",
+        "evidence_text": "The critical point of PS is obtained at an eluent composition of THF/n-hexane 43.4% : 56.6% by volume, all PS samples being eluted in one peak. At this eluent composition, PB is eluted in the SEC mode.",
+        "notes": "Used to determine the size of the polybutadiene blocks. PS blocks are chromatographically invisible.",
+        "paper_doi": "10.1080/10236669808009731",
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "1998"
+      },
+      {
+        "analyte_polymer": "Styrene-butadiene block copolymers (Samples 2, 3, 4)",
+        "critical_component": "Polybutadiene (PB)",
+        "architecture": "Diblock and Triblock (PS-PB, PS-PB-PS)",
+        "critical_condition_basis": "Critical point of adsorption of polybutadiene",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18 300 + 1000",
+        "stationary_phase_chemistry": "RP-18 (Nonpolar)",
+        "mobile_phase_solvents": [
+          "Methyl ethyl ketone",
+          "Cyclohexane"
+        ],
+        "mobile_phase_ratio": "98 : 2",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": "300 A + 1000 A",
+        "column_dimensions": "250 x 4 mm i.d.",
+        "detector": "Differential refractometer, UV detector, FTIR (LC Transform)",
+        "evidence_text": "The critical point of adsorption on a RP-18 stationary phase corresponds to a mobile phase composition of MEK/cyclohexane 98% :2% by volume... At the critical point of adsorption for PB, PS would elute in the SEC mode.",
+        "notes": "Used to determine the size of the polystyrene blocks. PB blocks are chromatographically invisible. Solubility limit for PB homopolymer is ~30,000 g/mol, but block copolymers are soluble.",
+        "paper_doi": "10.1080/10236669808009731",
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "1998"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8283,
+      "extraction_success": true,
+      "processing_time": 187.4633824825287,
+      "extracted_count": 2
+    }
+  ]
+}

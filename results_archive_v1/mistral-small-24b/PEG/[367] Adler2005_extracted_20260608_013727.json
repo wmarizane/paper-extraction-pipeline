@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_pdf": "[367] Adler2005.pdf",
+    "extraction_date": "2026-06-08T01:37:27.624630",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[367] Adler2005.pdf",
+      "start_time": "2026-06-08T01:36:07.760632",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 57.1400351524353,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.15085673332214355,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10993
+        },
+        "llm_extraction": {
+          "time_seconds": 22.57294535636902,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "81:19",
+        "mobile_phase_ratio_units": "wt.-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schloßgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "81:19",
+        "mobile_phase_ratio_units": "wt.-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schloßgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "2005"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10993,
+      "extraction_success": true,
+      "processing_time": 22.55848217010498,
+      "extracted_count": 2
+    }
+  ]
+}

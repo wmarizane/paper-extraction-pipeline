@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[127] Esser2001.pdf",
+    "extraction_date": "2026-06-14T09:42:33.008054",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[127] Esser2001.pdf",
+      "start_time": "2026-06-14T09:40:42.451556",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 25.627230644226074,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1259169578552246,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 5493
+        },
+        "llm_extraction": {
+          "time_seconds": 84.80322742462158,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(propylene oxide)",
+        "critical_component": "poly(propylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey Nagel Nucleosil 5 NH2",
+        "stationary_phase_chemistry": "NH2",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "hexane",
+          "isopropyl alcohol"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol.-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "200 x 4 mm i.d.",
+        "detector": "refractive index detector",
+        "evidence_text": "In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%. The functionality type separation of sample 1 under these conditions is shown in Figure 6.",
+        "notes": "The text states that LC-CC separates functionally heterogeneous samples with regard to their functional groups irrespective of the molar mass. The critical point was determined by running PPGs with different molar masses.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "2001"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 5493,
+      "extraction_success": true,
+      "processing_time": 84.78070378303528,
+      "extracted_count": 1
+    }
+  ]
+}

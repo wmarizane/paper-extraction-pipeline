@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[262] Girod2008.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/rcm.3796",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Universit\u00e9 Aix-Marseille I, II & III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "150 x 4 mm",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "88.8:11.2",
+        "column_name": "octadecyl-silica Equisil",
+        "notes": "Critical conditions established for PEG standards (200-2000 Da) and extended to 4000 Da.",
+        "publication_year": "2008",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "water"
+        ],
+        "evidence_text": "For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
+        "corresponding_author_name": "L. Charles",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "analyte_polymer": "hydroxyl-terminated poly(ethylene glycol)",
+        "detector": "ESI-MS",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions",
+        "mobile_phase_ratio_units": "% v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1002/rcm.3796",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Universit\u00e9 Aix-Marseille I, II & III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "150 x 4 mm",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "88.8:11.2",
+        "column_name": "octadecyl-silica Equisil",
+        "notes": "Analysis performed using the critical conditions established for PEG standards. Separation based on PS block size.",
+        "publication_year": "2008",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "water"
+        ],
+        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block. ... The PEO block being chromatographically 'invisible', copolymer molecules with a given PS block size are eluted in the same volume, regardless of the PEO block length.",
+        "corresponding_author_name": "Laurence Charles",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "analyte_polymer": "SG1-capped PEO-b-PS block copolymer",
+        "detector": "ESI-MS",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions",
+        "mobile_phase_ratio_units": "% v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

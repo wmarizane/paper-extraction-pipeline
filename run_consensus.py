@@ -6,8 +6,11 @@ Finds extracted JSON files, aggregates them, and runs the DeepSeek Judge.
 
 import json
 import subprocess
+import os
+from datetime import datetime
 from pathlib import Path
 from pipeline.consensus_judge import ConsensusJudge
+from pipeline.telemetry import PaperTelemetry, TelemetryWriter
 
 def load_json(path: Path) -> list:
     try:
@@ -19,6 +22,9 @@ def load_json(path: Path) -> list:
         return []
 
 def main():
+    job_id = os.environ.get("SLURM_JOB_ID", datetime.now().strftime("%Y%m%d_%H%M%S"))
+    tel_writer = TelemetryWriter(output_dir=Path("logs"), job_id=job_id)
+
     results_dir = Path("results")
     consensus_dir = results_dir / "consensus"
     consensus_dir.mkdir(parents=True, exist_ok=True)
@@ -66,8 +72,16 @@ def main():
             
             print(f"Loaded {len(qwen_conds)} conditions from Qwen, {len(llama_conds)} from LLaMA.")
             
+            tel = PaperTelemetry(paper_name=paper, model="deepseek-r1-32b", phase="consensus")
+            tel.start()
+            
             try:
                 final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
+                
+                # TODO: expose from ConsensusJudge
+                tel.record_llm_call(call_type="initial", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
+                tel.record_llm_call(call_type="initial", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
+                tel.record_llm_call(call_type="initial", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
                 
                 # Phase 2 Feedback Loop Orchestration (Max 1 Retry)
                 if final_data.get("requires_retry"):
@@ -104,9 +118,17 @@ def main():
                     
                     # Run consensus again (2nd pass, no further retries)
                     final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
+                    tel.record_llm_call(call_type="retry", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
                 
                 final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
                 print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")
+                
+                tel.finish(conditions_extracted=len(final_conds), success=True)
+                try:
+                    tel_writer.append(tel)
+                    tel_writer.flush_csv()
+                except Exception:
+                    pass
                 
                 output_file = consensus_sub_dir / f"{paper}_consensus.json"
                 
@@ -130,6 +152,12 @@ def main():
                     
             except Exception as e:
                 print(f"❌ Consensus failed for {paper}: {e}")
+                tel.finish(conditions_extracted=0, success=False, error=str(e))
+                try:
+                    tel_writer.append(tel)
+                    tel_writer.flush_csv()
+                except Exception:
+                    pass
 
 if __name__ == "__main__":
     main()

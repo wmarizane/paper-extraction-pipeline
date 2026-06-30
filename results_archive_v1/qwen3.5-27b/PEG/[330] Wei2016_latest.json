@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "source_pdf": "[330] Wei2016.pdf",
+    "extraction_date": "2026-06-14T15:06:20.266218",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[330] Wei2016.pdf",
+      "start_time": "2026-06-14T14:55:33.054648",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 46.467034578323364,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12377619743347168,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8885
+        },
+        "llm_extraction": {
+          "time_seconds": 600.6206398010254,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG 2k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.2 mL min-1",
+        "pore_size": "130 Å",
+        "column_dimensions": "100 x 2.1 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C. The chromatograms of PEGs and PEG derivatives under this LCCC are exemplified in Fig. 6. It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times. For example, the retention times were almost the same for PEG 2k, PEG 4k and PEG 6k.",
+        "notes": "UPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 4k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.2 mL min-1",
+        "pore_size": "130 Å",
+        "column_dimensions": "100 x 2.1 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C. The chromatograms of PEGs and PEG derivatives under this LCCC are exemplified in Fig. 6. It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times. For example, the retention times were almost the same for PEG 2k, PEG 4k and PEG 6k.",
+        "notes": "UPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.2 mL min-1",
+        "pore_size": "130 Å",
+        "column_dimensions": "100 x 2.1 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C. The chromatograms of PEGs and PEG derivatives under this LCCC are exemplified in Fig. 6. It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times. For example, the retention times were almost the same for PEG 2k, PEG 4k and PEG 6k.",
+        "notes": "UPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "MPEGOH 5k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.2 mL min-1",
+        "pore_size": "130 Å",
+        "column_dimensions": "100 x 2.1 mm",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C. The chromatograms of PEGs and PEG derivatives under this LCCC are exemplified in Fig. 6. It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times.",
+        "notes": "UPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Successful baseline separation of PEGs and benzaldehydesubstituted PEGs according to the number of benzaldehyde end-groups was obtained under the LCCC on an XB-C18 column with 40% acetonitrile in water at 25 °C, as shown in Fig. 5 (no ammonium acetate added).",
+        "notes": "HPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "MPEGOH 5k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Successful baseline separation of PEGs and benzaldehydesubstituted PEGs according to the number of benzaldehyde end-groups was obtained under the LCCC on an XB-C18 column with 40% acetonitrile in water at 25 °C, as shown in Fig. 5 (no ammonium acetate added).",
+        "notes": "HPLC system used. Critical condition established for PEG backbone to separate based on end-group functionality.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang; E. Uliyanchenko; P. J. Schoenmakers",
+        "corresponding_email_address": "xljiang@whu.edu.cn; e.uliyanchenko@uva.nl; p.j.schoenmakers@uva.nl",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
+        "publication_year": "2016"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8885,
+      "extraction_success": true,
+      "processing_time": 600.598064661026,
+      "extracted_count": 6
+    }
+  ]
+}

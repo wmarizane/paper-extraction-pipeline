@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[118] Trathnigg1994.pdf",
+    "extraction_date": "2026-06-14T09:54:47.498577",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[118] Trathnigg1994.pdf",
+      "start_time": "2026-06-14T09:52:50.801801",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 43.78059911727905,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11780095100402832,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 5614
+        },
+        "llm_extraction": {
+          "time_seconds": 72.79825711250305,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "polyethylene glycol",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "density and RI",
+        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution volume from an ODS2 column in methanol—water (80:20) as a mobile phase.",
+        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols.",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, Graz, Austria",
+        "publication_year": "1994"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 5614,
+      "extraction_success": true,
+      "processing_time": 72.77516007423401,
+      "extracted_count": 1
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "source_pdf": "[322] Fischer2015.pdf",
+    "extraction_date": "2026-06-08T03:08:11.284060",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[322] Fischer2015.pdf",
+      "start_time": "2026-06-08T03:06:01.871757",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 30.948107957839966,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12123560905456543,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13939
+        },
+        "llm_extraction": {
+          "time_seconds": 98.34284925460815,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poly(ethylene glycol)",
+        "critical_component": "Poly(ethylene glycol)",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "octadecyl silica column",
+        "stationary_phase_chemistry": "octadecyl silica",
+        "mobile_phase_solvents": [
+          "ACN",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "47:53",
+        "mobile_phase_ratio_units": "v:v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "120 Å",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL-1 , and 10 μL of the sample was injected at a flow rate of 0.5 mL min-1 . The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer temp 90C, evaporator temp 110C.",
+        "paper_doi": "10.1007/s13361-015-1233-8",
+        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_email_address": "strimpin@chem.wayne.edu",
+        "physical_address": "Department of Chemistry, Wayne State University, Detroit, MI 48202, USA",
+        "publication_year": "2015"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13939,
+      "extraction_success": true,
+      "processing_time": 98.31997728347778,
+      "extracted_count": 1
+    }
+  ]
+}

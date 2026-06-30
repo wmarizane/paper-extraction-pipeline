@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[277] Malik2010.pdf",
+    "extraction_date": "2026-06-14T10:22:00.048567",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[277] Malik2010.pdf",
+      "start_time": "2026-06-14T10:20:45.025168",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 27.721977710723877,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10531115531921387,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 11136
+        },
+        "llm_extraction": {
+          "time_seconds": 47.19597601890564,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PBO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88 wt%",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min−1",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 mm × 10 mm, 5 μm",
+        "detector": "SICON LCD 201 RI detector",
+        "evidence_text": "In the semipreparative LCCC system, which was used in the first dimension, the mobile phase was delivered by JASCO 880 PU pump (Japan Spectrosopic Company, Tokyo, Japan) at a flow rate of 2.0 mL min−1. Samples were injected manually using Rheodyne 7125 injection valve (Rheodyne, Cotati, CA, USA) equipped with a 500 μL loop. A semi-preparative column was used for all measurements: Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å) from PhaseSep (Deeside, UK). A SICON LCD 201 RI detector was combined with the DDS70. Critical conditions for PBO were realized in 88 wt% THF–water and for PHO in 92 wt% THF–water.",
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PHO",
+        "critical_component": "PHO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92 wt%",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min−1",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 mm × 10 mm, 5 μm",
+        "detector": "SICON LCD 201 RI detector",
+        "evidence_text": "In the semipreparative LCCC system, which was used in the first dimension, the mobile phase was delivered by JASCO 880 PU pump (Japan Spectrosopic Company, Tokyo, Japan) at a flow rate of 2.0 mL min−1. Samples were injected manually using Rheodyne 7125 injection valve (Rheodyne, Cotati, CA, USA) equipped with a 500 μL loop. A semi-preparative column was used for all measurements: Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å) from PhaseSep (Deeside, UK). A SICON LCD 201 RI detector was combined with the DDS70. Critical conditions for PBO were realized in 88 wt% THF–water and for PHO in 92 wt% THF–water.",
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7 wt%",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30.0",
+        "flow_rate": "0.5 mL min−1",
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 250 mm, 5 μm",
+        "detector": "RI 2414 or SEDEX 45 ELSD",
+        "evidence_text": "In the analytical LCCC system (second dimension), the mobile phase was delivered by an ISCO 2350 HPLC pump (ISCO, Lincoln, NE, USA) at a flow rate of 0.5 mL min−1. Samples were injected manually using a Rheodyne 7125 injection valve (Rheodyne, Cotati, CA, USA) equipped with a 500 μL loop. A refractive index detector RI 2414 (Waters) or a SEDEX 45 ELSD (Sedere, France) was connected to the DDS 70. Nitrogen was used as carrier gas, and the pressure at the nebulizer was set to 1.0 bar (evaporator temperature: 30°C). Normal phase column used for LCCC in second dimension was Nucleosil 100-5 OH 5 μm, silica-based diol phase; 4.6 mm × 250 mm; particle diameter: 5 μm; pore diameter: 100 Å (Macherey-Nagel, Dueren, Germany). Critical conditions for PEO exist at 75.7 wt% acetone–water.",
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 11136,
+      "extraction_success": true,
+      "processing_time": 47.18113470077515,
+      "extracted_count": 3
+    }
+  ]
+}

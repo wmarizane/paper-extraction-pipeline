@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[3] Belenkii1976.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "pyridine",
+          "water"
+        ],
+        "physical_address": "Institute of High Molecular Compounds, Leningrad (U.S.S.R.)",
+        "evidence_text": "As shown in Fig. 2b, the polymer homologues in poly(ethylene oxides) of different molecular weight have the same R, value.",
+        "detector": null,
+        "pore_size": null,
+        "critical_component": "poly(ethylene oxide)",
+        "publication_year": "1976",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "0.1:10",
+        "critical_condition_basis": "The Ry values do not depend on molecular weight",
+        "column_name": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": null,
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(ethylene oxide)",
+        "corresponding_email_address": null,
+        "column_dimensions": null,
+        "stationary_phase_chemistry": "silica gel",
+        "paper_doi": null,
+        "corresponding_author_name": "B. G. Belenky",
+        "notes": null,
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

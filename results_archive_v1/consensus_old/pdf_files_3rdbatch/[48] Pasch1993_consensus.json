@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "source_pdf": "[48] Pasch1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": null,
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "evidence_text": "Block copolymers of decyl and methyl methacrylate were analyzed by liquid chromatography at the critical point of adsorption. The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+        "detector": null,
+        "pore_size": null,
+        "critical_component": "poly(methyl methacrylate)",
+        "publication_year": "1993",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": null,
+        "critical_condition_basis": "critical point of adsorption",
+        "column_name": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": null,
+        "critical_condition_confidence": "explicit",
+        "architecture": "block copolymer",
+        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
+        "corresponding_email_address": null,
+        "column_dimensions": null,
+        "stationary_phase_chemistry": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Specific mobile phase composition and column details are not provided in the summary or introduction text.",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

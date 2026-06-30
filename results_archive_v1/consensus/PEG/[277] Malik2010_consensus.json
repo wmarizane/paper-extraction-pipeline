@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "source_pdf": "[277] Malik2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PBO",
+        "critical_component": "PBO",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "Critical conditions for PBO were realized in 88 wt% THF\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm x 10 mm",
+        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF\u2013water and for PHO in 92 wt% THF\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 88.23 wt% THF in Fig 3 caption.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PHO",
+        "critical_component": "PHO",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "Critical conditions for PHO were realized in 92 wt% THF\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm x 10 mm",
+        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF\u2013water and for PHO in 92 wt% THF\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 92.23 wt% THF in Fig 3 caption.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "refractive index detector RI 2414 or SEDEX 45 ELSD connected to DDS 70",
+        "evidence_text": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "notes": "Analytical LCCC used as second dimension to separate block copolymer from unreacted MeO-PEO initiator.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PBO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88.23",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "density",
+        "evidence_text": "On most common octadecyl reverse phase columns, it could also be realized with a slightly higher content of THF (87\u201392% for butene oxide, 90\u201395% for hexene oxide) [73]. Under the conditions mentioned above, the hydrophilic PEO as well as the block copolymer elute in SEC order. If there is any hydrophobic homopolymer formed during synthesis, it should elute at the void volume of column. In this study we used an octadecyl column with 10 mm inner diameter for the semipreparative separation of block copolymer from homopolymer. As shown in Fig. 3, the block copolymer (fraction 1) can be reasonably separated from the homopolymer (fraction 2).",
+        "notes": "Semipreparative LCCC used as first dimension.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PHO",
+        "critical_component": "PHO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.23",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "density",
+        "evidence_text": "On most common octadecyl reverse phase columns, it could also be realized with a slightly higher content of THF (87\u201392% for butene oxide, 90\u201395% for hexene oxide) [73]. Under the conditions mentioned above, the hydrophilic PEO as well as the block copolymer elute in SEC order. If there is any hydrophobic homopolymer formed during synthesis, it should elute at the void volume of column. In this study we used an octadecyl column with 10 mm inner diameter for the semipreparative separation of block copolymer from homopolymer. As shown in Fig. 3, the block copolymer (fraction 1) can be reasonably separated from the homopolymer (fraction 2).",
+        "notes": "Semipreparative LCCC used as first dimension.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "4.6 mm \u00d7 250 mm",
+        "detector": "refractive index",
+        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD, with dual detection [54\u201356] one may obtain information on the chemical composition along the MMD [56\u201358]. SEC is however not capable of discriminating a mixture of block copolymers and homopolymers. In the case of higher polymers, gradient LAC [59\u201366] or LC under limiting conditions [67\u201369] can be applied. In the range of lower molecular mass, however, LCCC is the best approach to separate homopolymers from the block copolymer. In AB diblock copolymers (e.g. A = EO and B = PO or another alkylene oxide) one may use the following strategies: At the CAP for the unit A, a separation according to the block B may be achieved by a SEC or a LAC mechanism, while at the CAP for the block B, the length of the block A may be obtained in the same way. The application of these methods to EO\u2013PO block copolymers has been described recently [20,45,70\u201372].",
+        "notes": "Analytical LCCC used as second dimension to separate block copolymer from unreacted MeO-PEO initiator.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

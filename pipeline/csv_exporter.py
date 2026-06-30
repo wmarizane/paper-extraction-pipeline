@@ -42,7 +42,14 @@ FIELDNAMES = [
     "Consensus Confidence",
     "Qwen Confidence",
     "Mistral Confidence",
-    "Evidence Text",
+    "Evidence: Critical Condition",
+    "Evidence: Critical Component",
+    "Evidence: Column Name",
+    "Evidence: Mobile Phase Solvents",
+    "Evidence: Mobile Phase Ratio",
+    "Evidence: Temperature",
+    "Evidence: Pore Size",
+    "Evidence: Flow Rate",
     "Notes"
 ]
 
@@ -70,38 +77,47 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
                 solvents = c.get("mobile_phase_solvents") or []
                 conf = c.get("model_confidences") or {}
                 
-                rows.append({
-                    "Paper": paper_name,
-                    "DOI": _clean(c.get("paper_doi")),
-                    "Publication Year": _clean(c.get("publication_year")),
-                    "Corresponding Author": _clean(c.get("corresponding_author_name")),
-                    "Email": _clean(c.get("corresponding_email_address")),
-                    "Physical Address": _clean(c.get("physical_address")),
-                    "Analyte Polymer": _clean(c.get("analyte_polymer")),
-                    "Critical Component": _clean(c.get("critical_component")),
-                    "Architecture": _clean(c.get("architecture")),
-                    "Critical Condition Basis": _clean(c.get("critical_condition_basis")),
-                    "Column Name": _clean(c.get("column_name")),
-                    "Stationary Phase Chemistry": _clean(c.get("stationary_phase_chemistry")),
-                    "Column Mode": _clean(c.get("column_mode")),
-                    "Pore Size": _clean(c.get("pore_size")),
-                    "Column Dimensions": _clean(c.get("column_dimensions")),
-                    "Mobile Phase Solvents": _clean(", ".join(solvents) if isinstance(solvents, list) else (str(solvents) if solvents else "")),
-                    "Mobile Phase Ratio": _clean(c.get("mobile_phase_ratio")),
-                    "Mobile Phase Ratio Units": _clean(c.get("mobile_phase_ratio_units")),
-                    "Aqueous pH": _clean(aq.get("pH")),
-                    "Aqueous Salt Added": _clean(aq.get("salt_added") if aq.get("salt_added") is not None else ""),
-                    "Aqueous Salt Type": _clean(aq.get("salt_type")),
-                    "Aqueous Salt Concentration": _clean(aq.get("salt_concentration")),
-                    "Temperature (°C)": _clean(c.get("temperature_celsius")),
-                    "Flow Rate": _clean(c.get("flow_rate")),
-                    "Detector": _clean(c.get("detector")),
-                    "Consensus Confidence": _clean(c.get("critical_condition_confidence")),
-                    "Qwen Confidence": _clean(conf.get("qwen")),
-                    "Mistral Confidence": _clean(conf.get("mistral")),
-                    "Evidence Text": _clean(c.get("evidence_text")),
-                    "Notes": _clean(c.get("notes"))
-                })
+                    fe = c.get("field_evidence") or {}
+                    row_data = {
+                        "Paper": paper_name,
+                        "DOI": _clean(c.get("paper_doi")),
+                        "Publication Year": _clean(c.get("publication_year")),
+                        "Corresponding Author": _clean(c.get("corresponding_author_name")),
+                        "Email": _clean(c.get("corresponding_email_address")),
+                        "Physical Address": _clean(c.get("physical_address")),
+                        "Analyte Polymer": _clean(c.get("analyte_polymer")),
+                        "Critical Component": _clean(c.get("critical_component")),
+                        "Architecture": _clean(c.get("architecture")),
+                        "Critical Condition Basis": _clean(c.get("critical_condition_basis")),
+                        "Column Name": _clean(c.get("column_name")),
+                        "Stationary Phase Chemistry": _clean(c.get("stationary_phase_chemistry")),
+                        "Column Mode": _clean(c.get("column_mode")),
+                        "Pore Size": _clean(c.get("pore_size")),
+                        "Column Dimensions": _clean(c.get("column_dimensions")),
+                        "Mobile Phase Solvents": _clean(", ".join(solvents) if isinstance(solvents, list) else (str(solvents) if solvents else "")),
+                        "Mobile Phase Ratio": _clean(c.get("mobile_phase_ratio")),
+                        "Mobile Phase Ratio Units": _clean(c.get("mobile_phase_ratio_units")),
+                        "Aqueous pH": _clean(aq.get("pH")),
+                        "Aqueous Salt Added": _clean(aq.get("salt_added") if aq.get("salt_added") is not None else ""),
+                        "Aqueous Salt Type": _clean(aq.get("salt_type")),
+                        "Aqueous Salt Concentration": _clean(aq.get("salt_concentration")),
+                        "Temperature (°C)": _clean(c.get("temperature_celsius")),
+                        "Flow Rate": _clean(c.get("flow_rate")),
+                        "Detector": _clean(c.get("detector")),
+                        "Consensus Confidence": _clean(c.get("critical_condition_confidence")),
+                        "Qwen Confidence": _clean(conf.get("qwen")),
+                        "Mistral Confidence": _clean(conf.get("mistral")),
+                        "Evidence: Critical Condition":  _clean(fe.get("critical_condition_basis")),
+                        "Evidence: Critical Component":  _clean(fe.get("critical_component")),
+                        "Evidence: Column Name":         _clean(fe.get("column_name")),
+                        "Evidence: Mobile Phase Solvents": _clean(fe.get("mobile_phase_solvents")),
+                        "Evidence: Mobile Phase Ratio":  _clean(fe.get("mobile_phase_ratio")),
+                        "Evidence: Temperature":         _clean(fe.get("temperature_celsius")),
+                        "Evidence: Pore Size":           _clean(fe.get("pore_size")),
+                        "Evidence: Flow Rate":           _clean(fe.get("flow_rate")),
+                        "Notes": _clean(c.get("notes"))
+                    }
+                    rows.append(row_data)
         except Exception as e:
             print(f"Error processing {json_file}: {e}")
             

@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[321] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "at the CAP for block A (in this case EO) on a normal phase column (NucleoSil 100-5 OH) in an acetone\u2013water mobile phase (78%, w/w acetone) the initiator (PEG-MME) elutes close to the void volume",
+        "detector": "ELSD",
+        "pore_size": "100 \u00c5",
+        "critical_component": "EO block",
+        "publication_year": "2009",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "77.93",
+        "critical_condition_basis": "CAP for EO on normal phase column",
+        "column_name": "Nucleosil 100-5 OH",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w acetone",
+        "critical_condition_confidence": "explicit",
+        "architecture": "block copolymer",
+        "analyte_polymer": "PEG-MME 1100",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Text mentions 78% in discussion and 77.93% in Fig 4 caption. Extracted specific value from caption.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6)",
+        "detector": "ELSD",
+        "pore_size": "500 \u00c5",
+        "critical_component": "poly(butene oxide)",
+        "publication_year": "2009",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "84.55",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w THF",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(butene oxide)",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used to separate block copolymers from homopolymers.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "at the CAP for HO, all other structures elute in SEC mode and are thus clearly separated from the HO homopolymer",
+        "detector": "ELSD",
+        "pore_size": "500 \u00c5",
+        "critical_component": "HO block",
+        "publication_year": "2009",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "87.04",
+        "critical_condition_basis": "CAP for HO on reversed phase column",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w THF",
+        "critical_condition_confidence": "explicit",
+        "architecture": "tetrablock copolymer",
+        "analyte_polymer": "PEG-MME 350-PO-BO-HO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Analysis of tetrablock at CAP for the fourth block (HO).",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

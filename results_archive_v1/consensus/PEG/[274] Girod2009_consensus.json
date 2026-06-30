@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[274] Girod2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1039/b9ay00118b",
+        "flow_rate": "1 mL min\u207b\u00b9",
+        "physical_address": "Universit\u00e9s Aix-Marseille I, II et III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille, France",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "150 x 4 mm",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "88.8:11.2",
+        "column_name": "EQUISIL",
+        "notes": "Critical conditions established with LiCl. Text notes that changing cation size modifies these conditions.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "evidence_text": "Using the non-polar C18 stationary phase, the critical composition of the MeOH\u2013water eluent, first established for PEG standards (Mw = 200 to 1000 g mol-1) using 1 mM LiCl concentration, was determined at 88.8:11.2 (%, v/v) and allows all PEG chains to have the same elution volume (Ve = 2.33 mL), independently of their molecular mass.",
+        "corresponding_author_name": "Laurence Charles",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1.0 mM"
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "detector": "ESI-MS",
+        "stationary_phase_chemistry": "octadecylsilica (C18)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "elution volume independent of molecular mass",
+        "mobile_phase_ratio_units": "%, v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "homopolymer",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1039/b9ay00118b",
+        "flow_rate": "1 mL min\u207b\u00b9",
+        "physical_address": "Universit\u00e9s Aix-Marseille I, II et III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille, France",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "93.5:6.5",
+        "column_name": "NUCLEOSIL",
+        "notes": "Critical conditions established with LiCl on polar stationary phase. Text notes that changing cation size modifies these conditions.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "evidence_text": "For useful comparison, the critical composition of the MeOH\u2013water eluent was first determined for PEG standards using a 1 mM LiCl concentration. For the selected system, critical conditions were obtained with a 93.5:6.5 (%, v/v) MeOH\u2013water eluent, as indicated by the same elution volume (Ve = 4.15 mL) measured for all PEG chains.",
+        "corresponding_author_name": "Laurence Charles",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "detector": "ESI-MS",
+        "stationary_phase_chemistry": "amino-silica (NH2)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions",
+        "mobile_phase_ratio_units": "%, v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[260] Hiller2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "evidence_text": "The critical conditions correspond to a mobile phase composition of THF\u2013ACN of 48:52 v/v... stationary phase: RP-18 Nucleosil 300 \u00fe 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1... at the critical point of adsorption of PS",
+        "detector": "UV, 1H NMR",
+        "pore_size": null,
+        "critical_component": "PS",
+        "publication_year": "2007",
+        "temperature_celsius": "22",
+        "mobile_phase_ratio": "48:52",
+        "critical_condition_basis": "critical point of adsorption of PS",
+        "column_name": "Nucleosil RP-18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "block copolymer",
+        "analyte_polymer": "PS-b-PMMA",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "column_dimensions": "250 x 4 mm",
+        "stationary_phase_chemistry": "C18 (reversed-phase)",
+        "paper_doi": "10.1002/macp.200700166",
+        "corresponding_author_name": "Wolf Hiller",
+        "notes": "PMMA elutes in SEC mode while PS is at critical conditions.",
+        "flow_rate": "0.5 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

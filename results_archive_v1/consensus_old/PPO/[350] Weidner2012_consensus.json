@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[350] Weidner2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "physical_address": "BAM\u2013Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
+        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "pore_size": "120 \u00c5",
+        "critical_component": "polypropylene oxide (PPO)",
+        "publication_year": "2012",
+        "temperature_celsius": "45",
+        "mobile_phase_ratio": "85/15",
+        "critical_condition_basis": "critical conditions of adsorption for polypropylene oxide",
+        "column_name": "YMC RP18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "block",
+        "analyte_polymer": "PEO-b-PPO-b-PEO",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "column_dimensions": "250 \u00d7 4.6 mm i.D.",
+        "stationary_phase_chemistry": "RP18",
+        "paper_doi": "10.1002/macp.201200169",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "notes": "The text states that at these conditions, PEO units elute according to its length in SEC mode, while PPO is at the critical point.",
+        "flow_rate": "0.5 mL min\u22121",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

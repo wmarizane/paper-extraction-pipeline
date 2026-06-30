@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[290] Wei2016.pdf",
+    "extraction_date": "2026-06-14T10:27:01.010489",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[290] Wei2016.pdf",
+      "start_time": "2026-06-14T10:24:50.970155",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 106.08527541160583,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13759899139404297,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9318
+        },
+        "llm_extraction": {
+          "time_seconds": 23.817280292510986,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": "null",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-Phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "evidence_text": "To obtain the LCCC, the effect of the composition of mobile phase (volume percentage of acetonitrile in water) on the interaction between PEG chain and XB-Phenyl column packing was investigated and shown in Fig. 2. Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C.",
+        "notes": "null",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "Y.-Z. Wei; R.-X. Zhuo; X.-L. Jiang",
+        "corresponding_email_address": "weiyanzhen1009@163.com; bmp@whu.edu.cn; xljiang@whu.edu.cn, xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": "null",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "evidence_text": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C.",
+        "notes": "null",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "Y.-Z. Wei; R.-X. Zhuo; X.-L. Jiang",
+        "corresponding_email_address": "weiyanzhen1009@163.com; bmp@whu.edu.cn; xljiang@whu.edu.cn, xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9318,
+      "extraction_success": true,
+      "processing_time": 23.803379774093628,
+      "extracted_count": 2
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "source_pdf": "[315] Abdul-Karim2017.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/pola.28559",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "64-35-1",
+        "column_name": "ZORBAX ODS",
+        "notes": "Critical adsorption point of PEEC reported for the first time. TEA added to avoid undesired polar interaction.",
+        "publication_year": "2017",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water",
+          "triethylamine"
+        ],
+        "evidence_text": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
+        "corresponding_author_name": "M. I. Malik",
+        "pore_size": "70 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene ether-carbonate)",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v %",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(ethylene ether-carbonate)",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1002/pola.28559",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "65-35",
+        "column_name": "Ultisil diol",
+        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEEC elutes in SEC mode.",
+        "publication_year": "2017",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone.",
+        "corresponding_author_name": "M. I. Malik",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "diol",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v%",
+        "column_mode": "Normal Phase",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "null",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

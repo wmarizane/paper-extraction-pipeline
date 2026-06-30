@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[374] Ahmed2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePoL), Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "evidence_text": "A much better resolution could be achieved on the same column in 32 vol% acetone\u2013water at the same temperature (Fig. 1). ... Both pumps were operated in the same mobile phase, which corresponds to the CAP for EO (32% acetone).",
+        "detector": "ELSD",
+        "pore_size": "80 A",
+        "critical_component": "EO",
+        "publication_year": "2010",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "32 vol%",
+        "critical_condition_basis": "Critical point of adsorption (CAP) for EO",
+        "column_name": "Synergi Fusion RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used as the first dimension in 2-D LC for separation of PEG and PEG-MME based on end-group functionality.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}
