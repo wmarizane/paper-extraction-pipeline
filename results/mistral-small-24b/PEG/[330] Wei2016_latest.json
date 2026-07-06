@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[330] Wei2016.pdf",
-    "extraction_date": "2026-06-08T01:13:45.203739",
+    "extraction_date": "2026-07-01T23:48:18.558842",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[330] Wei2016.pdf",
-      "start_time": "2026-06-08T01:12:40.726217",
+      "start_time": "2026-07-01T23:47:04.438312",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 45.3248028755188,
+          "time_seconds": 45.39128279685974,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11581993103027344,
+          "time_seconds": 0.12711143493652344,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8885
         },
         "llm_extraction": {
-          "time_seconds": 19.036731243133545,
+          "time_seconds": 28.561157703399658,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,16 +42,17 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "null",
-        "critical_condition_basis": "isocratic elution",
+        "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
         "mobile_phase_ratio": "40",
-        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": true,
@@ -56,30 +62,40 @@
         "temperature_celsius": "25",
         "flow_rate": "null",
         "pore_size": "300 Å",
-        "column_dimensions": "250 mm × 4.6 mm I.D., 5 μm particle size",
+        "column_dimensions": "250 mm × 4.6 mm I.D.",
         "detector": "ELSD",
-        "evidence_text": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+          "critical_component": "null",
+          "column_name": "XB-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40% acetonitrile in water",
+          "temperature_celsius": "25 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "null"
+        },
         "notes": "null",
         "paper_doi": "10.1039/c6py01653g",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "corresponding_author_name": "X.-L. Jiang; R.-X. Zhuo",
+        "corresponding_email_address": "xljiang@whu.edu.cn; rzhuo@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
         "publication_year": "2016"
       },
       {
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "null",
-        "critical_condition_basis": "isocratic elution",
+        "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-phenyl",
         "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
         "mobile_phase_ratio": "45",
-        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": false,
@@ -88,15 +104,24 @@
         },
         "temperature_celsius": "30",
         "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "250 × 4.6 mm I.D., 5 μm particle size",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
         "detector": "null",
-        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+          "critical_component": "null",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water = 45 : 55",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "null"
+        },
         "notes": "null",
         "paper_doi": "10.1039/c6py01653g",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "corresponding_author_name": "X.-L. Jiang; R.-X. Zhuo",
+        "corresponding_email_address": "xljiang@whu.edu.cn; rzhuo@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
         "publication_year": "2016"
       }
     ]
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 8885,
       "extraction_success": true,
-      "processing_time": 19.024593353271484,
+      "processing_time": 28.447868585586548,
       "extracted_count": 2
     }
   ]

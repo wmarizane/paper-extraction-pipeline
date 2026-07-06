@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[315] Abdul-Karim2017.pdf",
-    "extraction_date": "2026-06-08T01:06:10.983849",
+    "extraction_date": "2026-07-01T23:40:27.000966",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[315] Abdul-Karim2017.pdf",
-      "start_time": "2026-06-08T01:04:23.631511",
+      "start_time": "2026-07-01T23:38:35.167358",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 86.54124021530151,
+          "time_seconds": 85.04591250419617,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10926437377929688,
+          "time_seconds": 0.1128544807434082,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9539
         },
         "llm_extraction": {
-          "time_seconds": 20.70167326927185,
+          "time_seconds": 26.633732795715332,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -41,6 +46,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -58,7 +64,16 @@
         "pore_size": "70 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v.",
+          "critical_component": "poly(ethylene ether-carbonate)",
+          "column_name": "ZORBAX ODS RP 70 A[˚ ] , 5 lm, 250 mm 3 4.6 mm column",
+          "mobile_phase_solvents": "acetonitrile-water-TEA",
+          "mobile_phase_ratio": "64-35-1 (v/v %)",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "70 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
         "notes": "null",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
@@ -74,6 +89,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
         "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -91,7 +107,16 @@
         "pore_size": "120 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical adsorption point of PEG should be between these two mobile phase compositions.",
+          "critical_component": "PEG",
+          "column_name": "Ultisil diol column, 120A[˚ ] , 5 lm, 250 mm 3 4.6 mm (Welch, China)",
+          "mobile_phase_solvents": "acetone in water",
+          "mobile_phase_ratio": "65% acetone in water",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "120 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
         "notes": "null",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 9539,
       "extraction_success": true,
-      "processing_time": 20.687906503677368,
+      "processing_time": 26.51579260826111,
       "extracted_count": 2
     }
   ]

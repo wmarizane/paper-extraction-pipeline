@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[327] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T01:10:34.450421",
+    "extraction_date": "2026-07-01T23:44:57.885315",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[327] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T01:10:12.727958",
+      "start_time": "2026-07-01T23:44:31.021371",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 10.213845491409302,
+          "time_seconds": 12.87842082977295,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.15253615379333496,
+          "time_seconds": 0.10257148742675781,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9875
         },
         "llm_extraction": {
-          "time_seconds": 11.355931043624878,
+          "time_seconds": 13.84151554107666,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -41,12 +46,13 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
         "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
         ],
         "mobile_phase_ratio": "82%",
-        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_ratio_units": "vol/vol",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -58,10 +64,19 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 °C.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 °C",
+          "critical_component": "critical conditions for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol",
+          "mobile_phase_ratio": "82% methanol",
+          "temperature_celsius": "25 °C",
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": "10.1007/s00216-010-3951-x",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Hasnat Ahmed",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Institute of Chemistry, Karl-Franzens-University, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), 8010 Graz, Austria",
         "publication_year": "2011"
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9875,
       "extraction_success": true,
-      "processing_time": 11.342448234558105,
+      "processing_time": 13.746764421463013,
       "extracted_count": 1
     }
   ]

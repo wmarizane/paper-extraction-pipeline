@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[90] Dudorina1995.pdf",
-    "extraction_date": "2026-06-08T00:24:18.744546",
+    "extraction_date": "2026-07-01T18:10:02.415430",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[90] Dudorina1995.pdf",
-      "start_time": "2026-06-08T00:21:26.755039",
+      "start_time": "2026-07-01T18:06:10.574785",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 28.063310146331787,
+          "time_seconds": 28.34153437614441,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12064695358276367,
+          "time_seconds": 0.11564397811889648,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8081
         },
         "llm_extraction": {
-          "time_seconds": 143.80543971061707,
+          "time_seconds": 203.35031747817993,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -36,11 +41,12 @@
       {
         "analyte_polymer": "Polystyrene",
         "critical_component": "Polystyrene",
-        "architecture": "Homopolymer",
-        "critical_condition_basis": "Disappearance of division of macromolecules by size",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical composition of the binary eluent",
         "critical_condition_confidence": "explicit",
         "column_name": "Lichrosphere Si-300",
         "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "CCl4",
           "CHCl3"
@@ -58,22 +64,32 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "UV detector (270 nm)",
-        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+        "field_evidence": {
+          "critical_condition_basis": "Critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+          "critical_component": "Critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+          "column_name": "column \"Lichrospere Si-300\"",
+          "mobile_phase_solvents": "binary solvent (CC4-chloroform)",
+          "mobile_phase_ratio": "CC14: CHCI3 = 94.65: 5.35 vol. %",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": "Used in isocratic separation where PS is in critical mode and PPO is in exclusion mode.",
         "paper_doi": null,
-        "corresponding_author_name": "S. G. Entelis",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "corresponding_email_address": null,
-        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences, 117977 Moscow, st. Kosygina, 4",
+        "physical_address": "Institute of Chemical Physics named after. N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
         "publication_year": "1995"
       },
       {
         "analyte_polymer": "Polyphenylene oxide",
         "critical_component": "Polyphenylene oxide",
-        "architecture": "Homopolymer",
-        "critical_condition_basis": "Disappearance of division of macromolecules by size",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical composition of the binary eluent",
         "critical_condition_confidence": "explicit",
         "column_name": "Lichrosphere Si-300",
         "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "CCl4",
           "CHCl3"
@@ -91,12 +107,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "UV detector (270 nm)",
-        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = ... 29: 71 vol. % for polyphenylene oxide.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical composition of the binary eluent ... 29: 71 vol. % for polyphenylene oxide",
+          "critical_component": "Critical composition of the binary eluent ... 29: 71 vol. % for polyphenylene oxide",
+          "column_name": "column \"Lichrospere Si-300\"",
+          "mobile_phase_solvents": "binary solvent (CC4-chloroform)",
+          "mobile_phase_ratio": "29: 71 vol. %",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": "Used in isocratic separation where PPO is in critical mode and PS is in exclusion mode.",
         "paper_doi": null,
-        "corresponding_author_name": "S. G. Entelis",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "corresponding_email_address": null,
-        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences, 117977 Moscow, st. Kosygina, 4",
+        "physical_address": "Institute of Chemical Physics named after. N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
         "publication_year": "1995"
       }
     ]
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 8081,
       "extraction_success": true,
-      "processing_time": 143.78305435180664,
+      "processing_time": 203.2947714328766,
       "extracted_count": 2
     }
   ]

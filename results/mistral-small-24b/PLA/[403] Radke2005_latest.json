@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[403] Radke2005.pdf",
-    "extraction_date": "2026-06-07T23:55:49.690181",
+    "extraction_date": "2026-07-01T22:14:08.339002",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[403] Radke2005.pdf",
-      "start_time": "2026-06-07T23:55:14.973959",
+      "start_time": "2026-07-01T22:13:25.725158",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 22.136662244796753,
+          "time_seconds": 22.448248863220215,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1139225959777832,
+          "time_seconds": 0.1535656452178955,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9911
         },
         "llm_extraction": {
-          "time_seconds": 12.46547245979309,
+          "time_seconds": 19.971861600875854,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42562",
+        "nvidia_smi_post_mb": "43586"
+      }
     }
   },
   "summary": {
@@ -39,14 +44,15 @@
         "architecture": "linear",
         "critical_condition_basis": "critical conditions determined for linear PLAs",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "bare silica Nucleosil columns",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "1,4-dioxane",
           "n-hexane"
         ],
         "mobile_phase_ratio": "57.1/42.9",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -54,16 +60,25 @@
           "salt_concentration": null
         },
         "temperature_celsius": "50",
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/n-hexane).",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A[˚] , 300 A[˚]",
+        "column_dimensions": "0.46!20 cm, 0.46!25 cm",
+        "detector": "UV-detector G 1314A",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions determined for linear PLAs",
+          "critical_component": "linear PLAs",
+          "column_name": "bare silica Nucleosil columns",
+          "mobile_phase_solvents": "1,4-dioxane/n-hexane",
+          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/n-hexane)",
+          "temperature_celsius": "50 8C",
+          "pore_size": "100 A[˚] , 300 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke; Karsten Rode; Alexander V. Gorshkov; Tadeusz Biela",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; krode@dki.tu-darmstadt.de; avgor@chph.ras.ru; tadek@bilbo.cbmm.lodz.pl",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; N.N. Semenov Institute of Chemical Physics, Russian Academy of Sciences, Kosygina 4, 119991 Moscow, Russian Federation; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
         "publication_year": "2005"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9911,
       "extraction_success": true,
-      "processing_time": 12.451570510864258,
+      "processing_time": 19.85059952735901,
       "extracted_count": 1
     }
   ]

@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[403] Radke2005.pdf",
-    "extraction_date": "2026-06-07T22:34:51.967253",
+    "extraction_date": "2026-07-02T14:04:25.872395",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[403] Radke2005.pdf",
-      "start_time": "2026-06-07T22:32:59.146827",
+      "start_time": "2026-07-02T14:01:55.762551",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.37936305999756,
+          "time_seconds": 17.94557213783264,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1298506259918213,
+          "time_seconds": 0.11990571022033691,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9911
         },
         "llm_extraction": {
-          "time_seconds": 93.31110095977783,
+          "time_seconds": 132.012291431427,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "linear poly(lactide)",
-        "critical_component": "poly(lactide) repeating unit",
-        "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass",
+        "analyte_polymer": "Star-shaped poly(lactide)s (PLAs)",
+        "critical_component": "Linear poly(lactide)s",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical conditions determined for linear PLAs",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil",
-        "stationary_phase_chemistry": "bare silica",
+        "stationary_phase_chemistry": "Bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "1,4-dioxane",
           "n-hexane"
@@ -56,14 +62,23 @@
         "temperature_celsius": "50",
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 A and 300 A",
-        "column_dimensions": "0.46x20 cm and 0.46x25 cm",
-        "detector": "RI, MALLS, UV, ELSD",
-        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
-        "notes": "Columns connected in series. Used to analyze star-shaped PLAs.",
+        "column_dimensions": "0.46 x 20 cm and 0.46 x 25 cm",
+        "detector": "RI, MALLS, UV, ELS",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane).",
+          "critical_component": "critical conditions determined for linear PLAs",
+          "column_name": "2 bare silica Nucleosil columns",
+          "mobile_phase_solvents": "dioxane/n-hexane mixtures",
+          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/nhexane)",
+          "temperature_celsius": "50 8C",
+          "pore_size": "100 A[˚ ] , 0.46!20 cm, 300 A[˚ ] , 0.46!25 cm",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Conditions established for linear PLAs and applied to star-shaped PLAs with various functional groups.",
         "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke; Tadeusz Biela",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; tadek@bilbo.cbmm.lodz.pl",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
         "publication_year": "2005"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9911,
       "extraction_success": true,
-      "processing_time": 93.28823709487915,
+      "processing_time": 131.95674467086792,
       "extracted_count": 1
     }
   ]

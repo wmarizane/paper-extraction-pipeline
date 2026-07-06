@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "source_pdf": "[94] Kru\u0308ger1996.pdf",
+    "source_pdf": "[94] Kr\u00fcger1996.pdf",
     "model": "deepseek-r1-32b-consensus",
     "inputs": [
       "qwen3.5-27b",
@@ -8,82 +8,9 @@
     ]
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "detector": "MALDI-TOF-MS",
-        "corresponding_email_address": null,
-        "architecture": null,
-        "corresponding_author_name": "Ralph-Peter Kruger",
-        "column_name": null,
-        "flow_rate": null,
-        "evidence_text": "Liquid Adsorption Chromatography at Critical Conditions (LACCC) of polymers in combination with Matrix-Assisted Laser Desorption / Ionization Time-Of-Flight Mass Spectrometry (MALDI-TOF-MS) and different types of detectors is a very convenient method for the characterization of polymer heterogeneities.",
-        "publication_year": "1996",
-        "column_dimensions": null,
-        "mobile_phase_ratio": null,
-        "stationary_phase_chemistry": null,
-        "pore_size": null,
-        "mobile_phase_ratio_units": null,
-        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e.V. (ACA) Rudower Chaussee 5 D-12484 Berlin, Germany",
-        "mobile_phase_solvents": [
-          "solvent"
-        ],
-        "analyte_polymer": "aliphatic polyesters",
-        "critical_component": null,
-        "paper_doi": null,
-        "temperature_celsius": null,
-        "notes": null,
-        "critical_condition_confidence": "explicit",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      },
-      {
-        "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "detector": "MALDI-TOF-MS",
-        "corresponding_email_address": null,
-        "architecture": null,
-        "corresponding_author_name": "Ralph-Peter Kruger",
-        "column_name": null,
-        "flow_rate": null,
-        "evidence_text": "Liquid Adsorption Chromatography at Critical Conditions (LACCC) of polymers in combination with Matrix-Assisted Laser Desorption / Ionization Time-Of-Flight Mass Spectrometry (MALDI-TOF-MS) and different types of detectors is a very convenient method for the characterization of polymer heterogeneities.",
-        "publication_year": "1996",
-        "column_dimensions": null,
-        "mobile_phase_ratio": null,
-        "stationary_phase_chemistry": null,
-        "pore_size": null,
-        "mobile_phase_ratio_units": null,
-        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e.V. (ACA) Rudower Chaussee 5 D-12484 Berlin, Germany",
-        "mobile_phase_solvents": [
-          "solvent"
-        ],
-        "analyte_polymer": "aromatic polyesters",
-        "critical_component": null,
-        "paper_doi": null,
-        "temperature_celsius": null,
-        "notes": null,
-        "critical_condition_confidence": "explicit",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      }
-    ]
+    "conditions": []
   }
 }

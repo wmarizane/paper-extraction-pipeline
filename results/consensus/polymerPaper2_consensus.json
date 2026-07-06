@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 7
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
@@ -146,39 +146,6 @@
         "publication_year": "2005"
       },
       {
-        "analyte_polymer": "Poloxamers (EO-PO-EO and PO-EO-PO triblock copolymers), PPG",
-        "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Triblock copolymer (EO-PO-EO or PO-EO-PO)",
-        "critical_condition_basis": "Critical adsorption point (CAP) for PO block",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Discovery HS-PEG",
-        "stationary_phase_chemistry": "Silica-based poly(ethylene glycol) phase",
-        "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
-        ],
-        "mobile_phase_ratio": "45:55",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "120 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI (Refractive Index) or ELSD",
-        "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) ... for PO on ... a silica based poly(ethylene glycol) phase in 45:55 (w/w).",
-        "notes": "Under these conditions, the EO block elutes in exclusion mode (SEC). Suitable for samples with shorter PO blocks.",
-        "paper_doi": "10.1016/j.polymer.2005.07.048",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2005"
-      },
-      {
         "analyte_polymer": "Poloxamers (EO-PO-EO and PO-EO-PO triblock copolymers), PEG",
         "critical_component": "Ethylene oxide (EO) block",
         "architecture": "Triblock copolymer (EO-PO-EO or PO-EO-PO)",
@@ -205,39 +172,6 @@
         "detector": "RI (Refractive Index)",
         "evidence_text": "Block copolymers of ethylene oxide (EO) and propylene oxide (PO) are characterized by liquid chromatography under critical conditions (LCCC) for EO on a Diol column in acetone water 78:12 (w/w).",
         "notes": "Under these conditions, the PO block elutes in exclusion mode (SEC).",
-        "paper_doi": "10.1016/j.polymer.2005.07.048",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2005"
-      },
-      {
-        "analyte_polymer": "EO–PO block copolymers",
-        "critical_component": "PO",
-        "architecture": "EO–PO diblock",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "silica based poly(ethylene glycol) phase",
-        "stationary_phase_chemistry": "silica-based PEG phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "mobile_phase_ratio": "45:55",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "120 A[˚]",
-        "column_dimensions": "250!4.6 mm",
-        "detector": "RI",
-        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
-        "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",

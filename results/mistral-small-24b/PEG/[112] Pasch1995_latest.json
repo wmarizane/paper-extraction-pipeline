@@ -1,101 +1,83 @@
 {
   "metadata": {
     "source_pdf": "[112] Pasch1995.pdf",
-    "extraction_date": "2026-06-07T23:47:11.612056",
+    "extraction_date": "2026-07-01T22:14:52.350316",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[112] Pasch1995.pdf",
-      "start_time": "2026-06-07T23:46:09.300838",
+      "start_time": "2026-07-01T22:13:52.083108",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 45.39983654022217,
+          "time_seconds": 46.61844277381897,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12344574928283691,
+          "time_seconds": 0.11751699447631836,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7346
         },
         "llm_extraction": {
-          "time_seconds": 16.787791967391968,
+          "time_seconds": 13.489930391311646,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(decamethylene adipate)",
-        "critical_component": "poly(decamethylene adipate)",
-        "architecture": "null",
-        "critical_condition_basis": "null",
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
+        "architecture": "triblock",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_solvents": [
-          "THF",
-          "hexane"
-        ],
-        "mobile_phase_ratio": "45:55",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "null",
-        "detector": "null",
-        "evidence_text": "The separation of poly(decamethylene adipate) on silica gel using an eluent of THF-hexane (45:55, v/v).",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "null",
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
-        "publication_year": "1995"
-      },
-      {
-        "analyte_polymer": "triblock copolymer H(EO),(PO),(EO),OH",
-        "critical_component": "ethylene oxide block",
-        "architecture": "null",
-        "critical_condition_basis": "null",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 100 RP-18",
-        "stationary_phase_chemistry": "null",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio": "70:30",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "250x4 mm I.D.",
-        "detector": "null",
-        "evidence_text": "The separation of a triblock copolymer H(EO),(PO),(EO),OH at the critical point of the ethylene oxide blocks.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "null",
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "the ethylene oxide block behaves chromatographically 'invisible' and retention of the block copolymer is solely directed by the propylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile—water",
+          "mobile_phase_ratio": "70:30, v/v",
+          "temperature_celsius": "25°C in all experiments",
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch; Karsten Rode",
+        "corresponding_email_address": null,
         "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "1995"
       }
@@ -107,8 +89,8 @@
       "section": "Full Paper",
       "token_count": 7346,
       "extraction_success": true,
-      "processing_time": 16.777623653411865,
-      "extracted_count": 2
+      "processing_time": 13.385178804397583,
+      "extracted_count": 1
     }
   ]
 }

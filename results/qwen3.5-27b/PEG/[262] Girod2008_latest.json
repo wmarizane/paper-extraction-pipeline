@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[262] Girod2008.pdf",
-    "extraction_date": "2026-06-08T00:54:38.620879",
+    "extraction_date": "2026-07-01T02:14:03.732597",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[262] Girod2008.pdf",
-      "start_time": "2026-06-08T00:50:36.097258",
+      "start_time": "2026-07-01T02:09:19.004244",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.862611532211304,
+          "time_seconds": 56.562387228012085,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.141021728515625,
+          "time_seconds": 0.11874771118164062,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11507
         },
         "llm_extraction": {
-          "time_seconds": 182.51986718177795,
+          "time_seconds": 228.01394271850586,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -41,6 +46,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -54,12 +60,21 @@
           "salt_concentration": "1 mM"
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 mL/min",
+        "flow_rate": "1 mL min-1",
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
-        "notes": "Critical conditions established for PEG standards (200-2000 Da) and extended to 4000 Da. Used to analyze PEO-b-PS copolymer where PEO block is at critical condition.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass",
+          "critical_component": "The use of critical conditions appropriate to PEO was preferred",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "binary mixture of MeOH/water containing a lithium salt",
+          "mobile_phase_ratio": "88.8:11.2 (%, v/v) MeOH/water eluent",
+          "temperature_celsius": "maintained at a constant temperature of 258C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow rate was set to 1 mL min = 1"
+        },
+        "notes": "Critical conditions established for PEG standards to be used for PEO block in copolymer analysis.",
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -67,13 +82,14 @@
         "publication_year": "2008"
       },
       {
-        "analyte_polymer": "SG1-capped PEO-b-PS block copolymer",
+        "analyte_polymer": "SG1-capped PEO-b-PS",
         "critical_component": "PEO block",
         "architecture": "diblock",
         "critical_condition_basis": "elution volume independent of PEO block size",
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -87,12 +103,21 @@
           "salt_concentration": "1 mM"
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 mL/min",
+        "flow_rate": "1 mL min-1",
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block. ... The PEO block being chromatographically 'invisible', copolymer molecules with a given PS block size are eluted in the same volume, regardless of the PEO block length.",
-        "notes": "Analysis performed using the critical conditions established for PEG standards. Separation based on PS block size.",
+        "field_evidence": {
+          "critical_condition_basis": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block",
+          "critical_component": "critical conditions of the PEO block",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "88.8:11.2 (% v/v) MeOH-water mixture containing LiCl (1 mM)",
+          "mobile_phase_ratio": "88.8:11.2 (% v/v) MeOH-water mixture",
+          "temperature_celsius": "T = 25 8C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow-rate: 1 mL/min"
+        },
+        "notes": "Analysis of copolymer using critical conditions established for the PEO block. Separation based on PS block size.",
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 11507,
       "extraction_success": true,
-      "processing_time": 182.4976887702942,
+      "processing_time": 227.9582371711731,
       "extracted_count": 2
     }
   ]

@@ -1,46 +1,52 @@
 {
   "metadata": {
     "source_pdf": "[126] Trathnigg1993.pdf",
-    "extraction_date": "2026-06-08T00:07:41.543586",
+    "extraction_date": "2026-07-01T22:41:08.264322",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[126] Trathnigg1993.pdf",
-      "start_time": "2026-06-08T00:06:43.697690",
+      "start_time": "2026-07-01T22:40:00.957254",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 48.07669639587402,
+          "time_seconds": 45.57041835784912,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10455608367919922,
+          "time_seconds": 0.11998224258422852,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6518
         },
         "llm_extraction": {
-          "time_seconds": 9.664477586746216,
+          "time_seconds": 21.57418727874756,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "polyethylene glycol",
         "critical_component": "polyethylene glycol",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "critical conditions for PEG",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "C-18",
+        "column_name": "SpHEROSIL ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -48,22 +54,74 @@
         "mobile_phase_ratio": "80:20",
         "mobile_phase_ratio_units": "V/V",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
-        "temperature_celsius": "null",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "250 * 4.6 mm",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
         "detector": "density and RI",
-        "evidence_text": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "B. Trathnigg",
-        "corresponding_email_address": "null",
-        "physical_address": "Institute of Organic Chemistry University of Graz A-8010 Graz, Heinrichstrasse 28, Austria",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PEG",
+          "critical_component": "polyethylene glycol",
+          "column_name": "SpHEROSIL ODS2",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg; D. Thamer; X. Yan; S. Kinugasa",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry University of Graz A-8010 Graz, Heinrichstrasse 28, Austria; National Chemical Laboratory for Industry Higashi 1-1, Tsukuba Ibaraki 305, Japan",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "polypropylene glycol",
+        "critical_component": "polyethylene glycol",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "SpHEROSIL ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "V/V",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "density and RI",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PEG",
+          "critical_component": "polyethylene glycol",
+          "column_name": "SpHEROSIL ODS2",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg; D. Thamer; X. Yan; S. Kinugasa",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry University of Graz A-8010 Graz, Heinrichstrasse 28, Austria; National Chemical Laboratory for Industry Higashi 1-1, Tsukuba Ibaraki 305, Japan",
         "publication_year": "1993"
       }
     ]
@@ -74,8 +132,8 @@
       "section": "Full Paper",
       "token_count": 6518,
       "extraction_success": true,
-      "processing_time": 9.654261589050293,
-      "extracted_count": 1
+      "processing_time": 21.4805109500885,
+      "extracted_count": 2
     }
   ]
 }

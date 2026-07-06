@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[127] Esser2001.pdf",
-    "extraction_date": "2026-06-07T22:33:20.625975",
+    "extraction_date": "2026-07-02T14:11:46.530421",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[127] Esser2001.pdf",
-      "start_time": "2026-06-07T22:31:28.282443",
+      "start_time": "2026-07-02T14:09:41.127899",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.756556272506714,
+          "time_seconds": 25.569371700286865,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1886272430419922,
+          "time_seconds": 0.13088035583496094,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5493
         },
         "llm_extraction": {
-          "time_seconds": 85.39823579788208,
+          "time_seconds": 99.6686475276947,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44422"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "poly(propylene oxide)",
         "critical_component": "poly(propylene glycol)",
         "architecture": "linear",
-        "critical_condition_basis": "eluent composition determined by running PPGs with different molar masses in binary eluents",
+        "critical_condition_basis": "critical point of adsorption for PPG",
         "critical_condition_confidence": "explicit",
         "column_name": "Macherey Nagel Nucleosil 5 NH2",
-        "stationary_phase_chemistry": "NH2 (Amino)",
+        "stationary_phase_chemistry": "NH2",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "hexane",
           "isopropyl alcohol"
@@ -58,8 +64,17 @@
         "pore_size": null,
         "column_dimensions": "200 x 4 mm i.d.",
         "detector": "refractive index detector",
-        "evidence_text": "In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%. The functionality type separation of sample 1 under these conditions is shown in Figure 6.",
-        "notes": "The critical condition was established using PPG (poly(propylene glycol)) to analyze PPO-triols. The text states LC-CC separates functionally heterogeneous samples with regard to their functional groups irrespective of the molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%",
+          "critical_component": "critical point of adsorption for PPG",
+          "column_name": "The column for the LC-CC was Macherey Nagel Nucleosil 5 NH2",
+          "mobile_phase_solvents": "mobile phase of hexane/isopropyl alcohol",
+          "mobile_phase_ratio": "hexane/isopropyl alcohol 92:8 vol.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "The flow rate is 0.5 mL/min"
+        },
+        "notes": "Critical condition established using PPG (diol) to analyze PPO-triol functionality distribution.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 5493,
       "extraction_success": true,
-      "processing_time": 85.37500238418579,
+      "processing_time": 99.61289477348328,
       "extracted_count": 1
     }
   ]

@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[242] Rappel2003.pdf",
-    "extraction_date": "2026-06-08T00:25:12.295651",
+    "extraction_date": "2026-07-01T23:00:46.027994",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[242] Rappel2003.pdf",
-      "start_time": "2026-06-08T00:22:56.912298",
+      "start_time": "2026-07-01T22:58:02.665539",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 55.964256048202515,
+          "time_seconds": 58.08807396888733,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10899877548217773,
+          "time_seconds": 0.12749981880187988,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11920
         },
         "llm_extraction": {
-          "time_seconds": 79.30993318557739,
+          "time_seconds": 105.10484886169434,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -40,13 +45,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS(3)",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "28",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "28 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -57,13 +63,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "As can be seen, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Prodigy ODS(3) column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "28 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "100 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -73,13 +88,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS(3)",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "92",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "92 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -90,13 +106,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "As can be seen, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a second ‘intersection point’ was found around 92 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Prodigy ODS(3) column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "92 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "100 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -106,13 +131,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Sphereclone C6",
-        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "stationary_phase_chemistry": "C6",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "28.5",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "28.5 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -123,13 +149,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "80 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Sphereclone C6 column at 28.5 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Sphereclone C6 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "28.5 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -139,13 +174,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Sphereclone C6",
-        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "stationary_phase_chemistry": "C6",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "86",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "86 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -156,13 +192,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "80 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a second ‘intersection point’ was found around 86 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Sphereclone C6 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "86 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -172,13 +217,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb S5X C6",
-        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "stationary_phase_chemistry": "C6",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "30",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "30 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -189,13 +235,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "300 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Spherisorb S5X C6 column at 30 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Spherisorb S5X C6 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "30 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -205,13 +260,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb S5X C6",
-        "stationary_phase_chemistry": "silica-based hexyl phase",
+        "stationary_phase_chemistry": "C6",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "85",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "85 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -222,13 +278,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "300 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a second ‘intersection point’ was found around 85 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Spherisorb S5X C6 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "85 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -238,13 +303,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Novapak C18",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "28.5",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "28.5 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -255,13 +321,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "60 A",
         "column_dimensions": "300x3.9 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Novapak C18 column at 28.5 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Novapak C18 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "28.5 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "60 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -271,13 +346,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Novapak C18",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "90",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "90 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -288,13 +364,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "60 A",
         "column_dimensions": "300x3.9 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "A more pronounced adsorption-exclusion transition is observed in acetone–water instead of methanol–water as a mobile phase: as can be seen from Fig. 5, a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a second ‘intersection point’ was found around 90 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Novapak C18 column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "90 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "60 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       },
       {
@@ -304,13 +389,14 @@
         "critical_condition_basis": "critical interaction point",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "divinylbenzene",
+        "stationary_phase_chemistry": "Divinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "30",
-        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_ratio": "30 wt.%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -321,13 +407,22 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "5000 A",
         "column_dimensions": "250x4.6 mm",
-        "detector": "refractive index (RI) detector",
-        "evidence_text": "In this case, one can see, that the elution volumes increase with higher acetone contents of the mobile phase but there is definitely no intersection point and the PEGs still elute in a SEC order.",
+        "detector": "refractive index (RI)",
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Jordi Gel DVB 500 RP column at 30 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Jordi Gel DVB 500 RP column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "30 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "5000 A",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
         "publication_year": "2003"
       }
     ]
@@ -338,7 +433,7 @@
       "section": "Full Paper",
       "token_count": 11920,
       "extraction_success": true,
-      "processing_time": 79.29467463493347,
+      "processing_time": 104.98218774795532,
       "extracted_count": 9
     }
   ]

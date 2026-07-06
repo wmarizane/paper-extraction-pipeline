@@ -1,47 +1,311 @@
 {
   "metadata": {
     "source_pdf": "[68] Baran2001.pdf",
-    "extraction_date": "2026-06-08T05:13:22.715368",
+    "extraction_date": "2026-07-01T08:32:22.084250",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[68] Baran2001.pdf",
-      "start_time": "2026-06-08T04:38:57.564550",
+      "start_time": "2026-07-01T08:21:20.646418",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 16.93716526031494,
+          "time_seconds": 18.31999135017395,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11941695213317871,
+          "time_seconds": 0.11695170402526855,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11395
         },
         "llm_extraction": {
-          "time_seconds": 2048.0941047668457,
-          "success": false
+          "time_seconds": 642.9669103622437,
+          "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 0
+    "total_conditions": 6
   },
   "extracted_data": {
-    "conditions": []
+    "conditions": [
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "hexane"
+        ],
+        "mobile_phase_ratio": "44.2:55.8",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "UV (261 nm)",
+        "field_evidence": {
+          "critical_condition_basis": "Between these two domains, for a 44.2:55.8 wt.% THF–hexane composition, the polystyrene chains are eluted at the same retention time, whatever their molar mass, in accordance with the “critical conditions” of the chromatographic system used.",
+          "critical_component": "polystyrene chains are eluted at the same retention time, whatever their molar mass",
+          "column_name": "column 1 (see Table 1)... Silica... Nucleosil",
+          "mobile_phase_solvents": "THF–hexane mixtures",
+          "mobile_phase_ratio": "44.2:55.8 wt.% THF–hexane",
+          "temperature_celsius": "T 5258C",
+          "pore_size": "100",
+          "flow_rate": "flow-rate: 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PS (alcohol, acetal, aldehyde, acidic) from non-functional PS.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Amino-silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "hexane"
+        ],
+        "mobile_phase_ratio": "63.5:36.5",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "UV (261 nm) or RI",
+        "field_evidence": {
+          "critical_condition_basis": "The chromatographic system (eluent: CH2Cl2 –hexane; adsorbent: amino-silica) was found to be the best system to fractionate v-acetal and a,v-acetal polystyrenes with suitable selectivity.",
+          "critical_component": "elution in the critical conditions of polystyrene skeleton",
+          "column_name": "column 2... Amino-silica... Nucleosil",
+          "mobile_phase_solvents": "CH2Cl2 –hexane",
+          "mobile_phase_ratio": "63.5:36.5 wt.%",
+          "temperature_celsius": "T 5258C",
+          "pore_size": "100",
+          "flow_rate": "flow-rate of 1 ml/min"
+        },
+        "notes": "Used for fractionation of acetal-functionalized PS.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "polystyrene",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "EtAc",
+          "hexane"
+        ],
+        "mobile_phase_ratio": "38.0:62.0",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250x4.6 mm",
+        "detector": "UV (261 nm)",
+        "field_evidence": {
+          "critical_condition_basis": "The best fractionations of v-aldehyde-PS and a,valdehyde-PS as well as v-acidic-PS and a,v-acidicPS were obtained, under the critical conditions of PS, with silica as an adsorbent and EtAc–hexane as mobile phase.",
+          "critical_component": "critical conditions of PS",
+          "column_name": "column 1... Silica... Nucleosil",
+          "mobile_phase_solvents": "EtAc–hexane",
+          "mobile_phase_ratio": "38.0:62.0 wt.%",
+          "temperature_celsius": "T 5258C",
+          "pore_size": "100",
+          "flow_rate": "flow-rate of 1 ml/min"
+        },
+        "notes": "Used for fractionation of aldehyde and acidic functionalized PS.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Cyano-silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "DME",
+          "water"
+        ],
+        "mobile_phase_ratio": "21.5:78.5",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "125x4 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "The validity of the “critical conditions” concept is illustrated in Fig. 7b... two a,v-hydroxyl-PEO of different molar masses... are eluted at the same retention time",
+          "critical_component": "PEO EATP",
+          "column_name": "column 5... Cyano-silica... Nucleosil",
+          "mobile_phase_solvents": "DME–water",
+          "mobile_phase_ratio": "21.5:78.5",
+          "temperature_celsius": "T 5 258C",
+          "pore_size": "300",
+          "flow_rate": "Flow-rate of 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PEOs (hydroxyl, diphenyl).",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "36.7:63.3",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "125x4 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "The validity of the “critical conditions” concept is illustrated in Fig. 7b in the case of ACN–water as an eluent and octadecyl-silica as an adsorbent.",
+          "critical_component": "PEO EATP",
+          "column_name": "column 8... Octadecyl-silica... Nucleosil",
+          "mobile_phase_solvents": "ACN–water",
+          "mobile_phase_ratio": "36.7:63.3",
+          "temperature_celsius": "T 5 258C",
+          "pore_size": "300",
+          "flow_rate": "Flow-rate of 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PEOs.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      },
+      {
+        "analyte_polymer": "poly(styrene)-b-poly(ethylene oxide)",
+        "critical_component": "polystyrene",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "elution at the exclusion–adsorption transition point (EATP) for the polystyrene block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.0:13.0",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "125x4 mm",
+        "detector": "UV (261 nm)",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the copolymers PS–b–PEO were characterized according to the length of the PEO block in the critical conditions of polystyrene.",
+          "critical_component": "critical conditions of polystyrene",
+          "column_name": "column 9... Octadecyl-silica... Nucleosil",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "87.0:13.0 wt.%",
+          "temperature_celsius": "T 5 258C",
+          "pore_size": "500 A",
+          "flow_rate": "flow-rate: 1 ml/min"
+        },
+        "notes": "Used to separate block copolymers based on PEO block length while PS block is at critical condition.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres` Organiques, UMR 5629, ENSCPB – Universite´ Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001"
+      }
+    ]
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 11395,
-      "extraction_success": false,
-      "processing_time": 682.858964920044,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"Polystyrene\",\n      \"critical_component\": \"Polystyrene backbone\",\n      \"architecture\": \"Linear\",\n      \"critical_condition_basis\": \"Retention time independent of molar mass\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"colu"
+      "extraction_success": true,
+      "processing_time": 642.9113917350769,
+      "extracted_count": 6
     }
   ]
 }

@@ -1,56 +1,62 @@
 {
   "metadata": {
     "source_pdf": "[290] Wei2016.pdf",
-    "extraction_date": "2026-06-08T01:53:12.782757",
+    "extraction_date": "2026-07-01T03:25:33.990356",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[290] Wei2016.pdf",
-      "start_time": "2026-06-08T01:48:36.384807",
+      "start_time": "2026-07-01T03:13:42.182905",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 99.65072345733643,
+          "time_seconds": 96.02702689170837,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11943984031677246,
+          "time_seconds": 0.11129903793334961,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9318
         },
         "llm_extraction": {
-          "time_seconds": 176.6276695728302,
+          "time_seconds": 615.6367201805115,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEG 2k, PEG 4k, PEG 6k",
+        "analyte_polymer": "PEG 2k",
         "critical_component": "PEG backbone",
         "architecture": "linear",
-        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_basis": "LCCC for PEG backbone",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-Phenyl",
-        "stationary_phase_chemistry": "Silica-based phenyl reversed-phase",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
-          "Water"
+          "acetonitrile",
+          "water"
         ],
         "mobile_phase_ratio": "45:55",
         "mobile_phase_ratio_units": "vol%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": true,
-          "salt_type": "Ammonium acetate",
+          "salt_type": "ammonium acetate",
           "salt_concentration": "2 mmol/L"
         },
         "temperature_celsius": "30",
@@ -58,32 +64,128 @@
         "pore_size": "300 Å",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C. At this critical composition, nearly identical elution time for the lower molar mass PEG 2k and the higher molar mass PEG 6k was obtained... mobile phase contained 45% acetonitrile in water with 2 mmol/L CH3COONH4 at 30[◦] C.",
-        "notes": "Used for separation of amino-functional PEGs independent of molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C. At this critical composition, nearly identical elution time for the lower molar mass PEG 2k and the higher molar mass PEG 6k was obtained",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "XB-Phenyl column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30[◦] C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
         "paper_doi": "10.1016/j.chroma.2016.04.035",
         "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "PEG 2k, PEG 4k, PEG 6k",
+        "analyte_polymer": "PEG 4k",
         "critical_component": "PEG backbone",
         "architecture": "linear",
-        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_basis": "LCCC for PEG backbone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-Phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C. At this critical composition, nearly identical elution time for the lower molar mass PEG 2k and the higher molar mass PEG 6k was obtained",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "XB-Phenyl column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30[◦] C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC for PEG backbone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-Phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C. At this critical composition, nearly identical elution time for the lower molar mass PEG 2k and the higher molar mass PEG 6k was obtained",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "XB-Phenyl column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30[◦] C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 2k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC for PEG backbone",
         "critical_condition_confidence": "explicit",
         "column_name": "Shodex-C18",
-        "stationary_phase_chemistry": "Silica-based C18 reversed-phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
-          "Water"
+          "acetonitrile",
+          "water"
         ],
         "mobile_phase_ratio": "40:60",
         "mobile_phase_ratio_units": "vol%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": true,
-          "salt_type": "Ammonium acetate",
+          "salt_type": "ammonium acetate",
           "salt_concentration": "2 mmol/L"
         },
         "temperature_celsius": "25",
@@ -91,12 +193,107 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C... mobile phase contained 40% acetonitrile in water with 2 mmol/L CH3COONH4 at 25[◦] C.",
-        "notes": "Used for separation of amino-functional PEGs independent of molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "Shodex-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40%vol acetonitrile in water",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
         "paper_doi": "10.1016/j.chroma.2016.04.035",
         "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 4k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC for PEG backbone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "Shodex-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40%vol acetonitrile in water",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC for PEG backbone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Shodex-C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "ammonium acetate",
+          "salt_concentration": "2 mmol/L"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C",
+          "critical_component": "LCCC for PEG backbone",
+          "column_name": "Shodex-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40%vol acetonitrile in water",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": "flow-rate 0.5 mL/min"
+        },
+        "notes": "Condition established for PEG backbone to separate amino-functionalized PEGs independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2016.04.035",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn; xljiang118@hotmail.com",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education and Department of Chemistry, Wuhan University, Luojia Hill, Wuhan 430072, PR China",
         "publication_year": "2016"
       }
     ]
@@ -107,8 +304,8 @@
       "section": "Full Paper",
       "token_count": 9318,
       "extraction_success": true,
-      "processing_time": 176.60488033294678,
-      "extracted_count": 2
+      "processing_time": 615.5818657875061,
+      "extracted_count": 6
     }
   ]
 }

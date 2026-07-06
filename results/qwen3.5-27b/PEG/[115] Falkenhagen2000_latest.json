@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[115] Falkenhagen2000.pdf",
-    "extraction_date": "2026-06-07T22:48:28.823022",
+    "extraction_date": "2026-07-02T13:34:59.822103",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[115] Falkenhagen2000.pdf",
-      "start_time": "2026-06-07T22:46:08.401362",
+      "start_time": "2026-07-02T13:32:26.713819",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 49.378382444381714,
+          "time_seconds": 46.834482192993164,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1341078281402588,
+          "time_seconds": 0.18910527229309082,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6517
         },
         "llm_extraction": {
-          "time_seconds": 90.9090576171875,
+          "time_seconds": 106.05155491828918,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,16 +39,17 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEO-co-PM oligomers",
-        "critical_component": "PEO unit",
+        "analyte_polymer": "PEO-co-PM",
+        "critical_component": "PEO",
         "architecture": "diblock",
-        "critical_condition_basis": "Critical point of adsorption for PEO unit where samples with same chemical composition but different molecular weight elute in one peak",
+        "critical_condition_basis": "critical conditions of adsorption of the PEO unit",
         "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 300-5",
-        "stationary_phase_chemistry": "Silica (Nucleosil)",
+        "column_name": "Nucleosil 300A",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "Methanol",
-          "Water"
+          "methanol",
+          "water"
         ],
         "mobile_phase_ratio": "78.5/21.5",
         "mobile_phase_ratio_units": "wt%",
@@ -57,9 +63,18 @@
         "flow_rate": "0.5 mL/min",
         "pore_size": "300 A",
         "column_dimensions": "250 mm x 4 mm",
-        "detector": "ELSD (SEDEX 45)",
-        "evidence_text": "The 'critical point of adsorption' was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak. For the investigated polymer system these 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%.",
-        "notes": "Used for LACCC mode to separate according to PM chain length (end groups) independent of PEO molecular weight.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The 'critical point of adsorption' was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak.",
+          "critical_component": "Near the critical conditions of adsorption of the PEO unit",
+          "column_name": "Nucleosil 300A column",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "methanol/water mixture of 78.5/21.5wt%",
+          "temperature_celsius": "constant temperature of 45°C",
+          "pore_size": "S5um pore size",
+          "flow_rate": "0.5mL/min"
+        },
+        "notes": "The text states that at this composition, samples with the same chemical composition but different molecular weight elute in one peak, defining the critical condition for the PEO block.",
         "paper_doi": "10.1080/10236660008034644",
         "corresponding_author_name": "St. Weidner",
         "corresponding_email_address": null,
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 6517,
       "extraction_success": true,
-      "processing_time": 90.88697290420532,
+      "processing_time": 105.9969732761383,
       "extracted_count": 1
     }
   ]

@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[112] Pasch1995.pdf",
-    "extraction_date": "2026-06-07T22:40:00.746827",
+    "extraction_date": "2026-07-02T13:19:51.765103",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[112] Pasch1995.pdf",
-      "start_time": "2026-06-07T22:36:30.964928",
+      "start_time": "2026-07-02T13:16:01.519069",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 46.63842439651489,
+          "time_seconds": 44.401559352874756,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11658978462219238,
+          "time_seconds": 0.1266169548034668,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7346
         },
         "llm_extraction": {
-          "time_seconds": 163.02677512168884,
+          "time_seconds": 185.68608117103577,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "technical fatty alcohol ethoxylate (FAE)",
+        "analyte_polymer": "polyethylene oxide",
         "critical_component": "ethylene oxide block",
         "architecture": "linear",
         "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 100 RP-18",
-        "stationary_phase_chemistry": "RP-18",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -54,12 +60,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 ml/min",
+        "flow_rate": "0.5 ml/min",
         "pore_size": null,
         "column_dimensions": "125 x 4 mm I.D.",
         "detector": "Waters R-401 differential refractometer",
-        "evidence_text": "The separation of a technical fatty alcohol ethoxylate (FAE) by liquid chromatography under conditions such that the chain length as well as the end-groups direct the separation [26,27] is presented in Fig. 4. ... Column, Nucleosil 100 RP-18 (125 x 4 mm I.D.); eluent, acetonitrile water (70:30, v/v).",
-        "notes": "Separation directed by chain length and end-groups implies critical condition for the ethylene oxide block.",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "ethylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile water",
+          "mobile_phase_ratio": "70:30, v/v",
+          "temperature_celsius": "25°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for separation of fatty alcohol ethoxylates (FAE) and PEG fractions. The text states 'Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically invisible'.",
         "paper_doi": null,
         "corresponding_author_name": "Harald Pasch",
         "corresponding_email_address": null,
@@ -67,13 +82,14 @@
         "publication_year": "1995"
       },
       {
-        "analyte_polymer": "triblock copolymer H(EO)x(PO)y(EO)xOH",
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
         "critical_component": "ethylene oxide block",
-        "architecture": "triblock",
+        "architecture": "triblock copolymer",
         "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 100 RP-18",
-        "stationary_phase_chemistry": "RP-18",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -87,12 +103,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 ml/min",
+        "flow_rate": "0.5 ml/min",
         "pore_size": null,
         "column_dimensions": "250 x 4 mm I.D.",
         "detector": "Waters R-401 differential refractometer",
-        "evidence_text": "Fig. 6 represents the separation of a triblock copolymer H(EO)x(PO)y(EO)xOH at the critical point of the ethylene oxide blocks. ... Column, Nucleosil 100 RP-18 (250 x 4 mm I.D.); eluent, acetonitrile-water (42:58, v/v).",
-        "notes": "Operating at the critical point of PEG makes the ethylene oxide block chromatographically 'invisible'.",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "ethylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile water",
+          "mobile_phase_ratio": "42:58, v/v",
+          "temperature_celsius": "25°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Separation of triblock copolymer with respect to propylene oxide block length. The text states 'Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically invisible'.",
         "paper_doi": null,
         "corresponding_author_name": "Harald Pasch",
         "corresponding_email_address": null,
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 7346,
       "extraction_success": true,
-      "processing_time": 163.00350975990295,
+      "processing_time": 185.63104677200317,
       "extracted_count": 2
     }
   ]

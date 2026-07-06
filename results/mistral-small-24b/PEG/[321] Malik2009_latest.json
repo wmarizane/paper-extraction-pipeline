@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[321] Malik2009.pdf",
-    "extraction_date": "2026-06-08T01:08:04.072517",
+    "extraction_date": "2026-07-01T23:42:18.692231",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[321] Malik2009.pdf",
-      "start_time": "2026-06-08T01:06:50.833994",
+      "start_time": "2026-07-01T23:41:04.308821",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 24.172144412994385,
+          "time_seconds": 22.690350770950317,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.17438626289367676,
+          "time_seconds": 0.10903096199035645,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8467
         },
         "llm_extraction": {
-          "time_seconds": 48.89183020591736,
+          "time_seconds": 51.54263997077942,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,32 +39,128 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(butene oxide)",
-        "critical_component": "poly(butene oxide)",
-        "architecture": "linear",
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "null",
         "critical_condition_basis": "critical adsorption point",
         "critical_condition_confidence": "explicit",
-        "column_name": "Jordi DVB 500A RP",
-        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "THF",
+          "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "84.55",
-        "mobile_phase_ratio_units": "% w/w",
+        "mobile_phase_ratio": "77.93%",
+        "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
-          "pH": null,
+          "pH": "null",
           "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes “chromatographically invisible”",
+          "critical_component": "the hydrophilic block in a mobile phase with rather high polarity",
+          "column_name": "Nucleosil 100-5 OH 5 w m, silica-based diol phase",
+          "mobile_phase_solvents": "acetone–water mobile phase",
+          "mobile_phase_ratio": "78%, w/w acetone",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "null",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(propylene oxide)",
+        "critical_component": "poly(propylene oxide)",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.42%",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "As we have shown previously, critical conditions for PO could be realized on a Jordi Gel DVB 500 RP column in acetone–water (92.42%, w/w acetone) [2] or in THF–water (80.22%, w/w THF) [22,23]. Under these conditions, PEG elutes in SEC mode. Moreover, PPG diols (from chain transfer to water) and allyl-PPG (from chain transfer to the monomer) could not only be separated from the block copolymer, but also from each other [22,23]. We have also found critical conditions for poly(butene oxide) and poly(hexene oxide) on the same column in a comparatively more non-polar mobile phase composition. As can be seen, a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6), for HO on the same column in 87.04%, w/w THF (Fig. 7).",
-        "notes": null,
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes “chromatographically invisible”",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500 RP (100% poly-divinylbenzene)",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "92.42%, w/w acetone",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "500 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "null",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "poly(butene oxide)",
+        "architecture": "null",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55%",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes “chromatographically invisible”",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500A RP",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "84.55%, w/w THF",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "500 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "null",
         "paper_doi": "10.1016/j.chroma.2008.12.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -69,96 +170,40 @@
       {
         "analyte_polymer": "poly(hexene oxide)",
         "critical_component": "poly(hexene oxide)",
-        "architecture": "linear",
+        "architecture": "null",
         "critical_condition_basis": "critical adsorption point",
         "critical_condition_confidence": "explicit",
-        "column_name": "Jordi DVB 500A RP",
+        "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "87.04",
-        "mobile_phase_ratio_units": "% w/w",
+        "mobile_phase_ratio": "87.04%",
+        "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
-          "pH": null,
+          "pH": "null",
           "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_type": "null",
+          "salt_concentration": "null"
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "As we have shown previously, critical conditions for PO could be realized on a Jordi Gel DVB 500 RP column in acetone–water (92.42%, w/w acetone) [2] or in THF–water (80.22%, w/w THF) [22,23]. Under these conditions, PEG elutes in SEC mode. Moreover, PPG diols (from chain transfer to water) and allyl-PPG (from chain transfer to the monomer) could not only be separated from the block copolymer, but also from each other [22,23]. We have also found critical conditions for poly(butene oxide) and poly(hexene oxide) on the same column in a comparatively more non-polar mobile phase composition. As can be seen, a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6), for HO on the same column in 87.04%, w/w THF (Fig. 7).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2008.12.067",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "poly(butene oxide)",
-        "critical_component": "poly(butene oxide)",
-        "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi DVB 500A RP",
-        "stationary_phase_chemistry": "poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "84.55",
-        "mobile_phase_ratio_units": "% w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes “chromatographically invisible”",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500A RP",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "87.04%, w/w THF",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "500 Å",
+          "flow_rate": "0.5 ml/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 Å",
-        "column_dimensions": "250 mm × 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "At the CAP for BO, the first block (PEG-MME) and possible diblocks (PEG-MME–PO and PEG-MME–BO) are well separated from the BO homopolymer. A shoulder in the chromatograms of the diblocks indicates the presence of some homopolymer.",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2008.12.067",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "poly(hexene oxide)",
-        "critical_component": "poly(hexene oxide)",
-        "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi DVB 500A RP",
-        "stationary_phase_chemistry": "poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "87.04",
-        "mobile_phase_ratio_units": "% w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 Å",
-        "column_dimensions": "250 mm × 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "At the CAP for HO, all other structures elute in SEC mode and are thus clearly separated from the HO homopolymer.",
-        "notes": null,
+        "notes": "null",
         "paper_doi": "10.1016/j.chroma.2008.12.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -173,7 +218,7 @@
       "section": "Full Paper",
       "token_count": 8467,
       "extraction_success": true,
-      "processing_time": 48.88013219833374,
+      "processing_time": 51.42824459075928,
       "extracted_count": 4
     }
   ]

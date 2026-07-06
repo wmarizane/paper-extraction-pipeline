@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[296] Malik2020.pdf",
-    "extraction_date": "2026-06-08T00:01:22.519835",
+    "extraction_date": "2026-07-01T20:29:53.492481",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[296] Malik2020.pdf",
-      "start_time": "2026-06-07T23:53:49.349050",
+      "start_time": "2026-07-01T20:22:25.607690",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 97.80821895599365,
+          "time_seconds": 90.91163778305054,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10245466232299805,
+          "time_seconds": 0.10267806053161621,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 16945
         },
         "llm_extraction": {
-          "time_seconds": 355.2599792480469,
+          "time_seconds": 356.83058500289917,
           "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -40,8 +45,8 @@
       "section": "Full Paper",
       "token_count": 16945,
       "extraction_success": false,
-      "processing_time": 115.17023968696594,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEO-PMMA\",\"critical_component\":\"PMMA\",\"architecture\":\"di-block\",\"critical_condition_basis\":\"critical mobile phase composition\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"octadecyl\",\"mobile_phase_s"
+      "processing_time": 115.46677756309509,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEO-PMMA\",\"critical_component\":\"PMMA\",\"architecture\":\"di-block\",\"critical_condition_basis\":\"LCCC\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"octadecyl\",\"column_mode\":\"Reversed Phase\",\"mobile_phase"
     }
   ]
 }

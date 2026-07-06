@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[285] Bashir2005.pdf",
-    "extraction_date": "2026-06-08T00:45:44.503860",
+    "extraction_date": "2026-07-01T23:19:54.139467",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[285] Bashir2005.pdf",
-      "start_time": "2026-06-08T00:44:28.988712",
+      "start_time": "2026-07-01T23:18:18.495515",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.6183021068573,
+          "time_seconds": 23.325865507125854,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10073471069335938,
+          "time_seconds": 0.13445305824279785,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7076
         },
         "llm_extraction": {
-          "time_seconds": 54.795945167541504,
+          "time_seconds": 72.14283680915833,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -35,18 +40,19 @@
     "conditions": [
       {
         "analyte_polymer": "PMMA",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PMMA",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "A",
         "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "THF",
           "toluene"
         ],
         "mobile_phase_ratio": "37% THF",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -55,10 +61,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "1000 A",
-        "column_dimensions": "250!4.0 mm",
+        "pore_size": "1000 A[˚ ]",
+        "column_dimensions": "250!4.0 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 2. It becomes clear that for molar masses above approx. 200,000 g/mol, an elution nearly independent of molar mass is observed. From the elution volume the composition at elution was calculated using Eq. (1). The right axis in Fig. 2 shows the composition at elution versus the molar mass of the standards. It is evident that higher molar masses elute at nearly identical eluent compositions (37% THF), irrespective of their molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "For high molar mass polymers we found this composition to be close to the critical composition determined by isocratic experiments.",
+          "critical_component": "PMMA",
+          "column_name": "Nucleosil bare silica, particle size 7 mm, pore diameter 1000 A[˚ ] , column dimensions 250!4.0 mm[2] i.d.",
+          "mobile_phase_solvents": "THF/Toluene",
+          "mobile_phase_ratio": "37% THF",
+          "temperature_celsius": "35 8C",
+          "pore_size": "1000 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -68,18 +83,19 @@
       },
       {
         "analyte_polymer": "PEG",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PEG",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "B",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
-          "water"
+          "Water"
         ],
         "mobile_phase_ratio": "83% MeOH",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -88,10 +104,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250!4.6 mm",
+        "pore_size": "300 A[˚ ]",
+        "column_dimensions": "250!4.6 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 7, all standards have practically the same elution volume in this eluent composition with only a slight tendency towards the adsorption mode, which can actually be ignored.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition, as determined by the crossing of the lines corresponding to different molar mass, is 83% MeOH.",
+          "critical_component": "PEG",
+          "column_name": "Nucleosil C18, particle size 5 mm, pore diameter 300 A[˚ ] , column dimensions 250!4.6 mm[2] i.d.",
+          "mobile_phase_solvents": "MeOH/Water",
+          "mobile_phase_ratio": "83% MeOH",
+          "temperature_celsius": "35 8C",
+          "pore_size": "300 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -101,18 +126,19 @@
       },
       {
         "analyte_polymer": "PMMA",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PMMA",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "C",
-        "stationary_phase_chemistry": "Si",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "MEK",
           "c-hexane"
         ],
         "mobile_phase_ratio": "70.4% MEK",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -121,10 +147,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "130 A",
-        "column_dimensions": "100!4.6 mm",
+        "pore_size": "130 A[˚ ]",
+        "column_dimensions": "100!4.6 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 4, all standards have practically the same elution volume in this eluent composition with only a slight tendency towards the adsorption mode, which can actually be ignored.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PMMA",
+          "column_name": "Chromolith Si, mesopores 130 A[˚ ] , 2 mm macropores, 100!4.6 mm[2] i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "70.4% MEK",
+          "temperature_celsius": "35 8C",
+          "pore_size": "130 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -134,18 +169,19 @@
       },
       {
         "analyte_polymer": "PnBMA",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PnBMA",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "C",
-        "stationary_phase_chemistry": "Si",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "MEK",
           "c-hexane"
         ],
         "mobile_phase_ratio": "13.55% MEK",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -154,10 +190,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "130 A",
-        "column_dimensions": "100!4.6 mm",
+        "pore_size": "130 A[˚ ]",
+        "column_dimensions": "100!4.6 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 4, all standards have practically the same elution volume in this eluent composition with only a slight tendency towards the adsorption mode, which can actually be ignored.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PnBMA",
+          "column_name": "Chromolith Si, mesopores 130 A[˚ ] , 2 mm macropores, 100!4.6 mm[2] i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "13.55% MEK",
+          "temperature_celsius": "35 8C",
+          "pore_size": "130 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -167,18 +212,19 @@
       },
       {
         "analyte_polymer": "PtBMA",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PtBMA",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "C",
-        "stationary_phase_chemistry": "Si",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "MEK",
           "c-hexane"
         ],
         "mobile_phase_ratio": "16.95% MEK",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -187,10 +233,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "130 A",
-        "column_dimensions": "100!4.6 mm",
+        "pore_size": "130 A[˚ ]",
+        "column_dimensions": "100!4.6 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 4, all standards have practically the same elution volume in this eluent composition with only a slight tendency towards the adsorption mode, which can actually be ignored.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PtBMA",
+          "column_name": "Chromolith Si, mesopores 130 A[˚ ] , 2 mm macropores, 100!4.6 mm[2] i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "16.95% MEK",
+          "temperature_celsius": "35 8C",
+          "pore_size": "130 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -200,18 +255,19 @@
       },
       {
         "analyte_polymer": "PDMA",
-        "critical_component": null,
-        "architecture": null,
+        "critical_component": "PDMA",
+        "architecture": "null",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "C",
-        "stationary_phase_chemistry": "Si",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "MEK",
           "c-hexane"
         ],
         "mobile_phase_ratio": "5.37% MEK",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -220,10 +276,19 @@
         },
         "temperature_celsius": "35",
         "flow_rate": "1 ml/min",
-        "pore_size": "130 A",
-        "column_dimensions": "100!4.6 mm",
+        "pore_size": "130 A[˚ ]",
+        "column_dimensions": "100!4.6 mm[2] i.d.",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 4, all standards have practically the same elution volume in this eluent composition with only a slight tendency towards the adsorption mode, which can actually be ignored.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PDMA",
+          "column_name": "Chromolith Si, mesopores 130 A[˚ ] , 2 mm macropores, 100!4.6 mm[2] i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "5.37% MEK",
+          "temperature_celsius": "35 8C",
+          "pore_size": "130 A[˚ ]",
+          "flow_rate": "1 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.02.080",
         "corresponding_author_name": "Wolfgang Radke",
@@ -239,7 +304,7 @@
       "section": "Full Paper",
       "token_count": 7076,
       "extraction_success": true,
-      "processing_time": 54.785290002822876,
+      "processing_time": 72.03675174713135,
       "extracted_count": 6
     }
   ]

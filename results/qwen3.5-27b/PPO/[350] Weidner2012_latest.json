@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[350] Weidner2012.pdf",
-    "extraction_date": "2026-06-07T23:47:22.492207",
+    "extraction_date": "2026-07-01T17:01:19.661572",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[350] Weidner2012.pdf",
-      "start_time": "2026-06-07T23:45:35.554847",
+      "start_time": "2026-07-01T16:59:05.912228",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.471057415008545,
+          "time_seconds": 14.197447538375854,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12177872657775879,
+          "time_seconds": 0.1392221450805664,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9150
         },
         "llm_extraction": {
-          "time_seconds": 88.34442043304443,
+          "time_seconds": 119.37950658798218,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -40,7 +45,8 @@
         "critical_condition_basis": "critical conditions of adsorption for polypropylene oxide",
         "critical_condition_confidence": "explicit",
         "column_name": "YMC RP18",
-        "stationary_phase_chemistry": "RP18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "tetrahydrofuran",
           "water"
@@ -56,10 +62,19 @@
         "temperature_celsius": "45",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "120 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 x 4.6 mm i.D.",
         "detector": "evaporative light scattering detector (ELSD)",
-        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
-        "notes": "The text states that at these conditions, PEO units elute according to its length in SEC mode, while PPO is at the critical point.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+          "critical_component": "critical conditions of adsorption for polypropylene oxide",
+          "column_name": "YMC RP18 column",
+          "mobile_phase_solvents": "mixture of 75/25 (v/v) tetrahydrofuran (THF)/water",
+          "mobile_phase_ratio": "ratio of 85/15 (v/v)",
+          "temperature_celsius": "The system temperature was 45 ° C.",
+          "pore_size": "120 Å pore size",
+          "flow_rate": "The eluent fl ow was 0.5 mL min[−][ 1]"
+        },
+        "notes": "The text explicitly states the critical conditions for PPO were found at 85/15 THF/water. The experiment described in Section 2.2 uses this ratio for LCCC analysis of the block copolymer.",
         "paper_doi": "10.1002/macp.201200169",
         "corresponding_author_name": "Steffen M. Weidner",
         "corresponding_email_address": "steffen.weidner@bam.de",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9150,
       "extraction_success": true,
-      "processing_time": 88.32121157646179,
+      "processing_time": 119.32737827301025,
       "extracted_count": 1
     }
   ]

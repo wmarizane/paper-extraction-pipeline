@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[312] Malik2023.pdf",
-    "extraction_date": "2026-06-08T02:51:24.778107",
+    "extraction_date": "2026-07-01T04:28:44.380160",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[312] Malik2023.pdf",
-      "start_time": "2026-06-08T02:47:32.936419",
+      "start_time": "2026-07-01T04:24:19.635021",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 55.39560031890869,
+          "time_seconds": 54.92173910140991,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1265418529510498,
+          "time_seconds": 0.12865567207336426,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11885
         },
         "llm_extraction": {
-          "time_seconds": 176.3194396495819,
+          "time_seconds": 209.66207790374756,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,14 +42,15 @@
         "analyte_polymer": "PCL",
         "critical_component": "PCL",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "CCP of PCL established on RP ODS column",
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
-        "stationary_phase_chemistry": "ODS (Reverse Phase)",
+        "stationary_phase_chemistry": "ODS",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
+          "ACN",
           "THF",
-          "Triethylamine"
+          "TEA"
         ],
         "mobile_phase_ratio": "82/17/01",
         "mobile_phase_ratio_units": "V%",
@@ -57,13 +63,22 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "70 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions. Under these conditions, P(EpTEGMME) eluted in order of decreasing molar mass earlier than the void volume of the column",
-        "notes": "1% TEA added to avoid polar interactions with free silanols. Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers.",
+        "field_evidence": {
+          "critical_condition_basis": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions.",
+          "critical_component": "CCP of PCL",
+          "column_name": "ZORBAX ODS",
+          "mobile_phase_solvents": "ACN/THF/TEA",
+          "mobile_phase_ratio": "82/17/01 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "pore size 70 Å",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; PCL is at critical condition.",
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       },
@@ -71,13 +86,14 @@
         "analyte_polymer": "P(Ep-TEGMME)",
         "critical_component": "P(Ep-TEGMME)",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "CCP of P(Ep-TEGMME) established on NP column",
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
-        "stationary_phase_chemistry": "Diol (Normal Phase)",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "68/32",
         "mobile_phase_ratio_units": "V%",
@@ -90,13 +106,22 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "120 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "In between these two opposing elution orders, there is a point at 68% acetone where P(Ep-TEGMME) of a molar mass range 500–3000 eluted at the same elution volume irrespective of its molar mass. This is the CCP of P(Ep-TEGMME) under current conditions.",
-        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers to determine PCL block length and free macroinitiator content.",
+        "field_evidence": {
+          "critical_condition_basis": "This is the CCP of P(Ep-TEGMME) under current conditions.",
+          "critical_component": "CCP of P(Ep-TEGMME)",
+          "column_name": "Ultisil diol column",
+          "mobile_phase_solvents": "acetone and water",
+          "mobile_phase_ratio": "68/32 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "120 Å",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; P(Ep-TEGMME) is at critical condition.",
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       }
@@ -108,7 +133,7 @@
       "section": "Full Paper",
       "token_count": 11885,
       "extraction_success": true,
-      "processing_time": 176.29664254188538,
+      "processing_time": 209.60484766960144,
       "extracted_count": 2
     }
   ]

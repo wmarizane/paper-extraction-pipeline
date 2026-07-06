@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[290] Wei2016.pdf",
-    "extraction_date": "2026-06-08T00:48:20.419523",
+    "extraction_date": "2026-07-01T23:22:31.268785",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[290] Wei2016.pdf",
-      "start_time": "2026-06-08T00:46:24.722013",
+      "start_time": "2026-07-01T23:20:31.596977",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 94.74025249481201,
+          "time_seconds": 94.25748896598816,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10535788536071777,
+          "time_seconds": 0.11121726036071777,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9318
         },
         "llm_extraction": {
-          "time_seconds": 20.851747751235962,
+          "time_seconds": 25.262463331222534,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,19 +39,20 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": "PEG backbone",
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
         "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-Phenyl",
         "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "45",
-        "mobile_phase_ratio_units": "%",
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": true,
@@ -58,28 +64,38 @@
         "pore_size": "300 Å",
         "column_dimensions": "250 × 4.6 mm I.D.",
         "detector": "ELSD",
-        "evidence_text": "To obtain the LCCC, the effect of the composition of mobile phase (volume percentage of acetonitrile in water) on the interaction between PEG chain and XB-Phenyl column packing was investigated and shown in Fig. 2. Critical composition for PEG was found at 45% acetonitrile in water at 30[◦] C.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG",
+          "column_name": "XB-Phenyl column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30[◦] C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.04.035",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "corresponding_author_name": "Y.-Z. Wei; R.-X. Zhuo; X.-L. Jiang",
+        "corresponding_email_address": "weiyanzhen1009@163.com; bmp@whu.edu.cn; xljiang@whu.edu.cn, xljiang118@hotmail.com",
         "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": "PEG backbone",
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
         "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Shodex-C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "40",
-        "mobile_phase_ratio_units": "%",
+        "mobile_phase_ratio": "40:60",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": true,
@@ -91,11 +107,20 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 × 4.6 mm I.D.",
         "detector": "ELSD",
-        "evidence_text": "The LCCC for PEG on another silica-based reversed-phase packing column Shodex-C18 column was obtained with the mobile phase 40%vol acetonitrile in water at 25[◦] C.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG",
+          "column_name": "Shodex-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40%vol acetonitrile in water",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.04.035",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "corresponding_author_name": "Y.-Z. Wei; R.-X. Zhuo; X.-L. Jiang",
+        "corresponding_email_address": "weiyanzhen1009@163.com; bmp@whu.edu.cn; xljiang@whu.edu.cn, xljiang118@hotmail.com",
         "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, PR China",
         "publication_year": "2016"
       }
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 9318,
       "extraction_success": true,
-      "processing_time": 20.838393211364746,
+      "processing_time": 25.148833990097046,
       "extracted_count": 2
     }
   ]

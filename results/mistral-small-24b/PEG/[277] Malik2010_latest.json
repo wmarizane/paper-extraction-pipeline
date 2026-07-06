@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[277] Malik2010.pdf",
-    "extraction_date": "2026-06-08T00:43:48.791307",
+    "extraction_date": "2026-07-01T23:17:41.042007",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[277] Malik2010.pdf",
-      "start_time": "2026-06-08T00:42:20.342064",
+      "start_time": "2026-07-01T23:16:19.658934",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.935741662979126,
+          "time_seconds": 27.19690752029419,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12731528282165527,
+          "time_seconds": 0.12793779373168945,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11136
         },
         "llm_extraction": {
-          "time_seconds": 61.3860228061676,
+          "time_seconds": 54.01624941825867,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,15 +42,16 @@
         "analyte_polymer": "MeO-PEO1100-b-PBO",
         "critical_component": "PBO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "octadecyl",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "88.23",
+        "mobile_phase_ratio": "88.23 wt%",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -54,11 +60,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "2.0 mL min−1",
+        "flow_rate": "2.0 mL min[−][1]",
         "pore_size": "80 Å",
         "column_dimensions": "250 mm × 10 mm",
-        "detector": "density",
-        "evidence_text": "On most common octadecyl reverse phase columns, it could also be realized with a slightly higher content of THF (87–92% for butene oxide, 90–95% for hexene oxide) [73]. Under the conditions mentioned above, the hydrophilic PEO as well as the block copolymer elute in SEC order. If there is any hydrophobic homopolymer formed during synthesis, it should elute at the void volume of column. In this study we used an octadecyl column with 10 mm inner diameter for the semipreparative separation of block copolymer from homopolymer. As shown in Fig. 3, the block copolymer (fraction 1) can be reasonably separated from the homopolymer (fraction 2).",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of MeO-PeO1100-b-PBO in 88.23 wt% THF (CAP of PBO)",
+          "critical_component": "PBO",
+          "column_name": "Spherisorb ODS2 prep.",
+          "mobile_phase_solvents": "THF",
+          "mobile_phase_ratio": "88.23 wt% THF",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -70,15 +85,16 @@
         "analyte_polymer": "MeO-PEO1100-b-PHO",
         "critical_component": "PHO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "octadecyl",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "92.23",
+        "mobile_phase_ratio": "92.23 wt%",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -87,11 +103,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "2.0 mL min−1",
+        "flow_rate": "2.0 mL min[−][1]",
         "pore_size": "80 Å",
         "column_dimensions": "250 mm × 10 mm",
-        "detector": "density",
-        "evidence_text": "On most common octadecyl reverse phase columns, it could also be realized with a slightly higher content of THF (87–92% for butene oxide, 90–95% for hexene oxide) [73]. Under the conditions mentioned above, the hydrophilic PEO as well as the block copolymer elute in SEC order. If there is any hydrophobic homopolymer formed during synthesis, it should elute at the void volume of column. In this study we used an octadecyl column with 10 mm inner diameter for the semipreparative separation of block copolymer from homopolymer. As shown in Fig. 3, the block copolymer (fraction 1) can be reasonably separated from the homopolymer (fraction 2).",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of MeO-PeO1100-b-PHO in 92.23 wt% THF (CAP of PHO)",
+          "critical_component": "PHO",
+          "column_name": "Spherisorb ODS2 prep.",
+          "mobile_phase_solvents": "THF",
+          "mobile_phase_ratio": "92.23 wt% THF",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -103,15 +128,16 @@
         "analyte_polymer": "MeO-PEO1100-b-PBO",
         "critical_component": "PEO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "silica-based diol phase",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "75.7",
+        "mobile_phase_ratio": "75.7 wt%",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -120,11 +146,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL min−1",
+        "flow_rate": "0.5 mL min[−][1]",
         "pore_size": "100 Å",
         "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "refractive index",
-        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD, with dual detection [54–56] one may obtain information on the chemical composition along the MMD [56–58]. SEC is however not capable of discriminating a mixture of block copolymers and homopolymers. In the case of higher polymers, gradient LAC [59–66] or LC under limiting conditions [67–69] can be applied. In the range of lower molecular mass, however, LCCC is the best approach to separate homopolymers from the block copolymer. In AB diblock copolymers (e.g. A = EO and B = PO or another alkylene oxide) one may use the following strategies: At the CAP for the unit A, a separation according to the block B may be achieved by a SEC or a LAC mechanism, while at the CAP for the block B, the length of the block A may be obtained in the same way. The application of these methods to EO–PO block copolymers has been described recently [20,45,70–72].",
+        "detector": "RI 2414",
+        "field_evidence": {
+          "critical_condition_basis": "Separation of block copolymers (fraction 1, from Fig. 3); from PEO at CAP of PEO and exclusion for hydrophobic moiety.",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil 100-5 OH 5 �m, silica-based diol phase; 4.6 mm × 250 mm; particle diameter: 5 �m; pore diameter: 100 Å",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "75.7 wt% acetone–water",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -136,15 +171,16 @@
         "analyte_polymer": "MeO-PEO1100-b-PHO",
         "critical_component": "PEO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "silica-based diol phase",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "75.7",
+        "mobile_phase_ratio": "75.7 wt%",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -153,11 +189,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL min−1",
+        "flow_rate": "0.5 mL min[−][1]",
         "pore_size": "100 Å",
         "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "refractive index",
-        "evidence_text": "In the case of amphiphilic polymers the interaction parameters cA and cB of the individual structural units (A and B) may have different values. If both cA and cB are negative, the molar mass distribution (MMD) can be determined by size exclusion chromatography (SEC), with retention decreasing with increasing molar mass, and only a minor influence of chemical composition. SEC yields the overall MMD, with dual detection [54–56] one may obtain information on the chemical composition along the MMD [56–58]. SEC is however not capable of discriminating a mixture of block copolymers and homopolymers. In the case of higher polymers, gradient LAC [59–66] or LC under limiting conditions [67–69] can be applied. In the range of lower molecular mass, however, LCCC is the best approach to separate homopolymers from the block copolymer. In AB diblock copolymers (e.g. A = EO and B = PO or another alkylene oxide) one may use the following strategies: At the CAP for the unit A, a separation according to the block B may be achieved by a SEC or a LAC mechanism, while at the CAP for the block B, the length of the block A may be obtained in the same way. The application of these methods to EO–PO block copolymers has been described recently [20,45,70–72].",
+        "detector": "RI 2414",
+        "field_evidence": {
+          "critical_condition_basis": "Separation of block copolymers (fraction 1, from Fig. 3); from PEO at CAP of PEO and exclusion for hydrophobic moiety.",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil 100-5 OH 5 �m, silica-based diol phase; 4.6 mm × 250 mm; particle diameter: 5 �m; pore diameter: 100 Å",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "75.7 wt% acetone–water",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -173,7 +218,7 @@
       "section": "Full Paper",
       "token_count": 11136,
       "extraction_success": true,
-      "processing_time": 61.37167143821716,
+      "processing_time": 53.90413808822632,
       "extracted_count": 4
     }
   ]

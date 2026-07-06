@@ -1,46 +1,52 @@
 {
   "metadata": {
     "source_pdf": "[47] Pasch1993.pdf",
-    "extraction_date": "2026-06-08T00:05:09.573402",
+    "extraction_date": "2026-07-01T20:33:56.922894",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[47] Pasch1993.pdf",
-      "start_time": "2026-06-08T00:04:14.591870",
+      "start_time": "2026-07-01T20:32:45.829354",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.291324853897095,
+          "time_seconds": 34.86534070968628,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10322380065917969,
+          "time_seconds": 0.10890793800354004,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6481
         },
         "llm_extraction": {
-          "time_seconds": 18.586867809295654,
+          "time_seconds": 36.07904815673828,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "poly(methyl methacrylate)",
-        "architecture": "block copolymer",
+        "architecture": "linear",
         "critical_condition_basis": "critical point of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "Macherey-Nagel Nucleosil Si-100",
         "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methyl ethyl ketone",
           "cyclohexane"
@@ -55,25 +61,35 @@
         },
         "temperature_celsius": null,
         "flow_rate": "0.5 ml min^-1",
-        "pore_size": null,
-        "column_dimensions": "200x4mm",
-        "detector": "differential RI detector",
-        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane.",
+        "pore_size": "100 Å",
+        "column_dimensions": "200x4 mm",
+        "detector": "Waters differential RI detector R401",
+        "field_evidence": {
+          "critical_condition_basis": "By operating at chromatographic conditions corresponding to the critical mode for poly(methyl methacrylate)",
+          "critical_component": "poly(methyl methacrylate)",
+          "column_name": "Macherey-Nagel Nucleosil Si-100",
+          "mobile_phase_solvents": "methyl ethyl ketone (MEK) and cyclohexane",
+          "mobile_phase_ratio": "73 vol% MEK in the mixture",
+          "temperature_celsius": null,
+          "pore_size": "100 Å",
+          "flow_rate": "flow rate of 0.5 ml min^-1"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "H. Pasch",
+        "corresponding_author_name": "H. Pasch; C. Brinkmann",
         "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
         "publication_year": "1993"
       },
       {
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "poly(methyl methacrylate)",
-        "architecture": "block copolymer",
+        "architecture": "linear",
         "critical_condition_basis": "critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": "Merck LiChrospher Si-300 and Si-1000",
+        "column_name": "Merck LiChrospher Si-300",
         "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methyl ethyl ketone",
           "cyclohexane"
@@ -89,14 +105,66 @@
         "temperature_celsius": null,
         "flow_rate": "0.5 ml min^-1",
         "pore_size": null,
-        "column_dimensions": null,
-        "detector": "u.v./vis. filter photometer",
-        "evidence_text": "For this column system, which has slightly different silica gel surface characteristics, the mobile phase composition has to be adjusted accordingly. As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane.",
+        "column_dimensions": "200x4 mm",
+        "detector": "Waters differential RI detector R401",
+        "field_evidence": {
+          "critical_condition_basis": "By operating at chromatographic conditions corresponding to the critical mode for poly(methyl methacrylate)",
+          "critical_component": "poly(methyl methacrylate)",
+          "column_name": "Merck LiChrospher Si-300",
+          "mobile_phase_solvents": "methyl ethyl ketone (MEK) and cyclohexane",
+          "mobile_phase_ratio": "70 vol% MEK/30 vol% cyclohexane",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "flow rate of 0.5 ml min^-1"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "H. Pasch",
+        "corresponding_author_name": "H. Pasch; C. Brinkmann",
         "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Merck LiChrospher Si-1000",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml min^-1",
+        "pore_size": null,
+        "column_dimensions": "200x4 mm",
+        "detector": "Waters differential RI detector R401",
+        "field_evidence": {
+          "critical_condition_basis": "By operating at chromatographic conditions corresponding to the critical mode for poly(methyl methacrylate)",
+          "critical_component": "poly(methyl methacrylate)",
+          "column_name": "Merck LiChrospher Si-1000",
+          "mobile_phase_solvents": "methyl ethyl ketone (MEK) and cyclohexane",
+          "mobile_phase_ratio": "70 vol% MEK/30 vol% cyclohexane",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "flow rate of 0.5 ml min^-1"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; C. Brinkmann",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
         "publication_year": "1993"
       }
     ]
@@ -107,8 +175,8 @@
       "section": "Full Paper",
       "token_count": 6481,
       "extraction_success": true,
-      "processing_time": 18.57783269882202,
-      "extracted_count": 2
+      "processing_time": 35.969674587249756,
+      "extracted_count": 3
     }
   ]
 }

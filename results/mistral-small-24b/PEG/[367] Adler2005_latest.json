@@ -1,35 +1,40 @@
 {
   "metadata": {
     "source_pdf": "[367] Adler2005.pdf",
-    "extraction_date": "2026-06-08T01:37:27.624630",
+    "extraction_date": "2026-07-02T00:18:40.432121",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[367] Adler2005.pdf",
-      "start_time": "2026-06-08T01:36:07.760632",
+      "start_time": "2026-07-02T00:15:31.888920",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 57.1400351524353,
+          "time_seconds": 53.94585180282593,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.15085673332214355,
+          "time_seconds": 0.13173818588256836,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10993
         },
         "llm_extraction": {
-          "time_seconds": 22.57294535636902,
+          "time_seconds": 134.42346501350403,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
@@ -41,6 +46,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Knauer Nucleosil RP18-100",
         "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -56,42 +62,18 @@
         "temperature_celsius": null,
         "flow_rate": null,
         "pore_size": null,
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": null,
         "detector": "ELSD",
-        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
-        "notes": null,
-        "paper_doi": "10.1002/macp.200500344",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schloßgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "2005"
-      },
-      {
-        "analyte_polymer": "poly(ethylene glycol)",
-        "critical_component": "poly(ethylene glycol)",
-        "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Knauer Nucleosil RP18-100",
-        "stationary_phase_chemistry": "octadecyl modified silica gel",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "81:19",
-        "mobile_phase_ratio_units": "wt.-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "At the critical point of adsorption for PEG, LC-CC separates MPEG and the macromonomer with regard to their endgroups irrespective of molar mass.",
+          "critical_component": "At the critical point of adsorption for PEG, LC-CC separates MPEG and the macromonomer with regard to their endgroups irrespective of molar mass.",
+          "column_name": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "mobile_phase_solvents": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "mobile_phase_ratio": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
         },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
         "notes": null,
         "paper_doi": "10.1002/macp.200500344",
         "corresponding_author_name": "Harald Pasch",
@@ -107,8 +89,8 @@
       "section": "Full Paper",
       "token_count": 10993,
       "extraction_success": true,
-      "processing_time": 22.55848217010498,
-      "extracted_count": 2
+      "processing_time": 17.382960557937622,
+      "extracted_count": 1
     }
   ]
 }

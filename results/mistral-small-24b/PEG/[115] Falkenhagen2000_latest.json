@@ -1,46 +1,52 @@
 {
   "metadata": {
     "source_pdf": "[115] Falkenhagen2000.pdf",
-    "extraction_date": "2026-06-07T23:51:10.506334",
+    "extraction_date": "2026-07-01T22:24:02.345666",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[115] Falkenhagen2000.pdf",
-      "start_time": "2026-06-07T23:50:00.416437",
+      "start_time": "2026-07-01T22:22:56.655725",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 47.08224153518677,
+          "time_seconds": 47.24318265914917,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1078948974609375,
+          "time_seconds": 0.11274838447570801,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6517
         },
         "llm_extraction": {
-          "time_seconds": 22.89959192276001,
+          "time_seconds": 18.292909145355225,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide) (PEO)-co-polymethylene (PM)",
+        "analyte_polymer": "PEO-co-PM",
         "critical_component": "PEO",
         "architecture": "diblock",
         "critical_condition_basis": "critical conditions of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "Nucleosil 300A",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -55,43 +61,19 @@
         },
         "temperature_celsius": "45",
         "flow_rate": "0.5 mL/min",
-        "pore_size": "300A",
-        "column_dimensions": "250mm length and 4mm i.d.",
-        "detector": "evaporative light scattering detector (ELSD) SEDEX 45 (Sedere), and a refractive index detector, HP 1047A (Hewlett-Packard)",
-        "evidence_text": "The ‘critical point of adsorption’ was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak. For the investigated polymer system these ‘critical solvent composition’ (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%",
-        "notes": null,
-        "paper_doi": "10.1080/10236660008034644",
-        "corresponding_author_name": "St. Weidner",
-        "corresponding_email_address": null,
-        "physical_address": "Federal Institute for Materials Research and Testing, (BAM), Dept. VI. 3, Unter den Eichen 87, D-12205 Berlin, Germany",
-        "publication_year": "2000"
-      },
-      {
-        "analyte_polymer": "poly(ethylene oxide) (PEO)-co-polymethylene (PM)",
-        "critical_component": "PM",
-        "architecture": "diblock",
-        "critical_condition_basis": "near critical conditions of adsorption",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "73.7/26.3",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "pore_size": "55 um",
+        "column_dimensions": "250 mm x 4 mm ID",
+        "detector": "ELSD, refractive index",
+        "field_evidence": {
+          "critical_condition_basis": "The determination of ‘critical conditions’ of adsorption was performed starting with methanol as a thermodynamically ‘good’ solvent. Successive addition of water as a thermodynamically ‘poor’ solvent resulted in a change of the chromatographic mode to adsorption mode. The ‘critical point of adsorption’ was reached if samples with the same chemical composition, but different molecular weight, were eluted in one peak.",
+          "critical_component": "The ‘critical solvent composition’ (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%",
+          "column_name": "A Hewlett Packard HP 1090M liquid chromatograph equipped with a Nucleosil 300A column",
+          "mobile_phase_solvents": "Successive addition of water as a thermodynamically ‘poor’ solvent",
+          "mobile_phase_ratio": "The ‘critical solvent composition’ (CSC) could be obtained by adjusting a methanol/water mixture of 78.5/21.5wt%",
+          "temperature_celsius": "The chromatographic systems were kept at a constant temperature of 45°C.",
+          "pore_size": "Nucleosil 300A column with S5um pore size",
+          "flow_rate": "The eluent flow was adjusted at 0.5mL/min."
         },
-        "temperature_celsius": "45",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "300A",
-        "column_dimensions": "250mm length and 4mm i.d.",
-        "detector": "evaporative light scattering detector (ELSD) SEDEX 45 (Sedere), and a refractive index detector, HP 1047A (Hewlett-Packard)",
-        "evidence_text": "The LACyearCC mode was obtained by successive addition of water up to an amount of 26.3 wt% in the eluent.",
         "notes": null,
         "paper_doi": "10.1080/10236660008034644",
         "corresponding_author_name": "St. Weidner",
@@ -107,8 +89,8 @@
       "section": "Full Paper",
       "token_count": 6517,
       "extraction_success": true,
-      "processing_time": 22.88924264907837,
-      "extracted_count": 2
+      "processing_time": 18.186148166656494,
+      "extracted_count": 1
     }
   ]
 }

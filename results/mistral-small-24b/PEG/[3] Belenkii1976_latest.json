@@ -1,72 +1,43 @@
 {
   "metadata": {
     "source_pdf": "[3] Belenkii1976.pdf",
-    "extraction_date": "2026-06-08T01:53:28.196504",
+    "extraction_date": "2026-07-02T00:34:42.817109",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[3] Belenkii1976.pdf",
-      "start_time": "2026-06-08T01:52:27.204241",
+      "start_time": "2026-07-02T00:33:48.743108",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 51.487120628356934,
+          "time_seconds": 50.94443368911743,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11014389991760254,
+          "time_seconds": 0.12295246124267578,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7273
         },
         "llm_extraction": {
-          "time_seconds": 9.39484167098999,
+          "time_seconds": 2.9663190841674805,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "poly(ethylene oxide)",
-        "critical_component": "poly(ethylene oxide)",
-        "architecture": "linear",
-        "critical_condition_basis": "The Ry values do not depend on molecular weight",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_solvents": [
-          "pyridine",
-          "water"
-        ],
-        "mobile_phase_ratio": "0.1:10",
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "As shown in Fig. 2b, the polymer homologues in poly(ethylene oxides) of different molecular weight have the same R, value.",
-        "notes": null,
-        "paper_doi": null,
-        "corresponding_author_name": "B. G. Belenky",
-        "corresponding_email_address": null,
-        "physical_address": "Institute of High Molecular Compounds, Leningrad (U.S.S.R.)",
-        "publication_year": "1976"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
@@ -74,8 +45,8 @@
       "section": "Full Paper",
       "token_count": 7273,
       "extraction_success": true,
-      "processing_time": 9.384231090545654,
-      "extracted_count": 1
+      "processing_time": 2.856114149093628,
+      "extracted_count": 0
     }
   ]
 }

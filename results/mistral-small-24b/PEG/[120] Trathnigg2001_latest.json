@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[120] Trathnigg2001.pdf",
-    "extraction_date": "2026-06-07T23:55:24.961599",
+    "extraction_date": "2026-07-01T22:28:15.417976",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[120] Trathnigg2001.pdf",
-      "start_time": "2026-06-07T23:54:32.138529",
+      "start_time": "2026-07-01T22:27:25.197804",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 37.754621267318726,
+          "time_seconds": 35.980589389801025,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10381054878234863,
+          "time_seconds": 0.10666918754577637,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9107
         },
         "llm_extraction": {
-          "time_seconds": 14.964475870132446,
+          "time_seconds": 14.094084978103638,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "fatty alcohol ethoxylates",
         "critical_component": "polyoxyethylene",
         "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "separation according to structural units other than the repeating unit",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "ODS",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -53,17 +59,26 @@
           "salt_type": "null",
           "salt_concentration": "null"
         },
-        "temperature_celsius": "30.0",
+        "temperature_celsius": "null",
         "flow_rate": "2.0 ml/min",
         "pore_size": "80 A",
         "column_dimensions": "250x10 mm",
         "detector": "SICON LCD 201 RI detector",
-        "evidence_text": "In system C (LCCC), a of 2.0 ml/min was maintained with an LDC Constametric IIG HPLC pump (Milton Roy, Riviera Beach, FL, USA). A semi-preparative column was used for all measure- ments: Spherisorb ODS2 (250x10 mm, 5 µm, 80 A) from PhaseSep (Deeside, UK). A SICON LCD 201 RI detector was combined with the DDS70. An Advantec SF 2120 fraction collector (Advantec, Dublin, CA, USA). was used for sampling of different fractions. The solvents (methanol and water, both HPLC grade) were purchased from Riedel–de Haen (Seelze, Germany).",
+        "field_evidence": {
+          "critical_condition_basis": "separation according to structural units other than the repeating unit",
+          "critical_component": "polyoxyethylene",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "90:10",
+          "temperature_celsius": "null",
+          "pore_size": "80 A",
+          "flow_rate": "2.0 ml/min"
+        },
         "notes": "null",
         "paper_doi": "null",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Manfred Kollroser",
         "corresponding_email_address": "trathnig@kfunigraz.ac.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute of Forensic Medicine, Karl-Franzens-University, A-8010 Graz, Austria",
         "publication_year": "2001"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9107,
       "extraction_success": true,
-      "processing_time": 14.952103614807129,
+      "processing_time": 13.980571508407593,
       "extracted_count": 1
     }
   ]

@@ -1,35 +1,40 @@
 {
   "metadata": {
     "source_pdf": "[374] Ahmed2010.pdf",
-    "extraction_date": "2026-06-08T04:35:33.362971",
+    "extraction_date": "2026-07-01T08:18:04.305707",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[374] Ahmed2010.pdf",
-      "start_time": "2026-06-08T04:33:59.255195",
+      "start_time": "2026-07-01T08:14:39.716940",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 8.702420949935913,
+          "time_seconds": 9.129007816314697,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12836456298828125,
+          "time_seconds": 0.11829876899719238,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7968
         },
         "llm_extraction": {
-          "time_seconds": 85.27689504623413,
+          "time_seconds": 195.30826663970947,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -37,10 +42,11 @@
         "analyte_polymer": "PEG",
         "critical_component": "EO",
         "architecture": "linear",
-        "critical_condition_basis": "Critical point of adsorption (CAP) for EO",
+        "critical_condition_basis": "LC at critical conditions (LCCC)",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
         "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -58,8 +64,60 @@
         "pore_size": "80 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "A much better resolution could be achieved on the same column in 32 vol% acetone–water at the same temperature (Fig. 1). ... Both pumps were operated in the same mobile phase, which corresponds to the CAP for EO (32% acetone).",
-        "notes": "Used as the first dimension in 2-D LC for separation of PEG and PEG-MME based on end-group functionality.",
+        "field_evidence": {
+          "critical_condition_basis": "LC at critical conditions as the first and liquid adsorption chromatography as the second dimension",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "32 vol% acetone–water",
+          "mobile_phase_ratio": "32 vol% acetone",
+          "temperature_celsius": "251C",
+          "pore_size": "nominal pore size 5 80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used as the first dimension in 2-D LC. The text states '32% acetone' corresponds to the CAP for EO.",
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePOL), Institute of Chemistry, KarlFranzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "LC at critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32 vol% acetone",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LC at critical conditions as the first and liquid adsorption chromatography as the second dimension",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "32 vol% acetone–water",
+          "mobile_phase_ratio": "32 vol% acetone",
+          "temperature_celsius": "251C",
+          "pore_size": "nominal pore size 5 80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used as the first dimension in 2-D LC. The text states '32% acetone' corresponds to the CAP for EO. PEG-MME is separated from PEG based on end-group adsorption at this condition.",
         "paper_doi": "10.1002/jssc.200900847",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,8 +132,8 @@
       "section": "Full Paper",
       "token_count": 7968,
       "extraction_success": true,
-      "processing_time": 85.25523924827576,
-      "extracted_count": 1
+      "processing_time": 195.25578141212463,
+      "extracted_count": 2
     }
   ]
 }

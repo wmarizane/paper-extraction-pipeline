@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[3] Belenkii1976.pdf",
-    "extraction_date": "2026-06-08T04:37:45.618793",
+    "extraction_date": "2026-07-01T08:20:11.981625",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[3] Belenkii1976.pdf",
-      "start_time": "2026-06-08T04:36:45.563481",
+      "start_time": "2026-07-01T08:19:13.299037",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 52.89788508415222,
+          "time_seconds": 51.29964256286621,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12332987785339355,
+          "time_seconds": 0.11270570755004883,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7273
         },
         "llm_extraction": {
-          "time_seconds": 7.0339672565460205,
+          "time_seconds": 7.237767219543457,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -40,7 +45,7 @@
       "section": "Full Paper",
       "token_count": 7273,
       "extraction_success": true,
-      "processing_time": 7.011584281921387,
+      "processing_time": 7.181849718093872,
       "extracted_count": 0
     }
   ]

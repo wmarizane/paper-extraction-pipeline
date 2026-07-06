@@ -8,18 +8,19 @@
     ]
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "linear poly(lactide)",
-        "critical_component": "poly(lactide) repeating unit",
-        "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass",
+        "analyte_polymer": "Star-shaped poly(lactide)s (PLAs)",
+        "critical_component": "Linear poly(lactide)s",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical conditions determined for linear PLAs",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil",
-        "stationary_phase_chemistry": "bare silica",
+        "stationary_phase_chemistry": "Bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "1,4-dioxane",
           "n-hexane"
@@ -35,55 +36,27 @@
         "temperature_celsius": "50",
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 A and 300 A",
-        "column_dimensions": "0.46x20 cm and 0.46x25 cm",
-        "detector": "RI, MALLS, UV, ELSD",
-        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
-        "notes": "Columns connected in series. Used to analyze star-shaped PLAs.",
+        "column_dimensions": "0.46 x 20 cm and 0.46 x 25 cm",
+        "detector": "RI, MALLS, UV, ELS",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane).",
+          "critical_component": "critical conditions determined for linear PLAs",
+          "column_name": "2 bare silica Nucleosil columns",
+          "mobile_phase_solvents": "dioxane/n-hexane mixtures",
+          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/nhexane)",
+          "temperature_celsius": "50 8C",
+          "pore_size": "100 A[˚ ] , 0.46!20 cm, 300 A[˚ ] , 0.46!25 cm",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Conditions established for linear PLAs and applied to star-shaped PLAs with various functional groups.",
         "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke; Tadeusz Biela",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; tadek@bilbo.cbmm.lodz.pl",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
         "publication_year": "2005",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "missed"
-        }
-      },
-      {
-        "analyte_polymer": "poly(lactide)",
-        "critical_component": "poly(lactide)",
-        "architecture": "linear",
-        "critical_condition_basis": "critical conditions determined for linear PLAs",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil",
-        "stationary_phase_chemistry": "bare silica",
-        "mobile_phase_solvents": [
-          "1,4-dioxane",
-          "n-hexane"
-        ],
-        "mobile_phase_ratio": "57.1/42.9",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "50",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "100 A and 300 A",
-        "column_dimensions": "0.46x20 cm and 0.46x25 cm",
-        "detector": "RI, MALLS, UV, ELSD",
-        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/n-hexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
-        "notes": "Columns connected in series. Used to analyze star-shaped PLAs.",
-        "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "2005",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
         }
       }
     ]

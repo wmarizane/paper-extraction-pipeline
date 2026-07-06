@@ -1,47 +1,185 @@
 {
   "metadata": {
     "source_pdf": "[243] Rollet2012.pdf",
-    "extraction_date": "2026-06-08T00:32:05.585182",
+    "extraction_date": "2026-07-01T23:03:08.047825",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[243] Rollet2012.pdf",
-      "start_time": "2026-06-08T00:25:52.495805",
+      "start_time": "2026-07-01T23:01:23.350852",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.146372318267822,
+          "time_seconds": 26.56557846069336,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11366462707519531,
+          "time_seconds": 0.10368037223815918,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11347
         },
         "llm_extraction": {
-          "time_seconds": 346.82917380332947,
-          "success": false
+          "time_seconds": 77.98677086830139,
+          "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 0
+    "total_conditions": 3
   },
   "extracted_data": {
-    "conditions": []
+    "conditions": [
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "chloroform",
+          "methanol",
+          "n-heptane"
+        ],
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
+        "mobile_phase_ratio_units": "v/v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.8 mL min−1",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "Polymer Laboratories PL-ELS2100",
+        "field_evidence": {
+          "critical_condition_basis": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "critical_component": "The earliest practical examples of LCCC were focusing on endgroup separations.",
+          "column_name": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "mobile_phase_solvents": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1.",
+          "mobile_phase_ratio": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "temperature_celsius": "They were placed in a thermostated Crococil oven (Polymer Laboratories), in which a temperature of 30 °C was maintained for all measurements.",
+          "pore_size": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "flow_rate": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1."
+        },
+        "notes": "null",
+        "paper_doi": "10.1021/ma301199m",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
+        "corresponding_email_address": "null",
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "publication_year": "2012"
+      },
+      {
+        "analyte_polymer": "PEO-b-PS",
+        "critical_component": "PS",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "chloroform",
+          "methanol",
+          "n-heptane"
+        ],
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
+        "mobile_phase_ratio_units": "v/v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.8 mL min−1",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "Polymer Laboratories PL-ELS2100",
+        "field_evidence": {
+          "critical_condition_basis": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "critical_component": "The calibration curve obtained using PS homopolymer standards could be used to determine the whole molar mass of the PS block in block copolymers with PS and PEO segments, with a weak influence of the architecture.",
+          "column_name": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "mobile_phase_solvents": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1.",
+          "mobile_phase_ratio": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "temperature_celsius": "They were placed in a thermostated Crococil oven (Polymer Laboratories), in which a temperature of 30 °C was maintained for all measurements.",
+          "pore_size": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "flow_rate": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1."
+        },
+        "notes": "null",
+        "paper_doi": "10.1021/ma301199m",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
+        "corresponding_email_address": "null",
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "publication_year": "2012"
+      },
+      {
+        "analyte_polymer": "PS-b-PEO-b-PS",
+        "critical_component": "PS",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "chloroform",
+          "methanol",
+          "n-heptane"
+        ],
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
+        "mobile_phase_ratio_units": "v/v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.8 mL min−1",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "Polymer Laboratories PL-ELS2100",
+        "field_evidence": {
+          "critical_condition_basis": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "critical_component": "The calibration curve obtained using PS homopolymer standards could be used to determine the whole molar mass of the PS block in block copolymers with PS and PEO segments, with a weak influence of the architecture.",
+          "column_name": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "mobile_phase_solvents": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1.",
+          "mobile_phase_ratio": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column.",
+          "temperature_celsius": "They were placed in a thermostated Crococil oven (Polymer Laboratories), in which a temperature of 30 °C was maintained for all measurements.",
+          "pore_size": "The following columns were used: Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, pore diameter of 100 Å, particle size of 3 μm and VWR 250 mm × 4.6 mm Nucleosil C8, pore diameter of 120 Å, particle size of 3 μm.",
+          "flow_rate": "The mobile phase, a mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane, SDS HPLC grade), was delivered by a Waters 600 pump at a flow rate of 0.8 mL min−1."
+        },
+        "notes": "null",
+        "paper_doi": "10.1021/ma301199m",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
+        "corresponding_email_address": "null",
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "publication_year": "2012"
+      }
+    ]
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 11347,
-      "extraction_success": false,
-      "processing_time": 113.38346648216248,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"poly(ethylene oxide)\",\"critical_component\":\"poly(ethylene oxide)\",\"architecture\":\"null\",\"critical_condition_basis\":\"critical conditions\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Macherey-Nagel 250 mm × 4.6 mm Nucleosil C8 HD, VWR 250 mm ×"
+      "extraction_success": true,
+      "processing_time": 77.86991310119629,
+      "extracted_count": 3
     }
   ]
 }

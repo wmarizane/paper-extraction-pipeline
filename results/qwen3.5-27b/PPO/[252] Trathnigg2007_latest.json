@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[252] Trathnigg2007.pdf",
-    "extraction_date": "2026-06-07T23:06:29.247180",
+    "extraction_date": "2026-07-02T15:12:07.566206",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[252] Trathnigg2007.pdf",
-      "start_time": "2026-06-07T23:04:47.481460",
+      "start_time": "2026-07-02T15:09:55.565229",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.990774393081665,
+          "time_seconds": 19.72847557067871,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11653947830200195,
+          "time_seconds": 0.12136554718017578,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5452
         },
         "llm_extraction": {
-          "time_seconds": 81.65830159187317,
+          "time_seconds": 112.11845922470093,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44398"
+      }
     }
   },
   "summary": {
@@ -34,19 +39,20 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PPG",
-        "critical_component": "oxypropylene unit",
-        "architecture": "linear",
-        "critical_condition_basis": "Critical adsorption point (CAP) identified at intersection of interaction parameter line with x-axis",
+        "analyte_polymer": "Polypropylene glycol (PPG)",
+        "critical_component": "PPG repeat unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) in THF-water mobile phase",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
-          "water"
+          "Water"
         ],
-        "mobile_phase_ratio": "85",
-        "mobile_phase_ratio_units": "wt.% THF",
+        "mobile_phase_ratio": "85 wt.% THF",
+        "mobile_phase_ratio_units": "wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -58,8 +64,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF). The intersection point of the line for THF agrees well with the CAP",
-        "notes": "Critical condition established for the repeat unit (oxypropylene).",
+        "field_evidence": {
+          "critical_condition_basis": "On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF).",
+          "critical_component": "critical conditions for PPG",
+          "column_name": "Prodigy ODS3 (Phenomenex, Torrance, CA, USA): silicabased octadecyl phase",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "85 wt.% THF",
+          "temperature_celsius": "temperature of 25.0[◦] C was maintained for all measurements",
+          "pore_size": "pore size = 100 A",
+          "flow_rate": "The flow rate was 0.5 mL min[−][1] in all measurements."
+        },
+        "notes": "Critical condition identified for PPG on Prodigy ODS3 in THF-water. The text states critical conditions exist only in this mobile phase for this column.",
         "paper_doi": "10.1016/j.aca.2007.06.043",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 5452,
       "extraction_success": true,
-      "processing_time": 81.63580513000488,
+      "processing_time": 112.06275415420532,
       "extracted_count": 1
     }
   ]

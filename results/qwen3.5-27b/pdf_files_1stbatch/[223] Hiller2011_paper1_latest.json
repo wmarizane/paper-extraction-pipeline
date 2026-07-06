@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[223] Hiller2011_paper1.pdf",
-    "extraction_date": "2026-06-07T22:44:21.469305",
+    "extraction_date": "2026-07-01T14:36:58.813604",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[223] Hiller2011_paper1.pdf",
-      "start_time": "2026-06-07T22:42:20.951249",
+      "start_time": "2026-07-01T14:34:24.912196",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 29.224550008773804,
+          "time_seconds": 27.963249444961548,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11762142181396484,
+          "time_seconds": 0.12089157104492188,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9800
         },
         "llm_extraction": {
-          "time_seconds": 91.17577815055847,
+          "time_seconds": 125.78396582603455,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,18 +39,19 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "analyte_polymer": "1,4-polyisoprene",
         "critical_component": "1,4-isoprene units",
         "architecture": "linear",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "reversed phase C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "butanone",
           "cyclohexane"
         ],
-        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio": "92/8",
         "mobile_phase_ratio_units": "vol %",
         "aqueous_parameters": {
           "pH": null,
@@ -58,8 +64,17 @@
         "pore_size": "100-5, 300-5, 1000-7",
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
-        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
-        "notes": "Samples contained predominantly 1,4-isoprene units (approx 94 mol%) with small amounts of 3,4-isoprene units.",
+        "field_evidence": {
+          "critical_condition_basis": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+          "critical_component": "critical conditions of 1,4-PI",
+          "column_name": "three reversed phase Nucleosil C18 columns (100-5, 300-5, and 1000-7)",
+          "mobile_phase_solvents": "The mobile phase was a mixture of butanone and cyclohexane.",
+          "mobile_phase_ratio": "92/8 vol %",
+          "temperature_celsius": "29 C",
+          "pore_size": "100-5, 300-5, and 1000-7",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "The text states that 1,4-PI samples elute at the same retention volume irrespective of molar mass under these conditions. The samples are copolymers containing predominantly 1,4- and 3,4-isoprene units, but the critical condition is established for the 1,4-isoprene moiety.",
         "paper_doi": "10.1021/ma102750s",
         "corresponding_author_name": "Wolf Hiller",
         "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9800,
       "extraction_success": true,
-      "processing_time": 91.15272426605225,
+      "processing_time": 125.71520233154297,
       "extracted_count": 1
     }
   ]

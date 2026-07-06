@@ -76,7 +76,7 @@ class PipelineRunner:
             print("📄 PAPER EXTRACTION PIPELINE (PHASE 1 REFACTOR)")
             print("="*70)
             print(f"PDF: {self.pdf_name}")
-            print(f"Model: {settings.llm_model}")
+            print(f"Model: {self.model_name or settings.llm_model}")
             print("="*70 + "\n")
             
             # Stage 1

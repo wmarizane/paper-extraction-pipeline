@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
@@ -108,38 +108,6 @@
         "temperature_celsius": "9",
         "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland",
         "critical_component": "cyclohexane"
-      },
-      {
-        "analyte_polymer": "Polystyrene",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "Temperature adjustment in a single component eluent (cyclohexane) on end-capped C18 bonded silica",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Agilent Extend C18",
-        "stationary_phase_chemistry": "Silica gel bonded and end-capped C18 phase",
-        "mobile_phase_solvents": [
-          "cyclohexane"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "9",
-        "flow_rate": "0.4 to 1 mL/min",
-        "pore_size": "10 nm",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "Table 2, entry 19: PS on Agilent Extend C18, cyclohexane, critical, +9 °C.",
-        "notes": "Comparison with Nucleosil C18 shows the effect of end-capping on critical conditions.",
-        "paper_doi": "10.1021/ma010994t",
-        "corresponding_author_name": "T. Macko",
-        "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "2002"
       }
     ]
   }

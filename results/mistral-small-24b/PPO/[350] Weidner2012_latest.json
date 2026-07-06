@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[350] Weidner2012.pdf",
-    "extraction_date": "2026-06-08T00:21:16.780524",
+    "extraction_date": "2026-07-01T22:39:44.611377",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[350] Weidner2012.pdf",
-      "start_time": "2026-06-08T00:20:47.426128",
+      "start_time": "2026-07-01T22:39:14.326669",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 17.154268980026245,
+          "time_seconds": 15.98265790939331,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.14300179481506348,
+          "time_seconds": 0.11793851852416992,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9150
         },
         "llm_extraction": {
-          "time_seconds": 12.056972742080688,
+          "time_seconds": 14.143136024475098,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -36,11 +41,12 @@
       {
         "analyte_polymer": "PEO-b-PPO-b-PEO",
         "critical_component": "PPO",
-        "architecture": "block",
+        "architecture": "linear",
         "critical_condition_basis": "critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "YMC RP18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
@@ -58,10 +64,19 @@
         "pore_size": "120 Å",
         "column_dimensions": "250 × 4.6 mm i.D.",
         "detector": "ELSD",
-        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+        "field_evidence": {
+          "critical_condition_basis": "critical point of adsorption",
+          "critical_component": "PPO",
+          "column_name": "YMC RP18 column",
+          "mobile_phase_solvents": "THF/water",
+          "mobile_phase_ratio": "85/15 (v/v)",
+          "temperature_celsius": "45 °C",
+          "pore_size": "120 Å pore size",
+          "flow_rate": "0.5 mL min−1"
+        },
         "notes": null,
         "paper_doi": "10.1002/macp.201200169",
-        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen",
         "corresponding_email_address": "steffen.weidner@bam.de",
         "physical_address": "BAM–Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
         "publication_year": "2012"
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 9150,
       "extraction_success": true,
-      "processing_time": 12.043811559677124,
+      "processing_time": 14.060077905654907,
       "extracted_count": 1
     }
   ]

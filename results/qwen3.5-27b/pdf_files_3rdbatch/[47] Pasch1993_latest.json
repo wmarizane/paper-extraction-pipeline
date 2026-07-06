@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[47] Pasch1993.pdf",
-    "extraction_date": "2026-06-07T23:41:30.882545",
+    "extraction_date": "2026-07-01T01:03:00.704636",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[47] Pasch1993.pdf",
-      "start_time": "2026-06-07T23:38:07.892347",
+      "start_time": "2026-07-01T00:59:05.364155",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 34.906301736831665,
+          "time_seconds": 33.64669990539551,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13639235496520996,
+          "time_seconds": 0.11065244674682617,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6481
         },
         "llm_extraction": {
-          "time_seconds": 167.9473843574524,
+          "time_seconds": 201.54631805419922,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "poly(methyl methacrylate)",
         "architecture": "diblock",
-        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_basis": "critical point of adsorption for poly(methyl methacrylate)",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil Si-100",
         "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methyl ethyl ketone",
           "cyclohexane"
@@ -57,9 +63,18 @@
         "flow_rate": "0.5 ml min-1",
         "pore_size": "100 A",
         "column_dimensions": "200 x 4 mm",
-        "detector": "RI and UV (280 nm)",
-        "evidence_text": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane... Figure 3. Chromatograms of the block copolymers... at the critical point of PMMA; Nucleosil Si-100, MEK-cyclohexane 73:27 vol%.",
-        "notes": "Used to analyze the polystyrene block while PMMA is at critical condition (invisible).",
+        "detector": "differential RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "The critical point of PMMA is obtained at a composition of 73 vol% MEK/27 vol% cyclohexane.",
+          "critical_component": "critical point of adsorption for poly(methyl methacrylate)",
+          "column_name": "Macherey-Nagel Nucleosil Si-100",
+          "mobile_phase_solvents": "mixtures of methyl ethyl ketone (MEK) and cyclohexane",
+          "mobile_phase_ratio": "73 vol% MEK/27 vol% cyclohexane",
+          "temperature_celsius": null,
+          "pore_size": "100 A",
+          "flow_rate": "flow rate of 0.5 ml min-1"
+        },
+        "notes": "Analysis of PS block in block copolymer while PMMA block is at critical point.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": null,
@@ -70,10 +85,11 @@
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "poly(methyl methacrylate)",
         "architecture": "diblock",
-        "critical_condition_basis": "critical point of adsorption for PMMA block",
+        "critical_condition_basis": "critical point of adsorption for poly(methyl methacrylate)",
         "critical_condition_confidence": "explicit",
         "column_name": "LiChrospher Si-300 and Si-1000",
         "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methyl ethyl ketone",
           "cyclohexane"
@@ -89,10 +105,19 @@
         "temperature_celsius": null,
         "flow_rate": "0.5 ml min-1",
         "pore_size": "300 A and 1000 A",
-        "column_dimensions": "self-packed",
-        "detector": "RI and UV (280 nm)",
-        "evidence_text": "As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane... Figure 5 Chromatograms of the block copolymers... at the critical point of PMMA; LiChrospher Si-300 and Si-1000, MEK-cyclohexane 70:30 vol%.",
-        "notes": "Used for higher molar mass samples where Si-100 was near exclusion limit. UV detection at 280 nm used for selective PS detection.",
+        "column_dimensions": "200 x 4 mm",
+        "detector": "u.v./vis. filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane",
+          "critical_component": "critical point of PMMA",
+          "column_name": "LiChrospher Si-300 and a LiChrospher Si-1000 self-packed column",
+          "mobile_phase_solvents": "MEK-cyclohexane",
+          "mobile_phase_ratio": "70 vol% MEK/30 vol% cyclohexane",
+          "temperature_celsius": null,
+          "pore_size": "Si-300 and Si-1000",
+          "flow_rate": "flow rate 0.5 ml min-1"
+        },
+        "notes": "Two-column system used for higher molar mass samples; UV detection at 280 nm used for selective PS detection.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": null,
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 6481,
       "extraction_success": true,
-      "processing_time": 167.9246940612793,
+      "processing_time": 201.48797297477722,
       "extracted_count": 2
     }
   ]

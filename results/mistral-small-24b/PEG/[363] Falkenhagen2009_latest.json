@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[363] Falkenhagen2009.pdf",
-    "extraction_date": "2026-06-08T01:26:58.374266",
+    "extraction_date": "2026-07-02T00:08:41.089497",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[363] Falkenhagen2009.pdf",
-      "start_time": "2026-06-08T01:26:16.270538",
+      "start_time": "2026-07-02T00:07:42.026513",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 22.588220357894897,
+          "time_seconds": 23.710734605789185,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11567878723144531,
+          "time_seconds": 0.13097906112670898,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6731
         },
         "llm_extraction": {
-          "time_seconds": 19.39966607093811,
+          "time_seconds": 35.18038249015808,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide)",
-        "critical_component": "poly(ethylene oxide)",
+        "analyte_polymer": "HO-PEO-(CH2)18-H",
+        "critical_component": "PEO",
         "architecture": "linear",
-        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_basis": "critical mode of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "acetonitrile/methanol"
@@ -58,22 +64,32 @@
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+        "field_evidence": {
+          "critical_condition_basis": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+          "critical_component": "For the determination of critical conditions of adsorption of PEO, an ethoxylated fatty acid C 18 alcohol ( M w ) 700 g/mol) was used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "Different binary and ternary solvent mixtures were used as mobile phase. The determination of critical conditions of adsorption of PEO and the characterization of different PEO ′ s was performed using mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B).",
+          "mobile_phase_ratio": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C.",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min."
+        },
         "notes": null,
         "paper_doi": "10.1021/ac8019784",
-        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
         "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(propylene oxide)",
-        "critical_component": "poly(propylene oxide)",
+        "analyte_polymer": "PPO",
+        "critical_component": "PPO",
         "architecture": "linear",
-        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_basis": "critical mode of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "tetrahydrofurane"
@@ -82,19 +98,28 @@
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_added": true,
+          "salt_type": "formic acid",
+          "salt_concentration": "0.2%"
         },
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL/min",
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "critical_component": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "mobile_phase_ratio": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C.",
+          "pore_size": null,
+          "flow_rate": "At a flow rate of 0.5 mL/min only after 0.35 min a complete elution could be observed."
+        },
         "notes": null,
         "paper_doi": "10.1021/ac8019784",
-        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
         "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
         "publication_year": "2009"
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 6731,
       "extraction_success": true,
-      "processing_time": 19.390149354934692,
+      "processing_time": 35.06738901138306,
       "extracted_count": 2
     }
   ]

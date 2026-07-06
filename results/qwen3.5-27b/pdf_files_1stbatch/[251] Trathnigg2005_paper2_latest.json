@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[251] Trathnigg2005_paper2.pdf",
-    "extraction_date": "2026-06-07T22:50:13.847245",
+    "extraction_date": "2026-07-01T14:43:16.028431",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[251] Trathnigg2005_paper2.pdf",
-      "start_time": "2026-06-07T22:45:31.783309",
+      "start_time": "2026-07-01T14:38:08.136667",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.620184421539307,
+          "time_seconds": 18.98955202102661,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12036395072937012,
+          "time_seconds": 0.12111568450927734,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9773
         },
         "llm_extraction": {
-          "time_seconds": 262.3232753276825,
+          "time_seconds": 288.75021266937256,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -35,15 +40,16 @@
     "conditions": [
       {
         "analyte_polymer": "Poly(propylene oxide)",
-        "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "PO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for PO",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "92.42",
         "mobile_phase_ratio_units": "wt%",
@@ -58,8 +64,17 @@
         "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
-        "evidence_text": "On this column, a CAP for PO is found at about 90% acetone... At a composition close to the CAP for PO... Fig. 2. Chromatograms of PEGs, PPGs, and water, as obtained on the Jordi column in 92.42 wt% acetone (CAP for PO).",
-        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for PO is found at about 90% acetone",
+          "critical_component": "CAP for PO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "92.42 wt% acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ500 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers (EO-PO-EO and PO-EO-PO) where EO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -68,15 +83,16 @@
       },
       {
         "analyte_polymer": "Poly(propylene oxide)",
-        "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "PO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for PO",
         "critical_condition_confidence": "explicit",
         "column_name": "Discovery HS-PEG",
-        "stationary_phase_chemistry": "Silica-based PEG phase",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "44.52",
         "mobile_phase_ratio_units": "wt%",
@@ -90,9 +106,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "120 A",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI",
-        "evidence_text": "As can be seen in Fig. 4, a CAP for PO was found on the Discovery HS-PEG column... in acetone–water with about 45% (w/w) acetone... Fig. 6. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone.",
-        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode. Suitable for shorter PO blocks.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for PO was found on the Discovery HS-PEG column",
+          "critical_component": "CAP for PO",
+          "column_name": "Discovery HS-PEG",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "44.52 wt% acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ 120 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers with shorter PO blocks. EO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -101,15 +126,16 @@
       },
       {
         "analyte_polymer": "Poly(ethylene oxide)",
-        "critical_component": "Ethylene oxide (EO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "EO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for EO",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "Silica-based Diol phase",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "78.54",
         "mobile_phase_ratio_units": "wt%",
@@ -124,8 +150,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
-        "evidence_text": "The desired conditions were now found on a Diol phase in acetone–water with about 80 wt% aetone (Fig. 8): A CAP for EO exists at 78.54% (w/w) acetone. As can be seen in Fig. 9, PPGs elute in SEC mode, and the peaks of all PEGs (from 400 to 12000) coincide precisely.",
-        "notes": "Used to analyze EO-PO block copolymers where PO elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 78.54% (w/w) acetone",
+          "critical_component": "CAP for EO",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "78.54% (w/w) acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ100 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers where PO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -140,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 9773,
       "extraction_success": true,
-      "processing_time": 262.30037689208984,
+      "processing_time": 288.69423818588257,
       "extracted_count": 3
     }
   ]

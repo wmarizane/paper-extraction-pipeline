@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[128] Gorshkov1986.pdf",
-    "extraction_date": "2026-06-07T23:57:00.728978",
+    "extraction_date": "2026-07-01T22:12:41.073876",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[128] Gorshkov1986.pdf",
-      "start_time": "2026-06-07T23:56:32.533776",
+      "start_time": "2026-07-01T22:12:11.565581",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.092843055725098,
+          "time_seconds": 17.927687406539917,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12347531318664551,
+          "time_seconds": 0.11324739456176758,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 2050
         },
         "llm_extraction": {
-          "time_seconds": 8.978669166564941,
+          "time_seconds": 11.426325559616089,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "42878"
+      }
     }
   },
   "summary": {
@@ -35,12 +40,13 @@
     "conditions": [
       {
         "analyte_polymer": "Poly(oxypropylenpolyol)",
-        "critical_component": "Poly(propylenglykol)",
-        "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_component": "Poly(oxypropylenpolyol)",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": "LiChrosorb Si 100",
+        "column_name": "LiChrosorb SI 100",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "Methylethylketon",
           "Ethylacetat"
@@ -48,22 +54,31 @@
         "mobile_phase_ratio": "20/80",
         "mobile_phase_ratio_units": "Vol-%",
         "aqueous_parameters": {
-          "pH": null,
+          "pH": "null",
           "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_type": "null",
+          "salt_concentration": "null"
         },
         "temperature_celsius": "30",
-        "flow_rate": null,
-        "pore_size": null,
+        "flow_rate": "null",
+        "pore_size": "10",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "RIDK 101",
-        "evidence_text": "Die kritischen Bedingungen werden durch stufenweise Zugabe von Ethylacetat zu Methylethylketon erreicht, wobei die Bewertung der Annaherung an die kritischen Bedingungen anhand von lg M — V,-Diagrammen erfolgt.",
-        "notes": null,
-        "paper_doi": null,
+        "field_evidence": {
+          "critical_condition_basis": "unter kritischen Bedingungen",
+          "critical_component": "Poly(oxypropylenpolyol)",
+          "column_name": "LiChrosorb SI 100",
+          "mobile_phase_solvents": "Methylethylketon/ Ethylacetat",
+          "mobile_phase_ratio": "20/80 (Z), 10/90 (2), 7/93 (8), 5/95 (4), 0/100 (5)",
+          "temperature_celsius": "30°C",
+          "pore_size": "mittleren KorngröBe von 10 ym",
+          "flow_rate": "null"
+        },
+        "notes": "null",
+        "paper_doi": "null",
         "corresponding_author_name": "A. V. Gorškov",
-        "corresponding_email_address": null,
-        "physical_address": null,
+        "corresponding_email_address": "null",
+        "physical_address": "null",
         "publication_year": "1986"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 2050,
       "extraction_success": true,
-      "processing_time": 8.970484256744385,
+      "processing_time": 11.31169080734253,
       "extracted_count": 1
     }
   ]

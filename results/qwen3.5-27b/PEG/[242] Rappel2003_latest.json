@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[242] Rappel2003.pdf",
-    "extraction_date": "2026-06-08T00:35:45.675020",
+    "extraction_date": "2026-07-01T01:54:05.474158",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[242] Rappel2003.pdf",
-      "start_time": "2026-06-08T00:00:35.429983",
+      "start_time": "2026-07-01T01:18:43.613056",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 58.17600655555725,
+          "time_seconds": 55.98279094696045,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11088728904724121,
+          "time_seconds": 0.10766363143920898,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11920
         },
         "llm_extraction": {
-          "time_seconds": 2051.958034992218,
+          "time_seconds": 2065.7383148670197,
           "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -40,8 +45,8 @@
       "section": "Full Paper",
       "token_count": 11920,
       "extraction_success": false,
-      "processing_time": 683.8371832370758,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"Polyethylene glycol (PEG)\",\n      \"critical_component\": \"Polyoxyethylene (EO) chain\",\n      \"architecture\": \"Linear homopolymer\",\n      \"critical_condition_basis\": \"Elution volumes of different molar masses intersect at a plateau\",\n      "
+      "processing_time": 688.7687122821808,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"Polyethylene glycol (PEG)\",\n      \"critical_component\": \"Polyoxyethylene (EO) unit\",\n      \"architecture\": \"Linear homopolymer\",\n      \"critical_condition_basis\": \"Critical interaction point (CIP) where elution volume is independent of mo"
     }
   ]
 }

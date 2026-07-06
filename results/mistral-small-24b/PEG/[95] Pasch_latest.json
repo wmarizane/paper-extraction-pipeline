@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[95] Pasch.pdf",
-    "extraction_date": "2026-06-08T02:02:15.035331",
+    "extraction_date": "2026-07-02T00:40:36.333491",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[95] Pasch.pdf",
-      "start_time": "2026-06-08T02:00:55.393104",
+      "start_time": "2026-07-02T00:39:16.093793",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 65.79055547714233,
+          "time_seconds": 63.437236070632935,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13164734840393066,
+          "time_seconds": 0.10623359680175781,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8738
         },
         "llm_extraction": {
-          "time_seconds": 13.719855308532715,
+          "time_seconds": 16.655099391937256,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide—block—propylene oxide)",
-        "critical_component": "polypropylene oxide",
+        "analyte_polymer": "HO(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
         "architecture": "block copolymer",
-        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey—Nagel 5C; column",
         "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 5C18",
-        "stationary_phase_chemistry": "C18",
+        "column_name": "Macherey—Nagel 5C;",
+        "stationary_phase_chemistry": "null",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -48,22 +54,31 @@
         "mobile_phase_ratio": "43:57",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": null,
+          "pH": "null",
           "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_type": "null",
+          "salt_concentration": "null"
         },
-        "temperature_celsius": null,
+        "temperature_celsius": "null",
         "flow_rate": "0.5 ml/min",
-        "pore_size": null,
+        "pore_size": "null",
         "column_dimensions": "250 x 4 mm",
         "detector": "refractive index",
-        "evidence_text": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (42:58, v/v) on a Chrompack RP-18 stationary phase [9]. As the present investigations were carried out on a Macherey—Nagel 5C18 column, the composition of the mobile phase had to be adjusted accordingly. Polyethylene oxide calibration standards of different molar masses were separated using acetonitrile-water of varying composition. The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile—water (43:57, v/v); see Fig. 1.",
-        "notes": null,
-        "paper_doi": null,
-        "corresponding_author_name": "Dr. H. Pasch",
-        "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany",
+        "field_evidence": {
+          "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey—Nagel 5C; column",
+          "critical_component": "polyethylene oxide",
+          "column_name": "Macherey—Nagel 5C;",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "43:57, v/v",
+          "temperature_celsius": "null",
+          "pore_size": "null",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "H. Pasch; C. Brinkmann; H. Much; U. Just",
+        "corresponding_email_address": "null",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt (Germany); Centre of Macromolecular Chemistry, Rudower Chaussee 5, O-1199, Berlin (Germany); Federal Institute of Materials Research and Testing, Department 3, Unter den Eichen 87, W-1000 Berlin 45 (Germany)",
         "publication_year": "1992"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 8738,
       "extraction_success": true,
-      "processing_time": 13.706594705581665,
+      "processing_time": 16.540674924850464,
       "extracted_count": 1
     }
   ]

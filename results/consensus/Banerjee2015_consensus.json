@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -73,39 +73,6 @@
         "detector": "Refractive Index (RI) detector",
         "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
         "notes": "RI detector used for quantitative analysis; ELS detector also used but noted as non-linear for quantification.",
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "corresponding_author_name": "Rudolf Faust",
-        "corresponding_email_address": "Rudolf Faust@uml.edu",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "publication_year": "2015"
-      },
-      {
-        "analyte_polymer": "PIB-diol",
-        "critical_component": "PIB-diol",
-        "architecture": "telechelic",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "YMC HPLC COLUMN",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
-        "mobile_phase_ratio": "80.5/19.5",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "35",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "120 A[˚]",
-        "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "Waters 2414 Refractive Index detector",
-        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. For UV/RI system, a Waters 2414 Refractive Index detector at 30[◦] C was used along with a Waters 2996 Photodiode Array detector operating at A = 254 nm. 10 we L samples of 0.5 wt% polymer solutions were injected for UV/RI system. All measurements were carried out at a constant column temperature of 35[◦] C and constant sample temperature of 30[◦] C. One reversed phase C18 chromatography column (YMC HPLC COLUMN) with average particle size = 5 we m, pore diameters = 120 A i][˚] and column size (Inner diameter × Length) = 4.6 mm × 250 mm was used. HPLC grade THF and methanol were used to prepare the mobile phase and the solution of the polymers. The solvents were freshly distilled before use to avoid any degassing related issue. The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). Premixing of the mobile phase by weight is necessary for a constant and exact composition. Samples were prepared by dissolving polymer in THF/methanol 80.5/19.5 (w/w).",
-        "notes": null,
         "paper_doi": "10.1016/j.chroma.2014.12.022",
         "corresponding_author_name": "Rudolf Faust",
         "corresponding_email_address": "Rudolf Faust@uml.edu",

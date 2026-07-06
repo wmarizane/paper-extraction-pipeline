@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[332] Malik2016.pdf",
-    "extraction_date": "2026-06-08T00:20:10.347898",
+    "extraction_date": "2026-07-01T22:38:37.761517",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[332] Malik2016.pdf",
-      "start_time": "2026-06-08T00:19:11.340176",
+      "start_time": "2026-07-01T22:37:30.644236",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 29.48090624809265,
+          "time_seconds": 27.677379846572876,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10503888130187988,
+          "time_seconds": 0.11116266250610352,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8256
         },
         "llm_extraction": {
-          "time_seconds": 29.42162537574768,
+          "time_seconds": 39.288835287094116,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "PPO",
         "critical_component": "PPO",
         "architecture": "null",
-        "critical_condition_basis": "Critical adsorption point (CAP)",
+        "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi DVB 500 RP",
         "stationary_phase_chemistry": "100 % poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -48,20 +54,29 @@
         "mobile_phase_ratio": "80/20",
         "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
+        "flow_rate": null,
         "pore_size": "500 Ǻ",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "Critical adsorption point (CAP) of PPO were found in 80 % THF: Water mobile phase on jordi RP column",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
+          "critical_component": "PPO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "80/20 w/w",
+          "temperature_celsius": "25 °C",
+          "pore_size": "500 Ǻ",
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1007/s10965-016-1141-z",
-        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
         "corresponding_email_address": "mimran.malik@iccs.edu",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2016"
@@ -70,10 +85,11 @@
         "analyte_polymer": "PBO",
         "critical_component": "PBO",
         "architecture": "null",
-        "critical_condition_basis": "Critical adsorption point (CAP)",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi DVB 500 RP",
         "stationary_phase_chemistry": "100 % poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -81,20 +97,29 @@
         "mobile_phase_ratio": "84/16",
         "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
+        "flow_rate": null,
         "pore_size": "500 Ǻ",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
+          "critical_component": "PBO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "84/16 w/w",
+          "temperature_celsius": "25 °C",
+          "pore_size": "500 Ǻ",
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1007/s10965-016-1141-z",
-        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
         "corresponding_email_address": "mimran.malik@iccs.edu",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2016"
@@ -103,10 +128,11 @@
         "analyte_polymer": "PHO",
         "critical_component": "PHO",
         "architecture": "null",
-        "critical_condition_basis": "Critical adsorption point (CAP)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi DVB 500 RP",
         "stationary_phase_chemistry": "100 % poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -114,20 +140,29 @@
         "mobile_phase_ratio": "87/13",
         "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
+        "flow_rate": null,
         "pore_size": "500 Ǻ",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
+          "critical_component": "PHO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "87/13 w/w",
+          "temperature_celsius": "25 °C",
+          "pore_size": "500 Ǻ",
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1007/s10965-016-1141-z",
-        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
         "corresponding_email_address": "mimran.malik@iccs.edu",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2016"
@@ -140,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 8256,
       "extraction_success": true,
-      "processing_time": 29.409685611724854,
+      "processing_time": 39.17460322380066,
       "extracted_count": 3
     }
   ]

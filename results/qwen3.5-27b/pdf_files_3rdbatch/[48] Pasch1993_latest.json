@@ -1,69 +1,43 @@
 {
   "metadata": {
     "source_pdf": "[48] Pasch1993.pdf",
-    "extraction_date": "2026-06-07T23:44:27.238056",
+    "extraction_date": "2026-07-01T01:04:49.962842",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[48] Pasch1993.pdf",
-      "start_time": "2026-06-07T23:42:40.036201",
+      "start_time": "2026-07-01T01:04:12.596073",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.73126411437988,
+          "time_seconds": 33.260042667388916,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1138601303100586,
+          "time_seconds": 0.11734843254089355,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 783
         },
         "llm_extraction": {
-          "time_seconds": 70.35661721229553,
+          "time_seconds": 3.9564599990844727,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "43204"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
-        "critical_component": "poly(methyl methacrylate)",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "chromatographic conditions resulting in a critical mode for poly(methyl methacrylate)",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "Block copolymers of decyl and methyl methacrylate were analyzed by liquid chromatography at the critical point of adsorption. The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
-        "notes": "Specific mobile phase composition and column details are not provided in the summary or introduction text.",
-        "paper_doi": null,
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "1993"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
@@ -71,8 +45,8 @@
       "section": "Full Paper",
       "token_count": 783,
       "extraction_success": true,
-      "processing_time": 70.33384919166565,
-      "extracted_count": 1
+      "processing_time": 3.8983325958251953,
+      "extracted_count": 0
     }
   ]
 }

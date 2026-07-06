@@ -1,79 +1,52 @@
 {
   "metadata": {
     "source_pdf": "[372] Trathnigg2005.pdf",
-    "extraction_date": "2026-06-08T01:49:11.515870",
+    "extraction_date": "2026-07-02T00:30:23.812885",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[372] Trathnigg2005.pdf",
-      "start_time": "2026-06-08T01:47:56.421001",
+      "start_time": "2026-07-02T00:25:16.366291",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.052195072174072,
+          "time_seconds": 18.983882665634155,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10610103607177734,
+          "time_seconds": 0.11303114891052246,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10881
         },
         "llm_extraction": {
-          "time_seconds": 56.93641996383667,
+          "time_seconds": 288.3070776462555,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 6
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "polyethylene glycol",
         "critical_component": "oxyethylene unit",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Zorbax 300 C18",
-        "stationary_phase_chemistry": "octadecyl",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "85.8",
-        "mobile_phase_ratio_units": "wt.%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "15.0-35.0",
-        "flow_rate": null,
-        "pore_size": "300 A",
-        "column_dimensions": "150 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "Critical conditions for PEG were realized on the studied reversed phase columns in aqueous mobile phases containing methanol, or acetone as organic modifier. While in the methanol–water system one critical point is found (85.8 wt.% of methanol for Zorbax 300 C18 column).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2005.06.028",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
-        "publication_year": "2005"
-      },
-      {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": "oxyethylene unit",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
         "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -86,12 +59,21 @@
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "15.0-35.0",
-        "flow_rate": null,
-        "pore_size": "100 A",
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
         "column_dimensions": "250 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "Critical conditions for PEG were realized on the studied reversed phase columns in aqueous mobile phases containing methanol, or acetone as organic modifier. For the Prodigy ODS3 column these critical points are localized at about 27 and 90 wt.% acetone, and for this study we have selected the mobile phase composition of 89.6% acetone.",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2005.06.028",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -102,11 +84,12 @@
       {
         "analyte_polymer": "polyethylene glycol",
         "critical_component": "oxyethylene unit",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
         "critical_condition_confidence": "explicit",
         "column_name": "Zorbax 300 C18",
         "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -119,45 +102,21 @@
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": null,
-        "pore_size": "300 A",
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 Å",
         "column_dimensions": "150 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "In methanol–water it obviously does not make sense to adjust critical conditions by varying the temperature. In acetone–water, however, temperature variation can also be used.",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2005.06.028",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
-        "publication_year": "2005"
-      },
-      {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": "oxyethylene unit",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "octadecyl",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "mobile_phase_ratio": "89.6",
-        "mobile_phase_ratio_units": "wt.%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Zorbax 300 C18",
+          "mobile_phase_solvents": "methanol–water",
+          "mobile_phase_ratio": "85.8 wt.% methanol",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "300 Å",
+          "flow_rate": "0.5 ml/min"
         },
-        "temperature_celsius": "11.0",
-        "flow_rate": null,
-        "pore_size": "100 A",
-        "column_dimensions": "250 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "From this plot, the critical temperature Tc = 11.0[◦] C is determined.",
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2005.06.028",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -168,11 +127,12 @@
       {
         "analyte_polymer": "fatty alcohol ethoxylates",
         "critical_component": "oxyethylene unit",
-        "architecture": "AB block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
         "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -185,12 +145,21 @@
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "15.0-35.0",
-        "flow_rate": null,
-        "pore_size": "100 A",
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
         "column_dimensions": "250 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "In acetone–water there are two critical points on silica-based C18 columns. At the second CAP (at 90–92 wt.% acetone) retention is in the desired range for BAB with an alkyl chain length of 12–18 carbon atoms.",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2005.06.028",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -201,11 +170,12 @@
       {
         "analyte_polymer": "fatty acid polyglycol esters",
         "critical_component": "oxyethylene unit",
-        "architecture": "BAB block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
         "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -218,12 +188,64 @@
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "15.0-35.0",
-        "flow_rate": null,
-        "pore_size": "100 A",
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
         "column_dimensions": "250 mm × 4.6 mm",
-        "detector": null,
-        "evidence_text": "In acetone–water there are two critical points on silica-based C18 columns. At the second CAP (at 90–92 wt.% acetone) retention is in the desired range for BAB with an alkyl chain length of 12–18 carbon atoms.",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "fatty acid polyglycol esters",
+        "critical_component": "oxyethylene unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Zorbax 300 C18",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "85.8",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "150 mm × 4.6 mm",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Zorbax 300 C18",
+          "mobile_phase_solvents": "methanol–water",
+          "mobile_phase_ratio": "85.8 wt.% methanol",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "300 Å",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2005.06.028",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -239,8 +261,8 @@
       "section": "Full Paper",
       "token_count": 10881,
       "extraction_success": true,
-      "processing_time": 56.92296051979065,
-      "extracted_count": 6
+      "processing_time": 54.41597127914429,
+      "extracted_count": 5
     }
   ]
 }

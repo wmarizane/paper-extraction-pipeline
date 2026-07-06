@@ -1,35 +1,40 @@
 {
   "metadata": {
     "source_pdf": "[289] Banerjee2015.pdf",
-    "extraction_date": "2026-06-07T23:38:54.018844",
+    "extraction_date": "2026-07-01T20:12:46.670348",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[289] Banerjee2015.pdf",
-      "start_time": "2026-06-07T23:36:37.441284",
+      "start_time": "2026-07-01T20:11:18.313731",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 69.41422390937805,
+          "time_seconds": 71.81047773361206,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11904501914978027,
+          "time_seconds": 0.1033315658569336,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9349
         },
         "llm_extraction": {
-          "time_seconds": 67.0441403388977,
+          "time_seconds": 16.400274515151978,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
@@ -41,6 +46,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "YMC HPLC COLUMN",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "methanol"
@@ -57,112 +63,22 @@
         "flow_rate": "0.5 mL/min",
         "pore_size": "120 A",
         "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "RI",
-        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. For UV/RI system, a Waters 2414 Refractive Index detector at 30[◦] C was used along with a Waters 2996 Photodiode Array detector operating at A = 254 nm. 10 we L samples of 0.5 wt% polymer solutions were injected for UV/RI system. All measurements were carried out at a constant column temperature of 35[◦] C and constant sample temperature of 30[◦] C. One reversed phase C18 chromatography column (YMC HPLC COLUMN) with average particle size = 5 we m, pore diameters = 120 A i][˚] and column size (Inner diameter × Length) = 4.6 mm × 250 mm was used. HPLC grade THF and methanol were used to prepare the mobile phase and the solution of the polymers. The solvents were freshly distilled before use to avoid any degassing related issue. The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). Premixing of the mobile phase by weight is necessary for a constant and exact composition. Samples were prepared by dissolving polymer in THF/methanol 80.5/19.5 (w/w).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "corresponding_author_name": "Rudolf Faust",
-        "corresponding_email_address": "Rudolf Faust@uml.edu",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "publication_year": "2015"
-      },
-      {
-        "analyte_polymer": "PIB-monool",
-        "critical_component": "PIB-monool",
-        "architecture": "linear",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "YMC HPLC COLUMN",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
-        "mobile_phase_ratio": "80.5/19.5",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "detector": "Waters 2414 Refractive Index detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC using RI detector as a concentration detector allowed separation and quantification of PIB species according to their chemical heterogeneity",
+          "critical_component": "PIB-diol",
+          "column_name": "YMC HPLC COLUMN",
+          "mobile_phase_solvents": "THF and methanol",
+          "mobile_phase_ratio": "THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "constant column temperature of 35[◦] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
         },
-        "temperature_celsius": "35",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "120 A",
-        "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "RI",
-        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. For UV/RI system, a Waters 2414 Refractive Index detector at 30[◦] C was used along with a Waters 2996 Photodiode Array detector operating at A = 254 nm. 10 we L samples of 0.5 wt% polymer solutions were injected for UV/RI system. All measurements were carried out at a constant column temperature of 35[◦] C and constant sample temperature of 30[◦] C. One reversed phase C18 chromatography column (YMC HPLC COLUMN) with average particle size = 5 we m, pore diameters = 120 A i][˚] and column size (Inner diameter × Length) = 4.6 mm × 250 mm was used. HPLC grade THF and methanol were used to prepare the mobile phase and the solution of the polymers. The solvents were freshly distilled before use to avoid any degassing related issue. The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). Premixing of the mobile phase by weight is necessary for a constant and exact composition. Samples were prepared by dissolving polymer in THF/methanol 80.5/19.5 (w/w).",
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "corresponding_author_name": "Rudolf Faust",
-        "corresponding_email_address": "Rudolf Faust@uml.edu",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "publication_year": "2015"
-      },
-      {
-        "analyte_polymer": "PIB-diallyl",
-        "critical_component": "PIB-diallyl",
-        "architecture": "linear",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "YMC HPLC COLUMN",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
-        "mobile_phase_ratio": "80.5/19.5",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "35",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "120 A",
-        "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "RI",
-        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. For UV/RI system, a Waters 2414 Refractive Index detector at 30[◦] C was used along with a Waters 2996 Photodiode Array detector operating at A = 254 nm. 10 we L samples of 0.5 wt% polymer solutions were injected for UV/RI system. All measurements were carried out at a constant column temperature of 35[◦] C and constant sample temperature of 30[◦] C. One reversed phase C18 chromatography column (YMC HPLC COLUMN) with average particle size = 5 we m, pore diameters = 120 A i][˚] and column size (Inner diameter × Length) = 4.6 mm × 250 mm was used. HPLC grade THF and methanol were used to prepare the mobile phase and the solution of the polymers. The solvents were freshly distilled before use to avoid any degassing related issue. The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). Premixing of the mobile phase by weight is necessary for a constant and exact composition. Samples were prepared by dissolving polymer in THF/methanol 80.5/19.5 (w/w).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "corresponding_author_name": "Rudolf Faust",
-        "corresponding_email_address": "Rudolf Faust@uml.edu",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "publication_year": "2015"
-      },
-      {
-        "analyte_polymer": "PIB-dichloride",
-        "critical_component": "PIB-dichloride",
-        "architecture": "linear",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "YMC HPLC COLUMN",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
-        "mobile_phase_ratio": "80.5/19.5",
-        "mobile_phase_ratio_units": "w/w",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "35",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "120 A",
-        "column_dimensions": "4.6 mm × 250 mm",
-        "detector": "RI",
-        "evidence_text": "LCCC was conducted on a Waters HPLC system with Waters 2695 separation module at a flow rate of 0.5 mL/min. For UV/RI system, a Waters 2414 Refractive Index detector at 30[◦] C was used along with a Waters 2996 Photodiode Array detector operating at A = 254 nm. 10 we L samples of 0.5 wt% polymer solutions were injected for UV/RI system. All measurements were carried out at a constant column temperature of 35[◦] C and constant sample temperature of 30[◦] C. One reversed phase C18 chromatography column (YMC HPLC COLUMN) with average particle size = 5 we m, pore diameters = 120 A i][˚] and column size (Inner diameter × Length) = 4.6 mm × 250 mm was used. HPLC grade THF and methanol were used to prepare the mobile phase and the solution of the polymers. The solvents were freshly distilled before use to avoid any degassing related issue. The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). Premixing of the mobile phase by weight is necessary for a constant and exact composition. Samples were prepared by dissolving polymer in THF/methanol 80.5/19.5 (w/w).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "corresponding_author_name": "Rudolf Faust",
-        "corresponding_email_address": "Rudolf Faust@uml.edu",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
         "publication_year": "2015"
       }
     ]
@@ -173,8 +89,8 @@
       "section": "Full Paper",
       "token_count": 9349,
       "extraction_success": true,
-      "processing_time": 67.0294394493103,
-      "extracted_count": 4
+      "processing_time": 16.289228439331055,
+      "extracted_count": 1
     }
   ]
 }

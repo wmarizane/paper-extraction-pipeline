@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[296] Malik2020.pdf",
-    "extraction_date": "2026-06-07T23:31:40.167057",
+    "extraction_date": "2026-07-01T00:53:19.602948",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[296] Malik2020.pdf",
-      "start_time": "2026-06-07T22:55:32.101828",
+      "start_time": "2026-07-01T00:17:09.147193",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 90.72202634811401,
+          "time_seconds": 92.47789168357849,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11971473693847656,
+          "time_seconds": 0.11816215515136719,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 16945
         },
         "llm_extraction": {
-          "time_seconds": 2077.2233860492706,
+          "time_seconds": 2077.8254528045654,
           "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -40,8 +45,8 @@
       "section": "Full Paper",
       "token_count": 16945,
       "extraction_success": false,
-      "processing_time": 693.364337682724,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEO-PMMA block copolymers\",\n      \"critical_component\": \"PMMA\",\n      \"architecture\": \"di-block and tri-block\",\n      \"critical_condition_basis\": \"CCP of PMMA\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"column_name\": \"Prod"
+      "processing_time": 692.7511451244354,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEO-PMMA block copolymer\",\n      \"critical_component\": \"PMMA\",\n      \"architecture\": \"di-block and tri-block\",\n      \"critical_condition_basis\": \"Chromatographic critical conditions of PMMA were realized on octadecyl columns in acetonitri"
     }
   ]
 }

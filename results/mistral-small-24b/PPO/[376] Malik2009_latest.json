@@ -1,35 +1,40 @@
 {
   "metadata": {
     "source_pdf": "[376] Malik2009.pdf",
-    "extraction_date": "2026-06-08T00:32:56.918585",
+    "extraction_date": "2026-07-01T22:48:27.305261",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[376] Malik2009.pdf",
-      "start_time": "2026-06-08T00:31:30.419392",
+      "start_time": "2026-07-01T22:46:15.431077",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 29.07787823677063,
+          "time_seconds": 23.697186708450317,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12486433982849121,
+          "time_seconds": 0.10639333724975586,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9181
         },
         "llm_extraction": {
-          "time_seconds": 57.296231508255005,
+          "time_seconds": 108.0284059047699,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 5
+    "total_conditions": 9
   },
   "extracted_data": {
     "conditions": [
@@ -37,10 +42,11 @@
         "analyte_polymer": "EO–PO diblock copolymer",
         "critical_component": "EO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Chromolith RP18",
-        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "ACN",
           "water"
@@ -58,73 +64,16 @@
         "pore_size": null,
         "column_dimensions": "100 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In such a mobile phase, EO–PO diblocks elute just like the corresponding PPGs: on the Chromolith RP18 column (Fig. 2) retention (and resolution) is higher than on the macroporous Nucleosil 4000 C18 column (Fig. 3). As the critical point is rather a critical range in ACN–water (similar to methanol–water), one may adjust the retention not only by choosing a column with different pore dimensions, but also by moderate variation of mobile phase composition.",
-        "notes": null,
-        "paper_doi": "10.1002/jssc.200900043",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "EO–PO diblock copolymer",
-        "critical_component": "EO",
-        "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 4000-7 C18",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "ACN",
-          "water"
-        ],
-        "mobile_phase_ratio": "34 wt% ACN",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "critical_component": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "column_name": "Chromolith RP18 column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "34 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "4000 A",
-        "column_dimensions": "250 mm x 4 mm",
-        "detector": "ELSD",
-        "evidence_text": "In such a mobile phase, EO–PO diblocks elute just like the corresponding PPGs: on the Chromolith RP18 column (Fig. 2) retention (and resolution) is higher than on the macroporous Nucleosil 4000 C18 column (Fig. 3). As the critical point is rather a critical range in ACN–water (similar to methanol–water), one may adjust the retention not only by choosing a column with different pore dimensions, but also by moderate variation of mobile phase composition.",
-        "notes": null,
-        "paper_doi": "10.1002/jssc.200900043",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "EO–PO diblock copolymer",
-        "critical_component": "EO",
-        "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "ACN",
-          "water"
-        ],
-        "mobile_phase_ratio": "34 wt% ACN",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "100 A",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "In such a mobile phase, EO–PO diblocks elute just like the corresponding PPGs: on the Chromolith RP18 column (Fig. 2) retention (and resolution) is higher than on the macroporous Nucleosil 4000 C18 column (Fig. 3). As the critical point is rather a critical range in ACN–water (similar to methanol–water), one may adjust the retention not only by choosing a column with different pore dimensions, but also by moderate variation of mobile phase composition.",
         "notes": null,
         "paper_doi": "10.1002/jssc.200900043",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -136,10 +85,11 @@
         "analyte_polymer": "EO–PO diblock copolymer",
         "critical_component": "PO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb S5X",
         "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "ACN",
           "water"
@@ -157,7 +107,16 @@
         "pore_size": "300 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN. Under these conditions PEG has a positive interaction parameter (approximately 2 nm[– 1] ) and thus elutes in LAC order. On this column, which has a pore diameter of 300 A, we could separate the homopolymer (PPG) from the block copolymer and furthermore we can separate the block copolymer oligomers according to the length of the EO block irrespective of the PO block.",
+        "field_evidence": {
+          "critical_condition_basis": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "critical_component": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "column_name": "Spherisorb S5X column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "71 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900043",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -169,10 +128,11 @@
         "analyte_polymer": "EO–PO diblock copolymer",
         "critical_component": "PO",
         "architecture": "diblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil Si 120",
         "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "ACN",
           "water"
@@ -187,10 +147,277 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 mL/min",
-        "pore_size": "120 A",
+        "pore_size": null,
         "column_dimensions": "250 mm x 4 mm",
         "detector": "ELSD",
-        "evidence_text": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN. In such a mobile phase, PEG has an interaction parameter of approximately 2.4 nm[– 1] .",
+        "field_evidence": {
+          "critical_condition_basis": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "critical_component": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "column_name": "Nucleosil Si 120 A column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "87 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chromolith RP18",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "34 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "100 mm x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "critical_component": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "column_name": "Chromolith RP18 column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "34 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb S5X",
+        "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "71 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "critical_component": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "column_name": "Spherisorb S5X column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "71 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 120",
+        "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "87 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 mm x 4 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "critical_component": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "column_name": "Nucleosil Si 120 A column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "87 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chromolith RP18",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "34 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "100 mm x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "critical_component": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "column_name": "Chromolith RP18 column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "34 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb S5X",
+        "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "71 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "critical_component": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "column_name": "Spherisorb S5X column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "71 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 120",
+        "stationary_phase_chemistry": "plain silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "87 wt% ACN",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 mm x 4 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "critical_component": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "column_name": "Nucleosil Si 120 A column",
+          "mobile_phase_solvents": "ACN–water mobile phases",
+          "mobile_phase_ratio": "87 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900043",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -206,8 +433,8 @@
       "section": "Full Paper",
       "token_count": 9181,
       "extraction_success": true,
-      "processing_time": 57.28319454193115,
-      "extracted_count": 5
+      "processing_time": 107.91403460502625,
+      "extracted_count": 9
     }
   ]
 }

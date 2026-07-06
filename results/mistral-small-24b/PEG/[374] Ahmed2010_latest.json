@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[374] Ahmed2010.pdf",
-    "extraction_date": "2026-06-08T01:51:46.591518",
+    "extraction_date": "2026-07-02T00:33:11.005465",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[374] Ahmed2010.pdf",
-      "start_time": "2026-06-08T01:51:08.506343",
+      "start_time": "2026-07-02T00:32:29.236561",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 8.323987007141113,
+          "time_seconds": 8.83601713180542,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11968636512756348,
+          "time_seconds": 0.11678266525268555,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7968
         },
         "llm_extraction": {
-          "time_seconds": 29.641358137130737,
+          "time_seconds": 32.77464485168457,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,16 +42,17 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "stationary_phase_chemistry": "dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "32",
-        "mobile_phase_ratio_units": "vol-%",
+        "mobile_phase_ratio": "32 vol-%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -58,7 +64,16 @@
         "pore_size": "80 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In PEG 350 one may expect a PEG similar to PEG 600, in PEG-MME 550 similar to PEG 900. In both cases, an excellent separation could be achieved.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "32 vol-%",
+          "temperature_celsius": "251C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900847",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -70,16 +85,17 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "stationary_phase_chemistry": "dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "32",
-        "mobile_phase_ratio_units": "vol-%",
+        "mobile_phase_ratio": "32 vol-%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -91,7 +107,16 @@
         "pore_size": "80 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In PEG 350 one may expect a PEG similar to PEG 600, in PEG-MME 550 similar to PEG 900. In both cases, an excellent separation could be achieved.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "32 vol-%",
+          "temperature_celsius": "251C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900847",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -103,16 +128,17 @@
         "analyte_polymer": "PEG-MME",
         "critical_component": "PEG-MME",
         "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "stationary_phase_chemistry": "dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "32",
-        "mobile_phase_ratio_units": "vol-%",
+        "mobile_phase_ratio": "32 vol-%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -124,7 +150,16 @@
         "pore_size": "80 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In PEG 350 one may expect a PEG similar to PEG 600, in PEG-MME 550 similar to PEG 900. In both cases, an excellent separation could be achieved.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG-MME",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "32 vol-%",
+          "temperature_celsius": "251C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900847",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -140,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 7968,
       "extraction_success": true,
-      "processing_time": 29.6305148601532,
+      "processing_time": 32.68247675895691,
       "extracted_count": 3
     }
   ]

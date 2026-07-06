@@ -60,6 +60,7 @@ CANONICAL_POLYMERS = {
     "plla": "poly(lactic acid)",
     "poly(lactic acid)": "poly(lactic acid)",
     "poly(l-lactic acid)": "poly(lactic acid)",
+    "poly(l-lactide)": "poly(lactic acid)",
     "poly(lactide)": "poly(lactic acid)",
     "polylactide": "poly(lactic acid)",
     "pi": "polyisoprene",
@@ -67,6 +68,40 @@ CANONICAL_POLYMERS = {
     "1,4-pi": "polyisoprene",
     "polyisoprene (1,4-pi)": "polyisoprene",
     "polyisoprene (1,4-isoprene)": "polyisoprene",
+    # --- Extended entries for generality ---
+    "pcl": "poly(caprolactone)",
+    "poly(caprolactone)": "poly(caprolactone)",
+    "polycaprolactone": "poly(caprolactone)",
+    "pdms": "poly(dimethylsiloxane)",
+    "poly(dimethylsiloxane)": "poly(dimethylsiloxane)",
+    "polydimethylsiloxane": "poly(dimethylsiloxane)",
+    "pba": "poly(butyl acrylate)",
+    "poly(butyl acrylate)": "poly(butyl acrylate)",
+    "pbs": "poly(butylene succinate)",
+    "poly(butylene succinate)": "poly(butylene succinate)",
+    "pvac": "poly(vinyl acetate)",
+    "poly(vinyl acetate)": "poly(vinyl acetate)",
+    "pvp": "poly(vinylpyrrolidone)",
+    "poly(vinylpyrrolidone)": "poly(vinylpyrrolidone)",
+    "pnipam": "poly(n-isopropylacrylamide)",
+    "poly(n-isopropylacrylamide)": "poly(n-isopropylacrylamide)",
+    "poly(nipam)": "poly(n-isopropylacrylamide)",
+    "pvc": "poly(vinyl chloride)",
+    "poly(vinyl chloride)": "poly(vinyl chloride)",
+    "paa": "poly(acrylic acid)",
+    "poly(acrylic acid)": "poly(acrylic acid)",
+    "pmaa": "poly(methacrylic acid)",
+    "poly(methacrylic acid)": "poly(methacrylic acid)",
+    "pet": "poly(ethylene terephthalate)",
+    "poly(ethylene terephthalate)": "poly(ethylene terephthalate)",
+    "ptba": "poly(tert-butyl acrylate)",
+    "poly(tert-butyl acrylate)": "poly(tert-butyl acrylate)",
+    "pha": "poly(hydroxyalkanoate)",
+    "poly(hydroxyalkanoate)": "poly(hydroxyalkanoate)",
+    "phb": "poly(3-hydroxybutyrate)",
+    "poly(3-hydroxybutyrate)": "poly(3-hydroxybutyrate)",
+    "pa": "polyamide",
+    "polyamide": "polyamide",
 }
 
 CANONICAL_SOLVENTS = {
@@ -100,6 +135,16 @@ CANONICAL_SOLVENTS = {
 ARCH_PREFIX_RE = re.compile(
     r'^(ring|cyclic|linear|star|comb|ls|lu|it|at|st|dendri|hyper|branched)[_\-\s]+',
     re.IGNORECASE
+)
+
+_CONSENSUS_MW_TOKEN_RE = re.compile(r'(?:\b|(?<=[a-zA-Z\-_]))(\d{2,}[kKmMgG]?|\d+[kKmMgG]+)\b')
+_CONSENSUS_FUNCTIONAL_SUFFIX_RE = re.compile(
+    r'\b(diol|diene|diallyl|monool|dichloride|diolefin|diamine|dicarboxyl|'
+    r'hydroxyl|amine|acid|acrylate|methacrylate)\b',
+    re.IGNORECASE
+)
+_CONSENSUS_BENIGN_EXTRA_RE = re.compile(
+    r'^(homopolymer|standard|calibrant|backbone|chain|grade|sample|type\s+[a-z0-9])?$'
 )
 
 CONSENSUS_SCHEMA = {
@@ -168,9 +213,9 @@ INSTRUCTIONS:
 1. **MODEL RELIABILITY PRIORS**: Qwen3.5-27B has higher extraction fidelity and precision. Mistral-small-24B is more prone to hallucinations and merging unrelated conditions. When the two extractions disagree:
    a. Prefer the extraction whose evidence_text directly and specifically supports the claim.
    b. If evidence quality is ambiguous or comparable, prefer Qwen's extraction.
-   c. Only override Qwen when Mistral provides clearly stronger evidence_text that directly quotes or closely paraphrases the source paper.
+   c. Only override Qwen when Mistral's field_evidence quotes directly and specifically support a different value. Prefer Qwen's extraction by default.
    d. If Mistral contains a record that Qwen completely missed, validate it carefully against its own evidence_text before including it.
-2. Use your <think> tags to debate discrepancies. Look closely at the "evidence_text" provided by each extraction to deduce which agent correctly interpreted the paper.
+2. Use your <think> tags to debate discrepancies. Look closely at the "field_evidence" sub-fields provided by each extraction — specifically mobile_phase_ratio, critical_component, and temperature_celsius — to deduce which agent correctly interpreted the paper.
 3. Identify and merge duplicates into a single comprehensive record.
 4. Reject any hallucinated conditions that lack explicit or strong inference in the evidence text.
 5. If one extraction captured valid secondary fields (like pore size or detector) that the other missed, merge them together.
@@ -217,7 +262,16 @@ JSON SCHEMA:
         "pore_size": "string or null",
         "column_dimensions": "string or null",
         "detector": "string or null",
-        "evidence_text": "string or null",
+        "field_evidence": {{
+          "critical_condition_basis": "Verbatim quote establishing this IS a critical condition, or null",
+          "critical_component":       "Verbatim quote naming which polymer/block is at critical condition, or null",
+          "column_name":              "Verbatim quote stating the column name, or null",
+          "mobile_phase_solvents":    "Verbatim quote naming the solvents, or null",
+          "mobile_phase_ratio":       "Verbatim quote giving the composition/ratio, or null",
+          "temperature_celsius":      "Verbatim quote stating the column temperature, or null",
+          "pore_size":                "Verbatim quote stating the pore size, or null",
+          "flow_rate":                "Verbatim quote stating the flow rate, or null"
+        }},
         "notes": "string or null",
         "paper_doi": "string or null",
         "corresponding_author_name": "string or null — if multiple, join with '; '",
@@ -316,11 +370,12 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
     @staticmethod
     def _norm_ratio(ratio):
-        """Normalize mobile phase ratio by stripping spaces, lowering, and unifying separators."""
+        """Normalize mobile phase ratio by stripping spaces, lowering, and unifying separators.
+        Handles ASCII slashes/hyphens and Unicode en-dash (–) and em-dash (—)."""
         if not ratio:
             return ""
         ratio = str(ratio).lower().strip()
-        ratio = re.sub(r'[/\\-]', ':', ratio)
+        ratio = re.sub(r'[/\\–—-]', ':', ratio)   # add Unicode en-dash and em-dash
         return re.sub(r'\s+', '', ratio)
 
     @staticmethod
@@ -429,8 +484,135 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
                     
         return False
 
-    @staticmethod
-    def _chromatographic_match(ca: Dict, cb: Dict) -> bool:
+    def _analyte_base_family_match(self, a: str, b: str) -> bool:
+        """
+        Determines if two polymer name strings refer to the same polymer family
+        despite syntactic or specificity differences. Designed to be GENERAL:
+        it handles unseen naming patterns through structural rules, not case-by-case
+        pattern matching.
+
+        HARD PRE-BLOCKS (checked before any matching):
+          - Both strings have different functional group suffixes (diol vs diallyl)
+            → always different analytes → returns False immediately.
+          - One string is a block copolymer (-b-, "block copolymer") and the other
+            is not → different polymer types → returns False immediately.
+
+        RULE 1 — Parenthetical strip + benign-descriptor containment:
+          Remove parenthetical annotations, then check if the shorter cleaned string
+          is a whole-word substring of the longer, with the extra text being a benign
+          descriptor (homopolymer, standard, calibrant, etc.).
+          Handles: "polyisoprene (1,4-pi)" vs "polyisoprene",
+                   "ppo homopolymer" vs "ppo",
+                   "poly(oxypropylenpolyolen)" vs "poly(oxypropylenpolyol)".
+
+        RULE 2 — Architecture-aware canonicalization with token lookup + MW guard:
+          Extracts any architecture prefix (ring/cyclic/linear/star/comb/etc.) from
+          each string. If BOTH strings have arch prefixes and they DIFFER → skip
+          (different architectures, e.g. ring-PS ≠ linear-PS even if same base polymer).
+          Then canonicalizes the arch-stripped remainder via:
+            a) Direct lookup in CANONICAL_POLYMERS
+            b) Hyphen-token lookup: splits on hyphens, checks each token against
+               CANONICAL_POLYMERS (catches "c4h9-PLA-oh" → "pla" token → poly(lactic acid))
+          If both remainders canonicalize to the same known family → checks MW guard:
+          if BOTH strings contain a multi-digit number or k/M suffix (MW grade indicator),
+          they are a molecular-weight series → NOT merged (e.g. "peg 2k" ≠ "peg 6k",
+          "c10-PEO" ≠ "c12-PEO").
+
+        RULE 3 — _is_abbreviation:
+          Delegates to the existing _is_abbreviation method. Handles PS↔polystyrene,
+          PCL↔poly(caprolactone), PDMS↔poly(dimethylsiloxane), etc.
+
+        RULE 4 — Unicode dash normalization:
+          After replacing Unicode en/em dashes with ASCII hyphens, if the strings
+          are identical → match. Handles "styrene—butadiene" vs "styrene-butadiene".
+        """
+        if not a or not b:
+            return False
+        a_l = a.lower().strip()
+        b_l = b.lower().strip()
+        if a_l == b_l:
+            return True
+
+        # ── HARD PRE-BLOCK 1: different functional group suffixes ─────────────
+        a_func = _CONSENSUS_FUNCTIONAL_SUFFIX_RE.search(a_l)
+        b_func = _CONSENSUS_FUNCTIONAL_SUFFIX_RE.search(b_l)
+        if a_func and b_func and a_func.group().lower() != b_func.group().lower():
+            return False
+
+        # ── HARD PRE-BLOCK 2: block copolymer vs homopolymer ─────────────────
+        a_is_block = bool(re.search(r'-b-|block\s+copolymer', a_l))
+        b_is_block = bool(re.search(r'-b-|block\s+copolymer', b_l))
+        if a_is_block != b_is_block:
+            return False
+
+        # ── RULE 1: Parenthetical strip + benign-descriptor containment ───────
+        a_s = re.sub(r'\s*\([^)]*\)', '', a_l).strip()
+        b_s = re.sub(r'\s*\([^)]*\)', '', b_l).strip()
+        if a_s and b_s:
+            if a_s == b_s:
+                return True
+            shorter, longer = (a_s, b_s) if len(a_s) <= len(b_s) else (b_s, a_s)
+            if shorter and shorter in longer:
+                extra = re.sub(re.escape(shorter), '', longer, count=1)
+                extra = extra.strip(' -\u2013\u2014/,')
+                if _CONSENSUS_BENIGN_EXTRA_RE.match(extra):
+                    return True
+
+        # ── RULE 2: Architecture-aware canonicalization with token lookup ──────
+        def _extract_arch(s):
+            m = ARCH_PREFIX_RE.match(s)
+            if m:
+                return m.group(0).strip(' -\u2013\u2014_'), s[m.end():].strip()
+            return None, s
+
+        def _canon_with_token_lookup(s):
+            """Canonicalize: direct lookup → arch-strip lookup → hyphen-token lookup."""
+            s_c = re.sub(r'[^a-z0-9]', '', s)
+            # Direct
+            for key, canon in CANONICAL_POLYMERS.items():
+                if s_c == re.sub(r'[^a-z0-9]', '', key) or s == key:
+                    return canon
+            # Arch-strip already done by caller; try token lookup on what remains
+            tokens = [t for t in re.split(r'[-\u2013\u2014\s]+', s) if len(t) >= 2]
+            for token in tokens:
+                t_c = re.sub(r'[^a-z0-9]', '', token)
+                if len(t_c) < 2:
+                    continue
+                for key, canon in CANONICAL_POLYMERS.items():
+                    key_c = re.sub(r'[^a-z0-9]', '', key)
+                    if len(key_c) >= 2 and (t_c == key_c or t_c.rstrip('s') == key_c):
+                        return canon
+            return None  # No canonical match
+
+        arch_a, base_a = _extract_arch(a_l)
+        arch_b, base_b = _extract_arch(b_l)
+
+        # If BOTH have arch prefixes AND they differ → different architectures → skip
+        if arch_a and arch_b and arch_a != arch_b:
+            pass  # fall through — don't return False, let other rules try
+        else:
+            canon_a = _canon_with_token_lookup(base_a)
+            canon_b = _canon_with_token_lookup(base_b)
+            if canon_a and canon_b and canon_a == canon_b:
+                # MW guard: block if both have distinct MW grade tokens
+                a_mw = bool(_CONSENSUS_MW_TOKEN_RE.search(a_l))
+                b_mw = bool(_CONSENSUS_MW_TOKEN_RE.search(b_l))
+                if not (a_mw and b_mw):
+                    return True
+
+        # ── RULE 3: _is_abbreviation ─────────────────────────────────────────
+        if self._is_abbreviation(a_l, b_l):
+            return True
+
+        # ── RULE 4: Unicode dash normalization ───────────────────────────────
+        a_d = re.sub(r'[\u2013\u2014]', '-', a_l)
+        b_d = re.sub(r'[\u2013\u2014]', '-', b_l)
+        if a_d == b_d:
+            return True
+
+        return False
+
+    def _chromatographic_match(self, ca: Dict, cb: Dict) -> bool:
         """
         Fuzzy chromatographic fingerprint matching with abbreviation and synonym support.
         
@@ -547,15 +729,25 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         # to agree (or at least one to be missing) to prevent merging distinct analytes
         # that share the same column/solvent setup (e.g., PEG vs PEG-MME).
         if len(chrom_signals) >= 2 and chrom_contradictions == 0:
-            # Use STRICT analyte identity for the override (no lenient Jaccard).
-            # Two analytes must be canonically equal to merge via chromatographic override.
+            # Use _analyte_base_family_match for the override. This accepts:
+            #   - exact canonical equality (existing behaviour)
+            #   - parenthetical annotation variants
+            #   - architecture-aware end-group-specific names
+            #   - abbreviation matches (PS↔polystyrene)
+            #   - unicode dash variants
+            # While blocking:
+            #   - MW series (peg 2010 ≠ peg 6240)
+            #   - functional-group variants (pib-diol ≠ pib-diallyl)
+            #   - block copolymer vs homopolymer
             strict_analyte_ok = (
-                not analyte_a or not analyte_b or  # one side missing — OK
-                analyte_a_canon == analyte_b_canon  # canonical match — OK
+                not analyte_a or not analyte_b or
+                analyte_a_canon == analyte_b_canon or
+                self._analyte_base_family_match(analyte_a, analyte_b)
             )
             strict_comp_ok = (
-                not comp_a or not comp_b or  # one side missing — OK
-                comp_a_canon == comp_b_canon  # canonical match — OK
+                not comp_a or not comp_b or
+                comp_a_canon == comp_b_canon or
+                self._analyte_base_family_match(comp_a, comp_b)
             )
             if strict_analyte_ok and strict_comp_ok:
                 return True
@@ -580,7 +772,35 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         """Merge two conditions, resolving conflicts via Dispute Resolution if necessary."""
         merged = {}
         disputes = []
+        
+        # --- Special handling: merge field_evidence sub-fields ---
+        fe_a = ca.get("field_evidence") or {}
+        fe_b = cb.get("field_evidence") or {}
+        if fe_a or fe_b:
+            merged_fe = {}
+            fe_fields = [
+                "critical_condition_basis", "critical_component", "column_name",
+                "mobile_phase_solvents", "mobile_phase_ratio", "temperature_celsius",
+                "pore_size", "flow_rate"
+            ]
+            for fe_field in fe_fields:
+                va = fe_a.get(fe_field)
+                vb = fe_b.get(fe_field)
+                if va and vb:
+                    # Both present: prefer Qwen (source_model priority)
+                    source_a = ca.get("source_model")
+                    if source_a == "qwen":
+                        merged_fe[fe_field] = va
+                    else:
+                        merged_fe[fe_field] = vb
+                else:
+                    merged_fe[fe_field] = va or vb  # take whichever is non-null
+            merged["field_evidence"] = merged_fe
+
+        # --- Generic merge for all other fields ---
         for k in set(ca.keys()) | set(cb.keys()):
+            if k == "field_evidence":
+                continue  # already handled above
             va = ca.get(k)
             vb = cb.get(k)
             
@@ -609,21 +829,35 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
             for k, va, vb in disputes:
                 # Exclude dicts/lists from simple string dispute resolution for now
                 if isinstance(va, str) and isinstance(vb, str) and len(va) < 200:
-                    resolved = self._resolve_dispute(k, va, vb, ca.get("evidence_text", ""), cb.get("evidence_text", ""))
+                    resolved = self._resolve_dispute(
+                        k, va, vb, 
+                        ca.get("field_evidence") or {}, 
+                        cb.get("field_evidence") or {}
+                    )
                     merged[k] = resolved
                     
         return merged
 
-    def _resolve_dispute(self, field: str, val_a: str, val_b: str, ev_a: str, ev_b: str) -> str:
+    def _resolve_dispute(self, field: str, val_a: str, val_b: str, fe_a: dict, fe_b: dict) -> str:
         """Runs a tiny focused prompt to resolve a field contradiction."""
+        relevant_fe_field = {
+            "mobile_phase_ratio": "mobile_phase_ratio",
+            "temperature_celsius": "temperature_celsius",
+            "critical_component": "critical_component",
+            "column_name": "column_name",
+        }.get(field, None)
+        
+        ev_a_str = fe_a.get(relevant_fe_field) if (fe_a and relevant_fe_field) else str(fe_a)
+        ev_b_str = fe_b.get(relevant_fe_field) if (fe_b and relevant_fe_field) else str(fe_b)
+
         prompt = f"""You are resolving a conflict between two AI extractions for the field '{field}'.
 Option A: "{val_a}"
-Evidence A: "{ev_a}"
+Supporting quote A: "{ev_a_str}"
 
 Option B: "{val_b}"
-Evidence B: "{ev_b}"
+Supporting quote B: "{ev_b_str}"
 
-Based on the evidence, which value is more scientifically accurate? 
+Based on the supporting quotes, which value is more scientifically accurate? 
 Return ONLY a valid JSON object: {{"resolved_value": "chosen string or null"}}"""
         
         schema = {
@@ -647,13 +881,22 @@ Return ONLY a valid JSON object: {{"resolved_value": "chosen string or null"}}""
         if not self.llm:
             return True
             
+        fe = cond.get("field_evidence") or {}
+        fe_summary = "; ".join(
+            f"{k}: {v!r}" for k, v in fe.items() if v
+        ) or "(no field evidence provided)"
+            
         prompt = f"""An AI extracted the following condition, but another AI completely missed it.
 Condition:
 ```json
 {json.dumps(cond, indent=2)}
 ```
 
-Is this a valid, physically performed experimental LCCC condition based on its own evidence_text, or is it a hallucination/simulation/literature reference?
+Field-level evidence (verbatim quotes from the source paper):
+{fe_summary}
+
+Is this a valid, physically performed LCCC experiment, or is it a hallucination /
+simulation / literature reference? Evaluate based on the field_evidence quotes.
 Return ONLY a valid JSON object: {{"is_valid": true/false}}"""
         
         schema = {
@@ -672,8 +915,7 @@ Return ONLY a valid JSON object: {{"is_valid": true/false}}"""
             logger.warning(f"Validation failed for unmatched condition: {e}")
             return True
 
-    @staticmethod
-    def _dedup_conditions(conds: List[Dict]) -> List[Dict]:
+    def _dedup_conditions(self, conds: List[Dict]) -> List[Dict]:
         """Remove duplicate conditions based on chromatographic fingerprint."""
         if not conds:
             return []
@@ -681,7 +923,7 @@ Return ONLY a valid JSON object: {{"is_valid": true/false}}"""
         for c in conds:
             is_dup = False
             for existing in deduped:
-                if ConsensusJudge._chromatographic_match(c, existing):
+                if self._chromatographic_match(c, existing):
                     is_dup = True
                     break
             if not is_dup:

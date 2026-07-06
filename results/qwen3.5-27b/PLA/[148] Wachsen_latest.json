@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[148] Wachsen.pdf",
-    "extraction_date": "2026-06-07T22:28:12.455854",
+    "extraction_date": "2026-07-02T13:56:47.197414",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[148] Wachsen.pdf",
-      "start_time": "2026-06-07T22:25:30.131573",
+      "start_time": "2026-07-02T13:53:37.792606",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 77.28732514381409,
+          "time_seconds": 73.25784015655518,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11555314064025879,
+          "time_seconds": 0.11089038848876953,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7025
         },
         "llm_extraction": {
-          "time_seconds": 84.92129945755005,
+          "time_seconds": 116.0029559135437,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -35,17 +40,18 @@
     "conditions": [
       {
         "analyte_polymer": "oligo-L-lactide",
-        "critical_component": "poly-L-lactide",
-        "architecture": "linear",
-        "critical_condition_basis": "mixture of 60vol.% dioxane and 40vol.% n-hexane",
+        "critical_component": "oligo-L-lactide",
+        "architecture": "linear and cyclic oligomers",
+        "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 300-S",
         "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "dioxane",
           "n-hexane"
         ],
-        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio": "60vol.% dioxane and 40vol.% n-hexane",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
           "pH": null,
@@ -55,15 +61,24 @@
         },
         "temperature_celsius": "30",
         "flow_rate": null,
-        "pore_size": "300",
+        "pore_size": null,
         "column_dimensions": "250mm x 4mm ID",
-        "detector": "Diode-Array-Detector (UVD 3205) and UV-detector (SPD-10A)",
-        "evidence_text": "The 'critical' conditions for poly-1-lactide were realised by a mixture of 60vol.% dioxane and 40vol.% n-hexane which was used as solvent and mobile phase. The column was thermostated at 30°C.",
-        "notes": "LACCC analysis performed on oligo-L-lactide using critical conditions established for poly-L-lactide.",
+        "detector": "Diode-Array-Detector (type UVD 3205) and UV-detector (type SPD-10A)",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC) is a very suitable analytical method.",
+          "critical_component": "The 'critical' conditions for poly-1-lactide were realised by a mixture of 60vol.% dioxane and 40vol.% n-hexane",
+          "column_name": "Nucleosil 300-S column (250mm 4mm ID, Macharey-Nagel, Diiren, Germany)",
+          "mobile_phase_solvents": "mixture of 60vol.% dioxane and 40vol.% n-hexane which was used as solvent and mobile phase",
+          "mobile_phase_ratio": "60vol.% dioxane and 40vol.% n-hexane",
+          "temperature_celsius": "The column was thermostated at 30°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "The text explicitly states these are the critical conditions for poly-L-lactide used for LACCC analysis.",
         "paper_doi": null,
-        "corresponding_author_name": "K. H. Reichert",
+        "corresponding_author_name": "O. Wachsen",
         "corresponding_email_address": null,
-        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "physical_address": "Technical University of Berlin, Institute of Technical Chemistry, Sekr. TC 3, Str. d. 17. Juni 135, D-10623 Berlin, Germany",
         "publication_year": "1997"
       }
     ]
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 7025,
       "extraction_success": true,
-      "processing_time": 84.89871072769165,
+      "processing_time": 115.94734454154968,
       "extracted_count": 1
     }
   ]

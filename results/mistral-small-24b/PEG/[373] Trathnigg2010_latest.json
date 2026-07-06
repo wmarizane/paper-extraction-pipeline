@@ -1,35 +1,40 @@
 {
   "metadata": {
     "source_pdf": "[373] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T01:50:28.819441",
+    "extraction_date": "2026-07-02T00:31:52.148846",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[373] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T01:49:51.903734",
+      "start_time": "2026-07-02T00:31:01.116121",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 14.539649248123169,
+          "time_seconds": 13.062091588973999,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10094714164733887,
+          "time_seconds": 0.1443023681640625,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7283
         },
         "llm_extraction": {
-          "time_seconds": 22.274946928024292,
+          "time_seconds": 37.78287434577942,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
@@ -37,15 +42,16 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Onyx C18",
         "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio": "90 %",
         "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
@@ -55,30 +61,40 @@
         },
         "temperature_celsius": null,
         "flow_rate": "2 ml/min",
-        "pore_size": null,
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
         "column_dimensions": "100mm×4.6mm",
-        "detector": "PL-ELS 2100",
-        "evidence_text": "At a flow rate of 2 ml/min the last peak (the diester of ethylene glycol) still appears in time (i.e. before 2 min). As can be seen in Figure 3b, this is not the casewith PEG 400 monolaurate: this samples contains also diesters of higher fatty acids, which will wrap over to the next chromatogram in the second dimension.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.proche.2009.12.020",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
       },
       {
-        "analyte_polymer": "PEG",
+        "analyte_polymer": "PEG 400 monolaurate",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Onyx C18",
         "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio": "90 %",
         "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
@@ -88,13 +104,65 @@
         },
         "temperature_celsius": null,
         "flow_rate": "2 ml/min",
-        "pore_size": null,
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
         "column_dimensions": "100mm×4.6mm",
-        "detector": "PL-ELS 2100",
-        "evidence_text": "At a flow rate of 2 ml/min the last peak (the diester of ethylene glycol) still appears in time (i.e. before 2 min). As can be seen in Figure 3b, this is not the casewith PEG 400 monolaurate: this samples contains also diesters of higher fatty acids, which will wrap over to the next chromatogram in the second dimension.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.proche.2009.12.020",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEG 600",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 %",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+        "column_dimensions": "100mm×4.6mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
@@ -107,8 +175,8 @@
       "section": "Full Paper",
       "token_count": 7283,
       "extraction_success": true,
-      "processing_time": 22.264068841934204,
-      "extracted_count": 2
+      "processing_time": 37.69044208526611,
+      "extracted_count": 3
     }
   ]
 }

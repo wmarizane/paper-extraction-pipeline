@@ -1,114 +1,52 @@
 {
   "metadata": {
     "source_pdf": "[113] Pasch.pdf",
-    "extraction_date": "2026-06-07T23:49:22.527379",
+    "extraction_date": "2026-07-01T22:22:18.696812",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[113] Pasch.pdf",
-      "start_time": "2026-06-07T23:47:51.867392",
+      "start_time": "2026-07-01T22:15:28.003427",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 68.36587285995483,
+          "time_seconds": 67.2207453250885,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10448169708251953,
+          "time_seconds": 0.11855864524841309,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8443
         },
         "llm_extraction": {
-          "time_seconds": 22.18946647644043,
-          "success": true
+          "time_seconds": 343.31378054618835,
+          "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "polyethylene oxide",
-        "critical_component": "polyethylene oxide",
-        "architecture": "null",
-        "critical_condition_basis": "critical point of adsorption",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil RP-18",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "mobile_phase_ratio": "46:54",
-        "mobile_phase_ratio_units": "% by volume",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "60x4mm I.D.",
-        "detector": "Waters differential refractometer R401, Knauer u.v./vis filter photometer",
-        "evidence_text": "The critical diagram M vs. retention time for a RP-18 column of 60 mm length is shown in Figure 1. At acetonitrile concentrations >47% by volume in the solvent mixture, the retention time decreases as the molar mass of the PEO calibration sample increases; per definition retention corresponds to a size-exclusion mode. The reverse behaviour is obtained at acetonitrile concentrations <45% by volume, where the retention time increases with increasing molar mass. At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this \"critical point of adsorption\" separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "H. Pasch",
-        "corresponding_email_address": "null",
-        "physical_address": "Deutsches Kunststoff-Institut Schloßgartenstraße 6 64289 Darmstadt, Germany",
-        "publication_year": "1994"
-      },
-      {
-        "analyte_polymer": "polyethylene oxide",
-        "critical_component": "polyethylene oxide",
-        "architecture": "null",
-        "critical_condition_basis": "critical point of adsorption",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil RP-8",
-        "stationary_phase_chemistry": "C8",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "mobile_phase_ratio": "44:56",
-        "mobile_phase_ratio_units": "% by volume",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "60x4mm I.D.",
-        "detector": "Waters differential refractometer R401, Knauer u.v./vis filter photometer",
-        "evidence_text": "In order to decrease the hydrophobicity of the stationary phase and the retention times accordingly, a RP-8 instead of a RP-18 column is used. In this case C13- and C15-terminated PEO's elute from the column at the critical point of adsorption, see Figure 4.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "H. Pasch",
-        "corresponding_email_address": "null",
-        "physical_address": "Deutsches Kunststoff-Institut Schloßgartenstraße 6 64289 Darmstadt, Germany",
-        "publication_year": "1994"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 8443,
-      "extraction_success": true,
-      "processing_time": 22.177311182022095,
-      "extracted_count": 2
+      "extraction_success": false,
+      "processing_time": 112.55832743644714,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"C10H21(OCH2CH2)70H\",\"critical_component\":\"C10H21(OCH2CH2)70H\",\"architecture\":\"linear\",\"critical_condition_basis\":\"liquid chromatography at the critical point of adsorption\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Nucleosil RP-18\",\"statio"
     }
   ]
 }

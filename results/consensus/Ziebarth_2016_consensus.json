@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -78,39 +78,6 @@
         "temperature_celsius": "14.8",
         "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "critical_component": "linear"
-      },
-      {
-        "mobile_phase_solvents": [
-          "CH3CN",
-          "CH2Cl2"
-        ],
-        "evidence_text": "For fractionation of ring PS, two C18 bonded silica columns (Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm and Nucleosil C18, 250 × 9.8 mm, 300 Å pore, 5 μm) and a mixed eluent of CH2Cl2/CH3CN (58/42, v/v, Samchun, HPLC grade) at a flow rate of 2 mL/min were used. The temperature of the columns was set at 19 °C at which different molar mass linear PS precursors coelute.",
-        "analyte_polymer": "polystyrene",
-        "flow_rate": "2 mL/min",
-        "mobile_phase_ratio": "58/42",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "corresponding_email_address": "ywang@memphis.edu",
-        "critical_condition_confidence": "explicit",
-        "publication_year": "2016",
-        "notes": null,
-        "detector": "light scattering detector",
-        "pore_size": null,
-        "column_name": "Nucleosil C18",
-        "column_dimensions": "250 × 9.8 mm",
-        "architecture": "ring",
-        "paper_doi": "10.1021/acs.macromol.6b01925",
-        "critical_condition_basis": "coelution of different molecular weights",
-        "mobile_phase_ratio_units": "v/v",
-        "corresponding_author_name": "Yongmei Wang",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "temperature_celsius": "19",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
-        "critical_component": "ring"
       }
     ]
   }

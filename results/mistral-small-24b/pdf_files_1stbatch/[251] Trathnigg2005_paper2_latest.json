@@ -1,52 +1,58 @@
 {
   "metadata": {
     "source_pdf": "[251] Trathnigg2005_paper2.pdf",
-    "extraction_date": "2026-06-07T23:50:37.923722",
+    "extraction_date": "2026-07-01T20:26:47.007201",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[251] Trathnigg2005_paper2.pdf",
-      "start_time": "2026-06-07T23:49:49.627786",
+      "start_time": "2026-07-01T20:25:03.380607",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.276894330978394,
+          "time_seconds": 16.971728801727295,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10777115821838379,
+          "time_seconds": 0.12054896354675293,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9773
         },
         "llm_extraction": {
-          "time_seconds": 28.911134958267212,
+          "time_seconds": 86.49308633804321,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "EO–PO block copolymers",
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
         "critical_component": "EO",
-        "architecture": "EO–PO diblock",
+        "architecture": "EO–PO–EO triblock",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
-        "column_name": "Diol column",
-        "stationary_phase_chemistry": "silica-based Diol phase",
+        "column_name": "Nucleosil 100-5 OH 5 mm",
+        "stationary_phase_chemistry": "Diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "78:12",
-        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_ratio": "78.54",
+        "mobile_phase_ratio_units": "% (w/w)",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -58,7 +64,16 @@
         "pore_size": "100 A[˚]",
         "column_dimensions": "250!4.6 mm",
         "detector": "RI",
-        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250! 4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 A[˚]",
+          "mobile_phase_solvents": "acetone water 78:12 (w/w)",
+          "mobile_phase_ratio": "78.54% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ100 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -67,19 +82,20 @@
         "publication_year": "2005"
       },
       {
-        "analyte_polymer": "EO–PO block copolymers",
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
         "critical_component": "PO",
-        "architecture": "EO–PO diblock",
+        "architecture": "EO–PO–EO triblock",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
-        "column_name": "poly(divinyl benzene) column",
-        "stationary_phase_chemistry": "100% poly(divinyl benzene)",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinyl benzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "92:8",
-        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_ratio": "92.42",
+        "mobile_phase_ratio_units": "% (w/w)",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -91,7 +107,16 @@
         "pore_size": "500 A[˚]",
         "column_dimensions": "250!4.6 mm",
         "detector": "RI",
-        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 A[˚]",
+          "mobile_phase_solvents": "acetone water 92:8 (w/w)",
+          "mobile_phase_ratio": "92.42% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ500 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -100,19 +125,20 @@
         "publication_year": "2005"
       },
       {
-        "analyte_polymer": "EO–PO block copolymers",
+        "analyte_polymer": "EO–PO–EO triblock copolymer",
         "critical_component": "PO",
-        "architecture": "EO–PO diblock",
+        "architecture": "EO–PO–EO triblock",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
-        "column_name": "silica-based poly(ethylene glycol) phase",
+        "column_name": "Discovery HS-PEG",
         "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "45:55",
-        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_ratio": "45.58",
+        "mobile_phase_ratio_units": "% (w/w)",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -124,7 +150,145 @@
         "pore_size": "120 A[˚]",
         "column_dimensions": "250!4.6 mm",
         "detector": "RI",
-        "evidence_text": "Characterization of amphiphilic polymers: Independent analysis of blocks in poloxamers by liquid chromatography under critical conditions",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 A[˚]",
+          "mobile_phase_solvents": "acetone water 45:55 (w/w)",
+          "mobile_phase_ratio": "45.58% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ 120 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "EO",
+        "architecture": "PO–EO–PO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH 5 mm",
+        "stationary_phase_chemistry": "Diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "78.54",
+        "mobile_phase_ratio_units": "% (w/w)",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A[˚]",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250! 4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 A[˚]",
+          "mobile_phase_solvents": "acetone water 78:12 (w/w)",
+          "mobile_phase_ratio": "78.54% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ100 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "PO–EO–PO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinyl benzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.42",
+        "mobile_phase_ratio_units": "% (w/w)",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A[˚]",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 A[˚]",
+          "mobile_phase_solvents": "acetone water 92:8 (w/w)",
+          "mobile_phase_ratio": "92.42% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ500 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PO–EO–PO triblock copolymer",
+        "critical_component": "PO",
+        "architecture": "PO–EO–PO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS-PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "45.58",
+        "mobile_phase_ratio_units": "% (w/w)",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A[˚]",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
+          "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
+          "column_name": "Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 A[˚]",
+          "mobile_phase_solvents": "acetone water 45:55 (w/w)",
+          "mobile_phase_ratio": "45.58% (w/w)",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "nominal pore sizeZ 120 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -140,8 +304,8 @@
       "section": "Full Paper",
       "token_count": 9773,
       "extraction_success": true,
-      "processing_time": 28.89777183532715,
-      "extracted_count": 3
+      "processing_time": 86.38381910324097,
+      "extracted_count": 6
     }
   ]
 }

@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
@@ -45,39 +45,6 @@
         "temperature_celsius": "43",
         "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
         "critical_component": "linear polystyrene"
-      },
-      {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
-        "architecture": "null",
-        "critical_condition_basis": "explicit",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil C18AB",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "mobile_phase_solvents": [
-          "CH2Cl2",
-          "CH3CN"
-        ],
-        "mobile_phase_ratio": "57/43",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "43",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "100 Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": null,
-        "evidence_text": "In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
-        "notes": null,
-        "paper_doi": "10.1021/ma000807b",
-        "corresponding_author_name": "Taihyun Chang",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "publication_year": "2000"
       }
     ]
   }

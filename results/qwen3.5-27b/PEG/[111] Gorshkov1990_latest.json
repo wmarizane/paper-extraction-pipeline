@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[111] Gorshkov1990.pdf",
-    "extraction_date": "2026-06-07T22:35:21.255207",
+    "extraction_date": "2026-07-02T13:14:52.566788",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[111] Gorshkov1990.pdf",
-      "start_time": "2026-06-07T22:30:35.652404",
+      "start_time": "2026-07-02T13:09:36.354536",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 54.77878952026367,
+          "time_seconds": 53.00597262382507,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12004375457763672,
+          "time_seconds": 0.1196298599243164,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6867
         },
         "llm_extraction": {
-          "time_seconds": 230.7038538455963,
+          "time_seconds": 263.0403916835785,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,16 +39,17 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
+        "analyte_polymer": "PEO",
         "critical_component": "PEO backbone",
-        "architecture": "Linear homopolymer with various end groups (HO-OH, HO-OC4H9, CH2=CH-OH)",
-        "critical_condition_basis": "Retention volume independent of molecular weight up to 20000",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PEO",
         "critical_condition_confidence": "explicit",
-        "column_name": "Chromapak RP-18",
-        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "column_name": "Chrompak RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Water",
-          "Acetonitrile"
+          "water",
+          "acetonitrile"
         ],
         "mobile_phase_ratio": "58:42",
         "mobile_phase_ratio_units": "v/v",
@@ -57,9 +63,18 @@
         "flow_rate": "1 ml min-1",
         "pore_size": null,
         "column_dimensions": null,
-        "detector": "Refractometric detection (RIDK 101)",
-        "evidence_text": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (v/v). In this instance the retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000 (Fig. 2).",
-        "notes": "Used to separate PEO by functionality types (terminal groups).",
+        "detector": "refractometric detection",
+        "field_evidence": {
+          "critical_condition_basis": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (v/v)",
+          "critical_component": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase",
+          "column_name": "Chrompak RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "58:42",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "Flow-rate, 1 ml min-1"
+        },
+        "notes": "Used for separation of PEO by functionality types and for analyzing PPO blocks in copolymers where PEO is at critical condition.",
         "paper_doi": null,
         "corresponding_author_name": "A.V. Gorshkov",
         "corresponding_email_address": null,
@@ -67,16 +82,17 @@
         "publication_year": "1990"
       },
       {
-        "analyte_polymer": "PEO-PPO block copolymers (AB and ABA types)",
-        "critical_component": "PEO blocks",
-        "architecture": "Block copolymer (PEO blocks are 'invisible' at critical condition)",
-        "critical_condition_basis": "PEO blocks disappear (critical condition for PEO), separation based on PPO block size",
+        "analyte_polymer": "PEO-PPO block copolymer",
+        "critical_component": "PEO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical conditions for PEO",
         "critical_condition_confidence": "explicit",
-        "column_name": "Chromapak RP-18",
-        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "column_name": "Chrompak RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Water",
-          "Acetonitrile"
+          "water",
+          "acetonitrile"
         ],
         "mobile_phase_ratio": "58:42",
         "mobile_phase_ratio_units": "v/v",
@@ -90,9 +106,18 @@
         "flow_rate": "1 ml min-1",
         "pore_size": null,
         "column_dimensions": null,
-        "detector": "Refractometric detection",
-        "evidence_text": "Conditions as in Fig. 3... Disappearance of PEO blocks and the MWD of PPO blocks for two-block PEO-PPO copolymers... At the critical point for PEO the outer blocks disappear, irrespective of their length.",
-        "notes": "Same mobile phase composition as the PEO homopolymer critical condition. Used to analyze PPO block molecular weight distribution.",
+        "detector": "refractometric detection",
+        "field_evidence": {
+          "critical_condition_basis": "At the critical point for PEO the outer blocks disappear",
+          "critical_component": "At the critical point for PEO",
+          "column_name": "Chrompak RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "58:42",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "Flow-rate, 1 ml min-1"
+        },
+        "notes": "Conditions established for PEO used to analyze PPO block size in copolymers (PEO blocks are 'invisible').",
         "paper_doi": null,
         "corresponding_author_name": "A.V. Gorshkov",
         "corresponding_email_address": null,
@@ -100,19 +125,20 @@
         "publication_year": "1990"
       },
       {
-        "analyte_polymer": "PEO-PPO random copolymers",
-        "critical_component": "PEO backbone",
-        "architecture": "Random copolymer",
-        "critical_condition_basis": "Comparison with block copolymers under critical conditions for PEO",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Chromapak RP-18",
-        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "analyte_polymer": "PEO-PPO block copolymer",
+        "critical_component": "PPO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical point for the inner PPO block",
+        "critical_condition_confidence": "unclear",
+        "column_name": "Chrompak RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Water",
-          "Acetonitrile"
+          "water",
+          "tetrahydrofuran"
         ],
-        "mobile_phase_ratio": "58:42",
-        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -120,12 +146,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": null,
-        "flow_rate": "1 ml min-1",
+        "flow_rate": null,
         "pore_size": null,
         "column_dimensions": null,
-        "detector": "Refractometric detection",
-        "evidence_text": "Chromatograms of a block and a random copolymer of similar composition under the critical conditions for one of the PEO homopolymers. Separation conditions as in Fig. 3.",
-        "notes": "Used to distinguish random vs block ordering. Random copolymers elute earlier than block copolymers of same composition under these conditions.",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "It is now of interest to find the critical point for the inner PPO block in a three-block copolymer",
+          "critical_component": "critical point for the inner PPO block",
+          "column_name": "Chrompak RP-18",
+          "mobile_phase_solvents": "THF-water mixture",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "The text states that finding the critical point for PPO on this phase with THF-water proved impossible due to strong interaction of PEO with unmodified silica sites. No successful experimental setup is reported.",
         "paper_doi": null,
         "corresponding_author_name": "A.V. Gorshkov",
         "corresponding_email_address": null,
@@ -140,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 6867,
       "extraction_success": true,
-      "processing_time": 230.68022799491882,
+      "processing_time": 262.9861798286438,
       "extracted_count": 3
     }
   ]

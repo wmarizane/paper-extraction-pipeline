@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[295] Malik2009.pdf",
-    "extraction_date": "2026-06-08T00:13:49.976554",
+    "extraction_date": "2026-07-01T22:30:10.791166",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[295] Malik2009.pdf",
-      "start_time": "2026-06-08T00:12:54.443393",
+      "start_time": "2026-07-01T22:29:17.517404",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 29.818252325057983,
+          "time_seconds": 27.438600540161133,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10069870948791504,
+          "time_seconds": 0.10558748245239258,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9580
         },
         "llm_extraction": {
-          "time_seconds": 25.61405110359192,
+          "time_seconds": 25.678701400756836,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -40,7 +45,8 @@
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
@@ -57,11 +63,20 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 Å",
         "column_dimensions": "250 mm × 4.6 mm",
-        "detector": "refractive index detector RI 2414",
-        "evidence_text": "In the paper mentioned above we have used an analytical column (Jordi Gel DVB 500 RP) packed with a stationary phase consisting of 100% poly(divinyl benzene). For this study, we wanted to perform the same separation also on a semipreparative scale. As a semipreparative column with the same chemical nature is not available, we have tried to find a CAP for PPO on an ODS column. As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF. In such a mobile phase, a separation of the block copolymer from PPGs and PPOs with allylic end group can be achieved (Fig. 5).",
+        "detector": "RI 2414",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of PPO should be used in the first dimension, which allows a separation according to functionality.",
+          "critical_component": "PPO",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "84.99 wt% THF",
+          "temperature_celsius": "25.0",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2009.07.067",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Muhammad Imran Malik; Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
         "publication_year": "2009"
@@ -73,7 +88,8 @@
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
@@ -90,11 +106,20 @@
         "flow_rate": "2.0 ml/min",
         "pore_size": "80 Å",
         "column_dimensions": "300 mm × 25 mm",
-        "detector": "density detection system DDS 70",
-        "evidence_text": "A similar separation is also possible on a semipreparative column: even with a rather large sample loop, the individual peaks are sufficiently resolved (Fig. 6). The fraction limits are indicated by dotted lines.",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of PPO should be used in the first dimension, which allows a separation according to functionality.",
+          "critical_component": "PPO",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "81.14 wt% THF",
+          "temperature_celsius": "25.0",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2009.07.067",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Muhammad Imran Malik; Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
         "publication_year": "2009"
@@ -107,7 +132,7 @@
       "section": "Full Paper",
       "token_count": 9580,
       "extraction_success": true,
-      "processing_time": 25.59907841682434,
+      "processing_time": 25.546465158462524,
       "extracted_count": 2
     }
   ]

@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[368] Girod2009.pdf",
-    "extraction_date": "2026-06-08T04:09:55.640859",
+    "extraction_date": "2026-07-01T07:37:48.680297",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[368] Girod2009.pdf",
-      "start_time": "2026-06-08T04:07:29.723733",
+      "start_time": "2026-07-01T07:35:07.192756",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 40.56731176376343,
+          "time_seconds": 40.90759253501892,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12427735328674316,
+          "time_seconds": 0.13554620742797852,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8159
         },
         "llm_extraction": {
-          "time_seconds": 105.22541666030884,
+          "time_seconds": 120.41090250015259,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "SG1-capped PEO-b-PS copolymer",
-        "critical_component": "PEO block",
+        "analyte_polymer": "SG1-capped PEO-b-PS",
+        "critical_component": "PEO",
         "architecture": "diblock",
-        "critical_condition_basis": "established using hydroxyl-terminated PEG standards",
+        "critical_condition_basis": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block in order to make the PEO segment chromatographically 'invisible'",
         "critical_condition_confidence": "explicit",
         "column_name": "Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "Methanol",
           "Water"
@@ -57,9 +63,18 @@
         "flow_rate": "1 mL min-1",
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
-        "detector": "ESI-MS (QStar Elite)",
-        "evidence_text": "The critical conditions were established for hydroxyl-terminated PEG standards... using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr = 2.33 min) independently of their molecular mass. LiCl concentration in the range 0.1–1 mM led to the same critical conditions being obtained.",
-        "notes": "The critical condition was established for the PEO block to make it chromatographically 'invisible', allowing separation based on the PS block size. The text states that varying LiCl concentration between 0.1 and 1 mM did not change the critical conditions.",
+        "detector": "QStar Elite mass spectrometer",
+        "field_evidence": {
+          "critical_condition_basis": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block in order to make the PEO segment chromatographically 'invisible'",
+          "critical_component": "critical conditions of the PEO block",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "MeOH/water eluent",
+          "mobile_phase_ratio": "88.8:11.2 (%, v/v)",
+          "temperature_celsius": "258C",
+          "pore_size": "100 A",
+          "flow_rate": "1 mL min 1"
+        },
+        "notes": "Critical conditions established using hydroxyl-terminated PEG standards ranging from Mw 200 to 2000 g mol-1. Salt concentration varied between 0.1 and 1 mM but critical composition remained the same.",
         "paper_doi": "10.1002/rcm.4028",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 8159,
       "extraction_success": true,
-      "processing_time": 105.20322513580322,
+      "processing_time": 120.354740858078,
       "extracted_count": 1
     }
   ]

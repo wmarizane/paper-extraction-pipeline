@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[322] Fischer2015.pdf",
-    "extraction_date": "2026-06-08T03:08:11.284060",
+    "extraction_date": "2026-07-01T04:44:47.893191",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[322] Fischer2015.pdf",
-      "start_time": "2026-06-08T03:06:01.871757",
+      "start_time": "2026-07-01T04:42:24.179230",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 30.948107957839966,
+          "time_seconds": 30.115116119384766,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12123560905456543,
+          "time_seconds": 0.11613798141479492,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13939
         },
         "llm_extraction": {
-          "time_seconds": 98.34284925460815,
+          "time_seconds": 113.45004796981812,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "Poly(ethylene glycol)",
         "critical_component": "Poly(ethylene glycol)",
         "architecture": "null",
-        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_basis": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl silica column",
         "stationary_phase_chemistry": "octadecyl silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "ACN",
           "H2O"
@@ -58,8 +64,17 @@
         "pore_size": "120 Å",
         "column_dimensions": "250x4.6 mm",
         "detector": "evaporative light scattering detector (ELSD)",
-        "evidence_text": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL-1 , and 10 μL of the sample was injected at a flow rate of 0.5 mL min-1 . The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
-        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer temp 90C, evaporator temp 110C.",
+        "field_evidence": {
+          "critical_condition_basis": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "octadecyl silica column",
+          "mobile_phase_solvents": "47:53 ACN/H2O",
+          "mobile_phase_ratio": "47:53 ACN/H2O (v:v)",
+          "temperature_celsius": null,
+          "pore_size": "pore size of 120 Å",
+          "flow_rate": "flow rate of 0.5 mL min-1"
+        },
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer 90°C, evaporator 110°C (detector temps, not column).",
         "paper_doi": "10.1007/s13361-015-1233-8",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@chem.wayne.edu",
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 13939,
       "extraction_success": true,
-      "processing_time": 98.31997728347778,
+      "processing_time": 113.39499735832214,
       "extracted_count": 1
     }
   ]

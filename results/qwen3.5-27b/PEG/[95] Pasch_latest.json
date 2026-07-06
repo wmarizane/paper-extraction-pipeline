@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[95] Pasch.pdf",
-    "extraction_date": "2026-06-08T05:17:03.924243",
+    "extraction_date": "2026-07-01T08:36:26.202619",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[95] Pasch.pdf",
-      "start_time": "2026-06-08T05:14:34.559229",
+      "start_time": "2026-07-01T08:33:30.952862",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 66.70750617980957,
+          "time_seconds": 63.57106423377991,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11857461929321289,
+          "time_seconds": 0.11495137214660645,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8738
         },
         "llm_extraction": {
-          "time_seconds": 82.53882312774658,
+          "time_seconds": 111.53057789802551,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyethylene oxide (PEO)",
-        "critical_component": "polyethylene oxide block",
+        "analyte_polymer": "polyethylene oxide",
+        "critical_component": "polyethylene oxide",
         "architecture": "linear",
-        "critical_condition_basis": "disappearance of molar mass dependence of retention time",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 5C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -56,10 +62,19 @@
         "temperature_celsius": null,
         "flow_rate": "0.5 ml/min",
         "pore_size": null,
-        "column_dimensions": "250 x 4 mm I.D.",
+        "column_dimensions": "250 x 4mm I.D.",
         "detector": "R-401 differential refractometer",
-        "evidence_text": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile—water (43:57, v/v); see Fig. 1.",
-        "notes": "Condition established using PEO calibration standards on a Macherey-Nagel 5C18 column. Used to separate a triblock polymer HO(EO)n(PO)m(EO)nOH based on the PPO block length.",
+        "field_evidence": {
+          "critical_condition_basis": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile—water (43:57, v/v)",
+          "critical_component": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (42:58, v/v) on a Chrompack RP-18 stationary phase",
+          "column_name": "The column was Nucleosil 5C18 (250 x 4mm I.D.)",
+          "mobile_phase_solvents": "The mobile phase was acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile—water (43:57, v/v)",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "flow-rate of 0.5 ml/min"
+        },
+        "notes": "Critical condition established for PEO block in a PEO-PPO block copolymer analysis. The text notes that the composition was adjusted from a previous RP-18 study to the Nucleosil 5C18 column.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": null,
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 8738,
       "extraction_success": true,
-      "processing_time": 82.51638770103455,
+      "processing_time": 111.47597193717957,
       "extracted_count": 1
     }
   ]

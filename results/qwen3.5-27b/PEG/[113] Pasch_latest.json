@@ -1,49 +1,55 @@
 {
   "metadata": {
     "source_pdf": "[113] Pasch.pdf",
-    "extraction_date": "2026-06-07T22:44:56.724814",
+    "extraction_date": "2026-07-02T13:31:17.859713",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[113] Pasch.pdf",
-      "start_time": "2026-06-07T22:41:11.962305",
+      "start_time": "2026-07-02T13:21:00.782760",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 70.8583152294159,
+          "time_seconds": 64.07373571395874,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11565279960632324,
+          "time_seconds": 0.11162328720092773,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8443
         },
         "llm_extraction": {
-          "time_seconds": 153.7884292602539,
+          "time_seconds": 552.8585834503174,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
-        "critical_component": "Polyethylene oxide backbone",
-        "architecture": "Linear",
-        "critical_condition_basis": "Retention time independent of molar mass",
+        "analyte_polymer": "C10-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil RP-18",
         "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
-          "Water"
+          "acetonitrile",
+          "water"
         ],
         "mobile_phase_ratio": "46:54",
         "mobile_phase_ratio_units": "% by volume",
@@ -57,26 +63,79 @@
         "flow_rate": null,
         "pore_size": null,
         "column_dimensions": "60x4mm I.D.",
-        "detector": "Differential refractometer, UV/vis filter photometer",
-        "evidence_text": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this 'critical point of adsorption' separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
-        "notes": "Used for separation of functional PEOs with different terminal groups (alkyloxy and aryloxy).",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this \"critical point of adsorption\" separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-18",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 46:54% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Critical condition established for PEO backbone; used to analyze C10-terminated PEO.",
         "paper_doi": null,
-        "corresponding_author_name": "H. Pasch",
+        "corresponding_author_name": "H. Pasch; I. Zammert",
         "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlo8BgartenstraBe 6, 64289 Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
         "publication_year": "1994"
       },
       {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
-        "critical_component": "Polyethylene oxide backbone",
-        "architecture": "Linear",
-        "critical_condition_basis": "Retention time independent of molar mass",
+        "analyte_polymer": "C12-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-18",
+        "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "46:54",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "60x4mm I.D.",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this \"critical point of adsorption\" separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-18",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 46:54% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Critical condition established for PEO backbone; used to analyze C12-terminated PEO.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; I. Zammert",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
+        "publication_year": "1994"
+      },
+      {
+        "analyte_polymer": "C13-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil RP-8",
         "stationary_phase_chemistry": "RP-8",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
-          "Water"
+          "acetonitrile",
+          "water"
         ],
         "mobile_phase_ratio": "44:56",
         "mobile_phase_ratio_units": "% by volume",
@@ -90,13 +149,151 @@
         "flow_rate": null,
         "pore_size": null,
         "column_dimensions": "60x4mm L.D.",
-        "detector": "Differential refractometer, UV/vis filter photometer",
-        "evidence_text": "In order to decrease the hydrophobicity of the stationary phase and the retention times accordingly, a RP-8 instead of a RP-18 column is used. In this case C;3- and C15-terminated PEO's elute from the column at the critical point of adsorption... solvent: acetonitrile-water 44:56% by volume",
-        "notes": "Used for C13- and C15-terminated PEOs which did not elute on RP-18 at critical conditions.",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "In this case C;3- and C15-terminated PEO's elute from the column at the critical point of adsorption",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-8",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 44:56% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "RP-8 column used to reduce retention for C13-PEO at critical point.",
         "paper_doi": null,
-        "corresponding_author_name": "H. Pasch",
+        "corresponding_author_name": "H. Pasch; I. Zammert",
         "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlo8BgartenstraBe 6, 64289 Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
+        "publication_year": "1994"
+      },
+      {
+        "analyte_polymer": "C15-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-8",
+        "stationary_phase_chemistry": "RP-8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "44:56",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "60x4mm L.D.",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "In this case C;3- and C15-terminated PEO's elute from the column at the critical point of adsorption",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-8",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 44:56% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "RP-8 column used to reduce retention for C15-PEO at critical point.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; I. Zammert",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
+        "publication_year": "1994"
+      },
+      {
+        "analyte_polymer": "Octylphenol-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-8",
+        "stationary_phase_chemistry": "RP-8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "44:56",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "60x4mm L.D.",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "In this case C;3- and C15-terminated PEO's elute from the column at the critical point of adsorption",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-8",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 44:56% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Analyzed at critical point of PEO backbone using RP-8 column.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; I. Zammert",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
+        "publication_year": "1994"
+      },
+      {
+        "analyte_polymer": "Nonylphenol-PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-8",
+        "stationary_phase_chemistry": "RP-8",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "44:56",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "60x4mm L.D.",
+        "detector": "differential refractometer R401; u.v./vis filter photometer",
+        "field_evidence": {
+          "critical_condition_basis": "In this case C;3- and C15-terminated PEO's elute from the column at the critical point of adsorption",
+          "critical_component": "critical point of adsorption of PEO",
+          "column_name": "Nucleosil RP-8",
+          "mobile_phase_solvents": "acetonitrile-water",
+          "mobile_phase_ratio": "acetonitrile-water 44:56% by volume",
+          "temperature_celsius": "keeping the temperature for all experiments at 25°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Analyzed at critical point of PEO backbone using RP-8 column.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch; I. Zammert",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut Schlo8BgartenstraBe 6 64289 Darmstadt, Germany",
         "publication_year": "1994"
       }
     ]
@@ -107,8 +304,8 @@
       "section": "Full Paper",
       "token_count": 8443,
       "extraction_success": true,
-      "processing_time": 153.76482772827148,
-      "extracted_count": 2
+      "processing_time": 552.8038837909698,
+      "extracted_count": 6
     }
   ]
 }

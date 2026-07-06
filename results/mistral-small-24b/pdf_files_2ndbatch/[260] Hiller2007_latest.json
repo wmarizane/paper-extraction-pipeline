@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[260] Hiller2007.pdf",
-    "extraction_date": "2026-06-07T23:35:24.172331",
+    "extraction_date": "2026-07-01T20:10:38.752846",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[260] Hiller2007.pdf",
-      "start_time": "2026-06-07T23:33:54.508510",
+      "start_time": "2026-07-01T20:08:54.713102",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 57.390705823898315,
+          "time_seconds": 58.26048183441162,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12706804275512695,
+          "time_seconds": 0.10901594161987305,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10425
         },
         "llm_extraction": {
-          "time_seconds": 32.145888805389404,
+          "time_seconds": 45.62700915336609,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,39 +39,6 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PS",
-        "critical_component": "PS",
-        "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil RP-18",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "THF",
-          "ACN"
-        ],
-        "mobile_phase_ratio": "48:52",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "22",
-        "flow_rate": "0.5 mL min-1",
-        "pore_size": null,
-        "column_dimensions": "250 x 4 mm",
-        "detector": "UV",
-        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
-        "notes": null,
-        "paper_doi": "10.1002/macp.200700166",
-        "corresponding_author_name": "Wolf Hiller",
-        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
-        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "2007"
-      },
-      {
         "analyte_polymer": "PS-b-PMMA",
         "critical_component": "PS",
         "architecture": "linear",
@@ -74,6 +46,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil RP-18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "ACN"
@@ -91,22 +64,75 @@
         "pore_size": null,
         "column_dimensions": "250 x 4 mm",
         "detector": "UV",
-        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+        "field_evidence": {
+          "critical_condition_basis": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "critical_component": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "column_name": "The chromatographic separations were conducted on Macherey-Nagel Nucleosil C18 300-5 and 1000-7 with column sizes of 250 x 4 mm inner diameter.",
+          "mobile_phase_solvents": "Normal HPLC grade ACN and THF were used as the mobile phase.",
+          "mobile_phase_ratio": "The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+          "temperature_celsius": "The critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C).",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.5 mL min-1."
+        },
         "notes": null,
         "paper_doi": "10.1002/macp.200700166",
-        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm",
+        "detector": "UV",
+        "field_evidence": {
+          "critical_condition_basis": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "critical_component": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "column_name": "The chromatographic separations were conducted on Macherey-Nagel Nucleosil C18 300-5 and 1000-7 with column sizes of 250 x 4 mm inner diameter.",
+          "mobile_phase_solvents": "Normal HPLC grade ACN and THF were used as the mobile phase.",
+          "mobile_phase_ratio": "The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+          "temperature_celsius": "The critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C).",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.5 mL min-1."
+        },
+        "notes": null,
+        "paper_doi": "10.1002/macp.200700166",
+        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
         "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
         "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
         "publication_year": "2007"
       },
       {
         "analyte_polymer": "PMMA",
-        "critical_component": "PMMA",
+        "critical_component": "PS",
         "architecture": "linear",
-        "critical_condition_basis": "size-exclusion mode",
+        "critical_condition_basis": "critical point of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil RP-18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "ACN"
@@ -124,10 +150,19 @@
         "pore_size": null,
         "column_dimensions": "250 x 4 mm",
         "detector": "UV",
-        "evidence_text": "These critical conditions are used for the analysis of blends of PS and PMMA as well as for PS-b-PMMA copolymers. Figure 2 shows the critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C). The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+        "field_evidence": {
+          "critical_condition_basis": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "critical_component": "The separation of the polymers was achieved at chromatographic conditions that correspond to the critical point of PS and the size-exclusion mode of PMMA.",
+          "column_name": "The chromatographic separations were conducted on Macherey-Nagel Nucleosil C18 300-5 and 1000-7 with column sizes of 250 x 4 mm inner diameter.",
+          "mobile_phase_solvents": "Normal HPLC grade ACN and THF were used as the mobile phase.",
+          "mobile_phase_ratio": "The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v in agreement with ref.[[21]]",
+          "temperature_celsius": "The critical diagram for using Nucleosil RP-18 columns at ambient temperature (22 8C).",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.5 mL min-1."
+        },
         "notes": null,
         "paper_doi": "10.1002/macp.200700166",
-        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
         "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
         "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
         "publication_year": "2007"
@@ -140,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 10425,
       "extraction_success": true,
-      "processing_time": 32.132588148117065,
+      "processing_time": 45.51588726043701,
       "extracted_count": 3
     }
   ]

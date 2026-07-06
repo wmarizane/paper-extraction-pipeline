@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[118] Trathnigg1994.pdf",
-    "extraction_date": "2026-06-07T22:54:29.089394",
+    "extraction_date": "2026-07-02T13:41:56.605029",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[118] Trathnigg1994.pdf",
-      "start_time": "2026-06-07T22:52:32.338681",
+      "start_time": "2026-07-02T13:39:41.318996",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 43.97336006164551,
+          "time_seconds": 43.03831911087036,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12137627601623535,
+          "time_seconds": 0.11667847633361816,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5614
         },
         "llm_extraction": {
-          "time_seconds": 72.65587091445923,
+          "time_seconds": 92.09853148460388,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44702"
+      }
     }
   },
   "summary": {
@@ -34,13 +39,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyethylene glycol (PEG)",
-        "critical_component": "polyoxyethylene chain",
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "polyethylene glycol",
         "architecture": "linear",
-        "critical_condition_basis": "All PEGs eluted at the same elution volume",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "ODS2",
-        "stationary_phase_chemistry": "octadecyl silica (ODS)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -57,9 +63,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": null,
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "density and refractive index",
-        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution Volume from an ODS2 column in methanol—water (80:20) as a mobile phase.",
-        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols (FAEs).",
+        "detector": "density and RI",
+        "field_evidence": {
+          "critical_condition_basis": "all PEGs eluted at the same elution Volume from an ODS2 column in methanol—water (80:20) as a mobile phase",
+          "critical_component": "polyethylene glycol (PEG)",
+          "column_name": "ODS2",
+          "mobile_phase_solvents": "methanol—water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min in the analytical measurements"
+        },
+        "notes": "Critical condition established for PEGs to analyze ethoxylated fatty alcohols. The text states 'all PEGs eluted at the same elution Volume' indicating critical conditions for the PEO block.",
         "paper_doi": null,
         "corresponding_author_name": "B. Trathnigg",
         "corresponding_email_address": null,
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 5614,
       "extraction_success": true,
-      "processing_time": 72.6333577632904,
+      "processing_time": 92.04260301589966,
       "extracted_count": 1
     }
   ]

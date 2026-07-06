@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[257] Zhu2015.pdf",
-    "extraction_date": "2026-06-07T23:33:03.175205",
+    "extraction_date": "2026-07-01T20:08:13.456205",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[257] Zhu2015.pdf",
-      "start_time": "2026-06-07T23:32:07.704770",
+      "start_time": "2026-07-01T20:07:16.296858",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 51.83154010772705,
+          "time_seconds": 53.29794645309448,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1264514923095703,
+          "time_seconds": 0.10680437088012695,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10545
         },
         "llm_extraction": {
-          "time_seconds": 3.5122737884521484,
+          "time_seconds": 3.712500810623169,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -40,7 +45,7 @@
       "section": "Full Paper",
       "token_count": 10545,
       "extraction_success": true,
-      "processing_time": 3.496332883834839,
+      "processing_time": 3.594329833984375,
       "extracted_count": 0
     }
   ]

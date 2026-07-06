@@ -1,46 +1,52 @@
 {
   "metadata": {
     "source_pdf": "Ziebarth_2016.pdf",
-    "extraction_date": "2026-06-07T23:42:18.063105",
+    "extraction_date": "2026-07-01T20:10:39.874264",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "Ziebarth_2016.pdf",
-      "start_time": "2026-06-07T23:40:46.037582",
+      "start_time": "2026-07-01T20:09:08.797758",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 38.32999849319458,
+          "time_seconds": 37.099266052246094,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10753893852233887,
+          "time_seconds": 0.10538578033447266,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 12678
         },
         "llm_extraction": {
-          "time_seconds": 53.58784532546997,
+          "time_seconds": 53.691608905792236,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 5
+    "total_conditions": 4
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
-        "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
+        "analyte_polymer": "Ring-PS",
+        "critical_component": "Ring-PS",
+        "architecture": "ring",
+        "critical_condition_basis": "coelution point",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -55,124 +61,35 @@
         },
         "temperature_celsius": "19",
         "flow_rate": "2 mL/min",
-        "pore_size": null,
+        "pore_size": "100 Å",
         "column_dimensions": "250 × 9.8 mm",
         "detector": "light scattering detector",
-        "evidence_text": "For fractionation of ring PS, two C18 bonded silica columns (Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm and Nucleosil C18, 250 × 9.8 mm, 300 Å pore, 5 μm) and a mixed RT eluent of CH2Cl2/CH3CN (58/42, v/v, Samchun, HPLC grade) at a FD flow rate of 2 mL/min were used. The temperature of the columns was set at 19 °C at which different molar mass linear PS precursors coelute.",
-        "notes": null,
-        "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
-        "publication_year": "2016"
-      },
-      {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
-        "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "mobile_phase_solvents": [
-          "CH2Cl2",
-          "CH3CN"
-        ],
-        "mobile_phase_ratio": "58/42",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "the temperature at which different molar mass linear PS precursors coelute",
+          "critical_component": "Ring-PS",
+          "column_name": "Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm",
+          "mobile_phase_solvents": "CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "58/42, v/v",
+          "temperature_celsius": "19 °C",
+          "pore_size": "100 Å pore",
+          "flow_rate": "2 mL/min"
         },
-        "temperature_celsius": "19",
-        "flow_rate": "2 mL/min",
-        "pore_size": null,
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "light scattering detector",
-        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP ee QI.",
         "notes": null,
         "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
-        "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "mobile_phase_solvents": [
-          "CH2Cl2",
-          "CH3CN"
-        ],
-        "mobile_phase_ratio": "58/42",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "14.8",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": null,
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "light scattering detector",
-        "evidence_text": "TCAP and tE,CAP of Ls-PS, Lu-PS, and Ring-PS are measured as 14.8 °C/7.4 min, 14.95 °C/7.6 min, and 17.3 °C/ 8.23 min, respectively.",
-        "notes": null,
-        "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
-        "publication_year": "2016"
-      },
-      {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
-        "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "mobile_phase_solvents": [
-          "CH2Cl2",
-          "CH3CN"
-        ],
-        "mobile_phase_ratio": "58/42",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "14.95",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": null,
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "light scattering detector",
-        "evidence_text": "TCAP and tE,CAP of Ls-PS, Lu-PS, and Ring-PS are measured as 14.8 °C/7.4 min, 14.95 °C/7.6 min, and 17.3 °C/ 8.23 min, respectively.",
-        "notes": null,
-        "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
-        "publication_year": "2016"
-      },
-      {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "ring",
+        "analyte_polymer": "Ring-PS",
+        "critical_component": "Ring-PS",
         "architecture": "ring",
-        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_basis": "coelution point",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -187,15 +104,110 @@
         },
         "temperature_celsius": "17.3",
         "flow_rate": "0.5 mL/min",
-        "pore_size": null,
+        "pore_size": "100 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "light scattering detector",
-        "evidence_text": "TCAP and tE,CAP of Ls-PS, Lu-PS, and Ring-PS are measured as 14.8 °C/7.4 min, 14.95 °C/7.6 min, and 17.3 °C/ 8.23 min, respectively.",
+        "field_evidence": {
+          "critical_condition_basis": "the temperature at which different molar mass linear PS precursors coelute",
+          "critical_component": "Ring-PS",
+          "column_name": "Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm",
+          "mobile_phase_solvents": "CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "58/42, v/v",
+          "temperature_celsius": "17.3 °C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "Lu-PS",
+        "critical_component": "Lu-PS",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "14.95",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "the temperature at which different molar mass linear PS precursors coelute",
+          "critical_component": "Lu-PS",
+          "column_name": "Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm",
+          "mobile_phase_solvents": "CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "58/42, v/v",
+          "temperature_celsius": "14.95 °C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "Ls-PS",
+        "critical_component": "Ls-PS",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "14.8",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "the temperature at which different molar mass linear PS precursors coelute",
+          "critical_component": "Ls-PS",
+          "column_name": "Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm",
+          "mobile_phase_solvents": "CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "58/42, v/v",
+          "temperature_celsius": "14.8 °C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "publication_year": "2016"
       }
     ]
@@ -206,8 +218,8 @@
       "section": "Full Paper",
       "token_count": 12678,
       "extraction_success": true,
-      "processing_time": 53.57129526138306,
-      "extracted_count": 5
+      "processing_time": 53.576295614242554,
+      "extracted_count": 4
     }
   ]
 }

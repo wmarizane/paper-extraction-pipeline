@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[209] Bhati2016.pdf",
-    "extraction_date": "2026-06-07T22:46:56.120358",
+    "extraction_date": "2026-07-02T14:26:53.471341",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[209] Bhati2016.pdf",
-      "start_time": "2026-06-07T22:37:46.417268",
+      "start_time": "2026-07-02T14:16:04.303410",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 77.86261105537415,
+          "time_seconds": 75.09136295318604,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1124110221862793,
+          "time_seconds": 0.11304402351379395,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8903
         },
         "llm_extraction": {
-          "time_seconds": 471.7279531955719,
+          "time_seconds": 573.9303724765778,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,16 +39,17 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Isotactic Polypropylene",
-        "critical_component": "Isotactic Polypropylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "isotactic polypropylene",
+        "critical_component": "isotactic polypropylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "2-octanol",
-          "1,2-Dichlorobenzene"
+          "1,2-dichlorobenzene"
         ],
         "mobile_phase_ratio": "83/17",
         "mobile_phase_ratio_units": "vol.%",
@@ -57,9 +63,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "Finally, at the critical conditions (i.e., 83/17 vol.% of 2-octanol/ODCB), the sample is eluted in a single peak (Fig. 2e).",
-        "notes": "Determined using the new method proposed in the paper.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "it-PP[348]",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "83/17 vol.% of 2-octanol/ODCB",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -67,16 +82,17 @@
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "Syndiotactic Polypropylene",
-        "critical_component": "Syndiotactic Polypropylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "syndiotactic polypropylene",
+        "critical_component": "syndiotactic polypropylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "2-octanol",
-          "1,2-Dichlorobenzene"
+          "1,2-dichlorobenzene"
         ],
         "mobile_phase_ratio": "63/37",
         "mobile_phase_ratio_units": "vol.%",
@@ -90,9 +106,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "The LCCC for st-PP is identified as 63/37 vol.% of 2-octanol/ODCB (Fig. 3g).",
-        "notes": "Determined using the new method proposed in the paper.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "st-PP[196]",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "63/37 vol.% of 2-octanol/ODCB",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -100,16 +125,17 @@
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "Polyethylene",
-        "critical_component": "Polyethylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "polyethylene",
+        "critical_component": "polyethylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "2-octanol",
-          "1,2-Dichlorobenzene"
+          "1,2-dichlorobenzene"
         ],
         "mobile_phase_ratio": "20.5/79.5",
         "mobile_phase_ratio_units": "vol.%",
@@ -123,9 +149,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "The LCCC for PE is identified as 20.5/79.5 vol.% of 2-octanol/ODCB (Fig. 4d).",
-        "notes": "Determined using the new method proposed in the paper.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "PE[181]",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "20.5/79.5 vol.% of 2-octanol/ODCB",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -133,13 +168,14 @@
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "Isotactic Polypropylene",
-        "critical_component": "Isotactic Polypropylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "isotactic polypropylene",
+        "critical_component": "isotactic polypropylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "2-ethyl-1-hexanol",
           "1,2,4-trichlorobenzene"
@@ -156,9 +192,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "Table 2 lists the critical composition for it-PP in 2E1H/TCB as 88/12 vol.% obtained with the new method.",
-        "notes": "Determined using the new method proposed in the paper; values from Table 2.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "it-PP",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "2E1H/TCB",
+          "mobile_phase_ratio": "88/12",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper; values from Table 2.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -166,16 +211,17 @@
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "Syndiotactic Polypropylene",
-        "critical_component": "Syndiotactic Polypropylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "syndiotactic polypropylene",
+        "critical_component": "syndiotactic polypropylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "2-ethyl-1-hexanol",
-          "1,2-Dichlorobenzene"
+          "1,2-dichlorobenzene"
         ],
         "mobile_phase_ratio": "64/36",
         "mobile_phase_ratio_units": "vol.%",
@@ -189,9 +235,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "Table 2 lists the critical composition for st-PP in 2E1H/ODCB as 64/36 vol.% obtained with the new method.",
-        "notes": "Determined using the new method proposed in the paper; values from Table 2.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "st-PP",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "2E1H/ODCB",
+          "mobile_phase_ratio": "64/36",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper; values from Table 2.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -199,13 +254,14 @@
         "publication_year": "2016"
       },
       {
-        "analyte_polymer": "Polyethylene",
-        "critical_component": "Polyethylene",
-        "architecture": "Linear",
-        "critical_condition_basis": "Monitoring polymer recovery from column; full recovery indicates critical condition",
+        "analyte_polymer": "polyethylene",
+        "critical_component": "polyethylene",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb",
-        "stationary_phase_chemistry": "Porous graphitic carbon",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": null,
         "mobile_phase_solvents": [
           "n-decane",
           "1,2,4-trichlorobenzene"
@@ -222,9 +278,18 @@
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
         "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "Evaporative light scattering detector (ELSD)",
-        "evidence_text": "Table 2 lists the critical composition for PE in n-decane/TCB as 52/48 vol.% obtained with the new method.",
-        "notes": "Determined using the new method proposed in the paper; values from Table 2.",
+        "detector": "evaporative light scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The method is based on monitoring the recovery of the polymer sample from a column.",
+          "critical_component": "PE",
+          "column_name": "Hypercarb[TM] column",
+          "mobile_phase_solvents": "n-decane/TCB",
+          "mobile_phase_ratio": "52/48",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": "Determined using the new method described in the paper; values from Table 2.",
         "paper_doi": "10.1016/j.chroma.2016.05.019",
         "corresponding_author_name": "R. Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
@@ -239,7 +304,7 @@
       "section": "Full Paper",
       "token_count": 8903,
       "extraction_success": true,
-      "processing_time": 471.70553064346313,
+      "processing_time": 573.8760817050934,
       "extracted_count": 6
     }
   ]

@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[323] Malik2016.pdf",
-    "extraction_date": "2026-06-08T00:18:31.528943",
+    "extraction_date": "2026-07-01T22:36:53.156278",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[323] Malik2016.pdf",
-      "start_time": "2026-06-08T00:16:20.377896",
+      "start_time": "2026-07-01T22:32:41.133829",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 105.80436730384827,
+          "time_seconds": 99.69369077682495,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11859893798828125,
+          "time_seconds": 0.10650062561035156,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 12890
         },
         "llm_extraction": {
-          "time_seconds": 25.227847576141357,
+          "time_seconds": 152.1801836490631,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,16 +42,17 @@
         "analyte_polymer": "poloxamers",
         "critical_component": "PEO",
         "architecture": "triblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) allows separation of the polymers with regard to chemical composition by making one of the block chromatographically invisible, that results in predominant influence of noncritical block on chromatographic retention.",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water",
           "methanol"
         ],
-        "mobile_phase_ratio": "37/63 v/v, 87/13 v/v",
+        "mobile_phase_ratio": "37/63 v/v; 87/13 v/v",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -59,22 +65,32 @@
         "pore_size": "300 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
-        "evidence_text": "Reversed phase (RP) LC separates with regard to PO units of the copolymers at the critical conditions of PEO. On the contrary, Normal phase (NP) LC separates with respect to EO units of the copolymers with minimal effect of PPO block at its critical conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) allows separation of the polymers with regard to chemical composition by making one of the block chromatographically invisible, that results in predominant influence of noncritical block on chromatographic retention.",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil C18",
+          "mobile_phase_solvents": "acetone/water = 37/63 v/v, while solvent B was methanol/water = 87/13 v/v.",
+          "mobile_phase_ratio": "37/63 v/v; 87/13 v/v",
+          "temperature_celsius": "50[◦] C",
+          "pore_size": "300 Å",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.03.008",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "corresponding_author_name": "Muhammad Imran Malik; Taihyun Chang",
+        "corresponding_email_address": "mimran.malik@iccs.edu; tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea; International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2016"
       },
       {
         "analyte_polymer": "poloxamers",
         "critical_component": "PPO",
         "architecture": "triblock",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) allows separation of the polymers with regard to chemical composition by making one of the block chromatographically invisible, that results in predominant influence of noncritical block on chromatographic retention.",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil",
-        "stationary_phase_chemistry": "silica",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -92,12 +108,21 @@
         "pore_size": "300 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
-        "evidence_text": "On the contrary, NPLC can be used to achieve CAP of PPO and interaction of PEO. In this study, we realized critical conditions of PPO on Nucleosil columns in acetonitrile-water mobile phase. PPOs show molar mass independent elution in the range of interest for this study (up to 2500 g/mol) in acetonitrile/water (80/20 v/v).",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical conditions (LCCC) allows separation of the polymers with regard to chemical composition by making one of the block chromatographically invisible, that results in predominant influence of noncritical block on chromatographic retention.",
+          "critical_component": "PPO",
+          "column_name": "Nucleosil",
+          "mobile_phase_solvents": "acetonitrile/water = 80/20 v/v",
+          "mobile_phase_ratio": "80/20 v/v",
+          "temperature_celsius": "30[◦] C",
+          "pore_size": "300 Å",
+          "flow_rate": "1.0 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.03.008",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "corresponding_author_name": "Muhammad Imran Malik; Taihyun Chang",
+        "corresponding_email_address": "mimran.malik@iccs.edu; tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea; International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2016"
       }
     ]
@@ -108,7 +133,7 @@
       "section": "Full Paper",
       "token_count": 12890,
       "extraction_success": true,
-      "processing_time": 25.207186460494995,
+      "processing_time": 34.093934297561646,
       "extracted_count": 2
     }
   ]

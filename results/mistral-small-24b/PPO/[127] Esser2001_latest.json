@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[127] Esser2001.pdf",
-    "extraction_date": "2026-06-07T23:55:51.967702",
+    "extraction_date": "2026-07-01T22:11:32.773312",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
       "pdf_name": "[127] Esser2001.pdf",
-      "start_time": "2026-06-07T23:55:12.948599",
+      "start_time": "2026-07-01T22:10:52.748542",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 27.878934860229492,
+          "time_seconds": 26.655940532684326,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11857199668884277,
+          "time_seconds": 0.12460851669311523,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5493
         },
         "llm_extraction": {
-          "time_seconds": 11.021450281143188,
+          "time_seconds": 13.204692840576172,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43600"
+      }
     }
   },
   "summary": {
@@ -36,11 +41,12 @@
       {
         "analyte_polymer": "poly(propylene oxide)",
         "critical_component": "poly(propylene oxide)",
-        "architecture": "null",
+        "architecture": "triol",
         "critical_condition_basis": "elution behavior of the sample is solely directed by the type and number of the functional endgroups",
         "critical_condition_confidence": "explicit",
         "column_name": "Macherey Nagel Nucleosil 5 NH2",
-        "stationary_phase_chemistry": "null",
+        "stationary_phase_chemistry": "NH2",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "hexane",
           "isopropyl alcohol"
@@ -48,20 +54,29 @@
         "mobile_phase_ratio": "92:8",
         "mobile_phase_ratio_units": "vol.-%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
-        "temperature_celsius": "null",
-        "flow_rate": "null",
-        "pore_size": "null",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
         "column_dimensions": "200 x 4 mm i.d.",
-        "detector": "null",
-        "evidence_text": "This can be done by running PPGs with different molar masses in binary eluents of varying composition. In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "H. Pasch",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Different from any other liquid chromatographic technique, LC-CC operates at conditions where the polymer chain does not contribute to retention and the elution behavior of the sample is solely directed by the type and number of the functional endgroups.",
+          "critical_component": "PPO",
+          "column_name": "Macherey Nagel Nucleosil 5 NH2",
+          "mobile_phase_solvents": "hexane/isopropyl alcohol",
+          "mobile_phase_ratio": "92:8 vol.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "C. Keil; E. Esser; H. Pasch",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
         "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
         "publication_year": "2001"
@@ -74,7 +89,7 @@
       "section": "Full Paper",
       "token_count": 5493,
       "extraction_success": true,
-      "processing_time": 11.012128114700317,
+      "processing_time": 13.110097885131836,
       "extracted_count": 1
     }
   ]

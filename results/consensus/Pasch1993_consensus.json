@@ -9,7 +9,7 @@
     ]
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -74,39 +74,6 @@
         "detector": "ultraviolet/visible photometer (280 nm)",
         "evidence_text": "The critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane.",
         "notes": null,
-        "paper_doi": null,
-        "corresponding_author_name": "H. Pasch",
-        "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany",
-        "publication_year": "1993"
-      },
-      {
-        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
-        "critical_component": "poly(methyl methacrylate)",
-        "architecture": "diblock copolymer",
-        "critical_condition_basis": "critical point of adsorption for PMMA block",
-        "critical_condition_confidence": "explicit",
-        "column_name": "LiChrospher Si-300 and LiChrospher Si-1000",
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_solvents": [
-          "methyl ethyl ketone",
-          "cyclohexane"
-        ],
-        "mobile_phase_ratio": "70:30",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.5 ml min-1",
-        "pore_size": "300 A and 1000 A",
-        "column_dimensions": "self-packed",
-        "detector": "UV (280 nm)",
-        "evidence_text": "As can be seen in Figure 4, the critical point for PMMA is obtained at a mobile phase composition of 70 vol% MEK/30 vol% cyclohexane... Figure 5 Chromatograms of the block copolymers... at the critical point of PMMA; LiChrospher Si-300 and Si-1000, MEK-cyclohexane 70:30 vol%.",
-        "notes": "Second column system used for B1, B2, B3, B4, B5 to avoid exclusion limit issues. UV detection at 280 nm used for selective PS detection.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": null,

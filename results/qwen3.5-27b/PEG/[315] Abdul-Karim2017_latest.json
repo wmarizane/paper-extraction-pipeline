@@ -1,31 +1,36 @@
 {
   "metadata": {
     "source_pdf": "[315] Abdul-Karim2017.pdf",
-    "extraction_date": "2026-06-08T02:56:47.617352",
+    "extraction_date": "2026-07-01T04:34:51.102304",
     "model": "qwen3.5-27b",
     "pipeline_metrics": {
       "pdf_name": "[315] Abdul-Karim2017.pdf",
-      "start_time": "2026-06-08T02:52:37.615419",
+      "start_time": "2026-07-01T04:29:53.252521",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 88.0071120262146,
+          "time_seconds": 87.21227788925171,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12018251419067383,
+          "time_seconds": 0.11955595016479492,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9539
         },
         "llm_extraction": {
-          "time_seconds": 161.87452697753906,
+          "time_seconds": 210.48390126228333,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +42,11 @@
         "analyte_polymer": "poly(ethylene ether-carbonate)",
         "critical_component": "poly(ethylene ether-carbonate)",
         "architecture": "statistical copolymer",
-        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
-        "stationary_phase_chemistry": "RP",
+        "stationary_phase_chemistry": "ODS",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water",
@@ -59,8 +65,17 @@
         "pore_size": "70 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrilewater-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
-        "notes": "Critical adsorption point of PEEC reported for the first time. TEA added to avoid undesired polar interaction.",
+        "field_evidence": {
+          "critical_condition_basis": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrilewater-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
+          "critical_component": "PEEC",
+          "column_name": "ZORBAX ODS",
+          "mobile_phase_solvents": "aqueous acetonitrile with 1.0% triethylamine (TEA)",
+          "mobile_phase_ratio": "acetonitrilewater-TEA:64-35-1",
+          "temperature_celsius": "column oven was maintained at 30 8C",
+          "pore_size": "pore size ap 70 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
+        "notes": "Critical adsorption point of PEEC established on RP column. Used to analyze block copolymers where PEEC is the critical block.",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -71,10 +86,11 @@
         "analyte_polymer": "poly(ethylene glycol)",
         "critical_component": "poly(ethylene glycol)",
         "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
-        "stationary_phase_chemistry": "NP diol",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -92,8 +108,17 @@
         "pore_size": "120 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone",
-        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEEC elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone",
+          "critical_component": "PEG",
+          "column_name": "Ultisil diol column",
+          "mobile_phase_solvents": "binary aqueous mixture of 70 vol% acetone",
+          "mobile_phase_ratio": "65% acetone",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "pore size Ga» 120 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
+        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEG is the critical block.",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -108,7 +133,7 @@
       "section": "Full Paper",
       "token_count": 9539,
       "extraction_success": true,
-      "processing_time": 161.85136914253235,
+      "processing_time": 210.4279329776764,
       "extracted_count": 2
     }
   ]
