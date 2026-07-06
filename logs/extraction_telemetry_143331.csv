@@ -1,0 +1,83 @@
+paper_name,model,phase,wall_start,wall_end,wall_duration_s,initial_calls,retry_calls,total_calls,total_input_tokens,total_output_tokens,total_tokens,conditions_extracted,pytorch_peak_gb,nvidia_smi_pre_mb,nvidia_smi_post_mb,gpu_delta_mb,num_chunks,total_input_tokens_doc,success,error,conditions_per_minute,tokens_per_second
+[107] Krüger1996,qwen3.5-27b,extraction,2026-06-30T22:39:03.610463Z,2026-06-30T22:39:56.450234Z,52.839771,0,0,0,0,0,0,0,,,,,1,7707,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[111] Gorshkov1990,qwen3.5-27b,extraction,2026-06-30T22:41:07.541869Z,2026-06-30T22:42:01.070853Z,53.528984,0,0,0,0,0,0,0,,,,,1,6867,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[112] Pasch1995,qwen3.5-27b,extraction,2026-06-30T22:43:09.906033Z,2026-06-30T22:43:55.414958Z,45.508925,0,0,0,0,0,0,0,,,,,1,7346,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[113] Pasch,qwen3.5-27b,extraction,2026-06-30T22:45:04.169530Z,2026-06-30T22:46:14.179379Z,70.009849,0,0,0,0,0,0,0,,,,,1,8443,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[115] Falkenhagen2000,qwen3.5-27b,extraction,2026-06-30T22:47:22.617888Z,2026-06-30T22:48:10.605608Z,47.98772,0,0,0,0,0,0,0,,,,,1,6517,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[117] Murgasova1998,qwen3.5-27b,extraction,2026-06-30T22:49:18.716575Z,2026-06-30T22:49:40.109432Z,21.392857,0,0,0,0,0,0,0,,,,,1,5672,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[118] Trathnigg1994,qwen3.5-27b,extraction,2026-06-30T22:50:49.178199Z,2026-06-30T22:51:32.747529Z,43.56933,0,0,0,0,0,0,0,,,,,1,5614,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[120] Trathnigg2001,qwen3.5-27b,extraction,2026-06-30T22:52:40.049370Z,2026-06-30T22:53:17.338545Z,37.289175,0,0,0,0,0,0,0,,,,,1,9107,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[121] Lochmuller1996,qwen3.5-27b,extraction,2026-06-30T22:54:25.230931Z,2026-06-30T22:56:42.194470Z,136.963539,0,0,0,0,0,0,0,,,,,1,19944,False,"Invalid format specifier ' ""Direct quote from text establishing this IS a critical condition, or null"",
+        ""critical_component"":       ""Direct quote naming which polymer/block/component is at critical condition, or null"",
+        ""column_name"":              ""Direct quote stating the column name/model, or null"",
+        ""mobile_phase_solvents"":    ""Direct quote naming the solvents, or null"",
+        ""mobile_phase_ratio"":       ""Direct quote giving the mobile phase composition/ratio, or null"",
+        ""temperature_celsius"":      ""Direct quote stating the column temperature, or null"",
+        ""pore_size"":                ""Direct quote stating the column pore size, or null"",
+        ""flow_rate"":                ""Direct quote stating the flow rate, or null""
+      ' for object of type 'str'",0.0,0.0
+[122] Kazanskii2000,qwen3.5-27b,extraction,2026-06-30T22:57:49.777216Z,2026-06-30T23:04:54.847119Z,425.069903,2,0,2,40794,2596,43390,5,0.0,43018.0,45310.0,2292.0,2,35758,True,,0.71,102.08

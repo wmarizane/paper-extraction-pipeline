@@ -1,0 +1,5 @@
+paper_name,model,phase,wall_start,wall_end,wall_duration_s,initial_calls,retry_calls,total_calls,total_input_tokens,total_output_tokens,total_tokens,conditions_extracted,pytorch_peak_gb,nvidia_smi_pre_mb,nvidia_smi_post_mb,gpu_delta_mb,num_chunks,total_input_tokens_doc,success,error,conditions_per_minute,tokens_per_second
+[148] Wachsen,mistral-small-24b,extraction,2026-07-01T22:09:32.017558Z,2026-07-01T22:11:04.857454Z,92.839896,1,0,1,9576,540,10116,1,0.0,42562.0,43586.0,1024.0,1,7025,True,,0.65,108.96
+[210] Biela2003,mistral-small-24b,extraction,2026-07-01T22:11:44.187523Z,2026-07-01T22:12:45.912169Z,61.724646,1,0,1,15027,619,15646,1,0.0,42562.0,43586.0,1024.0,1,12492,True,,0.97,253.48
+[403] Radke2005,mistral-small-24b,extraction,2026-07-01T22:13:25.725557Z,2026-07-01T22:14:08.343002Z,42.617445,1,0,1,12703,587,13290,1,0.0,42562.0,43586.0,1024.0,1,9911,True,,1.41,311.84
+[94] Krüger1996,mistral-small-24b,extraction,2026-07-01T22:14:47.345596Z,2026-07-01T22:15:50.932010Z,63.586414,1,0,1,2277,9,2286,0,0.0,42562.0,42706.0,144.0,1,342,True,,0.0,35.95
