@@ -53,6 +53,44 @@ FIELDNAMES = [
     "Notes"
 ]
 
+def _select_latest_json_files(folder: Path) -> list:
+    """
+    Return exactly one JSON file per paper, preferring *_latest.json.
+
+    The results directories accumulate one timestamped file per extraction run
+    plus a *_latest.json symlink/copy.  Reading all *.json files with a plain
+    glob inflates every paper by the number of historical runs.  This helper
+    selects only the canonical file for each paper:
+
+      1. If *_latest.json files exist, use only those (ignores all timestamped
+         files and _consensus.json files in non-consensus folders).
+      2. Otherwise fall back to all *.json files but deduplicate by base name,
+         keeping the lexicographically last file (most recent timestamp).
+    """
+    import re
+
+    all_json = sorted(folder.glob("*.json"))
+    latest_files = [f for f in all_json if f.stem.endswith("_latest")]
+
+    if latest_files:
+        return latest_files
+
+    # Fallback: deduplicate by stripping timestamp/consensus suffix
+    def _base(stem: str) -> str:
+        stem = re.sub(r"_latest$", "", stem)
+        stem = re.sub(r"_consensus$", "", stem)
+        stem = re.sub(r"_extracted_\d{8}_\d{6}$", "", stem)
+        return stem
+
+    by_base: dict = {}
+    for f in all_json:
+        key = _base(f.stem)
+        # Keep the lexicographically last name (latest timestamp wins)
+        if key not in by_base or f.name > by_base[key].name:
+            by_base[key] = f
+    return sorted(by_base.values())
+
+
 def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
     """Export all JSON files in a folder to a single summary CSV."""
     folder = Path(folder_path)
@@ -60,7 +98,7 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
     
     rows = []
     
-    for json_file in folder.glob("*.json"):
+    for json_file in _select_latest_json_files(folder):
         try:
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
