@@ -11,6 +11,7 @@ from vllm.sampling_params import StructuredOutputsParams
 from config.settings import settings
 from config.model_registry import get_model_config
 from pipeline.llm_extractor import EXTRACTION_SCHEMA
+from pipeline.standardizer import canonicalize_solvent_list
 
 logger = logging.getLogger(__name__)
 
@@ -67,32 +68,6 @@ CANONICAL_POLYMERS = {
     "1,4-pi": "polyisoprene",
     "polyisoprene (1,4-pi)": "polyisoprene",
     "polyisoprene (1,4-isoprene)": "polyisoprene",
-}
-
-CANONICAL_SOLVENTS = {
-    "odcb": "1,2-dichlorobenzene",
-    "ortho-dichlorobenzene": "1,2-dichlorobenzene",
-    "1,2-dichlorobenzene": "1,2-dichlorobenzene",
-    "tcb": "1,2,4-trichlorobenzene",
-    "1,2,4-trichlorobenzene": "1,2,4-trichlorobenzene",
-    "acn": "acetonitrile",
-    "acetonitrile": "acetonitrile",
-    "ch3cn": "acetonitrile",
-    "thf": "tetrahydrofuran",
-    "tetrahydrofuran": "tetrahydrofuran",
-    "mek": "butanone",
-    "methyl ethyl ketone": "butanone",
-    "butanone": "butanone",
-    "dmf": "dimethylformamide",
-    "dimethylformamide": "dimethylformamide",
-    "n,n-dimethylformamide": "dimethylformamide",
-    "ipa": "isopropyl alcohol",
-    "isopropyl alcohol": "isopropyl alcohol",
-    "isopropanol": "isopropyl alcohol",
-    "2-propanol": "isopropyl alcohol",
-    "dcm": "dichloromethane",
-    "dichloromethane": "dichloromethane",
-    "ch2cl2": "dichloromethane",
 }
 
 # Architecture/topology prefixes stripped before canonical polymer lookup (for MATCHING only).
@@ -292,27 +267,8 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
     @staticmethod
     def _norm_solvents(solv):
-        """Normalize solvent list to a sorted set of lowercase strings with synonym replacement."""
-        if not solv:
-            return set()
-        if isinstance(solv, str):
-            raw_set = {s.strip().lower() for s in solv.replace("/", ",").split(",") if s.strip()}
-        else:
-            raw_set = {str(s).strip().lower() for s in solv if s}
-            
-        norm_set = set()
-        for s in raw_set:
-            s_clean = re.sub(r'[^a-z0-9]', '', s)
-            matched = False
-            for key, canonical in CANONICAL_SOLVENTS.items():
-                key_clean = re.sub(r'[^a-z0-9]', '', key)
-                if s_clean == key_clean or s_clean == key or s == key:
-                    norm_set.add(canonical)
-                    matched = True
-                    break
-            if not matched:
-                norm_set.add(s)
-        return norm_set
+        """Normalize solvent identities with the shared PolyCrit registry."""
+        return tuple(value.casefold() for value in canonicalize_solvent_list(solv))
 
     @staticmethod
     def _norm_ratio(ratio):
@@ -322,6 +278,140 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         ratio = str(ratio).lower().strip()
         ratio = re.sub(r'[/\\-]', ':', ratio)
         return re.sub(r'\s+', '', ratio)
+
+    @staticmethod
+    def _ratio_components(condition: Dict, solvent_count: int):
+        """Return a normalized positional ratio vector when it can be parsed safely."""
+        components = condition.get("mobile_phase_ratio_components")
+        values = None
+
+        if isinstance(components, (list, tuple)):
+            try:
+                values = [float(value) for value in components]
+            except (TypeError, ValueError):
+                values = None
+
+        if values is None:
+            raw_ratio = condition.get("mobile_phase_ratio")
+            if raw_ratio is None or not str(raw_ratio).strip():
+                return None
+
+            text = str(raw_ratio).strip()
+            text = re.sub(r'[\u2013\u2014\u2212]', '-', text)
+
+            scalar_match = re.fullmatch(r'(\d+(?:\.\d+)?)\s*%?', text)
+            if scalar_match:
+                first = float(scalar_match.group(1))
+                values = [first, 100.0 - first] if solvent_count == 2 else [first]
+            else:
+                for separator in (":", "/", "-"):
+                    parts = [part.strip() for part in text.split(separator)]
+                    if len(parts) < 2 or not all(
+                        re.fullmatch(r'\d+(?:\.\d+)?\s*%?', part) for part in parts
+                    ):
+                        continue
+                    candidate = [float(part.rstrip("% ")) for part in parts]
+                    if (
+                        separator == "-"
+                        and len(candidate) == 2
+                        and abs(sum(candidate) - 100.0) > 2.0
+                    ):
+                        continue
+                    values = candidate
+                    break
+
+            if values is None:
+                percent_values = re.findall(r'(\d+(?:\.\d+)?)\s*%', text)
+                if len(percent_values) == solvent_count:
+                    values = [float(value) for value in percent_values]
+
+        if not values or len(values) != solvent_count or any(value < 0 for value in values):
+            return None
+
+        total = sum(values)
+        if total <= 0:
+            return None
+        return tuple(value / total for value in values)
+
+    @staticmethod
+    def _norm_ratio_units(units):
+        """Normalize common composition bases without guessing an unknown unit."""
+        if not units:
+            return ""
+        text = str(units).casefold().strip()
+        compact = re.sub(r'[\s.,_]', '', text).replace("by", "")
+        if any(token in compact for token in ("w/v", "v/w", "wt/vol", "vol/wt")):
+            return compact
+        if "w/w" in compact or "wt" in compact or "weight" in compact:
+            return "w/w"
+        if "v/v" in compact or "vol" in compact:
+            return "v/v"
+        return compact
+
+    @staticmethod
+    def _mobile_phase_match(ca: Dict, cb: Dict):
+        """Compare solvent identities together with their positional compositions."""
+        solvents_a = ConsensusJudge._norm_solvents(ca.get("mobile_phase_solvents"))
+        solvents_b = ConsensusJudge._norm_solvents(cb.get("mobile_phase_solvents"))
+
+        ratio_a_raw = ca.get("mobile_phase_ratio")
+        ratio_b_raw = cb.get("mobile_phase_ratio")
+        ratio_a_present = bool(
+            ca.get("mobile_phase_ratio_components")
+            or (ratio_a_raw is not None and str(ratio_a_raw).strip())
+        )
+        ratio_b_present = bool(
+            cb.get("mobile_phase_ratio_components")
+            or (ratio_b_raw is not None and str(ratio_b_raw).strip())
+        )
+
+        if not solvents_a or not solvents_b:
+            ratio_match = True
+            if ratio_a_present and ratio_b_present:
+                ratio_match = (
+                    ConsensusJudge._norm_ratio(ratio_a_raw)
+                    == ConsensusJudge._norm_ratio(ratio_b_raw)
+                )
+            return True, ratio_match, ratio_a_present and ratio_b_present
+
+        same_identities = (
+            len(solvents_a) == len(solvents_b)
+            and sorted(solvents_a) == sorted(solvents_b)
+        )
+        if not same_identities:
+            return False, False, ratio_a_present and ratio_b_present
+
+        same_order = solvents_a == solvents_b
+        components_a = ConsensusJudge._ratio_components(ca, len(solvents_a))
+        components_b = ConsensusJudge._ratio_components(cb, len(solvents_b))
+
+        units_a = ConsensusJudge._norm_ratio_units(ca.get("mobile_phase_ratio_units"))
+        units_b = ConsensusJudge._norm_ratio_units(cb.get("mobile_phase_ratio_units"))
+        units_match = not units_a or not units_b or units_a == units_b
+
+        if components_a is not None and components_b is not None:
+            composition_a = dict(zip(solvents_a, components_a))
+            composition_b = dict(zip(solvents_b, components_b))
+            composition_match = units_match and all(
+                abs(composition_a[solvent] - composition_b[solvent]) <= 1e-6
+                for solvent in composition_a
+            )
+            return True, composition_match, True
+
+        if ratio_a_present and ratio_b_present:
+            if not same_order:
+                return True, False, True
+            ratio_match = (
+                ConsensusJudge._norm_ratio(ratio_a_raw)
+                == ConsensusJudge._norm_ratio(ratio_b_raw)
+                and units_match
+            )
+            return True, ratio_match, True
+
+        if not same_order and ratio_a_present != ratio_b_present:
+            return True, False, True
+
+        return True, True, False
 
     @staticmethod
     def _word_jaccard(a: str, b: str) -> float:
@@ -443,7 +533,6 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         """
         norm = ConsensusJudge._norm
         norm_solvents = ConsensusJudge._norm_solvents
-        norm_ratio = ConsensusJudge._norm_ratio
         word_jaccard = ConsensusJudge._word_jaccard
         canon_poly = ConsensusJudge._canonicalize_polymer
         is_abbrev = ConsensusJudge._is_abbreviation
@@ -452,8 +541,14 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         col_b = norm(cb.get("column_name"))
         solv_a = norm_solvents(ca.get("mobile_phase_solvents"))
         solv_b = norm_solvents(cb.get("mobile_phase_solvents"))
-        ratio_a = norm_ratio(ca.get("mobile_phase_ratio"))
-        ratio_b = norm_ratio(cb.get("mobile_phase_ratio"))
+        ratio_a_present = bool(
+            ca.get("mobile_phase_ratio_components")
+            or (ca.get("mobile_phase_ratio") is not None and str(ca.get("mobile_phase_ratio")).strip())
+        )
+        ratio_b_present = bool(
+            cb.get("mobile_phase_ratio_components")
+            or (cb.get("mobile_phase_ratio") is not None and str(cb.get("mobile_phase_ratio")).strip())
+        )
         temp_a = norm(ca.get("temperature_celsius"))
         temp_b = norm(cb.get("temperature_celsius"))
         
@@ -473,17 +568,10 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
         else:
             col_match = True  # If either is missing, don't penalize
 
-        # --- Signal 2: Solvents (set overlap) ---
-        if solv_a and solv_b:
-            solv_match = len(solv_a & solv_b) > 0
-        else:
-            solv_match = True
-
-        # --- Signal 3: Mobile phase ratio (exact after normalization) ---
-        if ratio_a and ratio_b:
-            ratio_match = (ratio_a == ratio_b)
-        else:
-            ratio_match = True
+        # Signals 2 and 3: solvent identities and their positional ratios.
+        solv_match, ratio_match, ratio_constraint_active = (
+            ConsensusJudge._mobile_phase_match(ca, cb)
+        )
 
         # --- Signal 4: Temperature (exact after normalization) ---
         if temp_a and temp_b:
@@ -524,7 +612,7 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
             chrom_signals.append(col_match)
         if solv_a and solv_b:
             chrom_signals.append(solv_match)
-        if ratio_a and ratio_b:
+        if ratio_a_present and ratio_b_present:
             chrom_signals.append(ratio_match)
         if temp_a and temp_b:
             chrom_signals.append(temp_match)
@@ -541,6 +629,13 @@ Output ONLY the final JSON starting with {{. Do not output anything after the JS
 
         chrom_contradictions = sum(1 for s in chrom_signals if not s)
         poly_contradictions = sum(1 for s in poly_signals if not s)
+
+        # Different solvent identities identify different experiments. A ratio
+        # contradiction is also decisive because ratio values are positional.
+        if solv_a and solv_b and not solv_match:
+            return False
+        if ratio_constraint_active and not ratio_match:
+            return False
 
         # OVERRIDE RULE: If chromatographic setup matches perfectly AND polymer identity
         # is compatible, allow soft naming mismatches. Requires analyte OR critical_component
