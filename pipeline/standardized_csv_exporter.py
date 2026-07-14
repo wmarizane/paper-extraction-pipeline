@@ -39,32 +39,20 @@ def _clean(val):
     return str(val)
 
 
-def _preserve_raw_value(val: Any) -> str:
-    """Serialize an original value without deduplicating or reordering it."""
-    if val is None:
-        return ""
-    if isinstance(val, float) and val != val:
-        return ""
-    if isinstance(val, (list, tuple, dict)):
-        return json.dumps(val, ensure_ascii=False)
-    return str(val)
-
-
-def _raw_condition_value(condition: Dict[str, Any], field: str) -> Any:
-    """Return a preserved raw field, falling back for older standardized JSON."""
-    raw_field = f"{field}_raw"
-    if raw_field in condition:
-        return condition.get(raw_field)
-    return condition.get(field)
-
+_KNOWN_MANUAL_POLYMER_ALIASES = {
+    # Keep these minimal to avoid overbroad, unintended rewrites.
+    "PS": "Polystyrene",
+    "PEO": "Poly(ethylene oxide)",
+}
 
 _POLYMER_REFERENCE_ALIASES = getattr(
     _standardizer,
     "_POLYMER_CANONICAL_TO_ALIASES",
     {
-        "Poly(ethylene glycol)": ["PEG", "PEO", "mPEG", "PEG-MME", "PEG-DME", "MeO-PEG", "MeO-PEG-DME"],
+        "Poly(ethylene glycol)": ["PEG", "mPEG", "PEG-MME", "PEG-DME", "MeO-PEG", "MeO-PEG-DME"],
         "Poly(propylene glycol)": ["PPG"],
         "Poly(L-lactide)": ["PLLA", "PLA"],
+        "Poly(ethylene oxide)": ["PEO"],
     },
 )
 
@@ -180,13 +168,21 @@ def _load_polymer_reference_dictionary(
                 canonical,
             )
 
-    # Use the standardizer's collision-checked lookup so JSON and CSV cannot
-    # disagree for ambiguous aliases such as dPS, PC, and Epoxy Resin.
-    shared_aliases = getattr(_standardizer, "_POLYMER_ALIAS_TO_CANONICAL", None)
-    shared_display = getattr(_standardizer, "_POLYMER_CANONICAL_DISPLAY", None)
-    if isinstance(shared_aliases, dict) and isinstance(shared_display, dict):
-        alias_to_canonical = dict(shared_aliases)
-        canonical_display = dict(shared_display)
+    for alias, canonical in _KNOWN_MANUAL_POLYMER_ALIASES.items():
+        alias_key = _normalize_polymer_key(alias)
+        canonical_key = _normalize_polymer_key(canonical)
+        if not alias_key or not canonical_key:
+            continue
+
+        canonical_display.setdefault(canonical_key, canonical)
+        alias_to_canonical.setdefault(alias_key, canonical_key)
+        _register_polymer_alias(
+            alias_to_canonical,
+            canonical_aliases,
+            canonical_display,
+            alias,
+            canonical,
+        )
 
     return alias_to_canonical, canonical_aliases, canonical_display
 
@@ -314,7 +310,7 @@ def _derive_polymer_columns(
 
     # Prefer explicit full polymer labels over short acronym-like tokens.
     canonical_key = _find_dictionary_hit(primary_candidates)
-    if not canonical_key:
+    if not canonical_key and not primary_candidates:
         canonical_key = _find_dictionary_hit(alias_candidates)
 
     # Fallback when dictionary mapping is absent.
@@ -324,36 +320,19 @@ def _derive_polymer_columns(
             polymer = _clean(alias_to_canonical.get(canonical_key, ""))
         alias_values = []
         alias_seen: set[str] = set()
-        source_alias_by_key: dict[str, str] = {}
         for alias in canonical_aliases.get(canonical_key, []):
             if not alias:
                 continue
-            alias_key = _normalize_polymer_key(alias)
-            polymer_key = _normalize_polymer_key(polymer)
-            if alias_key == polymer_key:
+            if _normalize_polymer_key(alias) == _normalize_polymer_key(polymer):
                 continue
-            source_alias_by_key[_normalize_polymer_key(alias)] = alias
-
-        # Emit only aliases that were present in the extracted text. The
-        # reference dictionary identifies equivalence but must not manufacture
-        # evidence that the model never extracted.
-        for candidate in lookup_candidates:
-            source_alias = source_alias_by_key.get(_normalize_polymer_key(candidate))
-            if source_alias:
-                _append_unique(alias_values, source_alias, alias_seen, normalize=False)
+            _append_unique(alias_values, alias, alias_seen, normalize=False)
 
         _, extracted_aliases = _extract_polymer_aliases(analyte_polymer, critical_component)
         for alias in extracted_aliases.split(","):
             alias = _clean(alias)
             if not alias:
                 continue
-            alias_key = _normalize_polymer_key(alias)
-            polymer_key = _normalize_polymer_key(polymer)
-            source_alias = source_alias_by_key.get(alias_key)
-            if source_alias:
-                _append_unique(alias_values, source_alias, alias_seen, normalize=False)
-                continue
-            if alias_key == polymer_key or alias_key in polymer_key:
+            if _normalize_polymer_key(alias) == _normalize_polymer_key(polymer):
                 continue
             if not _alias_compatible(polymer, alias):
                 continue
@@ -406,15 +385,12 @@ def _normalize_ratio_unit(value: Any) -> str:
     if value is None:
         return ""
 
-    text = str(value).strip().lower().replace(" ", "").replace(".", "")
+    text = str(value).strip().lower().replace(" ", "")
     if not text or text in {"null", "none"}:
         return ""
 
-    if any(
-        token in text
-        for token in ("w/v", "v/w", "wt/vol", "vol/wt", "weight/volume", "volume/weight")
-    ):
-        return ""
+    if text in {"w/v", "v/w"}:
+        return "v/v"
     if "v/" in text or "vol" in text:
         return "v/v"
     if "w/" in text or "wt" in text:
@@ -494,36 +470,6 @@ def _ratio_columns(cond: Dict[str, Any]) -> Tuple[str, str]:
         elif unit == "v/v":
             vol_ratio = ratio_value
     return wt_ratio, vol_ratio
-
-
-def _format_polycrit_solvents(
-    solvents: Any,
-    qualifiers: Any = None,
-) -> str:
-    if not isinstance(solvents, list):
-        return _clean(solvents)
-
-    qualifier_list = qualifiers if isinstance(qualifiers, list) else []
-    values = []
-    for index, solvent in enumerate(solvents):
-        value = _clean(solvent)
-        if not value:
-            continue
-        qualifier = _clean(qualifier_list[index]) if index < len(qualifier_list) else ""
-        if qualifier.casefold() == "near crit":
-            value = f"{value} (near crit)"
-        values.append(value)
-    return ", ".join(values)
-
-
-def _pore_size_for_export(cond: Dict[str, Any]) -> str:
-    scalar_or_list = _clean(cond.get("pore_size_angstrom"))
-    if scalar_or_list:
-        return scalar_or_list
-    return _format_range(
-        cond.get("pore_size_min_angstrom"),
-        cond.get("pore_size_max_angstrom"),
-    )
 
 
 def _split_by_top_level_comma(value: str) -> list[str]:
@@ -953,63 +899,29 @@ _POLYCRIT_FIELDNAMES_BASE = [
 ]
 
 POLYCRIT_FIELDNAMES = _POLYCRIT_FIELDNAMES_BASE
-POLYCRIT_REVIEW_AUDIT_FIELDNAMES = [
-    "Reference (Raw)",
-    "Paper DOI",
-    "Corresponding Author Name",
-    "Corresponding Email Address",
-    "Physical Address",
-    "Publication Year (Raw)",
-    "Critical Condition Basis",
-    "Critical Condition Confidence",
-    "Model Confidences",
-    "Qwen Confidence",
-    "Mistral Confidence",
-    "Analyte Polymer (Raw)",
-    "Analyte Polymer (Standardized)",
-    "Critical Component (Raw)",
-    "Critical Component (Standardized)",
-    "Architecture (Raw)",
-    "Architecture (Standardized)",
-    "Polymer (Raw)",
-    "Alternate Polymer Names (Parsed from Raw)",
-    "Polymer Parsing",
-    "End Groups (Raw)",
-    "End Groups (Parsed)",
-    "Solvents (Raw)",
-    "Solvents (Standardized)",
-    "Solvent Qualifiers (Standardized)",
-    "Solvent Count (Standardized)",
-    "Solvent Ratio (Raw)",
-    "Solvent Ratio Units (Raw)",
-    "Solvent Ratio Components (Standardized)",
-    "Solvent Ratio Units (Standardized)",
-    "Solvent Ratio Minimum (Standardized)",
-    "Solvent Ratio Maximum (Standardized)",
-    "Stationary Phase (Raw)",
-    "Manufacturer (Raw)",
-    "Base Material Source (Raw)",
-    "Base Material Modification (Raw)",
-    "Column Name (Raw)",
-    "Column Mode (Raw)",
-    "Column Mode (Standardized)",
-    "Column Dimensions (Raw)",
-    "Pore Size (Raw)",
-    "Pore Size (Standardized)",
-    "Temperature (Raw)",
-    "Temperature (Standardized)",
-    "Flow Rate (Raw)",
-    "Flow Rate (Standardized)",
-    "Injected Polymer Concentration (Raw)",
-    "Detector (Raw)",
-    "Aqueous Parameters (Raw)",
-    "Aqueous Parameters (Standardized)",
-    "Evidence Text",
-    "Notes",
-]
 POLYCRIT_FIELDNAMES_REVIEW = [
-    *POLYCRIT_FIELDNAMES,
-    *POLYCRIT_REVIEW_AUDIT_FIELDNAMES,
+    "Reference",
+    "Author Year",
+    "Polymer (Raw)",
+    "Polymer",
+    "Alternate Polymer Names",
+    "Polymer Parsing",
+    "End Groups",
+    "End Groups (Parsed)",
+    "Solvents",
+    "Solvent Ratio (wt%)",
+    "Solvent Ratio (vol%)",
+    "Stationary Phase",
+    "Manufacturer",
+    "Base Material",
+    "Base Material Modification",
+    "Phase",
+    "Particle diameter (\u03bcm)",
+    "Pore size (\u00c5)",
+    "Temperature (Celsius)",
+    "Flow Rate (mL/min)",
+    "Injected Polymer Concentration (g/L)",
+    "Detector",
 ]
 
 
@@ -1101,7 +1013,6 @@ def export_folder_to_csv(
             for condition in conditions:
                 aq = condition.get("aqueous_parameters") or {}
                 solvents = condition.get("mobile_phase_solvents") or []
-                solvent_qualifiers = condition.get("mobile_phase_solvent_qualifiers") or []
                 conf = condition.get("model_confidences") or {}
                 wt_ratio, vol_ratio = _ratio_columns(condition)
                 analyte_polymer_raw = (
@@ -1132,10 +1043,6 @@ def export_folder_to_csv(
                     condition.get("notes"),
                     condition.get("evidence_text"),
                 )
-                _, raw_alternate = _extract_polymer_aliases(
-                    analyte_polymer_raw,
-                    critical_component_raw,
-                )
 
                 if mode == "polycrit":
                     row = {
@@ -1144,10 +1051,7 @@ def export_folder_to_csv(
                         "Polymer": polymer,
                         "Alternate Polymer Names": alternate,
                         "End Groups": parsed_end_groups,
-                        "Solvents": _format_polycrit_solvents(
-                            solvents,
-                            solvent_qualifiers,
-                        ),
+                        "Solvents": _clean(solvents),
                         "Solvent Ratio (wt%)": wt_ratio,
                         "Solvent Ratio (vol%)": vol_ratio,
                         "Stationary Phase": _clean(condition.get("stationary_phase_chemistry")),
@@ -1161,179 +1065,18 @@ def export_folder_to_csv(
                         "Particle diameter (\u03bcm)": _extract_particle_diameter_um(
                             condition.get("column_dimensions")
                         ),
-                        "Pore size (\u00c5)": _pore_size_for_export(condition),
+                        "Pore size (\u00c5)": _clean(condition.get("pore_size_angstrom")),
                         "Temperature (Celsius)": _parse_temperature(condition),
                         "Flow Rate (mL/min)": _parse_flow(condition),
                         "Injected Polymer Concentration (g/L)": "",
                         "Detector": _clean(condition.get("detector")),
                     }
                     if include_review_columns:
-                        raw_solvents = _raw_condition_value(
-                            condition,
-                            "mobile_phase_solvents",
-                        )
-                        raw_aqueous = condition.get(
-                            "aqueous_parameters_raw",
-                            condition.get("aqueous_parameters"),
-                        )
                         row.update(
                             {
-                                "Reference (Raw)": _preserve_raw_value(paper_name),
-                                "Paper DOI": _preserve_raw_value(
-                                    condition.get("paper_doi")
-                                ),
-                                "Corresponding Author Name": _preserve_raw_value(
-                                    condition.get("corresponding_author_name")
-                                ),
-                                "Corresponding Email Address": _preserve_raw_value(
-                                    condition.get("corresponding_email_address")
-                                ),
-                                "Physical Address": _preserve_raw_value(
-                                    condition.get("physical_address")
-                                ),
-                                "Publication Year (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "publication_year")
-                                ),
-                                "Critical Condition Basis": _preserve_raw_value(
-                                    condition.get("critical_condition_basis")
-                                ),
-                                "Critical Condition Confidence": _preserve_raw_value(
-                                    condition.get("critical_condition_confidence")
-                                ),
-                                "Model Confidences": _preserve_raw_value(conf),
-                                "Qwen Confidence": _preserve_raw_value(conf.get("qwen")),
-                                "Mistral Confidence": _preserve_raw_value(
-                                    conf.get("mistral")
-                                ),
-                                "Analyte Polymer (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "analyte_polymer")
-                                ),
-                                "Analyte Polymer (Standardized)": _clean(
-                                    condition.get("analyte_polymer")
-                                ),
-                                "Critical Component (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "critical_component")
-                                ),
-                                "Critical Component (Standardized)": _clean(
-                                    condition.get("critical_component")
-                                ),
-                                "Architecture (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "architecture")
-                                ),
-                                "Architecture (Standardized)": _clean(
-                                    condition.get("architecture")
-                                ),
                                 "Polymer (Raw)": polymer_raw,
-                                "Alternate Polymer Names (Parsed from Raw)": raw_alternate,
                                 "Polymer Parsing": polymer_parsing,
-                                "End Groups (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "end_groups")
-                                ),
                                 "End Groups (Parsed)": parsed_end_groups,
-                                "Solvents (Raw)": _preserve_raw_value(raw_solvents),
-                                "Solvents (Standardized)": _preserve_raw_value(solvents),
-                                "Solvent Qualifiers (Standardized)": _preserve_raw_value(
-                                    solvent_qualifiers
-                                ),
-                                "Solvent Count (Standardized)": str(
-                                    len(solvents)
-                                    if isinstance(solvents, (list, tuple))
-                                    else int(bool(_clean(solvents)))
-                                ),
-                                "Solvent Ratio (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "mobile_phase_ratio")
-                                ),
-                                "Solvent Ratio Units (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "mobile_phase_ratio_units",
-                                    )
-                                ),
-                                "Solvent Ratio Components (Standardized)": (
-                                    _preserve_raw_value(
-                                        condition.get("mobile_phase_ratio_components")
-                                    )
-                                ),
-                                "Solvent Ratio Units (Standardized)": _clean(
-                                    condition.get("mobile_phase_ratio_units")
-                                ),
-                                "Solvent Ratio Minimum (Standardized)": _clean(
-                                    condition.get("mobile_phase_ratio_min")
-                                ),
-                                "Solvent Ratio Maximum (Standardized)": _clean(
-                                    condition.get("mobile_phase_ratio_max")
-                                ),
-                                "Stationary Phase (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "stationary_phase_chemistry",
-                                    )
-                                ),
-                                "Manufacturer (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "manufacturer")
-                                ),
-                                "Base Material Source (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "stationary_phase_chemistry",
-                                    )
-                                ),
-                                "Base Material Modification (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "base_material_modification",
-                                    )
-                                ),
-                                "Column Name (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "column_name")
-                                ),
-                                "Column Mode (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "column_mode")
-                                ),
-                                "Column Mode (Standardized)": _clean(
-                                    condition.get("column_mode")
-                                ),
-                                "Column Dimensions (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "column_dimensions")
-                                ),
-                                "Pore Size (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "pore_size")
-                                ),
-                                "Pore Size (Standardized)": _pore_size_for_export(
-                                    condition
-                                ),
-                                "Temperature (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "temperature_celsius",
-                                    )
-                                ),
-                                "Temperature (Standardized)": _parse_temperature(
-                                    condition
-                                ),
-                                "Flow Rate (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "flow_rate")
-                                ),
-                                "Flow Rate (Standardized)": _parse_flow(condition),
-                                "Injected Polymer Concentration (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(
-                                        condition,
-                                        "injected_polymer_concentration_g_l",
-                                    )
-                                ),
-                                "Detector (Raw)": _preserve_raw_value(
-                                    _raw_condition_value(condition, "detector")
-                                ),
-                                "Aqueous Parameters (Raw)": _preserve_raw_value(
-                                    raw_aqueous
-                                ),
-                                "Aqueous Parameters (Standardized)": _preserve_raw_value(
-                                    condition.get("aqueous_parameters")
-                                ),
-                                "Evidence Text": _preserve_raw_value(
-                                    condition.get("evidence_text")
-                                ),
-                                "Notes": _preserve_raw_value(condition.get("notes")),
                             }
                         )
                 else:
@@ -1357,10 +1100,7 @@ def export_folder_to_csv(
                         "Pore Size Min (Angstrom)": _clean(condition.get("pore_size_min_angstrom")),
                         "Pore Size Max (Angstrom)": _clean(condition.get("pore_size_max_angstrom")),
                         "Column Dimensions": _clean(condition.get("column_dimensions")),
-                        "Mobile Phase Solvents": _format_polycrit_solvents(
-                            solvents,
-                            solvent_qualifiers,
-                        ),
+                        "Mobile Phase Solvents": _clean(solvents),
                         "Mobile Phase Ratio (Raw)": _clean(condition.get("mobile_phase_ratio_raw")),
                         "Mobile Phase Ratio Components": _clean(condition.get("mobile_phase_ratio_components")),
                         "Mobile Phase Ratio Min": _clean(condition.get("mobile_phase_ratio_min")),
@@ -1372,9 +1112,7 @@ def export_folder_to_csv(
                         "Aqueous Salt Added": _clean(aq.get("salt_added") if aq.get("salt_added") is not None else ""),
                         "Aqueous Salt Type": _clean(aq.get("salt_type")),
                         "Aqueous Salt Concentration": _clean(aq.get("salt_concentration")),
-                        "Temperature (\u00b0C) (Raw)": _clean(
-                            _raw_condition_value(condition, "temperature_celsius")
-                        ),
+                        "Temperature (\u00b0C) (Raw)": _clean(condition.get("temperature_celsius")),
                         "Temperature (\u00b0C)": _parse_temperature(condition),
                         "Temperature Min (\u00b0C)": _clean(condition.get("temperature_min_celsius")),
                         "Temperature Max (\u00b0C)": _clean(condition.get("temperature_max_celsius")),
@@ -1426,10 +1164,7 @@ if __name__ == "__main__":
         "--include-review-columns",
         action="store_true",
         default=False,
-        help=(
-            "Append raw and standardized audit columns for debugging; "
-            "source fields absent from extraction remain blank."
-        ),
+        help="Add extra parsing columns for review (Polymer (Raw), polymer parsing, parsed end groups).",
     )
     args = parser.parse_args()
 
