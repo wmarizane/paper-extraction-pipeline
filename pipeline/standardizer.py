@@ -55,77 +55,17 @@ ARCHITECTURE_MAP = {
 }
 
 _POLYMER_CANONICAL_TO_ALIASES = {
-    # LCCCSeedData-7-12-26.xlsx, Data sheet: 69 canonical values and
-    # 100 canonical-to-alternate relationships across 705 rows.
-    "Poly(methyl methacrylate)": ["PMMA", "hPMMA", "dPMMA"],
-    "Polystyrene": ["PS", "hPS", "dPS"],
-    "Polyisoprene": ["PI"],
-    "Poly(ethyl methacrylate)": ["PEMA"],
-    "Poly(vinyl chloride)": ["PVC"],
-    "Polybutadiene": ["PB"],
+
     "Poly(propylene glycol)": ["PPG"],
-    "Poly(decyl methacrylate)": ["PDMA"],
-    "Poly(1,3,6-trioxocane)": ["polyTOC"],
-    "Poly[(adipic acid)-co-(1,2-ethanediol)]": ["AA-1,2ED"],
-    "Poly[(adipic acid)-co-(1,2-propanediol)]": ["AA-1,2PD"],
-    "Poly[(adipic acid)-co-(1,3-butanediol)]": ["AA-1,3BD"],
-    "Poly[(adipic acid)-co-(1,3-propanediol)]": ["AA-1,3PD"],
-    "Poly[(adipic Acid)-co-(1,4-butanediol)]": ["AA-1,4BD"],
-    "Poly[(adipic acid)-co-(diethylene glycol)]": ["AA-DEG"],
-    "Poly[(adipic acid)-co-(dipropylene glycol)]": ["AA-DPG"],
-    "Poly[(adipic acid)-co-(neopentyl glycol)]": ["AA-NPG"],
-    "Poly[(phthalic acid)-co-(diethylene glycol)]": ["PA-DEG"],
-    "Poly[(phthalic acid)-co-(ethylene glycol)]": ["PA-EG"],
-    "Poly[(phthalic acid)-co-(triethylene glycol)]": ["PA-TEG"],
-    "Polycarbonate": ["PC"],
-    "Poly[di(ethylene glycol) adipate]": ["PDEGA"],
-    "Polydimethylsiloxane": ["PDMS"],
+    
     "Poly(ethylene glycol)": ["PEG", "mPEG", "PEG-MME", "PEG-DME", "MeO-PEG-DME", "MeO-PEG"],
-    "Poly(t-butyl methacrylate)": ["PtBMA"],
-    "Poly(n-butyl methacrylate)": ["PBMA", "PnBMA"],
-    "Poly(2-vinylpyridine)": ["P2VP"],
-    "Poly(propylene oxide) Adipate": ["PPOA"],
-    "Polycaprolactam": ["PA6", "Nylon-6"],
-    "Polybutylene Terephthalate": ["PBT", "PBTF"],
-    "Polysulfone": ["PSU"],
-    "Poly(phenolphthalein terephthalate)": ["PPha-tere"],
-    "Poly(n-butyl acrylate)": ["PBA", "PnBA"],
-    "Poly[(adipic acid)-co-(1,6-hexanediol)]": ["AA-HD", "AA-1,6HD"],
-    "Chlorinated Polyethylene": ["CPE", "PE-C"],
-    "Bisphenol A": ["BPA", "DGEBA", "Epoxy Resin"],
-    "Calixarene": ["Calixarene"],
-    "Polyepoxides": ["Epoxy resin"],
-    "Polycaprolactone": ["PCL", "PCL-ME"],
-    "Polyepichlorohydrin": ["PECH", "Epoxy Resin"],
-    "Poly(1,4-butylene adipate)": ["PBAG"],
-    "Polyphenylsulfone": ["PPSU", "PFS"],
-    "Aliphatic Polycarbonate": ["APC", "PC"],
+
+
     "Poly(L-lactide)": ["PLLA", "PLA"],
-    "Poly(propylene adipate)": ["PPA"],
-    "Polytetrahydrofuran": ["PTHF"],
-    "Polyisobutylene": ["PIB"],
-    "Poly(2-ethyl-2-oxazoline)": ["PEtOx"],
-    "Poly(butylene oxide)": ["PBO"],
-    "Poly(hexylene oxide)": ["PHO"],
-    "Poly(isobornyl acrylate)": ["PiBoA"],
-    "Poly(methyl acrylate)": ["PMA"],
-    "Polyvinylpyrrolidone": ["PVP"],
-    "Polyvinyl acetate": ["PVAc", "PVA"],
-    "Poly(diphenolic acid)": ["PDPA"],
-    "Adipic acid": ["AA", "AS"],
-    "Poly(ambrettolide)": ["PAmb", "cPAmb"],
-    "Polystyrene sulfonate": ["SPS", "PSS"],
-    "Poly(acrylic acid)": ["PAA", "PAAS", "ACR"],
-    "Deuterated Polystyrene": ["dPS"],
-    "Poly(propylene phthalate)": ["PPOPA"],
-    "Poly(3,6-dioxa-1,8-octanedithiol)": ["polyDODT"],
-    "Poly(Ethylene-co-Propylene)": ["EP", "EP Copolomer"],
-    "Polyethylene": ["PE"],
-    "Polypropylene": ["PP"],
-    "Polyoxyethylene sorbitan monolaurate": ["Tween 20", "Polysorbate 20"],
-    "Poly(ethylene ether carbonate)": ["PEEC"],
-    "Poly(propylene ether carbonate)": ["PPEC"],
-    "Polyoxyethylene sorbitan monopalmitate": ["Tween 40", "Polysorbate 40"],
+
+    "Poly(ethylene oxide)": ["PEO"],
+    "Poly(propylene oxide)": ["PPO"],
+
 }
 
 
@@ -141,30 +81,41 @@ _POLYMER_COMPATIBILITY_ALIASES = {
         "Polyethylene oxide",
         "Polyoxyethylene",
     ],
+    
     "Poly(propylene glycol)": [
         "PPO",
         "Poly(propylene oxide)",
         "Polypropylene oxide",
+        "Polyoxypropylene",
     ],
-    "Poly(butylene oxide)": ["Poly(butene oxide)"],
-    "Poly(hexylene oxide)": ["Poly(hexene oxide)", "Polyhexylene oxide"],
-    "Poly(L-lactide)": ["Poly(L-lactic acid)", "Poly-L-lactide"],
-    "Polycaprolactone": [
-        "Poly(e-caprolactone)",
-        "Poly(epsilon-caprolactone)",
-        "Poly(ε-caprolactone)",
-    ],
-    "Poly(Ethylene-co-Propylene)": ["EP Copolymer"],
+    
+    "Poly(L-lactide)": [
+        "PLLA"
+        "Poly(L-lactic acid)",
+        "Poly-L-lactide",
+        ],
+
+    "Poly(lactide)": [
+        "PLA"
+        "Poly(lactic acid)",
+        "Polylactide",
+        ],
+
+    "Poly(Ethylene-co-Propylene)": [
+        "EP Copolymer",
+        ],
+    
+    "Poloxamer": [
+        "Pluronic",
+        "Kolliphor",
+        "Synperonic"
+        "PEO-PPO-PEO"
+        "ABA triblock"
+        ],
 }
 
-# PolyCrit contains three normalized alias collisions. The isotope-specific dPS
-# alias has a deterministic meaning. PC and the generic epoxy label remain
-# unresolved because the workbook assigns each to multiple canonicals.
-_POLYMER_AMBIGUOUS_ALIAS_POLICIES: Dict[str, Optional[str]] = {
-    "dPS": "Deuterated Polystyrene",
-    "PC": None,
-    "Epoxy Resin": None,
-}
+
+_POLYMER_AMBIGUOUS_ALIAS_POLICIES: Dict[str, Optional[str]] = {}
 
 
 def _build_polymer_lookup() -> Tuple[
@@ -213,11 +164,7 @@ def _build_polymer_lookup() -> Tuple[
         _normalize_polymer_key(alias): canonical
         for alias, canonical in _POLYMER_AMBIGUOUS_ALIAS_POLICIES.items()
     }
-    if set(conflicts) != set(normalized_policies):
-        raise ValueError(
-            "Polymer alias conflicts and explicit policies are out of sync: "
-            f"conflicts={sorted(conflicts)}, policies={sorted(normalized_policies)}"
-        )
+
 
     alias_to_canonical: Dict[str, str] = {}
     for alias_key, target_keys in alias_targets.items():
@@ -225,7 +172,7 @@ def _build_polymer_lookup() -> Tuple[
             alias_to_canonical[alias_key] = next(iter(target_keys))
             continue
 
-        selected = normalized_policies[alias_key]
+        selected = normalized_policies.get[alias_key]
         if selected is None:
             continue
         selected_key = _normalize_polymer_key(selected)
@@ -346,46 +293,44 @@ def _normalize_polymer_fields(cond: Dict[str, Any]) -> None:
 
 
 _SOLVENT_CANONICAL_TO_ALIASES = {
-    # PolyCrit solvent identities from the same 705-row Data sheet. The
-    # nonchemical "near crit" annotation is stored separately by the parser.
-    "1,1,1,3,3,3-Hexafluoro-2-Propanol": ["HFIP", "Hexafluoroisopropanol"],
-    "1,2,4-Trichlorobenzene": [],
-    "1,2-Dichlorobenzene": ["ODCB", "o-DCB", "Ortho-dichlorobenzene"],
-    "1,2-Dichloroethane": ["DCE", "Ethylene dichloride"],
-    "1,3,5-Trimethylbenzene": ["Mesitylene"],
-    "1,4-Dichlorobenzene": ["p-DCB", "Para-dichlorobenzene"],
+
+
+
+    
     "1,4-Dioxane": ["1,4-Dioxan"],
-    "1-Decanol": ["n-Decanol", "Decan-1-ol"],
+    
     "1-Propanol": ["n-Propanol", "Propan-1-ol", "n-Propyl alcohol"],
-    "2,2,4-Trimethylpentane": ["Isooctane", "Iso-octane"],
-    "2-Chlorotoluene": ["o-Chlorotoluene", "Ortho-chlorotoluene"],
-    "2-Ethyl-1-Hexanol": ["2E1H", "2-Ethylhexanol", "2-Ethylhexan-1-ol"],
-    "2-Octanol": ["Octan-2-ol"],
+
+    
     "2-Propanol": ["IPA", "Isopropanol", "Isopropyl alcohol", "i-PrOH"],
+    
     "Acetic Acid": ["Ethanoic acid", "AcOH", "HOAc"],
+    
     "Acetone": ["Propanone", "2-Propanone"],
+    
     "Acetonitrile": ["ACN", "CH3CN", "MeCN", "Methyl cyanide"],
-    "Benzene": [],
-    "Carbon Dioxide": ["CO2", "scCO2", "Supercritical carbon dioxide"],
+
+    
+    
     "Chloroform": ["CHCl3", "Trichloromethane"],
-    "Cyclohexane": ["c-Hexane"],
-    "Cyclohexanone": [],
-    "Decalin": ["Decahydronaphthalene"],
-    "Decane": ["n-Decane"],
+
+
+
+
     "Deuterated Acetone": ["Acetone-d6", "d6-Acetone"],
-    "Dichloromethane": ["DCM", "CH2Cl2", "Methylene chloride"],
-    "Diethyl Ether": ["Et2O", "Ethoxyethane"],
-    "Diethyl Malonate": [],
-    "Dimethoxyethane": ["1,2-Dimethoxyethane", "Glyme", "Monoglyme"],
-    "Dimethylacetamide": ["DMAc", "N,N-Dimethylacetamide"],
+
+
+    
     "Dimethylformamide": ["DMF", "N,N-Dimethylformamide", "Dimethyl Formamide"],
-    "Dioxane": [],
-    "Ethanol": ["EtOH", "Ethyl alcohol"],
+    
+    "Dioxane": ["1,4-Dioxane"],
+
     "Ethyl Acetate": ["EtOAc", "Ethyl ethanoate", "Ethylacetat"],
-    "Formic Acid": ["Methanoic acid", "HCOOH"],
+    
     "Heptane": ["n-Heptane"],
     "Hexane": ["n-Hexane"],
     "Methanol": ["MeOH", "CH3OH", "Methyl alcohol"],
+    
     "Methyl Ethyl Ketone": [
         "MEK",
         "Butanone",
@@ -393,23 +338,44 @@ _SOLVENT_CANONICAL_TO_ALIASES = {
         "Methylethylketon",
         "Methyl ethyl ketone (MEK)",
     ],
-    "Methyl Tert-Butyl Ether": ["MTBE", "TBME", "Tert-butyl methyl ether"],
-    "Pyridine": [],
+
     "Tetrachloromethane": ["CCl4", "Carbon tetrachloride"],
+    
     "Tetrahydrofuran": ["THF", "Tetrahydrofuran (THF)", "Tetrahydrofurane"],
-    "Toluene": ["Methylbenzene"],
-    "Trichlorobenzene": [],
+
     "Triethylamine": ["TEA", "Et3N"],
     "Trimethylamine": ["TMA", "Me3N"],
+    
+    "Dimethoxyethane": [
+        "DME",
+        "Glyme",
+        "Monoglyme",
+        "Dimethyl glycol",
+        "Ethylene glycol dimethyl ether",
+        "Dimethyl cellosolve",
+    ],
+    
     "Water": ["H2O", "Deionized water", "DI water", "Aqueous buffer", "Aqueous"],
-    "Xylene": ["Xylenes", "Dimethylbenzene"],
 }
 
-# TCB can mean either the unspecified solvent or the 1,2,4 isomer in PolyCrit.
-# It is intentionally not registered as an automatic alias.
-_SOLVENT_AMBIGUOUS_ALIASES = {
-    "TCB": ("1,2,4-Trichlorobenzene", "Trichlorobenzene"),
-}
+# Acetonitrile x
+# Water x
+# Methanol x
+# Dimethylformamide x
+# Acetone x
+# Hexane x
+# Tetrahydrofuran x
+# Chloroform x
+# Heptane x
+# Dimethoxyethane x
+# Tetrachloromethane x
+# Ethyl Acetate x
+# Methyl Ethyl Ketone x
+# 2-Propanol x
+# 1,4-Dioxane x
+
+
+_SOLVENT_AMBIGUOUS_ALIASES = {}
 
 
 def _normalize_solvent_key(value: str) -> str:
