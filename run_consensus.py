@@ -7,6 +7,7 @@ Finds extracted JSON files, aggregates them, and runs the DeepSeek Judge.
 import json
 import subprocess
 import os
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 from pipeline.consensus_judge import ConsensusJudge
@@ -53,17 +54,22 @@ def main():
         
         consensus_sub_dir.mkdir(parents=True, exist_ok=True)
         
-        papers = set()
+        # Map NFC-normalized stem -> actual on-disk stem. Collapses Unicode
+        # NFC/NFD filename twins (e.g. "Krüger" as decomposed NFD from macOS vs
+        # composed NFC on Linux) so the judge doesn't process the same paper
+        # twice; the real on-disk stem is kept so the file still opens.
+        papers = {}
         for f in qwen_sub_dir.glob("*_latest.json"):
-            papers.add(f.stem.replace("_latest", ""))
-            
+            stem = f.stem.replace("_latest", "")
+            papers.setdefault(unicodedata.normalize("NFC", stem), stem)
+
         if not papers:
             print(f"No papers found in {subfolder}.")
             continue
-            
+
         print(f"Found {len(papers)} papers in {subfolder}.")
-        
-        for paper in sorted(list(papers)):
+
+        for paper in sorted(papers.values()):
             print(f"\n>>> Running Consensus for: {paper}")
             qwen_file = qwen_sub_dir / f"{paper}_latest.json"
             llama_file = llama_sub_dir / f"{paper}_latest.json"

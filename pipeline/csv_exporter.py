@@ -3,6 +3,7 @@
 import csv
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -74,14 +75,21 @@ def _select_latest_json_files(folder: Path) -> list:
     latest_files = [f for f in all_json if f.stem.endswith("_latest")]
 
     if latest_files:
-        return latest_files
+        # Collapse Unicode NFC/NFD filename twins (e.g. "Krüger" committed from
+        # macOS as decomposed NFD vs regenerated on Linux as composed NFC) so the
+        # same paper isn't exported twice. Keep the first real on-disk path per
+        # normalized name.
+        seen: dict = {}
+        for f in latest_files:
+            seen.setdefault(unicodedata.normalize("NFC", f.name), f)
+        return list(seen.values())
 
     # Fallback: deduplicate by stripping timestamp/consensus suffix
     def _base(stem: str) -> str:
         stem = re.sub(r"_latest$", "", stem)
         stem = re.sub(r"_consensus$", "", stem)
         stem = re.sub(r"_extracted_\d{8}_\d{6}$", "", stem)
-        return stem
+        return unicodedata.normalize("NFC", stem)
 
     by_base: dict = {}
     for f in all_json:
