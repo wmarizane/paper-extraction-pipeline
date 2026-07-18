@@ -2,6 +2,7 @@
 
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -91,6 +92,73 @@ def _select_latest_json_files(folder: Path) -> list:
     return sorted(by_base.values())
 
 
+_CANON_FN = None
+
+
+def _get_canonicalizer():
+    """Lazily fetch ConsensusJudge._canonicalize_polymer. Falls back to
+    identity when vllm isn't installed (local CSV export must keep working
+    without the cluster environment)."""
+    global _CANON_FN
+    if _CANON_FN is None:
+        try:
+            from pipeline.consensus_judge import ConsensusJudge
+            _CANON_FN = ConsensusJudge._canonicalize_polymer
+        except Exception:
+            _CANON_FN = lambda s: s
+    return _CANON_FN
+
+
+def _row_fingerprint(row: dict) -> tuple:
+    """Normalize a CSV row to a dedup fingerprint.
+
+    Deliberately conservative (includes column name, critical component,
+    AND analyte polymer) so genuinely distinct records in the same paper —
+    e.g. PIB-diol vs PIB-diallyl, or two different columns at the same
+    ratio/temperature — are never collapsed at export time."""
+    def norm(v):
+        return re.sub(r'\s+', ' ', str(v or '').lower()).strip()
+
+    def num(v):
+        m = re.search(r'(\d+\.?\d*)', str(v or ''))
+        return round(float(m.group(1))) if m else ''
+
+    canon = _get_canonicalizer()
+
+    def canon_norm(v):
+        s = norm(v)
+        return canon(s) if s else ''
+
+    return (
+        norm(row.get('Paper', '')),
+        norm(row.get('Stationary Phase Chemistry', '')),
+        norm(row.get('Column Name', '')),
+        canon_norm(row.get('Critical Component', '')),
+        canon_norm(row.get('Analyte Polymer', '')),
+        num(row.get('Mobile Phase Ratio', '')),
+        num(row.get('Temperature (°C)', '')),
+    )
+
+
+def _dedup_csv_rows(rows: list) -> list:
+    """Safety net: remove duplicate CSV rows by chromatographic fingerprint,
+    keeping the row with more non-empty fields."""
+    seen = {}
+    deduped = []
+    for row in rows:
+        fp = _row_fingerprint(row)
+        if fp in seen:
+            existing_idx = seen[fp]
+            existing_filled = sum(1 for v in deduped[existing_idx].values() if v)
+            new_filled = sum(1 for v in row.values() if v)
+            if new_filled > existing_filled:
+                deduped[existing_idx] = row
+        else:
+            seen[fp] = len(deduped)
+            deduped.append(row)
+    return deduped
+
+
 def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
     """Export all JSON files in a folder to a single summary CSV."""
     folder = Path(folder_path)
@@ -160,6 +228,12 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
         except Exception as e:
             print(f"Error processing {json_file}: {e}")
             
+    # Safety net: deduplicate rows by normalized chromatographic fingerprint
+    before = len(rows)
+    rows = _dedup_csv_rows(rows)
+    if len(rows) < before:
+        print(f"CSV safety-net dedup: {before} -> {len(rows)} rows ({before - len(rows)} removed)")
+
     output.parent.mkdir(parents=True, exist_ok=True)
     with open(output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)

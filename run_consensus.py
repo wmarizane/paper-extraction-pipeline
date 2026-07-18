@@ -10,6 +10,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 from pipeline.consensus_judge import ConsensusJudge
+from pipeline.pre_consensus_dedup import dedup_model_conditions
 from pipeline.telemetry import PaperTelemetry, TelemetryWriter
 
 def load_json(path: Path) -> list:
@@ -71,7 +72,15 @@ def main():
             llama_conds = load_json(llama_file)
             
             print(f"Loaded {len(qwen_conds)} conditions from Qwen, {len(llama_conds)} from LLaMA.")
-            
+
+            # Pre-consensus per-model dedup (Dr. Wang 7-7 feedback, items 1 & 4)
+            qwen_before, llama_before = len(qwen_conds), len(llama_conds)
+            qwen_conds = dedup_model_conditions(qwen_conds)
+            llama_conds = dedup_model_conditions(llama_conds)
+            if (qwen_before, llama_before) != (len(qwen_conds), len(llama_conds)):
+                print(f"  Pre-consensus dedup: Qwen {qwen_before}->{len(qwen_conds)}, "
+                      f"Mistral {llama_before}->{len(llama_conds)}")
+
             tel = PaperTelemetry(paper_name=paper, model="deepseek-r1-32b", phase="consensus")
             tel.start()
             
@@ -115,7 +124,11 @@ def main():
                     print(f"🔄 Re-running consensus after retry...")
                     qwen_conds = load_json(qwen_file)
                     llama_conds = load_json(llama_file)
-                    
+
+                    # Re-dedup after retry (pre-consensus layer)
+                    qwen_conds = dedup_model_conditions(qwen_conds)
+                    llama_conds = dedup_model_conditions(llama_conds)
+
                     # Run consensus again (2nd pass, no further retries)
                     final_data = judge.run_bidirectional_consensus(qwen_conds, llama_conds)
                     tel.record_llm_call(call_type="retry", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
