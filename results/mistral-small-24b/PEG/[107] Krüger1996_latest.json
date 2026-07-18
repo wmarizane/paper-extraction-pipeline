@@ -1,36 +1,35 @@
 {
   "metadata": {
-    "source_pdf": "[107] Krüger1996.pdf",
-    "extraction_date": "2026-06-29T21:45:49.897196",
+    "source_pdf": "[107] Krüger1996.pdf",
+    "extraction_date": "2026-07-01T22:10:42.804645",
     "model": "mistral-small-24b",
     "pipeline_metrics": {
-      "pdf_name": "[107] Krüger1996.pdf",
-      "start_time": "2026-06-29T21:44:31.390969",
+      "pdf_name": "[107] Krüger1996.pdf",
+      "start_time": "2026-07-01T22:09:26.121580",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 53.551804542541504,
+          "time_seconds": 51.69181513786316,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10869002342224121,
+          "time_seconds": 0.1089162826538086,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7707
         },
         "llm_extraction": {
-          "time_seconds": 24.697444438934326,
-          "success": true,
-          "total_llm_calls": 1
+          "time_seconds": 24.841835260391235,
+          "success": true
         }
       },
       "success": false,
       "error": null,
       "gpu_memory": {
         "pytorch_peak_gb": 0.0,
-        "nvidia_smi_pre_mb": "42634\n42634",
-        "nvidia_smi_post_mb": "43658\n43658"
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
       }
     }
   },
@@ -42,42 +41,51 @@
       {
         "analyte_polymer": "polyester",
         "critical_component": "polyester",
-        "architecture": "null",
-        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+        "architecture": "linear",
+        "critical_condition_basis": "independent of molar mass",
         "critical_condition_confidence": "explicit",
-        "column_name": "7-um Si-120 silica",
+        "column_name": "7- [im Si-120 silica",
         "stationary_phase_chemistry": "silica",
         "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "hexane"
         ],
-        "mobile_phase_ratio": "50.5:49.5",
+        "mobile_phase_ratio": "50.5 vol%:49.5 vol%",
         "mobile_phase_ratio_units": "vol%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "30",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "null",
-        "detector": "refractive index detector (model 7511, ERC, Alteglofsheim, Germany)",
-        "evidence_text": "For analyzing polyester samples, a 7-um Si-120 silica column (Tessek, Praha, CS) was used. The mobile phase for critical conditions consisted of acetone/hexane (50.5 vol%:49.5 vol%). All LACCC columns were thermostated at 30°C.",
-        "notes": "null",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "7- [im",
+        "detector": "refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "the retention volume is independent of molar mass",
+          "critical_component": "polyester",
+          "column_name": "7- [im Si-120 silica column",
+          "mobile_phase_solvents": "acetone/hexane",
+          "mobile_phase_ratio": "50.5 vol%:49.5 vol%",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1080/10236669608233912",
         "corresponding_author_name": "R. P. Krüger; H. Much; G. Schulz",
-        "corresponding_email_address": "null",
+        "corresponding_email_address": null,
         "physical_address": "Institut far Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
         "publication_year": "1996"
       },
       {
         "analyte_polymer": "polyether",
         "critical_component": "polyether",
-        "architecture": "null",
-        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+        "architecture": "linear",
+        "critical_condition_basis": "independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Macherey Nagel Nucleosil 5C18",
         "stationary_phase_chemistry": "C18",
@@ -86,24 +94,33 @@
           "water",
           "acetonitrile"
         ],
-        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio": "54 vol%:46 vol%",
         "mobile_phase_ratio_units": "vol%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "30",
-        "flow_rate": "null",
-        "pore_size": "null",
+        "flow_rate": null,
+        "pore_size": null,
         "column_dimensions": "250 x 4mm i. d.",
-        "detector": "ELSD detector (Sedex 45) from ERC",
-        "evidence_text": "For analyzing polyether samples, a Macherey Nagel Nucleosil 5C18 column (250 x 4mm i. d., Diuren, Germany) was used. The mobile phase at critical conditions consisted of a mixture of water/acetonitrile (54 vol%:46 vol%). All LACCC columns were thermostated at 30°C.",
-        "notes": "null",
+        "detector": "ELSD detector",
+        "field_evidence": {
+          "critical_condition_basis": "the retention volume is independent of molar mass",
+          "critical_component": "polyether",
+          "column_name": "Macherey Nagel Nucleosil 5C18 column",
+          "mobile_phase_solvents": "water/acetonitrile",
+          "mobile_phase_ratio": "54 vol%:46 vol%",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1080/10236669608233912",
         "corresponding_author_name": "R. P. Krüger; H. Much; G. Schulz",
-        "corresponding_email_address": "null",
+        "corresponding_email_address": null,
         "physical_address": "Institut far Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
         "publication_year": "1996"
       }
@@ -115,9 +132,8 @@
       "section": "Full Paper",
       "token_count": 7707,
       "extraction_success": true,
-      "processing_time": 24.68565559387207,
-      "extracted_count": 2,
-      "llm_calls": 1
+      "processing_time": 24.733779191970825,
+      "extracted_count": 2
     }
   ]
 }
