@@ -14,6 +14,9 @@ from pipeline.llm_extractor import EXTRACTION_SCHEMA
 
 logger = logging.getLogger(__name__)
 
+# Bump when the judge prompt or consensus schema changes (recorded in provenance).
+CONSENSUS_PROMPT_VERSION = "consensus-bidirectional-v1"
+
 CANONICAL_POLYMERS = {
     "ps": "polystyrene",
     "polystyrene": "polystyrene",
@@ -186,10 +189,12 @@ class ConsensusJudge:
         else:
             self.llm = None
 
+        # Single source of truth for sampling config (also recorded in provenance).
+        self.sampling_config = {"temperature": 0.6, "top_p": 0.9, "max_tokens": 8192}
         self.sampling_params = SamplingParams(
-            temperature=0.6, # Slight temperature for reasoning variation
-            max_tokens=8192,
-            top_p=0.9,
+            temperature=self.sampling_config["temperature"], # Slight temperature for reasoning variation
+            max_tokens=self.sampling_config["max_tokens"],
+            top_p=self.sampling_config["top_p"],
             structured_outputs=StructuredOutputsParams(json=CONSENSUS_SCHEMA)
         )
         

@@ -25,9 +25,10 @@ from pipeline.telemetry import PaperTelemetry, TelemetryWriter
 
 from config.settings import settings
 from config.model_registry import get_model_config, list_models
-from pipeline.pdf_parser import parse_pdf_to_markdown, check_parser_ready
+from pipeline.pdf_parser import parse_pdf_to_markdown, check_parser_ready, save_markdown
 from pipeline.chunker import chunk_pdf
-from pipeline.llm_extractor import LLMExtractor
+from pipeline.llm_extractor import LLMExtractor, PROMPT_VERSION
+from pipeline.provenance import build_extraction_provenance
 
 class PipelineRunner:
     """Orchestrates the end-to-end extraction pipeline."""
@@ -91,7 +92,16 @@ class PipelineRunner:
             stage_start = time.time()
             md_content = parse_pdf_to_markdown(str(self.pdf_path))
             stage_time = time.time() - stage_start
-            
+
+            # Persist the input (reproducibility item 6): the exact parsed text
+            # the model saw, so an output can be reproduced from its input.
+            try:
+                self.input_md_path = str(save_markdown(md_content, str(self.pdf_path)))
+            except Exception as e:
+                print(f"   ⚠️ Could not save parsed markdown: {e}")
+                self.input_md_path = None
+            self.input_md_content = md_content
+
             self.metrics["stages"]["parsing"] = {
                 "time_seconds": stage_time,
                 "success": True,
@@ -251,11 +261,27 @@ class PipelineRunner:
                 pass
         
         model_key = self.model_name or settings.llm_model
+
+        try:
+            reproducibility = build_extraction_provenance(
+                model_name=model_key,
+                sampling=self.extractor.sampling_config,
+                prompt_version=PROMPT_VERSION,
+                schema_name=settings.extraction_schema,
+                input_text=getattr(self, "input_md_content", None),
+                parsed_markdown_path=getattr(self, "input_md_path", None),
+                token_count=sum(c.token_count for c in chunks),
+            )
+        except Exception as e:
+            print(f"Provenance warning: {e}")
+            reproducibility = {"error": str(e)}
+
         output = {
             "metadata": {
                 "source_pdf": self.pdf_name,
                 "extraction_date": datetime.now().isoformat(),
                 "model": model_key,
+                "reproducibility": reproducibility,
                 "pipeline_metrics": self.metrics
             },
             "summary": {

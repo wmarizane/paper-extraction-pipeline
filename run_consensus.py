@@ -10,8 +10,9 @@ import os
 import unicodedata
 from datetime import datetime
 from pathlib import Path
-from pipeline.consensus_judge import ConsensusJudge
+from pipeline.consensus_judge import ConsensusJudge, CONSENSUS_PROMPT_VERSION
 from pipeline.pre_consensus_dedup import dedup_model_conditions, absorb_vague_conditions
+from pipeline.provenance import build_consensus_provenance
 from pipeline.telemetry import PaperTelemetry, TelemetryWriter
 
 def load_json(path: Path) -> list:
@@ -160,11 +161,24 @@ def main():
                 output_file = consensus_sub_dir / f"{paper}_consensus.json"
                 
                 # Wrap in our standard format
+                try:
+                    reproducibility = build_consensus_provenance(
+                        judge_model_name="deepseek-r1-32b",
+                        sampling=judge.sampling_config,
+                        prompt_version=CONSENSUS_PROMPT_VERSION,
+                        schema_name="polymer-lccc-consensus",
+                        input_files=[str(qwen_file), str(llama_file)],
+                    )
+                except Exception as e:
+                    print(f"Provenance warning: {e}")
+                    reproducibility = {"error": str(e)}
+
                 out_json = {
                     "metadata": {
                         "source_pdf": f"{paper}.pdf",
                         "model": "deepseek-r1-32b-consensus",
-                        "inputs": ["qwen3.5-27b", "mistral-small-24b"]
+                        "inputs": ["qwen3.5-27b", "mistral-small-24b"],
+                        "reproducibility": reproducibility
                     },
                     "summary": {
                         "total_conditions": len(final_conds)

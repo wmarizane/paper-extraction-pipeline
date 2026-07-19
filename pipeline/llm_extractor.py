@@ -16,6 +16,10 @@ from pipeline.chunker import TextChunk
 
 logger = logging.getLogger(__name__)
 
+# Bump when the extraction prompt or schema changes (recorded in provenance for
+# reproducibility). "v2" = Dr. Wang's prompt approved 2026-04-17.
+PROMPT_VERSION = "extraction-v2-2026-04-17"
+
 EXTRACTION_SCHEMA = {
     "type": "object",
     "properties": {
@@ -252,10 +256,16 @@ class LLMExtractor:
         vllm_kwargs.update(self.model_config.vllm_kwargs)
 
         self.llm = LLM(**vllm_kwargs)
+        # Single source of truth for sampling config (also recorded in provenance).
+        self.sampling_config = {
+            "temperature": self.temperature,
+            "top_p": 0.9,
+            "max_tokens": settings.vllm_max_tokens,
+        }
         self.sampling_params = SamplingParams(
-            temperature=self.temperature,
-            max_tokens=settings.vllm_max_tokens,
-            top_p=0.9,
+            temperature=self.sampling_config["temperature"],
+            max_tokens=self.sampling_config["max_tokens"],
+            top_p=self.sampling_config["top_p"],
             structured_outputs=StructuredOutputsParams(json=EXTRACTION_SCHEMA)
         )
         logger.info("LLM extractor initialized.")
