@@ -35,7 +35,19 @@ class TestHelpers(unittest.TestCase):
         self.assertEqual(set(g), {"sha", "short_sha", "dirty"})
         if g["sha"]:  # running inside the repo
             self.assertEqual(g["short_sha"], g["sha"][:9])
-            self.assertIsInstance(g["dirty"], bool)
+
+    def test_git_commit_binary_free_fallback(self):
+        # Simulate a compute node with no usable git binary: the subprocess
+        # path fails, so git_commit must still resolve HEAD by reading .git.
+        from unittest.mock import patch
+        repo_root = Path(__file__).resolve().parent.parent
+        expected = P._read_head_sha(repo_root)
+        with patch("pipeline.provenance.subprocess.check_output", side_effect=OSError("git not found")):
+            g = P.git_commit()
+        self.assertEqual(g["sha"], expected)
+        if expected:
+            self.assertEqual(g["short_sha"], expected[:9])
+            self.assertEqual(len(expected), 40)
 
     def test_resolve_hf_snapshot_missing_is_none(self):
         self.assertIsNone(P.resolve_hf_snapshot("nonexistent-org/nonexistent-model-xyz"))

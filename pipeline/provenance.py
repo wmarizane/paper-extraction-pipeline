@@ -52,25 +52,55 @@ def library_versions() -> Dict[str, Optional[str]]:
     return out
 
 
+def _read_head_sha(root: Path) -> Optional[str]:
+    """Resolve HEAD to a commit SHA by reading .git directly — no git binary.
+    Works on minimal compute nodes where `git` is absent or blocked by
+    safe.directory. Returns None if it cannot be resolved."""
+    try:
+        git_dir = root / ".git"
+        head = (git_dir / "HEAD").read_text().strip()
+        if not head.startswith("ref:"):
+            return head or None  # detached HEAD: already a SHA
+        ref = head[4:].strip()  # e.g. "refs/heads/feature/..."
+        loose = git_dir / ref
+        if loose.is_file():
+            return loose.read_text().strip() or None
+        packed = git_dir / "packed-refs"
+        if packed.is_file():
+            for line in packed.read_text().splitlines():
+                if line and not line.startswith(("#", "^")) and line.endswith(ref):
+                    return line.split()[0]
+    except Exception:
+        return None
+    return None
+
+
 def git_commit(repo_root: Optional[Path] = None) -> Dict[str, Any]:
     """The pipeline's git commit at run time (sha, short sha, dirty flag).
-    Degrades to nulls if git or the repo is unavailable."""
-    root = str(repo_root or Path(__file__).resolve().parent.parent)
+
+    Prefers the git binary (also yields the dirty flag); falls back to reading
+    .git/HEAD directly when git is unavailable — e.g. SLURM compute nodes, where
+    the binary may be missing or blocked by safe.directory. Degrades to nulls."""
+    root = repo_root or Path(__file__).resolve().parent.parent
 
     def _git(*args) -> Optional[str]:
         try:
             return subprocess.check_output(
-                ["git", "-C", root, *args], stderr=subprocess.DEVNULL, text=True
+                ["git", "-C", str(root), *args], stderr=subprocess.DEVNULL, text=True
             ).strip()
         except Exception:
             return None
 
     sha = _git("rev-parse", "HEAD")
     status = _git("status", "--porcelain")
+    if sha:
+        return {"sha": sha, "short_sha": sha[:9], "dirty": bool(status) if status is not None else None}
+
+    sha = _read_head_sha(root)  # binary-free fallback (no dirty info)
     return {
         "sha": sha,
         "short_sha": sha[:9] if sha else None,
-        "dirty": bool(status) if status is not None else None,
+        "dirty": None,
     }
 
 
