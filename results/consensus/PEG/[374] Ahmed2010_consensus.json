@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "[374] Ahmed2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "LC at critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32 vol%",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LC at critical conditions (LCCC)",
+          "critical_component": "EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "32 vol% acetone\u2013water",
+          "mobile_phase_ratio": "32 vol% acetone",
+          "temperature_celsius": "25\u00b0C",
+          "pore_size": "nominal pore size 5 80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used as the first dimension in 2-D LC. The text states '32% acetone' corresponds to the CAP for EO. PEG-MME is separated from PEG based on end-group adsorption at this condition.",
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePOL), Institute of Chemistry, KarlFranzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "PEG-MME",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32 vol-%",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "PEG-MME",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "32 vol-%",
+          "temperature_celsius": "251C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePoL), Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

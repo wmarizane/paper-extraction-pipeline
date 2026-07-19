@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "source_pdf": "[277] Malik2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PBO",
+        "critical_component": "PBO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PBO were realized in 88 wt% THF\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88 wt% THF\u2013water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "DDS 70 density detection system combined with SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PBO were realized in 88 wt% THF\u2013water",
+          "critical_component": "Critical conditions for PBO were realized in 88 wt% THF\u2013water",
+          "column_name": "Spherisorb ODS2 (250 mm \u00d7 10 mm, 5 \u00b5m, 80 \u00c5)",
+          "mobile_phase_solvents": "88 wt% THF\u2013water",
+          "mobile_phase_ratio": "88 wt% THF\u2013water",
+          "temperature_celsius": "25.0\u00b0C for LCCC",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 mL min\u207b\u00b9"
+        },
+        "notes": "Semi-preparative LCCC used as first dimension for fractionation. Column ID > 8mm, but used for analytical characterization of critical conditions in the context of the study.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PHO",
+        "critical_component": "PHO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PHO in 92 wt% THF\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92 wt% THF\u2013water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "DDS 70 density detection system combined with SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PHO in 92 wt% THF\u2013water",
+          "critical_component": "Critical conditions for PHO in 92 wt% THF\u2013water",
+          "column_name": "Spherisorb ODS2 (250 mm \u00d7 10 mm, 5 \u00b5m, 80 \u00c5)",
+          "mobile_phase_solvents": "92 wt% THF\u2013water",
+          "mobile_phase_ratio": "92 wt% THF\u2013water",
+          "temperature_celsius": "25.0\u00b0C for LCCC",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 mL min\u207b\u00b9"
+        },
+        "notes": "Semi-preparative LCCC used as first dimension for fractionation.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7 wt% acetone\u2013water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "4.6 mm \u00d7 250 mm",
+        "detector": "RI 2414 or SEDEX 45 ELSD coupled with DDS 70",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water",
+          "critical_component": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water",
+          "column_name": "Nucleosil 100-5 OH 5 \u00b5m, silica-based diol phase; 4.6 mm \u00d7 250 mm",
+          "mobile_phase_solvents": "75.7 wt% acetone\u2013water",
+          "mobile_phase_ratio": "75.7 wt% acetone\u2013water",
+          "temperature_celsius": "25.0\u00b0C for LCCC",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 mL min\u207b\u00b9"
+        },
+        "notes": "Analytical LCCC used as second dimension.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PBO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88.23 wt%",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of MeO-PeO1100-b-PBO in 88.23 wt% THF (CAP of PBO)",
+          "critical_component": "PBO",
+          "column_name": "Spherisorb ODS2 prep.",
+          "mobile_phase_solvents": "THF",
+          "mobile_phase_ratio": "88.23 wt% THF",
+          "temperature_celsius": "25.0\u00b0C",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 mL min\u207b\u00b9"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PHO",
+        "critical_component": "PHO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.23 wt%",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of MeO-PeO1100-b-PHO in 92.23 wt% THF (CAP of PHO)",
+          "critical_component": "PHO",
+          "column_name": "Spherisorb ODS2 prep.",
+          "mobile_phase_solvents": "THF",
+          "mobile_phase_ratio": "92.23 wt% THF",
+          "temperature_celsius": "25.0\u00b0C",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 mL min\u207b\u00b9"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEO1100-b-PBO",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7 wt%",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "4.6 mm \u00d7 250 mm",
+        "detector": "RI 2414",
+        "field_evidence": {
+          "critical_condition_basis": "Separation of block copolymers (fraction 1, from Fig. 3); from PEO at CAP of PEO and exclusion for hydrophobic moiety.",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil 100-5 OH 5 \u00b5m, silica-based diol phase; 4.6 mm \u00d7 250 mm; particle diameter: 5 \u00b5m; pore diameter: 100 \u00c5",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "75.7 wt% acetone\u2013water",
+          "temperature_celsius": "25.0\u00b0C",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 mL min\u207b\u00b9"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

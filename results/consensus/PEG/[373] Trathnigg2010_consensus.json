@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "source_pdf": "[373] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG 400 monolaurate",
+        "critical_component": "PEG block",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC in 90 % methanol",
+        "critical_condition_confidence": "explicit",
+        "column_name": "FAD column",
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
+        "mobile_phase_solvents": [
+          "methanol"
+        ],
+        "mobile_phase_ratio": "90 % methanol",
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Off-line two-dimensional separation: First dimension: LCCC in 90 % methanol",
+          "critical_component": "PEG 400 monolaurate",
+          "column_name": "FAD column",
+          "mobile_phase_solvents": "methanol",
+          "mobile_phase_ratio": "90 % methanol",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used in off-line 2D-LC (LCCC-LEAC) for PEG 400 monolaurate. The text mentions 'focussing of fractions on a FAD column' in the first dimension (LCCC).",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 400 monolaurate",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 %",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130μm; Macropore: 2 μm",
+        "column_dimensions": "100mm×4.6mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130μm; Macropore: 2 μm",
+          "flow_rate": "2 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 600",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 %",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130μm; Macropore: 2 μm",
+        "column_dimensions": "100mm×4.6mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130μm; Macropore: 2 μm",
+          "flow_rate": "2 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

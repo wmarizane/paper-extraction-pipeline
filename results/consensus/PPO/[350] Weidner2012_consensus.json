@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[350] Weidner2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical point of adsorption",
+          "critical_component": "PPO",
+          "column_name": "YMC RP18 column",
+          "mobile_phase_solvents": "THF/water",
+          "mobile_phase_ratio": "85/15 (v/v)",
+          "temperature_celsius": "45 \u00b0C",
+          "pore_size": "120 \u00c5 pore size",
+          "flow_rate": "0.5 mL min\u207b\u00b9"
+        },
+        "column_name": "YMC RP18",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical conditions of adsorption for polypropylene oxide",
+        "paper_doi": "10.1002/macp.201200169",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "publication_year": "2012",
+        "column_dimensions": "250 \u00d7 4.6 mm i.D.",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-b-PPO-b-PEO block copolymer",
+        "physical_address": "BAM\u2013Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "85/15",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "detector": "evaporative light scattering detector (ELSD)",
+        "notes": "The critical conditions for PPO were established using a 85/15 THF/water ratio.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "polypropylene oxide (PPO)",
+        "temperature_celsius": "45",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "[242] Rappel2003.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Prodigy ODS3 column at 28 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Prodigy ODS(3) column",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "28 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "100 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Prodigy ODS(3)",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical interaction point",
+        "paper_doi": null,
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2003",
+        "column_dimensions": "250x4.6 mm",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "28 wt.%",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "refractive index (RI)",
+        "notes": null,
+        "mobile_phase_ratio_units": "%",
+        "critical_component": "EO",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Spherisorb S5X C6 column at 30 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Spherisorb S5X C6 column",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "28.5 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Spherisorb S5X C6",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical interaction point",
+        "paper_doi": null,
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2003",
+        "column_dimensions": "250x4.6 mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C6",
+        "mobile_phase_ratio": "28.5 wt.%",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "refractive index (RI)",
+        "notes": null,
+        "mobile_phase_ratio_units": "%",
+        "critical_component": "EO",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "a sharp critical interaction point is found for the Jordi Gel DVB 500 RP column at 30 wt.% acetone",
+          "critical_component": "the critical interaction point for the EO-chain",
+          "column_name": "Jordi Gel DVB 500 RP column",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "30 wt.% acetone",
+          "temperature_celsius": "25.0 8C",
+          "pore_size": "5000 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Jordi Gel DVB 500 RP",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical interaction point",
+        "paper_doi": null,
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2003",
+        "column_dimensions": "250x4.6 mm",
+        "pore_size": "5000 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Divinylbenzene",
+        "mobile_phase_ratio": "30 wt.%",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "refractive index (RI)",
+        "notes": null,
+        "mobile_phase_ratio_units": "%",
+        "critical_component": "EO",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

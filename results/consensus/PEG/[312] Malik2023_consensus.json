@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "source_pdf": "[312] Malik2023.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The approach requires establishment of chromatographic critical point (CCP) of each block that allows exclusion of the noncritical block.",
+          "critical_component": "P(Ep-TEGMME)",
+          "column_name": "Ultisil diol column, pore size 120 \u00c5, particle size 5 mm, and column dimensions 250 \u00d7 4.6 mm (Welch, China).",
+          "mobile_phase_solvents": "acetone/water",
+          "mobile_phase_ratio": "68/32 (V%)",
+          "temperature_celsius": "column temperature: 30 \u00b0C",
+          "pore_size": "pore size 120 \u00c5",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min[\u2212][1]"
+        },
+        "column_name": "Ultisil diol",
+        "flow_rate": "0.5 mL min-1",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "chromatographic critical point",
+        "paper_doi": "10.1039/d3ra05912j",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
+        "publication_year": "2023",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "P(Ep-TEGMME)",
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "diol",
+        "mobile_phase_ratio": "68/32",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; P(Ep-TEGMME) is at critical condition.",
+        "mobile_phase_ratio_units": "V%",
+        "critical_component": "P(Ep-TEGMME)",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PCL",
+        "critical_component": "PCL",
+        "architecture": "linear",
+        "critical_condition_basis": "CCP of PCL established on RP ODS column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ZORBAX ODS",
+        "stationary_phase_chemistry": "ODS",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "THF",
+          "TEA"
+        ],
+        "mobile_phase_ratio": "82/17/01",
+        "mobile_phase_ratio_units": "V%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "70 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELS",
+        "field_evidence": {
+          "critical_condition_basis": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions.",
+          "critical_component": "CCP of PCL",
+          "column_name": "ZORBAX ODS",
+          "mobile_phase_solvents": "ACN/THF/TEA",
+          "mobile_phase_ratio": "82/17/01 (V%)",
+          "temperature_celsius": "column temperature: 30 \u00b0C",
+          "pore_size": "pore size 70 \u00c5",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; PCL is at critical condition.",
+        "paper_doi": "10.1039/d3ra05912j",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2023",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "P(Ep-TEGMME)2K-b-PCL",
+        "critical_component": "PCL",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "chromatographic critical point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ZORBAX ODS",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "THF",
+          "TEA"
+        ],
+        "mobile_phase_ratio": "82/17/01",
+        "mobile_phase_ratio_units": "V%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5",
+        "pore_size": "70 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The approach requires establishment of chromatographic critical point (CCP) of each block that allows exclusion of the noncritical block.",
+          "critical_component": "PCL",
+          "column_name": "ZORBAX ODS, pore size 70 \u00c5, particle size 5 mm, and column dimensions 250 \u00d7 4.6 mm (Phenomenex, USA).",
+          "mobile_phase_solvents": "ACN/THF/TEA",
+          "mobile_phase_ratio": "82/17/01 (V%)",
+          "temperature_celsius": "column temperature: 30 \u00b0C",
+          "pore_size": "pore size 70 \u00c5",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min[\u2212][1]"
+        },
+        "notes": null,
+        "paper_doi": "10.1039/d3ra05912j",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2023",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

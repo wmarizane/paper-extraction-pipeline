@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "source_pdf": "[315] Abdul-Karim2017.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v.",
+          "critical_component": "poly(ethylene ether-carbonate)",
+          "column_name": "ZORBAX ODS RP 70 A[\u02da ] , 5 lm, 250 mm 3 4.6 mm column",
+          "mobile_phase_solvents": "acetonitrile-water-TEA",
+          "mobile_phase_ratio": "64-35-1 (v/v %)",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "70 \u00c5",
+          "flow_rate": "0.5 > mL/min"
+        },
+        "column_name": "ZORBAX ODS",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "statistical copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "paper_doi": "10.1002/pola.28559",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2017",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "pore_size": "70 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene ether-carbonate)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "M. I. Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "ODS",
+        "mobile_phase_ratio": "64-35-1",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water",
+          "triethylamine"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical adsorption point of PEEC established on RP column. Used to analyze block copolymers where PEEC is the critical block.",
+        "mobile_phase_ratio_units": "v/v %",
+        "critical_component": "poly(ethylene ether-carbonate)",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical adsorption point of PEG should be between these two mobile phase compositions.",
+          "critical_component": "PEG",
+          "column_name": "Ultisil diol column, 120A[\u02da ] , 5 lm, 250 mm 3 4.6 mm (Welch, China)",
+          "mobile_phase_solvents": "acetone in water",
+          "mobile_phase_ratio": "65% acetone in water",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "120 \u00c5",
+          "flow_rate": "0.5 > mL/min"
+        },
+        "column_name": "Ultisil diol",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "paper_doi": "10.1002/pola.28559",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2017",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "M. I. Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "diol",
+        "mobile_phase_ratio": "65:35",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEG is the critical block.",
+        "mobile_phase_ratio_units": "v/v%",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

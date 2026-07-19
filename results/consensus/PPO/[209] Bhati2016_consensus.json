@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "source_pdf": "[209] Bhati2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "it-PP[348]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) \u00d7 250 (mm) I.D. \u00d7 L",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "83/17 vol.%",
+          "temperature_celsius": "160[\u25e6] C",
+          "pore_size": "pore diameter of 250 \u00c5",
+          "flow_rate": "1 mL/min"
+        },
+        "column_name": "Hypercarb[TM] column",
+        "flow_rate": "1 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "publication_year": "2016",
+        "column_dimensions": "4.6 mm \u00d7 250 mm I.D. \u00d7 L",
+        "pore_size": "250 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "it-PP",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Robert Br\u00fcll",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "mobile_phase_ratio": "83/17",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "2-octanol",
+          "1,2-dichlorobenzene"
+        ],
+        "detector": "ELSD",
+        "notes": "Determined using the new method described in the paper.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "it-PP",
+        "temperature_celsius": "160",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "PE[181]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) \u00d7 250 (mm) I.D. \u00d7 L",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "20.5/79.5 vol.%",
+          "temperature_celsius": "160[\u25e6] C",
+          "pore_size": "pore diameter of 250 \u00c5",
+          "flow_rate": "1 mL/min"
+        },
+        "column_name": "Hypercarb[TM] column",
+        "flow_rate": "1 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "publication_year": "2016",
+        "column_dimensions": "4.6 mm \u00d7 250 mm I.D. \u00d7 L",
+        "pore_size": "250 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PE",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Robert Br\u00fcll",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "mobile_phase_ratio": "20.5/79.5",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "2-octanol",
+          "1,2-dichlorobenzene"
+        ],
+        "detector": "evaporative light scattering detector",
+        "notes": "Determined using the new method described in the paper.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "PE",
+        "temperature_celsius": "160",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "it-PP[348]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) \u00d7 250 (mm) I.D. \u00d7 L",
+          "mobile_phase_solvents": "2E1H/TCB",
+          "mobile_phase_ratio": "88/12 vol.%",
+          "temperature_celsius": "160[\u25e6] C",
+          "pore_size": "pore diameter of 250 \u00c5",
+          "flow_rate": "1 mL/min"
+        },
+        "column_name": "Hypercarb[TM] column",
+        "flow_rate": "1 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "publication_year": "2016",
+        "column_dimensions": "4.6 mm \u00d7 250 mm I.D. \u00d7 L",
+        "pore_size": "250 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "it-PP",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Robert Br\u00fcll",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "mobile_phase_ratio": "88/12",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "2-ethyl-1-hexanol",
+          "1,2,4-trichlorobenzene"
+        ],
+        "detector": "evaporative light scattering detector",
+        "notes": "Determined using the new method described in the paper; values from Table 2.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "it-PP",
+        "temperature_celsius": "160",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "PE[181]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) \u00d7 250 (mm) I.D. \u00d7 L",
+          "mobile_phase_solvents": "n-decane/TCB",
+          "mobile_phase_ratio": "52/48 vol.%",
+          "temperature_celsius": "160[\u25e6] C",
+          "pore_size": "pore diameter of 250 \u00c5",
+          "flow_rate": "1 mL/min"
+        },
+        "column_name": "Hypercarb[TM] column",
+        "flow_rate": "1 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "monitoring the recovery of the polymer sample from a column",
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "publication_year": "2016",
+        "column_dimensions": "4.6 mm \u00d7 250 mm I.D. \u00d7 L",
+        "pore_size": "250 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PE",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Robert Br\u00fcll",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "mobile_phase_ratio": "52/48",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "n-decane",
+          "1,2,4-trichlorobenzene"
+        ],
+        "detector": "evaporative light scattering detector",
+        "notes": "Determined using the new method described in the paper; values from Table 2.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "PE",
+        "temperature_celsius": "160",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

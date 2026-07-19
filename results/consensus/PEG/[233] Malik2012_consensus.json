@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "source_pdf": "[233] Malik2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
+          "critical_component": "PS",
+          "column_name": "Symmetry 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "18\u201382",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "column_name": "Symmetry 300",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "Linear",
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PS",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2012",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polystyrene",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan; Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "mobile_phase_ratio": "18\u201382",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "detector": "UV (254 nm) and ELSD",
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PS homopolymers.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "Polystyrene",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil Si 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "96\u20134",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "column_name": "Nucleosil Si 300",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PEO",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2012",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan; Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_ratio": "96\u20134",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "detector": "UV (254 nm) and ELSD",
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PEO homopolymers.",
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_component": "PEO",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PS-b-PEO",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry 300",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "18\u201382",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELS",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
+          "critical_component": "PS",
+          "column_name": "Symmetry 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "18\u201382",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PS-b-PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 300",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "96\u20134",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELS",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil Si 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "96\u20134",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

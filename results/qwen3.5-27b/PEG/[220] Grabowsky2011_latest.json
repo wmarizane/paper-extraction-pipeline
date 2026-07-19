@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "source_pdf": "[220] Grabowsky2011.pdf",
+    "extraction_date": "2026-07-01T00:36:24.632347",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[220] Grabowsky2011.pdf",
+      "start_time": "2026-07-01T00:29:05.455326",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 136.76971125602722,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.5450396537780762,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 45760
+        },
+        "llm_extraction": {
+          "time_seconds": 301.8288240432739,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
+    }
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polystyrene (PS)",
+        "critical_component": "Polystyrene (PS)",
+        "architecture": "Linear",
+        "critical_condition_basis": "Established using PS calibration standards where elution is independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry 300 Å",
+        "stationary_phase_chemistry": "C18 modified silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran (THF)",
+          "N,N-dimethylformamide (DMF)"
+        ],
+        "mobile_phase_ratio": "18:82",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "4.6 x 250 mm",
+        "detector": "UV-Vis and ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The conditions used for the critical conditions of PS are as follows: a mobile phase composition of THF:DMF 18:82 vol.% with a flow rate of 0.5 mL/min. ... PS calibration standards were used to establish the critical conditions.",
+          "critical_component": "critical conditions of PS",
+          "column_name": "Symmetry 300 Å",
+          "mobile_phase_solvents": "THF:DMF",
+          "mobile_phase_ratio": "THF:DMF 18:82 vol.%",
+          "temperature_celsius": "30ºC",
+          "pore_size": "300 Å",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used for analysis of PS-b-PEO copolymers where PS block is at critical condition.",
+        "paper_doi": null,
+        "corresponding_author_name": "Monika Elvira Grabowsky",
+        "corresponding_email_address": null,
+        "physical_address": "Department of Chemistry and Polymer Science, Faculty of Science, Stellenbosch University",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "Poly(ethylene oxide) (PEO)",
+        "critical_component": "Poly(ethylene oxide) (PEO)",
+        "architecture": "Linear",
+        "critical_condition_basis": "Established using PEO calibration standards where elution is independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300 Å",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "N,N-dimethylformamide (DMF)",
+          "Tetrahydrofuran (THF)"
+        ],
+        "mobile_phase_ratio": "4:96",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29.7",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "4.6 x 250 mm",
+        "detector": "UV-Vis and ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The conditions used for the critical conditions of PEO are as follows: a solvent composition of DMF:THF 4:96 vol.% with a flow rate of 0.5 mL/min. ... PEO calibration standards were used to establish the critical conditions.",
+          "critical_component": "critical conditions of PEO",
+          "column_name": "Nucleosil 300 Å",
+          "mobile_phase_solvents": "DMF:THF",
+          "mobile_phase_ratio": "DMF:THF 4:96 vol.%",
+          "temperature_celsius": "29.7ºC",
+          "pore_size": "300Å",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used for analysis of PS-b-PEO copolymers where PEO block is at critical condition.",
+        "paper_doi": null,
+        "corresponding_author_name": "Monika Elvira Grabowsky",
+        "corresponding_email_address": null,
+        "physical_address": "Department of Chemistry and Polymer Science, Faculty of Science, Stellenbosch University",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "mobile_phase_ratio": "88.5:11.5",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 x 250 mm",
+        "detector": "ELSD, UV",
+        "field_evidence": {
+          "critical_condition_basis": "The solvent composition of THF:H2O 88.5:11.5 vol.% corresponds to the critical conditions. As can be observed, up to a molecular weight at the peak maximum (Mp) of 33000 g/mol the calibration standards elute at nearly the same Ve, in other words at the critical conditions.",
+          "critical_component": "critical conditions of PS",
+          "column_name": "Symmetry C18 300 Å column",
+          "mobile_phase_solvents": "THF-water",
+          "mobile_phase_ratio": "THF:H2O 88.5:11.5 vol.%",
+          "temperature_celsius": "30ºC",
+          "pore_size": "100 Å",
+          "flow_rate": null
+        },
+        "notes": "Used for analysis of PS-b-PEO. Note: Text mentions 300 Å column in setup description but 100 Å in Figure 4.6 caption and exclusion limit discussion. Pore size extracted from Figure 4.6 caption as it corresponds to the specific run data.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "18:82",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": "300 Å",
+        "column_dimensions": "4.6 x 250 mm",
+        "detector": "ELSD, UV",
+        "field_evidence": {
+          "critical_condition_basis": "The solvent composition of 18:82 vol.% (THF:DMF) was the closest to the critical conditions that could be obtained. As can be observed, up to a Mp of 39200 g/mol the calibration standards elute at nearly the same Ve.",
+          "critical_component": "critical conditions of PS",
+          "column_name": "300 Å C18 Symmetry",
+          "mobile_phase_solvents": "THF-DMF",
+          "mobile_phase_ratio": "18:82 vol.% (THF:DMF)",
+          "temperature_celsius": "30ºC",
+          "pore_size": "300 Å",
+          "flow_rate": null
+        },
+        "notes": "Used for analysis of PS-b-PEO. This setup was developed due to poor solubility of high MW PEO in THF/Water.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "DMF",
+          "THF"
+        ],
+        "mobile_phase_ratio": "4:96",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29.7",
+        "flow_rate": null,
+        "pore_size": "300 Å",
+        "column_dimensions": "4.6 x 250 mm",
+        "detector": "ELSD, UV",
+        "field_evidence": {
+          "critical_condition_basis": "The solvent composition of 4:96 vol.% (DMF:THF) was the closest to the critical conditions that could be obtained. As can be observed, up to a Mp of 114000 g/mol the calibration standards elute at nearly the same Ve.",
+          "critical_component": "critical conditions of PEO",
+          "column_name": "300Å Nucleosil Si",
+          "mobile_phase_solvents": "DMF-THF",
+          "mobile_phase_ratio": "4:96 vol.% (DMF:THF)",
+          "temperature_celsius": "29.7ºC",
+          "pore_size": "300 Å",
+          "flow_rate": null
+        },
+        "notes": "Used for analysis of PS-b-PEO. Stationary phase is silica-based.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 24500,
+      "extraction_success": true,
+      "processing_time": 301.7721104621887,
+      "extracted_count": 2
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 21260,
+      "extraction_success": true,
+      "processing_time": 301.7721104621887,
+      "extracted_count": 3
+    }
+  ]
+}

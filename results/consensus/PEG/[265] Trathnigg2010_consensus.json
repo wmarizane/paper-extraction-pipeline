@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "source_pdf": "[265] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  }
+}

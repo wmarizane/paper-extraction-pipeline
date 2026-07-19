@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "source_pdf": "[372] Trathnigg2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene glycol",
+        "critical_component": "oxyethylene unit",
+        "architecture": "linear homopolymer",
+        "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in methanol\u2013water containing 85.8 wt.% methanol",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Zorbax 300 C18",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "85.8 wt.% methanol",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "15.0\u201335.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "150 mm x 4.6 mm",
+        "detector": "RI detector; DDS70 density detection system",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in methanol\u2013water containing 85.8 wt.% methanol",
+          "critical_component": "Critical conditions for the oxyethylene unit",
+          "column_name": "Zorbax 300 C18: silica-based octadecyl phase",
+          "mobile_phase_solvents": "mobile phases consisting of methanol\u2013water",
+          "mobile_phase_ratio": "85.8 wt.% methanol",
+          "temperature_celsius": "varied the temperature between 15.0 and 35.0[\u2022] C",
+          "pore_size": "nominal pore size = 300 A",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Temperature dependence of interaction parameters is negligible in this system.",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol",
+        "critical_component": "oxyethylene unit",
+        "architecture": "linear homopolymer",
+        "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in acetone\u2013water at 89.6 wt.% acetone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "89.6 wt.% acetone",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "15.0\u201335.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "RI detector; DDS70 density detection system",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in acetone\u2013water at 89.6 wt.% acetone",
+          "critical_component": "Critical conditions for the oxyethylene unit",
+          "column_name": "Prodigy ODS3, silica-based octadecyl phase",
+          "mobile_phase_solvents": "mobile phases consisting of ... acetone\u2013water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "varied the temperature between 15.0 and 35.0[\u2022] C",
+          "pore_size": "nominal pore size = 100 A",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Temperature dependence of interaction parameters is pronounced in this system. Critical temperature determined as 11.0 C.",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Fatty alcohol ethoxylates",
+        "critical_component": "oxyethylene unit",
+        "architecture": "diblock (AB)",
+        "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in methanol\u2013water containing 85.8 wt.% methanol",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Zorbax 300 C18",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "85.8 wt.% methanol",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "150 mm x 4.6 mm",
+        "detector": "RI detector; DDS70 density detection system",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in methanol\u2013water containing 85.8 wt.% methanol",
+          "critical_component": "Critical conditions for the oxyethylene unit",
+          "column_name": "Zorbax 300 C18",
+          "mobile_phase_solvents": "methanol\u2013water",
+          "mobile_phase_ratio": "85.8 wt.% methanol",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Analysis of FAE (AB structures) under critical conditions for the EO unit.",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Fatty acid polyglycol esters",
+        "critical_component": "oxyethylene unit",
+        "architecture": "triblock (BAB)",
+        "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in acetone\u2013water at 89.6 wt.% acetone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "89.6 wt.% acetone",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD; DDS70 density detection system",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for the oxyethylene unit were realized on octadecyl phases in acetone\u2013water at 89.6 wt.% acetone",
+          "critical_component": "Critical conditions for the oxyethylene unit",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "100 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Analysis of diesters (BAB structures) under critical conditions for the EO unit. ELSD used for detection.",
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "fatty acid polyglycol esters",
+        "critical_component": "oxyethylene unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "89.6",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "89.6 wt.% acetone",
+          "temperature_celsius": "25\u00b0C",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "fatty acid polyglycol esters",
+        "critical_component": "oxyethylene unit",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Zorbax 300 C18",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "85.8",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 \u00c5",
+        "column_dimensions": "150 mm \u00d7 4.6 mm",
+        "detector": "density detection system DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions can be adjusted by varying the mobile phase composition or temperature",
+          "critical_component": "the oxyethylene unit",
+          "column_name": "Zorbax 300 C18",
+          "mobile_phase_solvents": "methanol\u2013water",
+          "mobile_phase_ratio": "85.8 wt.% methanol",
+          "temperature_celsius": "25\u00b0C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2005.06.028",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[128] Gorshkov1986.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "unter kritischen Bedingungen",
+          "critical_component": "Poly(oxypropylenpolyol)",
+          "column_name": "LiChrosorb SI 100",
+          "mobile_phase_solvents": "Methylethylketon/ Ethylacetat",
+          "mobile_phase_ratio": "5/95 (4)",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": "mittleren Korngr\u00f6Be von 10 ym",
+          "flow_rate": "null"
+        },
+        "column_name": "LiChrosorb Si 100",
+        "flow_rate": "null",
+        "architecture": "linear",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "paper_doi": "null",
+        "corresponding_email_address": "null",
+        "publication_year": "1986",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "pore_size": "10",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Poly(oxypropylenpolyol)",
+        "physical_address": "null",
+        "corresponding_author_name": "A. V. Gor\u0161kov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Silica",
+        "mobile_phase_ratio": "5/95",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Methylethylketon",
+          "Ethylacetat"
+        ],
+        "detector": "RIDK 101",
+        "notes": "Critical conditions determined by stepwise addition of Ethylacetat to Methylethylketon. The text lists ratios 20/80, 10/90, 7/93, 5/95, 0/100. The 5/95 ratio is the specific composition closest to the critical point where independence from molar mass is achieved for the standards used.",
+        "mobile_phase_ratio_units": "Vol-%",
+        "critical_component": "Poly(propylenglykol)",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "strong_inference",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

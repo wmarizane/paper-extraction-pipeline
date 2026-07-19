@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "[376] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "critical_component": "In this study, we have tried to find a system, which allows an LAC separation according to the number of EO units at the CAP for PO.",
+          "column_name": "Chromolith RP18 column",
+          "mobile_phase_solvents": "ACN\u2013water mobile phases",
+          "mobile_phase_ratio": "34 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "pore size: 100A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "column_name": "Chromolith Performance RP-18e 100-4.6",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "diblock",
+        "critical_condition_basis": "CAP for EO",
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2009",
+        "column_dimensions": "100 mm x 4.6 mm",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "EO\u2013PO diblock copolymer",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "mobile_phase_ratio": "34 wt% ACN",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Text describes a critical range (34-59% ACN) but 34% is the specific point mentioned for finding critical conditions.",
+        "mobile_phase_ratio_units": "wt%",
+        "critical_component": "EO block",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "critical_component": "On the Spherisorb S5X column a CAP for PO was found at about 71 wt% ACN.",
+          "column_name": "Spherisorb S5X column",
+          "mobile_phase_solvents": "ACN\u2013water mobile phases",
+          "mobile_phase_ratio": "71 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "300 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "column_name": "Spherisorb S5X",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "diblock",
+        "critical_condition_basis": "CAP for PO",
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2009",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "EO\u2013PO diblock copolymer",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "plain silica",
+        "mobile_phase_ratio": "71 wt% ACN",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Used to separate EO block oligomers.",
+        "mobile_phase_ratio_units": "wt%",
+        "critical_component": "PO block",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "critical_component": "On the Nucleosil Si 120 A column a CAP for PO was found at around 87 wt% ACN.",
+          "column_name": "Nucleosil Si 120 A column",
+          "mobile_phase_solvents": "ACN\u2013water mobile phases",
+          "mobile_phase_ratio": "87 wt% ACN",
+          "temperature_celsius": "25.08C",
+          "pore_size": "pore size = 120 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "column_name": "Nucleosil Si 120",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "diblock",
+        "critical_condition_basis": "CAP for PO",
+        "paper_doi": "10.1002/jssc.200900043",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2009",
+        "column_dimensions": "250 mm x 4 mm",
+        "pore_size": "120 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "EO\u2013PO diblock copolymer",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "plain silica",
+        "mobile_phase_ratio": "87 wt% ACN",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Used to separate EO block oligomers.",
+        "mobile_phase_ratio_units": "wt%",
+        "critical_component": "PO block",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

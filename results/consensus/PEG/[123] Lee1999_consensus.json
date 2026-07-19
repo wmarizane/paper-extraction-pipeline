@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[123] Lee1999.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption, in which the retention of a particular polymer species becomes independent of the length of the polymer chain.",
+          "critical_component": "The PEO block is 'invisible' in principle,",
+          "column_name": "Phenomenex, Luna C18",
+          "mobile_phase_solvents": "acetonitrile (HPLC grade) and water (deionized and filtered with 0.45 \u00b5m membrane filter)",
+          "mobile_phase_ratio": "60/40",
+          "temperature_celsius": "68 \u00b0C",
+          "pore_size": "100 \u00c5 pore size",
+          "flow_rate": null
+        },
+        "column_name": "Phenomenex, Luna C18",
+        "flow_rate": null,
+        "architecture": "diblock",
+        "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption, in which the retention of a particular polymer species becomes independent of the length of the polymer chain.",
+        "paper_doi": "10.1021/ma9900028",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "publication_year": "1999",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-PLLA diblock copolymer",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784, Korea; Department of Polymer Science and Engineering, Sungkyunkwan University, Suwon, 440-746, Korea",
+        "corresponding_author_name": "Taihyun Chang; Doosung Lee",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "60/40",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "detector": "refractive index detector",
+        "notes": "Critical condition established empirically using PEG standards (Mn: 1500, 3400, 8000) and applied to PEO-PLLA diblock copolymer. The text notes that the critical condition of MPEO (precursor) is slightly different due to end effects, but the PEG critical condition was used for the analysis.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "PEO block",
+        "temperature_celsius": "68",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

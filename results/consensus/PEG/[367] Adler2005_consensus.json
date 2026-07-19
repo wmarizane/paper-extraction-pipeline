@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[367] Adler2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At the critical point of adsorption for PEG, LC-CC separates MPEG and the macromonomer with regard to their endgroups irrespective of molar mass.",
+          "critical_component": "At the critical point of adsorption for PEG, LC-CC separates MPEG and the macromonomer with regard to their endgroups irrespective of molar mass.",
+          "column_name": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "mobile_phase_solvents": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "mobile_phase_ratio": "A non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "column_name": "Knauer Nucleosil RP18-100",
+        "flow_rate": null,
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": null,
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlo\u00dfgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Harald Pasch",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "mobile_phase_ratio": "81:19",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": null,
+        "mobile_phase_ratio_units": "wt.-%",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

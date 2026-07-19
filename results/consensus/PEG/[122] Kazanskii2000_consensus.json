@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "[122] Kazanskii2000.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": null,
+          "mobile_phase_solvents": "acetonitrile and water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "column_name": null,
+        "flow_rate": null,
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography under critical conditions",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": "2000",
+        "column_dimensions": null,
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Semenov Institute of Chemical Physics, Russian Academy of Sciences, ul. Kosygina 4, Moscow, 117977 Russia; Center of Molecular and Macromolecular Studies, Polish Academy of Sciences",
+        "corresponding_author_name": "K. S. Kazanskii; G. Lapienis; V. I. Kuznetsova; V. V. Evreinov; S. Penczek",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": null,
+        "mobile_phase_ratio": "80:20",
+        "column_mode": null,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "detector": "Refractive index detector; Light scattering detector",
+        "notes": "Text mentions LCCC analysis of PEG monomethyl ethers (M=2000 and 5000) and star-shaped polymers derived from them, but does not specify the column type, mobile phase composition, or temperature for the LCCC runs. Only detectors are mentioned in the context of the chromatograms.",
+        "mobile_phase_ratio_units": null,
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG monomethyl ethers (MPEG)",
+        "critical_component": "PEG monomethyl ethers",
+        "architecture": "Linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrosorb-10 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH3CN",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "Waters-410 refractometric detector",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions",
+          "critical_component": "PEG monomethyl ethers",
+          "column_name": "Lichrosorb-10 RP-18 column",
+          "mobile_phase_solvents": "CH3CN-H2O",
+          "mobile_phase_ratio": "60:40 by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": "Retention volumes for PEG and MPEG were 2.98 and 3.25 ml respectively under these conditions.",
+        "paper_doi": null,
+        "corresponding_author_name": "K. S. Kazansky; G. Lapienis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics named after. N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4; Center of Molecular and Macromolecular Studies Polish Academy of Sciences, Sienkiewicza 112, 90-363 Lodz, Poland",
+        "publication_year": "2000",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

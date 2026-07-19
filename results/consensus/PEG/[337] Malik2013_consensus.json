@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "source_pdf": "[337] Malik2013.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PCL diols with uniform central block (diethylene glycol)",
+        "critical_component": "EO block (polyethylene oxide)",
+        "architecture": "Triblock (CL-DEG-CL) and Diblock (CL-DEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "82 vol.% methanol",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "density detector DDS70 and refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "Fig. 1 shows, that on a Synergi Fusion RP column a CAP for EO exists at 25[\u25e6] C in a methanol\u2013water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "methanol\u2013water mobile phase",
+          "mobile_phase_ratio": "82 vol.% methanol",
+          "temperature_celsius": "25[\u25e6] C",
+          "pore_size": "nominal pore size = 80 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
+        },
+        "notes": "Used for LCCC analysis of PCL diols to separate based on architecture (diblock vs triblock).",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PCL diol 830",
+        "critical_component": "PEG (polyethylene glycol)",
+        "architecture": "Triblock and Diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "Silica based reversed phase octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.1% acetonitrile",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "25 mm x 300 mm",
+        "detector": "density detection system DDS70 and SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "Semi-preparative LCCC of PCL-diol 830 on the Spherisorb ODS2 column in 69.1% acetonitrile.",
+          "critical_component": "PEG",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "acetonitrile\u2013water",
+          "mobile_phase_ratio": "69.1% acetonitrile",
+          "temperature_celsius": "25.0[\u25e6] C",
+          "pore_size": "80 A",
+          "flow_rate": "flow rate of 2.0 mL/min"
+        },
+        "notes": "Semi-preparative LCCC used to fractionate PCL diol 830. The text explicitly labels this as 'Semi-preparative LCCC'.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "CL-DEG-CL",
+        "critical_component": "DEG",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "82%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 25[\u25e6] C in a methanol\u2013water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol\u2013water",
+          "mobile_phase_ratio": "82 vol.% methanol",
+          "temperature_celsius": "25[\u25e6] C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik; Hasnat Ahmed",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan; NAWI Graz, Central Polymer Laboratories (CePoL), Heinrichstrasse 28 and Stremayrgasse 16, A-8010 Graz, Austria; Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "BO-DEG-BO",
+        "critical_component": "DEG",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "70%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 25[\u25e6] C in a methanol\u2013water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol\u2013water",
+          "mobile_phase_ratio": "70% methanol",
+          "temperature_celsius": "25[\u25e6] C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik; Hasnat Ahmed",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan; NAWI Graz, Central Polymer Laboratories (CePoL), Heinrichstrasse 28 and Stremayrgasse 16, A-8010 Graz, Austria; Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

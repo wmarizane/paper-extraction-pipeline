@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "[107] Kr\u00fcger1996.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "the retention volume is independent of molar mass",
+          "critical_component": "polyester samples",
+          "column_name": "7- [im Si-120 silica column",
+          "mobile_phase_solvents": "acetone/hexane",
+          "mobile_phase_ratio": "50.5 vol%:49.5 vol%",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "column_name": "Si-120 silica column",
+        "flow_rate": null,
+        "architecture": "linear",
+        "critical_condition_basis": "retention volume independent of molar mass",
+        "paper_doi": "10.1080/10236669608233912",
+        "corresponding_email_address": null,
+        "publication_year": "1996",
+        "column_dimensions": "7- [im",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "aliphatic polyester (AA-HD)",
+        "physical_address": "Institut f\u00fcr Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "corresponding_author_name": "R. P. Kr\u00fcger; H. Much; G. Schulz",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_ratio": "50.5 vol%:49.5 vol%",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "hexane"
+        ],
+        "detector": "refractive index detector",
+        "notes": "Used for the first dimension of 2D-HPLC for polyesters.",
+        "mobile_phase_ratio_units": "vol%",
+        "critical_component": "polyester backbone",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "polyether (ethylene oxide based)",
+        "critical_component": "ethylene oxide backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "54 vol% : 46 vol%",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4mm i. d.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The mobile phase at critical conditions consisted of a mixture of water/acetonitrile (54 vol%:46 vol%)",
+          "critical_component": "polyethers",
+          "column_name": "Macherey Nagel Nucleosil 5C18 column",
+          "mobile_phase_solvents": "water/acetonitrile",
+          "mobile_phase_ratio": "54 vol%:46 vol%",
+          "temperature_celsius": "All LACCC columns were thermostated at 30\u00b0C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used for the first dimension of 2D-HPLC for polyethers. Text also mentions a critical point of 43 vol% acetonitrile / 57 vol% water in the Results section for EO, but the Experimental section specifies 54/46 for the analysis setup.",
+        "paper_doi": "10.1080/10236669608233912",
+        "corresponding_author_name": "R. P. Kr\u00fcger; H. Much; G. Schulz",
+        "corresponding_email_address": null,
+        "physical_address": "Institut f\u00fcr Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": "1996",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "polyether (ethylene oxide based)",
+        "critical_component": "polyether",
+        "architecture": "linear",
+        "critical_condition_basis": "retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey Nagel Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "54 vol%:46 vol%",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4mm i. d.",
+        "detector": "ELSD detector",
+        "field_evidence": {
+          "critical_condition_basis": "the retention volume is independent of molar mass",
+          "critical_component": "polyethers",
+          "column_name": "Macherey Nagel Nucleosil 5C18 column",
+          "mobile_phase_solvents": "water/acetonitrile",
+          "mobile_phase_ratio": "54 vol%:46 vol%",
+          "temperature_celsius": "30\u00b0C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used for the first dimension of 2D-HPLC for polyethers. Text also mentions a critical point of 43 vol% acetonitrile / 57 vol% water in the Results section for EO, but the Experimental section specifies 54/46 for the analysis setup.",
+        "paper_doi": "10.1080/10236669608233912",
+        "corresponding_author_name": "R. P. Kr\u00fcger; H. Much; G. Schulz",
+        "corresponding_email_address": null,
+        "physical_address": "Institut f\u00fcr Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": "1996",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

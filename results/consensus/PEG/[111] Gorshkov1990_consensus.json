@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "source_pdf": "[111] Gorshkov1990.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Chrompak RP-18",
+        "flow_rate": "1 ml/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical conditions for PEO",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": "1990",
+        "column_dimensions": null,
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-PPO block copolymer",
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "58:42",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "detector": "refractometric detection",
+        "notes": "Conditions established for PEO used to analyze PPO block size in copolymers (PEO blocks are 'invisible').",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "PEO block",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PEO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Chrompak RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "58:42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml min-1",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric detection",
+        "field_evidence": {
+          "critical_condition_basis": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase is the composition 58:42 (v/v)",
+          "critical_component": "Corresponding to the critical conditions for PEO on the Chrompak RP-18 phase",
+          "column_name": "Chrompak RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "58:42",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "Flow-rate, 1 ml min-1"
+        },
+        "notes": "Used for separation of PEO by functionality types and for analyzing PPO blocks in copolymers where PEO is at critical condition.",
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "publication_year": "1990",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEO-PPO-PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEO-PPO-PEO",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "tetrahydrofuran"
+        ],
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions the unmodified sites of the reversed phase, containing-SiOH groups, become significant. Because of the extremely strong interaction of PEO with these sites, the chromatograms, even for the PEO homopolymer, are strongly distorted by elongated tails.",
+          "critical_component": "PPO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-tetrahydrofuran",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

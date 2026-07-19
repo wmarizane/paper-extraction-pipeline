@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[294] Malik2008.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "In LCCC, the mobile phase was delivered by an ISCO 2350 HPLC pump (ISCO, Lincoln, NE, USA) at a flow rate of 0.5 ml/min. Samples were injected using an autosampler Spark SPH 125 Fix (Spark Holland, Emmen, The Netherlands) equipped with a 20 ll loop. A refractive index detector RI 2414 (Waters) or a SEDEX 45 ELSD (Sedere, France) was connected to the DDS 70. Nitrogen was used as carrier gas, and the pressure at the nebulizer was set to 1.0 bar. Evaporator temperature: 30 \u00b0C. All separations in LCCC were performed on a Jordi Gel DVB 500 RP column (100% poly-divinylbenzene; 250 \u00d7 4.6 mm; particle diameter = 5 lm; pore size = 500 , from Jordi, Bellingham, MA, USA).",
+          "critical_component": "In LCCC, the elution volume of each series is independent of molar mass.",
+          "column_name": "Jordi Gel DVB 500 RP column (100% poly-divinylbenzene; 250 \u00d7 4.6 mm; particle diameter = 5 lm; pore size = 500 , from Jordi, Bellingham, MA, USA).",
+          "mobile_phase_solvents": "THF-water",
+          "mobile_phase_ratio": "80 wt% THF-water",
+          "temperature_celsius": "25.0 \u00b0C",
+          "pore_size": "500 ",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Jordi Gel DVB 500 RP",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume is independent of the chain length of the block A",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2008",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(propylene oxide)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "mobile_phase_ratio": "80 wt%",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": null,
+        "mobile_phase_ratio_units": "wt%",
+        "critical_component": "poly(propylene oxide)",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

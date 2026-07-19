@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "source_pdf": "[212] Cleaver2015.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+          "critical_component": "Critical point conditions for PEG",
+          "column_name": "Column: PLRP-S 100\u00c5 5 \u00b5m, 150 x 4.6 mm",
+          "mobile_phase_solvents": "Analysis of PEG Eluent: 49% Acetonitrile in Water",
+          "mobile_phase_ratio": "49% Acetonitrile in Water",
+          "temperature_celsius": null,
+          "pore_size": "100\u00c5",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
+        "column_name": "PLRP-S",
+        "flow_rate": "1.0 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": null,
+        "column_dimensions": "150 x 4.6 mm",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol (PEG)",
+        "physical_address": "Agilent Technologies, Inc.",
+        "corresponding_author_name": null,
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Polymer-based reversed phase",
+        "mobile_phase_ratio": "49% Acetonitrile in Water",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "detector": "Agilent ELSD",
+        "notes": "Used to analyze amine end-group modified PEG. The PEG backbone is chromatographically invisible.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "polyethylene glycol",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "critical_component": "polystyrene",
+          "column_name": "Column: PLRP-S 100\u00c5 5 \u00b5m, 150 x 4.6 mm",
+          "mobile_phase_solvents": "Analysis of PMMA Eluent: Polystyrene - 47% ACN in THF",
+          "mobile_phase_ratio": "47% ACN in THF",
+          "temperature_celsius": null,
+          "pore_size": "100\u00c5",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
+        "column_name": "PLRP-S",
+        "flow_rate": "1.0 mL/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": null,
+        "column_dimensions": "150 x 4.6 mm",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "physical_address": "Agilent Technologies, Inc.",
+        "corresponding_author_name": null,
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Polymer-based reversed phase",
+        "mobile_phase_ratio": "47% ACN in THF",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Tetrahydrofuran (THF)"
+        ],
+        "detector": "Agilent ELSD",
+        "notes": "The polystyrene block is 'chromatographically invisible' under these conditions, allowing analysis of the PMMA block.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "polystyrene block",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "critical_component": "polymethyl methacrylate",
+          "column_name": "Column: PLRP-S 100\u00c5 5 \u00b5m, 150 x 4.6 mm",
+          "mobile_phase_solvents": "Analysis of PMMA Eluent: Polymethylmethacrylate - 17% ACN, 17% Water, 66% THF",
+          "mobile_phase_ratio": "17% ACN, 17% Water, 66% THF",
+          "temperature_celsius": null,
+          "pore_size": "100\u00c5",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
+        "column_name": "PLRP-S",
+        "flow_rate": "1.0 mL/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": null,
+        "column_dimensions": "150 x 4.6 mm",
+        "pore_size": "100\u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "physical_address": "Agilent Technologies, Inc.",
+        "corresponding_author_name": null,
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Polymer-based reversed phase",
+        "mobile_phase_ratio": "17% ACN, 17% Water, 66% THF",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water",
+          "Tetrahydrofuran (THF)"
+        ],
+        "detector": "Agilent ELSD",
+        "notes": "The PMMA block is 'chromatographically invisible' under these conditions, allowing analysis of the PS block.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "polymethyl methacrylate",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

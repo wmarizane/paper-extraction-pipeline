@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[327] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 \u00b0C",
+          "critical_component": "critical conditions for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol",
+          "mobile_phase_ratio": "82% methanol",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "nominal pore size= 80\u00c5",
+          "flow_rate": "0.5 mLmin\u207b\u00b9"
+        },
+        "column_name": "Synergi Fusion RP",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 \u00b0C.",
+        "paper_doi": "10.1007/s00216-010-3951-x",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2011",
+        "column_dimensions": "250 x 4.6 mm",
+        "pore_size": "80 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), 8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg; Hasnat Ahmed",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "mobile_phase_ratio": "82% methanol",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "detector": "ELSD",
+        "notes": "The text states that under these conditions, retention times of PEGs and PEG-MMEs are sufficiently different to allow separation, implying the critical condition applies to the PEG backbone (EO repeat unit).",
+        "mobile_phase_ratio_units": "volume percent",
+        "critical_component": "EO",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

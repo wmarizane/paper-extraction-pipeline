@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "source_pdf": "[285] Bashir2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "For high molar mass polymers we found this composition to be close to the critical composition determined by isocratic experiments.",
+          "critical_component": "PMMA",
+          "column_name": "Nucleosil bare silica, particle size 7 \u03bcm, pore diameter 1000 \u00c5, column dimensions 250 x 4.0 mm i.d.",
+          "mobile_phase_solvents": "THF/Toluene",
+          "mobile_phase_ratio": "37% THF",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "1000 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Nucleosil bare silica",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "250 x 4.0 mm i.d.",
+        "pore_size": "1000 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PMMA",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "37.20% THF",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Toluene",
+          "THF"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs after gradient estimation. Table 2 lists 37.20% THF as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PMMA",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition, as determined by the crossing of the lines corresponding to different molar mass, is 83% MeOH.",
+          "critical_component": "PEG",
+          "column_name": "Nucleosil C18, particle size 5 \u03bcm, pore diameter 300 \u00c5, column dimensions 250 x 4.6 mm i.d.",
+          "mobile_phase_solvents": "MeOH/Water",
+          "mobile_phase_ratio": "83% MeOH",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Nucleosil C18",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "pore_size": "300 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "83% MeOH",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Water",
+          "Methanol"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 83.00% MeOH as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PEG",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PMMA",
+          "column_name": "Chromolith Si, mesopores 130 \u00c5, 2 \u03bcm macropores, 100 x 4.6 mm i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "70.4% MEK",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "130 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Chromolith Si",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "100 x 4.6 mm i.d.",
+        "pore_size": "130 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PMMA",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "70.4% MEK",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "c-hexane",
+          "MEK"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 70.60% MEK as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PMMA",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PnBMA",
+          "column_name": "Chromolith Si, mesopores 130 \u00c5, 2 \u03bcm macropores, 100 x 4.6 mm i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "13.55% MEK",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "130 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Chromolith Si",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "100 x 4.6 mm i.d.",
+        "pore_size": "130 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PnBMA",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "13.55% MEK",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "c-hexane",
+          "MEK"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 17.90% MEK as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PnBMA",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PtBMA",
+          "column_name": "Chromolith Si, mesopores 130 \u00c5, 2 \u03bcm macropores, 100 x 4.6 mm i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "16.95% MEK",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "130 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Chromolith Si",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "100 x 4.6 mm i.d.",
+        "pore_size": "130 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PtBMA",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "16.95% MEK",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "c-hexane",
+          "MEK"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 18.60% MEK as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PtBMA",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical composition found by us coincides nicely with results of Berek in a similar system.",
+          "critical_component": "PDMA",
+          "column_name": "Chromolith Si, mesopores 130 \u00c5, 2 \u03bcm macropores, 100 x 4.6 mm i.d.",
+          "mobile_phase_solvents": "MEK/c-hexane",
+          "mobile_phase_ratio": "5.37% MEK",
+          "temperature_celsius": "35 \u00b0C",
+          "pore_size": "130 \u00c5",
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Chromolith Si",
+        "flow_rate": "1 ml/min",
+        "architecture": null,
+        "critical_condition_basis": "elution independent of molar mass",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2005",
+        "column_dimensions": "100 x 4.6 mm i.d.",
+        "pore_size": "130 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PDMA",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "5.37% MEK",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "c-hexane",
+          "MEK"
+        ],
+        "detector": "ELSD",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 4.00% MEK as the actual critical composition.",
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_component": "PDMA",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

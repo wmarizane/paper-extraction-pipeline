@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[117] Murgasova1998.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The data obtained by LC CAP (the apparent molecular weights of the polystyrene backbone, the number of the grafts per unit backbone and the amount of poly(ethylene oxide) in the graft copolymers) were compared with results of static light scattering (SLS), differential refractometry and conventional SEC.",
+          "critical_component": "The side chain of a graft copolymer eluted at CAP the main polystyrene chain could be characterized on the basis of the SEC mechanism.",
+          "column_name": "A chromatographic phenogel (linear, d p = 10 m, 7.8 \u00d7 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "mobile_phase_solvents": "Mixtures of analytical grade THF (Merck, Darmstadt, Germany) and n-hexane (Lachema, Brno, Czech Republic), both purified by distillation, were used as mobile phases.",
+          "mobile_phase_ratio": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+          "temperature_celsius": "The temperature during all experiments was maintained at 30\u00b0C with a Knauer column oven.",
+          "pore_size": "A chromatographic phenogel (linear, d p = 10 m, 7.8 \u00d7 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "flow_rate": "The data were collected on-line using a Waters PC-based data acquisition system."
+        },
+        "column_name": "phenogel (linear)",
+        "flow_rate": "1 mL/min",
+        "architecture": "graft",
+        "critical_condition_basis": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass. The data obtained by LC CAP were compared with results of static light scattering (SLS), differential refractometry, and conventional SEC.",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": "1998",
+        "column_dimensions": "7.8 \u00d7 300 mm",
+        "pore_size": "10 m",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polystyrene-graft-poly(ethylene oxide)",
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Du\u00b4 bravska\u00b4 cesta 9, 842 36 Bratislava, Slovakia",
+        "corresponding_author_name": "Dusan Berek",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "mobile_phase_ratio": "71:29",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "detector": "Model DDL-21 evaporative light-scattering detector",
+        "notes": "Critical condition established for PEO-MA macromonomers to analyze polystyrene-graft-poly(ethylene oxide) copolymers. The PEO side chains are at the critical point, making them chromatographically invisible, while the PS backbone is separated by SEC.",
+        "mobile_phase_ratio_units": "wt%",
+        "critical_component": "PEO-MA macromonomers",
+        "temperature_celsius": "30",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

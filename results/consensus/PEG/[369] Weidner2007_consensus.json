@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "source_pdf": "[369] Weidner2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of separation of one polymer unit",
+          "critical_component": "PPO",
+          "column_name": "YMC RP 2-3 18",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water",
+          "mobile_phase_ratio": "65:35v/v",
+          "temperature_celsius": "45\u00b0C",
+          "pore_size": "125mm",
+          "flow_rate": "0.5mL/min"
+        },
+        "column_name": "YMC RP 2-3 18",
+        "flow_rate": "0.5mL/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical conditions of separation of one polymer unit",
+        "paper_doi": "10.1002/rcm.314h",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "publication_year": "2007",
+        "column_dimensions": "250mm x 4.6mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-co-PPO",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I 'Analytical Chemistry, Reference Materials', Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "65:35",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "detector": "SEDEX 45",
+        "notes": "Isocratic mode used for PPO critical condition. PEO elutes in LAC mode.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "PPO",
+        "temperature_celsius": "45",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of separation of one polymer unit",
+          "critical_component": "PEO",
+          "column_name": "YMC RP 2-3 18",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water",
+          "mobile_phase_ratio": "85:15v/v",
+          "temperature_celsius": "45\u00b0C",
+          "pore_size": "125mm",
+          "flow_rate": "0.5mL/min"
+        },
+        "column_name": "YMC RP 2-3 18",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "gradient mode starting at critical separation conditions for PEO",
+        "paper_doi": "10.1002/rcm.314h",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "publication_year": "2007",
+        "column_dimensions": "250mm x 4.6mm",
+        "pore_size": "300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-co-PPO mono-n-butyl ether",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I 'Analytical Chemistry, Reference Materials', Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "85:15",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water",
+          "isopropanol"
+        ],
+        "detector": "SEDEX 45",
+        "notes": "Gradient mode used. PEO at critical condition, PPO elutes in LAC mode. Isopropanol added to shift from critical to LAC.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "PEO",
+        "temperature_celsius": "45",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

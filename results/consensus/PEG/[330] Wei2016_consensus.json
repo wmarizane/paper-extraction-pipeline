@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "source_pdf": "[330] Wei2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "UPLC BEH C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40 vol% acetonitrile in water",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 mm × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+          "critical_component": "non-functional PEGs",
+          "column_name": "UPLC BEH C18 Column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40 vol% acetonitrile in water",
+          "temperature_celsius": "25 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Critical condition established for non-functional PEG backbone to separate based on end-groups.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 2k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45 : 55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+          "critical_component": "PEGs",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water",
+          "mobile_phase_ratio": "45 : 55",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Critical condition established for PEG backbone on phenyl column.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 4k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45 : 55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+          "critical_component": "PEGs",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water",
+          "mobile_phase_ratio": "45 : 55",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Critical condition established for PEG backbone on phenyl column.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 6k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45 : 55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+          "critical_component": "PEGs",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water",
+          "mobile_phase_ratio": "45 : 55",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Critical condition established for PEG backbone on phenyl column.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "MPEGOH 5k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "XB-phenyl",
+        "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "45 : 55",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+          "critical_component": "PEGs",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water",
+          "mobile_phase_ratio": "45 : 55",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Critical condition established for PEG backbone on phenyl column.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG 2k",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography under critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "UPLC BEH C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "40 vol% acetonitrile in water",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1.2 mL min-1",
+        "pore_size": "130 Å",
+        "column_dimensions": "100 × 2.1 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Separation of PEGs and benzaldehyde-substituted PEGs under LCCC was also studied by UPLC (with C18 column).",
+          "critical_component": "PEGs",
+          "column_name": "UPLC BEH C18 Column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40 vol% acetonitrile in water",
+          "temperature_celsius": "25 °C",
+          "pore_size": "130 Å pore size",
+          "flow_rate": "1.2 mL min-1"
+        },
+        "notes": "UPLC LCCC conditions applied to PEGs.",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

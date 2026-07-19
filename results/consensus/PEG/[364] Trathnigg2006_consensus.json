@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "source_pdf": "[364] Trathnigg2006.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "acetone \u2013 water",
+          "mobile_phase_ratio": "91.73 wt-%",
+          "temperature_celsius": "25.08\u00b0C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Jordi Gel DVB 500 RP",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "EO-PO diblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2006",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "EO-PO block copolymers",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St.Petersburg, Russia",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "mobile_phase_ratio": "91.73",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "RI",
+        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for short PO blocks.",
+        "mobile_phase_ratio_units": "wt-%",
+        "critical_component": "EO",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Novapak C18",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80 wt-%",
+          "temperature_celsius": "25.08\u00b0C",
+          "pore_size": "60 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Novapak C18",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "triblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2006",
+        "column_dimensions": "300 \u00d7 3.9 mm",
+        "pore_size": "60 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "EO-PO block copolymers",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "octadecyl",
+        "mobile_phase_ratio": "80 wt-% methanol",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for longer PO blocks where baseline separation of oligomers is achieved.",
+        "mobile_phase_ratio_units": "wt-%",
+        "critical_component": "EO",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.73 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for the (more polar) EO block have been found on reversed phase columns in aqueous methanol, acetone, or acetonitrile.",
+          "critical_component": "CAP for the EO unit",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "acetone \u2013 water",
+          "mobile_phase_ratio": "91.73 wt-% acetone \u2013 water",
+          "temperature_celsius": "temperature of 25.08C was maintained for all measurements",
+          "pore_size": "nominal pore size \u00bc 500 A",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers where EO is at CAP and PO elutes in SEC mode (Situation 2).",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "EO-PO block copolymers",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "78.54 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "on a normal phase column, PO would elute in SEC mode aat the CAP for EO",
+          "critical_component": "CAP for EO",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone - water",
+          "mobile_phase_ratio": "78.54 wt-% acetone - water",
+          "temperature_celsius": "temperature of 25.08C was maintained for all measurements",
+          "pore_size": "nominal pore size \u00bc 100 A",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Situation 3: CAP for EO, PO elutes in SEC mode. Used to separate homopolymers and diblocks from triblocks.",
+        "paper_doi": "10.1002/masy.200650503",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2006",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

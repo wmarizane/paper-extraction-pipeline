@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[328] Bashir2006.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content Se of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": "Nucleosil C18",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "83/17",
+          "temperature_celsius": "35\u00b0C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "1 mL/min"
+        },
+        "column_name": "Nucleosil C18",
+        "flow_rate": "1 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "publication_year": "2006",
+        "column_dimensions": "250 mm \u00d7 4.6 mm I.D.",
+        "pore_size": "300 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "83/17",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "UV-detector",
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": "35",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

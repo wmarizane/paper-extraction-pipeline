@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "[366] Pasch2006.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
+          "critical_component": "PEG",
+          "column_name": "Knauer Nucleosil RP18-100",
+          "mobile_phase_solvents": "methanol/water 81/19 (w/w)",
+          "mobile_phase_ratio": "81/19 (w/w)",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "column_name": "Knauer Nucleosil RP18-100",
+        "flow_rate": null,
+        "architecture": "graft",
+        "critical_condition_basis": "liquid chromatography at critical conditions (LC-CC) for PEG",
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "publication_year": "2006",
+        "column_dimensions": null,
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany; Polymer Standards Service GmbH, Mainz, Germany; BASF Aktiengesellschaft, Ludwigshafen, Germany",
+        "corresponding_author_name": "Harald Pasch; Martina Adler; Daniela Knecht; Frank Rittig; Ronald Lange",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "RP18",
+        "mobile_phase_ratio": "81/19",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Used for separation of PEG from graft products in PEG-g-PMAA analysis.",
+        "mobile_phase_ratio_units": "w/w",
+        "critical_component": "PEG",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography under critical conditions (LC-CC) resulted in the desired separation",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "H2O"
+        ],
+        "mobile_phase_ratio": "82.5:17.5",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions (LC-CC) resulted in the desired separation",
+          "critical_component": "The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume",
+          "column_name": "stationary phase: Nucleosil C18",
+          "mobile_phase_solvents": "MeOH:H2O",
+          "mobile_phase_ratio": "82.5:17.5% by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used for separation of free PEO from PEO-g-PVA graft copolymers.",
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "publication_year": "2006",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-g-PVA",
+        "critical_component": "PEG",
+        "architecture": "graft",
+        "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "82.5:17.5",
+        "mobile_phase_ratio_units": "% by volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
+          "critical_component": "PEG",
+          "column_name": "Nucleosil C18",
+          "mobile_phase_solvents": "MeOH:H2O 82.5:17.5% by volume",
+          "mobile_phase_ratio": "82.5:17.5% by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": "10.1002/masy.200551317",
+        "corresponding_author_name": "Harald Pasch; Martina Adler; Daniela Knecht; Frank Rittig; Ronald Lange",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany; Polymer Standards Service GmbH, Mainz, Germany; BASF Aktiengesellschaft, Ludwigshafen, Germany",
+        "publication_year": "2006",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

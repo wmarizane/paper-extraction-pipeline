@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "source_pdf": "[332] Malik2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
+          "critical_component": "PPO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "80/20 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min-1"
+        },
+        "column_name": "Jordi DVB 500 RP",
+        "flow_rate": "0.5 mL.min-1",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2016",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 \u01fa",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polypropylene oxide (PPO)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "mobile_phase_ratio": "80/20",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "detector": "SEDEX 45 ELSD",
+        "notes": "Used to separate PPO chains with different end-groups (PPGs, allylic-PPOs, octadecyl-PPOs).",
+        "mobile_phase_ratio_units": "w/w",
+        "critical_component": "PPO repeat unit",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
+          "critical_component": "PBO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "84/16 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min-1"
+        },
+        "column_name": "Jordi DVB 500 RP",
+        "flow_rate": "0.5 mL.min-1",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2016",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 \u01fa",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polybutylene oxide (PBO)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "mobile_phase_ratio": "84/16",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "detector": "SEDEX 45 ELSD",
+        "notes": "Used to analyze butyl-PBO and octadecyl-PBO. Separation of by-products from targeted products.",
+        "mobile_phase_ratio_units": "w/w",
+        "critical_component": "PBO repeat unit",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
+          "critical_component": "PHO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "87/13 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min-1"
+        },
+        "column_name": "Jordi DVB 500 RP",
+        "flow_rate": "0.5 mL.min-1",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "publication_year": "2016",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 \u01fa",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polyhexylene oxide (PHO)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "mobile_phase_ratio": "87/13",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "detector": "SEDEX 45 ELSD",
+        "notes": "Used to analyze hexanol-based and octadecanol-based PHO. Separation of by-products from targeted products.",
+        "mobile_phase_ratio_units": "w/w",
+        "critical_component": "PHO repeat unit",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

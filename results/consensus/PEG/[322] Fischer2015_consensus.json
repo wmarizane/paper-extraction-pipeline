@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[322] Fischer2015.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "LCCC was performed on an Agilent 1100/1200 Series HPLC equipped with an evaporative light scattering detector (ELSD) (PL-ELS 1000; Polymer Labs, now Agilent Technologies, Santa Clara (CA), USA). The ELSD nebulizer temperature was set to 90\u00b0C and the evaporator temperature to 110\u00b0C. The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "critical_component": "LCCC was performed on an Agilent 1100/1200 Series HPLC equipped with an evaporative light scattering detector (ELSD) (PL-ELS 1000; Polymer Labs, now Agilent Technologies, Santa Clara (CA), USA). The ELSD nebulizer temperature was set to 90\u00b0C and the evaporator temperature to 110\u00b0C. The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "column_name": "The column used was an octadecyl silica column with a pore size of 120 \u00c5 and particle size of 5 \u03bcm with a 250\u00d74.6 mm inner diameter.",
+          "mobile_phase_solvents": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "mobile_phase_ratio": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "temperature_celsius": null,
+          "pore_size": "The column used was an octadecyl silica column with a pore size of 120 \u00c5 and particle size of 5 \u03bcm with a 250\u00d74.6 mm inner diameter.",
+          "flow_rate": "The crude samples were dissolved as 1 mg mL[\u2212][1] , and 10 \u03bcL of the sample was injected at a flow rate of 0.5 mL min[\u2212][1] ."
+        },
+        "column_name": "octadecyl silica column",
+        "flow_rate": "0.5 mL min-1",
+        "architecture": "linear",
+        "critical_condition_basis": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+        "paper_doi": "10.1007/s13361-015-1233-8",
+        "corresponding_email_address": "strimpin@chem.wayne.edu; steffen.weidner@bam.de; jana.falkenhagen@bam.de",
+        "publication_year": "2015",
+        "column_dimensions": "250\u00d74.6 mm",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Department of Chemistry, Wayne State University, Detroit, MI 48202, USA; BAM Federal Institute for Materials Research and Testing, D-12489, Berlin, Germany; BAM Federal Institute for Materials Research and Testing, D-12489, Berlin, Germany",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "octadecyl silica",
+        "mobile_phase_ratio": "47:53",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "H2O"
+        ],
+        "detector": "evaporative light scattering detector (ELSD)",
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer 90\u00b0C, evaporator 110\u00b0C (detector temps, not column).",
+        "mobile_phase_ratio_units": "v:v",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

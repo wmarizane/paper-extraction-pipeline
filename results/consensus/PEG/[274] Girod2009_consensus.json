@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "[274] Girod2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions are defined as the experimental settings at which effects due to size exclusion and interaction mechanisms compensate each other.",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": "octadecylsilica EQUISIL",
+          "mobile_phase_solvents": "MeOH\u2013water",
+          "mobile_phase_ratio": "88.8:11.2 (%, v/v)",
+          "temperature_celsius": "25 fo} C",
+          "pore_size": "pore diameter: 100 A[\u02da]",
+          "flow_rate": "flow-rate: 1 mL min 1"
+        },
+        "column_name": "octadecylsilica EQUISIL",
+        "flow_rate": "1 mL min\u207b\u00b9",
+        "architecture": "linear",
+        "critical_condition_basis": "critical composition of the MeOH\u2013water eluent",
+        "paper_doi": "10.1039/b9ay00118b",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "publication_year": "2009",
+        "column_dimensions": "150 x 4 mm",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1.0 mM"
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Universit\u00e9s Aix-Marseille I, II et III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille, France",
+        "corresponding_author_name": "Laurence Charles",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "octadecylsilica",
+        "mobile_phase_ratio": "88.8:11.2",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ESI-MS",
+        "notes": "Critical conditions established with LiCl. The text notes that changing the cation (e.g., to Cs\u207a) shifts the elution volume, meaning critical conditions are not maintained for other salts on this column.",
+        "mobile_phase_ratio_units": "%, v/v",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions are defined as the experimental settings at which effects due to size exclusion and interaction mechanisms compensate each other.",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": "amino-silica NUCLEOSIL",
+          "mobile_phase_solvents": "MeOH\u2013water",
+          "mobile_phase_ratio": "93.5:6.5 (%, v/v)",
+          "temperature_celsius": "25 fo} C",
+          "pore_size": "pore diameter: 100 A[\u02da]",
+          "flow_rate": "flow-rate: 1 mL min 1"
+        },
+        "column_name": "amino-silica NUCLEOSIL",
+        "flow_rate": "1 mL min\u207b\u00b9",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions are defined as the experimental settings at which effects due to size exclusion and interaction mechanisms compensate each other.",
+        "paper_doi": "10.1039/b9ay00118b",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "publication_year": "2009",
+        "column_dimensions": "250 x 4.6 mm",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "physical_address": "Universit\u00e9s Aix-Marseille I, II et III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille, France",
+        "corresponding_author_name": "Laurence Charles",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "amino-silica",
+        "mobile_phase_ratio": "93.5:6.5",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ESI-MS",
+        "notes": "Critical conditions established with LiCl. The text notes that changing the cation (e.g., to Cs\u207a) shifts the elution volume, meaning critical conditions are not maintained for other salts on this column.",
+        "mobile_phase_ratio_units": "%, v/v",
+        "critical_component": "poly(ethylene glycol)",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

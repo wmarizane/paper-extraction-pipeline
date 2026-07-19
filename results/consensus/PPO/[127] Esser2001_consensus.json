@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[127] Esser2001.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Different from any other liquid chromatographic technique, LC-CC operates at conditions where the polymer chain does not contribute to retention and the elution behavior of the sample is solely directed by the type and number of the functional endgroups.",
+          "critical_component": "PPO",
+          "column_name": "Macherey Nagel Nucleosil 5 NH2",
+          "mobile_phase_solvents": "hexane/isopropyl alcohol",
+          "mobile_phase_ratio": "92:8 vol.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "The flow rate is 0.5 mL/min"
+        },
+        "column_name": "Macherey Nagel Nucleosil 5 NH2",
+        "flow_rate": "0.5 mL/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption for PPG",
+        "paper_doi": null,
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "publication_year": "2001",
+        "column_dimensions": "200 x 4 mm i.d.",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(propylene oxide)",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "C. Keil; E. Esser; H. Pasch",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "NH2",
+        "mobile_phase_ratio": "92:8",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "hexane",
+          "isopropyl alcohol"
+        ],
+        "detector": "refractive index detector",
+        "notes": "Critical condition established using PPG (diol) to analyze PPO-triol functionality distribution.",
+        "mobile_phase_ratio_units": "vol.-%",
+        "critical_component": "poly(propylene glycol)",
+        "temperature_celsius": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

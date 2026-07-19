@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "source_pdf": "[112] Pasch1995.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "the ethylene oxide block behaves chromatographically 'invisible' and retention of the block copolymer is solely directed by the propylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile\u2014water",
+          "mobile_phase_ratio": "70:30, v/v",
+          "temperature_celsius": "25\u00b0C in all experiments",
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "column_name": "Nucleosil-100 RP-18",
+        "flow_rate": "1 ml/min",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "paper_doi": null,
+        "corresponding_email_address": null,
+        "publication_year": "1995",
+        "column_dimensions": "250 x 4 mm I.D.",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Harald Pasch; Karsten Rode",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "42:58",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "detector": "Waters R-401 differential refractometer",
+        "notes": "Separation of triblock copolymer with respect to propylene oxide block length. The text states 'Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically invisible'.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "polyethylene oxide",
+        "temperature_celsius": "25",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "polyethylene oxide",
+        "critical_component": "ethylene oxide block",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "125 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "ethylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile water",
+          "mobile_phase_ratio": "70:30, v/v",
+          "temperature_celsius": "25\u00b0C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for separation of fatty alcohol ethoxylates (FAE) and PEG fractions. The text states 'Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically invisible'.",
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": "1995",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

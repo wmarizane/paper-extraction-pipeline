@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[371] Trimpin2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+          "critical_component": "PEO",
+          "column_name": "2 X YMC RP 18",
+          "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
+          "mobile_phase_ratio": "83/17 (v/v)",
+          "temperature_celsius": "45 \u00b0C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "0.5 mL min\u207b\u00b9"
+        },
+        "column_name": "YMC RP 18",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "publication_year": "2007",
+        "column_dimensions": "150 mm",
+        "pore_size": "300 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_ratio": "83/17",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "detector": "ELSD, SEDEX 45",
+        "notes": "The text describes the separation of PEO mixtures with different end groups using LACCC. The setup is used for fractionation, but the conditions are explicitly identified as critical conditions for the PEO backbone to separate by end group independent of molar mass.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "PEO backbone",
+        "temperature_celsius": "45",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

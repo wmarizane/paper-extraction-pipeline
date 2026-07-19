@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "source_pdf": "[201] Ahmed2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG-MME 2000",
+        "critical_component": "EO block",
+        "architecture": "linear",
+        "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.01 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+          "critical_component": "PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone\u2013water mobile phases",
+          "mobile_phase_ratio": "77.01 wt-% acetone",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 \u00b0C",
+          "pore_size": "nominal pore size = 100 \u00c5",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where EO is at CAP and CL elutes in SEC mode.",
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 5000",
+        "critical_component": "EO block",
+        "architecture": "linear",
+        "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.01 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+          "critical_component": "PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone\u2013water mobile phases",
+          "mobile_phase_ratio": "77.01 wt-% acetone",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 \u00b0C",
+          "pore_size": "nominal pore size = 100 \u00c5",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where EO is at CAP and CL elutes in SEC mode.",
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Cyclic PCL",
+        "critical_component": "CL block",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80.98 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "find critical conditions for PCL on a reversed phase column",
+          "critical_component": "PCL-MEs elute at 2.8 mL, regardless their degree of polymerization",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.98 wt-% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 \u00b0C",
+          "pore_size": "nominal pore size = 500 \u00c5",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where CL is at CAP and EO elutes in SEC mode. Cyclic PCL elutes at a different position than linear PCL-ME.",
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone"
+        ],
+        "mobile_phase_ratio": "77.01 wt-%",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column PPG elutes in SEC mode",
+          "critical_component": "At the CAP for EO on the NP column one can also expect CL to elute in SEC mode",
+          "column_name": "Nucleosil 100-5 OH column",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "77.01 wt-%",
+          "temperature_celsius": "25.0 \u00b0C",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
+        "critical_component": "poly(e-caprolactone)",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofurane",
+          "water"
+        ],
+        "mobile_phase_ratio": "80.98 wt-%",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for CL on a reversed phase column EO elutes in SEC mode",
+          "critical_component": "At the CAP for CL on a reversed phase column EO elutes in SEC mode",
+          "column_name": "Jordi Gel DVB 500 RP column",
+          "mobile_phase_solvents": "tetrahydrofurane\u2013water",
+          "mobile_phase_ratio": "80.98 wt-%",
+          "temperature_celsius": "25.0 \u00b0C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

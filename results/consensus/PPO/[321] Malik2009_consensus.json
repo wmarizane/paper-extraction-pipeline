@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "source_pdf": "[321] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes \"chromatographically invisible\"",
+          "critical_component": "the hydrophilic block in a mobile phase with rather high polarity",
+          "column_name": "Nucleosil 100-5 OH 5 w m, silica-based diol phase",
+          "mobile_phase_solvents": "acetone\u2013water mobile phase",
+          "mobile_phase_ratio": "78%, w/w acetone",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "Nucleosil 100-5 OH",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2009",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene oxide)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "mobile_phase_ratio": "77.93%",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "detector": "ELSD",
+        "notes": "Used to analyze block copolymers of PEG-MME 1100 with PO, BO, and HO. The EO block is at critical condition.",
+        "mobile_phase_ratio_units": "w/w acetone",
+        "critical_component": "poly(ethylene oxide)",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 1100",
+        "critical_component": "BO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "CAP for BO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55%",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for BO",
+          "critical_component": "BO block",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "84.55%, w/w THF",
+          "temperature_celsius": "25.0\u00b0C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used to analyze block copolymers containing BO. The BO block is at critical condition.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 1100",
+        "critical_component": "HO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "CAP for HO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04%",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for HO",
+          "critical_component": "HO block",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "87.04%, w/w THF",
+          "temperature_celsius": "25.0\u00b0C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used to analyze block copolymers containing HO. The HO block is at critical condition.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poly(propylene oxide)",
+        "critical_component": "poly(propylene oxide)",
+        "architecture": null,
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.42%",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes \"chromatographically invisible\"",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500 RP (100% poly-divinylbenzene)",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "92.42%, w/w acetone",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "poly(butene oxide)",
+        "architecture": null,
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55%",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes \"chromatographically invisible\"",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500A RP",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "84.55%, w/w THF",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poly(hexene oxide)",
+        "critical_component": "poly(hexene oxide)",
+        "architecture": null,
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04%",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "at the so-called critical adsorption point (CAP) entropic and enthalpic effects compensate each other, and retention becomes independent on molar mass, which means, that the corresponding block becomes \"chromatographically invisible\"",
+          "critical_component": "the hydrophobic block in a rather non-polar mobile phase",
+          "column_name": "Jordi Gel DVB 500A RP",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "87.04%, w/w THF",
+          "temperature_celsius": "25.0[\u2022] C",
+          "pore_size": "500 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

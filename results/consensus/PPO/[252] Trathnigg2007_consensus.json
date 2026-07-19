@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source_pdf": "[252] Trathnigg2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PPG exist only in THF\u2013water (at approximately 85 wt.% THF).",
+          "critical_component": "PPG",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "85 wt.% THF",
+          "temperature_celsius": "25.0[\u25e6] C",
+          "pore_size": "100 A",
+          "flow_rate": "The flow rate was 0.5 mL min[\u2212][1] in all measurements."
+        },
+        "column_name": "Prodigy ODS3",
+        "flow_rate": "0.5 mL min-1",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) in THF-water mobile phase",
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "publication_year": "2007",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polypropylene glycol (PPG)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "mobile_phase_ratio": "85 wt.% THF",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "detector": "SEDEX 45 ELSD",
+        "notes": "Critical condition identified for PPG on Prodigy ODS3 in THF-water. The text states critical conditions exist only in this mobile phase for this column.",
+        "mobile_phase_ratio_units": "wt.%",
+        "critical_component": "PPG repeat unit",
+        "temperature_celsius": "25.0",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}
