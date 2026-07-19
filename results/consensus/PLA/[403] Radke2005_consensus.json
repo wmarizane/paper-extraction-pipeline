@@ -13,50 +13,50 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Star-shaped poly(lactide)s (PLAs)",
-        "critical_component": "Linear poly(lactide)s",
-        "architecture": "Linear",
-        "critical_condition_basis": "Critical conditions determined for linear PLAs",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil",
-        "stationary_phase_chemistry": "Bare silica",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "1,4-dioxane",
-          "n-hexane"
-        ],
-        "mobile_phase_ratio": "57.1/42.9",
-        "mobile_phase_ratio_units": "v/v",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions determined for linear PLAs",
+          "critical_component": "linear PLAs",
+          "column_name": "bare silica Nucleosil columns",
+          "mobile_phase_solvents": "1,4-dioxane/n-hexane",
+          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/n-hexane)",
+          "temperature_celsius": "50 \u00b0C",
+          "pore_size": "100 \u00c5, 300 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "column_name": "bare silica Nucleosil columns",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions determined for linear PLAs",
+        "paper_doi": "10.1016/j.polymer.2005.05.028",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; tadek@bilbo.cbmm.lodz.pl",
+        "publication_year": "2005",
+        "column_dimensions": "0.46 x 20 cm and 0.46 x 25 cm",
+        "pore_size": "100 \u00c5, 300 \u00c5",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "50",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "100 A and 300 A",
-        "column_dimensions": "0.46 x 20 cm and 0.46 x 25 cm",
-        "detector": "RI, MALLS, UV, ELS",
-        "field_evidence": {
-          "critical_condition_basis": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane).",
-          "critical_component": "critical conditions determined for linear PLAs",
-          "column_name": "2 bare silica Nucleosil columns",
-          "mobile_phase_solvents": "dioxane/n-hexane mixtures",
-          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/nhexane)",
-          "temperature_celsius": "50 8C",
-          "pore_size": "100 A[˚ ] , 0.46!20 cm, 300 A[˚ ] , 0.46!25 cm",
-          "flow_rate": "0.5 ml/min"
-        },
-        "notes": "Conditions established for linear PLAs and applied to star-shaped PLAs with various functional groups.",
-        "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke; Tadeusz Biela",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; tadek@bilbo.cbmm.lodz.pl",
+        "analyte_polymer": "poly(lactide)",
         "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
-        "publication_year": "2005",
+        "corresponding_author_name": "Wolfgang Radke; Karsten Rode; Alexander V. Gorshkov; Tadeusz Biela",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "bare silica",
+        "mobile_phase_ratio": "57.1/42.9",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "detector": "UV-detector G 1314A",
+        "notes": "Conditions established for linear PLAs and applied to star-shaped PLAs with various functional groups.",
+        "mobile_phase_ratio_units": "v/v",
+        "critical_component": "linear PLAs",
+        "temperature_celsius": "50",
         "model_confidences": {
           "qwen": "explicit",
-          "mistral": "missed"
+          "mistral": "explicit"
         }
       }
     ]

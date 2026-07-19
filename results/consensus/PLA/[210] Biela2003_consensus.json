@@ -13,50 +13,50 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "linear C4H9-PLA-OH",
-        "critical_component": "linear C4H9-PLA-OH",
-        "architecture": "linear",
-        "critical_condition_basis": "elution volumes independent of molar mass",
-        "critical_condition_confidence": "explicit",
+        "field_evidence": {
+          "critical_condition_basis": "For the analysis of the PLA\u2019s LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase.",
+          "critical_component": "For the analysis of the PLA\u2019s LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase.",
+          "column_name": "two columns: Si-100 and Si-300 (Macherey-Nagel)",
+          "mobile_phase_solvents": "a mixture of 1,4-dioxane and n-hexane",
+          "mobile_phase_ratio": "56.25:43.75 vol%",
+          "temperature_celsius": "50 8C",
+          "pore_size": "average pore sizes of 100 and 300 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
         "column_name": "Si-100 and Si-300",
-        "stationary_phase_chemistry": "silica gel",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "1,4-dioxane",
-          "n-hexane"
-        ],
-        "mobile_phase_ratio": "56.25/43.75",
-        "mobile_phase_ratio_units": "vol%",
+        "flow_rate": "0.5 ml/min",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "publication_year": "2003",
+        "column_dimensions": null,
+        "pore_size": "100 and 300 A",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "50",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "100 and 300 A",
-        "column_dimensions": null,
-        "detector": "Waters 486 tunable UV detector",
-        "field_evidence": {
-          "critical_condition_basis": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 × 10³ to 7.4 × 10⁴ ... showed no dependence of the elution volumes on molar mass.",
-          "critical_component": "linear C4H9-PLA-OH's",
-          "column_name": "Si-100 and Si-300 (Macherey-Nagel)",
-          "mobile_phase_solvents": "mixture of 1,4-dioxane/n-hexane",
-          "mobile_phase_ratio": "56.25/43.75 by vol%",
-          "temperature_celsius": "50 °C",
-          "pore_size": "average pore sizes of 100 and 300 Å",
-          "flow_rate": "0.5 ml/min"
-        },
-        "notes": "Critical conditions established for linear PLA backbone to analyze star-shaped PLA end-groups.",
-        "paper_doi": "10.1016/S0032-3861(03)00030-2",
-        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
-        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "analyte_polymer": "poly(L-lactide)",
         "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
-        "publication_year": "2003",
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "critical_condition_confidence": "explicit",
+        "stationary_phase_chemistry": "silica gel",
+        "mobile_phase_ratio": "56.25/43.75",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "detector": "Waters 486 tunable UV detector operating at 235 nm",
+        "notes": "Critical conditions established for linear PLA backbone to analyze star-shaped PLA end-groups.",
+        "mobile_phase_ratio_units": "vol%",
+        "critical_component": "poly(L-lactide)",
+        "temperature_celsius": "50",
         "model_confidences": {
-          "qwen": "missed",
-          "mistral": "missed"
+          "qwen": "explicit",
+          "mistral": "explicit"
         }
       }
     ]
