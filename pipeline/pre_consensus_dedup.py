@@ -455,3 +455,105 @@ def dedup_model_conditions(conditions: List[Dict]) -> List[Dict]:
         if not matched:
             deduped.append(c)
     return deduped
+
+
+# ── Vague-row absorber ─────────────────────────────────────────────────
+# Handles the residual dupes that survive the fingerprint dedup: a row
+# phrased more vaguely (generic analyte, missing/less-precise fields) that
+# is fully covered by a strictly-more-specific row for the SAME polymer in
+# the same paper. Example: a summary "PEG / XB-phenyl / 45:55 / 30°C" row
+# shadowing the per-MW "PEG 2k", "PEG 4k", "PEG 6k" rows on that column.
+#
+# Deliberately stricter than _conditions_match: it keys on analyte
+# compatibility (same or strictly-more-generic) rather than critical
+# component, so two DIFFERENT analytes sharing one critical condition
+# (MULTIPLE ANALYTES rule) are never collapsed.
+
+_FINGERPRINT_KEYS = (
+    "stationary_phase_chemistry", "column_name", "mobile_phase_solvents",
+    "mobile_phase_ratio", "temperature_celsius", "critical_component",
+)
+
+_FIELD_MATCHERS = {
+    "stationary_phase_chemistry": _spc_match,
+    "column_name": _col_match,
+    "mobile_phase_solvents": _solv_match,
+    "mobile_phase_ratio": _ratio_match,
+    "temperature_celsius": _temp_match,
+    "critical_component": _cc_match,
+}
+
+
+def _nonempty_signals(c: Dict) -> int:
+    """Count populated fingerprint fields."""
+    return sum(1 for k in _FINGERPRINT_KEYS if _norm(c.get(k)))
+
+
+def _vague_fields_covered(v: Dict, s: Dict) -> bool:
+    """Every populated fingerprint field of v matches s (empty v field is a
+    wildcard). Uses the same tolerant matchers as the fingerprint."""
+    for k in _FINGERPRINT_KEYS:
+        if _norm(v.get(k)) and not _FIELD_MATCHERS[k](v.get(k), s.get(k)):
+            return False
+    return True
+
+
+def _analyte_generic_or_equal(v: Dict, s: Dict) -> bool:
+    """True when v's analyte is the same as, or a strictly-more-generic form
+    of, s's analyte. Requires the analyte guard to pass first, so it never
+    bridges MW / end-group / architecture / block-distinct records."""
+    if not _analyte_guard_ok(v, s):
+        return False
+    a, b = _norm(v.get("analyte_polymer")), _norm(s.get("analyte_polymer"))
+    if not a or a == b:
+        return True
+    if _cc_match(a, b):  # same polymer family
+        av, bv = _alnum(a), _alnum(b)
+        if av and bv and av in bv and av != bv:
+            return True  # 'peg' ⊂ 'peg2k'
+        if ConsensusJudge._is_abbreviation(a, b):
+            return True
+    return False
+
+
+def _is_strictly_more_specific(s: Dict, v: Dict) -> bool:
+    """s is strictly more informative than v: it populates every fingerprint
+    field v does (never drops v's unique info) AND either has more populated
+    fields, or an equal field set with a strictly-more-specific analyte."""
+    if not all(_norm(s.get(k)) for k in _FINGERPRINT_KEYS if _norm(v.get(k))):
+        return False
+    ns, nv = _nonempty_signals(s), _nonempty_signals(v)
+    if ns > nv:
+        return True
+    if ns == nv:
+        a, b = _alnum(_norm(v.get("analyte_polymer"))), _alnum(_norm(s.get("analyte_polymer")))
+        if a and b and a != b and a in b:
+            return True
+    return False
+
+
+def absorb_vague_conditions(conditions: List[Dict]) -> List[Dict]:
+    """Drop a condition when a strictly-more-specific condition in the same
+    list covers it on every populated fingerprint field and refers to the
+    same (or a more specific) analyte.
+
+    Conservative by design — respects the analyte guard, requires the
+    absorbing row to retain all of the dropped row's information, and never
+    collapses two rows that carry mutually-unique fields. Intended to run
+    AFTER dedup_model_conditions / the judge, on the final condition set.
+    """
+    if not conditions:
+        return []
+    keep = [True] * len(conditions)
+    for i, v in enumerate(conditions):
+        if not isinstance(v, dict) or not keep[i]:
+            continue
+        for j, s in enumerate(conditions):
+            if i == j or not keep[j] or not isinstance(s, dict):
+                continue
+            if (_vague_fields_covered(v, s)
+                    and _analyte_generic_or_equal(v, s)
+                    and _is_strictly_more_specific(s, v)):
+                keep[i] = False
+                break
+    return [c for c, k in zip(conditions, keep) if k]

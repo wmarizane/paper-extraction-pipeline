@@ -11,7 +11,7 @@ import unicodedata
 from datetime import datetime
 from pathlib import Path
 from pipeline.consensus_judge import ConsensusJudge
-from pipeline.pre_consensus_dedup import dedup_model_conditions
+from pipeline.pre_consensus_dedup import dedup_model_conditions, absorb_vague_conditions
 from pipeline.telemetry import PaperTelemetry, TelemetryWriter
 
 def load_json(path: Path) -> list:
@@ -140,6 +140,14 @@ def main():
                     tel.record_llm_call(call_type="retry", input_tokens=0, output_tokens=0, duration_s=0.0, success=True)
                 
                 final_conds = final_data.get("final_consensus", {}).get("extracted_conditions", [])
+
+                # Absorb residual vague rows (generic analyte / less-precise
+                # fields) that a strictly-more-specific same-paper row covers.
+                absorb_before = len(final_conds)
+                final_conds = absorb_vague_conditions(final_conds)
+                if len(final_conds) != absorb_before:
+                    print(f"  Vague-row absorb: {absorb_before}->{len(final_conds)}")
+
                 print(f"✅ Consensus reached: {len(final_conds)} merged conditions.")
                 
                 tel.finish(conditions_extracted=len(final_conds), success=True)
