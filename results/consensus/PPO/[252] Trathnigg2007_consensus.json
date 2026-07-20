@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:10:54.749017+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[252] Trathnigg2007_latest.json",
+        "results/mistral-small-24b/PPO/[252] Trathnigg2007_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 1
@@ -23,37 +62,37 @@
           "pore_size": "100 A",
           "flow_rate": "The flow rate was 0.5 mL min[\u2212][1] in all measurements."
         },
-        "column_name": "Prodigy ODS3",
-        "flow_rate": "0.5 mL min-1",
-        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) in THF-water mobile phase",
-        "paper_doi": "10.1016/j.aca.2007.06.043",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Critical condition identified for PPG on Prodigy ODS3 in THF-water. The text states critical conditions exist only in this mobile phase for this column.",
+        "architecture": "linear",
+        "critical_component": "PPG repeat unit",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2007",
-        "column_dimensions": "250 mm \u00d7 4.6 mm",
         "pore_size": "100 A",
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "mobile_phase_ratio": "85 wt.% THF",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "Polypropylene glycol (PPG)",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "Silica-based octadecyl phase",
-        "mobile_phase_ratio": "85 wt.% THF",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "Water"
-        ],
-        "detector": "SEDEX 45 ELSD",
-        "notes": "Critical condition identified for PPG on Prodigy ODS3 in THF-water. The text states critical conditions exist only in this mobile phase for this column.",
-        "mobile_phase_ratio_units": "wt.%",
-        "critical_component": "PPG repeat unit",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "SEDEX 45 ELSD",
+        "column_name": "Prodigy ODS3",
+        "analyte_polymer": "Polypropylene glycol (PPG)",
+        "corresponding_author_name": "Bernd Trathnigg",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

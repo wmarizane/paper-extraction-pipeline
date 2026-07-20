@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:36:17.852393+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[90] Dudorina1995_latest.json",
+        "results/mistral-small-24b/PPO/[90] Dudorina1995_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -23,37 +62,37 @@
           "pore_size": null,
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Lichrospere Si-300",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "Linear",
         "critical_condition_basis": "Critical composition of the binary eluent",
-        "paper_doi": null,
-        "corresponding_email_address": null,
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
+        "mobile_phase_ratio_units": "vol. %",
+        "mobile_phase_solvents": [
+          "CCl4",
+          "CHCl3"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Used in isocratic separation where PS is in critical mode and PPO is in exclusion mode.",
+        "architecture": "Linear",
+        "critical_component": "polystyrene",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1995",
-        "column_dimensions": null,
         "pore_size": null,
+        "paper_doi": null,
+        "mobile_phase_ratio": "94.65:5.35",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polystyrene",
-        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
-        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica",
-        "mobile_phase_ratio": "94.65:5.35",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "CCl4",
-          "CHCl3"
-        ],
-        "detector": "UV (270 nm)",
-        "notes": "Used in isocratic separation where PS is in critical mode and PPO is in exclusion mode.",
-        "mobile_phase_ratio_units": "vol. %",
-        "critical_component": "polystyrene",
+        "corresponding_email_address": null,
         "temperature_celsius": "30",
+        "column_dimensions": null,
+        "flow_rate": "0.5 ml/min",
+        "detector": "UV (270 nm)",
+        "column_name": "Lichrospere Si-300",
+        "analyte_polymer": "polystyrene",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -70,37 +109,37 @@
           "pore_size": null,
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Lichrospere Si-300",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "Linear",
         "critical_condition_basis": "Critical composition of the binary eluent",
-        "paper_doi": null,
-        "corresponding_email_address": null,
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
+        "mobile_phase_ratio_units": "vol. %",
+        "mobile_phase_solvents": [
+          "CCl4",
+          "CHCl3"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Used in isocratic separation where PPO is in critical mode and PS is in exclusion mode.",
+        "architecture": "Linear",
+        "critical_component": "polyphenylene oxide",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1995",
-        "column_dimensions": null,
         "pore_size": null,
+        "paper_doi": null,
+        "mobile_phase_ratio": "29:71",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polyphenylene oxide",
-        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
-        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica",
-        "mobile_phase_ratio": "29:71",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "CCl4",
-          "CHCl3"
-        ],
-        "detector": "UV (270 nm)",
-        "notes": "Used in isocratic separation where PPO is in critical mode and PS is in exclusion mode.",
-        "mobile_phase_ratio_units": "vol. %",
-        "critical_component": "polyphenylene oxide",
+        "corresponding_email_address": null,
         "temperature_celsius": "30",
+        "column_dimensions": null,
+        "flow_rate": "0.5 ml/min",
+        "detector": "UV (270 nm)",
+        "column_name": "Lichrospere Si-300",
+        "analyte_polymer": "polyphenylene oxide",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

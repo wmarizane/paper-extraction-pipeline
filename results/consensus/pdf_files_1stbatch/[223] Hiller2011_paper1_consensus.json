@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:56:26.427849+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_1stbatch/[223] Hiller2011_paper1_latest.json",
+        "results/mistral-small-24b/pdf_files_1stbatch/[223] Hiller2011_paper1_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -34,7 +73,7 @@
           "salt_concentration": null
         },
         "temperature_celsius": "29",
-        "flow_rate": "0.5 mL min-1",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
         "pore_size": "100-5, 300-5, 1000-7",
         "column_dimensions": "250 x 4.6 mm i.d.",
         "detector": "1H NMR",
@@ -46,13 +85,13 @@
           "mobile_phase_ratio": "92/8 vol %",
           "temperature_celsius": "29 C",
           "pore_size": "100-5, 300-5, and 1000-7",
-          "flow_rate": "0.5 mL min-1"
+          "flow_rate": "0.5 mL min\u207b\u00b9"
         },
         "notes": "The text states that 1,4-PI samples elute at the same retention volume irrespective of molar mass under these conditions. The samples are copolymers containing predominantly 1,4- and 3,4-isoprene units, but the critical condition is established for the 1,4-isoprene moiety.",
         "paper_doi": "10.1021/ma102750s",
-        "corresponding_author_name": "Wolf Hiller; Harald Pasch; Thorsten Hofe",
+        "corresponding_author_name": "Wolf Hiller",
         "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
-        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany; Department of Chemistry and Polymer Science, University of Stellenbosch, Private Bag X1, 7602 Matieland, South Africa; PSS Polymer Standards Service GmbH, In der Dalheimer Wiese 5, 55120 Mainz, Germany",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
         "publication_year": "2011",
         "model_confidences": {
           "qwen": "explicit",
@@ -95,7 +134,7 @@
           "pore_size": null,
           "flow_rate": "0.5 mL min[-][1]"
         },
-        "notes": "The text states that 1,4-PI samples elute at the same retention volume irrespective of molar mass under these conditions. The samples are copolymers containing predominantly 1,4- and 3,4-isoprene units, but the critical condition is established for the 1,4-isoprene moiety.",
+        "notes": null,
         "paper_doi": "10.1021/ma102750s",
         "corresponding_author_name": "Wolf Hiller; Harald Pasch; Thorsten Hofe",
         "corresponding_email_address": null,

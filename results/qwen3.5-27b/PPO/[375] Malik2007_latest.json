@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[375] Malik2007.pdf",
-    "extraction_date": "2026-07-01T17:51:52.973448",
+    "extraction_date": "2026-07-19T17:27:07.995174",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T17:27:07.982776+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[375] Malik2007.md",
+        "sha256": "4b64739ab07557b4295d6e55472bbea4b6f23fbd6a936f367af5f94309b61ff3",
+        "char_len": 48572,
+        "token_count": 13718
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[375] Malik2007.pdf",
-      "start_time": "2026-07-01T17:16:21.941461",
+      "start_time": "2026-07-19T16:51:57.183721",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.87398910522461,
+          "time_seconds": 65.11461973190308,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.22763824462890625,
+          "time_seconds": 0.12614035606384277,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13718
         },
         "llm_extraction": {
-          "time_seconds": 2070.8979840278625,
+          "time_seconds": 2045.4968059062958,
           "success": false
         }
       },
@@ -45,7 +87,7 @@
       "section": "Full Paper",
       "token_count": 13718,
       "extraction_success": false,
-      "processing_time": 690.4557282924652,
+      "processing_time": 682.3122224807739,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PPG diols\",\n      \"critical_component\": \"PO unit\",\n      \"architecture\": \"linear\",\n      \"critical_condition_basis\": \"critical conditions for the PO unit\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"column_name\": \"Discovery"
     }
   ]

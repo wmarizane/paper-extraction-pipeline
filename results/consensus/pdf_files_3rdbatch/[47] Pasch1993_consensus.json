@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:47:44.954468+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_3rdbatch/[47] Pasch1993_latest.json",
+        "results/mistral-small-24b/pdf_files_3rdbatch/[47] Pasch1993_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -23,37 +62,37 @@
           "pore_size": "100 \u00c5",
           "flow_rate": "flow rate of 0.5 ml min^-1"
         },
-        "column_name": "Macherey-Nagel Nucleosil Si-100",
-        "flow_rate": "0.5 ml min^-1",
-        "architecture": "diblock",
         "critical_condition_basis": "critical point of adsorption for poly(methyl methacrylate)",
-        "paper_doi": null,
-        "corresponding_email_address": null,
+        "stationary_phase_chemistry": "silica gel",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
+        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Analysis of PS block in block copolymer while PMMA block is at critical point.",
+        "architecture": "diblock",
+        "critical_component": "poly(methyl methacrylate)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1993",
-        "column_dimensions": "200 x 4 mm",
         "pore_size": "100 \u00c5",
+        "paper_doi": null,
+        "mobile_phase_ratio": "73:27",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
-        "corresponding_author_name": "H. Pasch; C. Brinkmann",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_ratio": "73:27",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "methyl ethyl ketone",
-          "cyclohexane"
-        ],
-        "detector": "Waters differential RI detector R401",
-        "notes": "Analysis of PS block in block copolymer while PMMA block is at critical point.",
-        "mobile_phase_ratio_units": "vol%",
-        "critical_component": "poly(methyl methacrylate)",
+        "corresponding_email_address": null,
         "temperature_celsius": null,
+        "column_dimensions": "200 x 4 mm",
+        "flow_rate": "0.5 ml min^-1",
+        "detector": "Waters differential RI detector R401",
+        "column_name": "Macherey-Nagel Nucleosil Si-100",
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "corresponding_author_name": "H. Pasch; C. Brinkmann",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -70,37 +109,37 @@
           "pore_size": "Si-300 and Si-1000",
           "flow_rate": "flow rate of 0.5 ml min^-1"
         },
-        "column_name": "Merck LiChrospher Si-1000",
-        "flow_rate": "0.5 ml min^-1",
-        "architecture": "diblock",
         "critical_condition_basis": "critical point of adsorption for poly(methyl methacrylate)",
-        "paper_doi": null,
-        "corresponding_email_address": null,
+        "stationary_phase_chemistry": "silica gel",
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
+        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_solvents": [
+          "methyl ethyl ketone",
+          "cyclohexane"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Two-column system used for higher molar mass samples; UV detection at 280 nm used for selective PS detection.",
+        "architecture": "diblock",
+        "critical_component": "poly(methyl methacrylate)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1993",
-        "column_dimensions": "200 x 4 mm",
         "pore_size": "300 A and 1000 A",
+        "paper_doi": null,
+        "mobile_phase_ratio": "70:30",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 6100 Darmstadt, Germany; Institute Charles Sadron, 6 rue Boussingault, 67083 Strasbourg Cedex, France",
-        "corresponding_author_name": "H. Pasch; C. Brinkmann",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_ratio": "70:30",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "methyl ethyl ketone",
-          "cyclohexane"
-        ],
-        "detector": "Waters differential RI detector R401",
-        "notes": "Two-column system used for higher molar mass samples; UV detection at 280 nm used for selective PS detection.",
-        "mobile_phase_ratio_units": "vol%",
-        "critical_component": "poly(methyl methacrylate)",
+        "corresponding_email_address": null,
         "temperature_celsius": null,
+        "column_dimensions": "200 x 4 mm",
+        "flow_rate": "0.5 ml min^-1",
+        "detector": "Waters differential RI detector R401",
+        "column_name": "Merck LiChrospher Si-1000",
+        "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
+        "corresponding_author_name": "H. Pasch; C. Brinkmann",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

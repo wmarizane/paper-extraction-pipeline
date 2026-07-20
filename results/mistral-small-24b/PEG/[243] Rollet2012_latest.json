@@ -1,26 +1,67 @@
 {
   "metadata": {
     "source_pdf": "[243] Rollet2012.pdf",
-    "extraction_date": "2026-07-01T23:03:08.047825",
+    "extraction_date": "2026-07-19T13:10:27.238252",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:10:27.226822+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[243] Rollet2012.md",
+        "sha256": "dfb4841dd56cdf941be8b4da81801a1db20f5e38151b86fcacad96c521dba81b",
+        "char_len": 39615,
+        "token_count": 11347
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[243] Rollet2012.pdf",
-      "start_time": "2026-07-01T23:01:23.350852",
+      "start_time": "2026-07-19T13:08:44.078065",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.56557846069336,
+          "time_seconds": 25.039973735809326,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10368037223815918,
+          "time_seconds": 0.10017848014831543,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11347
         },
         "llm_extraction": {
-          "time_seconds": 77.98677086830139,
+          "time_seconds": 77.9618570804596,
           "success": true
         }
       },
@@ -178,7 +219,7 @@
       "section": "Full Paper",
       "token_count": 11347,
       "extraction_success": true,
-      "processing_time": 77.86991310119629,
+      "processing_time": 77.85329723358154,
       "extracted_count": 3
     }
   ]

@@ -1,26 +1,67 @@
 {
   "metadata": {
     "source_pdf": "[347] Abrar2011.pdf",
-    "extraction_date": "2026-07-02T00:07:04.549367",
+    "extraction_date": "2026-07-19T14:15:30.582156",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:15:30.569832+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[347] Abrar2011.md",
+        "sha256": "bfb520a91dc7b2c686aaf423ba2c9b3caf62dd60015ce1d88c8f7ac8ece30d38",
+        "char_len": 314552,
+        "token_count": 85343
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[347] Abrar2011.pdf",
-      "start_time": "2026-07-01T23:55:18.087058",
+      "start_time": "2026-07-19T14:03:34.359220",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 198.5766739845276,
+          "time_seconds": 209.7504894733429,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.6549727916717529,
+          "time_seconds": 0.6526055335998535,
           "success": true,
           "num_chunks": 4,
           "total_tokens": 85343
         },
         "llm_extraction": {
-          "time_seconds": 507.18872475624084,
+          "time_seconds": 505.76212906837463,
           "success": false
         }
       },
@@ -45,7 +86,7 @@
       "section": "Part 1",
       "token_count": 24989,
       "extraction_success": false,
-      "processing_time": 150.5017614364624,
+      "processing_time": 150.02991366386414,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[\n{\"analyte_polymer\":\"PEG\",\"critical_component\":\"EO\",\"architecture\":\"linear\",\"critical_condition_basis\":\"critical adsorption point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Synergi MAX RP\",\"stationary_phase_chemistry\":\"C18\",\"column_mode\":\"Reversed Phase\",\"mob"
     },
     {
@@ -53,7 +94,7 @@
       "section": "Part 2",
       "token_count": 24694,
       "extraction_success": false,
-      "processing_time": 150.5017614364624,
+      "processing_time": 150.02991366386414,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[\n{\"analyte_polymer\":\"polyoxyethylene macromonomers\",\n\"critical_component\":\"polyoxyethylene\",\n\"architecture\":\"linear\",\n\"critical_condition_basis\":\"LCCC\",\n\"critical_condition_confidence\":\"explicit\",\n\"column_name\":\"Synergi 4µ MAX-RP 80A\",\n\"stationary_phase_chemistry\":\"octadecyl"
     },
     {
@@ -61,7 +102,7 @@
       "section": "Part 3",
       "token_count": 23696,
       "extraction_success": false,
-      "processing_time": 150.5017614364624,
+      "processing_time": 150.02991366386414,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[\n{\"analyte_polymer\":\"PEG\",\n\"critical_component\":\"PEG\",\n\"architecture\":\"linear\",\n\"critical_condition_basis\":\"Liquid Chromatography at Critical Conditions (LCCC)\",\n\"critical_condition_confidence\":\"explicit\",\n\"column_name\":\"Onyx C18\",\n\"stationary_phase_chemistry\":\"silica-based "
     },
     {
@@ -69,7 +110,7 @@
       "section": "Part 4",
       "token_count": 11964,
       "extraction_success": false,
-      "processing_time": 150.5017614364624,
+      "processing_time": 150.02991366386414,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"Polysorbate 40\",\"critical_component\":\"PEG\",\"architecture\":\"null\",\"critical_condition_basis\":\"Liquid chromatography at critical conditions (LCCC)\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"C18\",\"c"
     }
   ]

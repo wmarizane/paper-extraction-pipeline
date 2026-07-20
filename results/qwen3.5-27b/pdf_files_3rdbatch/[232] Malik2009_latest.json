@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[232] Malik2009.pdf",
-    "extraction_date": "2026-07-01T00:10:22.483263",
+    "extraction_date": "2026-07-19T14:48:29.683264",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:48:29.671095+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[232] Malik2009.md",
+        "sha256": "3277c4482607584485058cffdde5e051ede1714547b7f22ba3729071ea8d1da1",
+        "char_len": 27967,
+        "token_count": 8013
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[232] Malik2009.pdf",
-      "start_time": "2026-06-30T23:35:58.377186",
+      "start_time": "2026-07-19T14:14:18.233386",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 10.150397062301636,
+          "time_seconds": 8.896767139434814,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13971233367919922,
+          "time_seconds": 0.10936832427978516,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8013
         },
         "llm_extraction": {
-          "time_seconds": 2053.7801525592804,
+          "time_seconds": 2042.3793413639069,
           "success": false
         }
       },
@@ -45,7 +87,7 @@
       "section": "Full Paper",
       "token_count": 8013,
       "extraction_success": false,
-      "processing_time": 684.5172572135925,
+      "processing_time": 680.7590208053589,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEG\",\n      \"critical_component\": \"ethylene oxide (EO)\",\n      \"architecture\": \"linear\",\n      \"critical_condition_basis\": \"critical adsorption point (CAP) for ethylene oxide (EO)\",\n      \"critical_condition_confidence\": \"explicit\",\n     "
     }
   ]

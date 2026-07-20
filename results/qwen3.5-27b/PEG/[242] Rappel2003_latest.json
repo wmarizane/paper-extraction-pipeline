@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[242] Rappel2003.pdf",
-    "extraction_date": "2026-07-01T01:54:05.474158",
+    "extraction_date": "2026-07-19T15:13:02.240980",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:13:02.228476+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[242] Rappel2003.md",
+        "sha256": "100e310db600e90573f8dac9ac45fd0e0fb21e4509f14a6fa37b5f22e72b0a3b",
+        "char_len": 43298,
+        "token_count": 11920
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[242] Rappel2003.pdf",
-      "start_time": "2026-07-01T01:18:43.613056",
+      "start_time": "2026-07-19T14:37:56.521449",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 55.98279094696045,
+          "time_seconds": 54.8869354724884,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10766363143920898,
+          "time_seconds": 0.11131501197814941,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11920
         },
         "llm_extraction": {
-          "time_seconds": 2065.7383148670197,
+          "time_seconds": 2050.6740860939026,
           "success": false
         }
       },
@@ -45,7 +87,7 @@
       "section": "Full Paper",
       "token_count": 11920,
       "extraction_success": false,
-      "processing_time": 688.7687122821808,
+      "processing_time": 684.0656940937042,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"Polyethylene glycol (PEG)\",\n      \"critical_component\": \"Polyoxyethylene (EO) unit\",\n      \"architecture\": \"Linear homopolymer\",\n      \"critical_condition_basis\": \"Critical interaction point (CIP) where elution volume is independent of mo"
     }
   ]

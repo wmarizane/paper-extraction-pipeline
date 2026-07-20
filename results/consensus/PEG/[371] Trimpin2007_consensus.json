@@ -5,10 +5,49 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:43:40.714056+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[371] Trimpin2007_latest.json",
+        "results/mistral-small-24b/PEG/[371] Trimpin2007_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 4
   },
   "extracted_data": {
     "conditions": [
@@ -19,41 +58,182 @@
           "column_name": "2 X YMC RP 18",
           "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
           "mobile_phase_ratio": "83/17 (v/v)",
-          "temperature_celsius": "45 \u00b0C",
+          "temperature_celsius": "45 \u00b0 C",
           "pore_size": "300 \u00c5",
-          "flow_rate": "0.5 mL min\u207b\u00b9"
+          "flow_rate": "0.5 mL min-1"
         },
-        "column_name": "YMC RP 18",
-        "flow_rate": "0.5 mL min\u207b\u00b9",
-        "architecture": "linear",
         "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
-        "paper_doi": "10.1021/ac070986w",
-        "corresponding_email_address": "strimpin@indiana.edu",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "The text describes the separation of PEO mixtures with different end groups using LACCC. The column dimensions (2 x 150 mm) suggest a semi-preparative setup used for fractionation, but the text explicitly states the method is 'liquid adsorption chromatography at critical conditions' and the purpose is to separate components differing by end groups, which is the definition of LACCC analysis. The rejection rule for fractionation is nuanced here; the text states 'Off-line fractionation is performed prior to the on-target homogenization...'. However, the LACCC run itself is the analytical method establishing the critical condition for the PEO backbone to separate end groups. The setup is used to demonstrate the critical condition separation capability. Given the explicit mention of LACCC and the separation of end groups (the hallmark of LACCC), this is extracted as an LCCC setup.",
+        "architecture": "linear",
+        "critical_component": "PEO backbone",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2007",
-        "column_dimensions": "150 mm",
         "pore_size": "300 \u00c5",
+        "paper_doi": "10.1021/ac070986w",
+        "mobile_phase_ratio": "83/17",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "PEO",
-        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "temperature_celsius": "45",
+        "column_dimensions": "2 x 150 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "ELSD, SEDEX 45",
+        "column_name": "YMC RP 18",
+        "analyte_polymer": "PEO 4250",
         "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
-        "critical_condition_confidence": "explicit",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at critical conditions",
+          "critical_component": "PEO",
+          "column_name": "2 X YMC RP 18 (150, 300 \u00c5)",
+          "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
+          "mobile_phase_ratio": "83/17",
+          "temperature_celsius": "45 \u00b0 C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
         "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "83/17",
-        "column_mode": "Reversed Phase",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "mobile_phase_ratio_units": "v/v",
         "mobile_phase_solvents": [
           "methanol",
           "water"
         ],
-        "detector": "ELSD, SEDEX 45",
-        "notes": "The text describes the separation of PEO mixtures with different end groups using LACCC. The setup is used for fractionation, but the conditions are explicitly identified as critical conditions for the PEO backbone to separate by end group independent of molar mass.",
-        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "notes": "Separate entry for dimethoxy-PEO 500 as per multiple analytes rule. Same critical condition setup as PEO 4250.",
+        "architecture": "linear",
         "critical_component": "PEO backbone",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": "300 \u00c5",
+        "paper_doi": "10.1021/ac070986w",
+        "mobile_phase_ratio": "83/17",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "strimpin@indiana.edu",
         "temperature_celsius": "45",
+        "column_dimensions": "2 x 150 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "ELSD, SEDEX 45",
+        "column_name": "YMC RP 18",
+        "analyte_polymer": "dimethoxy-PEO 500",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at critical conditions",
+          "critical_component": "PEO",
+          "column_name": "2 X YMC RP 18 (150, 300 \u00c5)",
+          "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
+          "mobile_phase_ratio": "83/17",
+          "temperature_celsius": "45 \u00b0 C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Separate entry for monomethoxy-monomethacrylate-PEO 1000 as per multiple analytes rule. Same critical condition setup.",
+        "architecture": "linear",
+        "critical_component": "PEO backbone",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": "300 \u00c5",
+        "paper_doi": "10.1021/ac070986w",
+        "mobile_phase_ratio": "83/17",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "temperature_celsius": "45",
+        "column_dimensions": "2 x 150 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "ELSD, SEDEX 45",
+        "column_name": "YMC RP 18",
+        "analyte_polymer": "monomethoxy-monomethacrylate-PEO 1000",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at critical conditions",
+          "critical_component": "PEO",
+          "column_name": "2 X YMC RP 18 (150, 300 \u00c5)",
+          "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
+          "mobile_phase_ratio": "83/17",
+          "temperature_celsius": "45 \u00b0 C",
+          "pore_size": "300 \u00c5",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Separate entry for PEO 6000 as per multiple analytes rule. Same critical condition setup.",
+        "architecture": "linear",
+        "critical_component": "PEO backbone",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": "300 \u00c5",
+        "paper_doi": "10.1021/ac070986w",
+        "mobile_phase_ratio": "83/17",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "temperature_celsius": "45",
+        "column_dimensions": "2 x 150 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "ELSD, SEDEX 45",
+        "column_name": "YMC RP 18",
+        "analyte_polymer": "PEO 6000",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

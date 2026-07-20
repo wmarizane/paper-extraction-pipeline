@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:31:38.807889+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[364] Trathnigg2006_latest.json",
+        "results/mistral-small-24b/PEG/[364] Trathnigg2006_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 4
@@ -19,41 +58,41 @@
           "column_name": "Jordi Gel DVB 500 RP",
           "mobile_phase_solvents": "acetone \u2013 water",
           "mobile_phase_ratio": "91.73 wt-%",
-          "temperature_celsius": "25.08\u00b0C",
-          "pore_size": "500 \u00c5",
+          "temperature_celsius": "25.08C",
+          "pore_size": "500 A",
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Jordi Gel DVB 500 RP",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "EO-PO diblock",
         "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
-        "paper_doi": "10.1002/masy.200650503",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St.Petersburg, Russia",
+        "mobile_phase_ratio_units": "wt-%",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for short PO blocks.",
+        "architecture": "EO-PO diblock",
+        "critical_component": "EO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2006",
-        "column_dimensions": "250 \u00d7 4.6 mm",
-        "pore_size": "500 \u00c5",
+        "pore_size": "500 A",
+        "paper_doi": "10.1002/masy.200650503",
+        "mobile_phase_ratio": "91.73",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "EO-PO block copolymers",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St.Petersburg, Russia",
-        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "poly(divinylbenzene)",
-        "mobile_phase_ratio": "91.73",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "detector": "RI",
-        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for short PO blocks.",
-        "mobile_phase_ratio_units": "wt-%",
-        "critical_component": "EO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "250 x 4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "RI",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "analyte_polymer": "EO-PO block copolymers",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -66,41 +105,41 @@
           "column_name": "Novapak C18",
           "mobile_phase_solvents": "methanol-water",
           "mobile_phase_ratio": "80 wt-%",
-          "temperature_celsius": "25.08\u00b0C",
-          "pore_size": "60 \u00c5",
+          "temperature_celsius": "25.08C",
+          "pore_size": "60 A",
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Novapak C18",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "triblock",
         "critical_condition_basis": "Critical Adsorption Point (CAP) for EO",
-        "paper_doi": "10.1002/masy.200650503",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "octadecyl",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "wt-%",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for longer PO blocks where baseline separation of oligomers is achieved.",
+        "architecture": "triblock",
+        "critical_component": "EO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2006",
-        "column_dimensions": "300 \u00d7 3.9 mm",
-        "pore_size": "60 \u00c5",
+        "pore_size": "60 A",
+        "paper_doi": "10.1002/masy.200650503",
+        "mobile_phase_ratio": "80 wt-% methanol",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "EO-PO block copolymers",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "octadecyl",
-        "mobile_phase_ratio": "80 wt-% methanol",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "detector": "ELSD",
-        "notes": "Situation 1: CAP for EO, PO elutes in LAC mode. Used for longer PO blocks where baseline separation of oligomers is achieved.",
-        "mobile_phase_ratio_units": "wt-%",
-        "critical_component": "EO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "300 x 3.9 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "ELSD",
+        "column_name": "Novapak C18",
+        "analyte_polymer": "EO-PO block copolymers",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

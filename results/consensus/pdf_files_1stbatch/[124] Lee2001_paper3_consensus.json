@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:55:25.333067+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_1stbatch/[124] Lee2001_paper3_latest.json",
+        "results/mistral-small-24b/pdf_files_1stbatch/[124] Lee2001_paper3_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 3
@@ -23,37 +62,37 @@
           "pore_size": "100-\u00c5 pore size",
           "flow_rate": null
         },
-        "column_name": "LUNA C18",
-        "flow_rate": null,
-        "architecture": "diblock",
-        "critical_condition_basis": "The characterization by HPLC at the critical condition of PEO block",
-        "paper_doi": "10.1021/ac001219z",
-        "corresponding_email_address": "tc@postech.ac.kr",
+        "critical_condition_basis": "critical condition of PEO block",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Condition established for diblock copolymer analysis.",
+        "architecture": "triblock",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2001",
-        "column_dimensions": "250 \u00d7 4.6 mm",
         "pore_size": "100-\u00c5",
+        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio": "60/40",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "PEO-b-PLLA",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "corresponding_author_name": "Taihyun Chang",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "60/40",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "detector": "refractive index detector; UV-visible absorption detector",
-        "notes": "Condition established for diblock copolymer analysis.",
-        "mobile_phase_ratio_units": "v/v",
-        "critical_component": "PEO",
+        "corresponding_email_address": "tc@postech.ac.kr",
         "temperature_celsius": "68",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -70,37 +109,37 @@
           "pore_size": "100-\u00c5 pore size",
           "flow_rate": null
         },
-        "column_name": "LUNA C18",
-        "flow_rate": null,
+        "critical_condition_basis": "critical condition of PEO block",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "First condition used for triblock copolymer analysis (Figure 3).",
         "architecture": "triblock",
-        "critical_condition_basis": "The characterization by HPLC at the critical condition of PEO block",
-        "paper_doi": "10.1021/ac001219z",
-        "corresponding_email_address": "tc@postech.ac.kr",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2001",
-        "column_dimensions": "250 \u00d7 4.6 mm",
         "pore_size": "100-\u00c5",
+        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio": "47:53",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "corresponding_author_name": "Taihyun Chang",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "47:53",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "detector": "refractive index detector; UV-visible absorption detector",
-        "notes": "First condition used for triblock copolymer analysis (Figure 3).",
-        "mobile_phase_ratio_units": "v/v",
-        "critical_component": "PEO",
+        "corresponding_email_address": "tc@postech.ac.kr",
         "temperature_celsius": "37",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -117,37 +156,37 @@
           "pore_size": "100-\u00c5 pore size",
           "flow_rate": null
         },
-        "column_name": "LUNA C18",
-        "flow_rate": null,
+        "critical_condition_basis": "critical condition of PEO block",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Second condition used for triblock copolymer analysis with longer PLLA blocks (Figure 5).",
         "architecture": "triblock",
-        "critical_condition_basis": "The characterization by HPLC at the critical condition of PEO block",
-        "paper_doi": "10.1021/ac001219z",
-        "corresponding_email_address": "tc@postech.ac.kr",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2001",
-        "column_dimensions": "250 \u00d7 4.6 mm",
         "pore_size": "100-\u00c5",
+        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio": "54:46",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "corresponding_author_name": "Taihyun Chang",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "54:46",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "detector": "refractive index detector; UV-visible absorption detector",
-        "notes": "Second condition used for triblock copolymer analysis with longer PLLA blocks (Figure 5).",
-        "mobile_phase_ratio_units": "v/v",
-        "critical_component": "PEO",
+        "corresponding_email_address": "tc@postech.ac.kr",
         "temperature_celsius": "54",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

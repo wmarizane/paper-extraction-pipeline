@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:01:32.600795+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[128] Gorshkov1986_latest.json",
+        "results/mistral-small-24b/PPO/[128] Gorshkov1986_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 1
@@ -18,42 +57,42 @@
           "critical_component": "Poly(oxypropylenpolyol)",
           "column_name": "LiChrosorb SI 100",
           "mobile_phase_solvents": "Methylethylketon/ Ethylacetat",
-          "mobile_phase_ratio": "5/95 (4)",
+          "mobile_phase_ratio": "5/95",
           "temperature_celsius": "30\u00b0C",
           "pore_size": "mittleren Korngr\u00f6Be von 10 ym",
           "flow_rate": "null"
         },
-        "column_name": "LiChrosorb Si 100",
-        "flow_rate": "null",
-        "architecture": "linear",
         "critical_condition_basis": "Elution volume independent of molar mass",
-        "paper_doi": "null",
-        "corresponding_email_address": "null",
+        "stationary_phase_chemistry": "Silica",
+        "physical_address": "null",
+        "mobile_phase_ratio_units": "Vol-%",
+        "mobile_phase_solvents": [
+          "Methylethylketon",
+          "Ethylacetat"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Critical conditions determined by stepwise addition of Ethylacetat to Methylethylketon. The text lists ratios 20/80, 10/90, 7/93, 5/95, 0/100. The 5/95 ratio is the specific composition closest to the critical point where independence from molar mass is achieved for the standards used.",
+        "architecture": "linear",
+        "critical_component": "Poly(propylenglykol)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1986",
-        "column_dimensions": "250 mm x 4.6 mm",
         "pore_size": "10",
+        "paper_doi": "null",
+        "mobile_phase_ratio": "5/95",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "Poly(oxypropylenpolyol)",
-        "physical_address": "null",
-        "corresponding_author_name": "A. V. Gor\u0161kov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "Silica",
-        "mobile_phase_ratio": "5/95",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "Methylethylketon",
-          "Ethylacetat"
-        ],
-        "detector": "RIDK 101",
-        "notes": "Critical conditions determined by stepwise addition of Ethylacetat to Methylethylketon. The text lists ratios 20/80, 10/90, 7/93, 5/95, 0/100. The 5/95 ratio is the specific composition closest to the critical point where independence from molar mass is achieved for the standards used.",
-        "mobile_phase_ratio_units": "Vol-%",
-        "critical_component": "Poly(propylenglykol)",
+        "corresponding_email_address": "null",
         "temperature_celsius": "30",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "flow_rate": "null",
+        "detector": "RIDK 101",
+        "column_name": "LiChrosorb Si 100",
+        "analyte_polymer": "Poly(oxypropylenpolyol)",
+        "corresponding_author_name": "A. V. Gor\u0161kov",
         "model_confidences": {
           "qwen": "strong_inference",
           "mistral": "missed"

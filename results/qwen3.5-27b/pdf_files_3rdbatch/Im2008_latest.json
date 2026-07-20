@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "Im2008.pdf",
-    "extraction_date": "2026-06-30T23:18:49.940780",
+    "extraction_date": "2026-07-19T13:57:07.982884",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:57:07.971170+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/Im2008.md",
+        "sha256": "3ffb8535175c43fd8337a19a23f2056cb830920461c91e1c793af6784adb2ff4",
+        "char_len": 44302,
+        "token_count": 11859
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "Im2008.pdf",
-      "start_time": "2026-06-30T23:11:28.711008",
+      "start_time": "2026-07-19T13:49:49.901324",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 45.122981786727905,
+          "time_seconds": 44.1024808883667,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1554560661315918,
+          "time_seconds": 0.11905956268310547,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11859
         },
         "llm_extraction": {
-          "time_seconds": 395.9164922237396,
+          "time_seconds": 393.8060574531555,
           "success": true
         }
       },
@@ -160,7 +202,7 @@
           "pore_size": "100 Å pore",
           "flow_rate": "flow rate of 1.9 mL/min"
         },
-        "notes": "Used as the second dimension in RP-TGIC x LCCC 2D-LC analysis. Critical condition established for linear PS.",
+        "notes": "Used as the 2nd dimension in RP-TGIC x LCCC 2D-LC analysis. Critical condition established for linear PS.",
         "paper_doi": "10.1021/ma702377f",
         "corresponding_author_name": "Taihyun Chang; Yongmei Wang",
         "corresponding_email_address": "tc@postech.ac.kr; ywang@memphis.edu",
@@ -203,7 +245,7 @@
           "pore_size": "500 Å pore",
           "flow_rate": "flow rate of 1.9 mL/min"
         },
-        "notes": "Used as the second dimension in RP-TGIC x LCCC 2D-LC analysis. Critical condition established for linear PS.",
+        "notes": "Used as the 2nd dimension in RP-TGIC x LCCC 2D-LC analysis. Critical condition established for linear PS.",
         "paper_doi": "10.1021/ma702377f",
         "corresponding_author_name": "Taihyun Chang; Yongmei Wang",
         "corresponding_email_address": "tc@postech.ac.kr; ywang@memphis.edu",
@@ -218,7 +260,7 @@
       "section": "Full Paper",
       "token_count": 11859,
       "extraction_success": true,
-      "processing_time": 395.85992908477783,
+      "processing_time": 393.7499084472656,
       "extracted_count": 4
     }
   ]

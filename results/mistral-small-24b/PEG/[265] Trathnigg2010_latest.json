@@ -1,26 +1,67 @@
 {
   "metadata": {
     "source_pdf": "[265] Trathnigg2010.pdf",
-    "extraction_date": "2026-07-01T23:14:18.824309",
+    "extraction_date": "2026-07-19T13:21:44.672004",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:21:44.659592+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[265] Trathnigg2010.md",
+        "sha256": "83eafa2b877d4a478cf0fa60c120cd921a785841d0b0f69ce902b37a49acdcf7",
+        "char_len": 28021,
+        "token_count": 8866
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[265] Trathnigg2010.pdf",
-      "start_time": "2026-07-01T23:08:13.330136",
+      "start_time": "2026-07-19T13:15:37.836580",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.694711685180664,
+          "time_seconds": 22.046600818634033,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12610650062561035,
+          "time_seconds": 0.11196684837341309,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8866
         },
         "llm_extraction": {
-          "time_seconds": 344.63179993629456,
+          "time_seconds": 344.62588596343994,
           "success": false
         }
       },
@@ -45,7 +86,7 @@
       "section": "Full Paper",
       "token_count": 8866,
       "extraction_success": false,
-      "processing_time": 112.83110618591309,
+      "processing_time": 112.83290719985962,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEG\",\"critical_component\":\"PEG\",\"architecture\":\"null\",\"critical_condition_basis\":\"critical adsorption point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Synergi MAX RP\",\"stationary_phase_chemistry\":\"silica-based octadecyl phase\",\"column_mode"
     }
   ]

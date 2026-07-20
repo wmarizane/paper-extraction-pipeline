@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:55:24.374648+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_2ndbatch/[260] Hiller2007_latest.json",
+        "results/mistral-small-24b/pdf_files_2ndbatch/[260] Hiller2007_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -23,37 +62,37 @@
           "pore_size": "Nucleosil C18 300-5 and 1000-7",
           "flow_rate": "The flow rate was 0.5 mL min-1."
         },
-        "column_name": "Macherey-Nagel Nucleosil C18 300-5 and 1000-7",
-        "flow_rate": "0.5 mL min-1",
-        "architecture": "block copolymer",
         "critical_condition_basis": "critical point of adsorption",
-        "paper_doi": "10.1002/macp.200700166",
-        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "PS is chromatographically invisible; PMMA elutes in SEC mode.",
+        "architecture": "block copolymer",
+        "critical_component": "PS",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2007",
-        "column_dimensions": "250 x 4 mm",
         "pore_size": "300-5 and 1000-7",
+        "paper_doi": "10.1002/macp.200700166",
+        "mobile_phase_ratio": "48:52",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "PS-b-PMMA",
-        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
-        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "48:52",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "ACN"
-        ],
-        "detector": "UV",
-        "notes": "PS is chromatographically invisible; PMMA elutes in SEC mode.",
-        "mobile_phase_ratio_units": "v/v",
-        "critical_component": "PS",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
         "temperature_celsius": "22",
+        "column_dimensions": "250 x 4 mm",
+        "flow_rate": "0.5 mL min-1",
+        "detector": "UV",
+        "column_name": "Macherey-Nagel Nucleosil C18 300-5 and 1000-7",
+        "analyte_polymer": "PS-b-PMMA",
+        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -97,7 +136,7 @@
         },
         "notes": "Used for separation of blends and as the critical component for block copolymers.",
         "paper_doi": "10.1002/macp.200700166",
-        "corresponding_author_name": "Wolf Hiller; Pritish Sinha; Harald Pasch",
+        "corresponding_author_name": "Wolf Hiller",
         "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
         "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
         "publication_year": "2007",

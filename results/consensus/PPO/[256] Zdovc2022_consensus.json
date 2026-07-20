@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:11:52.905764+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[256] Zdovc2022_latest.json",
+        "results/mistral-small-24b/PPO/[256] Zdovc2022_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 1
@@ -23,37 +62,37 @@
           "pore_size": "100 \u00c5",
           "flow_rate": "0.04 mL min-1"
         },
-        "column_name": "PS-DVB",
-        "flow_rate": "0.04 mL min-1",
-        "architecture": "gradient/block",
         "critical_condition_basis": "critical conditions for P(POPA)",
-        "paper_doi": "10.1021/acs.analchem.2c00193",
-        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "mobile_phase_ratio_units": "vol %",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Copolymers analyzed under critical conditions for the P(POPA) constituent. Separation governed by molar mass of PPO constituent and microstructure.",
+        "architecture": "gradient/block",
+        "critical_component": "P(POPA)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2022",
-        "column_dimensions": "4.6 mm \u00d7 150 mm",
         "pore_size": "100 \u00c5",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "mobile_phase_ratio": "15.6:84.4",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "P(POPA)",
-        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
-        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
-        "mobile_phase_ratio": "15.6:84.4",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "ACN"
-        ],
-        "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector 1260 Infinity",
-        "notes": "Copolymers analyzed under critical conditions for the P(POPA) constituent. Separation governed by molar mass of PPO constituent and microstructure.",
-        "mobile_phase_ratio_units": "vol %",
-        "critical_component": "P(POPA)",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
         "temperature_celsius": "25",
+        "column_dimensions": "4.6 mm \u00d7 150 mm",
+        "flow_rate": "0.04 mL min-1",
+        "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector 1260 Infinity",
+        "column_name": "PS-DVB",
+        "analyte_polymer": "P(POPA)",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

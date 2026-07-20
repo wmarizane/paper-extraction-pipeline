@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:53:58.054379+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[95] Pasch_latest.json",
+        "results/mistral-small-24b/PEG/[95] Pasch_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -39,11 +78,11 @@
         "column_dimensions": "250 x 4mm I.D.",
         "detector": "R-401 differential refractometer",
         "field_evidence": {
-          "critical_condition_basis": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile\u2013water (43:57, v/v)",
+          "critical_condition_basis": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile-water (43:57, v/v)",
           "critical_component": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (42:58, v/v) on a Chrompack RP-18 stationary phase",
           "column_name": "The column was Nucleosil 5C18 (250 x 4mm I.D.)",
           "mobile_phase_solvents": "The mobile phase was acetonitrile-water",
-          "mobile_phase_ratio": "acetonitrile\u2013water (43:57, v/v)",
+          "mobile_phase_ratio": "acetonitrile-water (43:57, v/v)",
           "temperature_celsius": null,
           "pore_size": null,
           "flow_rate": "flow-rate of 0.5 ml/min"
@@ -63,9 +102,9 @@
         "analyte_polymer": "HO(EO)x(PO)y(EO)xOH",
         "critical_component": "polyethylene oxide",
         "architecture": "block copolymer",
-        "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey-Nagel 5C; column",
+        "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey\u2013Nagel 5C; column",
         "critical_condition_confidence": "explicit",
-        "column_name": "Macherey-Nagel 5C;",
+        "column_name": "Macherey\u2013Nagel 5C;",
         "stationary_phase_chemistry": "null",
         "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
@@ -86,16 +125,16 @@
         "column_dimensions": "250 x 4 mm",
         "detector": "refractive index",
         "field_evidence": {
-          "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey-Nagel 5C; column",
+          "critical_condition_basis": "The mobile phase composition corresponding to the critical conditions for PEO was found to be acetonitrile-water (43:57, v/v) on a Macherey\u2013Nagel 5C; column",
           "critical_component": "polyethylene oxide",
-          "column_name": "Macherey-Nagel 5C;",
+          "column_name": "Macherey\u2013Nagel 5C;",
           "mobile_phase_solvents": "acetonitrile-water",
           "mobile_phase_ratio": "43:57, v/v",
           "temperature_celsius": "null",
           "pore_size": "null",
           "flow_rate": "0.5 ml/min"
         },
-        "notes": "Critical condition established for PEO block in a PEO-PPO block copolymer analysis. The text notes that the composition was adjusted from a previous RP-18 study to the Nucleosil 5C18 column.",
+        "notes": "Critical condition established for PEO block in a PEO-PPO block copolymer analysis.",
         "paper_doi": "null",
         "corresponding_author_name": "H. Pasch; C. Brinkmann; H. Much; U. Just",
         "corresponding_email_address": "null",

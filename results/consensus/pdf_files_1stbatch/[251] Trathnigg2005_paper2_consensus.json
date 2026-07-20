@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:59:58.645871+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_1stbatch/[251] Trathnigg2005_paper2_latest.json",
+        "results/mistral-small-24b/pdf_files_1stbatch/[251] Trathnigg2005_paper2_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 6
@@ -176,17 +215,17 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
-        "pore_size": "100 \u00c5",
-        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "100 A",
+        "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
         "field_evidence": {
           "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
           "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
-          "column_name": "Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250! 4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 \u00c5",
+          "column_name": "Nucleosil 100-5 OH 5 mm, silica-based Diol phase; 250! 4.6 mm; particle diameter: 5 mm; nominal pore sizeZ100 A",
           "mobile_phase_solvents": "acetone water 78:12 (w/w)",
           "mobile_phase_ratio": "78.54% (w/w)",
           "temperature_celsius": "25.0 8C",
-          "pore_size": "nominal pore sizeZ100 \u00c5",
+          "pore_size": "nominal pore sizeZ100 A",
           "flow_rate": "0.5 ml/min"
         },
         "notes": null,
@@ -223,17 +262,17 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
-        "pore_size": "500 \u00c5",
-        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
         "field_evidence": {
           "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
           "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
-          "column_name": "Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 \u00c5",
+          "column_name": "Jordi Gel DVB 500 RP: 100% poly(divinylbenzene); 250!4.6 mm; particle diameterZ5 mm; nominal pore sizeZ500 A",
           "mobile_phase_solvents": "acetone water 92:8 (w/w)",
           "mobile_phase_ratio": "92.42% (w/w)",
           "temperature_celsius": "25.0 8C",
-          "pore_size": "nominal pore sizeZ500 \u00c5",
+          "pore_size": "nominal pore sizeZ500 A",
           "flow_rate": "0.5 ml/min"
         },
         "notes": null,
@@ -270,17 +309,17 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
-        "pore_size": "120 \u00c5",
-        "column_dimensions": "250 \u00d7 4.6 mm",
+        "pore_size": "120 A",
+        "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
         "field_evidence": {
           "critical_condition_basis": "Under these conditions, the other (non-critical) block elutes in exclusion mode, which allows an independent determination of the molar mass distribution of the individual blocks.",
           "critical_component": "a separation according to the PO block(s) may be achieved by a SEC or a LAC mechanism, and vice versa.",
-          "column_name": "Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 \u00c5",
+          "column_name": "Discovery HS-PEG, silica-based PEG phase; 250! 4.6 mm; particle diameterZ5 mm; nominal pore sizeZ 120 A",
           "mobile_phase_solvents": "acetone water 45:55 (w/w)",
           "mobile_phase_ratio": "45.58% (w/w)",
           "temperature_celsius": "25.0 8C",
-          "pore_size": "nominal pore sizeZ 120 \u00c5",
+          "pore_size": "nominal pore sizeZ 120 A",
           "flow_rate": "0.5 ml/min"
         },
         "notes": null,

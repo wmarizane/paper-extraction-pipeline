@@ -1,26 +1,67 @@
 {
   "metadata": {
     "source_pdf": "[94] Krüger1996.pdf",
-    "extraction_date": "2026-07-01T22:15:50.926172",
+    "extraction_date": "2026-07-19T13:55:34.774001",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:55:34.764023+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[94] Krüger1996.md",
+        "sha256": "82b6ad4403058fd94104fa89eea43fe3b4199ab3ac223f45a8c6458b28f140e4",
+        "char_len": 1317,
+        "token_count": 342
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[94] Krüger1996.pdf",
-      "start_time": "2026-07-01T22:14:47.344857",
+      "start_time": "2026-07-19T13:54:34.143541",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 62.13622045516968,
+          "time_seconds": 59.36743640899658,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10709452629089355,
+          "time_seconds": 0.11653971672058105,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 342
         },
         "llm_extraction": {
-          "time_seconds": 1.2963407039642334,
+          "time_seconds": 1.0788543224334717,
           "success": true
         }
       },
@@ -28,8 +69,8 @@
       "error": null,
       "gpu_memory": {
         "pytorch_peak_gb": 0.0,
-        "nvidia_smi_pre_mb": "42562",
-        "nvidia_smi_post_mb": "42706"
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "42778"
       }
     }
   },
@@ -45,7 +86,7 @@
       "section": "Full Paper",
       "token_count": 342,
       "extraction_success": true,
-      "processing_time": 1.2140798568725586,
+      "processing_time": 0.9709639549255371,
       "extracted_count": 0
     }
   ]

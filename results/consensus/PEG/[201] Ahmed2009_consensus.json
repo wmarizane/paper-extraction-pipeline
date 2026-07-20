@@ -5,10 +5,49 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T23:22:47.279125+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[201] Ahmed2009_latest.json",
+        "results/mistral-small-24b/PEG/[201] Ahmed2009_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 5
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
@@ -107,7 +146,7 @@
         }
       },
       {
-        "analyte_polymer": "Cyclic PCL",
+        "analyte_polymer": "PCL-ME",
         "critical_component": "CL block",
         "architecture": "linear",
         "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
@@ -142,7 +181,54 @@
           "pore_size": "nominal pore size = 500 \u00c5",
           "flow_rate": "flow rate of 0.5 ml/min"
         },
-        "notes": "Used to analyze EO-CL block copolymers where CL is at CAP and EO elutes in SEC mode. Cyclic PCL elutes at a different position than linear PCL-ME.",
+        "notes": "Used to analyze EO-CL block copolymers where CL is at CAP and EO elutes in SEC mode.",
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab\u2013Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "EO-CL block copolymer (BF3 catalyst)",
+        "critical_component": "CL block",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80.92 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
+          "critical_component": "block copolymer elutes just like the initiator (as it should do at the CAP)",
+          "column_name": "Jordi column",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.92% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 \u00b0C",
+          "pore_size": "nominal pore size = 500 \u00c5",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Specific ratio 80.92% THF used for BF3-catalyzed samples (Fig 7).",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",

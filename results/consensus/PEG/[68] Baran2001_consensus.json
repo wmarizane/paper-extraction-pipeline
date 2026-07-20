@@ -5,104 +5,284 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:52:54.644861+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[68] Baran2001_latest.json",
+        "results/mistral-small-24b/PEG/[68] Baran2001_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
       {
         "field_evidence": {
           "critical_condition_basis": "In this specific elution mode (EATP\u2013LC), the fractionation is only governed by the nature and the number of functions attached to the polymer backbone, independent of the molar mass distribution of the whole sample.",
-          "critical_component": "polystyrene chains are eluted at the same retention time, whatever their molar mass",
-          "column_name": "Nucleosil",
+          "critical_component": "polystyrene chains",
+          "column_name": "column 1",
           "mobile_phase_solvents": "THF\u2013hexane mixtures",
           "mobile_phase_ratio": "44.2:55.8 wt.%",
           "temperature_celsius": "T 5258C",
           "pore_size": "100",
           "flow_rate": "flow-rate: 1 ml/min"
         },
-        "column_name": "Nucleosil",
-        "flow_rate": "1 ml/min",
+        "critical_condition_basis": "elution at the exclusion-adsorption transition point (EATP) where retention is independent of molar mass",
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB - Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_solvents": [
+          "THF",
+          "hexane"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Used for fractionation of functional PS (alcohol, acetal, aldehyde, acidic) from non-functional PS.",
         "architecture": "linear",
-        "critical_condition_basis": "elution at the exclusion\u2013adsorption transition point (EATP) where retention is independent of molar mass",
-        "paper_doi": "S0378-4347(00)00372-8",
-        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "critical_component": "polystyrene",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2001",
-        "column_dimensions": "250x4.6 mm",
         "pore_size": "100",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "mobile_phase_ratio": "44.2:55.8",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polystyrene",
-        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB \u2013 Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
-        "corresponding_author_name": "Henri Cramail",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica",
-        "mobile_phase_ratio": "44.2:55.8",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "hexane"
-        ],
-        "detector": "UV (261 nm)",
-        "notes": "Used for fractionation of functional PS (alcohol, acetal, aldehyde, acidic) from non-functional PS.",
-        "mobile_phase_ratio_units": "wt.%",
-        "critical_component": "polystyrene",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
         "temperature_celsius": "25",
+        "column_dimensions": "250x4.6 mm",
+        "flow_rate": "1 ml/min",
+        "detector": "UV (261 nm)",
+        "column_name": "Nucleosil",
+        "analyte_polymer": "polystyrene",
+        "corresponding_author_name": "Henri Cramail",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
         }
       },
       {
-        "field_evidence": {
-          "critical_condition_basis": "In this specific elution mode (EATP\u2013LC), the fractionation is only governed by the nature and the number of functions attached to the polymer backbone, independent of the molar mass distribution of the whole sample.",
-          "critical_component": "poly(ethylene oxide)",
-          "column_name": "Nucleosil",
-          "mobile_phase_solvents": "ACN\u2013water",
-          "mobile_phase_ratio": "28.1:71.9 wt.%",
-          "temperature_celsius": "T 5258C",
-          "pore_size": "300",
-          "flow_rate": "flow-rate: 1 ml/min"
-        },
-        "column_name": "Nucleosil",
-        "flow_rate": "1 ml/min",
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
         "architecture": "linear",
-        "critical_condition_basis": "elution at the exclusion\u2013adsorption transition point (EATP) where retention is independent of molar mass",
-        "paper_doi": "S0378-4347(00)00372-8",
-        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
-        "publication_year": "2001",
-        "column_dimensions": "150x4.6 mm",
-        "pore_size": "300",
+        "critical_condition_basis": "elution at the exclusion-adsorption transition point (EATP) where retention is independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Cyano-silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "DME",
+          "water"
+        ],
+        "mobile_phase_ratio": "21.5:78.5",
+        "mobile_phase_ratio_units": "wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "poly(ethylene oxide)",
-        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB \u2013 Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
-        "corresponding_author_name": "Henri Cramail",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "Cyano-silica",
-        "mobile_phase_ratio": "28.1:71.9",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "DME",
-          "water"
-        ],
-        "detector": "refractometry",
-        "notes": "Used for fractionation of functional PEOs (hydroxyl, diphenyl).",
-        "mobile_phase_ratio_units": "wt.%",
-        "critical_component": "poly(ethylene oxide)",
         "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "300 A",
+        "column_dimensions": "125x4 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "The validity of the 'critical conditions' concept is illustrated in Fig. 7b... two a,v-hydroxyl-PEO of different molar masses... are eluted at the same retention time",
+          "critical_component": "PEO EATP",
+          "column_name": "column 5... Cyano-silica... Nucleosil",
+          "mobile_phase_solvents": "DME-water",
+          "mobile_phase_ratio": "21.5:78.5",
+          "temperature_celsius": "T 5 258C",
+          "pore_size": "300",
+          "flow_rate": "Flow-rate of 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PEOs (hydroxyl, diphenyl).",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB - Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001",
         "model_confidences": {
           "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion\u2013adsorption transition point (EATP)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "column 5",
+        "stationary_phase_chemistry": "cyano-silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "ACN",
+          "water"
+        ],
+        "mobile_phase_ratio": "28.1:71.9",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "300",
+        "column_dimensions": "150x4.6 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "In this specific elution mode (EATP\u2013LC), the fractionation is only governed by the nature and the number of functions attached to the polymer backbone, independent of the molar mass distribution of the whole sample.",
+          "critical_component": "poly(ethylene oxide)",
+          "column_name": "column 5",
+          "mobile_phase_solvents": "ACN\u2013water",
+          "mobile_phase_ratio": "28.1:71.9 wt.%",
+          "temperature_celsius": "T 5258C",
+          "pore_size": "300",
+          "flow_rate": "flow-rate: 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PEOs (hydroxyl, diphenyl).",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Serge Laugier; Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB \u2013 Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution at the exclusion\u2013adsorption transition point (EATP)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "column 8",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "MeOH",
+          "water"
+        ],
+        "mobile_phase_ratio": "85.0:15.0",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "300",
+        "column_dimensions": "125x4 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "In this specific elution mode (EATP\u2013LC), the fractionation is only governed by the nature and the number of functions attached to the polymer backbone, independent of the molar mass distribution of the whole sample.",
+          "critical_component": "poly(ethylene oxide)",
+          "column_name": "column 8",
+          "mobile_phase_solvents": "MeOH\u2013water",
+          "mobile_phase_ratio": "85.0:15.0 wt.%",
+          "temperature_celsius": "T 5258C",
+          "pore_size": "300",
+          "flow_rate": "flow-rate: 1 ml/min"
+        },
+        "notes": "Used for fractionation of functional PEOs.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Serge Laugier; Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB \u2013 Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poly(styrene)-b-poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "elution at the exclusion\u2013adsorption transition point (EATP) for the poly(ethylene oxide) block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "column 9",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.0:13.0",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": "500",
+        "column_dimensions": "125x4 mm",
+        "detector": "refractometry",
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions, the copolymers PS\u2013b\u2013PEO were characterized according to the length of the PEO block in the critical conditions of polystyrene.",
+          "critical_component": "poly(ethylene oxide)",
+          "column_name": "column 9",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "87.0:13.0 wt.%",
+          "temperature_celsius": "T 5 258C",
+          "pore_size": "500",
+          "flow_rate": "flow-rate: 1 ml/min"
+        },
+        "notes": "Used to separate block copolymers based on PEO block length while PS block is at critical condition.",
+        "paper_doi": "S0378-4347(00)00372-8",
+        "corresponding_author_name": "Serge Laugier; Henri Cramail",
+        "corresponding_email_address": "cramail@enscpb.u-bordeaux.fr",
+        "physical_address": "Laboratoire de Chimie des Polymeres Organiques, UMR 5629, ENSCPB \u2013 Universite Bordeaux, 1 Avenue Pey Berland, BP 108, F-33402 Talence Cedex, France",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "missed",
           "mistral": "explicit"
         }
       }

@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:01:03.366071+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[302] Abdul-Karim2019_latest.json",
+        "results/mistral-small-24b/PEG/[302] Abdul-Karim2019_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -23,38 +62,38 @@
           "pore_size": "70 \u00c5 pore",
           "flow_rate": "mobile phase flow rate was set at 0.5 mL/min"
         },
-        "column_name": "ZORBAX ODS",
-        "flow_rate": "0.5 mL/min",
-        "architecture": "linear",
         "critical_condition_basis": "LCCC",
-        "paper_doi": "10.1007/s13233-019-7128-y",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "publication_year": "2019",
-        "column_dimensions": "250\u00d74.6 mm",
-        "pore_size": "70 \u00c5",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "analyte_polymer": "PPEC",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "critical_condition_confidence": "explicit",
         "stationary_phase_chemistry": "ODS",
-        "mobile_phase_ratio": "92/7/1",
-        "column_mode": "Reversed Phase",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v%",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water",
           "trimethylamine"
         ],
-        "detector": "ELSD",
+        "column_mode": "Reversed Phase",
         "notes": "Established using PPEC homopolymers of varying molar masses (500 to 5000 g/mol).",
-        "mobile_phase_ratio_units": "v/v%",
+        "architecture": "linear",
         "critical_component": "PPEC",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2019",
+        "pore_size": "70 \u00c5",
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "mobile_phase_ratio": "92/7/1",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "trimethylamine",
+          "salt_concentration": "1.0%"
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
         "temperature_celsius": "30",
+        "column_dimensions": "250\u00d74.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "ELSD",
+        "column_name": "ZORBAX ODS",
+        "analyte_polymer": "PPEC",
+        "corresponding_author_name": "Muhammad Imran Malik",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -71,37 +110,37 @@
           "pore_size": "120 \u00c5 pore",
           "flow_rate": "mobile phase flow rate was set at 0.5 mL/min"
         },
-        "column_name": "PhenoSphere-Next 5u Sil",
-        "flow_rate": "0.5 mL/min",
-        "architecture": "linear",
         "critical_condition_basis": "LCCC",
-        "paper_doi": "10.1007/s13233-019-7128-y",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v%",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Established using MeO-PEG homopolymers. Elution volume is still more than expected void volume due to presence of one hydroxyl end-group.",
+        "architecture": "linear",
+        "critical_component": "poly(ethylene glycol)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2019",
-        "column_dimensions": "250\u00d74.6 mm",
         "pore_size": "120 \u00c5",
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "mobile_phase_ratio": "98.5/1.5",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "MeO-PEG",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica",
-        "mobile_phase_ratio": "98.5/1.5",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "DMF"
-        ],
-        "detector": "ELSD",
-        "notes": "Established using MeO-PEG homopolymers. Elution volume is still more than expected void volume due to presence of one hydroxyl end-group.",
-        "mobile_phase_ratio_units": "v/v%",
-        "critical_component": "poly(ethylene glycol)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
         "temperature_celsius": "30",
+        "column_dimensions": "250\u00d74.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "ELSD",
+        "column_name": "PhenoSphere-Next 5u Sil",
+        "analyte_polymer": "MeO-PEG",
+        "corresponding_author_name": "Muhammad Imran Malik",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T21:57:22.379293+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PLA/[148] Wachsen_latest.json",
+        "results/mistral-small-24b/PLA/[148] Wachsen_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 1
@@ -23,37 +62,37 @@
           "pore_size": null,
           "flow_rate": null
         },
-        "column_name": "Nucleosil 300-S",
-        "flow_rate": null,
-        "architecture": "linear and cyclic oligomers",
         "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
-        "paper_doi": null,
-        "corresponding_email_address": null,
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "Technical University of Berlin, Institute of Technical Chemistry, Sekr. TC 3, Str. d. 17. Juni 135, D-10623 Berlin, Germany; Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "mobile_phase_ratio_units": "vol.%",
+        "mobile_phase_solvents": [
+          "dioxane",
+          "n-hexane"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "The text explicitly states these are the critical conditions for poly-L-lactide used for LACCC analysis.",
+        "architecture": "linear and cyclic oligomers",
+        "critical_component": "oligo-L-lactide",
+        "critical_condition_confidence": "explicit",
         "publication_year": "1997",
-        "column_dimensions": "250mm x 4mm ID",
         "pore_size": null,
+        "paper_doi": null,
+        "mobile_phase_ratio": "60vol.% dioxane and 40vol.% n-hexane",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "oligo-L-lactide",
-        "physical_address": "Technical University of Berlin, Institute of Technical Chemistry, Sekr. TC 3, Str. d. 17. Juni 135, D-10623 Berlin, Germany; Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
-        "corresponding_author_name": "O. Wachen; K. H. Reichert; R. P. Kr\u00fcger; H. Much; G. Schulz",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "silica",
-        "mobile_phase_ratio": "60vol.% dioxane and 40vol.% n-hexane",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "dioxane",
-          "n-hexane"
-        ],
-        "detector": "Diode-Array-Detector (type UVD 3205, Gynkotek, Germering, Germany) and a UV-detector (type SPD-10A, Shimadzu Europa GmbH, Duisburg, Germany)",
-        "notes": "The text explicitly states these are the critical conditions for poly-L-lactide used for LACCC analysis.",
-        "mobile_phase_ratio_units": "vol.%",
-        "critical_component": "oligo-L-lactide",
+        "corresponding_email_address": null,
         "temperature_celsius": "30",
+        "column_dimensions": "250mm x 4mm ID",
+        "flow_rate": null,
+        "detector": "Diode-Array-Detector (type UVD 3205, Gynkotek, Germering, Germany) and a UV-detector (type SPD-10A, Shimadzu Europa GmbH, Duisburg, Germany)",
+        "column_name": "Nucleosil 300-S",
+        "analyte_polymer": "oligo-L-lactide",
+        "corresponding_author_name": "O. Wachen; K. H. Reichert; R. P. Kr\u00fcger; H. Much; G. Schulz",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

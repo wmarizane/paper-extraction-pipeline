@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T23:34:10.574136+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[242] Rappel2003_latest.json",
+        "results/mistral-small-24b/PEG/[242] Rappel2003_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 3
@@ -23,37 +62,37 @@
           "pore_size": "100 A",
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Prodigy ODS(3)",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "linear",
         "critical_condition_basis": "critical interaction point",
-        "paper_doi": null,
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "mobile_phase_ratio_units": "%",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "EO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2003",
-        "column_dimensions": "250x4.6 mm",
         "pore_size": "100 A",
+        "paper_doi": null,
+        "mobile_phase_ratio": "28 wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polyethylene glycol",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
-        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_ratio": "28 wt.%",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "detector": "refractive index (RI)",
-        "notes": null,
-        "mobile_phase_ratio_units": "%",
-        "critical_component": "EO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "250x4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "refractive index (RI)",
+        "column_name": "Prodigy ODS(3)",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "model_confidences": {
           "qwen": "missed",
           "mistral": "explicit"
@@ -61,7 +100,7 @@
       },
       {
         "field_evidence": {
-          "critical_condition_basis": "a sharp critical interaction point is found for the Spherisorb S5X C6 column at 30 wt.% acetone",
+          "critical_condition_basis": "a sharp critical interaction point is found for the Spherisorb S5X C6 column at 28.5 wt.% acetone",
           "critical_component": "the critical interaction point for the EO-chain",
           "column_name": "Spherisorb S5X C6 column",
           "mobile_phase_solvents": "acetone\u2013water",
@@ -70,37 +109,37 @@
           "pore_size": "300 A",
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Spherisorb S5X C6",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "linear",
         "critical_condition_basis": "critical interaction point",
-        "paper_doi": null,
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "C6",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "mobile_phase_ratio_units": "%",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "EO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2003",
-        "column_dimensions": "250x4.6 mm",
         "pore_size": "300 A",
+        "paper_doi": null,
+        "mobile_phase_ratio": "28.5 wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polyethylene glycol",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
-        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "C6",
-        "mobile_phase_ratio": "28.5 wt.%",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "detector": "refractive index (RI)",
-        "notes": null,
-        "mobile_phase_ratio_units": "%",
-        "critical_component": "EO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "250x4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "refractive index (RI)",
+        "column_name": "Spherisorb S5X C6",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "model_confidences": {
           "qwen": "missed",
           "mistral": "explicit"
@@ -117,37 +156,37 @@
           "pore_size": "5000 A",
           "flow_rate": "0.5 ml/min"
         },
-        "column_name": "Jordi Gel DVB 500 RP",
-        "flow_rate": "0.5 ml/min",
-        "architecture": "linear",
         "critical_condition_basis": "critical interaction point",
-        "paper_doi": null,
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "stationary_phase_chemistry": "Divinylbenzene",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
+        "mobile_phase_ratio_units": "%",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "EO",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2003",
-        "column_dimensions": "250x4.6 mm",
         "pore_size": "5000 A",
+        "paper_doi": null,
+        "mobile_phase_ratio": "30 wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "polyethylene glycol",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St. Petersburg, Russia",
-        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "Divinylbenzene",
-        "mobile_phase_ratio": "30 wt.%",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "detector": "refractive index (RI)",
-        "notes": null,
-        "mobile_phase_ratio_units": "%",
-        "critical_component": "EO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "temperature_celsius": "25.0",
+        "column_dimensions": "250x4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "refractive index (RI)",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "analyte_polymer": "polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "model_confidences": {
           "qwen": "missed",
           "mistral": "explicit"

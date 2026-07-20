@@ -1,26 +1,67 @@
 {
   "metadata": {
     "source_pdf": "[113] Pasch.pdf",
-    "extraction_date": "2026-07-01T22:22:18.696812",
+    "extraction_date": "2026-07-19T12:27:51.091982",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:27:51.081547+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[113] Pasch.md",
+        "sha256": "c73337be98708ea0ec6aa4aec8d88015617ef3107e5e327573e5e4677e2204be",
+        "char_len": 31353,
+        "token_count": 8443
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[113] Pasch.pdf",
-      "start_time": "2026-07-01T22:15:28.003427",
+      "start_time": "2026-07-19T12:20:49.345267",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 67.2207453250885,
+          "time_seconds": 78.21585536003113,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11855864524841309,
+          "time_seconds": 0.1257772445678711,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8443
         },
         "llm_extraction": {
-          "time_seconds": 343.31378054618835,
+          "time_seconds": 343.3413145542145,
           "success": false
         }
       },
@@ -45,7 +86,7 @@
       "section": "Full Paper",
       "token_count": 8443,
       "extraction_success": false,
-      "processing_time": 112.55832743644714,
+      "processing_time": 112.57818460464478,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"C10H21(OCH2CH2)70H\",\"critical_component\":\"C10H21(OCH2CH2)70H\",\"architecture\":\"linear\",\"critical_condition_basis\":\"liquid chromatography at the critical point of adsorption\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Nucleosil RP-18\",\"statio"
     }
   ]

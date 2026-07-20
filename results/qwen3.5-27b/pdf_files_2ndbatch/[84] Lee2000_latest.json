@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[84] Lee2000.pdf",
-    "extraction_date": "2026-06-30T23:37:40.126287",
+    "extraction_date": "2026-07-19T05:49:38.454588",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:49:38.443280+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[84] Lee2000.md",
+        "sha256": "96ee0b278c4c93c1d664a0f88bdcebc9ae58ce282ea92d426ab874a1f7c2f400",
+        "char_len": 14986,
+        "token_count": 4264
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[84] Lee2000.pdf",
-      "start_time": "2026-06-30T23:35:51.472858",
+      "start_time": "2026-07-19T05:47:50.323878",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 6.312001466751099,
+          "time_seconds": 6.220413446426392,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11729836463928223,
+          "time_seconds": 0.11104464530944824,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 4264
         },
         "llm_extraction": {
-          "time_seconds": 102.18578314781189,
+          "time_seconds": 101.73563551902771,
           "success": true
         }
       },
@@ -89,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 4264,
       "extraction_success": true,
-      "processing_time": 102.13189482688904,
+      "processing_time": 101.68322515487671,
       "extracted_count": 1
     }
   ]

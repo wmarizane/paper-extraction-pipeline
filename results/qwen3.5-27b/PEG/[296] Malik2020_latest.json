@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[296] Malik2020.pdf",
-    "extraction_date": "2026-07-01T04:09:42.855209",
+    "extraction_date": "2026-07-19T17:28:22.578767",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T17:28:22.568570+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[296] Malik2020.md",
+        "sha256": "f84456f4172a60a753a50ab469f24ce6974fd9b8ca14c367827af034548250e1",
+        "char_len": 65689,
+        "token_count": 16945
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[296] Malik2020.pdf",
-      "start_time": "2026-07-01T03:33:32.823253",
+      "start_time": "2026-07-19T16:52:24.938071",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 92.45717787742615,
+          "time_seconds": 92.68803906440735,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11597704887390137,
+          "time_seconds": 0.11585521697998047,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 16945
         },
         "llm_extraction": {
-          "time_seconds": 2077.4269654750824,
+          "time_seconds": 2064.792760848999,
           "success": false
         }
       },
@@ -45,7 +87,7 @@
       "section": "Full Paper",
       "token_count": 16945,
       "extraction_success": false,
-      "processing_time": 693.2296051979065,
+      "processing_time": 688.7290675640106,
       "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEO-PMMA block copolymer\",\n      \"critical_component\": \"PMMA\",\n      \"architecture\": \"di-block and tri-block\",\n      \"critical_condition_basis\": \"Chromatographic critical conditions of PMMA were realized on octadecyl columns in acetonitri"
     }
   ]

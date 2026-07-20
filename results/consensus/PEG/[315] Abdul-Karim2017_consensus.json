@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:04:34.091598+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[315] Abdul-Karim2017_latest.json",
+        "results/mistral-small-24b/PEG/[315] Abdul-Karim2017_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 2
@@ -23,38 +62,38 @@
           "pore_size": "70 \u00c5",
           "flow_rate": "0.5 > mL/min"
         },
-        "column_name": "ZORBAX ODS",
-        "flow_rate": "0.5 mL/min",
-        "architecture": "statistical copolymer",
         "critical_condition_basis": "critical adsorption point",
-        "paper_doi": "10.1002/pola.28559",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "stationary_phase_chemistry": "ODS",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v %",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water",
+          "triethylamine"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Critical adsorption point of PEEC established on RP column. Used to analyze block copolymers where PEEC is the critical block.",
+        "architecture": "statistical copolymer",
+        "critical_component": "poly(ethylene ether-carbonate)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2017",
-        "column_dimensions": "250 mm x 4.6 mm",
         "pore_size": "70 \u00c5",
+        "paper_doi": "10.1002/pola.28559",
+        "mobile_phase_ratio": "64-35-1",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "poly(ethylene ether-carbonate)",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "corresponding_author_name": "M. I. Malik",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "ODS",
-        "mobile_phase_ratio": "64-35-1",
-        "column_mode": "Reversed Phase",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water",
-          "triethylamine"
-        ],
-        "detector": "ELSD",
-        "notes": "Critical adsorption point of PEEC established on RP column. Used to analyze block copolymers where PEEC is the critical block.",
-        "mobile_phase_ratio_units": "v/v %",
-        "critical_component": "poly(ethylene ether-carbonate)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
         "temperature_celsius": "30",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "ELSD",
+        "column_name": "ZORBAX ODS",
+        "analyte_polymer": "poly(ethylene ether-carbonate)",
+        "corresponding_author_name": "M. I. Malik",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
@@ -71,37 +110,37 @@
           "pore_size": "120 \u00c5",
           "flow_rate": "0.5 > mL/min"
         },
-        "column_name": "Ultisil diol",
-        "flow_rate": "0.5 mL/min",
-        "architecture": "linear",
         "critical_condition_basis": "critical adsorption point",
-        "paper_doi": "10.1002/pola.28559",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "stationary_phase_chemistry": "diol",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v%",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEG is the critical block.",
+        "architecture": "linear",
+        "critical_component": "poly(ethylene glycol)",
+        "critical_condition_confidence": "explicit",
         "publication_year": "2017",
-        "column_dimensions": "250 mm x 4.6 mm",
         "pore_size": "120 \u00c5",
+        "paper_doi": "10.1002/pola.28559",
+        "mobile_phase_ratio": "65:35",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "analyte_polymer": "poly(ethylene glycol)",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "corresponding_author_name": "M. I. Malik",
-        "critical_condition_confidence": "explicit",
-        "stationary_phase_chemistry": "diol",
-        "mobile_phase_ratio": "65:35",
-        "column_mode": "Normal Phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "detector": "ELSD",
-        "notes": "Critical adsorption point of PEG established on NP diol column. Used to analyze block copolymers where PEG is the critical block.",
-        "mobile_phase_ratio_units": "v/v%",
-        "critical_component": "poly(ethylene glycol)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
         "temperature_celsius": "30",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "ELSD",
+        "column_name": "Ultisil diol",
+        "analyte_polymer": "poly(ethylene glycol)",
+        "corresponding_author_name": "M. I. Malik",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

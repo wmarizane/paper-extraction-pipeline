@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[371] Trimpin2007.pdf",
-    "extraction_date": "2026-07-01T08:00:24.424283",
+    "extraction_date": "2026-07-19T21:19:18.804113",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T21:19:18.790911+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[371] Trimpin2007.md",
+        "sha256": "59072ef5d1fa79bec28d18ffee5aa1208b4f4b982bc07c81aa439fbc1d3b06a6",
+        "char_len": 25408,
+        "token_count": 6470
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[371] Trimpin2007.pdf",
-      "start_time": "2026-07-01T07:52:21.196833",
+      "start_time": "2026-07-19T21:10:57.738557",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 15.697342872619629,
+          "time_seconds": 18.143414735794067,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11260104179382324,
+          "time_seconds": 0.1143805980682373,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6470
         },
         "llm_extraction": {
-          "time_seconds": 467.3841600418091,
+          "time_seconds": 482.75589966773987,
           "success": true
         }
       },
@@ -74,7 +116,7 @@
           "pore_size": "300 Å",
           "flow_rate": "0.5 mL min-1"
         },
-        "notes": "The text describes the separation of PEO mixtures with different end groups using LACCC. The setup is used for fractionation, but the conditions are explicitly identified as critical conditions for the PEO backbone to separate by end group. The column dimensions (2 x 150 mm) suggest a semi-preparative scale, but the text explicitly links this setup to LACCC analysis principles (separation by end group independent of molar mass).",
+        "notes": "The text describes the separation of PEO mixtures with different end groups using LACCC. The column dimensions (2 x 150 mm) suggest a semi-preparative setup used for fractionation, but the text explicitly states the method is 'liquid adsorption chromatography at critical conditions' and the purpose is to separate components differing by end groups, which is the definition of LACCC analysis. The rejection rule for fractionation is nuanced here; the text states 'Off-line fractionation is performed prior to the on-target homogenization...'. However, the LACCC run itself is the analytical method establishing the critical condition for the PEO backbone to separate end groups. The setup is used to demonstrate the critical condition separation capability. Given the explicit mention of LACCC and the separation of end groups (the hallmark of LACCC), this is extracted as an LCCC setup.",
         "paper_doi": "10.1021/ac070986w",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@indiana.edu",
@@ -117,7 +159,7 @@
           "pore_size": "300 Å",
           "flow_rate": "0.5 mL min-1"
         },
-        "notes": "Same LACCC setup used for the mixture containing dimethoxy-PEO 500.",
+        "notes": "Separate entry for dimethoxy-PEO 500 as per multiple analytes rule. Same critical condition setup as PEO 4250.",
         "paper_doi": "10.1021/ac070986w",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@indiana.edu",
@@ -160,7 +202,7 @@
           "pore_size": "300 Å",
           "flow_rate": "0.5 mL min-1"
         },
-        "notes": "Same LACCC setup used for the mixture containing monomethoxy-monomethacrylate-PEO 1000.",
+        "notes": "Separate entry for monomethoxy-monomethacrylate-PEO 1000 as per multiple analytes rule. Same critical condition setup.",
         "paper_doi": "10.1021/ac070986w",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@indiana.edu",
@@ -203,7 +245,7 @@
           "pore_size": "300 Å",
           "flow_rate": "0.5 mL min-1"
         },
-        "notes": "Same LACCC setup used for the mixture containing dimethacrylate-PEO 1000.",
+        "notes": "Separate entry for dimethacrylate-PEO 1000 as per multiple analytes rule. Same critical condition setup.",
         "paper_doi": "10.1021/ac070986w",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@indiana.edu",
@@ -246,7 +288,7 @@
           "pore_size": "300 Å",
           "flow_rate": "0.5 mL min-1"
         },
-        "notes": "Same LACCC setup used for the mixture containing PEO 6000.",
+        "notes": "Separate entry for PEO 6000 as per multiple analytes rule. Same critical condition setup.",
         "paper_doi": "10.1021/ac070986w",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@indiana.edu",
@@ -261,7 +303,7 @@
       "section": "Full Paper",
       "token_count": 6470,
       "extraction_success": true,
-      "processing_time": 467.3308455944061,
+      "processing_time": 482.70082449913025,
       "extracted_count": 5
     }
   ]

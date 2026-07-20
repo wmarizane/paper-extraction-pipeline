@@ -1,26 +1,68 @@
 {
   "metadata": {
     "source_pdf": "[94] Krüger1996.pdf",
-    "extraction_date": "2026-07-02T14:06:33.131189",
+    "extraction_date": "2026-07-19T05:08:38.073564",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:08:38.060541+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[94] Krüger1996.md",
+        "sha256": "82b6ad4403058fd94104fa89eea43fe3b4199ab3ac223f45a8c6458b28f140e4",
+        "char_len": 1317,
+        "token_count": 342
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[94] Krüger1996.pdf",
-      "start_time": "2026-07-02T14:05:35.049672",
+      "start_time": "2026-07-19T05:07:37.460065",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 54.259164333343506,
+          "time_seconds": 56.69779014587402,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13132023811340332,
+          "time_seconds": 0.11318659782409668,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 342
         },
         "llm_extraction": {
-          "time_seconds": 3.6588668823242188,
+          "time_seconds": 3.745016574859619,
           "success": true
         }
       },
@@ -45,7 +87,7 @@
       "section": "Full Paper",
       "token_count": 342,
       "extraction_success": true,
-      "processing_time": 3.6050796508789062,
+      "processing_time": 3.687016725540161,
       "extracted_count": 0
     }
   ]
