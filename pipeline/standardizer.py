@@ -90,13 +90,13 @@ _POLYMER_COMPATIBILITY_ALIASES = {
     ],
     
     "Poly(L-lactide)": [
-        "PLLA"
+        "PLLA",
         "Poly(L-lactic acid)",
         "Poly-L-lactide",
         ],
 
     "Poly(lactide)": [
-        "PLA"
+        "PLA",
         "Poly(lactic acid)",
         "Polylactide",
         ],
@@ -104,13 +104,13 @@ _POLYMER_COMPATIBILITY_ALIASES = {
     "Poly(Ethylene-co-Propylene)": [
         "EP Copolymer",
         ],
-    
+
     "Poloxamer": [
         "Pluronic",
         "Kolliphor",
-        "Synperonic"
-        "PEO-PPO-PEO"
-        "ABA triblock"
+        "Synperonic",
+        "PEO-PPO-PEO",
+        "ABA triblock",
         ],
 }
 
@@ -143,8 +143,10 @@ def _build_polymer_lookup() -> Tuple[
 
     for canonical, aliases in _POLYMER_COMPATIBILITY_ALIASES.items():
         canonical_key = _normalize_polymer_key(canonical)
-        if canonical_key not in canonical_display:
-            raise ValueError(f"Unknown compatibility canonical: {canonical!r}")
+        # A compatibility canonical need not be pre-declared in
+        # _POLYMER_CANONICAL_TO_ALIASES; register it on first sight so the
+        # compatibility table is self-sufficient (avoids coupling the two dicts).
+        canonical_display.setdefault(canonical_key, canonical)
         for alias in aliases:
             alias_key = _normalize_polymer_key(alias)
             if alias_key:
@@ -172,7 +174,7 @@ def _build_polymer_lookup() -> Tuple[
             alias_to_canonical[alias_key] = next(iter(target_keys))
             continue
 
-        selected = normalized_policies.get[alias_key]
+        selected = normalized_policies.get(alias_key)
         if selected is None:
             continue
         selected_key = _normalize_polymer_key(selected)
@@ -297,8 +299,8 @@ _SOLVENT_CANONICAL_TO_ALIASES = {
 
 
     
-    "1,4-Dioxane": ["1,4-Dioxan"],
-    
+    "1,4-Dioxane": ["1,4-Dioxan", "Dioxane"],
+
     "1-Propanol": ["n-Propanol", "Propan-1-ol", "n-Propyl alcohol"],
 
     
@@ -322,8 +324,6 @@ _SOLVENT_CANONICAL_TO_ALIASES = {
 
     
     "Dimethylformamide": ["DMF", "N,N-Dimethylformamide", "Dimethyl Formamide"],
-    
-    "Dioxane": ["1,4-Dioxane"],
 
     "Ethyl Acetate": ["EtOAc", "Ethyl ethanoate", "Ethylacetat"],
     
@@ -598,34 +598,14 @@ def _normalize_ratio_units(cond: Dict[str, Any]) -> None:
         cond["mobile_phase_ratio_units"] = None
         return
 
-    val_str = str(val).strip()
-    val_lower = val_str.lower()
-
-    # Strip everything that usually appears after the solvent field extraction
-    val_clean = re.sub(r"\(.*?\)", "", val_lower).strip()
-    val_clean = re.sub(r"[\s,_]", "", val_clean)
-    val_clean = val_clean.replace(",", "").replace(".", "").replace("by", "")
-
-    if any(
-        token in val_clean
-        for token in ("w/v", "v/w", "wt/vol", "vol/wt", "weight/volume", "volume/weight")
-    ):
-        cond["mobile_phase_ratio_units"] = None
-    elif (
-        "wt" in val_clean
-        or "weight" in val_clean
-        or "w/w" in val_clean
-    ):
-        cond["mobile_phase_ratio_units"] = "w/w"
-    elif "v/v" in val_clean or "vol" in val_clean or "byvolume" in val_clean:
-        cond["mobile_phase_ratio_units"] = "v/v"
-    elif val_clean in {"%v", "v", "vv"}:
-        cond["mobile_phase_ratio_units"] = "v/v"
-    elif val_clean == "%":
-        cond["mobile_phase_ratio_units"] = None
-    else:
+    # Strip parenthetical annotations, then delegate to the shared, order/
+    # space-insensitive unit parser (single source of truth).
+    val_str = re.sub(r"\(.*?\)", "", str(val)).strip()
+    unit = _canonical_ratio_unit(val_str)
+    if unit is None and re.sub(r"[^a-z]", "", val_str.lower()) not in {"", "percent"} \
+            and val_str.strip() not in {"%", ""}:
         warnings.warn(f"Unrecognized ratio unit: {val}")
-        cond["mobile_phase_ratio_units"] = None
+    cond["mobile_phase_ratio_units"] = unit
 
 
 def _normalize_ratio(cond: Dict[str, Any]) -> None:
@@ -1118,6 +1098,166 @@ def _normalize_year(cond: Dict[str, Any]) -> None:
         pass
 
 
+# ── Shared, order/space-insensitive composition-unit parsing ───────────
+# One source of truth for "what unit is this ratio in?", tolerant of spacing,
+# punctuation, ordering, and language variants. Used for the dedicated
+# mobile_phase_ratio_units field AND for units embedded in the ratio string.
+
+def _canonical_ratio_unit(value: Any) -> Optional[str]:
+    """Map any spelling/spacing/ordering of a composition unit to 'w/w',
+    'v/v', or None.
+
+    Space- and order-insensitive by construction (everything but letters, '%'
+    and '/' is stripped first), so 'wt%', '% w/w', 'w / w', 'vol.-%',
+    '% by volume', 'Gew.-%' all collapse correctly. Mixed weight-per-volume
+    forms ('w/v', 'v/w') are ambiguous as a single fraction unit and map to
+    None.
+    """
+    if value is None:
+        return None
+    compact = re.sub(r"[^a-z%/]", "", str(value).strip().lower())
+    if not compact or compact in {"null", "none"}:
+        return None
+    if re.search(r"w/v|v/w|wt/vol|vol/wt|weight/volume|volume/weight", compact):
+        return None
+    has_w = bool(re.search(r"w/w|wt|weight|gew|masse", compact)) or compact in {"%w", "w", "ww"}
+    has_v = bool(re.search(r"v/v|vol|volume", compact)) or compact in {"%v", "v", "vv"}
+    if has_w and not has_v:
+        return "w/w"
+    if has_v and not has_w:
+        return "v/v"
+    return None
+
+
+# ── Solvent ↔ ratio order reconciliation ───────────────────────────────
+# The raw ratio string often carries the solvent names inline next to their
+# fractions ("43.4% THF : 56.6% n-hexane"). That inline pairing is the
+# authoritative fraction↔solvent mapping. The mobile_phase_solvents list, by
+# contrast, may be in a different order than the fractions. We use the inline
+# names to reorder so component[i] always corresponds to solvent[i] — fixing
+# the "orders flipped" failure without relying on any specific paper's layout.
+
+_UNIT_WORD_RE = re.compile(r"%|\bwt\b|\bvol\b|\bweight\b|\bvolume\b|w\s*/\s*w|v\s*/\s*v|\bby\b|\bgew\b", re.IGNORECASE)
+# Unit tokens embedded in a ratio string. Solvent names in the vocabulary never
+# contain wt/vol/weight/volume/gew, so scanning the whole string is safe.
+_UNIT_TOKEN_SCAN_RE = re.compile(
+    r"%\s*by\s*(?:weight|volume)|(?:%\s*)?(?:w\s*/\s*w|v\s*/\s*v|wt|vol|weight|volume|gew)\.?\s*%?",
+    re.IGNORECASE,
+)
+
+
+def _parse_labeled_component(chunk: str) -> Optional[Tuple[float, str]]:
+    """Parse one ratio component like '43.4% THF' or '1,4-dioxane 50%' into
+    (fraction, canonical_solvent). Returns None if it isn't a fraction+solvent.
+
+    The fraction is taken as the number attached to a '%'/unit marker when
+    present, else the last standalone number — so the leading '1' in
+    '1,4-dioxane' is not mistaken for the fraction."""
+    text = chunk.strip()
+    marker = re.search(r"(\d+(?:\.\d+)?)\s*%", text) or re.search(
+        r"(\d+(?:\.\d+)?)\s*(?:wt|vol|w\s*/\s*w|v\s*/\s*v)", text, re.IGNORECASE
+    )
+    if marker:
+        fraction = float(marker.group(1))
+        start, end = marker.span()
+    else:
+        numbers = list(re.finditer(r"\d+(?:\.\d+)?", text))
+        if not numbers:
+            return None
+        last = numbers[-1]
+        fraction = float(last.group(0))
+        start, end = last.span()
+    remainder = text[:start] + " " + text[end:]
+    remainder = _UNIT_WORD_RE.sub(" ", remainder)
+    remainder = re.sub(r"\band\b|[&+]", " ", remainder, flags=re.IGNORECASE)
+    remainder = remainder.strip(" .,;:-")
+    canonical, _, matched = _resolve_solvent_name(remainder)
+    return (fraction, str(canonical).strip()) if matched else None
+
+
+def _extract_labeled_pairs(raw_ratio: str) -> Optional[List[Tuple[float, str]]]:
+    """Extract ordered (fraction, canonical_solvent) pairs from a ratio string
+    that labels each fraction with its solvent. Returns None unless EVERY
+    top-level component resolves cleanly (fail-safe: no partial guesses)."""
+    text = re.sub(r"[–—−]", "-", str(raw_ratio))
+    for separator in (":", ";", "/", ","):
+        chunks = [c for c in text.split(separator) if c.strip()]
+        if len(chunks) < 2:
+            continue
+        pairs = [_parse_labeled_component(c) for c in chunks]
+        if all(pairs):
+            return pairs  # type: ignore[return-value]
+    return None
+
+
+def _reconcile_mobile_phase(cond: Dict[str, Any]) -> None:
+    """Align mobile_phase_ratio_components with mobile_phase_solvents using the
+    solvent names inline in the raw ratio string, and backfill the ratio unit
+    if it was embedded there.
+
+    When every fraction in the raw ratio is labeled with its solvent, that
+    pairing is authoritative — we take the fractions directly from it (so this
+    also rescues labeled ratios that the generic number parser can't handle,
+    e.g. locant names like '1,4-dioxane'). Conservative: only rewrites when the
+    inline solvents are exactly the normalized solvent set; a genuine mismatch
+    is flagged for review and nothing is changed."""
+    raw_ratio = cond.get("mobile_phase_ratio_raw")
+    _backfill_embedded_unit(cond, raw_ratio)
+
+    solvents = cond.get("mobile_phase_solvents")
+    if not isinstance(solvents, list) or len(solvents) < 2 or not raw_ratio:
+        return
+
+    pairs = _extract_labeled_pairs(str(raw_ratio))
+    if not pairs or len(pairs) != len(solvents):
+        return
+
+    inline_keys = [_normalize_solvent_key(name) for _, name in pairs]
+    solvent_keys = [_normalize_solvent_key(name) for name in solvents]
+    if sorted(inline_keys) != sorted(solvent_keys):
+        # Inline names disagree with the solvent list (extra/missing solvent) —
+        # do not guess; flag for review and leave the data untouched.
+        cond["mobile_phase_order_note"] = "inline solvents differ from solvent list"
+        return
+
+    # Authoritative pairing from the labeled ratio: reorder solvents (and their
+    # qualifiers) to the inline order and take fractions straight from it.
+    key_to_solvent: Dict[str, str] = {}
+    for name in solvents:
+        key_to_solvent.setdefault(_normalize_solvent_key(name), name)
+    qualifiers = cond.get("mobile_phase_solvent_qualifiers")
+    key_to_qualifier: Dict[str, Any] = {}
+    if isinstance(qualifiers, list):
+        for name, qual in zip(solvents, qualifiers):
+            key_to_qualifier.setdefault(_normalize_solvent_key(name), qual)
+
+    new_solvents = [key_to_solvent[k] for k in inline_keys]
+    reordered = new_solvents != solvents
+
+    cond["mobile_phase_solvents"] = new_solvents
+    cond["mobile_phase_ratio_components"] = [fraction for fraction, _ in pairs]
+    if key_to_qualifier:
+        cond["mobile_phase_solvent_qualifiers"] = [key_to_qualifier.get(k) for k in inline_keys]
+    if reordered:
+        cond["mobile_phase_order_reconciled"] = True
+
+
+def _backfill_embedded_unit(cond: Dict[str, Any], raw_ratio: Any) -> None:
+    """If the ratio unit field is empty but the raw ratio string carries a
+    unit ('85.8 wt.% methanol', '90% by volume'), populate it."""
+    if cond.get("mobile_phase_ratio_units") or not raw_ratio:
+        return
+    text = str(raw_ratio)
+    if not re.search(r"\d", text):
+        return
+    for match in _UNIT_TOKEN_SCAN_RE.finditer(text):
+        unit = _canonical_ratio_unit(match.group(0))
+        if unit:
+            cond["mobile_phase_ratio_units"] = unit
+            cond.setdefault("mobile_phase_ratio_units_source", "embedded_in_ratio")
+            return
+
+
 def standardize_condition(cond: dict) -> dict:
     """
     Takes one raw consensus condition dict.
@@ -1127,6 +1267,7 @@ def standardize_condition(cond: dict) -> dict:
     _normalize_ratio_units(out)
     _normalize_solvents(out)
     _normalize_ratio(out)
+    _reconcile_mobile_phase(out)
     _normalize_flow_rate(out)
     _normalize_pore_size(out)
     _normalize_temperature(out)
