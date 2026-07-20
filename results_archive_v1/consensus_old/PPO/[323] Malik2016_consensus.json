@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "source_pdf": "[323] Malik2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Pluronic-10R5, Pluronic-L35, Pluronic-1740, Pluronic-17R4",
+        "critical_component": "PEO",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water",
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "Gradient from 37/63 (Acetone/Water) to 87/13 (Methanol/Water)",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "PL ELS 2100",
+        "evidence_text": "Reversed phase LC at CAP of PEO allowed for oligomeric separation of triblock copolymers with regard to PPO block... Solvent A: Acetone/Water = 37/63 v/v, Solvent B: Methanol/Water = 87/13 v/v... column oven was maintained at 50\u00b0C.",
+        "notes": "Gradient elution used to separate PPO oligomers while PEO is at critical conditions.",
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Pluronic-10R5, Pluronic-L35, Pluronic-1740, Pluronic-17R4",
+        "critical_component": "PPO",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PPO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "Silica (Bare)",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "mobile_phase_ratio": "80/20",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "300 \u00c5",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "PL ELS 2100",
+        "evidence_text": "Normal phase LC at CAP of PPO renders oligomeric separation with respect to PEO block... Isocratic separations at CAP of PPO were performed with mobile phase composition of acetonitrile/water = 80/20 v/v at a flow rate of 1.0 mL/min at 30\u00b0C.",
+        "notes": "Used for 1D separation of PEO oligomers. Also used as first dimension in 2D-LC with slightly different ratio (84/16) and flow rate (0.05 mL/min).",
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Pluronic-10R5",
+        "critical_component": "PEO",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PEO block (Second Dimension of 2D-LC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "75/25",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "100 x 4.6 mm",
+        "detector": "PL ELS 2100",
+        "evidence_text": "Second dimension analysis... Pluronic-10R5 (2nd dimension conditions-methanol/water = 75/25 v/v at 1.0 mL/min, column oven temperature = 45\u00b0C)... fairly critical conditions of PEO and adsorbing conditions of PPO.",
+        "notes": "Second dimension of 2D-LC. Trapping columns used prior to analysis.",
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Pluronic-L35",
+        "critical_component": "PEO",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "Critical adsorption point (CAP) of PEO block (Second Dimension of 2D-LC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "80/20",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "40",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "100 x 4.6 mm",
+        "detector": "PL ELS 2100",
+        "evidence_text": "Second dimension analysis... Pluronic-L35 (2nd dimension conditions-methanol/water = 80/20 v/v at 1.0 mL/min, column oven temperature = 40\u00b0C)... fairly critical conditions of PEO and adsorbing conditions of PPO.",
+        "notes": "Second dimension of 2D-LC. Trapping columns used prior to analysis.",
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": "PEO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "37/63 v/v, 87/13 v/v",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
+        "evidence_text": "Reversed phase (RP) LC separates with regard to PO units of the copolymers at the critical conditions of PEO. On the contrary, Normal phase (NP) LC separates with respect to EO units of the copolymers with minimal effect of PPO block at its critical conditions.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "poloxamers",
+        "critical_component": "PPO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "silica",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "80/20 v/v",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1.0 mL/min",
+        "pore_size": "300 \u00c5",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "detector": "polymer laboratories PL ELS 2100, an evaporating light scattering detector",
+        "evidence_text": "On the contrary, NPLC can be used to achieve CAP of PPO and interaction of PEO. In this study, we realized critical conditions of PPO on Nucleosil columns in acetonitrile-water mobile phase. PPOs show molar mass independent elution in the range of interest for this study (up to 2500 g/mol) in acetonitrile/water (80/20 v/v).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2016.03.008",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea",
+        "publication_year": "2016",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

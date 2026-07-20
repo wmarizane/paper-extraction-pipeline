@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "source_pdf": "[302] Abdul-Karim2019.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water",
+          "trimethylamine"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "PPEC eluted at similar elution volume irrespective of their molar mass while using mobile phase containing 92% ACN, 7% water and 1% TEA (2.8 mL), E. These are so called chromatographic critical conditions of PPEC on RP column.",
+        "detector": "ELSD",
+        "pore_size": "70 \u00c5",
+        "critical_component": "poly(propylene ether carbonate)",
+        "publication_year": "2019",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "92/7/1",
+        "critical_condition_basis": "elution independent of molar mass",
+        "column_name": "ZORBAX ODS",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(propylene ether carbonate)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250x4.6 mm",
+        "stationary_phase_chemistry": "Reversed Phase (ODS)",
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Established using PPEC homopolymers (500 to 5000 g/mol). TEA added to avoid unwanted polar interactions.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "In between these two extreme situations at a mobile phase composition of THF/DMF: 98.5/1.5 (v/v%), all PEG standards elute at the same volume irrespective of their molar mass, Figure 6(E). These are so called LCCC of PEGs in a given solvent/sorbent system.",
+        "detector": "ELSD",
+        "pore_size": "120 \u00c5",
+        "critical_component": "poly(ethylene glycol)",
+        "publication_year": "2019",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "98.5/1.5",
+        "critical_condition_basis": "elution independent of molar mass",
+        "column_name": "PhenoSphere-Next 5u Sil",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(ethylene glycol)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250x4.6 mm",
+        "stationary_phase_chemistry": "Normal Phase (Silica)",
+        "paper_doi": "10.1007/s13233-019-7128-y",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Late elution attributed to hydroxyl end-groups. MeO-PEGs eluted earlier than PEGs under these conditions.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

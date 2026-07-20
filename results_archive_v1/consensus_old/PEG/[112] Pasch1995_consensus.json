@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[112] Pasch1995.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "evidence_text": "The separation of a technical fatty alcohol ethoxylate (FAE) by liquid chromatography under conditions such that the chain length as well as the end-groups direct the separation [26,27] is presented in Fig. 4. ... Column, Nucleosil 100 RP-18 (125 x 4 mm I.D.); eluent, acetonitrile water (70:30, v/v).",
+        "detector": "Waters R-401 differential refractometer",
+        "pore_size": "null",
+        "critical_component": "ethylene oxide block",
+        "publication_year": "1995",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "70:30",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "column_name": "Nucleosil 100 RP-18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "technical fatty alcohol ethoxylate (FAE)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "125 x 4 mm I.D.",
+        "stationary_phase_chemistry": "RP-18",
+        "paper_doi": "null",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Separation directed by chain length and end-groups implies critical condition for the ethylene oxide block.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "evidence_text": "Fig. 6 represents the separation of a triblock copolymer H(EO)x(PO)y(EO)xOH at the critical point of the ethylene oxide blocks. ... Column, Nucleosil 100 RP-18 (250 x 4 mm I.D.); eluent, acetonitrile-water (42:58, v/v).",
+        "detector": "Waters R-401 differential refractometer",
+        "pore_size": "null",
+        "critical_component": "ethylene oxide block",
+        "publication_year": "1995",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "42:58",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+        "column_name": "Nucleosil 100 RP-18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "triblock",
+        "analyte_polymer": "triblock copolymer H(EO)x(PO)y(EO)xOH",
+        "corresponding_email_address": "null",
+        "column_dimensions": "250 x 4 mm I.D.",
+        "stationary_phase_chemistry": "RP-18",
+        "paper_doi": "null",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Operating at the critical point of PEG makes the ethylene oxide block chromatographically 'invisible'.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "hexane"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "evidence_text": "The separation of poly(decamethylene adipate) on silica gel using an eluent of THF-hexane (45:55, v/v).",
+        "detector": "null",
+        "pore_size": "null",
+        "critical_component": "poly(decamethylene adipate)",
+        "publication_year": "1995",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "45:55",
+        "critical_condition_basis": "null",
+        "column_name": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "null",
+        "analyte_polymer": "poly(decamethylene adipate)",
+        "corresponding_email_address": "null",
+        "column_dimensions": "null",
+        "stationary_phase_chemistry": "silica gel",
+        "paper_doi": "null",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "null",
+        "flow_rate": "null",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

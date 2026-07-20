@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[210] Biela2003.pdf",
-    "extraction_date": "2026-06-07T22:31:48.321217",
+    "extraction_date": "2026-07-19T05:02:43.352678",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:02:43.339030+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[210] Biela2003.md",
+        "sha256": "a365222b0613520e93620236a2b5d2665d00bf6ff788fb891660a2ccbfb7264e",
+        "char_len": 41428,
+        "token_count": 12492
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[210] Biela2003.pdf",
-      "start_time": "2026-06-07T22:29:24.753839",
+      "start_time": "2026-07-19T04:59:54.481421",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 40.5523681640625,
+          "time_seconds": 38.61726784706116,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11782050132751465,
+          "time_seconds": 0.11911439895629883,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 12492
         },
         "llm_extraction": {
-          "time_seconds": 102.89708185195923,
+          "time_seconds": 130.06857681274414,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +81,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "linear poly(L-lactide)",
-        "critical_component": "poly(L-lactide) backbone",
+        "analyte_polymer": "linear C4H9-PLA-OH",
+        "critical_component": "PLA backbone",
         "architecture": "linear",
-        "critical_condition_basis": "elution volumes showed no dependence on molar mass",
+        "critical_condition_basis": "elution volumes independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Si-100 and Si-300",
         "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "1,4-dioxane",
           "n-hexane"
@@ -58,12 +106,21 @@
         "pore_size": "100 and 300 A",
         "column_dimensions": null,
         "detector": "Waters 486 tunable UV detector",
-        "evidence_text": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 £ 10[3] to 7.4 £ 10[4] ... showed no dependence of the elution volumes on molar mass. ... LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase.",
-        "notes": "Critical conditions established for linear PLA used to analyze star-shaped PLA.",
+        "field_evidence": {
+          "critical_condition_basis": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 £ 10[3] to 7.4 £ 10[4] ... showed no dependence of the elution volumes on molar mass.",
+          "critical_component": "linear C4H9-PLA-OH's",
+          "column_name": "Si-100 and Si-300 (Macherey-Nagel)",
+          "mobile_phase_solvents": "mixture of 1,4-dioxane/n-hexane",
+          "mobile_phase_ratio": "56.25/43.75 by vol%",
+          "temperature_celsius": "50 8C",
+          "pore_size": "average pore sizes of 100 and 300 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Critical conditions established for linear PLA backbone to analyze star-shaped PLA end-groups.",
         "paper_doi": "10.1016/S0032-3861(03)00030-2",
-        "corresponding_author_name": "Andrzej Duda",
-        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl",
-        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
         "publication_year": "2003"
       }
     ]
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 12492,
       "extraction_success": true,
-      "processing_time": 102.87403845787048,
+      "processing_time": 130.01451587677002,
       "extracted_count": 1
     }
   ]

@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T01:00:59.177741+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_2ndbatch/[84] Lee2000_latest.json",
+        "results/mistral-small-24b/pdf_files_2ndbatch/[84] Lee2000_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 1
@@ -13,40 +52,50 @@
   "extracted_data": {
     "conditions": [
       {
+        "field_evidence": {
+          "critical_condition_basis": "the chromatographic critical condition",
+          "critical_component": "linear PS",
+          "column_name": "a single C18 bonded silica column (Nucleosil C18AB, 100 \u00c5 pore, 250 \u00d7 4.6 mm)",
+          "mobile_phase_solvents": "a mixture of CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "(57/43, v/v)",
+          "temperature_celsius": "the column temperature was kept constant at 43 \u00b0C",
+          "pore_size": "100 \u00c5 pore",
+          "flow_rate": "the flow rate was 0.5 mL/min"
+        },
         "critical_condition_basis": "Chromatographic critical condition of linear PS",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea; Institute for Chemical Process and Environmental Technology, National Research Council of Canada, Ottawa, Ontario K1A 0R9, Canada",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "The critical condition was established for linear PS (independent of MW) to separate cyclic PS (dependent on MW).",
+        "architecture": "linear",
+        "critical_component": "linear PS",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2000",
+        "pore_size": "100 \u00c5",
+        "paper_doi": "10.1021/ma000807b",
+        "mobile_phase_ratio": "57/43",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "detector": null,
         "corresponding_email_address": "tc@postech.ac.kr",
-        "architecture": "Linear",
-        "corresponding_author_name": "Taihyun Chang",
-        "column_name": "Nucleosil C18AB",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 \u00c5 pore, 250 \u00d7 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 \u00b0C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
-        "publication_year": "2000",
-        "column_dimensions": "250 x 4.6 mm",
-        "mobile_phase_ratio": "57/43",
-        "stationary_phase_chemistry": "C18 bonded silica",
-        "pore_size": "100 \u00c5",
-        "mobile_phase_ratio_units": "v/v",
-        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "mobile_phase_solvents": [
-          "CH2Cl2",
-          "CH3CN"
-        ],
-        "analyte_polymer": "Cyclic Polystyrene",
-        "critical_component": "Linear Polystyrene",
-        "paper_doi": "10.1021/ma000807b",
         "temperature_celsius": "43",
-        "notes": "The critical condition was established for linear PS (elution independent of MW at ~5.4 min) to separate cyclic PS contaminants.",
-        "critical_condition_confidence": "explicit",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": null,
+        "column_name": "Nucleosil C18AB",
+        "analyte_polymer": "cyclic PS",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
-          "mistral": "missed"
+          "mistral": "explicit"
         }
       }
     ]

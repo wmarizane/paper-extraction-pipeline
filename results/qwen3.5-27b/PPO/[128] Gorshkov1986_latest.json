@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[128] Gorshkov1986.pdf",
-    "extraction_date": "2026-06-07T22:36:35.079200",
+    "extraction_date": "2026-07-19T13:57:09.192043",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:57:09.184010+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[128] Gorshkov1986.md",
+        "sha256": "a4323730cab782d1e81242f9da5cdf29c35a858ad3f5a6631c690ea8f05ac0ef",
+        "char_len": 6293,
+        "token_count": 2050
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[128] Gorshkov1986.pdf",
-      "start_time": "2026-06-07T22:34:31.457064",
+      "start_time": "2026-07-19T13:55:11.996044",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 16.74627661705017,
+          "time_seconds": 16.98077893257141,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13014674186706543,
+          "time_seconds": 0.1127777099609375,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 2050
         },
         "llm_extraction": {
-          "time_seconds": 106.74559903144836,
+          "time_seconds": 100.0506865978241,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "43622"
+      }
     }
   },
   "summary": {
@@ -36,11 +83,12 @@
       {
         "analyte_polymer": "Poly(oxypropylenpolyolen)",
         "critical_component": "Poly(propylenglykol)",
-        "architecture": "difunktionell",
-        "critical_condition_basis": "Unabhängigkeit des Elutionsvolumens von der Molmasse",
+        "architecture": "linear",
+        "critical_condition_basis": "Elution volume independent of molar mass",
         "critical_condition_confidence": "strong_inference",
         "column_name": "LiChrosorb Si 100",
         "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "Methylethylketon",
           "Ethylacetat"
@@ -56,10 +104,19 @@
         "temperature_celsius": "30",
         "flow_rate": null,
         "pore_size": null,
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250mm x 4.6mm",
         "detector": "RIDK 101",
-        "evidence_text": "Bei dem von uns angewandten Gemisch Methylethylketon/Ethylacetat werden die kritischen Bedingungen durch stufenweise Zugabe von Ethylacetat zu Methylethylketon erreicht... 5/95 (4)... Unter diesen Bedingungen ist das Elutionsvolumen unabhängig von der Molmasse... Zur Auffindung der kritischen Bedingungen für Poly(oxypropylenpolyole) werden definiert difunktionelle Produkte unterschiedlicher Molmasse mittels HPLC an einem Lichrosorb Si 100 als stationärer Phase chromatographiert. Als difunktionelle Polyole werden Poly(propylenglykol)-Eichstandards der Fa. Waters eingesetzt.",
-        "notes": "The text lists several ratios (20/80, 10/90, 7/93, 5/95, 0/100) in Figure 4 caption to determine critical conditions. The text states critical conditions are reached by stepwise addition. The 5/95 ratio is the specific composition closest to the critical point mentioned in the list where independence is achieved (implied by the context of finding the point). The analyte is Poly(oxypropylenpolyolen) but the condition is established using difunctional Poly(propylenglykol) standards.",
+        "field_evidence": {
+          "critical_condition_basis": "Unter diesen Bedingungen ist das Elutionsvolumen unabhangig von der Molmasse",
+          "critical_component": "Als difunktionelle Polyole werden Poly(propylenglykol)-Eichstandards der Fa. Waters eingesetzt",
+          "column_name": "LiChrosorb Si 100",
+          "mobile_phase_solvents": "Methylethylketon/Ethylacetat",
+          "mobile_phase_ratio": "5/95 (4)",
+          "temperature_celsius": "isokratischen Bedingungen bei 30°C",
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Critical conditions determined by stepwise addition of Ethylacetat to Methylethylketon. The text lists ratios 20/80, 10/90, 7/93, 5/95, 0/100. The 5/95 ratio is the specific composition closest to the critical point where independence from molar mass is achieved for the standards used.",
         "paper_doi": null,
         "corresponding_author_name": "Gorškov, A. V.",
         "corresponding_email_address": null,
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 2050,
       "extraction_success": true,
-      "processing_time": 106.72261238098145,
+      "processing_time": 99.99272561073303,
       "extracted_count": 1
     }
   ]

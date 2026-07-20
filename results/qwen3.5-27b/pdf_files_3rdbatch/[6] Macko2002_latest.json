@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[6] Macko2002.pdf",
-    "extraction_date": "2026-06-07T23:53:02.810148",
+    "extraction_date": "2026-07-19T15:52:17.377901",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:52:17.365593+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[6] Macko2002.md",
+        "sha256": "56c274d5be00defe0ccad7d308d975a86b7f1c5aa5b4f8a215a430bedbd0b6a7",
+        "char_len": 40098,
+        "token_count": 10188
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[6] Macko2002.pdf",
-      "start_time": "2026-06-07T23:45:37.593883",
+      "start_time": "2026-07-19T15:44:07.548171",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 56.36833715438843,
+          "time_seconds": 53.95779037475586,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11728382110595703,
+          "time_seconds": 0.1161959171295166,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10188
         },
         "llm_extraction": {
-          "time_seconds": 388.7305312156677,
+          "time_seconds": 435.70165824890137,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -36,11 +83,12 @@
       {
         "analyte_polymer": "Poly(methyl methacrylate)",
         "critical_component": "Poly(methyl methacrylate)",
-        "architecture": "linear",
-        "critical_condition_basis": "Temperature adjustment in single eluent (acetonitrile) on C18 bonded silica",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18 LS ST",
-        "stationary_phase_chemistry": "Silica gel bonded with C18 phase",
+        "stationary_phase_chemistry": "Silica C18 bonded phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile"
         ],
@@ -53,12 +101,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "66",
-        "flow_rate": "0.4 to 1 mL/min",
+        "flow_rate": null,
         "pore_size": "30 nm",
         "column_dimensions": "250 x 6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
-        "notes": "Also used for separation of stereoregularity (isotactic vs syndiotactic).",
+        "detector": "evaporative light scattering detector DDL-21",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C",
+          "critical_component": "acetonitrile for PMMA",
+          "column_name": "Nucleosil C18 LS ST",
+          "mobile_phase_solvents": "acetonitrile",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "66 °C",
+          "pore_size": "30 nm",
+          "flow_rate": null
+        },
+        "notes": "System 11 in Table 2. Also used for stereoregularity separation.",
         "paper_doi": "10.1021/ma010994t",
         "corresponding_author_name": "T. Macko",
         "corresponding_email_address": null,
@@ -68,11 +125,12 @@
       {
         "analyte_polymer": "Poly(n-butyl methacrylate)",
         "critical_component": "Poly(n-butyl methacrylate)",
-        "architecture": "linear",
-        "critical_condition_basis": "Temperature adjustment in single eluent (dimethylformamide) on C18 bonded silica",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18 LS ST",
-        "stationary_phase_chemistry": "Silica gel bonded with C18 phase",
+        "stationary_phase_chemistry": "Silica C18 bonded phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "dimethylformamide"
         ],
@@ -85,12 +143,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "154",
-        "flow_rate": "0.4 to 1 mL/min",
+        "flow_rate": null,
         "pore_size": "30 nm",
         "column_dimensions": "250 x 6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
-        "notes": "Temperature is far above tabulated Theta point; system may exhibit two Theta points.",
+        "detector": "evaporative light scattering detector DDL-21",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, ... dimethylformamide for PnBMA at 154 °C",
+          "critical_component": "dimethylformamide for PnBMA",
+          "column_name": "Nucleosil C18 LS ST",
+          "mobile_phase_solvents": "dimethylformamide",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "154 °C",
+          "pore_size": "30 nm",
+          "flow_rate": null
+        },
+        "notes": "System 14 in Table 2.",
         "paper_doi": "10.1021/ma010994t",
         "corresponding_author_name": "T. Macko",
         "corresponding_email_address": null,
@@ -100,11 +167,12 @@
       {
         "analyte_polymer": "Polystyrene",
         "critical_component": "Polystyrene",
-        "architecture": "linear",
-        "critical_condition_basis": "Temperature adjustment in single eluent (dimethylformamide) on C18 bonded silica",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18 LS ST",
-        "stationary_phase_chemistry": "Silica gel bonded with C18 phase",
+        "stationary_phase_chemistry": "Silica C18 bonded phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "dimethylformamide"
         ],
@@ -117,12 +185,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "95",
-        "flow_rate": "0.4 to 1 mL/min",
+        "flow_rate": null,
         "pore_size": "30 nm",
         "column_dimensions": "250 x 6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
-        "notes": "Used for separation of block and graft copolymers of styrene and methyl methacrylate.",
+        "detector": "evaporative light scattering detector DDL-21",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, ... and for PS at 95 °C",
+          "critical_component": "for PS at 95 °C",
+          "column_name": "Nucleosil C18 LS ST",
+          "mobile_phase_solvents": "dimethylformamide",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "95 °C",
+          "pore_size": "30 nm",
+          "flow_rate": null
+        },
+        "notes": "System 16 in Table 2.",
         "paper_doi": "10.1021/ma010994t",
         "corresponding_author_name": "T. Macko",
         "corresponding_email_address": null,
@@ -132,11 +209,12 @@
       {
         "analyte_polymer": "Polystyrene",
         "critical_component": "Polystyrene",
-        "architecture": "linear",
-        "critical_condition_basis": "Temperature adjustment in single eluent (cyclohexane) on C18 bonded silica",
-        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "critical_condition_basis": "criticallike elution",
+        "critical_condition_confidence": "strong_inference",
         "column_name": "Nucleosil C18 LS ST",
-        "stationary_phase_chemistry": "Silica gel bonded with C18 phase",
+        "stationary_phase_chemistry": "Silica C18 bonded phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "cyclohexane"
         ],
@@ -149,12 +227,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "9",
-        "flow_rate": "0.4 to 1 mL/min",
+        "flow_rate": null,
         "pore_size": "30 nm",
         "column_dimensions": "250 x 6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
-        "notes": "Described as 'criticallike' elution; higher molar masses underwent phase separation.",
+        "detector": "evaporative light scattering detector DDL-21",
+        "field_evidence": {
+          "critical_condition_basis": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing",
+          "critical_component": "cyclohexane for PS at 9 °C",
+          "column_name": "Nucleosil C18 LS ST",
+          "mobile_phase_solvents": "cyclohexane",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "9 °C",
+          "pore_size": "30 nm",
+          "flow_rate": null
+        },
+        "notes": "System 17 in Table 2. Described as 'critical or precipitation' in table, but text calls it 'criticallike'.",
         "paper_doi": "10.1021/ma010994t",
         "corresponding_author_name": "T. Macko",
         "corresponding_email_address": null,
@@ -164,11 +251,12 @@
       {
         "analyte_polymer": "Polystyrene",
         "critical_component": "Polystyrene",
-        "architecture": "linear",
-        "critical_condition_basis": "Temperature adjustment in single eluent (cyclohexane) on C18 bonded silica (Extend)",
+        "architecture": null,
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
-        "column_name": "Agilent Extend C18",
-        "stationary_phase_chemistry": "Silica gel bonded and end-capped C18 phase",
+        "column_name": "Extend",
+        "stationary_phase_chemistry": "Silica C18 bonded and end-capped",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "cyclohexane"
         ],
@@ -181,12 +269,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "9",
-        "flow_rate": "0.4 to 1 mL/min",
+        "flow_rate": null,
         "pore_size": "10 nm",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "Evaporative light scattering detector DDL-21",
-        "evidence_text": "Table 2, entry 19: PS on Agilent Extend C18, cyclohexane, critical, +9",
-        "notes": "Critical conditions identified on end-capped column.",
+        "detector": "evaporative light scattering detector DDL-21",
+        "field_evidence": {
+          "critical_condition_basis": "PS on Agilent Extend C18 ... cyclohexane ... critical",
+          "critical_component": "PS on Agilent Extend C18",
+          "column_name": "Extend",
+          "mobile_phase_solvents": "cyclohexane",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "9",
+          "pore_size": "10 nm",
+          "flow_rate": null
+        },
+        "notes": "System 19 in Table 2. Distinct from System 17 due to different column packing (Extend vs Nucleosil).",
         "paper_doi": "10.1021/ma010994t",
         "corresponding_author_name": "T. Macko",
         "corresponding_email_address": null,
@@ -201,7 +298,7 @@
       "section": "Full Paper",
       "token_count": 10188,
       "extraction_success": true,
-      "processing_time": 388.7073030471802,
+      "processing_time": 435.64585542678833,
       "extracted_count": 5
     }
   ]

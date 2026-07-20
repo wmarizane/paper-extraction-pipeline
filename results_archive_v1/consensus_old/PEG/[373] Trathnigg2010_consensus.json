@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[373] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Central Polymer Lab \u2013 Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone \u2013 water, which corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "detector": "PL-ELS 2100",
+        "pore_size": "Mesopore: 130\u00b5m; Macropore: 2 \u00b5m",
+        "critical_component": "PEG",
+        "publication_year": "2010",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "90 % acetone \u2013 water",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Onyx C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "100mm\u00d74.6mm",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Used for analysis of fatty acid ethoxylates and PEG samples. The text states this composition corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "flow_rate": "2 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Central Polymer Lab \u2013 Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "evidence_text": "Right side: Off-line two-dimensional separation: First dimension: LCCC in 90 % methanol with focussing of fractions on a FAD column",
+        "detector": null,
+        "pore_size": null,
+        "critical_component": "PEG",
+        "publication_year": "2010",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "90 % methanol",
+        "critical_condition_basis": "LCCC in 90 % methanol",
+        "column_name": "FAD column",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt-%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "diblock",
+        "analyte_polymer": "PEG 400 monolaurate",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": null,
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "This is the first dimension of an off-line 2D-LC setup (LCCC-LEAC). The text identifies the first dimension as LCCC in 90% methanol. The column is referred to as 'FAD column' which likely refers to the Onyx C18 monolith used in other LCCC experiments, but the text does not explicitly link the name 'FAD' to the specific column specs in this sentence. The stationary phase chemistry is inferred from the general LCCC setup described in the experimental section (Onyx C18).",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[337] Malik2013.pdf",
+    "extraction_date": "2026-06-14T15:13:29.537222",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[337] Malik2013.pdf",
+      "start_time": "2026-06-14T15:07:32.657085",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 67.12436103820801,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12470436096191406,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10346
+        },
+        "llm_extraction": {
+          "time_seconds": 289.6309492588043,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PCL diols with uniform central block (diethylene glycol)",
+        "critical_component": "Polyethylene oxide (EO)",
+        "architecture": "Triblock (CL-DEG-CL) and Diblock (CL-DEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "82 vol.% methanol",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "Density detector DDS70 and Refractive Index detector",
+        "evidence_text": "Fig. 1 shows, that on a Synergi Fusion RP column a CAP for EO exists at 25 C in a methanol–water mobile phase containing 82 vol.% methanol. Under such conditions, two series of peaks are observed for the different PCL diols (Fig. 2)... LCCC of PCL-diols with a different middle block on Synergi Fusion RP in 82% methanol–water (CAP for EO).",
+        "notes": "Analytical LCCC used to separate diblocks from triblocks based on symmetry.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013"
+      },
+      {
+        "analyte_polymer": "PCL diol 830",
+        "critical_component": "Polyethylene oxide (EO)",
+        "architecture": "Triblock (CL-DEG-CL) and Diblock (CL-DEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "mobile_phase_ratio": "69.1 wt.% acetonitrile",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "25 mm x 300 mm",
+        "detector": "Density detection system DDS70 and SICON LCD 201 RI detector",
+        "evidence_text": "Semi-preparative LCCC of PCL-diol 830 on the Spherisorb ODS2 column in 69.1% acetonitrile. Fraction limits are indicated by dashed lines.",
+        "notes": "Semi-preparative LCCC used for fractionation to identify peaks in analytical LCCC. Included as it is an LCCC experiment, though preparative in scale.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013"
+      },
+      {
+        "analyte_polymer": "BO-DEG-BO oligomers",
+        "critical_component": "Polyethylene oxide (EO)",
+        "architecture": "Triblock (BO-DEG-BO) and Diblock (BO-DEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG/EO block",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "70% methanol",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "Density detector DDS70 and Refractive Index detector",
+        "evidence_text": "In principle, with monodisperse central block or a short central block with low polydispersity, the separation according to BO is possible around critical adsorption point of PEG... Fig. 10 shows overlays of chromatograms... with lower methanol content (70%), lower oligomers can be separated according to symmetry (Fig. 10a).",
+        "notes": "Text states separation is possible 'around critical adsorption point' and uses 70% methanol for symmetry separation. The exact CAP for BO-DEG-BO is not explicitly defined as a single number like the PCL case, but the condition is used for LCCC-like separation.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10346,
+      "extraction_success": true,
+      "processing_time": 289.60863041877747,
+      "extracted_count": 3
+    }
+  ]
+}

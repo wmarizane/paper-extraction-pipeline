@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[350] Weidner2012.pdf",
-    "extraction_date": "2026-06-08T00:21:16.780524",
+    "extraction_date": "2026-07-19T05:59:57.511556",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:59:57.502967+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[350] Weidner2012.md",
+        "sha256": "0283dba395191d34c2284fbef9124b61d98989592bfca93fd8b7968e6844bb7d",
+        "char_len": 32245,
+        "token_count": 9150
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[350] Weidner2012.pdf",
-      "start_time": "2026-06-08T00:20:47.426128",
+      "start_time": "2026-07-19T05:59:27.705287",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 17.154268980026245,
+          "time_seconds": 15.547331809997559,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.14300179481506348,
+          "time_seconds": 0.10778117179870605,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9150
         },
         "llm_extraction": {
-          "time_seconds": 12.056972742080688,
+          "time_seconds": 14.096115350723267,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -36,11 +82,12 @@
       {
         "analyte_polymer": "PEO-b-PPO-b-PEO",
         "critical_component": "PPO",
-        "architecture": "block",
+        "architecture": "linear",
         "critical_condition_basis": "critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "YMC RP18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
@@ -58,10 +105,19 @@
         "pore_size": "120 Å",
         "column_dimensions": "250 × 4.6 mm i.D.",
         "detector": "ELSD",
-        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+        "field_evidence": {
+          "critical_condition_basis": "critical point of adsorption",
+          "critical_component": "PPO",
+          "column_name": "YMC RP18 column",
+          "mobile_phase_solvents": "THF/water",
+          "mobile_phase_ratio": "85/15 (v/v)",
+          "temperature_celsius": "45 °C",
+          "pore_size": "120 Å pore size",
+          "flow_rate": "0.5 mL min−1"
+        },
         "notes": null,
         "paper_doi": "10.1002/macp.201200169",
-        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen",
         "corresponding_email_address": "steffen.weidner@bam.de",
         "physical_address": "BAM–Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
         "publication_year": "2012"
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 9150,
       "extraction_success": true,
-      "processing_time": 12.043811559677124,
+      "processing_time": 14.00634479522705,
       "extracted_count": 1
     }
   ]

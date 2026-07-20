@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[403] Radke2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/nhexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
+        "detector": "RI, MALLS, UV, ELSD",
+        "pore_size": "100 A and 300 A",
+        "critical_component": "poly(lactide)",
+        "publication_year": "2005",
+        "temperature_celsius": "50",
+        "mobile_phase_ratio": "57.1/42.9",
+        "critical_condition_basis": "critical conditions determined for linear PLAs",
+        "column_name": "Nucleosil",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(lactide)",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "0.46x20 cm and 0.46x25 cm",
+        "stationary_phase_chemistry": "bare silica",
+        "paper_doi": "10.1016/j.polymer.2005.05.028",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Columns connected in series. Used to analyze star-shaped PLAs.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

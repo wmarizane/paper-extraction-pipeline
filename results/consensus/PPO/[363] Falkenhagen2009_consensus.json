@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "source_pdf": "[363] Falkenhagen2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:24:45.686789+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[363] Falkenhagen2009_latest.json",
+        "results/mistral-small-24b/PPO/[363] Falkenhagen2009_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of 85:15 THF/water (v/v), which represents the 'critical' mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "critical_component": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "mobile_phase_ratio": "At a solvent composition of 85:15 THF/water (v/v), which represents the 'critical' mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 \u00b0C.",
+          "pore_size": null,
+          "flow_rate": "At a flow rate of 0.5 mL/min only after 0.35 min a complete elution could be observed."
+        },
+        "critical_condition_basis": "critical mode of adsorption",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "water with 0.2% formic acid",
+          "tetrahydrofurane"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Copolymer analyzed under PPO critical conditions. PEO block is not at critical condition.",
+        "architecture": "block copolymer",
+        "critical_component": "PPO",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2009",
+        "pore_size": null,
+        "paper_doi": "10.1021/ac8019784",
+        "mobile_phase_ratio": "85:15",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "temperature_celsius": "30",
+        "column_dimensions": "50 mm x 2.1 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "ESI-TOF MS",
+        "column_name": "BEH C18",
+        "analyte_polymer": "PPO/PEO copolymer",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "ethoxylated fatty acid alcohols mixture",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption of PEO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "BEH C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water with 0.1% formic acid",
+          "acetonitrile/methanol 30:70 (v/v)"
+        ],
+        "mobile_phase_ratio": "15.7/84.3",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.35 mL/min",
+        "pore_size": null,
+        "column_dimensions": "50 mm x 2.1 mm",
+        "detector": "ESI-TOF MS",
+        "field_evidence": {
+          "critical_condition_basis": "These \"critical\" conditions were applied for a separation of a mixture of 8 fatty acid ethoxylated alcohols.",
+          "critical_component": "determination of critical conditions of adsorption of PEO",
+          "column_name": "BEH (Bridged Ethane Hybrid particle) C18 column",
+          "mobile_phase_solvents": "mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B)",
+          "mobile_phase_ratio": "15.7/ 84.3 (A/B, v/v)",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 \u00b0 C",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min"
+        },
+        "notes": "Mixture of 8 ethoxylated fatty acid alcohols analyzed under PEO critical conditions established previously.",
+        "paper_doi": "10.1021/ac8019784",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "HO-PEO-(CH2)18-H",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical mode of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "BEH C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile/methanol"
+        ],
+        "mobile_phase_ratio": "15.7/84.3",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.35 mL/min",
+        "pore_size": null,
+        "column_dimensions": "50 mm x 2.1 mm",
+        "detector": "ESI-TOF MS",
+        "field_evidence": {
+          "critical_condition_basis": "Using a mixture of 15.7/ 84.3 (A/B, v/v) 'critical' separation conditions were realized.",
+          "critical_component": "For the determination of critical conditions of adsorption of PEO, an ethoxylated fatty acid C 18 alcohol ( M w ) 700 g/mol) was used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "Different binary and ternary solvent mixtures were used as mobile phase. The determination of critical conditions of adsorption of PEO and the characterization of different PEO's was performed using mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B).",
+          "mobile_phase_ratio": "Using a mixture of 15.7/ 84.3 (A/B, v/v) 'critical' separation conditions were realized.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 \u00b0C.",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min."
+        },
+        "notes": null,
+        "paper_doi": "10.1021/ac8019784",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

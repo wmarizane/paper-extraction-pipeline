@@ -5,159 +5,285 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:58:10.604109+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_2ndbatch/[289] Banerjee2015_latest.json",
+        "results/mistral-small-24b/pdf_files_2ndbatch/[289] Banerjee2015_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
       {
-        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC using RI detector as a concentration detector allowed separation and quantification of PIB species according to their chemical heterogeneity",
+          "critical_component": "PIB-diol",
+          "column_name": "YMC HPLC COLUMN",
+          "mobile_phase_solvents": "THF and methanol",
+          "mobile_phase_ratio": "THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "constant column temperature of 35[\u25e6] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
+        },
+        "critical_condition_basis": "elution independent of MW",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "RI detector used for quantitative analysis. ELS detector also used for LCCC but noted as non-linear.",
+        "architecture": "linear",
+        "critical_component": "PIB-diol",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2015",
+        "pore_size": "120 A",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "mobile_phase_ratio": "80.5/19.5",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "detector": "RI detector (Waters 2414)",
-        "corresponding_email_address": "Rudolf.Faust@uml.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Rudolf Faust",
-        "column_name": "YMC HPLC COLUMN",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
-        "publication_year": "2015",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "temperature_celsius": "35",
         "column_dimensions": "4.6 mm \u00d7 250 mm",
-        "mobile_phase_ratio": "80.5/19.5",
-        "stationary_phase_chemistry": "reversed phase C18",
-        "pore_size": "120 A",
-        "mobile_phase_ratio_units": "w/w",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
+        "flow_rate": "0.5 mL/min",
+        "detector": "Waters 2414 Refractive Index detector",
+        "column_name": "YMC HPLC COLUMN",
         "analyte_polymer": "PIB-diol",
-        "critical_component": "PIB backbone",
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "temperature_celsius": "35",
-        "notes": "Used for determination of critical conditions.",
-        "critical_condition_confidence": "explicit",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
         "model_confidences": {
-          "qwen": "missed",
+          "qwen": "explicit",
           "mistral": "explicit"
         }
       },
       {
-        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "detector": "RI detector (Waters 2414)",
-        "corresponding_email_address": "Rudolf.Faust@uml.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Rudolf Faust",
-        "column_name": "YMC HPLC COLUMN",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
-        "publication_year": "2015",
-        "column_dimensions": "4.6 mm \u00d7 250 mm",
-        "mobile_phase_ratio": "80.5/19.5",
-        "stationary_phase_chemistry": "reversed phase C18",
-        "pore_size": "120 A",
-        "mobile_phase_ratio_units": "w/w",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
-        "analyte_polymer": "PIB-monool",
-        "critical_component": "PIB backbone",
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "temperature_celsius": "35",
-        "notes": "Used for determination of critical conditions.",
-        "critical_condition_confidence": "explicit",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      },
-      {
-        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "detector": "RI detector (Waters 2414)",
-        "corresponding_email_address": "Rudolf.Faust@uml.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Rudolf Faust",
-        "column_name": "YMC HPLC COLUMN",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
-        "publication_year": "2015",
-        "column_dimensions": "4.6 mm \u00d7 250 mm",
-        "mobile_phase_ratio": "80.5/19.5",
-        "stationary_phase_chemistry": "reversed phase C18",
-        "pore_size": "120 A",
-        "mobile_phase_ratio_units": "w/w",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
-        "mobile_phase_solvents": [
-          "THF",
-          "methanol"
-        ],
         "analyte_polymer": "PIB-diallyl",
         "critical_component": "PIB backbone",
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "temperature_celsius": "35",
-        "notes": "Used for determination of critical conditions.",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW",
         "critical_condition_confidence": "explicit",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      },
-      {
-        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "detector": "RI detector (Waters 2414)",
-        "corresponding_email_address": "Rudolf.Faust@uml.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Rudolf Faust",
-        "column_name": "YMC HPLC COLUMN",
+        "temperature_celsius": "35",
         "flow_rate": "0.5 mL/min",
-        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
-        "publication_year": "2015",
-        "column_dimensions": "4.6 mm \u00d7 250 mm",
-        "mobile_phase_ratio": "80.5/19.5",
-        "stationary_phase_chemistry": "reversed phase C18",
         "pore_size": "120 A",
-        "mobile_phase_ratio_units": "w/w",
-        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "ELS detector",
+        "field_evidence": {
+          "critical_condition_basis": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+          "critical_component": "PIB samples with identical chemical functionality eluted at the same position, independently of their MW",
+          "column_name": "One reversed phase C18 chromatography column (YMC HPLC COLUMN)",
+          "mobile_phase_solvents": "HPLC grade THF and methanol were used to prepare the mobile phase",
+          "mobile_phase_ratio": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "All measurements were carried out at a constant column temperature of 35[\u25e6] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "at a flow rate of 0.5 mL/min"
+        },
+        "notes": "ELS detector used for LCCC analysis of PIB-diallyl. Note: ELS signal not strictly proportional to concentration.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
+        "publication_year": "2015",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PIB-monool",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "methanol"
         ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+          "critical_component": "PIB samples with identical chemical functionality eluted at the same position, independently of their MW",
+          "column_name": "One reversed phase C18 chromatography column (YMC HPLC COLUMN)",
+          "mobile_phase_solvents": "HPLC grade THF and methanol were used to prepare the mobile phase",
+          "mobile_phase_ratio": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "All measurements were carried out at a constant column temperature of 35[\u25e6] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "at a flow rate of 0.5 mL/min"
+        },
+        "notes": "RI detector used for quantitative analysis.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
+        "publication_year": "2015",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
         "analyte_polymer": "PIB-dichloride",
         "critical_component": "PIB backbone",
-        "paper_doi": "10.1016/j.chroma.2014.12.022",
-        "temperature_celsius": "35",
-        "notes": "Used for determination of critical conditions.",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW",
         "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+          "critical_component": "PIB samples with identical chemical functionality eluted at the same position, independently of their MW",
+          "column_name": "One reversed phase C18 chromatography column (YMC HPLC COLUMN)",
+          "mobile_phase_solvents": "HPLC grade THF and methanol were used to prepare the mobile phase",
+          "mobile_phase_ratio": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "All measurements were carried out at a constant column temperature of 35[\u25e6] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "at a flow rate of 0.5 mL/min"
+        },
+        "notes": "RI detector used for quantitative analysis.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
+        "publication_year": "2015",
         "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PIB-diolefin",
+        "critical_component": "PIB backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of MW",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC HPLC COLUMN",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "mobile_phase_ratio": "80.5/19.5",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "120 A",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+          "critical_component": "PIB samples with identical chemical functionality eluted at the same position, independently of their MW",
+          "column_name": "One reversed phase C18 chromatography column (YMC HPLC COLUMN)",
+          "mobile_phase_solvents": "HPLC grade THF and methanol were used to prepare the mobile phase",
+          "mobile_phase_ratio": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w)",
+          "temperature_celsius": "All measurements were carried out at a constant column temperature of 35[\u25e6] C",
+          "pore_size": "pore diameters = 120 A",
+          "flow_rate": "at a flow rate of 0.5 mL/min"
+        },
+        "notes": "RI detector used for quantitative analysis. Identified as exo olefin difunctional PIB.",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust; Taihyun Chang",
+        "corresponding_email_address": "Rudolf Faust@uml.edu; Taihyun Chang@postech.ac.kr",
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang, Pohang 790-784, South Korea",
+        "publication_year": "2015",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
         }
       }
     ]

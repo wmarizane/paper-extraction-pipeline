@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[296] Malik2020.pdf",
-    "extraction_date": "2026-06-08T00:01:22.519835",
+    "extraction_date": "2026-07-19T12:37:15.765007",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:37:15.753614+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[296] Malik2020.md",
+        "sha256": "f84456f4172a60a753a50ab469f24ce6974fd9b8ca14c367827af034548250e1",
+        "char_len": 65689,
+        "token_count": 16945
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[296] Malik2020.pdf",
-      "start_time": "2026-06-07T23:53:49.349050",
+      "start_time": "2026-07-19T12:29:43.087176",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 97.80821895599365,
+          "time_seconds": 95.88449287414551,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10245466232299805,
+          "time_seconds": 0.11089706420898438,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 16945
         },
         "llm_extraction": {
-          "time_seconds": 355.2599792480469,
+          "time_seconds": 356.62248849868774,
           "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -40,8 +86,8 @@
       "section": "Full Paper",
       "token_count": 16945,
       "extraction_success": false,
-      "processing_time": 115.17023968696594,
-      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEO-PMMA\",\"critical_component\":\"PMMA\",\"architecture\":\"di-block\",\"critical_condition_basis\":\"critical mobile phase composition\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"octadecyl\",\"mobile_phase_s"
+      "processing_time": 115.58616232872009,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEO-PMMA\",\"critical_component\":\"PMMA\",\"architecture\":\"di-block\",\"critical_condition_basis\":\"LCCC\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Prodigy ODS3\",\"stationary_phase_chemistry\":\"octadecyl\",\"column_mode\":\"Reversed Phase\",\"mobile_phase"
     }
   ]
 }

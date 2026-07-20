@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[367] Adler2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlo\u00dfgartenstr. 6, 64289 Darmstadt, Germany",
+        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
+        "detector": "ELSD",
+        "pore_size": null,
+        "critical_component": "poly(ethylene glycol)",
+        "publication_year": "2005",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "81:19",
+        "critical_condition_basis": "critical point of adsorption for PEG",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.-%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "poly(ethylene glycol)",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_author_name": "Harald Pasch",
+        "notes": "Used for separation of MPEG and macromonomer with regard to endgroups irrespective of molar mass. Also used for copolymers to compensate for PEO molar mass distribution.",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

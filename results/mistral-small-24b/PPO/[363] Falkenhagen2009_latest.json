@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[363] Falkenhagen2009.pdf",
-    "extraction_date": "2026-06-08T00:22:42.713922",
+    "extraction_date": "2026-07-19T06:01:33.513199",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T06:01:33.504006+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[363] Falkenhagen2009.md",
+        "sha256": "513fb5043618b07ca1b587aed73f2d4b3851af6bb550cb9fa3033928c8df1520",
+        "char_len": 24425,
+        "token_count": 6731
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[363] Falkenhagen2009.pdf",
-      "start_time": "2026-06-08T00:21:56.937761",
+      "start_time": "2026-07-19T06:00:34.554872",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 25.931893587112427,
+          "time_seconds": 23.746126174926758,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1184999942779541,
+          "time_seconds": 0.10177302360534668,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6731
         },
         "llm_extraction": {
-          "time_seconds": 19.72550940513611,
+          "time_seconds": 35.04811120033264,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +80,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide)",
-        "critical_component": "poly(ethylene oxide)",
+        "analyte_polymer": "HO-PEO-(CH2)18-H",
+        "critical_component": "PEO",
         "architecture": "linear",
-        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_basis": "critical mode of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "acetonitrile/methanol"
@@ -58,22 +105,32 @@
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+        "field_evidence": {
+          "critical_condition_basis": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+          "critical_component": "For the determination of critical conditions of adsorption of PEO, an ethoxylated fatty acid C 18 alcohol ( M w ) 700 g/mol) was used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "Different binary and ternary solvent mixtures were used as mobile phase. The determination of critical conditions of adsorption of PEO and the characterization of different PEO ′ s was performed using mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B).",
+          "mobile_phase_ratio": "Using a mixture of 15.7/ 84.3 (A/B, v/v) “critical” separation conditions were realized.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C.",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min."
+        },
         "notes": null,
         "paper_doi": "10.1021/ac8019784",
-        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
         "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(propylene oxide)",
-        "critical_component": "poly(propylene oxide)",
+        "analyte_polymer": "PPO",
+        "critical_component": "PPO",
         "architecture": "linear",
-        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_basis": "critical mode of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "tetrahydrofurane"
@@ -82,19 +139,28 @@
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_added": true,
+          "salt_type": "formic acid",
+          "salt_concentration": "0.2%"
         },
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL/min",
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "critical_component": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "column_name": "The system was equipped with one BEH (Bridged Ethane Hybrid particle) C18 column with a length of 50 mm and a diameter of 2.1 mm (Waters GmbH).",
+          "mobile_phase_solvents": "For the determination of critical conditions of PPO and PPO/PEO copolymers, mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B) were used.",
+          "mobile_phase_ratio": "At a solvent composition of 85:15 THF/water (v/v), which represents the “critical” mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C.",
+          "pore_size": null,
+          "flow_rate": "At a flow rate of 0.5 mL/min only after 0.35 min a complete elution could be observed."
+        },
         "notes": null,
         "paper_doi": "10.1021/ac8019784",
-        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen Weidner",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
         "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
         "publication_year": "2009"
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 6731,
       "extraction_success": true,
-      "processing_time": 19.7126567363739,
+      "processing_time": 34.94464421272278,
       "extracted_count": 2
     }
   ]

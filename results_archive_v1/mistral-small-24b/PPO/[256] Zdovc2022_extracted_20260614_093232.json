@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[256] Zdovc2022.pdf",
+    "extraction_date": "2026-06-14T09:32:32.457667",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[256] Zdovc2022.pdf",
+      "start_time": "2026-06-14T09:31:39.686768",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 36.27390122413635,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10251283645629883,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 14590
+        },
+        "llm_extraction": {
+          "time_seconds": 16.394320487976074,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "P(POPA)",
+        "critical_component": "P(POPA)",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions for P(POPA)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PS-DVB",
+        "stationary_phase_chemistry": "polystyrenedivinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "4.6 mm × 150 mm, 100 Å, 5 μm",
+        "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector 1260 Infinity",
+        "evidence_text": "The critical conditions at which the P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %",
+        "notes": null,
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 14590,
+      "extraction_success": true,
+      "processing_time": 16.37635898590088,
+      "extracted_count": 1
+    }
+  ]
+}

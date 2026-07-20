@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "source_pdf": "[365] Ahmed2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG, PEG-MME",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.12 wt-% acetonitrile",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "DDS 70 density detection system",
+        "evidence_text": "We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile\u2013water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": "Used as first dimension for LCCC separation of block copolymers. The text states PEG elutes close to CAP in this composition.",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 350 initiated block copolymer",
+        "critical_component": "EO",
+        "architecture": "diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.06 wt-% acetonitrile",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 10 mm",
+        "detector": "DDS 70 density detection system",
+        "evidence_text": "Fractionation of the sample initiated with PEG-MME 350 (see Fig. 1) by LCCC on Spherisorb ODS (prep) in 69.06 wt% acetonitrile\u2013water. Detection: density.",
+        "notes": "Specific fractionation experiment for the block copolymer. The text implies this composition is at the CAP for the EO block to separate based on CL block length.",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "critical_component": "EO",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.06",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 x 3 mm",
+        "detector": "density",
+        "evidence_text": "We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile\u2013water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "notes": "Used as first dimension for LCCC separation of block copolymers. The text states PEG elutes close to CAP in this composition.",
+        "paper_doi": "10.1002/jssc.200900014",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

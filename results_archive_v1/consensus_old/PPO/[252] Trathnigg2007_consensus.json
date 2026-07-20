@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[252] Trathnigg2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "On this column critical conditions for PPG exist only in THF\u2013water (at approximately 85 wt.% THF). The intersection point of the line for THF agrees well with the CAP",
+        "detector": "SEDEX 45 ELSD",
+        "pore_size": "100 A",
+        "critical_component": "oxypropylene unit",
+        "publication_year": "2007",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "85",
+        "critical_condition_basis": "Critical adsorption point (CAP) identified at intersection of interaction parameter line with x-axis",
+        "column_name": "Prodigy ODS3",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt.% THF",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PPG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Critical condition established for the repeat unit (oxypropylene).",
+        "flow_rate": "0.5 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

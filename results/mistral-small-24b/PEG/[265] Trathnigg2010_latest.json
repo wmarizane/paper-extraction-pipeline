@@ -1,422 +1,93 @@
 {
   "metadata": {
     "source_pdf": "[265] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T00:40:19.649192",
+    "extraction_date": "2026-07-19T13:21:44.672004",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:21:44.659592+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[265] Trathnigg2010.md",
+        "sha256": "83eafa2b877d4a478cf0fa60c120cd921a785841d0b0f69ce902b37a49acdcf7",
+        "char_len": 28021,
+        "token_count": 8866
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[265] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T00:36:11.237598",
+      "start_time": "2026-07-19T13:15:37.836580",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 21.312679767608643,
+          "time_seconds": 22.046600818634033,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.09913897514343262,
+          "time_seconds": 0.11196684837341309,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8866
         },
         "llm_extraction": {
-          "time_seconds": 226.99962520599365,
-          "success": true
+          "time_seconds": 344.62588596343994,
+          "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 11
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Synergi MAX RP",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "26.90 wt% acetone, 86.82 wt% methanol",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "80 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In methanol–water mobile phases containing 86.8 wt% methanol and in acetone–water containing 26.9 wt% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "44.0 vol% methanol and 17.0 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 44.0 vol% methanol and 17.0 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.1 vol% methanol and 6.7 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 69.1 vol% methanol and 6.7 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "17.6 vol% methanol and 27.3 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 17.6 vol% methanol and 27.3 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PPG",
-        "critical_component": "PPG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "44.0 vol% methanol and 17.0 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 44.0 vol% methanol and 17.0 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PPG",
-        "critical_component": "PPG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.1 vol% methanol and 6.7 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 69.1 vol% methanol and 6.7 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PPG",
-        "critical_component": "PPG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "17.6 vol% methanol and 27.3 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 17.6 vol% methanol and 27.3 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "EO-PO diblock copolymers",
-        "critical_component": "EO",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Synergi MAX RP",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "26.90 wt% acetone, 86.82 wt% methanol",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "80 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases consisting of acetone, methanol, and water, the retention of PEG on reversed-phase columns is independent on molar mass at certain compositions of the mobile phase.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "EO-PO diblock copolymers",
-        "critical_component": "EO",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "44.0 vol% methanol and 17.0 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 44.0 vol% methanol and 17.0 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "EO-PO diblock copolymers",
-        "critical_component": "EO",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.1 vol% methanol and 6.7 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 69.1 vol% methanol and 6.7 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "EO-PO diblock copolymers",
-        "critical_component": "EO",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A[˚]",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "17.6 vol% methanol and 27.3 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "null",
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "In ternary mobile phases, critical conditions were found in mobile phase conditions containing 17.6 vol% methanol and 27.3 vol% acetone.",
-        "notes": "null",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 8866,
-      "extraction_success": true,
-      "processing_time": 111.68548631668091,
-      "extracted_count": 11
+      "extraction_success": false,
+      "processing_time": 112.83290719985962,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"PEG\",\"critical_component\":\"PEG\",\"architecture\":\"null\",\"critical_condition_basis\":\"critical adsorption point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Synergi MAX RP\",\"stationary_phase_chemistry\":\"silica-based octadecyl phase\",\"column_mode"
     }
   ]
 }

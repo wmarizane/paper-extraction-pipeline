@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[257] Zhu2015.pdf",
+    "extraction_date": "2026-06-14T09:48:08.246466",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[257] Zhu2015.pdf",
+      "start_time": "2026-06-14T09:47:05.246260",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 53.752285957336426,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11836600303649902,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10545
+        },
+        "llm_extraction": {
+          "time_seconds": 9.129429817199707,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10545,
+      "extraction_success": true,
+      "processing_time": 9.106473445892334,
+      "extracted_count": 0
+    }
+  ]
+}

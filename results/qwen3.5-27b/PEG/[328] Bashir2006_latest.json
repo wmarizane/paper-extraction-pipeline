@@ -1,52 +1,100 @@
 {
   "metadata": {
     "source_pdf": "[328] Bashir2006.pdf",
-    "extraction_date": "2026-06-08T03:14:25.874378",
+    "extraction_date": "2026-07-19T18:18:49.358446",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T18:18:49.344980+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[328] Bashir2006.md",
+        "sha256": "8ac8e6ecb699fe67b02425d9e79a2b7c9bd4c9e70d15333879e28f53592c22b2",
+        "char_len": 57419,
+        "token_count": 13603
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[328] Bashir2006.pdf",
-      "start_time": "2026-06-08T03:12:21.513957",
+      "start_time": "2026-07-19T18:08:11.921207",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.619998931884766,
+          "time_seconds": 36.426305532455444,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12595033645629883,
+          "time_seconds": 0.12100863456726074,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13603
         },
         "llm_extraction": {
-          "time_seconds": 87.6143627166748,
+          "time_seconds": 600.8402514457703,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Poly(ethylene glycol)",
-        "critical_component": "Poly(ethylene glycol)",
+        "analyte_polymer": "PEG 2010",
+        "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "Elution time independent of molar mass at 83% MeOH",
+        "critical_condition_basis": "elution time does not depend on molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Methanol",
-          "Water"
+          "methanol",
+          "water"
         ],
         "mobile_phase_ratio": "83/17",
-        "mobile_phase_ratio_units": "% v/v",
+        "mobile_phase_ratio_units": "% MeOH/% water",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -56,10 +104,234 @@
         "temperature_celsius": "35",
         "flow_rate": "1 mL/min",
         "pore_size": "300 A",
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
         "detector": "UV-detector",
-        "evidence_text": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
-        "notes": "Critical composition determined from isocratic experiments on high molar mass PEGs (2010 to 40,000 g/mol).",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG 3120",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG 6240",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG 12000",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG 23000",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      },
+      {
+        "analyte_polymer": "PEG 40000",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "% MeOH/% water",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "PEGs",
+          "column_name": "The stationary phase was Nucleosil C18",
+          "mobile_phase_solvents": "Mixtures of methanol (MeOH)... and water",
+          "mobile_phase_ratio": "At a MeOH content of 83%",
+          "temperature_celsius": "Column temperature 35[◦] C",
+          "pore_size": "pore diameter 300 A,[˚]",
+          "flow_rate": "flow rate was 1 mL/min"
+        },
+        "notes": "Critical composition determined for high molar mass PEGs where elution is independent of molar mass.",
         "paper_doi": "10.1016/j.chroma.2006.07.089",
         "corresponding_author_name": "Wolfgang Radke",
         "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
@@ -74,8 +346,8 @@
       "section": "Full Paper",
       "token_count": 13603,
       "extraction_success": true,
-      "processing_time": 87.59132266044617,
-      "extracted_count": 1
+      "processing_time": 600.7851583957672,
+      "extracted_count": 6
     }
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "source_pdf": "[113] Pasch",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.066428Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "null",
+        "flow_rate": "null",
+        "physical_address": "Deutsches Kunststoff-Institut Schloßgartenstraße 6 64289 Darmstadt, Germany",
+        "corresponding_email_address": "null",
+        "column_dimensions": "60x4mm I.D.",
+        "temperature_celsius": 25.0,
+        "mobile_phase_ratio": "46:54",
+        "column_name": "Nucleosil RP-18",
+        "notes": "Used for separation of functional PEOs with different terminal groups (alkyloxy and aryloxy).",
+        "publication_year": 1994,
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "evidence_text": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this 'critical point of adsorption' separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
+        "corresponding_author_name": "H. Pasch",
+        "pore_size": "null",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene oxide (PEO)",
+        "detector": "Waters differential refractometer R401, Knauer u.v./vis filter photometer",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical point of adsorption",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polyethylene oxide",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "% by volume",
+        "mobile_phase_ratio_raw": "46:54",
+        "mobile_phase_ratio_components": [
+          46.0,
+          54.0
+        ],
+        "flow_rate_raw": "null",
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": "null",
+        "pore_size_angstrom": null,
+        "architecture_raw": "Linear"
+      }
+    ]
+  }
+}

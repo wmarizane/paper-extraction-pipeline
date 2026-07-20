@@ -1,101 +1,124 @@
 {
   "metadata": {
     "source_pdf": "[112] Pasch1995.pdf",
-    "extraction_date": "2026-06-07T23:47:11.612056",
+    "extraction_date": "2026-07-19T12:20:11.144725",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:20:11.137293+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[112] Pasch1995.md",
+        "sha256": "b6715b1dcbf51c8cf383ae6e7127abbaf995c9326e1bcbe5f943caefc2aee5f3",
+        "char_len": 26429,
+        "token_count": 7346
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[112] Pasch1995.pdf",
-      "start_time": "2026-06-07T23:46:09.300838",
+      "start_time": "2026-07-19T12:19:06.766966",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 45.39983654022217,
+          "time_seconds": 50.755987882614136,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12344574928283691,
+          "time_seconds": 0.13583087921142578,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7346
         },
         "llm_extraction": {
-          "time_seconds": 16.787791967391968,
+          "time_seconds": 13.435167074203491,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(decamethylene adipate)",
-        "critical_component": "poly(decamethylene adipate)",
-        "architecture": "null",
-        "critical_condition_basis": "null",
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
+        "architecture": "triblock",
+        "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica gel",
-        "mobile_phase_solvents": [
-          "THF",
-          "hexane"
-        ],
-        "mobile_phase_ratio": "45:55",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
-        },
-        "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "null",
-        "detector": "null",
-        "evidence_text": "The separation of poly(decamethylene adipate) on silica gel using an eluent of THF-hexane (45:55, v/v).",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "null",
-        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
-        "publication_year": "1995"
-      },
-      {
-        "analyte_polymer": "triblock copolymer H(EO),(PO),(EO),OH",
-        "critical_component": "ethylene oxide block",
-        "architecture": "null",
-        "critical_condition_basis": "null",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 100 RP-18",
-        "stationary_phase_chemistry": "null",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio": "70:30",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "250x4 mm I.D.",
-        "detector": "null",
-        "evidence_text": "The separation of a triblock copolymer H(EO),(PO),(EO),OH at the critical point of the ethylene oxide blocks.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "null",
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at the critical point of adsorption",
+          "critical_component": "the ethylene oxide block behaves chromatographically 'invisible' and retention of the block copolymer is solely directed by the propylene oxide block",
+          "column_name": "Nucleosil-100 RP-18",
+          "mobile_phase_solvents": "acetonitrile—water",
+          "mobile_phase_ratio": "70:30, v/v",
+          "temperature_celsius": "25°C in all experiments",
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch; Karsten Rode",
+        "corresponding_email_address": null,
         "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "1995"
       }
@@ -107,8 +130,8 @@
       "section": "Full Paper",
       "token_count": 7346,
       "extraction_success": true,
-      "processing_time": 16.777623653411865,
-      "extracted_count": 2
+      "processing_time": 13.34367847442627,
+      "extracted_count": 1
     }
   ]
 }

@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[107] Krüger1996",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.070505Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1080/10236669608233912",
+        "flow_rate": null,
+        "physical_address": "Institut far Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "corresponding_email_address": null,
+        "column_dimensions": "null",
+        "temperature_celsius": 30.0,
+        "mobile_phase_ratio": "50.5:49.5",
+        "column_name": "7-um Si-120 silica column",
+        "notes": "Critical conditions determined by variation of mobile phase composition until retention volume is independent of molar mass.",
+        "publication_year": 1996,
+        "mobile_phase_solvents": [
+          "acetone",
+          "hexane"
+        ],
+        "evidence_text": "acetone/hexane (50.5 vol%:49.5 vol%) was the mobile phase for critical conditions. For analyzing polyester samples, a 7- [im Si-120 silica column (Tessek, Praha, CS) was used. All LACCC columns were thermostated at 30°C.",
+        "corresponding_author_name": "R. P. Krüger",
+        "pore_size": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyester",
+        "detector": "refractive index detector (model 7511)",
+        "stationary_phase_chemistry": "silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "polyester backbone",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "50.5:49.5",
+        "mobile_phase_ratio_components": [
+          50.5,
+          49.5
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "polyethers",
+        "critical_component": "ethylene oxide (EO) main chain unit",
+        "architecture": "linear",
+        "critical_condition_basis": "retention volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18 (reversed-phase)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4mm i. d.",
+        "detector": "ELSD detector (Sedex 45)",
+        "evidence_text": "In the case of polyethers, a Macherey Nagel Nucleosil 5C18 column (250 x 4mm i. d., Diiren, Germany) was used. The mobile phase at critical conditions consisted of a mixture of water/acetonitrile (54 vol%:46 vol%), All LACCC columns were thermostated at 30°C.",
+        "notes": "Text also mentions a critical point for EO realized by 43 vol% acetonitrile and 57 vol% water in the Results section, but the Experimental section explicitly defines the setup used for analysis as 54:46 water:acetonitrile. The 54:46 ratio is extracted as the primary experimental setup described in the methods.",
+        "paper_doi": "10.1080/10236669608233912",
+        "corresponding_author_name": "R. P. Krüger",
+        "corresponding_email_address": null,
+        "physical_address": "Institut far Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": 1996,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "54:46",
+        "mobile_phase_ratio_components": [
+          54.0,
+          46.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "polyether",
+        "critical_component": "polyether",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Macherey Nagel Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "54:46",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 30.0,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4mm i. d.",
+        "detector": "ELSD detector (Sedex 45)",
+        "evidence_text": "For analyzing polyethers, a Macherey Nagel Nucleosil 5C18 column (250 x 4mm i. d., Diuren, Germany) was used. The mobile phase at critical conditions consisted of a mixture of water/acetonitrile (54 vol%:46 vol%). All LACCC columns were thermostated at 30°C.",
+        "notes": "Critical conditions determined by variation of mobile phase composition until retention volume is independent of molar mass.",
+        "paper_doi": "10.1080/10236669608233912",
+        "corresponding_author_name": "R. P. Krüger",
+        "corresponding_email_address": null,
+        "physical_address": "Institut far Angewandte Chemie, Berlin-Adlershof (ACA) e. V., Abteilung Zentrale Analytik, Forschungsgruppe Polymercharakterisierung, Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": 1996,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol%",
+        "mobile_phase_ratio_raw": "54:46",
+        "mobile_phase_ratio_components": [
+          54.0,
+          46.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

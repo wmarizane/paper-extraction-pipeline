@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "source_pdf": "[111] Gorshkov1990.pdf",
+    "extraction_date": "2026-06-14T09:19:49.192395",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[111] Gorshkov1990.pdf",
+      "start_time": "2026-06-14T09:18:08.463232",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 59.83794903755188,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12818694114685059,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6867
+        },
+        "llm_extraction": {
+          "time_seconds": 40.76285481452942,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "The retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 2).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "PPO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "The retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 2).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "PEO-PPO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "The retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 2).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "PEO-PPO-PEO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "The retention volume versus macromolecule size dependence disappears up to a molecular weight of 20000",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 2).",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6867,
+      "extraction_success": true,
+      "processing_time": 40.752339124679565,
+      "extracted_count": 4
+    }
+  ]
+}

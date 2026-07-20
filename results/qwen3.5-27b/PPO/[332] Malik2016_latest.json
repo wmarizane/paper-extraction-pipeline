@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[332] Malik2016.pdf",
-    "extraction_date": "2026-06-07T23:44:24.325439",
+    "extraction_date": "2026-07-19T16:33:25.200819",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:33:25.188491+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[332] Malik2016.md",
+        "sha256": "cce813fbf9874a881c8592ffa7913a155507a21b2027cffdb8db7ffb1e85b595",
+        "char_len": 30996,
+        "token_count": 8256
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[332] Malik2016.pdf",
-      "start_time": "2026-06-07T23:40:02.383803",
+      "start_time": "2026-07-19T16:27:50.535906",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 27.547163486480713,
+          "time_seconds": 27.14686679840088,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1337268352508545,
+          "time_seconds": 0.12220191955566406,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8256
         },
         "llm_extraction": {
-          "time_seconds": 234.2606463432312,
+          "time_seconds": 307.3385908603668,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "Polypropylene oxide (PPO)",
         "critical_component": "PPO repeat unit",
         "architecture": "Linear",
-        "critical_condition_basis": "Critical adsorption point (CAP) established for PPO",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for separation of end-groups",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -54,11 +102,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "500 Å",
+        "flow_rate": "0.5 mL.min-1",
+        "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on jordi RP column",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PPO were found in Cr 80 % THF: Water mobile phase on jordi RP column",
+          "critical_component": "Critical conditions for PPO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF/Water = 80/20",
+          "mobile_phase_ratio": "80 % THF: Water",
+          "temperature_celsius": "temperature of 25 °C was maintained",
+          "pore_size": "nominal pore size = 500 Ǻ",
+          "flow_rate": "flow rate of 0.5 mL.min[−][1]"
+        },
         "notes": "Used to separate PPO chains with different end-groups (PPGs, allylic-PPOs, octadecyl-PPOs).",
         "paper_doi": "10.1007/s10965-016-1141-z",
         "corresponding_author_name": "Muhammad Imran Malik",
@@ -70,10 +127,11 @@
         "analyte_polymer": "Polybutylene oxide (PBO)",
         "critical_component": "PBO repeat unit",
         "architecture": "Linear",
-        "critical_condition_basis": "Critical adsorption point (CAP) established for PBO",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for separation of end-groups",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -87,12 +145,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "500 Å",
+        "flow_rate": "0.5 mL.min-1",
+        "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "Critical adsorption point (CAP) of PBO ... are established on the same column in 84 ... % THF",
-        "notes": "Used to analyze butyl-PBO and octadecyl-PBO. Text notes that unsaturated end-group has similar selectivity as repeat unit.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) C —_ of PBO and PHO are established on the same column in 84 and 87 % THF, respecee tively",
+          "critical_component": "CAP of PBO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF/Water = 84/16",
+          "mobile_phase_ratio": "84 % THF",
+          "temperature_celsius": "temperature of 25 °C was maintained",
+          "pore_size": "nominal pore size = 500 Ǻ",
+          "flow_rate": "flow rate of 0.5 mL.min[−][1]"
+        },
+        "notes": "Used to analyze butyl-PBO and octadecyl-PBO. Separation of by-products from targeted products.",
         "paper_doi": "10.1007/s10965-016-1141-z",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -103,10 +170,11 @@
         "analyte_polymer": "Polyhexylene oxide (PHO)",
         "critical_component": "PHO repeat unit",
         "architecture": "Linear",
-        "critical_condition_basis": "Critical adsorption point (CAP) established for PHO",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for separation of end-groups",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "Water"
@@ -120,12 +188,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "500 Å",
+        "flow_rate": "0.5 mL.min-1",
+        "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "The CAP for PHO was found in 87 % THF-water on the same column",
-        "notes": "Used to analyze hexanol-based and octadecanol-based PHO.",
+        "field_evidence": {
+          "critical_condition_basis": "The CAP for PHO was found in 87 % THF-water on the same column",
+          "critical_component": "CAP for PHO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF/Water = 87/13",
+          "mobile_phase_ratio": "87 % THF-water",
+          "temperature_celsius": "temperature of 25 °C was maintained",
+          "pore_size": "nominal pore size = 500 Ǻ",
+          "flow_rate": "flow rate of 0.5 mL.min[−][1]"
+        },
+        "notes": "Used to analyze hexanol-based and octadecanol-based PHO. Separation of by-products from targeted products.",
         "paper_doi": "10.1007/s10965-016-1141-z",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -140,7 +217,7 @@
       "section": "Full Paper",
       "token_count": 8256,
       "extraction_success": true,
-      "processing_time": 234.23728966712952,
+      "processing_time": 307.281368970871,
       "extracted_count": 3
     }
   ]

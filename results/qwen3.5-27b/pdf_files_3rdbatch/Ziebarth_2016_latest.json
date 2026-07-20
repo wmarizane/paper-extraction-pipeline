@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "Ziebarth_2016.pdf",
-    "extraction_date": "2026-06-07T22:34:29.514464",
+    "extraction_date": "2026-07-19T14:05:24.352714",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:05:24.338508+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/Ziebarth_2016.md",
+        "sha256": "fd55c45daa699237e724dcb50daa6827851195d9c214bbb5355618df4fbfc5b7",
+        "char_len": 46920,
+        "token_count": 12678
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "Ziebarth_2016.pdf",
-      "start_time": "2026-06-07T22:29:22.163882",
+      "start_time": "2026-07-19T13:58:23.512876",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 39.40815806388855,
+          "time_seconds": 36.13779044151306,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12249517440795898,
+          "time_seconds": 0.12107419967651367,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 12678
         },
         "llm_extraction": {
-          "time_seconds": 267.8198115825653,
+          "time_seconds": 384.52265548706055,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "Ls-PS",
         "critical_component": "Ls-PS",
         "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_basis": "coelution point of polymers with different molecular weights",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -56,24 +104,34 @@
         "temperature_celsius": "14.8",
         "flow_rate": "0.5 mL/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "UV absorption detector",
-        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition for the polymers of interest. TCAP and tE,CAP of Ls-PS... are measured as 14.8 °C/7.4 min",
-        "notes": "Ls-PS refers to linear PS with saturated DPE end-groups. Used to establish CAP for linear polymers.",
+        "field_evidence": {
+          "critical_condition_basis": "Analytical LCCC analysis used a column... The column temperature was varied to achieve CAP condition for the polymers of interest.",
+          "critical_component": "TCAP and tE,CAP of Ls-PS... are measured as 14.8 °C/7.4 min",
+          "column_name": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "mobile_phase_solvents": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "mobile_phase_ratio": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "temperature_celsius": "TCAP and tE,CAP of Ls-PS... are measured as 14.8 °C/7.4 min",
+          "pore_size": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "flow_rate": "The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min"
+        },
+        "notes": "Ls-PS refers to linear PS with saturated DPE end-groups.",
         "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "publication_year": "2016"
       },
       {
         "analyte_polymer": "Lu-PS",
         "critical_component": "Lu-PS",
         "architecture": "linear",
-        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_basis": "coelution point of polymers with different molecular weights",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -89,24 +147,34 @@
         "temperature_celsius": "14.95",
         "flow_rate": "0.5 mL/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "UV absorption detector",
-        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Lu-PS... are measured as 14.95 °C/7.6 min",
-        "notes": "Lu-PS refers to linear PS with unsaturated DPE end-groups. Used to establish CAP for linear polymers with reactive end-groups.",
+        "field_evidence": {
+          "critical_condition_basis": "Analytical LCCC analysis used a column... The column temperature was varied to achieve CAP condition for the polymers of interest.",
+          "critical_component": "TCAP and tE,CAP of... Lu-PS... are measured as... 14.95 °C/7.6 min",
+          "column_name": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "mobile_phase_solvents": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "mobile_phase_ratio": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "temperature_celsius": "TCAP and tE,CAP of... Lu-PS... are measured as... 14.95 °C/7.6 min",
+          "pore_size": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "flow_rate": "The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min"
+        },
+        "notes": "Lu-PS refers to linear PS with unsaturated DPE end-groups.",
         "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "publication_year": "2016"
       },
       {
         "analyte_polymer": "Ring-PS",
         "critical_component": "Ring-PS",
         "architecture": "ring",
-        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_basis": "coelution point of polymers with different molecular weights",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -122,14 +190,23 @@
         "temperature_celsius": "17.3",
         "flow_rate": "0.5 mL/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "UV absorption detector",
-        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Ring-PS... are measured as 17.3 °C/ 8.23 min",
-        "notes": "Ring-PS refers to cyclic polystyrene. Used to establish CAP for ring polymers.",
+        "field_evidence": {
+          "critical_condition_basis": "Analytical LCCC analysis used a column... The column temperature was varied to achieve CAP condition for the polymers of interest.",
+          "critical_component": "TCAP and tE,CAP of... Ring-PS... are measured as... 17.3 °C/ 8.23 min",
+          "column_name": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "mobile_phase_solvents": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "mobile_phase_ratio": "The eluent was CH2Cl2/CH3CN (58/42, v/v)",
+          "temperature_celsius": "TCAP and tE,CAP of... Ring-PS... are measured as... 17.3 °C/ 8.23 min",
+          "pore_size": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 μm)",
+          "flow_rate": "The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min"
+        },
+        "notes": "Ring-PS refers to cyclic polystyrene.",
         "paper_doi": "10.1021/acs.macromol.6b01925",
-        "corresponding_author_name": "Yongmei Wang",
-        "corresponding_email_address": "ywang@memphis.edu",
-        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_author_name": "Yongmei Wang; Taihyun Chang",
+        "corresponding_email_address": "ywang@memphis.edu; tc@postech.ac.kr",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States; Division of Advanced Materials Science and Department of Chemistry, Pohang University of Science and Technology (POSTECH), Pohang 37673, Korea",
         "publication_year": "2016"
       }
     ]
@@ -140,7 +217,7 @@
       "section": "Full Paper",
       "token_count": 12678,
       "extraction_success": true,
-      "processing_time": 267.79571771621704,
+      "processing_time": 384.4610321521759,
       "extracted_count": 3
     }
   ]

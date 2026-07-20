@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[252] Trathnigg2007.pdf",
-    "extraction_date": "2026-06-08T00:09:07.844591",
+    "extraction_date": "2026-07-19T05:46:01.961137",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:46:01.947618+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[252] Trathnigg2007.md",
+        "sha256": "0db8c20e5dd0b827add790fdd3b7f2618964ae4ccf081d14e362bf3fa0afba02",
+        "char_len": 21146,
+        "token_count": 5452
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[252] Trathnigg2007.pdf",
-      "start_time": "2026-06-08T00:08:35.932782",
+      "start_time": "2026-07-19T05:45:29.751222",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.612734079360962,
+          "time_seconds": 19.49558925628662,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10243773460388184,
+          "time_seconds": 0.11699724197387695,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5452
         },
         "llm_extraction": {
-          "time_seconds": 11.196474552154541,
+          "time_seconds": 12.529755353927612,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43586"
+      }
     }
   },
   "summary": {
@@ -34,32 +80,42 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PPG",
-        "critical_component": "PPG",
-        "architecture": "null",
-        "critical_condition_basis": "critical adsorption point",
+        "analyte_polymer": "polypropylene glycol",
+        "critical_component": "polypropylene glycol",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
         "mobile_phase_ratio": "85 wt.% THF",
-        "mobile_phase_ratio_units": "null",
+        "mobile_phase_ratio_units": "wt.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL min−1",
+        "flow_rate": null,
         "pore_size": "100 A",
         "column_dimensions": "250 mm × 4.6 mm",
-        "detector": "SEDEX 45 ELSD",
-        "evidence_text": "In the range covered by our measurements the data fall onto straight lines with a similar slope. On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF).",
-        "notes": "null",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF).",
+          "critical_component": "PPG",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "85 wt.% THF",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "100 A",
+          "flow_rate": null
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.aca.2007.06.043",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 5452,
       "extraction_success": true,
-      "processing_time": 11.18627119064331,
+      "processing_time": 12.439478397369385,
       "extracted_count": 1
     }
   ]

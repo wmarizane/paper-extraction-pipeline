@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[90] Dudorina1995.pdf",
-    "extraction_date": "2026-06-08T00:36:07.055158",
+    "extraction_date": "2026-07-19T06:11:54.481864",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T06:11:54.469992+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[90] Dudorina1995.md",
+        "sha256": "c08a0aeff0e0d219643794d6aa7c5b140a3f7cfcedc6cae501305b7cd9afd563",
+        "char_len": 19483,
+        "token_count": 8081
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[90] Dudorina1995.pdf",
-      "start_time": "2026-06-08T00:35:19.931404",
+      "start_time": "2026-07-19T06:11:02.105556",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 28.98291802406311,
+          "time_seconds": 26.94938015937805,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11621475219726562,
+          "time_seconds": 0.10098481178283691,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8081
         },
         "llm_extraction": {
-          "time_seconds": 18.02441668510437,
+          "time_seconds": 25.25665283203125,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,10 +83,11 @@
         "analyte_polymer": "polystyrene",
         "critical_component": "polystyrene",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Lichrospere Si-300",
         "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "carbon tetrachloride",
           "chloroform"
@@ -58,22 +105,32 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "UV (270 nm)",
-        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 94.65: 5.35 vol. % for PS",
+        "field_evidence": {
+          "critical_condition_basis": "The method of liquid chromatography in a critical mode was used to separate and analyze mixtures of homopolymers",
+          "critical_component": "polystyrene",
+          "column_name": "Lichrospere Si-300",
+          "mobile_phase_solvents": "carbon tetrachloride and chloroform",
+          "mobile_phase_ratio": "CC14: CHCI3 = 94.65: 5.35 vol. %",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "A. V. Dudorina",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "corresponding_email_address": null,
-        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
         "publication_year": "1995"
       },
       {
         "analyte_polymer": "polyphenylene oxide",
         "critical_component": "polyphenylene oxide",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
         "column_name": "Lichrospere Si-300",
         "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "carbon tetrachloride",
           "chloroform"
@@ -91,12 +148,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "UV (270 nm)",
-        "evidence_text": "The critical composition of the binary eluent CC14: CHCI3 = 29: 71 vol. % for polyphenylene oxide",
+        "field_evidence": {
+          "critical_condition_basis": "The method of liquid chromatography in a critical mode was used to separate and analyze mixtures of homopolymers",
+          "critical_component": "polyphenylene oxide",
+          "column_name": "Lichrospere Si-300",
+          "mobile_phase_solvents": "carbon tetrachloride and chloroform",
+          "mobile_phase_ratio": "CC14: CHCI3 = 29: 71 vol. %",
+          "temperature_celsius": "30°C",
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "A. V. Dudorina",
+        "corresponding_author_name": "A. V. Dudorina; A. V. Gorshkov; N. N. Filatova; V. V. Evreinov; S. G. Entelis",
         "corresponding_email_address": null,
-        "physical_address": "117977 Moscow, st. Kosygina, 4",
+        "physical_address": "Institute of Chemical Physics named after N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4",
         "publication_year": "1995"
       }
     ]
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 8081,
       "extraction_success": true,
-      "processing_time": 18.013264179229736,
+      "processing_time": 25.146761178970337,
       "extracted_count": 2
     }
   ]

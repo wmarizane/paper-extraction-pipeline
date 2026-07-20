@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[262] Girod2008.pdf",
-    "extraction_date": "2026-06-08T00:54:38.620879",
+    "extraction_date": "2026-07-19T15:33:08.147742",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:33:08.134695+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[262] Girod2008.md",
+        "sha256": "4032134c7e3f20cc566c4eea32b0c40c912e3f6c7095c44cf8ffe9e07072b07d",
+        "char_len": 40084,
+        "token_count": 11507
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[262] Girod2008.pdf",
-      "start_time": "2026-06-08T00:50:36.097258",
+      "start_time": "2026-07-19T15:28:21.627781",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.862611532211304,
+          "time_seconds": 60.02527737617493,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.141021728515625,
+          "time_seconds": 0.1248776912689209,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11507
         },
         "llm_extraction": {
-          "time_seconds": 182.51986718177795,
+          "time_seconds": 226.32045555114746,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -41,6 +88,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -54,12 +102,21 @@
           "salt_concentration": "1 mM"
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 mL/min",
+        "flow_rate": "1 mL min-1",
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
-        "notes": "Critical conditions established for PEG standards (200-2000 Da) and extended to 4000 Da. Used to analyze PEO-b-PS copolymer where PEO block is at critical condition.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass",
+          "critical_component": "The use of critical conditions appropriate to PEO was preferred",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "binary mixture of MeOH/water containing a lithium salt",
+          "mobile_phase_ratio": "88.8:11.2 (%, v/v) MeOH/water eluent",
+          "temperature_celsius": "maintained at a constant temperature of 258C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow rate was set to 1 mL min = 1"
+        },
+        "notes": "Critical conditions established for PEG standards to be used for PEO block in copolymer analysis.",
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -67,13 +124,14 @@
         "publication_year": "2008"
       },
       {
-        "analyte_polymer": "SG1-capped PEO-b-PS block copolymer",
+        "analyte_polymer": "SG1-capped PEO-b-PS",
         "critical_component": "PEO block",
         "architecture": "diblock",
         "critical_condition_basis": "elution volume independent of PEO block size",
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -87,12 +145,21 @@
           "salt_concentration": "1 mM"
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 mL/min",
+        "flow_rate": "1 mL min-1",
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block. ... The PEO block being chromatographically 'invisible', copolymer molecules with a given PS block size are eluted in the same volume, regardless of the PEO block length.",
-        "notes": "Analysis performed using the critical conditions established for PEG standards. Separation based on PS block size.",
+        "field_evidence": {
+          "critical_condition_basis": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block",
+          "critical_component": "critical conditions of the PEO block",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "88.8:11.2 (% v/v) MeOH-water mixture containing LiCl (1 mM)",
+          "mobile_phase_ratio": "88.8:11.2 (% v/v) MeOH-water mixture",
+          "temperature_celsius": "T = 25 8C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow-rate: 1 mL/min"
+        },
+        "notes": "Analysis of copolymer using critical conditions established for the PEO block. Separation based on PS block size.",
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -107,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 11507,
       "extraction_success": true,
-      "processing_time": 182.4976887702942,
+      "processing_time": 226.26541948318481,
       "extracted_count": 2
     }
   ]

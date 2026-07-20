@@ -1,0 +1,95 @@
+Paper,Qwen Runtime (s),Qwen Extraction Calls (Chunks),Mistral Runtime (s),Mistral Extraction Calls (Chunks),Consensus Generated
+Banerjee2015,95.23076009750366,1,19.230220794677734,1,No
+Hiller2007,92.59478116035461,1,11.3294677734375,1,No
+Im2008,350.69836688041687,1,19.25796389579773,1,Yes
+Lee2000,95.66648530960083,1,10.537339687347412,1,No
+Pasch1993,173.70378613471985,1,9.830119848251343,1,No
+Zhu2015,8.759483814239502,1,3.2433667182922363,1,No
+Ziebarth_2016,291.1838574409485,1,164.14709186553955,1,Yes
+[107] Krüger1996,,,,,No
+[111] Gorshkov1990,,,,,No
+[112] Pasch1995,,,,,No
+[113] Pasch,,,,,No
+[115] Falkenhagen2000,,,,,No
+[117] Murgasova1998,,,,,No
+[118] Trathnigg1994,,,,,No
+[120] Trathnigg2001,,,,,No
+[121] Lochmuller1996,,,,,No
+[123] Lee1999,,,,,No
+[124] Lee2001,,,,,No
+[124] Lee2001_paper3,,,,,No
+[125] Gorbunov1997,,,,,No
+[126] Trathnigg1993,,,,,No
+[127] Esser2001,,,,,No
+[128] Gorshkov1986,,,,,No
+[148] Wachsen,,,,,No
+[201] Ahmed2009,,,,,No
+[209] Bhati2016,,,,,No
+[210] Biela2003,,,,,No
+[212] Cleaver2015,,,,,No
+[217] Gao2016,,,,,No
+[223] Hiller2011_paper1,,,,,No
+[232] Malik2009,,,,,No
+[233] Malik2012,,,,,No
+[242] Rappel2003,,,,,No
+[243] Rollet2012,,,,,No
+[251] Trathnigg2005,,,,,No
+[251] Trathnigg2005_paper2,,,,,No
+[252] Trathnigg2007,,,,,No
+[256] Zdovc2022,,,,,No
+[257] Zhu2015,,,,,No
+[260] Hiller2007,,,,,No
+[262] Girod2008,,,,,No
+[265] Trathnigg2010,,,,,No
+[274] Girod2009,,,,,No
+[277] Malik2010,,,,,No
+[285] Bashir2005,,,,,No
+[289] Banerjee2015,,,,,No
+[28] Braun1998,,,,,No
+[290] Wei2016,,,,,No
+[294] Malik2008,,,,,No
+[295] Malik2009,,,,,No
+[296] Malik2020,,,,,No
+[301] Tufail2017,,,,,No
+[302] Abdul-Karim2019,,,,,No
+[312] Malik2023,,,,,No
+[315] Abdul-Karim2017,,,,,No
+[321] Malik2009,,,,,No
+[322] Fischer2015,,,,,No
+[323] Malik2016,,,,,No
+[327] Trathnigg2010,,,,,No
+[328] Bashir2006,,,,,No
+[330] Wei2016,,,,,No
+[332] Malik2016,,,,,No
+[337] Malik2013,,,,,No
+[346] Abrar2011,,,,,No
+[350] Weidner2012,,,,,No
+[363] Falkenhagen2009,,,,,No
+[364] Trathnigg2006,,,,,No
+[365] Ahmed2009,,,,,No
+[366] Pasch2006,,,,,No
+[367] Adler2005,,,,,No
+[368] Girod2009,,,,,No
+[369] Weidner2007,,,,,No
+[370] Falkenhagen2005,,,,,No
+[371] Trimpin2007,,,,,No
+[372] Trathnigg2005,,,,,No
+[373] Trathnigg2010,,,,,No
+[374] Ahmed2010,,,,,No
+[375] Malik2007,,,,,No
+[376] Malik2009,,,,,No
+[38] Chang1999,,,,,No
+[3] Belenkii1976,,,,,No
+[403] Radke2005,,,,,No
+[47] Pasch1993,,,,,No
+[48] Pasch1993,,,,,No
+[49] Pasch1993,,,,,No
+[68] Baran2001,,,,,No
+[6] Macko2002,,,,,No
+[84] Lee2000,,,,,No
+[90] Dudorina1995,,,,,No
+[94] Krüger1996,,,,,No
+[95] Pasch,,,,,No
+polymerPaper1,93.98561191558838,1,12.145567417144775,1,No
+polymerPaper2,270.2083179950714,1,28.749723434448242,1,No
+polymerPaper3,240.80550813674927,1,26.804816484451294,1,No

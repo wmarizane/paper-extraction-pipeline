@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[262] Girod2008.pdf",
-    "extraction_date": "2026-06-08T00:35:33.119117",
+    "extraction_date": "2026-07-19T13:14:59.967416",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:14:59.957033+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[262] Girod2008.md",
+        "sha256": "4032134c7e3f20cc566c4eea32b0c40c912e3f6c7095c44cf8ffe9e07072b07d",
+        "char_len": 40084,
+        "token_count": 11507
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[262] Girod2008.pdf",
-      "start_time": "2026-06-08T00:34:09.435883",
+      "start_time": "2026-07-19T13:13:33.852324",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 58.30244445800781,
+          "time_seconds": 58.91692900657654,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10056710243225098,
+          "time_seconds": 0.10022139549255371,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11507
         },
         "llm_extraction": {
-          "time_seconds": 25.28007173538208,
+          "time_seconds": 27.04543423652649,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -39,8 +85,9 @@
         "architecture": "linear",
         "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
+        "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -58,7 +105,16 @@
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "The critical composition of the MeOH/water eluent was determined for hydroxyl-terminated PEG standards, using a 1 mM LiCl concentration. The elution volumes of small PEG standards (200 g mol 1 < Mw < 2000 g mol 1) are reported in Fig. 1 for three tested experimental conditions. For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve ¼ 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions",
+          "critical_component": "poly(ethylene oxide)",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "MeOH/water",
+          "mobile_phase_ratio": "88.8:11.2 (% v/v)",
+          "temperature_celsius": "25 8C",
+          "pore_size": "100 A",
+          "flow_rate": "1 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "L. Charles",
@@ -72,8 +128,9 @@
         "architecture": "linear",
         "critical_condition_basis": "critical conditions",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
+        "column_name": "octadecyl-silica Equisil",
         "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -91,7 +148,16 @@
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions",
+          "critical_component": "poly(ethylene oxide)",
+          "column_name": "octadecyl-silica Equisil",
+          "mobile_phase_solvents": "MeOH/water",
+          "mobile_phase_ratio": "88.8:11.2 (% v/v)",
+          "temperature_celsius": "25 8C",
+          "pore_size": "100 A",
+          "flow_rate": "1 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/rcm.3796",
         "corresponding_author_name": "L. Charles",
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 11507,
       "extraction_success": true,
-      "processing_time": 25.26491665840149,
+      "processing_time": 26.934793710708618,
       "extracted_count": 2
     }
   ]

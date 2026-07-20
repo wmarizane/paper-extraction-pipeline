@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[123] Lee1999.pdf",
+    "extraction_date": "2026-06-14T09:38:00.154436",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[123] Lee1999.pdf",
+      "start_time": "2026-06-14T09:37:26.910084",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 21.467548370361328,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.15933704376220703,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6203
+        },
+        "llm_extraction": {
+          "time_seconds": 11.61729884147644,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-PLLA",
+        "critical_component": "PEO",
+        "architecture": "diblock",
+        "critical_condition_basis": "retention independent of molecular weight",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Luna C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "60/40",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "68",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector",
+        "evidence_text": "The middle chromatograms in Figure 1a,b display the separation at the critical condition of PEG, the mobile phase of acetonitrile/water (60/40, v/v), and the column temperature of 68 °C.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Taihyun Chang; Doosung Lee",
+        "corresponding_email_address": "tc@postech.ac.kr; dlee@skku.edu",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784, Korea; Department of Polymer Science and Engineering, Sungkyunkwan University, Suwon, 440-746, Korea",
+        "publication_year": "1999"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6203,
+      "extraction_success": true,
+      "processing_time": 11.607133388519287,
+      "extracted_count": 1
+    }
+  ]
+}

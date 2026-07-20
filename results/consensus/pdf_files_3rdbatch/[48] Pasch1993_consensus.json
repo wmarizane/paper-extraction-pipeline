@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "source_pdf": "[48] Pasch1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:48:16.086419+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_3rdbatch/[48] Pasch1993_latest.json",
+        "results/mistral-small-24b/pdf_files_3rdbatch/[48] Pasch1993_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
+        "critical_component": "poly(methyl methacrylate)",
+        "architecture": null,
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
+        "mobile_phase_solvents": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+          "critical_component": "poly(methyl methacrylate)",
+          "column_name": null,
+          "mobile_phase_solvents": null,
+          "mobile_phase_ratio": null,
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch; Michael Augenstein",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany; R6hm GmbH Chemische Fabrik, Kirschenallee, 64293 Darmstadt, Germany",
+        "publication_year": "1993",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

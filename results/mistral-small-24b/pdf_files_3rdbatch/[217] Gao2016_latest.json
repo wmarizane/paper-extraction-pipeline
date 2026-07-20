@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[217] Gao2016.pdf",
-    "extraction_date": "2026-06-07T23:44:15.547114",
+    "extraction_date": "2026-07-19T12:19:53.123632",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:19:53.114032+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[217] Gao2016.md",
+        "sha256": "7c5adcfe9486498cc368be074b0e576b29b0207415dc973c6c18125c0e4c7b61",
+        "char_len": 46631,
+        "token_count": 13583
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[217] Gao2016.pdf",
-      "start_time": "2026-06-07T23:42:57.073834",
+      "start_time": "2026-07-19T12:18:30.178897",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 62.17036962509155,
+          "time_seconds": 62.848873138427734,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10579156875610352,
+          "time_seconds": 0.12948155403137207,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13583
         },
         "llm_extraction": {
-          "time_seconds": 16.196980476379395,
+          "time_seconds": 19.906704902648926,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +80,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "polystyrene",
+        "analyte_polymer": "cyclic polystyrenes",
+        "critical_component": "linear polystyrenes",
         "architecture": "linear",
-        "critical_condition_basis": "LCCC",
+        "critical_condition_basis": "Liquid chromatography at critical condition (LCCC)",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil bare silica",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "THF",
           "n-hexane"
@@ -58,10 +105,19 @@
         "pore_size": "50 Å",
         "column_dimensions": "250 x 4.6 mm, 5 mm bead size",
         "detector": null,
-        "evidence_text": "Liquid chromatography at critical condition (LCCC) was conducted with a single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size), following the procedures as reported [29,48e50]. The mobile phase was a mixture of THF/n-hexane (42/58, v/v), and the flow rate was 0.5 mL/ min at 43 ° C.",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical condition (LCCC) was conducted with a single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size), following the procedures as reported [29,48e50].",
+          "critical_component": "The small peaks (denoted as #1) at the left side of major peaks (denoted as #2) are from linear contaminants, since the value is similar to that from corresponding l-PS-N3 linear precursors.",
+          "column_name": "Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size",
+          "mobile_phase_solvents": "THF/n-hexane",
+          "mobile_phase_ratio": "42/58",
+          "temperature_celsius": "43 ° C",
+          "pore_size": "50 Å pore",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2016.08.086",
-        "corresponding_author_name": "Yingfeng Tu",
+        "corresponding_author_name": "Yingfeng Tu; Xiulin Zhu",
         "corresponding_email_address": "tuyingfeng@suda.edu.cn",
         "physical_address": "Suzhou Key Laboratory of Macromolecular Design and Precision Synthesis, Jiangsu Key Laboratory of Advanced Functional Polymer Design and Application, State and Local Joint Engineering Laboratory for Novel Functional Polymeric Materials, College of Chemistry, Chemical Engineering and Materials Science, Soochow University, Suzhou 215123, China",
         "publication_year": "2016"
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 13583,
       "extraction_success": true,
-      "processing_time": 16.179750680923462,
+      "processing_time": 19.780327558517456,
       "extracted_count": 1
     }
   ]

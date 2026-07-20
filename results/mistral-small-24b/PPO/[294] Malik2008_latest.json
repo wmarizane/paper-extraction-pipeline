@@ -1,46 +1,93 @@
 {
   "metadata": {
     "source_pdf": "[294] Malik2008.pdf",
-    "extraction_date": "2026-06-08T00:12:13.782377",
+    "extraction_date": "2026-07-19T05:48:49.758264",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:48:49.748177+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[294] Malik2008.md",
+        "sha256": "bfdd0295ad23f49c4c4bff2d5632710d9a7fe0d5e26a01d816b832506c9b00bf",
+        "char_len": 34880,
+        "token_count": 9565
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[294] Malik2008.pdf",
-      "start_time": "2026-06-08T00:11:31.627910",
+      "start_time": "2026-07-19T05:48:12.638450",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.013285398483276,
+          "time_seconds": 13.642079591751099,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12257671356201172,
+          "time_seconds": 0.10125398635864258,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9565
         },
         "llm_extraction": {
-          "time_seconds": 24.01841425895691,
+          "time_seconds": 23.32304048538208,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PPG",
-        "critical_component": "PO",
+        "analyte_polymer": "poly(propylene oxide)",
+        "critical_component": "poly(propylene oxide)",
         "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_basis": "elution volume is independent of the chain length of the block A",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly-divinylbenzene",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
@@ -58,45 +105,21 @@
         "pore_size": "500 ",
         "column_dimensions": "250 · 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. PPG diols and allylic PPG are separated from each other (due to the adsorption of the allyl group). If the alkyl group is long enough, it is adsorbed more strongly than the allylic group, and the alkyl-terminated PPG can also be separated from the allylic PPG.",
-        "notes": null,
-        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2008"
-      },
-      {
-        "analyte_polymer": "PPG",
-        "critical_component": "PO",
-        "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "80 wt%",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "In LCCC, the mobile phase was delivered by an ISCO 2350 HPLC pump (ISCO, Lincoln, NE, USA) at a flow rate of 0.5 ml/min. Samples were injected using an autosampler Spark SPH 125 Fix (Spark Holland, Emmen, The Netherlands) equipped with a 20 ll loop. A refractive index detector RI 2414 (Waters) or a SEDEX 45 ELSD (Sedere, France) was connected to the DDS 70. Nitrogen was used as carrier gas, and the pressure at the nebulizer was set to 1.0 bar. Evaporator temperature: 30 �C. All separations in LCCC were performed on a Jordi Gel DVB 500 RP column (100% poly-divinylbenzene; 250 · 4.6 mm; particle diameter = 5 lm; pore size = 500 , from Jordi, Bellingham, MA, USA).",
+          "critical_component": "In LCCC, the elution volume of each series is independent of molar mass.",
+          "column_name": "Jordi Gel DVB 500 RP column (100% poly-divinylbenzene; 250 · 4.6 mm; particle diameter = 5 lm; pore size = 500 , from Jordi, Bellingham, MA, USA).",
+          "mobile_phase_solvents": "THF-water",
+          "mobile_phase_ratio": "80 wt% THF-water",
+          "temperature_celsius": "25.0 �C",
+          "pore_size": "500 ",
+          "flow_rate": "0.5 ml/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 ",
-        "column_dimensions": "250 · 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "At the CAP for PO, the elution volume of each series is independent of molar mass. PPG diols and allylic PPG are separated from each other (due to the adsorption of the allyl group). If the alkyl group is long enough, it is adsorbed more strongly than the allylic group, and the alkyl-terminated PPG can also be separated from the allylic PPG.",
         "notes": null,
         "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Christian Doppler Laboratory for Microwave Chemistry (CDLMC), Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
         "publication_year": "2008"
       }
     ]
@@ -107,8 +130,8 @@
       "section": "Full Paper",
       "token_count": 9565,
       "extraction_success": true,
-      "processing_time": 24.004340648651123,
-      "extracted_count": 2
+      "processing_time": 23.23096776008606,
+      "extracted_count": 1
     }
   ]
 }

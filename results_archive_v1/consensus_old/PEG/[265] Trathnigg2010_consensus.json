@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[265] Trathnigg2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "evidence_text": "on the Synergi MAX RP column critical conditions for PEG were observed in methanol\u2013water containing 86.8 wt% methanol",
+        "detector": "evaporative light scattering detector",
+        "pore_size": "80 A",
+        "critical_component": "PEG",
+        "publication_year": "2010",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "86.8 wt% methanol",
+        "critical_condition_basis": "Retention independent of molar mass",
+        "column_name": "Synergi MAX RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "paper_doi": "10.1002/jssc.201000181",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Binary mobile phase critical point",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "evidence_text": "exactly critical behavior was observed up to the highest PEG used in this study (PEG 20000) in binary mobile phase containing 80 vol% (Fig. 4)",
+        "detector": "evaporative light scattering detector",
+        "pore_size": "300 A",
+        "critical_component": "PEG",
+        "publication_year": "2010",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "80 vol% methanol",
+        "critical_condition_basis": "Retention independent of molar mass",
+        "column_name": "Jupiter 5 mm C18 300 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "paper_doi": "10.1002/jssc.201000181",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Binary mobile phase critical point on Jupiter column",
+        "flow_rate": "1.0 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

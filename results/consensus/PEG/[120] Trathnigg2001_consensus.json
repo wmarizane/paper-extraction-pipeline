@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "source_pdf": "[120] Trathnigg2001.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T23:13:32.362729+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[120] Trathnigg2001_latest.json",
+        "results/mistral-small-24b/PEG/[120] Trathnigg2001_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Brij 30",
+        "critical_component": "polyoxyethylene",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x10 mm",
+        "detector": "SICON LCD 201 RI detector combined with DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene) as the first dimension",
+          "critical_component": "critical conditions for polyoxyethylene",
+          "column_name": "Spherisorb ODS2 (250x10 mm, 5 mm, 80 A)",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "methanol\u2013water (90:10, w/w)",
+          "temperature_celsius": "35.08C on system C",
+          "pore_size": "80 A",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "Semi-preparative column used for analytical LCCC separation of fatty alcohol ethoxylates. Mobile phase adjusted to 90% methanol to separate fatty alcohol from ethoxylates while maintaining critical conditions for the polyoxyethylene block.",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg; Manfred Kollroser",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute of Forensic Medicine, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Brij 52",
+        "critical_component": "polyoxyethylene",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x10 mm",
+        "detector": "SICON LCD 201 RI detector combined with DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene) as the first dimension",
+          "critical_component": "critical conditions for polyoxyethylene",
+          "column_name": "Spherisorb ODS2 (250x10 mm, 5 mm, 80 A)",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "methanol\u2013water (90:10, w/w)",
+          "temperature_celsius": "35.08C on system C",
+          "pore_size": "80 A",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "Semi-preparative column used for analytical LCCC separation of fatty alcohol ethoxylates. Mobile phase adjusted to 90% methanol to separate fatty alcohol from ethoxylates while maintaining critical conditions for the polyoxyethylene block.",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg; Manfred Kollroser",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute of Forensic Medicine, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "Brij 76",
+        "critical_component": "polyoxyethylene",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "ODS2",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x10 mm",
+        "detector": "SICON LCD 201 RI detector combined with DDS70",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC on a reversed-phase column (under critical conditions for polyoxyethylene) as the first dimension",
+          "critical_component": "critical conditions for polyoxyethylene",
+          "column_name": "Spherisorb ODS2 (250x10 mm, 5 mm, 80 A)",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "methanol\u2013water (90:10, w/w)",
+          "temperature_celsius": "35.08C on system C",
+          "pore_size": "80 A",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "Semi-preparative column used for analytical LCCC separation of fatty alcohol ethoxylates. Mobile phase adjusted to 90% methanol to separate fatty alcohol from ethoxylates while maintaining critical conditions for the polyoxyethylene block.",
+        "paper_doi": null,
+        "corresponding_author_name": "Bernd Trathnigg; Manfred Kollroser",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute of Forensic Medicine, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "fatty alcohol ethoxylates",
+        "critical_component": "polyoxyethylene",
+        "architecture": "null",
+        "critical_condition_basis": "separation according to structural units other than the repeating unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90:10",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "null",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250x10 mm",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "separation according to structural units other than the repeating unit",
+          "critical_component": "polyoxyethylene",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "90:10",
+          "temperature_celsius": "null",
+          "pore_size": "80 A",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "null",
+        "paper_doi": "null",
+        "corresponding_author_name": "Bernd Trathnigg; Manfred Kollroser",
+        "corresponding_email_address": "trathnig@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute of Forensic Medicine, Karl-Franzens-University, A-8010 Graz, Austria",
+        "publication_year": "2001",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

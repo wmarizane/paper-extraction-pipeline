@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[322] Fischer2015.pdf",
-    "extraction_date": "2026-06-08T03:08:11.284060",
+    "extraction_date": "2026-07-19T18:03:44.982166",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T18:03:44.967074+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[322] Fischer2015.md",
+        "sha256": "91bc763009a63ca8aa2fa371dff70575dcb90e8a68491dd97ea1f9d45c000149",
+        "char_len": 50290,
+        "token_count": 13939
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[322] Fischer2015.pdf",
-      "start_time": "2026-06-08T03:06:01.871757",
+      "start_time": "2026-07-19T18:01:19.776300",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 30.948107957839966,
+          "time_seconds": 32.20665454864502,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12123560905456543,
+          "time_seconds": 0.1309678554534912,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13939
         },
         "llm_extraction": {
-          "time_seconds": 98.34284925460815,
+          "time_seconds": 112.81168842315674,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "Poly(ethylene glycol)",
         "critical_component": "Poly(ethylene glycol)",
         "architecture": "null",
-        "critical_condition_basis": "critical conditions for PEG",
+        "critical_condition_basis": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
         "critical_condition_confidence": "explicit",
         "column_name": "octadecyl silica column",
         "stationary_phase_chemistry": "octadecyl silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "ACN",
           "H2O"
@@ -58,8 +106,17 @@
         "pore_size": "120 Å",
         "column_dimensions": "250x4.6 mm",
         "detector": "evaporative light scattering detector (ELSD)",
-        "evidence_text": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG. The crude samples were dissolved as 1 mg mL-1 , and 10 μL of the sample was injected at a flow rate of 0.5 mL min-1 . The column used was an octadecyl silica column with a pore size of 120 Å and particle size of 5 μm with a 250×4.6 mm inner diameter.",
-        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer temp 90C, evaporator temp 110C.",
+        "field_evidence": {
+          "critical_condition_basis": "The solvent composition was 47:53 ACN/H2O (v:v) as determined to be the critical conditions for PEG.",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "octadecyl silica column",
+          "mobile_phase_solvents": "47:53 ACN/H2O",
+          "mobile_phase_ratio": "47:53 ACN/H2O (v:v)",
+          "temperature_celsius": null,
+          "pore_size": "pore size of 120 Å",
+          "flow_rate": "flow rate of 0.5 mL min-1"
+        },
+        "notes": "LCCC performed on Agilent 1100/1200 Series HPLC. ELSD nebulizer 90°C, evaporator 110°C (detector temps, not column).",
         "paper_doi": "10.1007/s13361-015-1233-8",
         "corresponding_author_name": "Sarah Trimpin",
         "corresponding_email_address": "strimpin@chem.wayne.edu",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 13939,
       "extraction_success": true,
-      "processing_time": 98.31997728347778,
+      "processing_time": 112.75681519508362,
       "extracted_count": 1
     }
   ]

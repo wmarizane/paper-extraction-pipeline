@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[371] Trimpin2007.pdf",
-    "extraction_date": "2026-06-08T01:47:16.978366",
+    "extraction_date": "2026-07-19T14:33:21.524822",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:33:21.515983+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[371] Trimpin2007.md",
+        "sha256": "59072ef5d1fa79bec28d18ffee5aa1208b4f4b982bc07c81aa439fbc1d3b06a6",
+        "char_len": 25408,
+        "token_count": 6470
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[371] Trimpin2007.pdf",
-      "start_time": "2026-06-08T01:46:42.954524",
+      "start_time": "2026-07-19T14:32:48.771352",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.32826328277588,
+          "time_seconds": 17.757999658584595,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1083686351776123,
+          "time_seconds": 0.11958789825439453,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6470
         },
         "llm_extraction": {
-          "time_seconds": 15.587059259414673,
+          "time_seconds": 14.799253702163696,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +80,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide)",
-        "critical_component": "poly(ethylene oxide)",
-        "architecture": "null",
-        "critical_condition_basis": "liquid adsorption chromatography at critical conditions",
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "LACCC",
         "critical_condition_confidence": "explicit",
         "column_name": "2 X YMC RP 18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -48,22 +95,31 @@
         "mobile_phase_ratio": "83/17",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "45",
         "flow_rate": "0.5 mL min[-][1]",
         "pore_size": "300 Å",
         "column_dimensions": "150 mm",
         "detector": "ELSD, SEDEX 45",
-        "evidence_text": "The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L (Scheme 1, LACCC chromatogram). One fraction per 3 s was collected in a 200- _µ_ L microcentrifuge PCR tube (Molecular Bioproducts, San Diego, CA) containing three 1.2-mm stainless steel beads (BioSpec Products, Inc, Bartlesville, OK). For each injection, 43 fractions were collected and dried to completeness in a fumehood.",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at critical conditions (LACCC)",
+          "critical_component": "PEO",
+          "column_name": "2 X YMC RP 18",
+          "mobile_phase_solvents": "methanol/water 83/17 (v/v)",
+          "mobile_phase_ratio": "83/17 (v/v)",
+          "temperature_celsius": "45 ° C",
+          "pore_size": "300 Å",
+          "flow_rate": "0.5 mL min[-][1]"
+        },
+        "notes": null,
         "paper_doi": "10.1021/ac070986w",
-        "corresponding_author_name": "Sarah Trimpin",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
         "corresponding_email_address": "strimpin@indiana.edu",
-        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405; Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany; DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
         "publication_year": "2007"
       }
     ]
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 6470,
       "extraction_success": true,
-      "processing_time": 15.577489376068115,
+      "processing_time": 14.694106340408325,
       "extracted_count": 1
     }
   ]

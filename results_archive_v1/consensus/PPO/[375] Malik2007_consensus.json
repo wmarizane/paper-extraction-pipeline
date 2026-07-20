@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "source_pdf": "[375] Malik2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/macp.200700320",
+        "flow_rate": "0.5 ml min-1",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "44% acetone",
+        "column_name": "Discovery HS PEG",
+        "notes": "Used to separate PPG diols and allylic PPG. PPG diols elute at dead volume.",
+        "publication_year": "2007",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "critical conditions for the PO unit exist in two different systems, which allow a separation of PEG in SEC mode: Discovery HS PEG in 44% acetone",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "120 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PPG diols",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical adsorption point for PO unit",
+        "mobile_phase_ratio_units": "wt.-%",
+        "column_mode": "Size Exclusion",
+        "critical_component": "PO unit",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "paper_doi": "10.1002/macp.200700320",
+        "flow_rate": "0.5 ml min-1",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "80 wt.-% THF",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "notes": "Figure 6 shows molar mass vs elution volume for this setup. PPG diols elute at 2.60 ml, allylic PPG at 2.84 ml.",
+        "publication_year": "2007",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "In the latter column, an even better separation of PEG, PPG diols and allylic PPG is achieved in THF-water (with a critical point for the PO unit at 80 wt.-% THF).",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PPG diols",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical adsorption point for PO unit",
+        "mobile_phase_ratio_units": "wt.-%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PO unit",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "paper_doi": "10.1002/macp.200700320",
+        "flow_rate": "0.5 ml min-1",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "80 wt.-% THF",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "notes": "Figure 6 shows molar mass vs elution volume for this setup. Allylic PPG elutes at 2.84 ml.",
+        "publication_year": "2007",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "evidence_text": "In the latter column, an even better separation of PEG, PPG diols and allylic PPG is achieved in THF-water (with a critical point for the PO unit at 80 wt.-% THF).",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "allyl-terminated PPG",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical adsorption point for PO unit",
+        "mobile_phase_ratio_units": "wt.-%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PO unit",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEO-block-PPO",
+        "critical_component": "PO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone"
+        ],
+        "mobile_phase_ratio": "44%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI 2414 refractive-index detector",
+        "evidence_text": "In the latter column, an even better separation of PEG, PPG diols and allylic PPG is achieved in THF-water (with a critical point for the PO unit at 80 wt.-% THF).",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEO-block-PPO",
+        "critical_component": "PO",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80%",
+        "mobile_phase_ratio_units": "wt.-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "SEDEX 45 ELSD",
+        "evidence_text": "In the latter column, an even better separation of PEG, PPG diols and allylic PPG is achieved in THF-water (with a critical point for the PO unit at 80 wt.-% THF).",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200700320",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

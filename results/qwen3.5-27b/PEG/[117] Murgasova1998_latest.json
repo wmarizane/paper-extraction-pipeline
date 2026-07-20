@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[117] Murgasova1998.pdf",
-    "extraction_date": "2026-06-07T22:51:19.964830",
+    "extraction_date": "2026-07-19T12:49:18.115049",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:49:18.101715+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[117] Murgasova1998.md",
+        "sha256": "cc6595f7f4a52930755b1f14b227e2d4c0ad051539250fead575fa203426c6d2",
+        "char_len": 19679,
+        "token_count": 5672
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[117] Murgasova1998.pdf",
-      "start_time": "2026-06-07T22:49:40.081431",
+      "start_time": "2026-07-19T12:46:57.281272",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.65075135231018,
+          "time_seconds": 20.102542638778687,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1172478199005127,
+          "time_seconds": 0.11450004577636719,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5672
         },
         "llm_extraction": {
-          "time_seconds": 79.11529350280762,
+          "time_seconds": 120.56701445579529,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44712"
+      }
     }
   },
   "summary": {
@@ -35,12 +82,13 @@
     "conditions": [
       {
         "analyte_polymer": "PEO-MA macromonomers",
-        "critical_component": "PEO-MA",
+        "critical_component": "PEO-MA macromonomers",
         "architecture": "linear",
-        "critical_condition_basis": "Retention volume independent of molar mass",
+        "critical_condition_basis": "retention volume does not change with molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "phenogel",
         "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
         "mobile_phase_solvents": [
           "THF",
           "n-hexane"
@@ -57,13 +105,22 @@
         "flow_rate": "1 mL/min",
         "pore_size": "10 um",
         "column_dimensions": "7.8 x 300 mm",
-        "detector": "evaporative light-scattering detector (ELSD)",
-        "evidence_text": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
-        "notes": "Critical condition established for PEO-MA macromonomers to analyze polystyrene-graft-poly(ethylene oxide) copolymers.",
+        "detector": "Model DDL-21 evaporative light-scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+          "critical_component": "CAP of PEO-MA macromonomers was reached",
+          "column_name": "A chromatographic phenogel (linear, _d_ p = 10 m, 7.8 × 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "mobile_phase_solvents": "Mixtures of analytical grade THF (Merck, Darmstadt, Germany) and _n_ -hexane (Lachema, Brno, Czech Republic)",
+          "mobile_phase_ratio": "THF/hexane = 71:29% by weight",
+          "temperature_celsius": "The temperature during all experiments was maintained at 30°C",
+          "pore_size": "_d_ p = 10 m",
+          "flow_rate": "flow rate of 1 mL/min"
+        },
+        "notes": "Critical condition established for PEO-MA macromonomers to analyze polystyrene-graft-poly(ethylene oxide) copolymers. The PEO side chains are at the critical point, making them chromatographically invisible, while the PS backbone is separated by SEC.",
         "paper_doi": null,
         "corresponding_author_name": "R. Murgasova",
         "corresponding_email_address": null,
-        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Dubravska cesta 9, 842 36 Bratislava, Slovakia",
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Du´ bravska´ cesta 9, 842 36 Bratislava, Slovakia",
         "publication_year": "1998"
       }
     ]
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 5672,
       "extraction_success": true,
-      "processing_time": 79.09199857711792,
+      "processing_time": 120.5126302242279,
       "extracted_count": 1
     }
   ]

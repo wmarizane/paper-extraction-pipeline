@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[233] Malik2012.pdf",
+    "extraction_date": "2026-06-14T11:10:51.150822",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[233] Malik2012.pdf",
+      "start_time": "2026-06-14T11:06:53.140360",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 62.1473753452301,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11928343772888184,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13252
+        },
+        "llm_extraction": {
+          "time_seconds": 175.7437038421631,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polystyrene",
+        "critical_component": "Polystyrene",
+        "architecture": "Linear",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry 300",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "18–82",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "UV (254 nm) and ELSD",
+        "evidence_text": "The CAP of PS was realised in a DMF–THF mobile phase on a RP octadecyl column... A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF–DMF: 18–82). These conditions are called the critical conditions or the CAP of PS...",
+        "notes": "Used for separation of PS homopolymers from PS-b-PEO block copolymers.",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012"
+      },
+      {
+        "analyte_polymer": "Polyethylene oxide",
+        "critical_component": "Polyethylene oxide",
+        "architecture": "Linear",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 300",
+        "stationary_phase_chemistry": "Plain silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "96–4",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "UV (254 nm) and ELSD",
+        "evidence_text": "The CAP of PEO was realised on a normal phase Si column in the same mobile phase system (THF–DMF)... At a mobile phase composition of 96–4 (THF–DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
+        "notes": "Used for separation of PEO homopolymers from PS-b-PEO block copolymers.",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13252,
+      "extraction_success": true,
+      "processing_time": 175.72147679328918,
+      "extracted_count": 2
+    }
+  ]
+}

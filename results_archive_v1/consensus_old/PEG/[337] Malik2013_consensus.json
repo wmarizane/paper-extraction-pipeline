@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "source_pdf": "[337] Malik2013.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "Fig. 1 shows, that on a Synergi Fusion RP column a CAP for EO exists at 25 C in a methanol\u2013water mobile phase containing 82 vol.% methanol. ... On ODS column, PEGMMEs (polyethylene glycol monomethyl ethers) show no molar mass dependence and elute at more or less the same elution volume irrespective of their molar mass",
+        "detector": "density detector DDS70 and refractive index detector",
+        "pore_size": "80 A",
+        "critical_component": "PEG",
+        "publication_year": "2013",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "82 vol.% methanol",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Synergi Fusion RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "monomethyl ether",
+        "analyte_polymer": "PEGMMEs",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Critical condition established for PEGMMEs (EO block) used to analyze PCL diols.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "strong_inference",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PCL diol 830",
+        "critical_component": "PEG (EO block)",
+        "architecture": "diblock and triblock",
+        "critical_condition_basis": "LCCC conditions for EO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica based reversed phase octadecyl",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.1 wt.% acetonitrile",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "25 mm x 300 mm",
+        "detector": "density detection system DDS70 and SICON LCD 201 RI detector",
+        "evidence_text": "Fig. 3. Semi-preparative LCCC of PCL-diol 830 on the Spherisorb ODS2 column in 69.1% acetonitrile.",
+        "notes": "Semi-preparative separation under LCCC conditions.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "CL-DEG-CL",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "82",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "density detector DDS70 and refractive index detector",
+        "evidence_text": "Under such conditions, two series of peaks are observed for the different PCL diols (Fig. 2): the elution volume of the individual peaks shows only a weak dependence on the length of the EO block (which is, of course, very short).",
+        "notes": "Critical condition established for EO block used to analyze PCL diols.",
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "CL-DEG-CL",
+        "critical_component": "EO",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "69.1",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "2.0 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "25 mm \u00d7 300 mm",
+        "detector": "density detection system DDS70 combined with a SICON LCD 201 RI detector",
+        "evidence_text": "On a semipreparative ODS column, we have fractionated PCL diol 830 and observed two series of peaks, one of which is sharp, while the other one is rather broad (Fig. 3).",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2013.09.023",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2013",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

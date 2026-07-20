@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[371] Trimpin2007.pdf",
+    "extraction_date": "2026-06-14T11:37:45.631812",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[371] Trimpin2007.pdf",
+      "start_time": "2026-06-14T11:37:09.423754",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 20.871739387512207,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13869237899780273,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6470
+        },
+        "llm_extraction": {
+          "time_seconds": 15.197484970092773,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "LACCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "2 X YMC RP 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min[-][1]",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ELSD, SEDEX 45",
+        "evidence_text": "The following system was employed (BAM laboratories): column, 2 X YMC RP 18 (150, 300 Å); eluents, methanol/water 83/17 (v/v); detection, ELSD, SEDEX 45 (Sedere, ERC); temperature, 45 ° C; flow rate, 0.5 mL min[-][1] ; concentration, 5 samples PEO (2-6), total amount, 5.41 mg mL[-][1] ; injection amount, 10 and 1 _µ_ L (Scheme 1, LACCC chromatogram).",
+        "notes": null,
+        "paper_doi": "10.1021/ac070986w",
+        "corresponding_author_name": "Sarah Trimpin; Steffen M. Weidner; Jana Falkenhagen; Charles N. McEwen",
+        "corresponding_email_address": "strimpin@indiana.edu",
+        "physical_address": "Department of Chemistry, Indiana University, Bloomington, Indiana 47405, Federal Institute for Materials Research and Testing (BAM), Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany, and DuPont Corporate Center for Analytical Sciences, Wilmington, Delaware 19880",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6470,
+      "extraction_success": true,
+      "processing_time": 15.18697714805603,
+      "extracted_count": 1
+    }
+  ]
+}

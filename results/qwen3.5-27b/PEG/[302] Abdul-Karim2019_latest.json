@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[302] Abdul-Karim2019.pdf",
-    "extraction_date": "2026-06-08T02:46:20.643299",
+    "extraction_date": "2026-07-19T17:41:55.609735",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T17:41:55.594946+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[302] Abdul-Karim2019.md",
+        "sha256": "299850c7f048aaaad114c6844a67ab98dbfee9e315833a3c9142e66974b9872a",
+        "char_len": 39019,
+        "token_count": 10554
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[302] Abdul-Karim2019.pdf",
-      "start_time": "2026-06-08T02:41:49.384967",
+      "start_time": "2026-07-19T17:36:00.377760",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 16.156673669815063,
+          "time_seconds": 14.87064266204834,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12760353088378906,
+          "time_seconds": 0.12010955810546875,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10554
         },
         "llm_extraction": {
-          "time_seconds": 254.97394824028015,
+          "time_seconds": 340.1884825229645,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +81,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(propylene ether carbonate)",
-        "critical_component": "poly(propylene ether carbonate)",
+        "analyte_polymer": "PPEC",
+        "critical_component": "PPEC",
         "architecture": "linear",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
-        "stationary_phase_chemistry": "Reversed Phase (ODS)",
+        "stationary_phase_chemistry": "ODS",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water",
@@ -57,10 +105,19 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL/min",
         "pore_size": "70 Å",
-        "column_dimensions": "250x4.6 mm",
+        "column_dimensions": "250×4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "PPEC eluted at similar elution volume irrespective of their molar mass while using mobile phase containing 92% ACN, 7% water and 1% TEA (2.8 mL), E. These are so called chromatographic critical conditions of PPEC on RP column.",
-        "notes": "Established using PPEC homopolymers (500 to 5000 g/mol). TEA added to avoid unwanted polar interactions.",
+        "field_evidence": {
+          "critical_condition_basis": "PPEC eluted at similar elution volume irrespective of their molar mass while using mobile phase containing 92% ACN, 7% water and 1% TEA",
+          "critical_component": "These are so called chromatographic critical conditions of PPEC on RP column",
+          "column_name": "ZORBAX ODS, 70 Å pore, 5 µm particle, 250×4.6 mm dimensions",
+          "mobile_phase_solvents": "mixture of acetonitrile (ACN) and double deionizedwater with 1.0% trimethylamine (TEA)",
+          "mobile_phase_ratio": "ACN/H 2 O/TEA: 92/7/1 (v/v%)",
+          "temperature_celsius": "The temperature of column oven was mainau=» tained at 30 Ga»[o] C",
+          "pore_size": "70 Å pore",
+          "flow_rate": "mobile phase flow rate was set at 0.5 mL/min"
+        },
+        "notes": "Established using PPEC homopolymers of varying molar masses (500 to 5000 g/mol).",
         "paper_doi": "10.1007/s13233-019-7128-y",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -68,16 +125,17 @@
         "publication_year": "2019"
       },
       {
-        "analyte_polymer": "poly(ethylene glycol)",
-        "critical_component": "poly(ethylene glycol)",
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
         "architecture": "linear",
         "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "PhenoSphere-Next 5u Sil",
-        "stationary_phase_chemistry": "Normal Phase (Silica)",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "tetrahydrofuran",
-          "N,N-dimethylformamide"
+          "THF",
+          "DMF"
         ],
         "mobile_phase_ratio": "98.5/1.5",
         "mobile_phase_ratio_units": "v/v%",
@@ -90,10 +148,19 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL/min",
         "pore_size": "120 Å",
-        "column_dimensions": "250x4.6 mm",
+        "column_dimensions": "250×4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In between these two extreme situations at a mobile phase composition of THF/DMF: 98.5/1.5 (v/v%), all PEG standards elute at the same volume irrespective of their molar mass, Figure 6(E). These are so called LCCC of PEGs in a given solvent/sorbent system.",
-        "notes": "Late elution attributed to hydroxyl end-groups. MeO-PEGs eluted earlier than PEGs under these conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "all PEG standards elute at the same volume irrespective of their molar mass",
+          "critical_component": "These are so called LCCC of PEGs in a given solvent/sorbent system",
+          "column_name": "PhenoSphere-Next 5u Sil column, 120 Å E(EwUoU(w(ww wes au=» pore, 5 µm particle, 250×4.6 mm dimensions",
+          "mobile_phase_solvents": "mixture of THF a=» and DMF",
+          "mobile_phase_ratio": "THF/DMF: 98.5/1.5 (v/v%)",
+          "temperature_celsius": "The temperature of column oven was mainau=» tained at 30 Ga»[o] C",
+          "pore_size": "120 Å E(EwUoU(w(ww wes au=» pore",
+          "flow_rate": "mobile phase flow rate was set at 0.5 mL/min"
+        },
+        "notes": "Established using PEG homopolymers. Note: Elution volume is ahead of expected void volume due to hydroxyl end-group interaction.",
         "paper_doi": "10.1007/s13233-019-7128-y",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -101,16 +168,17 @@
         "publication_year": "2019"
       },
       {
-        "analyte_polymer": "poly(ethylene glycol) monomethyl ether",
-        "critical_component": "poly(ethylene glycol) monomethyl ether",
+        "analyte_polymer": "MeO-PEG",
+        "critical_component": "MeO-PEG",
         "architecture": "linear",
         "critical_condition_basis": "elution independent of molar mass",
-        "critical_condition_confidence": "strong_inference",
+        "critical_condition_confidence": "explicit",
         "column_name": "PhenoSphere-Next 5u Sil",
-        "stationary_phase_chemistry": "Normal Phase (Silica)",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "tetrahydrofuran",
-          "N,N-dimethylformamide"
+          "THF",
+          "DMF"
         ],
         "mobile_phase_ratio": "98.5/1.5",
         "mobile_phase_ratio_units": "v/v%",
@@ -123,10 +191,19 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL/min",
         "pore_size": "120 Å",
-        "column_dimensions": "250x4.6 mm",
+        "column_dimensions": "250×4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "MeO-PEGs of varying molar masses eluted earlier than PEGs independent of molar mass, Figure 6(F).",
-        "notes": "Critical condition established for PEGs (hydroxyl end-groups) at THF/DMF 98.5/1.5. MeO-PEGs (methoxy end-group) also elute independent of molar mass under these conditions, though at a different volume.",
+        "field_evidence": {
+          "critical_condition_basis": "MeO-PEGs of varying molar masses eluted earlier than PEGs independent of molar mass",
+          "critical_component": "MeO-PEGs of varying molar masses eluted earlier than PEGs independent of molar mass",
+          "column_name": "PhenoSphere-Next 5u Sil column, 120 Å E(EwUoU(w(ww wes au=» pore, 5 µm particle, 250×4.6 mm dimensions",
+          "mobile_phase_solvents": "mixture of THF a=» and DMF",
+          "mobile_phase_ratio": "THF/DMF: 98.5/1.5 (v/v%)",
+          "temperature_celsius": "The temperature of column oven was mainau=» tained at 30 Ga»[o] C",
+          "pore_size": "120 Å E(EwUoU(w(ww wes au=» pore",
+          "flow_rate": "mobile phase flow rate was set at 0.5 mL/min"
+        },
+        "notes": "Established using MeO-PEG homopolymers. Elution volume is still more than expected void volume due to presence of one hydroxyl end-group.",
         "paper_doi": "10.1007/s13233-019-7128-y",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -141,7 +218,7 @@
       "section": "Full Paper",
       "token_count": 10554,
       "extraction_success": true,
-      "processing_time": 254.9511022567749,
+      "processing_time": 340.13544368743896,
       "extracted_count": 3
     }
   ]

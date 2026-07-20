@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "source_pdf": "[332] Malik2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:21:54.269429+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[332] Malik2016_latest.json",
+        "results/mistral-small-24b/PPO/[332] Malik2016_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
+          "critical_component": "PPO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "80/20 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min\u207b\u00b9"
+        },
+        "critical_condition_basis": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on Jordi RP column",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Used to separate PPO chains with different end-groups (PPGs, allylic-PPOs, octadecyl-PPOs).",
+        "architecture": "Linear",
+        "critical_component": "PPO repeat unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2016",
+        "pore_size": "500 \u01fa",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "mobile_phase_ratio": "80/20",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "temperature_celsius": "25",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL.min-1",
+        "detector": "SEDEX 45 ELSD",
+        "column_name": "Jordi DVB 500 RP",
+        "analyte_polymer": "Polypropylene oxide (PPO)",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
+          "critical_component": "PBO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "84/16 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min\u207b\u00b9"
+        },
+        "critical_condition_basis": "Critical adsorption point (CAP) of PBO are established on the same column in 84 % THF",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Used to analyze butyl-PBO and octadecyl-PBO. Separation of by-products from targeted products.",
+        "architecture": "Linear",
+        "critical_component": "PBO repeat unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2016",
+        "pore_size": "500 \u01fa",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "mobile_phase_ratio": "84/16",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "temperature_celsius": "25",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL.min-1",
+        "detector": "SEDEX 45 ELSD",
+        "column_name": "Jordi DVB 500 RP",
+        "analyte_polymer": "Polybutylene oxide (PBO)",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
+          "critical_component": "PHO",
+          "column_name": "Jordi DVB 500 RP",
+          "mobile_phase_solvents": "THF, Water",
+          "mobile_phase_ratio": "87/13 w/w",
+          "temperature_celsius": "25 \u00b0C",
+          "pore_size": "500 \u01fa",
+          "flow_rate": "flow rate of 0.5 mL.min\u207b\u00b9"
+        },
+        "critical_condition_basis": "Critical adsorption point (CAP) for PHO was found in 87 % THF-water on the same column",
+        "stationary_phase_chemistry": "Poly(divinylbenzene)",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Used to analyze hexanol-based and octadecanol-based PHO. Separation of by-products from targeted products.",
+        "architecture": "Linear",
+        "critical_component": "PHO repeat unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2016",
+        "pore_size": "500 \u01fa",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "mobile_phase_ratio": "87/13",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "temperature_celsius": "25",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL.min-1",
+        "detector": "SEDEX 45 ELSD",
+        "column_name": "Jordi DVB 500 RP",
+        "analyte_polymer": "Polyhexylene oxide (PHO)",
+        "corresponding_author_name": "Muhammad Imran Malik; Muhammad Irfan; Akbar Khan; Sana Rahim; Rubina Abdul-Karim; Jamshed Hashim",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

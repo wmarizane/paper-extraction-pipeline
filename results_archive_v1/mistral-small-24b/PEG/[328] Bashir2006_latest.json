@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[328] Bashir2006.pdf",
+    "extraction_date": "2026-06-14T10:52:38.509143",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[328] Bashir2006.pdf",
+      "start_time": "2026-06-14T10:51:41.472473",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 39.533488512039185,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13268756866455078,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13603
+        },
+        "llm_extraction": {
+          "time_seconds": 17.37033176422119,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution time does not depend on molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "83/17",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "35",
+        "flow_rate": "1 mL/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 mm × 4.6 mm I.D.",
+        "detector": "UV-detector",
+        "evidence_text": "A further increase of the MeOH content reverses the elution order with higher molar mass samples eluting at lower elution times than those of lower molar mass, i.e. an SEC like elution order is observed. Only the PM is capable to describe these two modes of chromatography. However, at MeOH contents of more than 90% the retention times decrease again and the different curves merge once more at a MeOH a content of approximately 98%, indicating a second Ga» critical point. Such a behaviour for PEGs has been found for other mobile phases on RP stationary phases as well and has been attributed to the interaction of residual silanol groups of the stationary phase with the oxygen atoms of the PEO chain, while the ethylene structures interact with the C18-chains in the usual reverse phase mode [20,21].",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Mubasher A. Bashir; Wolfgang Radke",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2006"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13603,
+      "extraction_success": true,
+      "processing_time": 17.352672576904297,
+      "extracted_count": 1
+    }
+  ]
+}

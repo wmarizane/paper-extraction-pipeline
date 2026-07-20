@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[233] Malik2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "evidence_text": "The CAP of PS was realised in a DMF\u2013THF mobile phase on a RP octadecyl column... A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF\u2013DMF: 18\u201382).",
+        "detector": "ELS",
+        "pore_size": "300 A",
+        "critical_component": "PS",
+        "publication_year": "2012",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "18:82",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Symmetry 300",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "Polystyrene (PS)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "evidence_text": "The CAP of PEO was realised on a normal phase Si column... At a mobile phase composition of 96\u20134 (THF\u2013DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
+        "detector": "ELS",
+        "pore_size": "300 A",
+        "critical_component": "PEO",
+        "publication_year": "2012",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "96:4",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Nucleosil Si 300",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol.%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEO",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "plain silica (Normal Phase)",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

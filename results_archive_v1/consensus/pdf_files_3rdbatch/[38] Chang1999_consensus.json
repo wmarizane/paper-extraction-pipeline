@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[38] Chang1999.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": null,
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784 KOREA",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "column_dimensions": "250 x 4.6 mm",
+        "temperature_celsius": "30.5",
+        "mobile_phase_ratio": "57/43",
+        "column_name": "Alltech, Nucleosil",
+        "notes": "The text explicitly identifies this setup as the 'chromatographic critical point' for Polystyrene.",
+        "publication_year": "1999",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "evidence_text": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other. The critical condition is observed at 30.5 8 C, consistent with the result shown in Fig. 2.",
+        "corresponding_author_name": "Taihyun Chang",
+        "pore_size": "100 A",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Polystyrene",
+        "detector": "RI",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Chromatographic critical point where enthalpic and entropic terms compensate, resulting in loss of separation selectivity according to molecular weight",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polystyrene",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

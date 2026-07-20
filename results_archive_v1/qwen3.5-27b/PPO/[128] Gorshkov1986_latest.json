@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[128] Gorshkov1986.pdf",
+    "extraction_date": "2026-06-14T09:45:34.388841",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[128] Gorshkov1986.pdf",
+      "start_time": "2026-06-14T09:43:43.539773",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 17.717023611068726,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11602616310119629,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 2050
+        },
+        "llm_extraction": {
+          "time_seconds": 93.01590991020203,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Poly(oxypropylenpolyol)",
+        "critical_component": "Poly(propylenglykol)",
+        "architecture": "Linear",
+        "critical_condition_basis": "Independence of elution volume from molar mass",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "LiChrosorb Si 100",
+        "stationary_phase_chemistry": "Silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Methylethylketon",
+          "Ethylacetat"
+        ],
+        "mobile_phase_ratio": "0/100",
+        "mobile_phase_ratio_units": "Vol.-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "RIDK 101",
+        "evidence_text": "Bei dem von uns angewandten Gemisch Methylethylketon/Ethylacetat werden die kritischen Bedingungen durch stufenweise Zugabe von Ethylacetat zu Methylethylketon erreicht... 0/100 (5)... Unter diesen Bedingungen ist das Elutionsvolumen unabhangig von der Molmasse... Die Untersuchungen wurden... bei 30°C durchgefuhrt.",
+        "notes": "The text lists a series of ratios (20/80, 10/90, 7/93, 5/95, 0/100) to find the critical point. The 0/100 ratio (pure Ethylacetate) is the final point in the series where the critical condition (mass independence) is achieved for the difunctional standards used to establish the condition.",
+        "paper_doi": null,
+        "corresponding_author_name": "Gorškov, A. V.",
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "1986"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 2050,
+      "extraction_success": true,
+      "processing_time": 92.99303197860718,
+      "extracted_count": 1
+    }
+  ]
+}

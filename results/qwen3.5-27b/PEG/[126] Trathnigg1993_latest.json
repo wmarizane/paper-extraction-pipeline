@@ -1,46 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[126] Trathnigg1993.pdf",
-    "extraction_date": "2026-06-07T23:24:02.148741",
+    "extraction_date": "2026-07-19T13:29:23.295665",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:29:23.282674+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[126] Trathnigg1993.md",
+        "sha256": "9e52bd08b2c7fa80fc09c2850ec0449e08bfc17e24c3e5d3276ae00e4635bfea",
+        "char_len": 23284,
+        "token_count": 6518
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[126] Trathnigg1993.pdf",
-      "start_time": "2026-06-07T23:22:00.465766",
+      "start_time": "2026-07-19T13:25:36.737671",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 46.475897789001465,
+          "time_seconds": 46.68208432197571,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.20813632011413574,
+          "time_seconds": 0.11537599563598633,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6518
         },
         "llm_extraction": {
-          "time_seconds": 74.99882626533508,
+          "time_seconds": 179.70846724510193,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polyethylene glycol (PEG)",
-        "critical_component": "Polyethylene glycol backbone",
+        "analyte_polymer": "Polyethylene glycol",
+        "critical_component": "Polyethylene glycol repeating units",
         "architecture": "Linear",
-        "critical_condition_basis": "Explicit mention of critical conditions for PEG",
+        "critical_condition_basis": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H2O 80:20",
         "critical_condition_confidence": "explicit",
         "column_name": "ODS 2",
-        "stationary_phase_chemistry": "C-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "Methanol",
           "Water"
@@ -54,12 +102,64 @@
           "salt_concentration": null
         },
         "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
+        "flow_rate": null,
         "pore_size": null,
         "column_dimensions": "250 x 4.6 mm",
         "detector": "Density and RI",
-        "evidence_text": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
-        "notes": "Under these conditions, elution volumes of diols, mono- and dimethylethers are quite similar, indicating independence from chain length for the PEG block.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H2O 80:20",
+          "critical_component": "Critical conditions for PEG",
+          "column_name": "ODS 2",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Under these conditions, elution volumes of diols, mono- and dimethylethers are quite similar, indicating separation based on end groups.",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, A-8010 Graz, Heinrichstrasse 28, Austria",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "Polypropylene glycol",
+        "critical_component": "Polypropylene glycol repeating units",
+        "architecture": "Linear",
+        "critical_condition_basis": "Separation of PPG oligomers works very well in a mobile phase composition, which corresponds to the critical conditions for PEG",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "ODS 2",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "V/V",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Density and RI",
+        "field_evidence": {
+          "critical_condition_basis": "separation of PPG oligomers with molecular weights of several hundreds works very well in a mobile phase composition, which corresponds to the critical conditions for PEG",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "ODS 2",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "The text states PPG is separated under conditions corresponding to critical conditions for PEG (80:20 MeOH:Water). While not explicitly called 'critical for PPG', the text implies separation based on oxypropylene units under these conditions.",
         "paper_doi": null,
         "corresponding_author_name": "B. Trathnigg",
         "corresponding_email_address": null,
@@ -74,8 +174,8 @@
       "section": "Full Paper",
       "token_count": 6518,
       "extraction_success": true,
-      "processing_time": 74.97651195526123,
-      "extracted_count": 1
+      "processing_time": 179.65118598937988,
+      "extracted_count": 2
     }
   ]
 }

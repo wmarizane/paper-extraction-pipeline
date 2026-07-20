@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[117] Murgasova1998.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T23:11:16.834774+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[117] Murgasova1998_latest.json",
+        "results/mistral-small-24b/PEG/[117] Murgasova1998_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-MA macromonomers",
+        "critical_component": "PEO-MA macromonomers",
+        "architecture": "linear",
+        "critical_condition_basis": "retention volume does not change with molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 um",
+        "column_dimensions": "7.8 x 300 mm",
+        "detector": "Model DDL-21 evaporative light-scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+          "critical_component": "CAP of PEO-MA macromonomers was reached",
+          "column_name": "A chromatographic phenogel (linear, _d_ p = 10 m, 7.8 \u00d7 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "mobile_phase_solvents": "Mixtures of analytical grade THF (Merck, Darmstadt, Germany) and _n_ -hexane (Lachema, Brno, Czech Republic)",
+          "mobile_phase_ratio": "THF/hexane = 71:29% by weight",
+          "temperature_celsius": "The temperature during all experiments was maintained at 30\u00b0C",
+          "pore_size": "_d_ p = 10 m",
+          "flow_rate": "flow rate of 1 mL/min"
+        },
+        "notes": "Critical condition established for PEO-MA macromonomers to analyze polystyrene-graft-poly(ethylene oxide) copolymers. The PEO side chains are at the critical point, making them chromatographically invisible, while the PS backbone is separated by SEC.",
+        "paper_doi": null,
+        "corresponding_author_name": "R. Murgasova",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Du\u00b4 bravska\u00b4 cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "polystyrene-graft-poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "graft",
+        "critical_condition_basis": "The data obtained by LC CAP (the apparent molecular weights of the polystyrene backbone, the number of the grafts per unit backbone and the amount of poly(ethylene oxide) in the graft copolymers) were compared with results of static light scattering (SLS), differential refractometry and conventional SEC.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "phenogel (linear)",
+        "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "71:29",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "1 mL/min",
+        "pore_size": "10 m",
+        "column_dimensions": "7.8 \u00d7 300 mm",
+        "detector": "Model DDL-21 evaporative light-scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The data obtained by LC CAP (the apparent molecular weights of the polystyrene backbone, the number of the grafts per unit backbone and the amount of poly(ethylene oxide) in the graft copolymers) were compared with results of static light scattering (SLS), differential refractometry and conventional SEC.",
+          "critical_component": "The side chain of a graft copolymer eluted at CAP the main polystyrene chain could be characterized on the basis of the SEC mechanism.",
+          "column_name": "A chromatographic phenogel (linear, d p = 10 m, 7.8 \u00d7 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "mobile_phase_solvents": "Mixtures of analytical grade THF (Merck, Darmstadt, Germany) and n-hexane (Lachema, Brno, Czech Republic), both purified by distillation, were used as mobile phases.",
+          "mobile_phase_ratio": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+          "temperature_celsius": "The temperature during all experiments was maintained at 30\u00b0C with a Knauer column oven.",
+          "pore_size": "A chromatographic phenogel (linear, d p = 10 m, 7.8 \u00d7 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "flow_rate": "The data were collected on-line using a Waters PC-based data acquisition system."
+        },
+        "notes": "Critical condition established for poly(ethylene oxide) side chains in polystyrene-graft-poly(ethylene oxide) copolymers. The PEO side chains are at the critical point, making them chromatographically invisible, while the PS backbone is separated by SEC.",
+        "paper_doi": null,
+        "corresponding_author_name": "Dusan Berek",
+        "corresponding_email_address": null,
+        "physical_address": "Polymer Institute, Slovak Academy of Sciences, Du\u00b4 bravska\u00b4 cesta 9, 842 36 Bratislava, Slovakia",
+        "publication_year": "1998",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

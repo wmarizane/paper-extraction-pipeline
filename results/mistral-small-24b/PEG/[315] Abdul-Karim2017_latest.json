@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[315] Abdul-Karim2017.pdf",
-    "extraction_date": "2026-06-08T01:06:10.983849",
+    "extraction_date": "2026-07-19T13:48:08.997106",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:48:08.985793+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[315] Abdul-Karim2017.md",
+        "sha256": "7395690a55d685ebbe421a778f4d8e3d961aa26cb038a7448c0559f99bc2fb55",
+        "char_len": 34348,
+        "token_count": 9539
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[315] Abdul-Karim2017.pdf",
-      "start_time": "2026-06-08T01:04:23.631511",
+      "start_time": "2026-07-19T13:46:14.985825",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 86.54124021530151,
+          "time_seconds": 87.3088150024414,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10926437377929688,
+          "time_seconds": 0.10180807113647461,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9539
         },
         "llm_extraction": {
-          "time_seconds": 20.70167326927185,
+          "time_seconds": 26.54788875579834,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -41,6 +87,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -58,7 +105,16 @@
         "pore_size": "70 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v. With this mobile phase composition, PEEC with molar masses ranging from 500 to 5000 g/mol eluted at the same elution volume independent of their molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "The chromatographic critical behaviour was observed in mobile phase composition acetonitrile-water-TEA:64-35-1, v/v.",
+          "critical_component": "poly(ethylene ether-carbonate)",
+          "column_name": "ZORBAX ODS RP 70 A[˚ ] , 5 lm, 250 mm 3 4.6 mm column",
+          "mobile_phase_solvents": "acetonitrile-water-TEA",
+          "mobile_phase_ratio": "64-35-1 (v/v %)",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "70 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
         "notes": "null",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
@@ -74,6 +130,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
         "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -91,7 +148,16 @@
         "pore_size": "120 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "PEG of different molar masses eluted at same elution volume irrespective of their molar mass in mobile phase containing 65% acetone.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical adsorption point of PEG should be between these two mobile phase compositions.",
+          "critical_component": "PEG",
+          "column_name": "Ultisil diol column, 120A[˚ ] , 5 lm, 250 mm 3 4.6 mm (Welch, China)",
+          "mobile_phase_solvents": "acetone in water",
+          "mobile_phase_ratio": "65% acetone in water",
+          "temperature_celsius": "column temperature: 30 8C",
+          "pore_size": "120 Å",
+          "flow_rate": "0.5 > mL/min"
+        },
         "notes": "null",
         "paper_doi": "10.1002/pola.28559",
         "corresponding_author_name": "M. I. Malik",
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 9539,
       "extraction_success": true,
-      "processing_time": 20.687906503677368,
+      "processing_time": 26.439682722091675,
       "extracted_count": 2
     }
   ]

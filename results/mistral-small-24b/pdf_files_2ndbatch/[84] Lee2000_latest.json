@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[84] Lee2000.pdf",
-    "extraction_date": "2026-06-07T23:41:24.047762",
+    "extraction_date": "2026-07-19T05:31:28.594938",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:31:28.585049+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[84] Lee2000.md",
+        "sha256": "96ee0b278c4c93c1d664a0f88bdcebc9ae58ce282ea92d426ab874a1f7c2f400",
+        "char_len": 14986,
+        "token_count": 4264
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[84] Lee2000.pdf",
-      "start_time": "2026-06-07T23:41:06.450259",
+      "start_time": "2026-07-19T05:31:06.044864",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 6.8392112255096436,
+          "time_seconds": 8.16704273223877,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.09967184066772461,
+          "time_seconds": 0.12171387672424316,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 4264
         },
         "llm_extraction": {
-          "time_seconds": 10.65846562385559,
+          "time_seconds": 14.20481538772583,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43246"
+      }
     }
   },
   "summary": {
@@ -34,13 +80,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "linear",
+        "analyte_polymer": "cyclic PS",
+        "critical_component": "linear PS",
         "architecture": "linear",
-        "critical_condition_basis": "LCCC",
+        "critical_condition_basis": "chromatographic critical condition",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18AB",
         "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -58,12 +105,21 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": null,
-        "evidence_text": "In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 °C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "field_evidence": {
+          "critical_condition_basis": "the chromatographic critical condition",
+          "critical_component": "linear PS",
+          "column_name": "a single C18 bonded silica column (Nucleosil C18AB, 100 Å pore, 250 × 4.6 mm)",
+          "mobile_phase_solvents": "a mixture of CH2Cl2/CH3CN",
+          "mobile_phase_ratio": "(57/43, v/v)",
+          "temperature_celsius": "the column temperature was kept constant at 43 °C",
+          "pore_size": "100 Å pore",
+          "flow_rate": "the flow rate was 0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Taihyun Chang",
+        "corresponding_author_name": "Hee Cheong Lee; Hyunjung Lee; Wonmok Lee; Taihyun Chang; Jacques Roovers",
         "corresponding_email_address": "tc@postech.ac.kr",
-        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea; Institute for Chemical Process and Environmental Technology, National Research Council of Canada, Ottawa, Ontario K1A 0R9, Canada",
         "publication_year": "2000"
       }
     ]
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 4264,
       "extraction_success": true,
-      "processing_time": 10.650826930999756,
+      "processing_time": 14.111268043518066,
       "extracted_count": 1
     }
   ]

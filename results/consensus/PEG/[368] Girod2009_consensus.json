@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "source_pdf": "[368] Girod2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:36:30.022392+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[368] Girod2009_latest.json",
+        "results/mistral-small-24b/PEG/[368] Girod2009_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions were established for hydroxyl-terminated PEG standards, ranging from Mw \u2248 200 to 2000 g mol\u207b\u00b9, using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr \u2248 2.33 min) independently of their molecular mass.",
+          "critical_component": "The critical conditions were established for hydroxyl-terminated PEG standards",
+          "column_name": "The chromatographic column (octadecyl-silica Equisil, 150 x 4 mm, pore diameter: 100 \u00c5, particle size: 5 \u03bcm)",
+          "mobile_phase_solvents": "The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v)",
+          "mobile_phase_ratio": "The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v)",
+          "temperature_celsius": "The chromatographic column was maintained at a constant temperature of 25\u00b0C.",
+          "pore_size": "The chromatographic column (octadecyl-silica Equisil, 150 x 4 mm, pore diameter: 100 \u00c5, particle size: 5 \u03bcm)",
+          "flow_rate": "The flow rate was set to 1 mL min\u207b\u00b9."
+        },
+        "critical_condition_basis": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block in order to make the PEO segment chromatographically 'invisible'",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "physical_address": "Universit\u00e9s Aix-Marseille I, II & III \u2013 CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrom\u00e9tries Appliqu\u00e9es \u00e0 la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "mobile_phase_ratio_units": "%, v/v",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Critical conditions established using hydroxyl-terminated PEG standards ranging from Mw 200 to 2000 g mol\u207b\u00b9. Salt concentration varied between 0.1 and 1 mM but critical composition remained the same.",
+        "architecture": "linear",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2009",
+        "pore_size": "100 \u00c5",
+        "paper_doi": "10.1002/rcm.4028",
+        "mobile_phase_ratio": "88.8:11.2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "0.1\u20131 mM"
+        },
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "temperature_celsius": "25",
+        "column_dimensions": "150 x 4 mm",
+        "flow_rate": "1 mL min\u207b\u00b9",
+        "detector": "QStar Elite mass spectrometer",
+        "column_name": "octadecyl-silica Equisil",
+        "analyte_polymer": "PEO-b-PS",
+        "corresponding_author_name": "Laurence Charles",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

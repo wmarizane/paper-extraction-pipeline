@@ -1,46 +1,93 @@
 {
   "metadata": {
     "source_pdf": "[111] Gorshkov1990.pdf",
-    "extraction_date": "2026-06-07T23:45:31.467002",
+    "extraction_date": "2026-07-19T12:18:25.862537",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:18:25.854378+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[111] Gorshkov1990.md",
+        "sha256": "cddb9b8709d175a6e1f6a7e61ad42625909adb2590778cdb55c1f9a935bb2d97",
+        "char_len": 25533,
+        "token_count": 6867
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[111] Gorshkov1990.pdf",
-      "start_time": "2026-06-07T23:44:03.773168",
+      "start_time": "2026-07-19T12:16:23.075727",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 53.33693766593933,
+          "time_seconds": 60.55976891517639,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11171793937683105,
+          "time_seconds": 0.13817071914672852,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6867
         },
         "llm_extraction": {
-          "time_seconds": 34.24501061439514,
+          "time_seconds": 62.033233404159546,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 5
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyethylene oxide",
-        "critical_component": "polyethylene oxide",
-        "architecture": "null",
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
         "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
         "critical_condition_confidence": "explicit",
         "column_name": "RP-18",
-        "stationary_phase_chemistry": "null",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "acetonitrile"
@@ -48,65 +95,42 @@
         "mobile_phase_ratio": "42:58",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
-        "temperature_celsius": "null",
+        "temperature_celsius": null,
         "flow_rate": "1 ml/min",
-        "pore_size": "null",
-        "column_dimensions": "null",
+        "pore_size": null,
+        "column_dimensions": null,
         "detector": "refractometric",
-        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "A.V. Gorshkov",
-        "corresponding_email_address": "null",
-        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
-        "publication_year": "1990"
-      },
-      {
-        "analyte_polymer": "polypropylene oxide",
-        "critical_component": "polypropylene oxide",
-        "architecture": "null",
-        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
-        "critical_condition_confidence": "explicit",
-        "column_name": "RP-18",
-        "stationary_phase_chemistry": "null",
-        "mobile_phase_solvents": [
-          "water",
-          "tetrahydrofuran"
-        ],
-        "mobile_phase_ratio": "null",
-        "mobile_phase_ratio_units": "null",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
         },
-        "temperature_celsius": "null",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "null",
-        "detector": "null",
-        "evidence_text": "To solve a similar problem for PPO on a reversed phase it is necessary to choose a different mixture, e.g., water-tetrahydrofuran (THF), as in 100% acetonitrile a weak adsorption regime occurs with PPO.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "A.V. Gorshkov",
-        "corresponding_email_address": "null",
-        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
         "publication_year": "1990"
       },
       {
-        "analyte_polymer": "polyethylene oxide",
-        "critical_component": "polyethylene oxide",
-        "architecture": "null",
+        "analyte_polymer": "PPO",
+        "critical_component": "PEO",
+        "architecture": "linear",
         "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
         "critical_condition_confidence": "explicit",
         "column_name": "RP-18",
-        "stationary_phase_chemistry": "null",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "acetonitrile"
@@ -114,55 +138,160 @@
         "mobile_phase_ratio": "42:58",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
-        "temperature_celsius": "null",
+        "temperature_celsius": null,
         "flow_rate": "1 ml/min",
-        "pore_size": "null",
-        "column_dimensions": "null",
+        "pore_size": null,
+        "column_dimensions": null,
         "detector": "refractometric",
-        "evidence_text": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "A.V. Gorshkov",
-        "corresponding_email_address": "null",
-        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
         "publication_year": "1990"
       },
       {
-        "analyte_polymer": "polypropylene oxide",
-        "critical_component": "polypropylene oxide",
-        "architecture": "null",
+        "analyte_polymer": "PEO-PPO",
+        "critical_component": "PEO",
+        "architecture": "linear",
         "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
         "critical_condition_confidence": "explicit",
         "column_name": "RP-18",
-        "stationary_phase_chemistry": "null",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "PEO-PPO-PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water",
+          "acetonitrile"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric",
+        "field_evidence": {
+          "critical_condition_basis": "These conditions are optimum for the separation of PEO according to the types of terminal groups (Fig. 3). As was to be expected, for the reversed phase the retention of macromolecules with the aliphatic end RO is stronger than that with a double bond.",
+          "critical_component": "PEO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-acetonitrile",
+          "mobile_phase_ratio": "42:58",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
+        "publication_year": "1990"
+      },
+      {
+        "analyte_polymer": "PEO-PPO-PEO",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "disappearance of the retention volume versus macromolecule size dependence",
+        "critical_condition_confidence": "explicit",
+        "column_name": "RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water",
           "tetrahydrofuran"
         ],
         "mobile_phase_ratio": "null",
-        "mobile_phase_ratio_units": "null",
+        "mobile_phase_ratio_units": null,
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
-        "temperature_celsius": "null",
-        "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "null",
-        "detector": "null",
-        "evidence_text": "To solve a similar problem for PPO on a reversed phase it is necessary to choose a different mixture, e.g., water-tetrahydrofuran (THF), as in 100% acetonitrile a weak adsorption regime occurs with PPO.",
-        "notes": "null",
-        "paper_doi": "null",
-        "corresponding_author_name": "A.V. Gorshkov",
-        "corresponding_email_address": "null",
-        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.)",
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Under these conditions the unmodified sites of the reversed phase, containing-SiOH groups, become significant. Because of the extremely strong interaction of PEO with these sites, the chromatograms, even for the PEO homopolymer, are strongly distorted by elongated tails.",
+          "critical_component": "PPO",
+          "column_name": "RP-18",
+          "mobile_phase_solvents": "water-tetrahydrofuran",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "A.V. Gorshkov; H. Much; H. Becker; H. Pasch; V.V. Evreinov; S.G. Entelis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics, U.S.S.R. Academy of Sciences, Kosygina 4, 117977 Moscow (U.S.S.R.); Academy of Sciences of the G.D.R., Central Institute of Organic Chemistry, Division of Macromolecular Chemistry, Rudower Chaussee 5, 1199 Berlin (G.D.R.)",
         "publication_year": "1990"
       }
     ]
@@ -173,8 +302,8 @@
       "section": "Full Paper",
       "token_count": 6867,
       "extraction_success": true,
-      "processing_time": 34.23387408256531,
-      "extracted_count": 4
+      "processing_time": 61.915313959121704,
+      "extracted_count": 5
     }
   ]
 }

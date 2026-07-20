@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "source_pdf": "[295] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PPO on reversed phase columns in THF-water mobile phases containing about 80% THF",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.99",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "As we have shown in a previous paper [7], a CAP for the hydrophobic PPO block can be found on reversed phase columns in THF\u2013water mobile phases containing about 80% THF... As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF. In such a mobile phase, a separation of the block copolymer from PPGs and PPOs with allylic end group can be achieved (Fig. 5).",
+        "notes": "Analytical scale LCCC used to establish CAP for PPO block. Fig 5 shows separation at 84.99 wt% THF.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "MeO-PEG 2000-b-PPO",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "Critical conditions for PPO on semipreparative ODS column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "300 mm x 25 mm",
+        "detector": "density detection system DDS 70",
+        "evidence_text": "A similar separation is also possible on a semipreparative column... LCCC of a diblock copolymer (MeO-PEG 2000-b-PPO) on Spherisorb ODS2 (semipreparative) in 81.14 wt% THF (CAP of PPO); detection: density.",
+        "notes": "Semipreparative scale LCCC used for fractionation of the diblock copolymer. The condition is defined as the CAP of PPO.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "EO\u2013PO diblock copolymers",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.99",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "refractive index detector RI 2414",
+        "evidence_text": "In the paper mentioned above we have used an analytical column (Jordi Gel DVB 500 RP) packed with a stationary phase consisting of 100% poly(divinyl benzene). For this study, we wanted to perform the same separation also on a semipreparative scale. As a semipreparative column with the same chemical nature is not available, we have tried to find a CAP for PPO on an ODS column. As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF. In such a mobile phase, a separation of the block copolymer from PPGs and PPOs with allylic end group can be achieved (Fig. 5).",
+        "notes": "Analytical scale LCCC used to establish CAP for PPO block. Fig 5 shows separation at 84.99 wt% THF.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "EO\u2013PO diblock copolymers",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14",
+        "mobile_phase_ratio_units": "wt% THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "300 mm \u00d7 25 mm",
+        "detector": "density detection system DDS 70",
+        "evidence_text": "A similar separation is also possible on a semipreparative column: even with a rather large sample loop, the individual peaks are sufficiently resolved (Fig. 6). The fraction limits are indicated by dotted lines.",
+        "notes": "Semipreparative scale LCCC used for fractionation of the diblock copolymer. The condition is defined as the CAP of PPO.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[277] Malik2010.pdf",
-    "extraction_date": "2026-06-08T01:38:10.209351",
+    "extraction_date": "2026-07-19T16:20:44.563118",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:20:44.549548+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[277] Malik2010.md",
+        "sha256": "c7eb6a61d699d28d82fec72a37c4f7d68b219ac0b46fd7f8f025416b14efaac2",
+        "char_len": 37542,
+        "token_count": 11136
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[277] Malik2010.pdf",
-      "start_time": "2026-06-08T01:33:22.018116",
+      "start_time": "2026-07-19T16:15:02.701353",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.533419132232666,
+          "time_seconds": 26.795907497406006,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12935256958007812,
+          "time_seconds": 0.11597990989685059,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11136
         },
         "llm_extraction": {
-          "time_seconds": 261.5283536911011,
+          "time_seconds": 314.898398399353,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -36,16 +83,17 @@
       {
         "analyte_polymer": "PBO",
         "critical_component": "PBO",
-        "architecture": "homopolymer",
+        "architecture": "linear",
         "critical_condition_basis": "Critical conditions for PBO were realized in 88 wt% THF–water",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "88",
+        "mobile_phase_ratio": "88 wt% THF–water",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -56,10 +104,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 mL min-1",
         "pore_size": "80 Å",
-        "column_dimensions": "250 mm x 10 mm",
-        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
-        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF–water and for PHO in 92 wt% THF–water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[◦] C for LCCC ... was maintained",
-        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 88.23 wt% THF in Fig 3 caption.",
+        "column_dimensions": "250 mm × 10 mm",
+        "detector": "DDS 70 density detection system combined with SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PBO were realized in 88 wt% THF–water",
+          "critical_component": "Critical conditions for PBO were realized in 88 wt% THF–water",
+          "column_name": "Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å)",
+          "mobile_phase_solvents": "88 wt% THF–water",
+          "mobile_phase_ratio": "88 wt% THF–water",
+          "temperature_celsius": "25.0◦ C for LCCC",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL min−1"
+        },
+        "notes": "Semi-preparative LCCC used as first dimension for fractionation. Column ID > 8mm, but used for analytical characterization of critical conditions in the context of the study.",
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -69,16 +126,17 @@
       {
         "analyte_polymer": "PHO",
         "critical_component": "PHO",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "Critical conditions for PHO were realized in 92 wt% THF–water",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PHO in 92 wt% THF–water",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "92",
+        "mobile_phase_ratio": "92 wt% THF–water",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -89,10 +147,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 mL min-1",
         "pore_size": "80 Å",
-        "column_dimensions": "250 mm x 10 mm",
-        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
-        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF–water and for PHO in 92 wt% THF–water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[◦] C for LCCC ... was maintained",
-        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 92.23 wt% THF in Fig 3 caption.",
+        "column_dimensions": "250 mm × 10 mm",
+        "detector": "DDS 70 density detection system combined with SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PHO in 92 wt% THF–water",
+          "critical_component": "Critical conditions for PHO in 92 wt% THF–water",
+          "column_name": "Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å)",
+          "mobile_phase_solvents": "92 wt% THF–water",
+          "mobile_phase_ratio": "92 wt% THF–water",
+          "temperature_celsius": "25.0◦ C for LCCC",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL min−1"
+        },
+        "notes": "Semi-preparative LCCC used as first dimension for fractionation.",
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -102,16 +169,17 @@
       {
         "analyte_polymer": "PEO",
         "critical_component": "PEO",
-        "architecture": "homopolymer",
+        "architecture": "linear",
         "critical_condition_basis": "Critical conditions for PEO exist at 75.7 wt% acetone–water",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "silica-based diol phase",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "75.7",
+        "mobile_phase_ratio": "75.7 wt% acetone–water",
         "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
@@ -122,10 +190,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "100 Å",
-        "column_dimensions": "4.6 mm x 250 mm",
-        "detector": "refractive index detector RI 2414 or SEDEX 45 ELSD connected to DDS 70",
-        "evidence_text": "Critical conditions for PEO exist at 75.7 wt% acetone–water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[◦] C for LCCC ... was maintained",
-        "notes": "Analytical LCCC used as second dimension to separate block copolymer from unreacted MeO-PEO initiator.",
+        "column_dimensions": "4.6 mm × 250 mm",
+        "detector": "RI 2414 or SEDEX 45 ELSD coupled with DDS 70",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEO exist at 75.7 wt% acetone–water",
+          "critical_component": "Critical conditions for PEO exist at 75.7 wt% acetone–water",
+          "column_name": "Nucleosil 100-5 OH 5 μm, silica-based diol phase; 4.6 mm × 250 mm",
+          "mobile_phase_solvents": "75.7 wt% acetone–water",
+          "mobile_phase_ratio": "75.7 wt% acetone–water",
+          "temperature_celsius": "25.0◦ C for LCCC",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 mL min−1"
+        },
+        "notes": "Analytical LCCC used as second dimension.",
         "paper_doi": "10.1016/j.aca.2009.11.017",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -140,7 +217,7 @@
       "section": "Full Paper",
       "token_count": 11136,
       "extraction_success": true,
-      "processing_time": 261.5060725212097,
+      "processing_time": 314.84165143966675,
       "extracted_count": 3
     }
   ]

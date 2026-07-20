@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[48] Pasch1993.pdf",
-    "extraction_date": "2026-06-08T00:06:31.909600",
+    "extraction_date": "2026-07-19T12:42:48.937161",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:42:48.929092+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[48] Pasch1993.md",
+        "sha256": "1be92de513a18fb8a9a817715f2ea624281a5f0b3f9afcde79c5550deadc7787",
+        "char_len": 3124,
+        "token_count": 783
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[48] Pasch1993.pdf",
-      "start_time": "2026-06-08T00:05:48.240681",
+      "start_time": "2026-07-19T12:42:00.819751",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.21297216415405,
+          "time_seconds": 37.958818674087524,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11198949813842773,
+          "time_seconds": 0.1281905174255371,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 783
         },
         "llm_extraction": {
-          "time_seconds": 7.3438169956207275,
+          "time_seconds": 9.970723628997803,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "42804"
+      }
     }
   },
   "summary": {
@@ -41,6 +87,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": null,
         "stationary_phase_chemistry": null,
+        "column_mode": null,
         "mobile_phase_solvents": null,
         "mobile_phase_ratio": null,
         "mobile_phase_ratio_units": null,
@@ -55,12 +102,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+        "field_evidence": {
+          "critical_condition_basis": "The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+          "critical_component": "poly(methyl methacrylate)",
+          "column_name": null,
+          "mobile_phase_solvents": null,
+          "mobile_phase_ratio": null,
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Harald Pasch",
+        "corresponding_author_name": "Harald Pasch; Michael Augenstein",
         "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany; R6hm GmbH Chemische Fabrik, Kirschenallee, 64293 Darmstadt, Germany",
         "publication_year": "1993"
       }
     ]
@@ -71,7 +127,7 @@
       "section": "Full Paper",
       "token_count": 783,
       "extraction_success": true,
-      "processing_time": 7.339011192321777,
+      "processing_time": 9.866588354110718,
       "extracted_count": 1
     }
   ]

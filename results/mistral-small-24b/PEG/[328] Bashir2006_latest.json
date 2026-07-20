@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[328] Bashir2006.pdf",
-    "extraction_date": "2026-06-08T01:12:01.068708",
+    "extraction_date": "2026-07-19T13:54:37.239504",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:54:37.230529+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[328] Bashir2006.md",
+        "sha256": "8ac8e6ecb699fe67b02425d9e79a2b7c9bd4c9e70d15333879e28f53592c22b2",
+        "char_len": 57419,
+        "token_count": 13603
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[328] Bashir2006.pdf",
-      "start_time": "2026-06-08T01:11:12.229905",
+      "start_time": "2026-07-19T13:53:38.937012",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 35.835832595825195,
+          "time_seconds": 41.77770686149597,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11875128746032715,
+          "time_seconds": 0.11541056632995605,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13603
         },
         "llm_extraction": {
-          "time_seconds": 12.884061813354492,
+          "time_seconds": 16.351664781570435,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,19 +80,20 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
         "architecture": "linear",
-        "critical_condition_basis": "elution time independent of molar mass",
+        "critical_condition_basis": "elution time does not depend on molar mass",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
+        "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "MeOH",
-          "H2O"
+          "methanol",
+          "water"
         ],
         "mobile_phase_ratio": "83/17",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -57,11 +104,20 @@
         "flow_rate": "1 mL/min",
         "pore_size": "300 Å",
         "column_dimensions": "250 mm × 4.6 mm I.D.",
-        "detector": "UV",
-        "evidence_text": "At a MeOH content Se of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+        "detector": "UV-detector",
+        "field_evidence": {
+          "critical_condition_basis": "At a MeOH content Se of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": "Nucleosil C18",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "83/17",
+          "temperature_celsius": "35[◦] C",
+          "pore_size": "300 Å",
+          "flow_rate": "1 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2006.07.089",
-        "corresponding_author_name": "Wolfgang Radke",
+        "corresponding_author_name": "Mubasher A. Bashir; Wolfgang Radke",
         "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
         "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
         "publication_year": "2006"
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 13603,
       "extraction_success": true,
-      "processing_time": 12.867225646972656,
+      "processing_time": 16.230837106704712,
       "extracted_count": 1
     }
   ]

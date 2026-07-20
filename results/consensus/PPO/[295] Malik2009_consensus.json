@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "source_pdf": "[295] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:15:01.673673+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[295] Malik2009_latest.json",
+        "results/mistral-small-24b/PPO/[295] Malik2009_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "PPG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PPG on the Prodigy ODS3 column in THF\u2013water",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81 to 85 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF.",
+          "critical_component": "Critical conditions for PPG on the Prodigy ODS3 column in THF\u2013water",
+          "column_name": "Reversed phase column used for LCCC on analytical scale was Prodigy ODS3",
+          "mobile_phase_solvents": "THF\u2013water mobile phases",
+          "mobile_phase_ratio": "81 and 85 wt% THF",
+          "temperature_celsius": "25.0[\u2022] C for LCCC",
+          "pore_size": "nominal pore size = 100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Range provided for PPG critical conditions on analytical column.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PPO",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "CAP of PPO on Spherisorb ODS2 in 81.14 wt% THF",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "300 mm \u00d7 25 mm",
+        "detector": "density detection system DDS 70",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of a diblock copolymer (MeO-PEG 2000-b-PPO) on Spherisorb ODS2 (semipreparative) in 81.14 wt% THF (CAP of PPO)",
+          "critical_component": "CAP of PPO",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "THF\u2013water mobile phases",
+          "mobile_phase_ratio": "81.14 wt% THF",
+          "temperature_celsius": "25.0[\u2022] C for LCCC",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "Semipreparative column used for LCCC analysis (not fractionation) as indicated by the text 'A similar separation is also possible on a semipreparative column... individual peaks are sufficiently resolved'.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "EO\u2013PO diblock copolymers",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.99 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "RI 2414",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of PPO should be used in the first dimension, which allows a separation according to functionality.",
+          "critical_component": "PPO",
+          "column_name": "Prodigy ODS3",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "84.99 wt% THF",
+          "temperature_celsius": "25.0",
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Muhammad Imran Malik; Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "EO\u2013PO diblock copolymers",
+        "critical_component": "PPO",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "300 mm \u00d7 25 mm",
+        "detector": "SICON LCD 201 RI detector",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of PPO should be used in the first dimension, which allows a separation according to functionality.",
+          "critical_component": "PPO",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "THF\u2013water",
+          "mobile_phase_ratio": "81.14 wt% THF",
+          "temperature_celsius": "25.0",
+          "pore_size": "80 \u00c5",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Muhammad Imran Malik; Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

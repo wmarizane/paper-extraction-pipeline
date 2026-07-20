@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "source_pdf": "[232] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 8
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "78",
+        "column_name": "Nucleosil 100-5 OH",
+        "notes": "Used to analyze PPG, PCL, and block copolymers where EO is critical.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "evidence_text": "At the transition point of these two mechanisms, which is often termed the 'critical adsorption point' (CAP), there is a special mobile-phase composition (at a given temperature), where the interaction parameter has a value of zero: under such conditions, the polymer is eluted\u2014independent of its molar mass\u2014at the void volume of the column.",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(ethylene glycol)",
+        "detector": "DDS70 density detector, RI 2414 or SEDEX 45 ELSD",
+        "stationary_phase_chemistry": "diol",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point (CAP)",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Normal Phase",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "84.5",
+        "column_name": "Jordi RP column",
+        "notes": "Used to analyze EO-BO block copolymers.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran (THF)",
+          "Water"
+        ],
+        "evidence_text": "For PBO, a CAP exists on the Jordi column in 84.5 wt% THF (Fig. 4), and on the Prodigy column in above 90 wt% THF (Fig. 5).",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PBO",
+        "detector": "DDS70 density detector, RI 2414 or SEDEX 45 ELSD",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point (CAP) for BO",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "BO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "90",
+        "column_name": "Prodigy ODS3",
+        "notes": "Text indicates critical behavior in range 88-95 wt% THF, with 90 wt% being the lower bound mentioned for 'above 90'.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran (THF)",
+          "Water"
+        ],
+        "evidence_text": "For PBO... on the Prodigy column in above 90 wt% THF (Fig. 5). It is interesting to note that at very high THF concentrations PBO no longer goes in the exclusion regime but is more or less critical (from 88 to 95 wt% THF)",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PBO",
+        "detector": "DDS70 density detector",
+        "stationary_phase_chemistry": "octadecyl",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point (CAP) for BO",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "Butene oxide (BO)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "87",
+        "column_name": "Jordi RP column",
+        "notes": "Used to analyze EO-HO block copolymers.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran (THF)",
+          "Water"
+        ],
+        "evidence_text": "For PHO, a CAP is observed on the Jordi column at 87 wt% THF, as can be seen in Fig. 6. In such a mobile phase various PHOs with different degrees of polymerization are eluted at the same volume.",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(hexene oxide)",
+        "detector": "DDS70 density detector",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point (CAP) for HO",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "HO",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "90",
+        "column_name": "Spherisorb S5P",
+        "notes": "Used to analyze EO-PO block copolymers where PO is critical and EO is adsorbing.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "A completely different situation is observed on the Spherisorb S5P column in 90 wt % methanol\u2013water: in such a mobile phase PPG is eluted at the CAP, while PEG is eluted in LAC mode (see Fig. 9)!",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "80 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PPG",
+        "detector": "DDS70 density detector",
+        "stationary_phase_chemistry": "phenyl",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point (CAP) for PO",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "90",
+        "column_name": "Prodigy ODS3",
+        "notes": "Used to analyze EO-CL block copolymers where EO is critical and CL is adsorbing.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "The combination of critical conditions and LAC can also be utilized in the analysis of EO\u2013CL block copolymers: on the Prodigy column a CAP for EO exists at 90 wt% methanol.",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "detector": "DDS70 density detector",
+        "stationary_phase_chemistry": "octadecyl",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO",
+        "mobile_phase_ratio_units": "wt%",
+        "column_mode": "Reversed Phase",
+        "critical_component": "EO",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PPG",
+        "critical_component": "Propylene oxide (PO)",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% polydivinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Tetrahydrofuran (THF)",
+          "Water"
+        ],
+        "mobile_phase_ratio": "84.5",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "DDS70 density detector, RI 2414 or SEDEX 45 ELSD",
+        "evidence_text": "Critical conditions for PO... can be realized on the Jordi column in 90 wt% acetone... but also in THF\u2013water. For PBO, a CAP exists on the Jordi column in 84.5 wt% THF (Fig. 4)... Fig. 4 Critical conditions for PPG on the Jordi RP column in tetrahydrofuran (THF)\u2013water",
+        "notes": "Text mentions 84.5 wt% THF for PBO CAP on Jordi, but Fig 4 caption and text context link this to PPG/PO critical conditions on Jordi in THF-water. The text explicitly states 'Critical conditions for PO... on the Jordi column... in THF-water'.",
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "poly(propylene glycol)",
+        "critical_component": "PO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi RP column",
+        "stationary_phase_chemistry": "polydivinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "80",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm\u00d74.6 mm",
+        "detector": "DDS70 density detector",
+        "evidence_text": "Critical conditions for PO (at SEC conditions for EO) can be realized on the Jordi column in 90 wt% acetone, as has already been described previously [31, 32], but also in THF\u2013water.",
+        "notes": null,
+        "paper_doi": "10.1007/s00216-008-2590-y",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl Franzens University, 8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[223] Hiller2011_paper1.pdf",
+    "extraction_date": "2026-06-14T10:04:06.360550",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[223] Hiller2011_paper1.pdf",
+      "start_time": "2026-06-14T10:02:01.543199",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 30.042323350906372,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12095355987548828,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9800
+        },
+        "llm_extraction": {
+          "time_seconds": 94.65396332740784,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "1,4-polyisoprene",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100-5, 300-5, 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "notes": "Three columns in series: 100-5, 300-5, and 1000-7. Used for separation of blends containing 1,4-PI and 3,4-PI.",
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9800,
+      "extraction_success": true,
+      "processing_time": 94.63094782829285,
+      "extracted_count": 1
+    }
+  ]
+}

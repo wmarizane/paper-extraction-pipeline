@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "source_pdf": "[346] Abrar2011.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:21:54.646948+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[346] Abrar2011_latest.json",
+        "results/mistral-small-24b/PEG/[346] Abrar2011_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "This is called the critical adsorption point (CAP), where entropic and enthalpic contributions compensate each other, and the interaction parameter equals zero.",
+          "critical_component": "For functional polymers and block copolymers, the interaction parameter of the other block (or the end-group parameter) determines the elution behavior.",
+          "column_name": "Luna HILIC column",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "97 wt.% acetone",
+          "temperature_celsius": null,
+          "pore_size": "200 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "critical_condition_basis": "critical adsorption point (CAP) for EO unit",
+        "stationary_phase_chemistry": "Polyglycidol modified silica",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "column_mode": "Hydrophilic Interaction",
+        "notes": "The text confirms that under these conditions (97 wt.% acetone on Luna HILIC), PEG elution is independent of molar mass (Fig 10), establishing the CAP for the EO unit. Other polymers like PPG and PTHF elute in SEC mode under these conditions.",
+        "architecture": "linear",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2011",
+        "pore_size": "200 \u00c5",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "mobile_phase_ratio": "97 wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "temperature_celsius": null,
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "ELSD",
+        "column_name": "Luna HILIC",
+        "analyte_polymer": "Polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "This is called the critical adsorption point (CAP), where entropic and enthalpic contributions compensate each other, and the interaction parameter equals zero.",
+          "critical_component": "For functional polymers and block copolymers, the interaction parameter of the other block (or the end-group parameter) determines the elution behavior.",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "95.9 wt.% acetone",
+          "temperature_celsius": null,
+          "pore_size": "100 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "critical_condition_basis": "critical adsorption point (CAP) for EO unit",
+        "stationary_phase_chemistry": "diol",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "column_mode": "Hydrophilic Interaction",
+        "notes": "The text states a CAP for PEG was found on diol phases in about 80 wt.% acetone, but Fig 5 and the discussion of Fig 4 indicate separation according to hydroxy groups is achieved in 90-95% acetone on diol phases. The text explicitly links the separation of PEG derivatives by hydroxy groups on Nucleosil OH in 95 wt.% acetone (Fig 5) to the concept of suppressing molar mass dependence (CAP for EO).",
+        "architecture": "linear",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2011",
+        "pore_size": "100 \u00c5",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "mobile_phase_ratio": "95.9",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "temperature_celsius": null,
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "ELSD",
+        "column_name": "Nucleosil 100-5 OH",
+        "analyte_polymer": "Polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "This is called the critical adsorption point (CAP), where entropic and enthalpic contributions compensate each other, and the interaction parameter equals zero.",
+          "critical_component": "For functional polymers and block copolymers, the interaction parameter of the other block (or the end-group parameter) determines the elution behavior.",
+          "column_name": "Lichrosorb Diol",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 wt.% acetone",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min"
+        },
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "stationary_phase_chemistry": "diol",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "wt.%",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Fig 4 shows separation of PEGs and PPGs on LiChrosorb Diol in 90 wt.% acetone. The text states that under these conditions (similar to the 80% CAP mentioned), PPG elutes in SEC mode, implying PEG is at its critical condition (independent of molar mass).",
+        "architecture": "linear",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2011",
+        "pore_size": null,
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "mobile_phase_ratio": "90 wt.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "temperature_celsius": null,
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "ELSD",
+        "column_name": "LiChrosorb Diol",
+        "analyte_polymer": "Polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "under critical conditions for PEG on a reversed phase column in acetonitrile\u2013water, acetone\u2013water or methanol\u2013water mobile phases both series elute as narrow peaks",
+          "critical_component": "For functional polymers and block copolymers, the interaction parameter of the other block (or the end-group parameter) determines the elution behavior.",
+          "column_name": "Synergi MAX RP",
+          "mobile_phase_solvents": "acetone\u2013water",
+          "mobile_phase_ratio": "32 vol.% acetone",
+          "temperature_celsius": null,
+          "pore_size": "nominal pore size = 80 \u00c5",
+          "flow_rate": "All separations were performed at a flow rate of 0.5 ml/min."
+        },
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "stationary_phase_chemistry": "dodecyl",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "vol.%",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Fig 2 caption explicitly states 'at the CAP for EO in 32 vol.% acetone'. The text confirms that under critical conditions for PEG on a reversed phase column, oligomers elute as narrow peaks independent of molar mass.",
+        "architecture": "linear",
+        "critical_component": "Ethylene oxide (EO) unit",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2011",
+        "pore_size": "80 \u00c5",
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "mobile_phase_ratio": "32 vol.% acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "temperature_celsius": null,
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": "0.5 ml/min",
+        "detector": "Evaporative light scattering detector PL-ELS 2100",
+        "column_name": "Synergi MAX RP",
+        "analyte_polymer": "Polyethylene glycol",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb Si",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "93.23",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 \u00c5",
+        "column_dimensions": "250 \u00d7 4.0 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "This is called the critical adsorption point (CAP), where entropic and enthalpic contributions compensate each other, and the interaction parameter equals zero.",
+          "critical_component": "For functional polymers and block copolymers, the interaction parameter of the other block (or the end-group parameter) determines the elution behavior.",
+          "column_name": "Spherisorb Si",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "93.23 wt.% acetone",
+          "temperature_celsius": null,
+          "pore_size": "80 \u00c5",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1007/s00216-010-4448-3",
+        "corresponding_author_name": "Shazia Abrar; Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

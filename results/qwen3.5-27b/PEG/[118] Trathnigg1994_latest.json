@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[118] Trathnigg1994.pdf",
-    "extraction_date": "2026-06-07T22:54:29.089394",
+    "extraction_date": "2026-07-19T12:52:45.581369",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:52:45.568674+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[118] Trathnigg1994.md",
+        "sha256": "9f88eb3bce0e4f11b54f40ac6d8553d753a564c39f1079855206598b2d898aa7",
+        "char_len": 19758,
+        "token_count": 5614
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[118] Trathnigg1994.pdf",
-      "start_time": "2026-06-07T22:52:32.338681",
+      "start_time": "2026-07-19T12:50:30.325656",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 43.97336006164551,
+          "time_seconds": 44.12204098701477,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12137627601623535,
+          "time_seconds": 0.11145496368408203,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5614
         },
         "llm_extraction": {
-          "time_seconds": 72.65587091445923,
+          "time_seconds": 90.97414636611938,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44702"
+      }
     }
   },
   "summary": {
@@ -34,13 +81,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyethylene glycol (PEG)",
-        "critical_component": "polyoxyethylene chain",
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "polyethylene glycol",
         "architecture": "linear",
-        "critical_condition_basis": "All PEGs eluted at the same elution volume",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "ODS2",
-        "stationary_phase_chemistry": "octadecyl silica (ODS)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -57,9 +105,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": null,
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "density and refractive index",
-        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution Volume from an ODS2 column in methanol—water (80:20) as a mobile phase.",
-        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols (FAEs).",
+        "detector": "density and RI",
+        "field_evidence": {
+          "critical_condition_basis": "all PEGs eluted at the same elution Volume from an ODS2 column in methanol—water (80:20) as a mobile phase",
+          "critical_component": "polyethylene glycol (PEG)",
+          "column_name": "ODS2",
+          "mobile_phase_solvents": "methanol—water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "0.5 ml/min in the analytical measurements"
+        },
+        "notes": "Critical condition established for PEGs to analyze ethoxylated fatty alcohols. The text states 'all PEGs eluted at the same elution Volume' indicating critical conditions for the PEO block.",
         "paper_doi": null,
         "corresponding_author_name": "B. Trathnigg",
         "corresponding_email_address": null,
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 5614,
       "extraction_success": true,
-      "processing_time": 72.6333577632904,
+      "processing_time": 90.91917872428894,
       "extracted_count": 1
     }
   ]

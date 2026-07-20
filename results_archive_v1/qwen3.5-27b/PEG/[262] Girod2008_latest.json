@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[262] Girod2008.pdf",
+    "extraction_date": "2026-06-14T12:08:30.487856",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[262] Girod2008.pdf",
+      "start_time": "2026-06-14T12:04:25.484837",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 60.57922315597534,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12825655937194824,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 11507
+        },
+        "llm_extraction": {
+          "time_seconds": 184.29542183876038,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "hydroxyl-terminated poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molecular mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Equisil",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "88.8:11.2",
+        "mobile_phase_ratio_units": "% v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 mL/min",
+        "pore_size": "100 A",
+        "column_dimensions": "150 x 4 mm",
+        "detector": "ESI-MS",
+        "evidence_text": "For the selected system, critical conditions were obtained with a ratio 88.8:11.2 (%, v/v) MeOH/water eluent, as indicated by the same elution volume (Ve = 2.33 mL) measured for all PEG chains, independently of their molecular mass.",
+        "notes": "Critical conditions established for PEG standards (200-2000 Da) and extended to 4000 Da. Used for subsequent analysis of PEO-b-PS copolymer.",
+        "paper_doi": "10.1002/rcm.3796",
+        "corresponding_author_name": "Laurence Charles",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "publication_year": "2008"
+      },
+      {
+        "analyte_polymer": "SG1-capped PEO-b-PS",
+        "critical_component": "PEO block",
+        "architecture": "diblock",
+        "critical_condition_basis": "elution volume independent of PEO block size",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Equisil",
+        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "88.8:11.2",
+        "mobile_phase_ratio_units": "% v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": true,
+          "salt_type": "LiCl",
+          "salt_concentration": "1 mM"
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 mL/min",
+        "pore_size": "100 A",
+        "column_dimensions": "150 x 4 mm",
+        "detector": "ESI-MS",
+        "evidence_text": "The retention of the SG1-capped PEO-b-PS copolymer was examined at the critical conditions of the PEO block. ... The PEO block being chromatographically 'invisible', copolymer molecules with a given PS block size are eluted in the same volume, regardless of the PEO block length.",
+        "notes": "Analysis performed using the critical conditions established for PEG standards. Separation based on PS block size.",
+        "paper_doi": "10.1002/rcm.3796",
+        "corresponding_author_name": "Laurence Charles",
+        "corresponding_email_address": "laurence.charles@univ-provence.fr",
+        "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
+        "publication_year": "2008"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 11507,
+      "extraction_success": true,
+      "processing_time": 184.2726228237152,
+      "extracted_count": 2
+    }
+  ]
+}

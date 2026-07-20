@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[369] Weidner2007.pdf",
+    "extraction_date": "2026-06-14T11:35:14.417814",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[369] Weidner2007.pdf",
+      "start_time": "2026-06-14T11:33:55.714131",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 50.17694306373596,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12976598739624023,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8584
+        },
+        "llm_extraction": {
+          "time_seconds": 28.39681911468506,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-co-PPO",
+        "critical_component": "PEO",
+        "architecture": "null",
+        "critical_condition_basis": "The solvent composition of 85:15v/v tetrahydrofuran (THF)/water, which represents the ‘critical’ ratio.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 2-3 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "mobile_phase_ratio": "85:15",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5mL/min",
+        "pore_size": "null",
+        "column_dimensions": "250+125mm length and 4.6mm id.",
+        "detector": "SEDEX 45 (Gedere, Alfortville, France)",
+        "evidence_text": "In gradient mode ‘critical’ conditions of separation of PEO (Heptane/methanol/ water) were initially adjusted. These conditions were shifted into LAC mode by adding a third, thermodynamically poor solvent (isopropanol.",
+        "notes": "null",
+        "paper_doi": "10.1002/rom.314h",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstatter-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PEO-co-PPO",
+        "critical_component": "PPO",
+        "architecture": "null",
+        "critical_condition_basis": "The solvent composition of 65:35v/v tetrahydrofuran (THF)/water, which represents the ‘critical’ ratio.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 2-3 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "mobile_phase_ratio": "65:35",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5mL/min",
+        "pore_size": "null",
+        "column_dimensions": "250+125mm length and 4.6mm id.",
+        "detector": "SEDEX 45 (Gedere, Alfortville, France)",
+        "evidence_text": "In gradient mode ‘critical’ conditions of separation of PEO (Heptane/methanol/ water) were initially adjusted. These conditions were shifted into LAC mode by adding a third, thermodynamically poor solvent (isopropanol.",
+        "notes": "null",
+        "paper_doi": "10.1002/rom.314h",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstatter-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8584,
+      "extraction_success": true,
+      "processing_time": 28.38433051109314,
+      "extracted_count": 2
+    }
+  ]
+}

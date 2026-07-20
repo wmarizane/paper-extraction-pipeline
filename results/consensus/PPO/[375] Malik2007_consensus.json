@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "source_pdf": "[375] Malik2007.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:29:06.482630+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PPO/[375] Malik2007_latest.json",
+        "results/mistral-small-24b/PPO/[375] Malik2007_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At the critical adsorption point (CAP) the interaction parameter equals zero, and the corresponding block becomes 'chromatographically invisible'",
+          "critical_component": "the ethylene oxide (EO) unit",
+          "column_name": "Discovery HS PEG",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "44%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical adsorption point",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetone"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "PEG",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": null,
+        "paper_doi": "10.1002/macp.200700320",
+        "mobile_phase_ratio": "44%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "temperature_celsius": null,
+        "column_dimensions": null,
+        "flow_rate": null,
+        "detector": null,
+        "column_name": "Discovery HS PEG",
+        "analyte_polymer": "PEG",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At the critical adsorption point (CAP) the interaction parameter equals zero, and the corresponding block becomes 'chromatographically invisible'",
+          "critical_component": "the ethylene oxide (EO) unit",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF-water",
+          "mobile_phase_ratio": "80 wt.-% THF",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical adsorption point",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "PEG",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": null,
+        "paper_doi": "10.1002/macp.200700320",
+        "mobile_phase_ratio": "80%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "temperature_celsius": null,
+        "column_dimensions": null,
+        "flow_rate": null,
+        "detector": null,
+        "column_name": "Jordi Gel DVB 500 RP",
+        "analyte_polymer": "PEG",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "At the critical adsorption point (CAP) the interaction parameter equals zero, and the corresponding block becomes 'chromatographically invisible'",
+          "critical_component": "PPG diols",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF-water",
+          "mobile_phase_ratio": "80 wt.-% THF",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical adsorption point",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "mobile_phase_ratio_units": "w/w",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": null,
+        "architecture": "linear",
+        "critical_component": "PPG diols",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2007",
+        "pore_size": null,
+        "paper_doi": "10.1002/macp.200700320",
+        "mobile_phase_ratio": "80%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "bernd.trathnigg@kfunigraz.ac.at",
+        "temperature_celsius": null,
+        "column_dimensions": null,
+        "flow_rate": null,
+        "detector": null,
+        "column_name": "Jordi Gel DVB 500 RP",
+        "analyte_polymer": "PPG diols",
+        "corresponding_author_name": "Bernd Trathnigg; C. Oliver Kappe",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

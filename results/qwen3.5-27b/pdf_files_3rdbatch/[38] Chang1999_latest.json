@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[38] Chang1999.pdf",
-    "extraction_date": "2026-06-07T23:36:30.323661",
+    "extraction_date": "2026-07-19T15:35:54.619778",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:35:54.607548+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[38] Chang1999.md",
+        "sha256": "a695718c88412d1b3b97f8d3c0578c1d645a8a8ffddf8f74644e71d1ce66ec90",
+        "char_len": 71919,
+        "token_count": 18127
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[38] Chang1999.pdf",
-      "start_time": "2026-06-07T23:33:30.150289",
+      "start_time": "2026-07-19T15:32:33.395417",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 85.18087816238403,
+          "time_seconds": 80.44194531440735,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12067127227783203,
+          "time_seconds": 0.11704635620117188,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 18127
         },
         "llm_extraction": {
-          "time_seconds": 94.87171387672424,
+          "time_seconds": 120.61542820930481,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "Polystyrene",
         "critical_component": "Polystyrene",
         "architecture": "Linear",
-        "critical_condition_basis": "Chromatographic critical point where enthalpic and entropic terms compensate, resulting in loss of separation selectivity according to molecular weight",
+        "critical_condition_basis": "Chromatographic critical point where enthalpic and entropic terms compensate, resulting in loss of separation selectivity according to molecular weight.",
         "critical_condition_confidence": "explicit",
         "column_name": "Alltech, Nucleosil",
         "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -58,8 +106,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
-        "evidence_text": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other. The critical condition is observed at 30.5 8 C, consistent with the result shown in Fig. 2.",
-        "notes": "The text explicitly identifies this setup as the 'chromatographic critical point' for Polystyrene.",
+        "field_evidence": {
+          "critical_condition_basis": "At the composition of 57/43 (v/v) CH2Cl2 /CH3CN, all the PS standards are eluted as a single peak. This is the chromatographic critical point or the adsorption-size exclusion transition point where the enthalpic and entropic terms in Eq. (2) compensate each other",
+          "critical_component": "PS standards",
+          "column_name": "Single C18 bonded column (Alltech, Nucleosil, 250 6 4.6 mm, 100 A pore size, 5 l m particle size)",
+          "mobile_phase_solvents": "mixed eluents of CH2Cl2 /CH3CN",
+          "mobile_phase_ratio": "57/43 (v/v) CH2Cl2 /CH3CN",
+          "temperature_celsius": "constant temperature of 30.5 8 C",
+          "pore_size": "100 A pore size",
+          "flow_rate": "flow rate was 0.5 mL/min"
+        },
+        "notes": "Identified as the critical point for PS where all standards elute as a single peak regardless of molecular weight.",
         "paper_doi": null,
         "corresponding_author_name": "Taihyun Chang",
         "corresponding_email_address": "tc@postech.ac.kr",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 18127,
       "extraction_success": true,
-      "processing_time": 94.8485095500946,
+      "processing_time": 120.54785585403442,
       "extracted_count": 1
     }
   ]

@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "source_pdf": "[251] Trathnigg2005_paper2.pdf",
+    "extraction_date": "2026-06-14T09:33:07.987064",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[251] Trathnigg2005_paper2.pdf",
+      "start_time": "2026-06-14T09:32:10.857451",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 17.81792902946472,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12082934379577637,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9773
+        },
+        "llm_extraction": {
+          "time_seconds": 39.19071340560913,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymers",
+        "critical_component": "EO",
+        "architecture": "EO–PO–EO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Discovery HS-PEG",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "45:55",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "120 Å",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On the Discovery HS-PEG column (a silica-based phase with attached PEG chains) in acetone–water with about 45% (w/w) acetone. Under these conditions EO elutes in SEC mode.",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymers",
+        "critical_component": "EO",
+        "architecture": "EO–PO–EO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "78:12",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On a Diol column in acetone water 78:12 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymers",
+        "critical_component": "PO",
+        "architecture": "EO–PO–EO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On a poly(divinyl benzene) column in acetone water 92:8 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "EO–PO–EO triblock copolymers",
+        "critical_component": "PO",
+        "architecture": "EO–PO–EO triblock",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250!4.6 mm",
+        "detector": "RI",
+        "evidence_text": "On a poly(divinyl benzene) column in acetone water 92:8 (w/w).",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.07.048",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2005"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9773,
+      "extraction_success": true,
+      "processing_time": 39.177140951156616,
+      "extracted_count": 4
+    }
+  ]
+}

@@ -1,46 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[256] Zdovc2022.pdf",
-    "extraction_date": "2026-06-07T23:10:01.630251",
+    "extraction_date": "2026-07-19T15:01:08.756414",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:01:08.743389+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[256] Zdovc2022.md",
+        "sha256": "de7cd3e76946ce6783517024d81f344a14af515a1ac57bcdc2f5ebfda8b9021a",
+        "char_len": 50057,
+        "token_count": 14590
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[256] Zdovc2022.pdf",
-      "start_time": "2026-06-07T23:07:39.834987",
+      "start_time": "2026-07-19T14:55:06.253367",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.40276598930359,
+          "time_seconds": 36.48367738723755,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12439441680908203,
+          "time_seconds": 0.1297893524169922,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 14590
         },
         "llm_extraction": {
-          "time_seconds": 105.2679967880249,
+          "time_seconds": 325.80905532836914,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "P(POPA) homopolymers",
+        "analyte_polymer": "P(POPA)",
         "critical_component": "P(POPA)",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "co-elution of homopolymers with different molar masses",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for P(POPA)",
         "critical_condition_confidence": "explicit",
         "column_name": "PLRP-S",
         "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "ACN"
@@ -57,9 +105,104 @@
         "flow_rate": null,
         "pore_size": "100 Å",
         "column_dimensions": "4.6 mm × 150 mm",
-        "detector": "UV (283 nm) and ELS",
-        "evidence_text": "The critical conditions for the P(POPA) homopolymers were at 25 °C at the mobile phase composition of THF: ACN = 15.6:84.4 vol %. The P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %",
-        "notes": "Used for LCCC analysis of copolymers where separation is governed by the PPO constituent.",
+        "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for P(POPA)",
+          "critical_component": "critical conditions for the P(POPA) homopolymers",
+          "column_name": "PLRP-S column with polystyrenedivinylbenzene (PS-DVB) as the reversed stationary phase",
+          "mobile_phase_solvents": "THF: ACN",
+          "mobile_phase_ratio": "THF: ACN = 15.6:84.4 vol %",
+          "temperature_celsius": "25 °C",
+          "pore_size": "100 Å",
+          "flow_rate": null
+        },
+        "notes": "Used for isocratic LCCC experiments. The text states that at these conditions, P(POPA) homopolymers with different molar masses co-eluted.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      },
+      {
+        "analyte_polymer": "PPO-co-P(POPA) copolymers",
+        "critical_component": "P(POPA)",
+        "architecture": "gradient/block",
+        "critical_condition_basis": "critical conditions for P(POPA)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for P(POPA)",
+          "critical_component": "critical conditions for the P(POPA) homopolymers",
+          "column_name": "PLRP-S column with polystyrenedivinylbenzene (PS-DVB) as the reversed stationary phase",
+          "mobile_phase_solvents": "THF: ACN",
+          "mobile_phase_ratio": "THF: ACN = 15.6:84.4 vol %",
+          "temperature_celsius": "25 °C",
+          "pore_size": "100 Å",
+          "flow_rate": null
+        },
+        "notes": "Copolymers analyzed under critical conditions for the P(POPA) constituent. Separation governed by molar mass of PPO constituent and microstructure.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      },
+      {
+        "analyte_polymer": "PPO-co-P(POPA) copolymers",
+        "critical_component": "P(POPA)",
+        "architecture": "gradient/block",
+        "critical_condition_basis": "critical conditions for P(POPA)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.04 mL min-1",
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV, MALS, and RI detectors connected in series",
+        "field_evidence": {
+          "critical_condition_basis": "Isocratic LCCC/UV-MALS-RI experiments under critical conditions for the P(POPA)",
+          "critical_component": "critical conditions for the P(POPA)",
+          "column_name": "PLRP-S column with polystyrenedivinylbenzene (PS-DVB)",
+          "mobile_phase_solvents": "THF/ACN",
+          "mobile_phase_ratio": "THF/ACN = 15.6:84.4 vol %",
+          "temperature_celsius": "25 °C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.04 mL min-1"
+        },
+        "notes": "LCCC coupled with multidetection system (UV-MALS-RI). Flow rate specified for the first dimension of 2D-LC setup.",
         "paper_doi": "10.1021/acs.analchem.2c00193",
         "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
         "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
@@ -74,8 +217,8 @@
       "section": "Full Paper",
       "token_count": 14590,
       "extraction_success": true,
-      "processing_time": 105.24558734893799,
-      "extracted_count": 1
+      "processing_time": 325.74935841560364,
+      "extracted_count": 3
     }
   ]
 }

@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[368] Girod2009.pdf",
-    "extraction_date": "2026-06-08T01:39:03.387800",
+    "extraction_date": "2026-07-19T14:28:59.428826",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:28:59.418851+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[368] Girod2009.md",
+        "sha256": "da6c598378099b455870c5c5783046b4ebe770caf3d1ec2a680ecc1ecf836cc8",
+        "char_len": 27222,
+        "token_count": 8159
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[368] Girod2009.pdf",
-      "start_time": "2026-06-08T01:38:07.482031",
+      "start_time": "2026-07-19T14:27:53.075812",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 41.60870051383972,
+          "time_seconds": 42.30908966064453,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10367679595947266,
+          "time_seconds": 0.10611534118652344,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8159
         },
         "llm_extraction": {
-          "time_seconds": 14.193223476409912,
+          "time_seconds": 23.876893281936646,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -36,11 +82,12 @@
       {
         "analyte_polymer": "PEO-b-PS",
         "critical_component": "PEO",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical conditions established for PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "The critical conditions were established for hydroxyl-terminated PEG standards, ranging from Mw ¼ 200 to 2000 g mol 1, using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr ¼ 2.33 min) independently of their molecular mass.",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": "octadecyl-silica",
+        "column_name": "octadecyl-silica Equisil",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "water"
@@ -54,14 +101,23 @@
           "salt_concentration": "1 mM"
         },
         "temperature_celsius": "25",
-        "flow_rate": "1 mL min-1",
-        "pore_size": "100 A",
+        "flow_rate": "1 mL min 1",
+        "pore_size": "100 A[˚ ]",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "The critical conditions were established for hydroxyl-terminated PEG standards, ranging from Mw ¼ 200 to 2000 g mol-1, using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr ¼ 2.33 min) independently of their molecular mass.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions were established for hydroxyl-terminated PEG standards, ranging from Mw ¼ 200 to 2000 g mol 1, using 1 mM LiCl concentration. The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v) and this allows elution of all the PEG chains at the same retention time (tr ¼ 2.33 min) independently of their molecular mass.",
+          "critical_component": "The critical conditions were established for hydroxyl-terminated PEG standards",
+          "column_name": "The chromatographic column (octadecyl-silica Equisil, 150 x 4 mm, pore diameter: 100 A[˚ ] , particle size: 5 mm)",
+          "mobile_phase_solvents": "The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v)",
+          "mobile_phase_ratio": "The critical composition of the MeOH/water eluent was determined to be 88.8:11.2 (%, v/v)",
+          "temperature_celsius": "The chromatographic column was maintained at a constant temperature of 258C.",
+          "pore_size": "The chromatographic column (octadecyl-silica Equisil, 150 x 4 mm, pore diameter: 100 A[˚ ] , particle size: 5 mm)",
+          "flow_rate": "The flow rate was set to 1 mL min 1."
+        },
         "notes": null,
         "paper_doi": "10.1002/rcm.4028",
-        "corresponding_author_name": "Laurence Charles",
+        "corresponding_author_name": "L. Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
         "physical_address": "Universite´s Aix-Marseille I, II & III – CNRS, UMR 6264: Laboratoire Chimie Provence, Spectrome´tries Applique´es a` la Chimie Structurale, F-13397 Marseille Cedex 20, France",
         "publication_year": "2009"
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 8159,
       "extraction_success": true,
-      "processing_time": 14.181361436843872,
+      "processing_time": 23.770140647888184,
       "extracted_count": 1
     }
   ]

@@ -1,81 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[294] Malik2008.pdf",
-    "extraction_date": "2026-06-07T23:13:04.339733",
+    "extraction_date": "2026-07-19T15:36:28.689385",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:36:28.682174+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[294] Malik2008.md",
+        "sha256": "bfdd0295ad23f49c4c4bff2d5632710d9a7fe0d5e26a01d816b832506c9b00bf",
+        "char_len": 34880,
+        "token_count": 9565
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[294] Malik2008.pdf",
-      "start_time": "2026-06-07T23:11:12.872729",
+      "start_time": "2026-07-19T15:02:21.312924",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 13.464020013809204,
+          "time_seconds": 13.696045875549316,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13481760025024414,
+          "time_seconds": 0.11633467674255371,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9565
         },
         "llm_extraction": {
-          "time_seconds": 97.86806535720825,
-          "success": true
+          "time_seconds": 2033.5237267017365,
+          "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "poly(propylene oxide)",
-        "critical_component": "poly(propylene oxide) repeat unit",
-        "architecture": "linear",
-        "critical_condition_basis": "elution volume independent of molar mass for PPG diols and allyl-terminated PPGs",
-        "critical_condition_confidence": "strong_inference",
-        "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "80 wt% THF-water",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "All separations in LCCC were performed on a Jordi Gel DVB 500 RP column... in 80 wt% THF-water... As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation...",
-        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used for LCCC separation based on end groups.",
-        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2008"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 9565,
-      "extraction_success": true,
-      "processing_time": 97.8454008102417,
-      "extracted_count": 1
+      "extraction_success": false,
+      "processing_time": 677.8666291236877,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PPG diols\",\n      \"critical_component\": \"PO repeat unit\",\n      \"architecture\": \"linear\",\n      \"critical_condition_basis\": \"At the CAP for PO, the elution volume of each series is independent of molar mass.\",\n      \"critical_condition_co"
     }
   ]
 }

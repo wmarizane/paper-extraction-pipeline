@@ -1,52 +1,100 @@
 {
   "metadata": {
     "source_pdf": "[295] Malik2009.pdf",
-    "extraction_date": "2026-06-08T01:57:58.060466",
+    "extraction_date": "2026-07-19T16:51:16.457032",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:51:16.450213+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[295] Malik2009.md",
+        "sha256": "9a1ea894be0c3e0d0bafad7dbdf3ee1183fc530a5b1195661f0224a539c8f413",
+        "char_len": 34009,
+        "token_count": 9580
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[295] Malik2009.pdf",
-      "start_time": "2026-06-08T01:54:25.920579",
+      "start_time": "2026-07-19T16:45:35.285418",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 27.7681782245636,
+          "time_seconds": 27.364142179489136,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12539076805114746,
+          "time_seconds": 0.1140749454498291,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9580
         },
         "llm_extraction": {
-          "time_seconds": 184.24619555473328,
+          "time_seconds": 313.64990282058716,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "PPG",
-        "critical_component": "PPO",
+        "critical_component": "PPG",
         "architecture": "linear",
-        "critical_condition_basis": "Critical conditions for PPO on reversed phase columns in THF-water mobile phases containing about 80% THF",
+        "critical_condition_basis": "Critical conditions for PPG on the Prodigy ODS3 column in THF–water",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
         "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "84.99",
-        "mobile_phase_ratio_units": "wt% THF",
+        "mobile_phase_ratio": "81 to 85 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -56,10 +104,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "As we have shown in a previous paper [7], a CAP for the hydrophobic PPO block can be found on reversed phase columns in THF–water mobile phases containing about 80% THF... As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF. In such a mobile phase, a separation of the block copolymer from PPGs and PPOs with allylic end group can be achieved (Fig. 5).",
-        "notes": "Analytical scale LCCC used to establish CAP for PPO block. Fig 5 shows separation at 84.99 wt% THF.",
+        "field_evidence": {
+          "critical_condition_basis": "As can be seen in Fig. 4, PPGs elute sufficiently close to critical conditions at a range between 81 and 85 wt% THF.",
+          "critical_component": "Critical conditions for PPG on the Prodigy ODS3 column in THF–water",
+          "column_name": "Reversed phase column used for LCCC on analytical scale was Prodigy ODS3",
+          "mobile_phase_solvents": "THF–water mobile phases",
+          "mobile_phase_ratio": "81 and 85 wt% THF",
+          "temperature_celsius": "25.0[◦] C for LCCC",
+          "pore_size": "nominal pore size = 100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Range provided for PPG critical conditions on analytical column.",
         "paper_doi": "10.1016/j.chroma.2009.07.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -67,19 +124,63 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "MeO-PEG 2000-b-PPO",
+        "analyte_polymer": "PPO",
         "critical_component": "PPO",
-        "architecture": "diblock",
-        "critical_condition_basis": "Critical conditions for PPO on semipreparative ODS column",
+        "architecture": "linear",
+        "critical_condition_basis": "CAP for PPO on Prodigy ODS3 in 84.99 wt% THF",
         "critical_condition_confidence": "explicit",
-        "column_name": "Spherisorb ODS2",
+        "column_name": "Prodigy ODS3",
         "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "81.14",
-        "mobile_phase_ratio_units": "wt% THF",
+        "mobile_phase_ratio": "84.99 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of a diblock copolymer and the corresponding homopolymers on Prodigy ODS3 in 84.99 wt% THF (CAP for PPO)",
+          "critical_component": "CAP for PPO",
+          "column_name": "Reversed phase column used for LCCC on analytical scale was Prodigy ODS3",
+          "mobile_phase_solvents": "THF–water mobile phases",
+          "mobile_phase_ratio": "84.99 wt% THF",
+          "temperature_celsius": "25.0[◦] C for LCCC",
+          "pore_size": "nominal pore size = 100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Specific critical point for PPO used for analytical LCCC.",
+        "paper_doi": "10.1016/j.chroma.2009.07.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PPO",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "CAP of PPO on Spherisorb ODS2 in 81.14 wt% THF",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "81.14 wt% THF",
+        "mobile_phase_ratio_units": "wt%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -89,10 +190,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 ml/min",
         "pore_size": "80 Å",
-        "column_dimensions": "300 mm x 25 mm",
+        "column_dimensions": "300 mm × 25 mm",
         "detector": "density detection system DDS 70",
-        "evidence_text": "A similar separation is also possible on a semipreparative column... LCCC of a diblock copolymer (MeO-PEG 2000-b-PPO) on Spherisorb ODS2 (semipreparative) in 81.14 wt% THF (CAP of PPO); detection: density.",
-        "notes": "Semipreparative scale LCCC used for fractionation of the diblock copolymer. The condition is defined as the CAP of PPO.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC of a diblock copolymer (MeO-PEG 2000-b-PPO) on Spherisorb ODS2 (semipreparative) in 81.14 wt% THF (CAP of PPO)",
+          "critical_component": "CAP of PPO",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "THF–water mobile phases",
+          "mobile_phase_ratio": "81.14 wt% THF",
+          "temperature_celsius": "25.0[◦] C for LCCC",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 ml/min"
+        },
+        "notes": "Semipreparative column used for LCCC analysis (not fractionation) as indicated by the text 'A similar separation is also possible on a semipreparative column... individual peaks are sufficiently resolved'.",
         "paper_doi": "10.1016/j.chroma.2009.07.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -107,8 +217,8 @@
       "section": "Full Paper",
       "token_count": 9580,
       "extraction_success": true,
-      "processing_time": 184.22340154647827,
-      "extracted_count": 2
+      "processing_time": 313.59628319740295,
+      "extracted_count": 3
     }
   ]
 }

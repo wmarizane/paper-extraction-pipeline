@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[321] Malik2009.pdf",
+    "extraction_date": "2026-06-14T14:38:24.076735",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[321] Malik2009.pdf",
+      "start_time": "2026-06-14T14:22:30.915415",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 22.921708822250366,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13066887855529785,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8467
+        },
+        "llm_extraction": {
+          "time_seconds": 930.1088373661041,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "EO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "Critical adsorption point for EO block on normal phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.93",
+        "mobile_phase_ratio_units": "w/w acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "at the CAP for block A (in this case EO) on a normal phase column (NucleoSil 100-5 OH) in an acetone–water mobile phase (78%, w/w acetone) the initiator (PEG-MME) elutes close to the void volume",
+        "notes": "Text mentions 78% in discussion but Fig 4 caption specifies 77.93%. Used specific value from figure caption.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(butene oxide)",
+        "critical_component": "BO block",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "Critical adsorption point for BO block on reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6)",
+        "notes": "Used to separate block copolymers from homopolymers.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "poly(hexene oxide)",
+        "critical_component": "HO block",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "Critical adsorption point for HO block on reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "for HO on the same column in 87.04%, w/w THF (Fig. 7)",
+        "notes": "Used to separate block copolymers from homopolymers.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8467,
+      "extraction_success": true,
+      "processing_time": 241.14330172538757,
+      "extracted_count": 3
+    }
+  ]
+}

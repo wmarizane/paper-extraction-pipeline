@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[84] Lee2000.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "physical_address": "Department of Chemistry and Center for Integrated Molecular Systems, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "evidence_text": "For LCCC system, a single C18 bonded silica column (Nucleosil C18AB, 100 \u00c5 pore, 250 \u00d7 4.6 mm) was used. In LCCC experiments, the column was put in a jacket connected with a bath/circulator so that the column temperature was kept constant at 43 \u00b0C. The mobile phase was a mixture of CH2Cl2/CH3CN (57/43, v/v), and the flow rate was 0.5 mL/min.",
+        "detector": null,
+        "pore_size": "100 \u00c5",
+        "critical_component": "Linear Polystyrene",
+        "publication_year": "2000",
+        "temperature_celsius": "43",
+        "mobile_phase_ratio": "57/43",
+        "critical_condition_basis": "Chromatographic critical condition of linear PS",
+        "column_name": "Nucleosil C18AB",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "Cyclic Polystyrene",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "paper_doi": "10.1021/ma000807b",
+        "corresponding_author_name": "Taihyun Chang",
+        "notes": "The critical condition was established for linear PS (elution independent of MW at ~5.4 min) to separate cyclic PS contaminants.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

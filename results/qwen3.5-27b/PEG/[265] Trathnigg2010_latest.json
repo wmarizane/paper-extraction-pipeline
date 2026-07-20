@@ -1,282 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[265] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T01:27:39.855836",
+    "extraction_date": "2026-07-19T16:08:44.109265",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:08:44.094476+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[265] Trathnigg2010.md",
+        "sha256": "83eafa2b877d4a478cf0fa60c120cd921a785841d0b0f69ce902b37a49acdcf7",
+        "char_len": 28021,
+        "token_count": 8866
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[265] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T00:55:51.447035",
+      "start_time": "2026-07-19T15:34:19.833050",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.14020800590515,
+          "time_seconds": 20.96294403076172,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13336539268493652,
+          "time_seconds": 0.11685347557067871,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8866
         },
         "llm_extraction": {
-          "time_seconds": 1888.1351284980774,
-          "success": true
+          "time_seconds": 2043.145758152008,
+          "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
-    "total_conditions": 7
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Synergi MAX RP",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "86.8 wt% methanol",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "80 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "on the Synergi MAX RP column critical conditions for PEG were observed in methanol–water containing 86.8 wt% methanol",
-        "notes": "Binary mobile phase critical point",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Synergi MAX RP",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "mobile_phase_ratio": "26.9 wt% acetone",
-        "mobile_phase_ratio_units": "wt%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "80 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "on the Synergi MAX RP column critical conditions for PEG were observed in ... acetone–water containing 26.9 wt% acetone",
-        "notes": "Binary mobile phase critical point",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "80 vol% methanol",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "exactly critical behavior was observed up to the highest PEG used in this study (PEG 20000) in binary mobile phase containing 80 vol% (Fig. 4)",
-        "notes": "Binary mobile phase critical point on Jupiter column",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "mobile_phase_ratio": "31 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "exactly critical behavior was observed up to the highest PEG used in this study (PEG 20000) in ... 31 vol% acetone (Fig. 5)",
-        "notes": "Binary mobile phase critical point on Jupiter column",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "44.0 vol% methanol and 17.0 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "In the ternary mobile phases, however, critical conditions were found in mobile phase conditions containing 44.0 vol% methanol and 17.0 vol% acetone (Fig. 6)",
-        "notes": "Ternary mobile phase critical point on Jupiter column",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "17.6 vol% methanol and 27.3 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "Moving left and right, we found critical conditions at 17.6 vol% methanol and 27.3 vol% acetone (Fig. 7)",
-        "notes": "Ternary mobile phase critical point on Jupiter column",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      },
-      {
-        "analyte_polymer": "PEG",
-        "critical_component": "PEG",
-        "architecture": "linear",
-        "critical_condition_basis": "Retention independent of molar mass",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jupiter 5 mm C18 300 A",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.1 vol% methanol and 6.7 vol% acetone",
-        "mobile_phase_ratio_units": "vol%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "1.0 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "evaporative light scattering detector",
-        "evidence_text": "Moving left and right, we found critical conditions at ... 69.1 vol% methanol and 6.7 vol% acetone (Fig. 8)",
-        "notes": "Ternary mobile phase critical point on Jupiter column",
-        "paper_doi": "10.1002/jssc.201000181",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, Central Polymer Laboratory/Molecular Characteristics (CePol/MC), A-8010 Graz, Austria",
-        "publication_year": "2010"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 8866,
-      "extraction_success": true,
-      "processing_time": 526.3057613372803,
-      "extracted_count": 7
+      "extraction_success": false,
+      "processing_time": 681.4974944591522,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEG\",\n      \"critical_component\": \"PEG\",\n      \"architecture\": \"linear\",\n      \"critical_condition_basis\": \"Critical adsorption point (CAP) for PEG\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"column_name\": \"Synergi MAX RP\""
     }
   ]
 }

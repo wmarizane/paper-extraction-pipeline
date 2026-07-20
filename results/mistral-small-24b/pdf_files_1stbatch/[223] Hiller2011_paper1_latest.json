@@ -1,46 +1,93 @@
 {
   "metadata": {
     "source_pdf": "[223] Hiller2011_paper1.pdf",
-    "extraction_date": "2026-06-07T23:49:10.606727",
+    "extraction_date": "2026-07-19T05:11:01.697877",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:11:01.688306+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[223] Hiller2011_paper1.md",
+        "sha256": "19f52b2abd0d15859179ac8c323d87350c58d2237b188428e03cd5a384601588",
+        "char_len": 31786,
+        "token_count": 9800
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[223] Hiller2011_paper1.pdf",
-      "start_time": "2026-06-07T23:48:18.848969",
+      "start_time": "2026-07-19T05:10:12.490879",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 30.31959557533264,
+          "time_seconds": 32.22135400772095,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12119865417480469,
+          "time_seconds": 0.12776541709899902,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9800
         },
         "llm_extraction": {
-          "time_seconds": 21.316800117492676,
+          "time_seconds": 16.775096893310547,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polyisoprene",
-        "critical_component": "1,4-PI",
-        "architecture": "null",
+        "analyte_polymer": "1,4-polyisoprene",
+        "critical_component": "1,4-polyisoprene",
+        "architecture": "linear",
         "critical_condition_basis": "critical conditions of 1,4-PI",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "RP-18",
+        "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "butanone",
           "cyclohexane"
@@ -48,55 +95,31 @@
         "mobile_phase_ratio": "92:8",
         "mobile_phase_ratio_units": "vol %",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "29",
-        "flow_rate": "0.5 mL min^-1",
-        "pore_size": "null",
+        "flow_rate": "0.5 mL min[-][1]",
+        "pore_size": null,
         "column_dimensions": "250 4.6 mm i.d.",
         "detector": "NMR",
-        "evidence_text": "It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C.",
-        "notes": "null",
-        "paper_doi": "10.1021/ma102750s",
-        "corresponding_author_name": "Wolf Hiller",
-        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
-        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
-        "publication_year": "2011"
-      },
-      {
-        "analyte_polymer": "polyisoprene",
-        "critical_component": "1,4-PI",
-        "architecture": "null",
-        "critical_condition_basis": "critical conditions of 1,4-PI",
-        "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "RP-18",
-        "mobile_phase_solvents": [
-          "butanone",
-          "cyclohexane"
-        ],
-        "mobile_phase_ratio": "92:8",
-        "mobile_phase_ratio_units": "vol %",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of 1,4-PI",
+          "critical_component": "1,4-PI",
+          "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+          "mobile_phase_solvents": "butanone/cyclohexane",
+          "mobile_phase_ratio": "92:8 vol %",
+          "temperature_celsius": "29 C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL min[-][1]"
         },
-        "temperature_celsius": "29",
-        "flow_rate": "0.5 mL min^-1",
-        "pore_size": "null",
-        "column_dimensions": "250 4.6 mm i.d.",
-        "detector": "NMR",
-        "evidence_text": "It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C.",
-        "notes": "null",
+        "notes": null,
         "paper_doi": "10.1021/ma102750s",
-        "corresponding_author_name": "Wolf Hiller",
-        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
-        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "corresponding_author_name": "Wolf Hiller; Harald Pasch; Thorsten Hofe",
+        "corresponding_email_address": null,
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany; Department of Chemistry and Polymer Science, University of Stellenbosch, Private Bag X1, 7602 Matieland, South Africa; PSS Polymer Standards Service GmbH, In der Dalheimer Wiese 5, 55120 Mainz, Germany",
         "publication_year": "2011"
       }
     ]
@@ -107,8 +130,8 @@
       "section": "Full Paper",
       "token_count": 9800,
       "extraction_success": true,
-      "processing_time": 21.303205013275146,
-      "extracted_count": 2
+      "processing_time": 16.660395622253418,
+      "extracted_count": 1
     }
   ]
 }

@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "source_pdf": "[285] Bashir2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 6
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Toluene",
+          "THF"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "The critical composition found by us coincides nicely with results of Berek in a similar system... all standards have practically the same elution volume in this eluent composition... 37% THF in toluene",
+        "detector": "ELSD",
+        "pore_size": "1000 A",
+        "critical_component": "PMMA",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "37.20% THF in Toluene",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Nucleosil bare silica",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PMMA",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "250 x 4.0 mm",
+        "stationary_phase_chemistry": "Bare silica",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs after gradient estimation. Table 2 lists 37.20% as the actual critical composition.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Water",
+          "Methanol"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "The critical composition, as determined by the crossing of the lines corresponding to different molar mass, is 83% MeOH. This value is in good agreement with the estimation from the eluting composition of the gradient runs (82.6%).",
+        "detector": "ELSD",
+        "pore_size": "300 A",
+        "critical_component": "PEG",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "83% Methanol",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Nucleosil C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs after gradient estimation. Table 2 lists 83.00% as the actual critical composition.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Cyclohexane",
+          "Methyl ethyl ketone"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "Table 2: Critical compositions of eluent... PMMA... Composition at elution 70.40... Found composition 70.60",
+        "detector": "ELSD",
+        "pore_size": "130 A mesopores, 2 um macropores",
+        "critical_component": "PMMA",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "70.60% MEK in Cyclohexane",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Chromolith Si",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PMMA",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "100 x 4.6 mm",
+        "stationary_phase_chemistry": "Monolithic silica",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 70.60% as the actual critical composition.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Cyclohexane",
+          "Methyl ethyl ketone"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "Table 2: Critical compositions of eluent... PnBMA... Composition at elution 13.55... Found composition 17.90",
+        "detector": "ELSD",
+        "pore_size": "130 A mesopores, 2 um macropores",
+        "critical_component": "PnBMA",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "17.90% MEK in Cyclohexane",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Chromolith Si",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PnBMA",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "100 x 4.6 mm",
+        "stationary_phase_chemistry": "Monolithic silica",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 17.90% as the actual critical composition.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Cyclohexane",
+          "Methyl ethyl ketone"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "Table 2: Critical compositions of eluent... PtBMA... Composition at elution 16.95... Found composition 18.60",
+        "detector": "ELSD",
+        "pore_size": "130 A mesopores, 2 um macropores",
+        "critical_component": "PtBMA",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "18.60% MEK in Cyclohexane",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Chromolith Si",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PtBMA",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "100 x 4.6 mm",
+        "stationary_phase_chemistry": "Monolithic silica",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 18.60% as the actual critical composition.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Cyclohexane",
+          "Methyl ethyl ketone"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "Table 2: Critical compositions of eluent... PDMA... Composition at elution 5.37... Found composition 4.00",
+        "detector": "ELSD",
+        "pore_size": "130 A mesopores, 2 um macropores",
+        "critical_component": "PDMA",
+        "publication_year": "2005",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "4.00% MEK in Cyclohexane",
+        "critical_condition_basis": "Elution volume independent of molar mass",
+        "column_name": "Chromolith Si",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": null,
+        "analyte_polymer": "PDMA",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "100 x 4.6 mm",
+        "stationary_phase_chemistry": "Monolithic silica",
+        "paper_doi": "10.1016/j.polymer.2005.02.080",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined by isocratic runs. Table 2 lists 4.00% as the actual critical composition. Note: Composition at elution was higher than critical composition, attributed to dissolution kinetics.",
+        "flow_rate": "1 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

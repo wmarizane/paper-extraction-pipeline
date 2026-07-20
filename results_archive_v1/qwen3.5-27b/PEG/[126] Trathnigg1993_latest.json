@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[126] Trathnigg1993.pdf",
+    "extraction_date": "2026-06-14T10:29:05.893611",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[126] Trathnigg1993.pdf",
+      "start_time": "2026-06-14T10:25:39.607740",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 49.03270673751831,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.1170358657836914,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 6518
+        },
+        "llm_extraction": {
+          "time_seconds": 157.13601350784302,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene glycol",
+        "critical_component": "Polyethylene glycol backbone",
+        "architecture": "Linear",
+        "critical_condition_basis": "Elution volume independent of degree of polymerization",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ODS",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "V/V",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1.0 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Density and RI",
+        "evidence_text": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG. ... Ata composition of 80:20 critical conditions for PEG are reached, as can be seen from Fig. 10",
+        "notes": "Under these conditions, elution volumes of diols, mono- and dimethylethers are quite similar.",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, A-8010 Graz, Heinrichstrasse 28, Austria",
+        "publication_year": "1993"
+      },
+      {
+        "analyte_polymer": "Polypropylene glycol",
+        "critical_component": "Polypropylene glycol backbone",
+        "architecture": "Linear",
+        "critical_condition_basis": "Separation of PPG oligomers achieved using mobile phase composition corresponding to critical conditions for PEG",
+        "critical_condition_confidence": "strong_inference",
+        "column_name": "ODS",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "V/V",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1.0 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Density and RI",
+        "evidence_text": "In the next step we tried to separate PPG oligomers and polymers using mobile phase compositions close to those of the critical conditions for PEG. ... the separation of PPG oligomers with molecular weights of several hundreds works very well in a mobile phase composition, which corresponds to the critical conditions for PEG.",
+        "notes": "The text states that PPG is separated under conditions that are critical for PEG, implying the PEG backbone is at critical conditions while PPG is separated by end groups or composition differences.",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, A-8010 Graz, Heinrichstrasse 28, Austria",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 6518,
+      "extraction_success": true,
+      "processing_time": 157.11337637901306,
+      "extracted_count": 2
+    }
+  ]
+}

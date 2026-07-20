@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[365] Ahmed2009.pdf",
-    "extraction_date": "2026-06-08T03:58:12.329599",
+    "extraction_date": "2026-07-19T20:11:28.913558",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T20:11:28.899885+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[365] Ahmed2009.md",
+        "sha256": "5dc7f8fece545a4fdf31e75391b7a6baabd073bf63c5afb58635d4ecc9925ca5",
+        "char_len": 37066,
+        "token_count": 10231
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[365] Ahmed2009.pdf",
-      "start_time": "2026-06-08T03:55:03.709843",
+      "start_time": "2026-07-19T20:07:39.382537",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.29609179496765,
+          "time_seconds": 20.383211374282837,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.14943194389343262,
+          "time_seconds": 0.12198805809020996,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10231
         },
         "llm_extraction": {
-          "time_seconds": 169.17412042617798,
+          "time_seconds": 208.96065831184387,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,18 +81,19 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEG, PEG-MME",
+        "analyte_polymer": "PEG-MME",
         "critical_component": "EO",
         "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "69.12 wt-% acetonitrile",
+        "mobile_phase_ratio": "69.12 wt-% acetonitrile–water",
         "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
@@ -55,11 +103,20 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 mL/min",
-        "pore_size": "80 A",
+        "pore_size": "80 Å",
         "column_dimensions": "250 x 10 mm",
         "detector": "DDS 70 density detection system",
-        "evidence_text": "We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
-        "notes": "Used as first dimension for LCCC separation of block copolymers. The text states PEG elutes close to CAP in this composition.",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for the more polar EO unit on a RP column, the nonpolar PCL should elute in LAC mode.",
+          "critical_component": "CAP for the more polar EO unit",
+          "column_name": "Spherisorb ODS2 (250x10 mm, 5 lm, 80 Å)",
+          "mobile_phase_solvents": "acetonitrile–water",
+          "mobile_phase_ratio": "69.12 wt-% acetonitrile–water",
+          "temperature_celsius": "25.0°C",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL/min"
+        },
+        "notes": "Used as first dimension in 2D-LC to separate PCL block copolymers based on CL block length. The text states PEG is sufficiently close to critical conditions in this mobile phase.",
         "paper_doi": "10.1002/jssc.200900014",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -67,18 +124,19 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "PEG-MME 350 initiated block copolymer",
+        "analyte_polymer": "PEG-MME 350 initiated PCL block copolymer",
         "critical_component": "EO",
         "architecture": "diblock",
         "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "ODS2 (Reversed Phase)",
+        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "69.06 wt-% acetonitrile",
+        "mobile_phase_ratio": "69.06 wt-% acetonitrile–water",
         "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
@@ -88,11 +146,20 @@
         },
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 mL/min",
-        "pore_size": "80 A",
+        "pore_size": "80 Å",
         "column_dimensions": "250 x 10 mm",
         "detector": "DDS 70 density detection system",
-        "evidence_text": "Fractionation of the sample initiated with PEG-MME 350 (see Fig. 1) by LCCC on Spherisorb ODS (prep) in 69.06 wt% acetonitrile–water. Detection: density.",
-        "notes": "Specific fractionation experiment for the block copolymer. The text implies this composition is at the CAP for the EO block to separate based on CL block length.",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for the more polar EO unit on a RP column, the nonpolar PCL should elute in LAC mode.",
+          "critical_component": "CAP for the more polar EO unit",
+          "column_name": "Spherisorb ODS2 (prep)",
+          "mobile_phase_solvents": "acetonitrile–water",
+          "mobile_phase_ratio": "69.06 wt% acetonitrile–water",
+          "temperature_celsius": "25.0°C",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL/min"
+        },
+        "notes": "Used for fractionation of the block copolymer to isolate fractions with specific CL block lengths. The text explicitly links this setup to the CAP for EO.",
         "paper_doi": "10.1002/jssc.200900014",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -107,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 10231,
       "extraction_success": true,
-      "processing_time": 169.15120482444763,
+      "processing_time": 208.9066879749298,
       "extracted_count": 2
     }
   ]

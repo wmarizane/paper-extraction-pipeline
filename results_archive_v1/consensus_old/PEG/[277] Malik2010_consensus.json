@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[277] Malik2010.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF\u2013water and for PHO in 92 wt% THF\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "pore_size": "80 \u00c5",
+        "critical_component": "PBO",
+        "publication_year": "2010",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "88.23",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Spherisorb ODS2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "diblock",
+        "analyte_polymer": "PBO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 88.23 wt% THF in Fig 3 caption.",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF\u2013water and for PHO in 92 wt% THF\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "detector": "density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "pore_size": "80 \u00c5",
+        "critical_component": "PHO",
+        "publication_year": "2010",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "92.23",
+        "critical_condition_basis": "92 wt% THF\u2013water",
+        "column_name": "Spherisorb ODS2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "diblock",
+        "analyte_polymer": "PHO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 10 mm",
+        "stationary_phase_chemistry": "octadecyl (ODS)",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Semipreparative LCCC used as first dimension. Text also mentions 92.23 wt% THF in Fig 3 caption.",
+        "flow_rate": "2.0 mL min\u207b\u00b9",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "Critical conditions for PEO exist at 75.7 wt% acetone\u2013water. ... The columns and density cells in all systems were placed in thermostatted boxes, in which a temperature (25.0[\u00b0] C for LCCC ... was maintained",
+        "detector": "refractive index detector RI 2414 or SEDEX 45 ELSD connected to DDS 70",
+        "pore_size": "100 \u00c5",
+        "critical_component": "PEO",
+        "publication_year": "2010",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "75.7",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Nucleosil 100-5 OH",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "diblock",
+        "analyte_polymer": "PEO",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "4.6 mm \u00d7 250 mm",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Analytical LCCC used as second dimension to separate block copolymer from unreacted MeO-PEO initiator.",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

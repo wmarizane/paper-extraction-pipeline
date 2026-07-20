@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[125] Gorbunov1997.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/S0032-3861(97)00282-6",
+        "flow_rate": "0.2 ml/min",
+        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
+        "corresponding_email_address": null,
+        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": null,
+        "column_name": "Butyl-Toyopearl 650 M",
+        "notes": "The text describes determining critical conditions by finding where the adsorption parameter c equals zero. Specific temperature values for the critical point are not explicitly stated, only the pH (6) for the Butyl-Toyopearl system is given in the context of Figure 6.",
+        "publication_year": "1998",
+        "mobile_phase_solvents": [
+          "aqueous buffer"
+        ],
+        "evidence_text": "These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
+        "corresponding_author_name": "A. A. Gorbunov",
+        "pore_size": "20-28 nm",
+        "aqueous_parameters": {
+          "pH": "6",
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "polyethylene glycol",
+        "detector": "differential refractometer",
+        "stationary_phase_chemistry": "Butyl-Toyopearl",
+        "critical_condition_confidence": "strong_inference",
+        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
+        "mobile_phase_ratio_units": null,
+        "column_mode": "Normal Phase",
+        "critical_component": null,
+        "architecture": null,
+        "model_confidences": {
+          "qwen": "strong_inference",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

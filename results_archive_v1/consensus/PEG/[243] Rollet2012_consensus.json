@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "source_pdf": "[243] Rollet2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/ma301199m",
+        "flow_rate": "0.8 mL min-1",
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "corresponding_email_address": "didier.gigmes@univ-provence.fr",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "column_name": "Nucleosil C8 HD",
+        "notes": "Elution mechanism governed by interaction of polar endgroup with residual silanols. Critical conditions reached for Mn < 12,000 g/mol.",
+        "publication_year": "2012",
+        "mobile_phase_solvents": [
+          "Chloroform",
+          "Methanol",
+          "n-Heptane"
+        ],
+        "evidence_text": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column. ... The mobile phase composition to reach the critical conditions was determined to be 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v).",
+        "corresponding_author_name": "Didier Gigmes",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Poly(ethylene oxide) (PEO)",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "Elution independent of molar mass for PEO standards",
+        "mobile_phase_ratio_units": "v/v/v",
+        "column_mode": "Reverse Phase",
+        "critical_component": "PEO backbone",
+        "architecture": "Linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "paper_doi": "10.1021/ma301199m",
+        "flow_rate": "0.8 mL min-1",
+        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
+        "corresponding_email_address": "didier.gigmes@univ-provence.fr",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "column_name": "Nucleosil C8 HD",
+        "notes": "PEO block is under critical conditions; PS block elutes in SEC mode.",
+        "publication_year": "2012",
+        "mobile_phase_solvents": [
+          "Chloroform",
+          "Methanol",
+          "n-Heptane"
+        ],
+        "evidence_text": "Amphiphilic diblock PEO-bPS ... were also separated from PEO homopolymers using the same experimental conditions. We showed that the PEO block is then invisible, and the calibration curve obtained using PS homopolymer standards could be used to determine the whole molar mass of the PS block.",
+        "corresponding_author_name": "Didier Gigmes",
+        "pore_size": "100 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-b-PS block copolymer",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "PEO block is chromatographically invisible; elution governed by PS block length",
+        "mobile_phase_ratio_units": "v/v/v",
+        "column_mode": "Reverse Phase",
+        "critical_component": "PEO block",
+        "architecture": "Diblock",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

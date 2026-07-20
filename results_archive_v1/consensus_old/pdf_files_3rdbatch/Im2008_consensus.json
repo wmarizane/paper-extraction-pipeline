@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "Im2008.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea",
+        "evidence_text": "The critical condition was found as 33.3 \u00b0C for the 100 \u00c5 pore column... Column: Kromasil C18, 100 \u00c5 pore, 5 \u00b5m particle, 150 \u00d7 4.6 mm. Column temperature: 33.3 \u00b0C. Eluent: CH2Cl2/CH3CN (57/43, v/v) at a flow rate of 0.5 mL/min.",
+        "detector": "UV absorption detector",
+        "pore_size": "100 \u00c5",
+        "critical_component": "polystyrene",
+        "publication_year": "2008",
+        "temperature_celsius": "33.3",
+        "mobile_phase_ratio": "57/43",
+        "critical_condition_basis": "coelution of linear PS standards",
+        "column_name": "Kromasil C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polystyrene",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "column_dimensions": "150 \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "paper_doi": "10.1021/ma702377f",
+        "corresponding_author_name": "Taihyun Chang",
+        "notes": "Used to analyze star-shaped PS retention behavior.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea",
+        "evidence_text": "The critical condition was found as... 30.4 \u00b0C for the 500 \u00c5 pore column... Column: Nucleosil C18, 500 \u00c5 pore, 7 \u00b5m particle, 250 \u00d7 4.6 mm i.d. Column temperature: 30.4 \u00b0C. Eluent: CH2Cl2/CH3CN (57/43, v/v) at a flow rate of 0.5 mL/min.",
+        "detector": "UV absorption detector",
+        "pore_size": "500 \u00c5",
+        "critical_component": "polystyrene",
+        "publication_year": "2008",
+        "temperature_celsius": "30.4",
+        "mobile_phase_ratio": "57/43",
+        "critical_condition_basis": "coelution of linear PS standards",
+        "column_name": "Nucleosil C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polystyrene",
+        "corresponding_email_address": "tc@postech.ac.kr",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "paper_doi": "10.1021/ma702377f",
+        "corresponding_author_name": "Taihyun Chang",
+        "notes": "Used to analyze star-shaped PS retention behavior.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

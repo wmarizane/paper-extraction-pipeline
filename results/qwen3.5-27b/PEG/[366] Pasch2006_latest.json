@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[366] Pasch2006.pdf",
-    "extraction_date": "2026-06-08T04:02:29.061273",
+    "extraction_date": "2026-07-19T20:16:07.675874",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T20:16:07.662781+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[366] Pasch2006.md",
+        "sha256": "91a5f0b9d633dc45a1bb8fafb437608df1cb2cc46598cb3f1bb3cf6ce48cd66e",
+        "char_len": 30562,
+        "token_count": 8023
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[366] Pasch2006.pdf",
-      "start_time": "2026-06-08T03:59:25.271009",
+      "start_time": "2026-07-19T20:12:41.167064",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 27.83774757385254,
+          "time_seconds": 28.83932590484619,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12397265434265137,
+          "time_seconds": 0.11520743370056152,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8023
         },
         "llm_extraction": {
-          "time_seconds": 155.82843279838562,
+          "time_seconds": 177.50636434555054,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -41,6 +88,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Knauer Nucleosil RP18-100",
         "stationary_phase_chemistry": "RP18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -58,8 +106,17 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "ELSD",
-        "evidence_text": "Another technique to separate the reaction products PEG-g-PMAA and PMAA from residual non-grafted PEG is liquid chromatography at critical conditions (LC-CC) for PEG. At such LC-CC conditions separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass. ... stationary phase: Knauer Nucleosil RP18-100, mobile phase: methanol/water 81/19 (w/w), detector: ELSD",
-        "notes": "Used for separation of PEG-g-PMAA graft products from non-grafted PEG.",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at critical conditions (LC-CC) for PEG",
+          "critical_component": "PEG elutes in one chromatographic peak irrespective of molar mass",
+          "column_name": "stationary phase: Knauer Nucleosil RP18-100",
+          "mobile_phase_solvents": "mobile phase: methanol/water",
+          "mobile_phase_ratio": "81/19 (w/w)",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used for separation of PEG from graft products in PEG-g-PMAA analysis.",
         "paper_doi": "10.1002/masy.200551317",
         "corresponding_author_name": "Harald Pasch",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
@@ -70,10 +127,11 @@
         "analyte_polymer": "PEO",
         "critical_component": "PEO",
         "architecture": "linear",
-        "critical_condition_basis": "critical point for PEO",
+        "critical_condition_basis": "LC-CC for PEO",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "MeOH",
           "H2O"
@@ -91,8 +149,17 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "However, liquid chromatography under critical conditions (LC-CC) resulted in the desired separation [34]. The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume.",
-        "notes": "Used for separation of PEO-g-PVA graft copolymers from free PEO.",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions (LC-CC) resulted in the desired separation",
+          "critical_component": "The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume",
+          "column_name": "stationary phase: Nucleosil C18",
+          "mobile_phase_solvents": "MeOH:H2O",
+          "mobile_phase_ratio": "82.5:17.5% by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used for separation of free PEO from PEO-g-PVA graft copolymers.",
         "paper_doi": "10.1002/masy.200551317",
         "corresponding_author_name": "Harald Pasch",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
@@ -107,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 8023,
       "extraction_success": true,
-      "processing_time": 155.80595541000366,
+      "processing_time": 177.4507360458374,
       "extracted_count": 2
     }
   ]

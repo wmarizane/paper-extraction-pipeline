@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "source_pdf": "[347] Abrar2011.pdf",
+    "extraction_date": "2026-07-19T19:49:45.608738",
+    "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T19:49:45.595020+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[347] Abrar2011.md",
+        "sha256": "bfb520a91dc7b2c686aaf423ba2c9b3caf62dd60015ce1d88c8f7ac8ece30d38",
+        "char_len": 314552,
+        "token_count": 85343
+      }
+    },
+    "pipeline_metrics": {
+      "pdf_name": "[347] Abrar2011.pdf",
+      "start_time": "2026-07-19T19:10:29.650121",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 199.6665678024292,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.6739838123321533,
+          "success": true,
+          "num_chunks": 4,
+          "total_tokens": 85343
+        },
+        "llm_extraction": {
+          "time_seconds": 2155.5629272460938,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
+    }
+  },
+  "summary": {
+    "total_conditions": 21
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Polyethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Luna HILIC",
+        "stationary_phase_chemistry": "Polyglycidol modified silica",
+        "column_mode": "Hydrophilic Interaction",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "97 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "200 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "field_evidence": {
+          "critical_condition_basis": "The question was now, whether these conditions really corresponded to the CAP for PEG. This is indeed the case, as can be seen in Figure 10.",
+          "critical_component": "At the CAP for the EO unit, all polyethylene oxide chains elute at same elution volume regardless of their length.",
+          "column_name": "Luna HILIC 5µm column( Phenomenex, Torrance, CA, USA; 250 × 4.6 mm; particle diameter = 5µm;  pore size = 200 Ǻ, carbon load: 5.7%)",
+          "mobile_phase_solvents": "acetone water mobile phases",
+          "mobile_phase_ratio": "97 wt-% acetone",
+          "temperature_celsius": null,
+          "pore_size": "pore size = 200 Ǻ",
+          "flow_rate": "All separations were performed at a flow rate of 0.5 ml/min."
+        },
+        "notes": "Separation of polyoxyethylenes according to number of hydroxy end groups. PPG and PTHF eluted in SEC mode under these conditions.",
+        "paper_doi": null,
+        "corresponding_author_name": "Prof. Dr. Bernd Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemistry, Karl-Franzens University of Graz, Austria",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Polyethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "Silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "95.9 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "field_evidence": {
+          "critical_condition_basis": "As has already been described previously [40], a CAP for PEG could be found on a diol phase in about 80 wt-% acetone – water. Under such conditions PPG eluted in SEC mode. The same behaviour is also observed on diol phases in 90 % acetone (Figure 4).",
+          "critical_component": "At the CAP for the EO unit, all polyethylene oxide chains elute at same elution volume regardless of their length.",
+          "column_name": "Nucleosil 100-5 OH 5 µm (Macherey-Nagel, Dueren, Germany): silica-based diol phase; 250x4.6 mm; particle diameter: 5 µm;   pore size: 100 Ǻ",
+          "mobile_phase_solvents": "acetone water mobile phases",
+          "mobile_phase_ratio": "95.9 wt-% acetone",
+          "temperature_celsius": null,
+          "pore_size": "pore size: 100 Ǻ",
+          "flow_rate": "All separations were performed at a flow rate of 0.5 ml/min."
+        },
+        "notes": "Separation of PEG derivatives with different number of hydroxy end groups. Figure 5 caption specifies 95.9 wt-% acetone.",
+        "paper_doi": null,
+        "corresponding_author_name": "Prof. Dr. Bernd Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemistry, Karl-Franzens University of Graz, Austria",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Polyethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "LiChrosorb Diol",
+        "stationary_phase_chemistry": "Silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "90 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI detector RI 101",
+        "field_evidence": {
+          "critical_condition_basis": "As has already been described previously [40], a CAP for PEG could be found on a diol phase in about 80 wt-% acetone – water. Under such conditions PPG eluted in SEC mode. The same behaviour is also observed on diol phases in 90 % acetone (Figure 4).",
+          "critical_component": "At the CAP for the EO unit, all polyethylene oxide chains elute at same elution volume regardless of their length.",
+          "column_name": "LiChrosorb Diol (Knauer, Berlin, Germany): silica-based diol phase, 250;4.6 mm, particle size: 5 µm",
+          "mobile_phase_solvents": "acetone water mobile phases",
+          "mobile_phase_ratio": "90 wt-% acetone",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "All separations were performed at a flow rate of 0.5 ml/min."
+        },
+        "notes": "Figure 4 caption specifies 90 wt-% acetone. Used to demonstrate CAP behavior for PEG while PPG elutes in SEC mode.",
+        "paper_doi": null,
+        "corresponding_author_name": "Prof. Dr. Bernd Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemistry, Karl-Franzens University of Graz, Austria",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "critical_component": "Polyethylene oxide (EO) unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi MAX RP",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "mobile_phase_ratio": "32 vol-% acetone",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Evaporative light scattering detector PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "On a reversed phase column, this can even be achieved, if the end groups are not very different from the repeat unit, as is the case with PEG and PEG-MME: under critical conditions for PEG on a reversed phase column in acetonitrile – water, acetone – water or methanol-water mobile phases both series elute as narrow peaks, which are well separated from each other",
+          "critical_component": "At the CAP for the EO unit, all polyethylene oxide chains elute at same elution volume regardless of their length.",
+          "column_name": "Synergi MAX RP (silica-based dodecyl phase; 250 × 4.6 mm; particle diameter = 4µm; nominal pore size = 80 Ǻ, surface area: 475m2 g−1; carbon load: 17%. from Phenomenex, Torrance, CA, USA)",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "32 vol-% acetone",
+          "temperature_celsius": null,
+          "pore_size": "nominal pore size = 80 Ǻ",
+          "flow_rate": "All separations were performed at a flow rate of 0.5 ml/min."
+        },
+        "notes": "Figure 2 caption specifies 32 vol-% acetone. Used for separation of PEG and PEG methacrylate.",
+        "paper_doi": null,
+        "corresponding_author_name": "Prof. Dr. Bernd Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemistry, Karl-Franzens University of Graz, Austria",
+        "publication_year": "2011"
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of acetone and water (with about 30 % acetone)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jupiter C18",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "31 % acetone",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of acetone and water (with about 30 % acetone)",
+          "critical_component": "CAP for the EO unit",
+          "column_name": "Jupiter 5µm C18 300 Ǻ",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "31 % acetone",
+          "temperature_celsius": null,
+          "pore_size": "300 Ǻ",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of PEG macromonomers (PEG, PEG-MA, PEG-DMA).",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of acetone and water (with about 30 % acetone)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi 4µ MAX-RP 80A",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "31 % acetone",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250mm x 4.6mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of acetone and water (with about 30 % acetone)",
+          "critical_component": "CAP for the EO unit",
+          "column_name": "Synergi 4µ MAX-RP 80A",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "31 % acetone",
+          "temperature_celsius": null,
+          "pore_size": "80 Å",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of PEG macromonomers on narrow pore column.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of ... methanol and water (with about 80 % methanol)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jupiter C18",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80 % methanol",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in binary mobile phases consisting of ... methanol and water (with about 80 % methanol)",
+          "critical_component": "CAP for the EO unit",
+          "column_name": "Jupiter C18",
+          "mobile_phase_solvents": "methanol and water",
+          "mobile_phase_ratio": "80 % methanol",
+          "temperature_celsius": null,
+          "pore_size": "300 Ǻ",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of PEG macromonomers in binary methanol-water system.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "EO unit",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical conditions exist also in ternary mobile phases along a critical adsorption line (CAL)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jupiter C18",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "gradient along CAL (e.g., 31% acetone, 0% methanol, 69% water to 0% acetone, 85% methanol, 15% water)",
+        "mobile_phase_ratio_units": "vol-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions exist also in ternary mobile phases along a critical adsorption line (CAL)",
+          "critical_component": "EO unit",
+          "column_name": "Jupiter C18",
+          "mobile_phase_solvents": "acetone, methanol, and water",
+          "mobile_phase_ratio": "Ternary gradient 1",
+          "temperature_celsius": null,
+          "pore_size": "300 Ǻ",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Gradient elution along the critical adsorption line (CAL) used for quantitative determination of dimethacrylates.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "Polysorbate 20",
+        "critical_component": "EO unit",
+        "architecture": "branched",
+        "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in methanol- water (80 to 90 % methanol)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.97 wt-% methanol",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on typical reversed phase columns in methanol- water (80 to 90 % methanol)",
+          "critical_component": "EO unit",
+          "column_name": "Prodigy ODS3 column",
+          "mobile_phase_solvents": "methanol",
+          "mobile_phase_ratio": "92.97 wt-% methanol",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "10 nm",
+          "flow_rate": "0.5 ml.min[-1]"
+        },
+        "notes": "Analysis of Tween 20, 40, 60. Note: Hydrophilic part is branched (sorbitan/isosorbide core).",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "Polysorbate 20",
+        "critical_component": "EO unit",
+        "architecture": "branched",
+        "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.52% Acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+          "critical_component": "EO unit",
+          "column_name": "Prodigy ODS column",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "91.52%Acetone",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "10 nm",
+          "flow_rate": "0.5 ml.min[-1]"
+        },
+        "notes": "Used to separate mono- and diesters of Tween 20 and Tween 21.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "Polysorbate 60",
+        "critical_component": "EO unit",
+        "architecture": "branched",
+        "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.52% Acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+          "critical_component": "EO unit",
+          "column_name": "Prodigy ODS column",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "91.52%Acetone",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "10 nm",
+          "flow_rate": "0.5 ml.min[-1]"
+        },
+        "notes": "Used to separate mono- and diesters of Tween 60.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "Polysorbate 65",
+        "critical_component": "EO unit",
+        "architecture": "branched",
+        "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "91.52% Acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "RI",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for PEG exist on ODS columns also in acetone – water mobile phases containing about 90 wt-% acetone",
+          "critical_component": "EO unit",
+          "column_name": "Prodigy ODS column",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "91.52%Acetone",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "10 nm",
+          "flow_rate": "0.5 ml.min[-1]"
+        },
+        "notes": "Used to separate mono-, di-, and triesters of Tween 65.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "polyoxyethylene chain",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical point of adsorption (CAP) for the polyoxyethylene chain",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "130µm; 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "which corresponds to the CAP for PEG",
+          "critical_component": "polyoxyethylene chain",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "90 % acetone",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
+        "notes": "Used in comprehensive LC (2nd dimension) for fatty acid ethoxylates and polysorbates.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "polyoxyethylene chain",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical point of adsorption (CAP) for the polyoxyethylene chain",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jupiter 5µm C18 300 Å",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.1 ml/min",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "there is a second CAP for PEG at 90 – 95 % acetone",
+          "critical_component": "polyoxyethylene chain",
+          "column_name": "Jupiter 5µm C18 300 Å",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "90 % acetone",
+          "temperature_celsius": null,
+          "pore_size": "pore size = 300 Å",
+          "flow_rate": "0.1 ml/min"
+        },
+        "notes": "Used in Setup 2 (1st dimension) for comprehensive LC of polysorbates. Text mentions CAP range 90-95%, experiment uses 90%.",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": null
+      },
+      {
+        "analyte_polymer": "Tween 40",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.97 wt-% methanol",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml.min[-1]",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Waters 2414 refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "separated Tween 40 and 60 on a RP column at the CAP for PEG in methanol – water",
+          "critical_component": "CAP for PEG",
+          "column_name": "Prodigy ODS3 column",
+          "mobile_phase_solvents": "methanol – water",
+          "mobile_phase_ratio": "92.97 wt-% methanol",
+          "temperature_celsius": null,
+          "pore_size": "pore size =10 nm",
+          "flow_rate": "flow rate of 0.5 ml.min[-1]"
+        },
+        "notes": "Analytical scale LCCC",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 60",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "92.97 wt-% methanol",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml.min[-1]",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Waters 2414 refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "separated Tween 40 and 60 on a RP column at the CAP for PEG in methanol – water",
+          "critical_component": "CAP for PEG",
+          "column_name": "Prodigy ODS3 column",
+          "mobile_phase_solvents": "methanol – water",
+          "mobile_phase_ratio": "92.97 wt-% methanol",
+          "temperature_celsius": null,
+          "pore_size": "pore size =10 nm",
+          "flow_rate": "flow rate of 0.5 ml.min[-1]"
+        },
+        "notes": "Analytical scale LCCC",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 40",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml.min[-1]",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Waters 2414 refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "second CAP for PEG exists on typical reversed phase columns in acetone – water mobile phases containing about 92 wt-% acetone",
+          "critical_component": "CAP for PEG",
+          "column_name": "Prodigy ODS3 column",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "92 wt-% acetone",
+          "temperature_celsius": null,
+          "pore_size": "pore size =10 nm",
+          "flow_rate": "flow rate of 0.5 ml.min[-1]"
+        },
+        "notes": "Analytical scale LCCC, second CAP",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 60",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "92% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml.min[-1]",
+        "pore_size": "10 nm",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "Waters 2414 refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "second CAP for PEG exists on typical reversed phase columns in acetone – water mobile phases containing about 92 wt-% acetone",
+          "critical_component": "CAP for PEG",
+          "column_name": "Prodigy ODS3 column",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "92 wt-% acetone",
+          "temperature_celsius": null,
+          "pore_size": "pore size =10 nm",
+          "flow_rate": "flow rate of 0.5 ml.min[-1]"
+        },
+        "notes": "Analytical scale LCCC, second CAP",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 40",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption line (CAL) connecting CAPs",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "41% Methanol, 47% Acetone to 96% Acetone",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "evaporative light scattering detector PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "gradient elution from critical conditions in a ternary mobile phase (methanol – acetone – water) to a CAP in a binary mobile phase (acetone – water)",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol – acetone – water",
+          "mobile_phase_ratio": "41% Methanol and 47% Acetone and then going to 96% Acetone",
+          "temperature_celsius": null,
+          "pore_size": "nominal pore size = 80 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Gradient LCCC from ternary to binary CAP",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 60",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption line (CAL) connecting CAPs",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "41% Methanol, 47% Acetone to 96% Acetone",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "evaporative light scattering detector PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "gradient elution from critical conditions in a ternary mobile phase (methanol – acetone – water) to a CAP in a binary mobile phase (acetone – water)",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol – acetone – water",
+          "mobile_phase_ratio": "41% Methanol and 47% Acetone and then going to 96% Acetone",
+          "temperature_celsius": null,
+          "pore_size": "nominal pore size = 80 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Gradient LCCC from ternary to binary CAP",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Tween 80",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption line (CAL) connecting CAPs",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "41% Methanol, 47% Acetone to 96% Acetone",
+        "mobile_phase_ratio_units": "volume percent",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "evaporative light scattering detector PL-ELS 2100",
+        "field_evidence": {
+          "critical_condition_basis": "gradient elution from critical conditions in a ternary mobile phase (methanol – acetone – water) to a CAP in a binary mobile phase (acetone – water)",
+          "critical_component": "critical conditions for PEG",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol – acetone – water",
+          "mobile_phase_ratio": "41% Methanol and 47% Acetone and then going to 96% Acetone",
+          "temperature_celsius": null,
+          "pore_size": "nominal pore size = 80 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Gradient LCCC from ternary to binary CAP",
+        "paper_doi": null,
+        "corresponding_author_name": null,
+        "corresponding_email_address": null,
+        "physical_address": null,
+        "publication_year": "2010"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 24989,
+      "extraction_success": true,
+      "processing_time": 771.06236743927,
+      "extracted_count": 4
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 24694,
+      "extraction_success": true,
+      "processing_time": 687.7185668945312,
+      "extracted_count": 8
+    },
+    {
+      "chunk_index": 2,
+      "section": "Part 3",
+      "token_count": 23696,
+      "extraction_success": true,
+      "processing_time": 771.06236743927,
+      "extracted_count": 2
+    },
+    {
+      "chunk_index": 3,
+      "section": "Part 4",
+      "token_count": 11964,
+      "extraction_success": true,
+      "processing_time": 771.06236743927,
+      "extracted_count": 7
+    }
+  ]
+}

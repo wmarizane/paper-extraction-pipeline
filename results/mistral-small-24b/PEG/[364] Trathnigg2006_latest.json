@@ -1,35 +1,81 @@
 {
   "metadata": {
     "source_pdf": "[364] Trathnigg2006.pdf",
-    "extraction_date": "2026-06-08T01:28:29.226548",
+    "extraction_date": "2026-07-19T14:18:31.762505",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:18:31.752924+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[364] Trathnigg2006.md",
+        "sha256": "8952594af6ea4c0d7cdbc4de1ef2fdba5ab2cfe50377bedd8ee4afdc0831afb0",
+        "char_len": 23720,
+        "token_count": 6731
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[364] Trathnigg2006.pdf",
-      "start_time": "2026-06-08T01:27:37.503019",
+      "start_time": "2026-07-19T14:17:45.384935",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.211007118225098,
+          "time_seconds": 20.750301361083984,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.16136693954467773,
+          "time_seconds": 0.10132384300231934,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6731
         },
         "llm_extraction": {
-          "time_seconds": 32.35098433494568,
+          "time_seconds": 25.4546959400177,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -41,6 +87,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -56,47 +103,23 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 � 4.6 mm",
         "detector": "RI",
-        "evidence_text": "On polymer-based RP columns, which do not contain silanol groups, the CAP for PO (at about 90% acetone) can be utilized, as PEG elutes under these conditions in SEC mode, as can be seen in Figure 3.",
-        "notes": null,
-        "paper_doi": "10.1002/masy.200650503",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2006"
-      },
-      {
-        "analyte_polymer": "EO-PO block copolymers",
-        "critical_component": "EO",
-        "architecture": "EO-PO diblock",
-        "critical_condition_basis": "LCCC",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Discovery HS PEG",
-        "stationary_phase_chemistry": "silica-based PEG phase",
-        "mobile_phase_solvents": [
-          "acetone",
-          "water"
-        ],
-        "mobile_phase_ratio": "78.54",
-        "mobile_phase_ratio_units": "wt-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "acetone – water",
+          "mobile_phase_ratio": "91.73 wt-%",
+          "temperature_celsius": "25.08C",
+          "pore_size": "500 A[˚]",
+          "flow_rate": "0.5 ml/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "120 A[˚]",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI",
-        "evidence_text": "This can be achieved on a normal phase column, PO would elute in SEC mode aat the CAP for EO (situation 3 in Table 1). This can be achieved on a diol column in about 80 wt-% acetone, as we have shown previously[[32]] . Under these conditions, one can see, that there is some PEG in these samples, but also a shoulder, which should contain the diblock.",
         "notes": null,
         "paper_doi": "10.1002/masy.200650503",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St.Petersburg, Russia",
         "publication_year": "2006"
       },
       {
@@ -106,7 +129,8 @@
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Novapak C18",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -122,14 +146,23 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "60 A[˚]",
-        "column_dimensions": "300 x 3.9 mm",
+        "column_dimensions": "300 KO 3.9 mm",
         "detector": "ELSD",
-        "evidence_text": "In such a mobile phase, PPG with an average molar mass of up to 1000 can be separated by LAC almost to the baseline. Compared to the chromatograms obtained with two EO-PO-EO triblocks with a similar PO block, but different EO blocks shows a remarkable pattern: The peaks of the individual oligomers with the same number of PO units elute at the same position, only for the polymer with long EO blocks they are slightly shifted towards lower elution volumes.",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Novapak C18",
+          "mobile_phase_solvents": "methanol-water",
+          "mobile_phase_ratio": "80 wt-%",
+          "temperature_celsius": "25.08C",
+          "pore_size": "60 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/masy.200650503",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Alexei Gorbunov",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria; Institute for Highly Pure Biopreparations, Pudozhskaya 7, 197110 St.Petersburg, Russia",
         "publication_year": "2006"
       }
     ]
@@ -140,8 +173,8 @@
       "section": "Full Paper",
       "token_count": 6731,
       "extraction_success": true,
-      "processing_time": 32.34062623977661,
-      "extracted_count": 3
+      "processing_time": 25.350640773773193,
+      "extracted_count": 2
     }
   ]
 }

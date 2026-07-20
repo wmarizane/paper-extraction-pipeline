@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "source_pdf": "[332] Malik2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "Critical conditions for PPO were found in 80 % THF: Water mobile phase on jordi RP column",
+        "detector": "SEDEX 45 ELSD",
+        "pore_size": "500 \u00c5",
+        "critical_component": "PPO",
+        "publication_year": "2016",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "80/20",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for PPO",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "Polypropylene oxide (PPO)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used to separate PPO chains with different end-groups (PPGs, allylic-PPOs, octadecyl-PPOs).",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "Critical adsorption point (CAP) of PBO ... are established on the same column in 84 ... % THF",
+        "detector": "SEDEX 45 ELSD",
+        "pore_size": "500 \u00c5",
+        "critical_component": "PBO",
+        "publication_year": "2016",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "84/16",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for PBO",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "PBO",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used to analyze butyl-PBO and octadecyl-PBO. Text notes that unsaturated end-group has similar selectivity as repeat unit.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "Water"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "The CAP for PHO was found in 87 % THF-water on the same column",
+        "detector": "SEDEX 45 ELSD",
+        "pore_size": "500 \u00c5",
+        "critical_component": "PHO",
+        "publication_year": "2016",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "87/13",
+        "critical_condition_basis": "Critical adsorption point (CAP) established for PHO",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "PHO",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "paper_doi": "10.1007/s10965-016-1141-z",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used to analyze hexanol-based and octadecanol-based PHO.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[337] Malik2013.pdf",
+    "extraction_date": "2026-06-14T11:02:14.119197",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[337] Malik2013.pdf",
+      "start_time": "2026-06-14T10:55:12.471257",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 76.54415440559387,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13218164443969727,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 10346
+        },
+        "llm_extraction": {
+          "time_seconds": 344.9714069366455,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 10346,
+      "extraction_success": false,
+      "processing_time": 113.00439023971558,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"CL-DEG-CL\",\"critical_component\":\"EO\",\"architecture\":\"triblock\",\"critical_condition_basis\":\"critical adsorption point\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Synergi Fusion RP\",\"stationary_phase_chemistry\":\"dodecyl phase\",\"column_mode\":\""
+    }
+  ]
+}

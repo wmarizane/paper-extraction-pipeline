@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[95] Pasch.pdf",
+    "extraction_date": "2026-06-14T17:33:07.193447",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[95] Pasch.pdf",
+      "start_time": "2026-06-14T17:30:38.973194",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 65.9654541015625,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12745881080627441,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 8738
+        },
+        "llm_extraction": {
+          "time_seconds": 82.12722992897034,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene oxide",
+        "critical_component": "polyethylene oxide block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "disappearance of molar mass dependence of retention time",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 5C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "43:57",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "R-401 differential refractometer",
+        "evidence_text": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile—water (43:57, v/v); see Fig. 1.",
+        "notes": "Used to separate the block polymer according to the length of the polypropylene oxide block while the polyethylene oxide block is at its critical point.",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany",
+        "publication_year": "1992"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 8738,
+      "extraction_success": true,
+      "processing_time": 82.1047945022583,
+      "extracted_count": 1
+    }
+  ]
+}

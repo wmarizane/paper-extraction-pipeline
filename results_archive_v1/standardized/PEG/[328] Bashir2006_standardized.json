@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "source_pdf": "[328] Bashir2006",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.064709Z"
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "250 mm × 4.6 mm I.D.",
+        "temperature_celsius": 35.0,
+        "mobile_phase_ratio": "83/17",
+        "column_name": "Nucleosil C18",
+        "notes": "Critical composition determined from isocratic experiments on high molar mass PEGs (2010 to 40,000 g/mol).",
+        "publication_year": 2006,
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "evidence_text": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+        "corresponding_author_name": "Wolfgang Radke",
+        "pore_size": "300 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Poly(ethylene glycol)",
+        "detector": "UV",
+        "stationary_phase_chemistry": "C18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "elution time independent of molar mass at 83% MeOH",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "Poly(ethylene glycol)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "% v/v",
+        "mobile_phase_ratio_raw": "83/17",
+        "mobile_phase_ratio_components": [
+          83.0,
+          17.0
+        ],
+        "flow_rate_raw": "1 mL/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "300 Å",
+        "pore_size_angstrom": 300.0
+      }
+    ]
+  }
+}

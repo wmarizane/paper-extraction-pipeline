@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[350] Weidner2012.pdf",
+    "extraction_date": "2026-06-14T09:42:45.458217",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[350] Weidner2012.pdf",
+      "start_time": "2026-06-14T09:42:17.040077",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 15.933953046798706,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10650444030761719,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9150
+        },
+        "llm_extraction": {
+          "time_seconds": 12.3775315284729,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO-b-PPO-b-PEO",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "85/15",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": "120 Å",
+        "column_dimensions": "250 × 4.6 mm i.D.",
+        "detector": "ELSD",
+        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+        "notes": null,
+        "paper_doi": "10.1002/macp.201200169",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "BAM–Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
+        "publication_year": "2012"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9150,
+      "extraction_success": true,
+      "processing_time": 12.364430665969849,
+      "extracted_count": 1
+    }
+  ]
+}

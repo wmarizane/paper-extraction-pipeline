@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[363] Falkenhagen2009.pdf",
-    "extraction_date": "2026-06-08T03:46:29.819660",
+    "extraction_date": "2026-07-19T19:58:24.543682",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T19:58:24.530696+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[363] Falkenhagen2009.md",
+        "sha256": "513fb5043618b07ca1b587aed73f2d4b3851af6bb550cb9fa3033928c8df1520",
+        "char_len": 24425,
+        "token_count": 6731
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[363] Falkenhagen2009.pdf",
-      "start_time": "2026-06-08T03:40:36.502693",
+      "start_time": "2026-07-19T19:50:59.820203",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 23.200380563735962,
+          "time_seconds": 24.05410647392273,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12044835090637207,
+          "time_seconds": 0.11259126663208008,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6731
         },
         "llm_extraction": {
-          "time_seconds": 329.9960267543793,
+          "time_seconds": 420.50490975379944,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,22 +81,22 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene oxide)",
-        "critical_component": "ethylene oxide repeating unit",
+        "analyte_polymer": "HO-PEO-(CH2)18-H",
+        "critical_component": "PEO",
         "architecture": "linear",
-        "critical_condition_basis": "co-instantaneous elution of all standards at the same retention time",
+        "critical_condition_basis": "critical conditions of adsorption of PEO",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water with 0.1% formic acid",
-          "acetonitrile",
-          "methanol"
+          "acetonitrile/methanol 30:70 (v/v)"
         ],
         "mobile_phase_ratio": "15.7/84.3",
-        "mobile_phase_ratio_units": "v/v (A/B)",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
@@ -59,8 +106,17 @@
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "Using a mixture of 15.7/ 84.3 (A/B, v/v) \"critical\" separation conditions were realized. The ESI-TOF mass spectra recorded at 10.5, 10.9, and 11.5 min (Figure 2, upper middle) did not show any change of the maximum of the mass peak distribution.",
-        "notes": "Mobile phase A is water with 0.1% formic acid; Mobile phase B is acetonitrile/methanol 30:70 (v/v). Determined using ethoxylated fatty acid C18 alcohol (Mw 700 g/mol).",
+        "field_evidence": {
+          "critical_condition_basis": "Using a mixture of 15.7/ 84.3 (A/B, v/v) \"critical\" separation conditions were realized.",
+          "critical_component": "determination of critical conditions of adsorption of PEO",
+          "column_name": "BEH (Bridged Ethane Hybrid particle) C18 column",
+          "mobile_phase_solvents": "mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B)",
+          "mobile_phase_ratio": "15.7/ 84.3 (A/B, v/v)",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min"
+        },
+        "notes": "Critical condition established using ethoxylated fatty acid C18 alcohol (HO-PEO-(CH2)18-H).",
         "paper_doi": "10.1021/ac8019784",
         "corresponding_author_name": "Jana Falkenhagen",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
@@ -68,66 +124,85 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(propylene oxide)",
-        "critical_component": "propylene oxide repeating unit",
+        "analyte_polymer": "ethoxylated fatty acid alcohols mixture",
+        "critical_component": "PEO",
         "architecture": "linear",
-        "critical_condition_basis": "co-instantaneous elution of all standards at the same retention time",
+        "critical_condition_basis": "critical conditions of adsorption of PEO",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "water with 0.1% formic acid",
+          "acetonitrile/methanol 30:70 (v/v)"
+        ],
+        "mobile_phase_ratio": "15.7/84.3",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.35 mL/min",
+        "pore_size": null,
+        "column_dimensions": "50 mm x 2.1 mm",
+        "detector": "ESI-TOF MS",
+        "field_evidence": {
+          "critical_condition_basis": "These \"critical\" conditions were applied for a separation of a mixture of 8 fatty acid ethoxylated alcohols.",
+          "critical_component": "critical conditions of adsorption of PEO",
+          "column_name": "BEH (Bridged Ethane Hybrid particle) C18 column",
+          "mobile_phase_solvents": "mixtures of water with 0.1% of formic acid (component A) and acetonitrile/methanol 30:70 (v/v) (component B)",
+          "mobile_phase_ratio": "15.7/ 84.3 (A/B, v/v)",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C",
+          "pore_size": null,
+          "flow_rate": "The flow rate was 0.35 mL/min"
+        },
+        "notes": "Mixture of 8 ethoxylated fatty acid alcohols analyzed under PEO critical conditions established previously.",
+        "paper_doi": "10.1021/ac8019784",
+        "corresponding_author_name": "Jana Falkenhagen",
+        "corresponding_email_address": "jana.falkenhagen@bam.de",
+        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PPO homopolymer",
+        "critical_component": "PPO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption of PPO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "BEH C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water with 0.2% formic acid",
-          "tetrahydrofuran"
+          "tetrahydrofurane"
         ],
         "mobile_phase_ratio": "85:15",
-        "mobile_phase_ratio_units": "v/v (THF/water)",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
         "temperature_celsius": "30",
-        "flow_rate": "0.5 mL/min",
+        "flow_rate": "0.2 mL/min",
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
-        "notes": "Mobile phase A is water with 0.2% formic acid; Mobile phase B is tetrahydrofuran. Determined using PPO homopolymer (Mp 1020 g/mol).",
-        "paper_doi": "10.1021/ac8019784",
-        "corresponding_author_name": "Jana Falkenhagen",
-        "corresponding_email_address": "jana.falkenhagen@bam.de",
-        "physical_address": "BAM, Federal Institute for Materials Research and Testing, Richard-Willstaetter-Strasse 11, D-12489 Berlin, Germany",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "ethoxylated fatty acid alcohols",
-        "critical_component": "ethylene oxide repeating unit",
-        "architecture": "linear",
-        "critical_condition_basis": "application of critical conditions determined for PEO",
-        "critical_condition_confidence": "explicit",
-        "column_name": "BEH C18",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "water with 0.1% formic acid",
-          "acetonitrile",
-          "methanol"
-        ],
-        "mobile_phase_ratio": "15.7/84.3",
-        "mobile_phase_ratio_units": "v/v (A/B)",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO",
+          "critical_component": "determination of critical conditions of PPO",
+          "column_name": "BEH (Bridged Ethane Hybrid particle) C18 column",
+          "mobile_phase_solvents": "mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B)",
+          "mobile_phase_ratio": "85:15 THF/water (v/v)",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C",
+          "pore_size": null,
+          "flow_rate": "flow rate 0.2 mL/min"
         },
-        "temperature_celsius": "30",
-        "flow_rate": "0.35 mL/min",
-        "pore_size": null,
-        "column_dimensions": "50 mm x 2.1 mm",
-        "detector": "ESI-TOF MS",
-        "evidence_text": "These \"critical\" conditions were applied for a separation of a mixture of 8 fatty acid ethoxylated alcohols. As presented in Figure 3 (left) the mixture could be separated in 10 min...",
-        "notes": "Separation based on end-group structure (fatty acid chain length) under PEO critical conditions.",
+        "notes": "Critical condition established using PPO homopolymer (Mp 1020 g/mol).",
         "paper_doi": "10.1021/ac8019784",
         "corresponding_author_name": "Jana Falkenhagen",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
@@ -136,20 +211,21 @@
       },
       {
         "analyte_polymer": "PPO/PEO copolymer",
-        "critical_component": "propylene oxide repeating unit",
+        "critical_component": "PPO",
         "architecture": "block copolymer",
-        "critical_condition_basis": "application of critical conditions determined for PPO",
+        "critical_condition_basis": "critical conditions of PPO",
         "critical_condition_confidence": "explicit",
         "column_name": "BEH C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "water with 0.2% formic acid",
-          "tetrahydrofuran"
+          "tetrahydrofurane"
         ],
         "mobile_phase_ratio": "85:15",
-        "mobile_phase_ratio_units": "v/v (THF/water)",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
@@ -159,8 +235,17 @@
         "pore_size": null,
         "column_dimensions": "50 mm x 2.1 mm",
         "detector": "ESI-TOF MS",
-        "evidence_text": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
-        "notes": "Separation based on PEO block length/composition under PPO critical conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "At a solvent composition of 85:15 THF/water (v/v), which represents the \"critical\" mode of separation of PPO (middle), the PPO/PEO copolymer was injected.",
+          "critical_component": "critical conditions of PPO",
+          "column_name": "BEH (Bridged Ethane Hybrid particle) C18 column",
+          "mobile_phase_solvents": "mixtures of water with 0.2% of formic acid (A) and tetrahydrofurane (B)",
+          "mobile_phase_ratio": "85:15 THF/water (v/v)",
+          "temperature_celsius": "Column and autosampler were kept at a constant temperature of 30 ° C",
+          "pore_size": null,
+          "flow_rate": "At a flow rate of 0.5 mL/min"
+        },
+        "notes": "Copolymer analyzed under PPO critical conditions. PEO block is not at critical condition.",
         "paper_doi": "10.1021/ac8019784",
         "corresponding_author_name": "Jana Falkenhagen",
         "corresponding_email_address": "jana.falkenhagen@bam.de",
@@ -175,7 +260,7 @@
       "section": "Full Paper",
       "token_count": 6731,
       "extraction_success": true,
-      "processing_time": 329.97289657592773,
+      "processing_time": 420.45054292678833,
       "extracted_count": 4
     }
   ]

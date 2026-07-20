@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "source_pdf": "[350] Weidner2012.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1002/macp.201200169",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "physical_address": "BAM\u2013Federal Institute for Materials Research and Testing, 1.3 Structure Analysis, Richard-Willstaetter-Strasse 11, 12389 Berlin, Germany",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "column_dimensions": "250 \u00d7 4.6 mm i.D.",
+        "temperature_celsius": "45",
+        "mobile_phase_ratio": "85/15",
+        "column_name": "YMC RP18",
+        "notes": "The text states that at these conditions, PEO units elute according to its length in SEC mode, while PPO is at the critical point.",
+        "publication_year": "2012",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "evidence_text": "The critical conditions of adsorption for polypropylene oxide using a solvent system of THF/water were found at a ratio of 85/15 (v/v).",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "pore_size": "120 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEO-b-PPO-b-PEO",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "stationary_phase_chemistry": "RP18",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical conditions of adsorption for polypropylene oxide",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "polypropylene oxide (PPO)",
+        "architecture": "block",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

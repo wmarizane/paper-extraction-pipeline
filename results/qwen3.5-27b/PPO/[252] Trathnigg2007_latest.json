@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[252] Trathnigg2007.pdf",
-    "extraction_date": "2026-06-07T23:06:29.247180",
+    "extraction_date": "2026-07-19T14:53:53.399187",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:53:53.386220+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[252] Trathnigg2007.md",
+        "sha256": "0db8c20e5dd0b827add790fdd3b7f2618964ae4ccf081d14e362bf3fa0afba02",
+        "char_len": 21146,
+        "token_count": 5452
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[252] Trathnigg2007.pdf",
-      "start_time": "2026-06-07T23:04:47.481460",
+      "start_time": "2026-07-19T14:51:43.120052",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 19.990774393081665,
+          "time_seconds": 19.80282711982727,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11653947830200195,
+          "time_seconds": 0.11499166488647461,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5452
         },
         "llm_extraction": {
-          "time_seconds": 81.65830159187317,
+          "time_seconds": 110.306955575943,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44398"
+      }
     }
   },
   "summary": {
@@ -34,19 +81,20 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PPG",
-        "critical_component": "oxypropylene unit",
-        "architecture": "linear",
-        "critical_condition_basis": "Critical adsorption point (CAP) identified at intersection of interaction parameter line with x-axis",
+        "analyte_polymer": "Polypropylene glycol (PPG)",
+        "critical_component": "PPG repeat unit",
+        "architecture": "Linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) in THF-water mobile phase",
         "critical_condition_confidence": "explicit",
         "column_name": "Prodigy ODS3",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
-          "water"
+          "Water"
         ],
-        "mobile_phase_ratio": "85",
-        "mobile_phase_ratio_units": "wt.% THF",
+        "mobile_phase_ratio": "85 wt.% THF",
+        "mobile_phase_ratio_units": "wt.%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -58,8 +106,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "SEDEX 45 ELSD",
-        "evidence_text": "On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF). The intersection point of the line for THF agrees well with the CAP",
-        "notes": "Critical condition established for the repeat unit (oxypropylene).",
+        "field_evidence": {
+          "critical_condition_basis": "On this column critical conditions for PPG exist only in THF–water (at approximately 85 wt.% THF).",
+          "critical_component": "critical conditions for PPG",
+          "column_name": "Prodigy ODS3 (Phenomenex, Torrance, CA, USA): silicabased octadecyl phase",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "85 wt.% THF",
+          "temperature_celsius": "temperature of 25.0[◦] C was maintained for all measurements",
+          "pore_size": "pore size = 100 A",
+          "flow_rate": "The flow rate was 0.5 mL min[−][1] in all measurements."
+        },
+        "notes": "Critical condition identified for PPG on Prodigy ODS3 in THF-water. The text states critical conditions exist only in this mobile phase for this column.",
         "paper_doi": "10.1016/j.aca.2007.06.043",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 5452,
       "extraction_success": true,
-      "processing_time": 81.63580513000488,
+      "processing_time": 110.24998354911804,
       "extracted_count": 1
     }
   ]

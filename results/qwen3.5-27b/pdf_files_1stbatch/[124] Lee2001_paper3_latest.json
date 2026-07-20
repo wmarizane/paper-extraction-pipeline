@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[124] Lee2001_paper3.pdf",
-    "extraction_date": "2026-06-07T22:41:10.088936",
+    "extraction_date": "2026-07-19T05:12:08.973370",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:12:08.964384+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[124] Lee2001_paper3.md",
+        "sha256": "aa5e8f9203309c90fe695a7ae4d9dbad579e989ee11c2ee721e6c7cc9d8cf39b",
+        "char_len": 48757,
+        "token_count": 13984
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[124] Lee2001_paper3.pdf",
-      "start_time": "2026-06-07T22:21:50.381610",
+      "start_time": "2026-07-19T04:52:12.706950",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 914.3458461761475,
+          "time_seconds": 904.3081452846527,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10674476623535156,
+          "time_seconds": 0.12733221054077148,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13984
         },
         "llm_extraction": {
-          "time_seconds": 245.25462937355042,
+          "time_seconds": 291.77254605293274,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
@@ -34,13 +81,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
-        "critical_component": "PEO block",
+        "analyte_polymer": "PEO-b-PLLA",
+        "critical_component": "PEO",
         "architecture": "diblock",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
+        "critical_condition_basis": "critical condition of PEO block",
         "critical_condition_confidence": "explicit",
         "column_name": "LUNA C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -56,10 +104,19 @@
         "temperature_celsius": "68",
         "flow_rate": null,
         "pore_size": "100-Å",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "refractive index detector, UV-visible absorption detector",
-        "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 °C column temperature and an ACN/water mixture at the ratio of 60/40 (v/ v).",
-        "notes": "Critical condition established using PEG standards (Mn: 1500, 3400, and 8000).",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "field_evidence": {
+          "critical_condition_basis": "The characterization by HPLC at the critical condition of PEO block",
+          "critical_component": "critical condition of PEO block",
+          "column_name": "reversed-phase column (LUNA C18, 100-Å pore size, 250 × 4.6 mm)",
+          "mobile_phase_solvents": "mixture of acetonitrile (ACN, Aldrich HPLC grade) and water",
+          "mobile_phase_ratio": "ACN/water mixture at the ratio of 60/40 (v/ v)",
+          "temperature_celsius": "68 °C column temperature",
+          "pore_size": "100-Å pore size",
+          "flow_rate": null
+        },
+        "notes": "Condition established for diblock copolymer analysis.",
         "paper_doi": "10.1021/ac001219z",
         "corresponding_author_name": "Taihyun Chang",
         "corresponding_email_address": "tc@postech.ac.kr",
@@ -67,18 +124,19 @@
         "publication_year": "2001"
       },
       {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
-        "critical_component": "PEO block",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "critical_component": "PEO",
         "architecture": "triblock",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
+        "critical_condition_basis": "critical condition of PEO block",
         "critical_condition_confidence": "explicit",
         "column_name": "LUNA C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "47/53",
+        "mobile_phase_ratio": "47:53",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -89,10 +147,19 @@
         "temperature_celsius": "37",
         "flow_rate": null,
         "pore_size": "100-Å",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "refractive index detector, UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v))",
-        "notes": "First condition used for triblock copolymer with shorter PLLA blocks (Figure 3).",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical condition of PEO block",
+          "critical_component": "critical condition of PEO block",
+          "column_name": "reversed-phase column (LUNA C18, 100-Å pore size, 250 × 4.6 mm)",
+          "mobile_phase_solvents": "mixture of acetonitrile (ACN, Aldrich HPLC grade) and water",
+          "mobile_phase_ratio": "ACN:H2O ) 47:53 (v/v)",
+          "temperature_celsius": "37 °C",
+          "pore_size": "100-Å pore size",
+          "flow_rate": null
+        },
+        "notes": "First condition used for triblock copolymer analysis (Figure 3).",
         "paper_doi": "10.1021/ac001219z",
         "corresponding_author_name": "Taihyun Chang",
         "corresponding_email_address": "tc@postech.ac.kr",
@@ -100,18 +167,19 @@
         "publication_year": "2001"
       },
       {
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
-        "critical_component": "PEO block",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "critical_component": "PEO",
         "architecture": "triblock",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
+        "critical_condition_basis": "critical condition of PEO block",
         "critical_condition_confidence": "explicit",
         "column_name": "LUNA C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "54/46",
+        "mobile_phase_ratio": "54:46",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -122,10 +190,19 @@
         "temperature_celsius": "54",
         "flow_rate": null,
         "pore_size": "100-Å",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "refractive index detector, UV-visible absorption detector",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 °C, ACN:H2O ) 47:53 (v/v); 54 °C, ACN: H2O ) 54:46 (v/v))",
-        "notes": "Second condition used for triblock copolymer with longer PLLA blocks (Figure 5).",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical condition of PEO block",
+          "critical_component": "critical condition of PEO block",
+          "column_name": "reversed-phase column (LUNA C18, 100-Å pore size, 250 × 4.6 mm)",
+          "mobile_phase_solvents": "mixture of acetonitrile (ACN, Aldrich HPLC grade) and water",
+          "mobile_phase_ratio": "ACN: H2O ) 54:46 (v/v)",
+          "temperature_celsius": "54 °C",
+          "pore_size": "100-Å pore size",
+          "flow_rate": null
+        },
+        "notes": "Second condition used for triblock copolymer analysis with longer PLLA blocks (Figure 5).",
         "paper_doi": "10.1021/ac001219z",
         "corresponding_author_name": "Taihyun Chang",
         "corresponding_email_address": "tc@postech.ac.kr",
@@ -140,7 +217,7 @@
       "section": "Full Paper",
       "token_count": 13984,
       "extraction_success": true,
-      "processing_time": 245.23319101333618,
+      "processing_time": 291.7094166278839,
       "extracted_count": 3
     }
   ]

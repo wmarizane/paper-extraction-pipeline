@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:rtx_6000:2
-#SBATCH --time=04:00:00
+#SBATCH --time=08:00:00
 #SBATCH --output=logs/output_%x-%j.log
 #SBATCH --error=logs/error_%x-%j.log
 
@@ -21,6 +21,9 @@ PROJECT_DIR="/project/wkmrzane/research-assistant/paper-extraction-pipeline"
 cd "$PROJECT_DIR" || exit 1
 
 export PYTHONPATH=.
+# Unbuffered stdout so per-paper progress is visible live in the .log (a killed
+# job otherwise loses its entire buffered progress trail — see job 151555).
+export PYTHONUNBUFFERED=1
 
 # Library paths
 export LD_LIBRARY_PATH=/project/wkmrzane/miniconda3/envs/research-assistant/lib:$LD_LIBRARY_PATH

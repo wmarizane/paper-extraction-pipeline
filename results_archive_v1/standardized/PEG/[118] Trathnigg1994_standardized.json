@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "source_pdf": "[118] Trathnigg1994",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.067159Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene glycol (PEG)",
+        "critical_component": "polyoxyethylene chain",
+        "architecture": "linear",
+        "critical_condition_basis": "All PEGs eluted at the same elution volume",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ODS2",
+        "stationary_phase_chemistry": "octadecyl silica (ODS)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "density and refractive index",
+        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution Volume from an ODS2 column in methanol–water (80:20) as a mobile phase.",
+        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols (FAEs).",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, Graz, Austria",
+        "publication_year": 1994,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "w/w",
+        "mobile_phase_ratio_raw": "80:20",
+        "mobile_phase_ratio_components": [
+          80.0,
+          20.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "polyethylene glycol",
+        "critical_component": "polyethylene glycol",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume",
+        "critical_condition_confidence": "explicit",
+        "column_name": "ODS2",
+        "stationary_phase_chemistry": "octadecylsilane",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "0.5 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "density and refractive index",
+        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution volume from an ODS2 column with methanol–water (80:20) as a mobile phase.",
+        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols (FAEs).",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Organic Chemistry, University of Graz, Graz, Austria",
+        "publication_year": 1994,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "80:20",
+        "mobile_phase_ratio_components": [
+          80.0,
+          20.0
+        ],
+        "flow_rate_raw": "0.5 ml/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[212] Cleaver2015.pdf",
-    "extraction_date": "2026-06-08T00:10:35.221314",
+    "extraction_date": "2026-07-19T12:51:15.488034",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:51:15.478290+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[212] Cleaver2015.md",
+        "sha256": "eff824f6e99423a3b9c184403dd9500094f53e1cf49e366ff84968aa8f4a6bd9",
+        "char_len": 10642,
+        "token_count": 2815
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[212] Cleaver2015.pdf",
-      "start_time": "2026-06-08T00:10:07.440122",
+      "start_time": "2026-07-19T12:50:28.811768",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 6.85425066947937,
+          "time_seconds": 6.2156102657318115,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12698578834533691,
+          "time_seconds": 0.10004544258117676,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 2815
         },
         "llm_extraction": {
-          "time_seconds": 20.79979968070984,
+          "time_seconds": 40.30749034881592,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43078"
+      }
     }
   },
   "summary": {
@@ -35,18 +81,19 @@
     "conditions": [
       {
         "analyte_polymer": "polyethylene glycol",
-        "critical_component": "PEG",
+        "critical_component": "polyethylene glycol",
         "architecture": "null",
-        "critical_condition_basis": "critical point",
+        "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
         "critical_condition_confidence": "explicit",
         "column_name": "PLRP-S",
         "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
+          "Acetonitrile",
+          "Water"
         ],
-        "mobile_phase_ratio": "49% ACN",
-        "mobile_phase_ratio_units": "%",
+        "mobile_phase_ratio": "49% Acetonitrile in Water",
+        "mobile_phase_ratio_units": "null",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": false,
@@ -58,7 +105,16 @@
         "pore_size": "100Å",
         "column_dimensions": "150 x 4.6 mm",
         "detector": "Agilent ELSD",
-        "evidence_text": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+          "critical_component": "Critical point conditions for PEG were established by analyzing a series of PEG narrow standards of different molecular weights using different isocratic combinations of acetonitrile and water.",
+          "column_name": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "mobile_phase_solvents": "Eluent: 49% Acetonitrile in Water",
+          "mobile_phase_ratio": "Eluent: 49% Acetonitrile in Water",
+          "temperature_celsius": "null",
+          "pore_size": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
         "notes": "null",
         "paper_doi": "null",
         "corresponding_author_name": "null",
@@ -70,17 +126,18 @@
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "polystyrene",
         "architecture": "null",
-        "critical_condition_basis": "critical point",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
         "critical_condition_confidence": "explicit",
         "column_name": "PLRP-S",
         "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "polystyrene",
-          "acetonitrile",
+          "Polystyrene",
+          "Acetonitrile",
           "THF"
         ],
-        "mobile_phase_ratio": "47% ACN",
-        "mobile_phase_ratio_units": "%",
+        "mobile_phase_ratio": "Polystyrene - 47% ACN in THF",
+        "mobile_phase_ratio_units": "null",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": false,
@@ -92,7 +149,16 @@
         "pore_size": "100Å",
         "column_dimensions": "150 x 4.6 mm",
         "detector": "Agilent ELSD",
-        "evidence_text": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "critical_component": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "column_name": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "mobile_phase_solvents": "Eluent: Polystyrene - 47% ACN in THF",
+          "mobile_phase_ratio": "Eluent: Polystyrene - 47% ACN in THF",
+          "temperature_celsius": "null",
+          "pore_size": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
         "notes": "null",
         "paper_doi": "null",
         "corresponding_author_name": "null",
@@ -104,17 +170,19 @@
         "analyte_polymer": "poly(styrene-b-methyl methacrylate)",
         "critical_component": "polymethyl methacrylate",
         "architecture": "null",
-        "critical_condition_basis": "critical point",
+        "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
         "critical_condition_confidence": "explicit",
         "column_name": "PLRP-S",
         "stationary_phase_chemistry": "null",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "acetonitrile",
-          "water",
+          "Polymethylmethacrylate",
+          "Acetonitrile",
+          "Water",
           "THF"
         ],
-        "mobile_phase_ratio": "17% ACN, 17% Water, 66% THF",
-        "mobile_phase_ratio_units": "%",
+        "mobile_phase_ratio": "Polymethylmethacrylate - 17% ACN, 17% Water, 66% THF",
+        "mobile_phase_ratio_units": "null",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": false,
@@ -126,7 +194,16 @@
         "pore_size": "100Å",
         "column_dimensions": "150 x 4.6 mm",
         "detector": "Agilent ELSD",
-        "evidence_text": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "critical_component": "Critical conditions were established for both polystyrene and polymethyl methacrylate by running narrow standards of varying molecular weight using different isocratic mixtures of solvents.",
+          "column_name": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "mobile_phase_solvents": "Eluent: Polymethylmethacrylate - 17% ACN, 17% Water, 66% THF",
+          "mobile_phase_ratio": "Eluent: Polymethylmethacrylate - 17% ACN, 17% Water, 66% THF",
+          "temperature_celsius": "null",
+          "pore_size": "Column: PLRP-S 100Å 5 �m, 150 x 4.6 mm (p/n PL1111-3500)",
+          "flow_rate": "Flow Rate: 1.0 mL/min"
+        },
         "notes": "null",
         "paper_doi": "null",
         "corresponding_author_name": "null",
@@ -142,7 +219,7 @@
       "section": "Full Paper",
       "token_count": 2815,
       "extraction_success": true,
-      "processing_time": 20.793651819229126,
+      "processing_time": 40.186941146850586,
       "extracted_count": 3
     }
   ]

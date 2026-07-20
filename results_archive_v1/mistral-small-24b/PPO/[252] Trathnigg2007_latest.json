@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[252] Trathnigg2007.pdf",
+    "extraction_date": "2026-06-14T09:31:03.461734",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[252] Trathnigg2007.pdf",
+      "start_time": "2026-06-14T09:30:33.096849",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 20.144365549087524,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.16254520416259766,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 5452
+        },
+        "llm_extraction": {
+          "time_seconds": 10.057783603668213,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polypropylene glycol",
+        "critical_component": "polypropylene glycol",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Prodigy ODS3",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "85 wt.% THF",
+        "mobile_phase_ratio_units": "wt.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": null,
+        "pore_size": "100 A",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": null,
+        "evidence_text": "In this case, the repeat unit was the ethylene group.",
+        "notes": null,
+        "paper_doi": "10.1016/j.aca.2007.06.043",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2007"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 5452,
+      "extraction_success": true,
+      "processing_time": 10.047889709472656,
+      "extracted_count": 1
+    }
+  ]
+}

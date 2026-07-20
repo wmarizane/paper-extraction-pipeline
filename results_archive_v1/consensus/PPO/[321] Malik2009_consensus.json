@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "source_pdf": "[321] Malik2009.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "84.55",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "notes": "Used to separate block copolymers from homopolymers.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "evidence_text": "a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6)",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(butene oxide)",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "w/w THF",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(butene oxide)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "flow_rate": "0.5 ml/min",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "87.04",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "notes": "Used to separate block copolymers from homopolymers.",
+        "publication_year": "2009",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "evidence_text": "for HO on the same column in 87.04%, w/w THF (Fig. 7)",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "500 \u00c5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "poly(hexene oxide)",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "% w/w",
+        "column_mode": "Reversed Phase",
+        "critical_component": "poly(hexene oxide)",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 1100",
+        "critical_component": "EO block",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "CAP for EO on normal phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.93",
+        "mobile_phase_ratio_units": "w/w acetone",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 \u00c5",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "at the CAP for block A (in this case EO) on a normal phase column (NucleoSil 100-5 OH) in an acetone\u2013water mobile phase (78%, w/w acetone) the initiator (PEG-MME) elutes close to the void volume",
+        "notes": "Text mentions 78% in discussion and 77.93% in Fig 4 caption. Extracted specific value from caption.",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 350-PO-BO",
+        "critical_component": "BO block",
+        "architecture": "triblock copolymer",
+        "critical_condition_basis": "CAP for BO on reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "84.55",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "at the CAP for BO, the first block (PEG-MME) and possible diblocks (PEG-MME\u2013PO and PEG-MME\u2013BO) are well separated from the BO homopolymer",
+        "notes": "Analysis of triblock at CAP for the third block (BO).",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEG-MME 350-PO-BO-HO",
+        "critical_component": "HO block",
+        "architecture": "tetrablock copolymer",
+        "critical_condition_basis": "CAP for HO on reversed phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "87.04",
+        "mobile_phase_ratio_units": "w/w THF",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 \u00c5",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "at the CAP for HO, all other structures elute in SEC mode and are thus clearly separated from the HO homopolymer",
+        "notes": "Analysis of tetrablock at CAP for the fourth block (HO).",
+        "paper_doi": "10.1016/j.chroma.2008.12.067",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      }
+    ]
+  }
+}

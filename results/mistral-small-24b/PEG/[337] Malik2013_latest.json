@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[337] Malik2013.pdf",
-    "extraction_date": "2026-06-08T01:19:50.651220",
+    "extraction_date": "2026-07-19T13:59:02.837263",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:59:02.826178+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[337] Malik2013.md",
+        "sha256": "f76ed97dc53c3f2425c33d55615f67bb46149a9d7c830d26b73d541dbc5c37e0",
+        "char_len": 37350,
+        "token_count": 10346
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[337] Malik2013.pdf",
-      "start_time": "2026-06-08T01:14:25.220512",
+      "start_time": "2026-07-19T13:57:13.498317",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 67.18719387054443,
+          "time_seconds": 68.31839990615845,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10573244094848633,
+          "time_seconds": 0.10736370086669922,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10346
         },
         "llm_extraction": {
-          "time_seconds": 258.1376152038574,
+          "time_seconds": 40.85989785194397,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -35,18 +81,19 @@
     "conditions": [
       {
         "analyte_polymer": "CL-DEG-CL",
-        "critical_component": "EO",
+        "critical_component": "DEG",
         "architecture": "triblock",
         "critical_condition_basis": "critical adsorption point",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
         ],
-        "mobile_phase_ratio": "82",
-        "mobile_phase_ratio_units": "vol.%",
+        "mobile_phase_ratio": "82%",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -54,79 +101,111 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": null,
-        "pore_size": null,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
         "column_dimensions": "250 mm × 4.6 mm",
         "detector": null,
-        "evidence_text": "Under such conditions, two series of peaks are observed for the different PCL diols (Fig. 2): the elution volume of the individual peaks shows only a weak dependence on the length of the EO block (which is, of course, very short).",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2013.09.023",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "m.imran.malik1@gmail.com",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "publication_year": "2013"
-      },
-      {
-        "analyte_polymer": "CL-DEG-CL",
-        "critical_component": "EO",
-        "architecture": "triblock",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.1",
-        "mobile_phase_ratio_units": "wt.%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 25[◦] C in a methanol–water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol–water",
+          "mobile_phase_ratio": "82 vol.% methanol",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
         },
-        "temperature_celsius": "25",
-        "flow_rate": "2.0 mL/min",
-        "pore_size": "80 A",
-        "column_dimensions": "25 mm × 300 mm",
-        "detector": "density detection system DDS70 combined with a SICON LCD 201 RI detector",
-        "evidence_text": "On a semipreparative ODS column, we have fractionated PCL diol 830 and observed two series of peaks, one of which is sharp, while the other one is rather broad (Fig. 3).",
         "notes": null,
-        "paper_doi": "10.1016/j.chroma.2013.09.023",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "m.imran.malik1@gmail.com",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "paper_doi": null,
+        "corresponding_author_name": "Muhammad Imran Malik; Hasnat Ahmed",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan; NAWI Graz, Central Polymer Laboratories (CePoL), Heinrichstrasse 28 and Stremayrgasse 16, A-8010 Graz, Austria; Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
         "publication_year": "2013"
       },
       {
         "analyte_polymer": "BO-DEG-BO",
-        "critical_component": "PEG",
+        "critical_component": "DEG",
         "architecture": "triblock",
         "critical_condition_basis": "critical adsorption point",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "70%",
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm × 4.6 mm",
         "detector": null,
-        "evidence_text": "With uniform PEG block, there is more freedom in selection of mobile phase composition (no real need of CAP of PEG) in the analysis of BO blocks.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 25[◦] C in a methanol–water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "methanol–water",
+          "mobile_phase_ratio": "70% methanol",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
-        "paper_doi": "10.1016/j.chroma.2013.09.023",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "m.imran.malik1@gmail.com",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "paper_doi": null,
+        "corresponding_author_name": "Muhammad Imran Malik; Hasnat Ahmed",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan; NAWI Graz, Central Polymer Laboratories (CePoL), Heinrichstrasse 28 and Stremayrgasse 16, A-8010 Graz, Austria; Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2013"
+      },
+      {
+        "analyte_polymer": "CL-DEG-CL",
+        "critical_component": "DEG",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "55%",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 mm × 4.6 mm",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 25[◦] C in a methanol–water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP column",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "55% acetone",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Muhammad Imran Malik; Hasnat Ahmed",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan; NAWI Graz, Central Polymer Laboratories (CePoL), Heinrichstrasse 28 and Stremayrgasse 16, A-8010 Graz, Austria; Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
         "publication_year": "2013"
       }
     ]
@@ -137,7 +216,7 @@
       "section": "Full Paper",
       "token_count": 10346,
       "extraction_success": true,
-      "processing_time": 26.32473063468933,
+      "processing_time": 40.750465869903564,
       "extracted_count": 3
     }
   ]

@@ -26,7 +26,18 @@ explanation.md
 CLUSTER_GUIDE.md
 .DS_Store
 venv/
+CLAUDE.md
+HANDOFF.md
+TASKS.md
+dashboard.html
+memory/
 
-# Ignored results
+# Results JSONs: ignore only the per-run timestamped extraction archives
+# (*_extracted_<timestamp>.json). The canonical per-model _latest.json and the
+# final *_consensus.json ARE tracked — they are provenance for the dataset.
 results/**/*.json
 results/**/**/*.json
+!results/**/*_latest.json
+!results/consensus/**/*.json
+logs/*.jsonl
+logs/*.csv

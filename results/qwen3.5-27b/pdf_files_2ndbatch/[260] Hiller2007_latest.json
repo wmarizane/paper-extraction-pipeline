@@ -1,46 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[260] Hiller2007.pdf",
-    "extraction_date": "2026-06-07T22:27:44.823755",
+    "extraction_date": "2026-07-19T05:30:13.584610",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:30:13.574282+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[260] Hiller2007.md",
+        "sha256": "12da4eed02609f2445f9f4f31d0e4cb1deeea499724bd5412df3d4f0b57264f3",
+        "char_len": 34548,
+        "token_count": 10425
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[260] Hiller2007.pdf",
-      "start_time": "2026-06-07T22:25:14.406473",
+      "start_time": "2026-07-19T05:25:46.190137",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.35150957107544,
+          "time_seconds": 59.683626651763916,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12419891357421875,
+          "time_seconds": 0.11869120597839355,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10425
         },
         "llm_extraction": {
-          "time_seconds": 90.9414575099945,
+          "time_seconds": 207.52856826782227,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PS-b-PMMA, PS, PMMA",
+        "analyte_polymer": "PS-b-PMMA",
         "critical_component": "PS",
         "architecture": "block copolymer",
-        "critical_condition_basis": "critical point of adsorption of PS",
+        "critical_condition_basis": "critical conditions of PS",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18 300-5 and 1000-7",
-        "stationary_phase_chemistry": "C18 (reversed-phase)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "ACN"
@@ -55,11 +103,63 @@
         },
         "temperature_celsius": "22",
         "flow_rate": "0.5 mL min-1",
-        "pore_size": null,
+        "pore_size": "300-5 and 1000-7",
         "column_dimensions": "250 x 4 mm",
-        "detector": "UV, 1H NMR",
-        "evidence_text": "The critical conditions correspond to a mobile phase composition of THF–ACN of 48:52 v/v... stationary phase: RP-18 Nucleosil 300 þ 1000; mobile phase THF/ACN 48:52 v/v; flow rate 0.5 mL min 1... at the critical point of adsorption of PS",
-        "notes": "PMMA elutes in SEC mode while PS is at critical conditions.",
+        "detector": "UV detector; 400 MHz NMR",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC-NMR at critical conditions of PS",
+          "critical_component": "critical point of adsorption of PS",
+          "column_name": "Macherey-Nagel Nucleosil C18 300-5 and 1000-7",
+          "mobile_phase_solvents": "Normal HPLC grade ACN and THF",
+          "mobile_phase_ratio": "THF–ACN of 48:52 v/v",
+          "temperature_celsius": "ambient temperature (22 8C)",
+          "pore_size": "Nucleosil C18 300-5 and 1000-7",
+          "flow_rate": "flow rate of 0.5 mL min 1"
+        },
+        "notes": "PS is chromatographically invisible; PMMA elutes in SEC mode.",
+        "paper_doi": "10.1002/macp.200700166",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
+        "physical_address": "German Institute for Polymers, Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "homopolymer",
+        "critical_condition_basis": "critical conditions of PS",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18 300-5 and 1000-7",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "48:52",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "22",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "300-5 and 1000-7",
+        "column_dimensions": "250 x 4 mm",
+        "detector": "UV detector; 400 MHz NMR",
+        "field_evidence": {
+          "critical_condition_basis": "critical point of adsorption of PS",
+          "critical_component": "critical conditions of PS",
+          "column_name": "Macherey-Nagel Nucleosil C18 300-5 and 1000-7",
+          "mobile_phase_solvents": "Normal HPLC grade ACN and THF",
+          "mobile_phase_ratio": "THF–ACN of 48:52 v/v",
+          "temperature_celsius": "ambient temperature (22 8C)",
+          "pore_size": "Nucleosil C18 300-5 and 1000-7",
+          "flow_rate": "flow rate of 0.5 mL min 1"
+        },
+        "notes": "Used for separation of blends and as the critical component for block copolymers.",
         "paper_doi": "10.1002/macp.200700166",
         "corresponding_author_name": "Wolf Hiller",
         "corresponding_email_address": "whiller@dki.tu-darmstadt.de",
@@ -74,8 +174,8 @@
       "section": "Full Paper",
       "token_count": 10425,
       "extraction_success": true,
-      "processing_time": 90.91826939582825,
-      "extracted_count": 1
+      "processing_time": 207.47490549087524,
+      "extracted_count": 2
     }
   ]
 }

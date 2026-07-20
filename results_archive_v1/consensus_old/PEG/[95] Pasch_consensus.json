@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[95] Pasch.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, W-6100 Darmstadt, Germany",
+        "evidence_text": "The disappearance of the molar mass dependence of the retention time, corresponding to the critical conditions, was achieved at a composition of the mobile phase of acetonitrile\u2014water (43:57, v/v); see Fig. 1.",
+        "detector": "refractive index",
+        "pore_size": null,
+        "critical_component": "polyethylene oxide block",
+        "publication_year": "1992",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "43:57",
+        "critical_condition_basis": "disappearance of molar mass dependence of retention time",
+        "column_name": "Nucleosil 5C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "block copolymer",
+        "analyte_polymer": "polyethylene oxide (PEO)",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 4 mm",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": null,
+        "corresponding_author_name": "Dr. H. Pasch",
+        "notes": "Condition established using PEO calibration standards on a Macherey-Nagel 5C18 column. Used to separate a triblock polymer HO(EO)n(PO)m(EO)nOH based on the PPO block length.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

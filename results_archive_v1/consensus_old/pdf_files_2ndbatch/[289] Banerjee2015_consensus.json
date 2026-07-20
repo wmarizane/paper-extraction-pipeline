@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[289] Banerjee2015.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "methanol"
+        ],
+        "physical_address": "Polymer Science Program, Department of Chemistry, University of Massachusetts Lowell, One University Avenue, Lowell, Massachusetts 01854, USA",
+        "evidence_text": "The critical solvent composition for PIB was established as THF/methanol 80.5/19.5 (w/w). ... According to Fig. 6 in THF/methanol 80.5/19.5 (w/w) PIB samples with identical chemical functionality eluted at the same position, independently of their MW.",
+        "detector": "RI detector (Waters 2414)",
+        "pore_size": "120 A",
+        "critical_component": "PIB backbone",
+        "publication_year": "2015",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "80.5/19.5",
+        "critical_condition_basis": "elution independent of MW for identical chemical functionality",
+        "column_name": "YMC HPLC COLUMN",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "w/w",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PIB-diol",
+        "corresponding_email_address": "Rudolf.Faust@uml.edu",
+        "column_dimensions": "4.6 mm \u00d7 250 mm",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "paper_doi": "10.1016/j.chroma.2014.12.022",
+        "corresponding_author_name": "Rudolf Faust",
+        "notes": "Used for determination of critical conditions.",
+        "flow_rate": "0.5 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

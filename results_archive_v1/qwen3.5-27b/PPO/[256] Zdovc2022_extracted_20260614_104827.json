@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "source_pdf": "[256] Zdovc2022.pdf",
+    "extraction_date": "2026-06-14T10:48:27.475487",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[256] Zdovc2022.pdf",
+      "start_time": "2026-06-14T10:29:32.590816",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 34.14497518539429,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.11879277229309082,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 14590
+        },
+        "llm_extraction": {
+          "time_seconds": 1100.6207835674286,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "P(POPA)",
+        "critical_component": "P(POPA)",
+        "architecture": "linear",
+        "critical_condition_basis": "co-elution of homopolymers with different molar masses",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV (283 nm) and ELS",
+        "evidence_text": "The critical conditions for the P(POPA) homopolymers were at 25 °C at the mobile phase composition of THF: ACN = 15.6:84.4 vol %. The P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %.",
+        "notes": "Used for LCCC analysis of copolymers where P(POPA) is the critical component.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      },
+      {
+        "analyte_polymer": "PPO-co-P(POPA) copolymers",
+        "critical_component": "P(POPA)",
+        "architecture": "gradient/block",
+        "critical_condition_basis": "critical conditions for P(POPA) constituent",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": null,
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV (283 nm) and ELS",
+        "evidence_text": "LCCC on the PS-DVB Reverse Stationary Phase... separation of the copolymers at critical conditions for P(POPA)... The critical conditions at which the P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %.",
+        "notes": "Analytical LCCC used to study microstructure influence; P(POPA) is at critical condition, separation governed by PPO molar mass and microstructure.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      },
+      {
+        "analyte_polymer": "PPO-co-P(POPA) copolymers",
+        "critical_component": "P(POPA)",
+        "architecture": "gradient/block",
+        "critical_condition_basis": "critical conditions for P(POPA) constituent",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.04 mL min-1",
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV (283 nm), MALS, RI",
+        "evidence_text": "LCCC Coupled with a Multidetection System (UVMALS-RI). Isocratic LCCC/UV-MALS-RI experiments under critical conditions for the P(POPA) were performed under the same conditions as LCCC... The composition of the mobile phase (v/v %) in the first dimension was THF/ACN = 15.6:84.4 vol % and the flow rate was set to 0.04 mL min-1. The experiments were run at 25 °C",
+        "notes": "LCCC coupled with multidetection (UV-MALS-RI) for molar mass determination as a function of elution volume.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      },
+      {
+        "analyte_polymer": "PPO-co-P(POPA) copolymers",
+        "critical_component": "P(POPA)",
+        "architecture": "gradient/block",
+        "critical_condition_basis": "critical conditions for P(POPA) constituent",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PLRP-S",
+        "stationary_phase_chemistry": "polystyrene-divinylbenzene (PS-DVB)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "ACN"
+        ],
+        "mobile_phase_ratio": "15.6:84.4",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.04 mL min-1",
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm × 150 mm",
+        "detector": "UV (283 nm), ELS",
+        "evidence_text": "Two-Dimensional Liquid Chromatography (LCCC × SEC 2D-LC). The column used in the first LCCC dimension was PS-DVB... The composition of the mobile phase (v/v %) in the first dimension was THF/ACN = 15.6:84.4 vol % and the flow rate was set to 0.04 mL min-1. The experiments were run at 25 °C",
+        "notes": "First dimension of 2D-LC (LCCC x SEC) used for analytical characterization of microstructure and molar mass distribution.",
+        "paper_doi": "10.1021/acs.analchem.2c00193",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
+        "publication_year": "2022"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 14590,
+      "extraction_success": true,
+      "processing_time": 402.6136577129364,
+      "extracted_count": 4
+    }
+  ]
+}

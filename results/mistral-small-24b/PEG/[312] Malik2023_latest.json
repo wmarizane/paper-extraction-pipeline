@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[312] Malik2023.pdf",
-    "extraction_date": "2026-06-08T01:03:43.391213",
+    "extraction_date": "2026-07-19T13:45:37.012233",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:45:37.001680+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[312] Malik2023.md",
+        "sha256": "ae736af3a6d284a34dee81c4de9d068f1646bbbbb048f0724a8db6f43eb45c5f",
+        "char_len": 40585,
+        "token_count": 11885
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[312] Malik2023.pdf",
-      "start_time": "2026-06-08T01:02:23.744962",
+      "start_time": "2026-07-19T13:44:10.385103",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 56.02611303329468,
+          "time_seconds": 56.0157732963562,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1202547550201416,
+          "time_seconds": 0.10822772979736328,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11885
         },
         "llm_extraction": {
-          "time_seconds": 23.49971914291382,
+          "time_seconds": 30.442720413208008,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -41,6 +87,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "ACN",
           "THF",
@@ -55,15 +102,24 @@
           "salt_concentration": null
         },
         "temperature_celsius": "30",
-        "flow_rate": "0.5 mL min−1",
+        "flow_rate": "0.5",
         "pore_size": "70 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In a MP composition of ACN/THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "The approach requires establishment of chromatographic critical point (CCP) of each block that allows exclusion of the noncritical block.",
+          "critical_component": "PCL",
+          "column_name": "ZORBAX ODS, pore size 70 Å, particle size 5 mm, and column dimensions 250 × 4.6 mm (Phenomenex, USA).",
+          "mobile_phase_solvents": "ACN/THF/TEA",
+          "mobile_phase_ratio": "82/17/01 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "pore size 70 Å",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       },
@@ -75,6 +131,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
         "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -88,15 +145,24 @@
           "salt_concentration": null
         },
         "temperature_celsius": "30",
-        "flow_rate": "0.5 mL min−1",
+        "flow_rate": "0.5",
         "pore_size": "120 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In between these two opposing elution orders, there is a point at 68% acetone where P(Ep-TEGMME) of a molar mass range 500–3000 eluted at the same elution volume irrespective of its molar mass. This is the CCP of P(Ep-TEGMME) under current conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "The approach requires establishment of chromatographic critical point (CCP) of each block that allows exclusion of the noncritical block.",
+          "critical_component": "P(Ep-TEGMME)",
+          "column_name": "Ultisil diol column, pore size 120 Å, particle size 5 mm, and column dimensions 250 × 4.6 mm (Welch, China).",
+          "mobile_phase_solvents": "acetone/water",
+          "mobile_phase_ratio": "68/32 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "pore size 120 Å",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min[−][1]"
+        },
         "notes": null,
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       }
@@ -108,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 11885,
       "extraction_success": true,
-      "processing_time": 23.48502016067505,
+      "processing_time": 30.33357310295105,
       "extracted_count": 2
     }
   ]

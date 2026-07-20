@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "source_pdf": "[373] Trathnigg2010.pdf",
+    "extraction_date": "2026-06-14T16:46:57.101367",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[373] Trathnigg2010.pdf",
+      "start_time": "2026-06-14T16:39:33.100515",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 14.809360265731812,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.18399262428283691,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7283
+        },
+        "llm_extraction": {
+          "time_seconds": 429.0073845386505,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 5
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "Silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone – water",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water, which corresponds to the CAP for PEG.",
+        "notes": "Used as the second dimension in comprehensive LC and off-line 2D-LC for fatty acid ethoxylates and polysorbates.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Fatty acid ethoxylates",
+        "critical_component": "PEG block",
+        "architecture": "diblock (fatty acid-PEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "Silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone – water",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water, which corresponds to the CAP for PEG.",
+        "notes": "Used as the second dimension in comprehensive LC and off-line 2D-LC. The PEG block is at CAP while the fatty acid block elutes in SEC mode.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Polysorbates (Tween 40)",
+        "critical_component": "PEG block / Hydrophilic core",
+        "architecture": "star/branched (ethoxylated sorbitan/isosorbide)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "Silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone – water",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "Figure 7 shows a comprehensive separation of Tween 40... (conditions as in Figure 4). Figure 4 specifies second dimension: Onyx C18 monolith in 90 % acetone – water, 2.0 ml/min.",
+        "notes": "Used as the second dimension in comprehensive LC. The hydrophilic core (PEG/sorbitan) is at CAP.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "Polysorbates (Tween 60)",
+        "critical_component": "PEG block / Hydrophilic core",
+        "architecture": "star/branched (ethoxylated sorbitan/isosorbide)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "Silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone – water",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "Figure 8. Comprehesive separation of Tween 60. Conditions as in Figure 4.",
+        "notes": "Used as the second dimension in comprehensive LC. The hydrophilic core (PEG/sorbitan) is at CAP.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEG 400 monolaurate",
+        "critical_component": "PEG block",
+        "architecture": "diblock (fatty acid-PEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "Silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % acetone – water",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "column_dimensions": "100mm x 4.6mm",
+        "detector": "evaporative light scattering detector (ELSD)",
+        "evidence_text": "Figure 6. Separation of PEG 400 monolaurate. Left side: comprehensive LC (conditions as in Figure 4).",
+        "notes": "Used as the second dimension in comprehensive LC. The PEG block is at CAP.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": "2010"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7283,
+      "extraction_success": true,
+      "processing_time": 428.98505425453186,
+      "extracted_count": 5
+    }
+  ]
+}

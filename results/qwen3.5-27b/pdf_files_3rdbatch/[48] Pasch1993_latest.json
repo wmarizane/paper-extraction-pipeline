@@ -1,69 +1,85 @@
 {
   "metadata": {
     "source_pdf": "[48] Pasch1993.pdf",
-    "extraction_date": "2026-06-07T23:44:27.238056",
+    "extraction_date": "2026-07-19T15:42:56.038530",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:42:56.029307+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[48] Pasch1993.md",
+        "sha256": "1be92de513a18fb8a9a817715f2ea624281a5f0b3f9afcde79c5550deadc7787",
+        "char_len": 3124,
+        "token_count": 783
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[48] Pasch1993.pdf",
-      "start_time": "2026-06-07T23:42:40.036201",
+      "start_time": "2026-07-19T15:42:16.045838",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 36.73126411437988,
+          "time_seconds": 35.873873472213745,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1138601303100586,
+          "time_seconds": 0.11336946487426758,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 783
         },
         "llm_extraction": {
-          "time_seconds": 70.35661721229553,
+          "time_seconds": 3.9523088932037354,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "43204"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "block copolymers of decyl and methyl methacrylate",
-        "critical_component": "poly(methyl methacrylate)",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "chromatographic conditions resulting in a critical mode for poly(methyl methacrylate)",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": null,
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "Block copolymers of decyl and methyl methacrylate were analyzed by liquid chromatography at the critical point of adsorption. The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
-        "notes": "Specific mobile phase composition and column details are not provided in the summary or introduction text.",
-        "paper_doi": null,
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": null,
-        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "1993"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
@@ -71,8 +87,8 @@
       "section": "Full Paper",
       "token_count": 783,
       "extraction_success": true,
-      "processing_time": 70.33384919166565,
-      "extracted_count": 1
+      "processing_time": 3.8953237533569336,
+      "extracted_count": 0
     }
   ]
 }

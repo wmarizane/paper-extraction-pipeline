@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "source_pdf": "[312] Malik2023.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "THF",
+          "Triethylamine"
+        ],
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions. Under these conditions, P(EpTEGMME) eluted in order of decreasing molar mass earlier than the void volume of the column",
+        "detector": "ELSD",
+        "pore_size": "70 \u00c5",
+        "critical_component": "PCL",
+        "publication_year": "2023",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "82/17/01",
+        "critical_condition_basis": "chromatographic critical point",
+        "column_name": "ZORBAX ODS",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "V%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PCL",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1039/d3ra05912j",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "1% TEA added to avoid polar interactions with free silanols. Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers.",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "Acetone",
+          "Water"
+        ],
+        "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "In between these two opposing elution orders, there is a point at 68% acetone where P(Ep-TEGMME) of a molar mass range 500\u20133000 eluted at the same elution volume irrespective of its molar mass. This is the CCP of P(Ep-TEGMME) under current conditions.",
+        "detector": "ELS",
+        "pore_size": "120 \u00c5",
+        "critical_component": "P(Ep-TEGMME)",
+        "publication_year": "2023",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "68/32",
+        "critical_condition_basis": "chromatographic critical point",
+        "column_name": "Ultisil diol",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "V%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "P(Ep-TEGMME)",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "stationary_phase_chemistry": "diol",
+        "paper_doi": "10.1039/d3ra05912j",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers to determine PCL block length and free macroinitiator content.",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

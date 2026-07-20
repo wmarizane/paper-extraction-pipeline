@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[148] Wachsen.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "oligo-L-lactide",
+        "critical_component": "poly-L-lactide",
+        "architecture": "linear",
+        "critical_condition_basis": "mixture of 60vol.% dioxane and 40vol.% n-hexane",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-S",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": "300",
+        "column_dimensions": "250mm x 4mm ID",
+        "detector": "Diode-Array-Detector (UVD 3205) and UV-detector (SPD-10A)",
+        "evidence_text": "The 'critical' conditions for poly-1-lactide were realised by a mixture of 60vol.% dioxane and 40vol.% n-hexane which was used as solvent and mobile phase. The column was thermostated at 30\u00b0C.",
+        "notes": "LACCC analysis performed on oligo-L-lactide using critical conditions established for poly-L-lactide.",
+        "paper_doi": null,
+        "corresponding_author_name": "K. H. Reichert",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": "1997",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "oligo-L-lactide",
+        "critical_component": "oligo-L-lactide",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of polymer adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 300-S",
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
+        "mobile_phase_solvents": [
+          "dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "vol.%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250mm 4mm ID",
+        "detector": "Diode-Array-Detector",
+        "evidence_text": "The 'critical' conditions for poly-1-lactide were realised by a mixture of 60vol.% dioxane and 40vol.% n-hexane which was used as solvent and mobile phase. A Nucleosil 300-S column (250mm 4mm ID, Macharey-Nagel, Diuren, Germany) was used. The column was thermostated at 30\u00b0C.",
+        "notes": "LACCC analysis performed on oligo-L-lactide using critical conditions established for poly-L-lactide.",
+        "paper_doi": null,
+        "corresponding_author_name": "O. Wachsen; K. H. Reichert",
+        "corresponding_email_address": null,
+        "physical_address": "Technical University of Berlin, Institute of Technical Chemistry, Sekr. TC 3, Str. d. 17. Juni 135, D-10623 Berlin, Germany; Institute of Applied Chemistry, Berlin-Adlershof e. V. (ACA), Rudower Chaussee 5, D-12484 Berlin, Germany",
+        "publication_year": "1997",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

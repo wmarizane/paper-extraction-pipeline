@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[127] Esser2001.pdf",
-    "extraction_date": "2026-06-07T22:33:20.625975",
+    "extraction_date": "2026-07-19T13:53:58.849449",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:53:58.836423+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[127] Esser2001.md",
+        "sha256": "ccb05460f97832f75d525ffffa688b4647ee2582c186f10fe42c628d03ee665d",
+        "char_len": 19369,
+        "token_count": 5493
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[127] Esser2001.pdf",
-      "start_time": "2026-06-07T22:31:28.282443",
+      "start_time": "2026-07-19T13:51:54.148278",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 26.756556272506714,
+          "time_seconds": 26.35272526741028,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1886272430419922,
+          "time_seconds": 0.11743307113647461,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5493
         },
         "llm_extraction": {
-          "time_seconds": 85.39823579788208,
+          "time_seconds": 98.17420148849487,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44422"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "poly(propylene oxide)",
         "critical_component": "poly(propylene glycol)",
         "architecture": "linear",
-        "critical_condition_basis": "eluent composition determined by running PPGs with different molar masses in binary eluents",
+        "critical_condition_basis": "critical point of adsorption for PPG",
         "critical_condition_confidence": "explicit",
         "column_name": "Macherey Nagel Nucleosil 5 NH2",
-        "stationary_phase_chemistry": "NH2 (Amino)",
+        "stationary_phase_chemistry": "NH2",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "hexane",
           "isopropyl alcohol"
@@ -58,8 +106,17 @@
         "pore_size": null,
         "column_dimensions": "200 x 4 mm i.d.",
         "detector": "refractive index detector",
-        "evidence_text": "In the present case, the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%. The functionality type separation of sample 1 under these conditions is shown in Figure 6.",
-        "notes": "The critical condition was established using PPG (poly(propylene glycol)) to analyze PPO-triols. The text states LC-CC separates functionally heterogeneous samples with regard to their functional groups irrespective of the molar mass.",
+        "field_evidence": {
+          "critical_condition_basis": "the critical point of adsorption for PPG is obtained at an eluent composition of hexane/isopropyl alcohol 92:8 vol.-%",
+          "critical_component": "critical point of adsorption for PPG",
+          "column_name": "The column for the LC-CC was Macherey Nagel Nucleosil 5 NH2",
+          "mobile_phase_solvents": "mobile phase of hexane/isopropyl alcohol",
+          "mobile_phase_ratio": "hexane/isopropyl alcohol 92:8 vol.-%",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "The flow rate is 0.5 mL/min"
+        },
+        "notes": "Critical condition established using PPG (diol) to analyze PPO-triol functionality distribution.",
         "paper_doi": null,
         "corresponding_author_name": "H. Pasch",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 5493,
       "extraction_success": true,
-      "processing_time": 85.37500238418579,
+      "processing_time": 98.1176552772522,
       "extracted_count": 1
     }
   ]

@@ -1,35 +1,82 @@
 {
   "metadata": {
     "source_pdf": "[374] Ahmed2010.pdf",
-    "extraction_date": "2026-06-08T04:35:33.362971",
+    "extraction_date": "2026-07-19T21:37:00.416861",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T21:37:00.403663+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[374] Ahmed2010.md",
+        "sha256": "fe6bd748c89525a1d8f9802a33fb3d66b2e3f5264b689407cd8f918dd6d5516f",
+        "char_len": 26669,
+        "token_count": 7968
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[374] Ahmed2010.pdf",
-      "start_time": "2026-06-08T04:33:59.255195",
+      "start_time": "2026-07-19T21:33:37.451902",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 8.702420949935913,
+          "time_seconds": 8.401515483856201,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12836456298828125,
+          "time_seconds": 0.10857582092285156,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7968
         },
         "llm_extraction": {
-          "time_seconds": 85.27689504623413,
+          "time_seconds": 194.40239310264587,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
@@ -37,10 +84,11 @@
         "analyte_polymer": "PEG",
         "critical_component": "EO",
         "architecture": "linear",
-        "critical_condition_basis": "Critical point of adsorption (CAP) for EO",
+        "critical_condition_basis": "LC at critical conditions (LCCC)",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
         "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -58,8 +106,60 @@
         "pore_size": "80 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "A much better resolution could be achieved on the same column in 32 vol% acetone–water at the same temperature (Fig. 1). ... Both pumps were operated in the same mobile phase, which corresponds to the CAP for EO (32% acetone).",
-        "notes": "Used as the first dimension in 2-D LC for separation of PEG and PEG-MME based on end-group functionality.",
+        "field_evidence": {
+          "critical_condition_basis": "LC at critical conditions as the first and liquid adsorption chromatography as the second dimension",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "32 vol% acetone–water",
+          "mobile_phase_ratio": "32 vol% acetone",
+          "temperature_celsius": "251C",
+          "pore_size": "nominal pore size 5 80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used as the first dimension in 2-D LC. The text states '32% acetone' corresponds to the CAP for EO.",
+        "paper_doi": "10.1002/jssc.200900847",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "NAWI Graz, Central Polymer Laboratories (CePOL), Institute of Chemistry, KarlFranzens-University, Heinrichstrasse 28, Graz A-8010, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEG-MME",
+        "critical_component": "EO",
+        "architecture": "linear",
+        "critical_condition_basis": "LC at critical conditions (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Synergi Fusion RP",
+        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "32 vol% acetone",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "80 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LC at critical conditions as the first and liquid adsorption chromatography as the second dimension",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "32 vol% acetone–water",
+          "mobile_phase_ratio": "32 vol% acetone",
+          "temperature_celsius": "251C",
+          "pore_size": "nominal pore size 5 80 A",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": "Used as the first dimension in 2-D LC. The text states '32% acetone' corresponds to the CAP for EO. PEG-MME is separated from PEG based on end-group adsorption at this condition.",
         "paper_doi": "10.1002/jssc.200900847",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,8 +174,8 @@
       "section": "Full Paper",
       "token_count": 7968,
       "extraction_success": true,
-      "processing_time": 85.25523924827576,
-      "extracted_count": 1
+      "processing_time": 194.34978199005127,
+      "extracted_count": 2
     }
   ]
 }

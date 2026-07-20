@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "Im2008.pdf",
-    "extraction_date": "2026-06-07T23:40:09.090000",
+    "extraction_date": "2026-07-19T12:15:38.393256",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:15:38.382716+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/Im2008.md",
+        "sha256": "3ffb8535175c43fd8337a19a23f2056cb830920461c91e1c793af6784adb2ff4",
+        "char_len": 44302,
+        "token_count": 11859
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "Im2008.pdf",
-      "start_time": "2026-06-07T23:39:03.088944",
+      "start_time": "2026-07-19T12:14:17.181373",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 46.44674372673035,
+          "time_seconds": 47.25488877296448,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10385894775390625,
+          "time_seconds": 0.11415505409240723,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11859
         },
         "llm_extraction": {
-          "time_seconds": 19.450299978256226,
+          "time_seconds": 33.77138638496399,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -34,13 +80,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "polystyrene",
+        "analyte_polymer": "linear PS",
+        "critical_component": "linear PS",
         "architecture": "linear",
-        "critical_condition_basis": "coelution of linear PS standards",
+        "critical_condition_basis": "coelution of linear PS",
         "critical_condition_confidence": "explicit",
         "column_name": "Kromasil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -57,23 +104,33 @@
         "flow_rate": "0.5 mL/min",
         "pore_size": "100 Å",
         "column_dimensions": "150 × 4.6 mm",
-        "detector": "UV absorption detector",
-        "evidence_text": "The critical condition was found as 33.3 °C for the 100 Å pore column.",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition was found as 33.3 °C for the 100 Å pore column.",
+          "critical_component": "The critical condition was found as 33.3 °C for the 100 Å pore column.",
+          "column_name": "Column: Kromasil C18, 100 Å pore, 5 µm particle, 150 × 4.6 mm.",
+          "mobile_phase_solvents": "Eluent: CH2Cl2/CH3CN (57/43, v/v)",
+          "mobile_phase_ratio": "Eluent: CH2Cl2/CH3CN (57/43, v/v)",
+          "temperature_celsius": "Column temperature: 33.3 °C.",
+          "pore_size": "Column: Kromasil C18, 100 Å pore, 5 µm particle, 150 × 4.6 mm.",
+          "flow_rate": "Eluent: CH2Cl2/CH3CN (57/43, v/v) at a flow rate of 0.5 mL/min."
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Taihyun Chang",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea",
+        "corresponding_author_name": "Taihyun Chang; Yongmei Wang",
+        "corresponding_email_address": "tc@postech.ac.kr; ywang@memphis.edu",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea; Department of Chemistry, The University of Memphis, Memphis, Tennessee 38152",
         "publication_year": "2008"
       },
       {
-        "analyte_polymer": "polystyrene",
-        "critical_component": "polystyrene",
+        "analyte_polymer": "linear PS",
+        "critical_component": "linear PS",
         "architecture": "linear",
-        "critical_condition_basis": "coelution of linear PS standards",
+        "critical_condition_basis": "coelution of linear PS",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "CH2Cl2",
           "CH3CN"
@@ -90,13 +147,22 @@
         "flow_rate": "0.5 mL/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 × 4.6 mm",
-        "detector": "UV absorption detector",
-        "evidence_text": "The critical condition was found as 30.4 °C for the 500 Å pore column.",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition was found as 30.4 °C for the 500 Å pore column.",
+          "critical_component": "The critical condition was found as 30.4 °C for the 500 Å pore column.",
+          "column_name": "Column: Nucleosil C18, 500 Å pore, 7 µm particle, 250 × 4.6 mm i.d.",
+          "mobile_phase_solvents": "Eluent: CH2Cl2/CH3CN (57/43, v/v)",
+          "mobile_phase_ratio": "Eluent: CH2Cl2/CH3CN (57/43, v/v)",
+          "temperature_celsius": "Column temperature: 30.4 °C.",
+          "pore_size": "Column: Nucleosil C18, 500 Å pore, 7 µm particle, 250 × 4.6 mm i.d.",
+          "flow_rate": "Eluent: CH2Cl2/CH3CN (57/43, v/v) at a flow rate of 0.5 mL/min."
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Taihyun Chang",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea",
+        "corresponding_author_name": "Taihyun Chang; Yongmei Wang",
+        "corresponding_email_address": "tc@postech.ac.kr; ywang@memphis.edu",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang 790-784, Korea; Department of Chemistry, The University of Memphis, Memphis, Tennessee 38152",
         "publication_year": "2008"
       }
     ]
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 11859,
       "extraction_success": true,
-      "processing_time": 19.434367656707764,
+      "processing_time": 33.6530077457428,
       "extracted_count": 2
     }
   ]

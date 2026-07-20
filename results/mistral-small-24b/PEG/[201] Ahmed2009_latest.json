@@ -1,50 +1,97 @@
 {
   "metadata": {
     "source_pdf": "[201] Ahmed2009.pdf",
-    "extraction_date": "2026-06-08T00:09:30.130230",
+    "extraction_date": "2026-07-19T12:49:51.479076",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:49:51.469145+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[201] Ahmed2009.md",
+        "sha256": "94a723d96808d377b4ca23594ecbf2fc0f1a736e4f03c974dc6fb59d90288505",
+        "char_len": 40616,
+        "token_count": 11600
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[201] Ahmed2009.pdf",
-      "start_time": "2026-06-08T00:08:20.624216",
+      "start_time": "2026-07-19T12:48:57.934556",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 24.868523836135864,
+          "time_seconds": 25.60203242301941,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1029813289642334,
+          "time_seconds": 0.10258889198303223,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11600
         },
         "llm_extraction": {
-          "time_seconds": 44.53435206413269,
+          "time_seconds": 27.774186611175537,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
         "critical_component": "poly(ethylene glycol)",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "silica-based diol phase",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone"
         ],
-        "mobile_phase_ratio": "77.01",
+        "mobile_phase_ratio": "77.01 wt-%",
         "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
@@ -53,11 +100,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "0.5",
+        "flow_rate": "0.5 ml/min",
         "pore_size": "100 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "At the CAP for PEG on a normal phase column PPG elutes in SEC mode [26], and so does PCL. As can be seen in Fig. 3, PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP, while PCL elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column PPG elutes in SEC mode",
+          "critical_component": "At the CAP for EO on the NP column one can also expect CL to elute in SEC mode",
+          "column_name": "Nucleosil 100-5 OH column",
+          "mobile_phase_solvents": "acetone",
+          "mobile_phase_ratio": "77.01 wt-%",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "100 Å",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -68,16 +124,17 @@
       {
         "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
         "critical_component": "poly(e-caprolactone)",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "THF",
+          "tetrahydrofurane",
           "water"
         ],
-        "mobile_phase_ratio": "80.98",
+        "mobile_phase_ratio": "80.98 wt-%",
         "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
@@ -86,76 +143,20 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "0.5",
+        "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 5, this could be realized on the Jordi Gel DVB 500 RP column in THF water (with 80.98 wt-% THF). In such a mobile phase, PCL-MEs elute at 2.8 mL, regardless their degree of polymerization.",
-        "notes": null,
-        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Central Polymer Lab–Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "poly(ethylene glycol)",
-        "critical_component": "poly(ethylene glycol)",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "silica-based diol phase",
-        "mobile_phase_solvents": [
-          "acetone"
-        ],
-        "mobile_phase_ratio": "77.01",
-        "mobile_phase_ratio_units": "wt-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for CL on a reversed phase column EO elutes in SEC mode",
+          "critical_component": "At the CAP for CL on a reversed phase column EO elutes in SEC mode",
+          "column_name": "Jordi Gel DVB 500 RP column",
+          "mobile_phase_solvents": "tetrahydrofurane–water",
+          "mobile_phase_ratio": "80.98 wt-%",
+          "temperature_celsius": "25.0 °C",
+          "pore_size": "500 Å",
+          "flow_rate": "0.5 ml/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5",
-        "pore_size": "100 Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "At the CAP for PEG on a normal phase column PPG elutes in SEC mode [26], and so does PCL. As can be seen in Fig. 3, PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP, while PCL elutes in SEC mode.",
-        "notes": null,
-        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Central Polymer Lab–Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "poly(e-caprolactone)",
-        "critical_component": "poly(e-caprolactone)",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "poly(divinylbenzene)",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "80.98",
-        "mobile_phase_ratio_units": "wt-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5",
-        "pore_size": "500 Å",
-        "column_dimensions": "250 × 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "As can be seen in Fig. 5, this could be realized on the Jordi Gel DVB 500 RP column in THF water (with 80.98 wt-% THF). In such a mobile phase, PCL-MEs elute at 2.8 mL, regardless their degree of polymerization.",
         "notes": null,
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -171,8 +172,8 @@
       "section": "Full Paper",
       "token_count": 11600,
       "extraction_success": true,
-      "processing_time": 44.51960325241089,
-      "extracted_count": 4
+      "processing_time": 27.664801597595215,
+      "extracted_count": 2
     }
   ]
 }

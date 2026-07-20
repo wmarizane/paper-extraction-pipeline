@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_pdf": "[330] Wei2016.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "evidence_text": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 \u00b0C.",
+        "detector": "ELSD",
+        "pore_size": "300 \u00c5",
+        "critical_component": "PEG backbone",
+        "publication_year": "2016",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "40:60",
+        "critical_condition_basis": "Critical composition for non-functional PEGs obtained at 40% acetonitrile in water",
+        "column_name": "XB-C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "column_dimensions": "250 mm x 4.6 mm I.D., 5 \u03bcm particle size",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "notes": "Used as the basis for LCCC to separate benzaldehyde-functionalized PEGs independent of molar mass.",
+        "flow_rate": "0.5 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China",
+        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 \u00b0C. ... It is clearly shown that PEGs and PEG derivatives were successfully separated according to the number of benzaldehyde functional endgroups. Their molar mass had no obvious impact on retention times.",
+        "detector": "ELSD",
+        "pore_size": "300 \u00c5",
+        "critical_component": "PEG",
+        "publication_year": "2016",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "45:55",
+        "critical_condition_basis": "LCCC for PEGs on the XB-phenyl column presented at 45% acetonitrile in water at 30 \u00b0C",
+        "column_name": "XB-phenyl",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "vol%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "xljiang@whu.edu.cn",
+        "column_dimensions": "250 mm x 4.6 mm I.D., 5 \u03bcm particle size",
+        "stationary_phase_chemistry": "phenyl",
+        "paper_doi": "10.1039/c6py01653g",
+        "corresponding_author_name": "X.-L. Jiang",
+        "notes": "Separation based on number of benzaldehyde end-groups independent of molar mass.",
+        "flow_rate": "0.5 mL min-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

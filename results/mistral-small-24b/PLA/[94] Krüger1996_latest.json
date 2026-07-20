@@ -1,103 +1,84 @@
 {
   "metadata": {
-    "source_pdf": "[94] Krüger1996.pdf",
-    "extraction_date": "2026-06-07T23:57:44.160927",
+    "source_pdf": "[94] Krüger1996.pdf",
+    "extraction_date": "2026-07-19T13:55:34.774001",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:55:34.764023+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[94] Krüger1996.md",
+        "sha256": "82b6ad4403058fd94104fa89eea43fe3b4199ab3ac223f45a8c6458b28f140e4",
+        "char_len": 1317,
+        "token_count": 342
+      }
+    },
     "pipeline_metrics": {
-      "pdf_name": "[94] Krüger1996.pdf",
-      "start_time": "2026-06-07T23:56:27.858491",
+      "pdf_name": "[94] Krüger1996.pdf",
+      "start_time": "2026-07-19T13:54:34.143541",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.49359607696533,
+          "time_seconds": 59.36743640899658,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10796427726745605,
+          "time_seconds": 0.11653971672058105,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 342
         },
         "llm_extraction": {
-          "time_seconds": 16.70072317123413,
+          "time_seconds": 1.0788543224334717,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "42778"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "aliphatic polyesters",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": [
-          "solvent"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": "MALDI-TOF-MS",
-        "evidence_text": "Liquid Adsorption Chromatography at Critical Conditions (LACCC) of polymers in combination with Matrix-Assisted Laser Desorption / Ionization Time-Of-Flight Mass Spectrometry (MALDI-TOF-MS) and different types of detectors is a very convenient method for the characterization of polymer heterogeneities.",
-        "notes": null,
-        "paper_doi": null,
-        "corresponding_author_name": "Ralph-Peter Kruger",
-        "corresponding_email_address": null,
-        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e.V. (ACA) Rudower Chaussee 5 D-12484 Berlin, Germany",
-        "publication_year": "1996"
-      },
-      {
-        "analyte_polymer": "aromatic polyesters",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "Liquid Adsorption Chromatography at Critical Conditions (LACCC)",
-        "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
-        "mobile_phase_solvents": [
-          "solvent"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": "MALDI-TOF-MS",
-        "evidence_text": "Liquid Adsorption Chromatography at Critical Conditions (LACCC) of polymers in combination with Matrix-Assisted Laser Desorption / Ionization Time-Of-Flight Mass Spectrometry (MALDI-TOF-MS) and different types of detectors is a very convenient method for the characterization of polymer heterogeneities.",
-        "notes": null,
-        "paper_doi": null,
-        "corresponding_author_name": "Ralph-Peter Kruger",
-        "corresponding_email_address": null,
-        "physical_address": "Institute of Applied Chemistry, Berlin-Adlershof e.V. (ACA) Rudower Chaussee 5 D-12484 Berlin, Germany",
-        "publication_year": "1996"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
@@ -105,8 +86,8 @@
       "section": "Full Paper",
       "token_count": 342,
       "extraction_success": true,
-      "processing_time": 16.69617748260498,
-      "extracted_count": 2
+      "processing_time": 0.9709639549255371,
+      "extracted_count": 0
     }
   ]
 }

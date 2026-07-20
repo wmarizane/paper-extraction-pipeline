@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "source_pdf": "[223] Hiller2011_paper1.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "critical_component": "1,4-isoprene units",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "reversed phase C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100-5, 300-5, 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+        "notes": "Samples contained predominantly 1,4-isoprene units (approx 94 mol%) with small amounts of 3,4-isoprene units.",
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "polyisoprene",
+        "critical_component": "1,4-PI",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "RP-18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": "null",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "evidence_text": "It can be seen that indeed near-critical conditions can be achieved by using butanone/cyclohexane mixtures as the mobile phase. If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C.",
+        "notes": "Samples contained predominantly 1,4-isoprene units (approx 94 mol%) with small amounts of 3,4-isoprene units.",
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
+        "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

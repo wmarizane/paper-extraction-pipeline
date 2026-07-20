@@ -1,52 +1,100 @@
 {
   "metadata": {
     "source_pdf": "[243] Rollet2012.pdf",
-    "extraction_date": "2026-06-08T00:43:38.381766",
+    "extraction_date": "2026-07-19T15:20:55.742475",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:20:55.728694+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[243] Rollet2012.md",
+        "sha256": "dfb4841dd56cdf941be8b4da81801a1db20f5e38151b86fcacad96c521dba81b",
+        "char_len": 39615,
+        "token_count": 11347
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[243] Rollet2012.pdf",
-      "start_time": "2026-06-08T00:36:57.798049",
+      "start_time": "2026-07-19T15:14:13.519923",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 25.549692630767822,
+          "time_seconds": 25.69517207145691,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12113738059997559,
+          "time_seconds": 0.12354326248168945,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11347
         },
         "llm_extraction": {
-          "time_seconds": 374.91277599334717,
+          "time_seconds": 376.3518340587616,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 4
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Poly(ethylene oxide) (PEO)",
-        "critical_component": "PEO backbone",
-        "architecture": "Linear",
-        "critical_condition_basis": "Elution independent of molar mass for PEO standards",
+        "analyte_polymer": "poly(ethylene oxide)",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "linear",
+        "critical_condition_basis": "elution independent of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C8 HD",
-        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Chloroform",
-          "Methanol",
-          "n-Heptane"
+          "chloroform",
+          "methanol",
+          "n-heptane"
         ],
-        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
         "mobile_phase_ratio_units": "v/v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -59,28 +107,38 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "The optimum eluent is a mixture of 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v) using a reverse phase (C8) column. ... The mobile phase composition to reach the critical conditions was determined to be 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v).",
-        "notes": "Elution mechanism governed by interaction of polar endgroup with residual silanols. Critical conditions reached for Mn < 12,000 g/mol.",
+        "field_evidence": {
+          "critical_condition_basis": "The mobile phase composition to reach the critical conditions was determined to be 58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v).",
+          "critical_component": "Critical conditions for the PEO were determined using Nucleosil (highly deactivated) C8 columns",
+          "column_name": "Macherey-Nagel 250 mm x 4.6 mm Nucleosil C8 HD",
+          "mobile_phase_solvents": "mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane",
+          "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v)",
+          "temperature_celsius": "temperature of 30 °C was maintained for all measurements",
+          "pore_size": "pore diameter of 100 Å",
+          "flow_rate": "flow rate of 0.8 mL min-1"
+        },
+        "notes": "Elution mechanism governed by interaction of polar endgroup with residual free silanols. PEO block is invisible in block copolymers.",
         "paper_doi": "10.1021/ma301199m",
-        "corresponding_author_name": "Didier Gigmes",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
         "corresponding_email_address": "didier.gigmes@univ-provence.fr",
         "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
         "publication_year": "2012"
       },
       {
-        "analyte_polymer": "Functional Poly(ethylene oxide) (PEO)",
-        "critical_component": "PEO backbone",
-        "architecture": "Linear (monofunctional or difunctional)",
-        "critical_condition_basis": "Separation based on end-group functionality under PEO critical conditions",
+        "analyte_polymer": "poly(ethylene oxide)-b-polystyrene",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "diblock",
+        "critical_condition_basis": "elution independent of molar mass of PEO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C8 HD",
-        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Chloroform",
-          "Methanol",
-          "n-Heptane"
+          "chloroform",
+          "methanol",
+          "n-heptane"
         ],
-        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
         "mobile_phase_ratio_units": "v/v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -93,28 +151,38 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "In these conditions, poly(ethylene oxide) (PEO) functionalized with either an acrylate or alkoxyamine moieties were separated. ... The critical conditions determined above were then tested for the separation of polymer chains according to their chain-end functionality.",
-        "notes": "Includes PEO with acrylate and BlocBuilder (alkoxyamine) end-groups. Separation is due to end-group interaction with residual silanols.",
+        "field_evidence": {
+          "critical_condition_basis": "In these conditions, the PEO block is then invisible",
+          "critical_component": "PEO block is then invisible",
+          "column_name": "Macherey-Nagel 250 mm x 4.6 mm Nucleosil C8 HD",
+          "mobile_phase_solvents": "mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane",
+          "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v)",
+          "temperature_celsius": "temperature of 30 °C was maintained for all measurements",
+          "pore_size": "pore diameter of 100 Å",
+          "flow_rate": "flow rate of 0.8 mL min-1"
+        },
+        "notes": "PS block elutes in SEC mode. Calibration curve from PS homopolymers used to determine PS block molar mass.",
         "paper_doi": "10.1021/ma301199m",
-        "corresponding_author_name": "Didier Gigmes",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
         "corresponding_email_address": "didier.gigmes@univ-provence.fr",
         "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
         "publication_year": "2012"
       },
       {
-        "analyte_polymer": "PEO-b-PS block copolymer",
-        "critical_component": "PEO block",
-        "architecture": "Diblock",
-        "critical_condition_basis": "PEO block is chromatographically invisible; elution governed by PS block length",
+        "analyte_polymer": "polystyrene-b-poly(ethylene oxide)-b-polystyrene",
+        "critical_component": "poly(ethylene oxide)",
+        "architecture": "triblock",
+        "critical_condition_basis": "elution independent of molar mass of PEO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C8 HD",
-        "stationary_phase_chemistry": "C8 (Reverse Phase)",
+        "stationary_phase_chemistry": "C8",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Chloroform",
-          "Methanol",
-          "n-Heptane"
+          "chloroform",
+          "methanol",
+          "n-heptane"
         ],
-        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
+        "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane",
         "mobile_phase_ratio_units": "v/v/v",
         "aqueous_parameters": {
           "pH": null,
@@ -127,44 +195,19 @@
         "pore_size": "100 Å",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "Amphiphilic diblock PEO-bPS ... were also separated from PEO homopolymers using the same experimental conditions. We showed that the PEO block is then invisible, and the calibration curve obtained using PS homopolymer standards could be used to determine the whole molar mass of the PS block.",
-        "notes": "PEO block is under critical conditions; PS block elutes in SEC mode.",
-        "paper_doi": "10.1021/ma301199m",
-        "corresponding_author_name": "Didier Gigmes",
-        "corresponding_email_address": "didier.gigmes@univ-provence.fr",
-        "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
-        "publication_year": "2012"
-      },
-      {
-        "analyte_polymer": "PS-b-PEO-b-PS block copolymer",
-        "critical_component": "PEO block",
-        "architecture": "Triblock",
-        "critical_condition_basis": "PEO block is chromatographically invisible; elution governed by total PS block length",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil C8 HD",
-        "stationary_phase_chemistry": "C8 (Reverse Phase)",
-        "mobile_phase_solvents": [
-          "Chloroform",
-          "Methanol",
-          "n-Heptane"
-        ],
-        "mobile_phase_ratio": "58.05 : 6.45 : 35.50",
-        "mobile_phase_ratio_units": "v/v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "In these conditions, the PEO block is then invisible",
+          "critical_component": "PEO block is then invisible",
+          "column_name": "Macherey-Nagel 250 mm x 4.6 mm Nucleosil C8 HD",
+          "mobile_phase_solvents": "mixture of three organics solvents (58.05 vol % of chloroform, 6.45 vol % of methanol, and 35.50 vol % of n-heptane",
+          "mobile_phase_ratio": "58.05% chloroform, 6.45% methanol, and 35.50% n-heptane (v/v/v)",
+          "temperature_celsius": "temperature of 30 °C was maintained for all measurements",
+          "pore_size": "pore diameter of 100 Å",
+          "flow_rate": "flow rate of 0.8 mL min-1"
         },
-        "temperature_celsius": "30",
-        "flow_rate": "0.8 mL min-1",
-        "pore_size": "100 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "polystyrene-b-poly(ethylene oxide) b-polystyrene (PS-b-PEO-b-PS) block copolymers ... were also separated from PEO homopolymers using the same experimental conditions. We showed that the PEO block is then invisible... no real change according to the architecture was observed.",
-        "notes": "PEO block is under critical conditions; PS blocks elute in SEC mode. Architecture has weak influence on elution volume.",
+        "notes": "PS blocks elute in SEC mode. Architecture has weak influence on elution volume.",
         "paper_doi": "10.1021/ma301199m",
-        "corresponding_author_name": "Didier Gigmes",
+        "corresponding_author_name": "Marion Rollet; Didier Gigmes",
         "corresponding_email_address": "didier.gigmes@univ-provence.fr",
         "physical_address": "Aix-Marseille Univ, CNRS, Institut de Chimie Radicalaire, UMR 7273, Faculte de Saint-Jerome, avenue Escadrille Normandie-Niemen, service 542, 13397 Marseille cedex 20, France",
         "publication_year": "2012"
@@ -177,8 +220,8 @@
       "section": "Full Paper",
       "token_count": 11347,
       "extraction_success": true,
-      "processing_time": 374.89067125320435,
-      "extracted_count": 4
+      "processing_time": 376.29781675338745,
+      "extracted_count": 3
     }
   ]
 }

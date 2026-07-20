@@ -1,46 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[217] Gao2016.pdf",
-    "extraction_date": "2026-06-07T22:38:32.239814",
+    "extraction_date": "2026-07-19T14:13:05.684835",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:13:05.673184+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[217] Gao2016.md",
+        "sha256": "7c5adcfe9486498cc368be074b0e576b29b0207415dc973c6c18125c0e4c7b61",
+        "char_len": 46631,
+        "token_count": 13583
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[217] Gao2016.pdf",
-      "start_time": "2026-06-07T22:35:39.834131",
+      "start_time": "2026-07-19T14:06:37.195908",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 62.216442823410034,
+          "time_seconds": 60.72839903831482,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12049651145935059,
+          "time_seconds": 0.11679983139038086,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13583
         },
         "llm_extraction": {
-          "time_seconds": 110.06863522529602,
+          "time_seconds": 327.59438395500183,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "cyclic polystyrene (c-PS)",
+        "analyte_polymer": "c-PS4k-D1",
         "critical_component": "polystyrene",
         "architecture": "cyclic",
-        "critical_condition_basis": "Liquid chromatography at critical condition (LCCC) used to characterize purity of cyclic polymers contaminated with linear precursors",
+        "critical_condition_basis": "Liquid chromatography at critical condition (LCCC)",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil bare silica",
-        "stationary_phase_chemistry": "C18 bonded silica",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "THF",
           "n-hexane"
@@ -58,8 +106,103 @@
         "pore_size": "50 Å",
         "column_dimensions": "250 x 4.6 mm",
         "detector": null,
-        "evidence_text": "Liquid chromatography at critical condition (LCCC) was conducted with a single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size), following the procedures as reported [29,48e50]. The mobile phase was a mixture of THF/n-hexane (42/58, v/v), and the flow rate was 0.5 mL/ min at 43 ° C.",
-        "notes": "The text states the mobile phase ratio (42/58 v/v THF/n-hexane) was used for LCCC analysis of cyclic PS to detect linear contamination. The column is described as C18 bonded silica on bare silica support.",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical condition (LCCC) was conducted",
+          "critical_component": "polystyrene",
+          "column_name": "single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size)",
+          "mobile_phase_solvents": "THF/n-hexane",
+          "mobile_phase_ratio": "42/58, v/v",
+          "temperature_celsius": "43 ° C",
+          "pore_size": "50 Å pore",
+          "flow_rate": "0.5 mL/ min"
+        },
+        "notes": "LCCC used to characterize purity of cyclic PS samples (c-PS-D1) by separating linear contaminants from cyclic polymers. The text states the mobile phase is a mixture of THF/n-hexane (42/58, v/v).",
+        "paper_doi": "10.1016/j.polymer.2016.08.086",
+        "corresponding_author_name": "Yingfeng Tu",
+        "corresponding_email_address": "tuyingfeng@suda.edu.cn",
+        "physical_address": "Suzhou Key Laboratory of Macromolecular Design and Precision Synthesis, Jiangsu Key Laboratory of Advanced Functional Polymer Design and Application, State and Local Joint Engineering Laboratory for Novel Functional Polymeric Materials, College of Chemistry, Chemical Engineering and Materials Science, Soochow University, Suzhou 215123, China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "c-PS9k-D1",
+        "critical_component": "polystyrene",
+        "architecture": "cyclic",
+        "critical_condition_basis": "Liquid chromatography at critical condition (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil bare silica",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "42/58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "50 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical condition (LCCC) was conducted",
+          "critical_component": "polystyrene",
+          "column_name": "single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size)",
+          "mobile_phase_solvents": "THF/n-hexane",
+          "mobile_phase_ratio": "42/58, v/v",
+          "temperature_celsius": "43 ° C",
+          "pore_size": "50 Å pore",
+          "flow_rate": "0.5 mL/ min"
+        },
+        "notes": "LCCC used to characterize purity of cyclic PS samples (c-PS-D1) by separating linear contaminants from cyclic polymers. The text states the mobile phase is a mixture of THF/n-hexane (42/58, v/v).",
+        "paper_doi": "10.1016/j.polymer.2016.08.086",
+        "corresponding_author_name": "Yingfeng Tu",
+        "corresponding_email_address": "tuyingfeng@suda.edu.cn",
+        "physical_address": "Suzhou Key Laboratory of Macromolecular Design and Precision Synthesis, Jiangsu Key Laboratory of Advanced Functional Polymer Design and Application, State and Local Joint Engineering Laboratory for Novel Functional Polymeric Materials, College of Chemistry, Chemical Engineering and Materials Science, Soochow University, Suzhou 215123, China",
+        "publication_year": "2016"
+      },
+      {
+        "analyte_polymer": "c-PS14k-D1",
+        "critical_component": "polystyrene",
+        "architecture": "cyclic",
+        "critical_condition_basis": "Liquid chromatography at critical condition (LCCC)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil bare silica",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "42/58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "43",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "50 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical condition (LCCC) was conducted",
+          "critical_component": "polystyrene",
+          "column_name": "single C18 bonded silica column (Nucleosil bare silica, 50 Å pore, 250 x 4.6 mm, 5 mm bead size)",
+          "mobile_phase_solvents": "THF/n-hexane",
+          "mobile_phase_ratio": "42/58, v/v",
+          "temperature_celsius": "43 ° C",
+          "pore_size": "50 Å pore",
+          "flow_rate": "0.5 mL/ min"
+        },
+        "notes": "LCCC used to characterize purity of cyclic PS samples (c-PS-D1) by separating linear contaminants from cyclic polymers. The text states the mobile phase is a mixture of THF/n-hexane (42/58, v/v).",
         "paper_doi": "10.1016/j.polymer.2016.08.086",
         "corresponding_author_name": "Yingfeng Tu",
         "corresponding_email_address": "tuyingfeng@suda.edu.cn",
@@ -74,8 +217,8 @@
       "section": "Full Paper",
       "token_count": 13583,
       "extraction_success": true,
-      "processing_time": 110.04524302482605,
-      "extracted_count": 1
+      "processing_time": 327.52574157714844,
+      "extracted_count": 3
     }
   ]
 }

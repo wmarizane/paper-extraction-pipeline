@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[369] Weidner2007.pdf",
-    "extraction_date": "2026-06-07T23:59:27.512196",
+    "extraction_date": "2026-07-19T16:50:44.863756",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:50:44.851761+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[369] Weidner2007.md",
+        "sha256": "ab93012e30c5bbe199323c318ffba47c4a9f05db848e84e0a79341b14958db5e",
+        "char_len": 29256,
+        "token_count": 8584
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[369] Weidner2007.pdf",
-      "start_time": "2026-06-07T23:55:41.441305",
+      "start_time": "2026-07-19T16:46:37.668140",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 48.46920347213745,
+          "time_seconds": 44.634100675582886,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.14071869850158691,
+          "time_seconds": 0.11486029624938965,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8584
         },
         "llm_extraction": {
-          "time_seconds": 177.46085858345032,
+          "time_seconds": 202.3919699192047,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "PEO-co-PPO mono-n-butyl ether",
         "critical_component": "PPO",
         "architecture": "block copolymer",
-        "critical_condition_basis": "explicit mention of critical conditions for PPO separation",
+        "critical_condition_basis": "solvent composition adjustment to achieve critical adsorption for PPO",
         "critical_condition_confidence": "explicit",
         "column_name": "YMC RP 2-3 18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "tetrahydrofuran",
           "water"
@@ -58,8 +106,17 @@
         "pore_size": "300 A",
         "column_dimensions": "250+125 mm length, 4.6 mm id",
         "detector": "ELSD",
-        "evidence_text": "In isocratic mode... solvent composition... was changed to 65:35v/v tetrahydrofuran (THF)/ water, which represents the 'critical' ratio.",
-        "notes": "Used for separation of PPO in isocratic mode. The text states this ratio represents the critical condition for PPO.",
+        "field_evidence": {
+          "critical_condition_basis": "which represents the 'critical' ratio",
+          "critical_component": "separation of PPO",
+          "column_name": "YMC was RP 2-3 18 columns",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water",
+          "mobile_phase_ratio": "65:35v/'v",
+          "temperature_celsius": "constant temperature of 45°C",
+          "pore_size": "300 A pore size",
+          "flow_rate": "0.5mL/min"
+        },
+        "notes": "Isocratic mode used for PPO critical condition. PEO elutes in LAC mode.",
         "paper_doi": "10.1002/rcm.314h",
         "corresponding_author_name": "Steffen M. Weidner",
         "corresponding_email_address": "stefien.weidner@bam.de",
@@ -70,16 +127,18 @@
         "analyte_polymer": "PEO-co-PPO mono-n-butyl ether",
         "critical_component": "PEO",
         "architecture": "block copolymer",
-        "critical_condition_basis": "explicit mention of critical conditions for PEO separation",
+        "critical_condition_basis": "gradient mode starting at critical separation conditions for PEO",
         "critical_condition_confidence": "explicit",
         "column_name": "YMC RP 2-3 18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "tetrahydrofuran",
-          "water"
+          "water",
+          "isopropanol"
         ],
-        "mobile_phase_ratio": "85:15",
-        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_ratio": "gradient",
+        "mobile_phase_ratio_units": null,
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -91,8 +150,17 @@
         "pore_size": "300 A",
         "column_dimensions": "250+125 mm length, 4.6 mm id",
         "detector": "ELSD",
-        "evidence_text": "In isocratic mode... solvent composition... of 85:15v/v... for the separation of PPO... was changed to 65:35v/v... which represents the 'critical' ratio. In gradient mode 'critical' conditions of separation of PEO... were initially adjusted.",
-        "notes": "The text implies the 85:15 THF/water ratio is the critical condition for PEO, as the gradient starts here and shifts to LAC mode. The text explicitly links the 65:35 ratio to PPO critical conditions, and the 85:15 ratio is the starting point for PEO separation before shifting.",
+        "field_evidence": {
+          "critical_condition_basis": "gradient chromatography starting at 'critical' separation conditions for PEO",
+          "critical_component": "PEO",
+          "column_name": "YMC was RP 2-3 18 columns",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water... adding a third, thermodynamically poor solvent (isopropanol)",
+          "mobile_phase_ratio": "gradient mode",
+          "temperature_celsius": "constant temperature of 45°C",
+          "pore_size": "300 A pore size",
+          "flow_rate": "0.5mL/min"
+        },
+        "notes": "Gradient mode used. PEO at critical condition, PPO elutes in LAC mode. Isopropanol added to shift from critical to LAC.",
         "paper_doi": "10.1002/rcm.314h",
         "corresponding_author_name": "Steffen M. Weidner",
         "corresponding_email_address": "stefien.weidner@bam.de",
@@ -107,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 8584,
       "extraction_success": true,
-      "processing_time": 177.43748497962952,
+      "processing_time": 202.33134865760803,
       "extracted_count": 2
     }
   ]

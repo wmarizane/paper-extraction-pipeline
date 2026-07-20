@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[327] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T03:11:08.946369",
+    "extraction_date": "2026-07-19T18:06:59.862644",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T18:06:59.849898+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[327] Trathnigg2010.md",
+        "sha256": "dcaa09d2490232406036ffbef5a0d75f3b812fe53136dba0f9007bafb3b7b2bd",
+        "char_len": 35054,
+        "token_count": 9875
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[327] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T03:09:23.425338",
+      "start_time": "2026-07-19T18:04:56.482656",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 11.028199672698975,
+          "time_seconds": 12.365568161010742,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1281430721282959,
+          "time_seconds": 0.10964202880859375,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9875
         },
         "llm_extraction": {
-          "time_seconds": 94.36458563804626,
+          "time_seconds": 110.85194325447083,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -41,6 +88,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
         "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "Methanol",
           "Water"
@@ -57,9 +105,18 @@
         "flow_rate": "0.5 mL/min",
         "pore_size": "80 Å",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": null,
-        "evidence_text": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 °C. Under these conditions, the retention times of PEGs and PEGMMEs are sufficiently different to allow such a separation (not shown).",
-        "notes": "The text states the separation was achieved but notes the chromatogram is 'not shown'. The flow rate is taken from the general experimental section for System B (gradient system) where this column was used.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Critical conditions for EO were found on the Synergi Fusion RP column in 82% methanol at a temperature of 25 °C.",
+          "critical_component": "Critical conditions for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "methanol–water",
+          "mobile_phase_ratio": "82% methanol",
+          "temperature_celsius": "25 °C",
+          "pore_size": "nominal pore size= 80Ǻ",
+          "flow_rate": "0.5 mLmin[−][1]"
+        },
+        "notes": "The text states that under these conditions, retention times of PEGs and PEG-MMEs are sufficiently different to allow separation, implying the critical condition applies to the PEG backbone (EO repeat unit).",
         "paper_doi": "10.1007/s00216-010-3951-x",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 9875,
       "extraction_success": true,
-      "processing_time": 94.34212946891785,
+      "processing_time": 110.80072808265686,
       "extracted_count": 1
     }
   ]

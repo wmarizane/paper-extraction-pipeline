@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[112] Pasch1995.pdf",
+    "extraction_date": "2026-06-14T09:38:44.823753",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[112] Pasch1995.pdf",
+      "start_time": "2026-06-14T09:36:07.712931",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 45.60096549987793,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13979268074035645,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7346
+        },
+        "llm_extraction": {
+          "time_seconds": 111.36995220184326,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "polyethylene oxide",
+        "critical_component": "ethylene oxide block",
+        "architecture": "linear",
+        "critical_condition_basis": "Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically 'invisible' and retention of the block copolymer is solely directed by the propylene oxide block.",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm I.D.",
+        "detector": "Waters R-401 differential refractometer",
+        "evidence_text": "Liquid chromatography at the critical point of adsorption was carried out on a modular HPLC system... keeping the temperature at 25°C... The columns used were Nucleosil-100 RP-18 (250 x 4 mm I.D.)... and the mobile phase was acetonitrile-water at flow-rates of 1 ml/min... Operating at the critical point of PEG, the ethylene oxide block behaves chromatographically 'invisible' and retention of the block copolymer is solely directed by the propylene oxide block. Fig. 6 represents the separation of a triblock copolymer H(EO)x(PO)y(EO)xOH at the critical point of the ethylene oxide blocks... Column, Nucleosil 100 RP-18 (250 x 4 mm I.D.); eluent, acetonitrile-water (42:58, v/v).",
+        "notes": "The text explicitly states the experiment is performed at the critical point of adsorption for the ethylene oxide block to separate the triblock copolymer based on the propylene oxide block length.",
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": "1995"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7346,
+      "extraction_success": true,
+      "processing_time": 111.347487449646,
+      "extracted_count": 1
+    }
+  ]
+}

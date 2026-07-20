@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[123] Lee1999.pdf",
-    "extraction_date": "2026-06-07T23:08:55.138393",
+    "extraction_date": "2026-07-19T13:14:50.969624",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:14:50.954396+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[123] Lee1999.md",
+        "sha256": "693f6c96e9ee558cc9d384fa3a4f4e376c0df8c52496d5e2ab4158089885d919",
+        "char_len": 22401,
+        "token_count": 6203
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[123] Lee1999.pdf",
-      "start_time": "2026-06-07T23:06:46.643813",
+      "start_time": "2026-07-19T13:12:42.869964",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.630503177642822,
+          "time_seconds": 18.3617103099823,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13710331916809082,
+          "time_seconds": 0.11728644371032715,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6203
         },
         "llm_extraction": {
-          "time_seconds": 109.72686529159546,
+          "time_seconds": 109.57081389427185,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,10 +84,11 @@
         "analyte_polymer": "PEO-PLLA diblock copolymer",
         "critical_component": "PEO block",
         "architecture": "diblock",
-        "critical_condition_basis": "Retention of PEG standards independent of molecular weight",
+        "critical_condition_basis": "critical condition of PEG",
         "critical_condition_confidence": "explicit",
         "column_name": "Luna C18",
-        "stationary_phase_chemistry": "Reversed phase (C18)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -56,10 +104,19 @@
         "temperature_celsius": "68",
         "flow_rate": null,
         "pore_size": "100 Å",
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "Refractive index detector (RI 71) and UV-vis detector",
-        "evidence_text": "The middle chromatograms in Figure 1a,b display the separation at the critical condition of PEG, the mobile phase of acetonitrile/water (60/40, v/v), and the column temperature of 68 °C. The critical condition of PEG is obtained empirically by monitoring the retention volume (VR) of three different molecular weight PEG standards (Mn: 1500, 3400, and 8000). At this condition, the retention of PEG is independent of molecular weight and eluted at the injection solvent peak position, the PEO block is 'invisible' in principle, and the PEO PLLA block copolymer behaves like a PLLA homopolymer of the molecular weight equivalent to the PLLA block as far as the HPLC retention behavior is concerned.",
-        "notes": "Critical condition established using PEG standards but applied to PEO block of PEO-PLLA. Text notes that critical condition of MPEO (methoxy-terminated) is slightly different from PEG (hydroxyl-terminated) due to end effects, but the PEG critical condition was used for the analysis.",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector; UV-vis detector",
+        "field_evidence": {
+          "critical_condition_basis": "The middle chromatograms in Figure 1a,b display the separation at the critical condition of PEG",
+          "critical_component": "critical condition of PEG... the PEO block is 'invisible' in principle",
+          "column_name": "reversed phase column (Phenomenex, Luna C18",
+          "mobile_phase_solvents": "A mixture of acetonitrile (HPLC grade) and water",
+          "mobile_phase_ratio": "volume ratio of 60/40",
+          "temperature_celsius": "column temperature of 68 °C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": null
+        },
+        "notes": "Critical condition established empirically using PEG standards (Mn: 1500, 3400, 8000) and applied to PEO-PLLA diblock copolymer. The text notes that the critical condition of MPEO (precursor) is slightly different due to end effects, but the PEG critical condition was used for the analysis.",
         "paper_doi": "10.1021/ma9900028",
         "corresponding_author_name": "Taihyun Chang",
         "corresponding_email_address": "tc@postech.ac.kr",
@@ -74,7 +131,7 @@
       "section": "Full Paper",
       "token_count": 6203,
       "extraction_success": true,
-      "processing_time": 109.70501637458801,
+      "processing_time": 109.5150351524353,
       "extracted_count": 1
     }
   ]

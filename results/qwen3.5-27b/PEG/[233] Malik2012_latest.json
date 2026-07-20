@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[233] Malik2012.pdf",
-    "extraction_date": "2026-06-07T23:59:22.404269",
+    "extraction_date": "2026-07-19T14:36:44.767656",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:36:44.753632+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[233] Malik2012.md",
+        "sha256": "74a051a48f66cab2d2307a23472c08d838050d0353c9942b559167a6f9978481",
+        "char_len": 49842,
+        "token_count": 13252
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[233] Malik2012.pdf",
-      "start_time": "2026-06-07T23:55:28.250586",
+      "start_time": "2026-07-19T14:32:21.773411",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 64.55460476875305,
+          "time_seconds": 58.71296691894531,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11821699142456055,
+          "time_seconds": 0.11937737464904785,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 13252
         },
         "llm_extraction": {
-          "time_seconds": 169.48075079917908,
+          "time_seconds": 204.110506772995,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -34,13 +81,14 @@
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polystyrene (PS)",
-        "critical_component": "Polystyrene (PS)",
-        "architecture": "Linear homopolymer",
-        "critical_condition_basis": "Elution volume independent of molar mass",
+        "analyte_polymer": "Polystyrene",
+        "critical_component": "Polystyrene",
+        "architecture": "Linear",
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PS",
         "critical_condition_confidence": "explicit",
         "column_name": "Symmetry 300",
-        "stationary_phase_chemistry": "Silica-based octadecyl phase (RP)",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "DMF"
@@ -58,8 +106,17 @@
         "pore_size": "300 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "UV (254 nm) and ELSD",
-        "evidence_text": "The CAP of PS was realised in a DMF–THF mobile phase on a RP octadecyl column... A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF–DMF: 18–82).",
-        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at critical conditions of polystyrene (PS) and polyethylene oxide (PEO) is used as the first dimension",
+          "critical_component": "critical conditions of PS",
+          "column_name": "Symmetry 300 (Waters, Ireland): silica-based octadecyl phase",
+          "mobile_phase_solvents": "THF–DMF",
+          "mobile_phase_ratio": "THF–DMF: 18–82",
+          "temperature_celsius": "maintained at 30[◦] C for all measurements",
+          "pore_size": "pore size 300 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
+        },
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PS homopolymers.",
         "paper_doi": "10.1016/j.chroma.2012.04.045",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -67,13 +124,14 @@
         "publication_year": "2012"
       },
       {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
-        "critical_component": "Polyethylene oxide (PEO)",
-        "architecture": "Linear homopolymer",
-        "critical_condition_basis": "Elution volume independent of molar mass",
+        "analyte_polymer": "Polyethylene oxide",
+        "critical_component": "Polyethylene oxide",
+        "architecture": "Linear",
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PEO",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil Si 300",
-        "stationary_phase_chemistry": "Plain silica (Normal Phase)",
+        "stationary_phase_chemistry": "Plain silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "THF",
           "DMF"
@@ -91,8 +149,17 @@
         "pore_size": "300 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "UV (254 nm) and ELSD",
-        "evidence_text": "The CAP of PEO was realised on a normal phase Si column... At a mobile phase composition of 96–4 (THF–DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
-        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of PEO",
+          "critical_component": "CAP of PEO",
+          "column_name": "Nucleosil Si 300 (Macherey-Nagel, Germany): plain silica",
+          "mobile_phase_solvents": "THF–DMF",
+          "mobile_phase_ratio": "THF–DMF (96–4)",
+          "temperature_celsius": "maintained at 30[◦] C for all measurements",
+          "pore_size": "pore size 300 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
+        },
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PEO homopolymers.",
         "paper_doi": "10.1016/j.chroma.2012.04.045",
         "corresponding_author_name": "Muhammad Imran Malik",
         "corresponding_email_address": "mimran.malik@iccs.edu",
@@ -107,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 13252,
       "extraction_success": true,
-      "processing_time": 169.4585154056549,
+      "processing_time": 204.04440999031067,
       "extracted_count": 2
     }
   ]

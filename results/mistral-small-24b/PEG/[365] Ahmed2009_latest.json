@@ -1,51 +1,98 @@
 {
   "metadata": {
     "source_pdf": "[365] Ahmed2009.pdf",
-    "extraction_date": "2026-06-08T01:34:01.996297",
+    "extraction_date": "2026-07-19T14:21:49.749915",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:21:49.736932+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[365] Ahmed2009.md",
+        "sha256": "5dc7f8fece545a4fdf31e75391b7a6baabd073bf63c5afb58635d4ecc9925ca5",
+        "char_len": 37066,
+        "token_count": 10231
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[365] Ahmed2009.pdf",
-      "start_time": "2026-06-08T01:29:13.027052",
+      "start_time": "2026-07-19T14:19:09.501686",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.3945894241333,
+          "time_seconds": 19.2859148979187,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10169196128845215,
+          "time_seconds": 0.10464787483215332,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10231
         },
         "llm_extraction": {
-          "time_seconds": 268.47281432151794,
+          "time_seconds": 140.79276132583618,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
         "critical_component": "EO",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "69.12",
+        "mobile_phase_ratio": "69.12 wt-%",
         "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
@@ -56,9 +103,18 @@
         "temperature_celsius": "25.0",
         "flow_rate": "2.0 mL/min",
         "pore_size": "80 Å",
-        "column_dimensions": "250 x 3 mm",
+        "column_dimensions": "250 x 300 mm",
         "detector": "density",
-        "evidence_text": "In 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "acetonitrile–water",
+          "mobile_phase_ratio": "69.12 wt-%",
+          "temperature_celsius": "25.0",
+          "pore_size": "80 Å",
+          "flow_rate": "2.0 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1002/jssc.200900014",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -67,64 +123,41 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
+        "analyte_polymer": "poly(ethylene glycol)-b-poly(e-caprolactone)",
         "critical_component": "EO",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical adsorption point",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
-        "column_name": "Spherisorb ODS2",
+        "column_name": "Synergi Fusion RP",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "acetonitrile",
+          "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "69.06",
-        "mobile_phase_ratio_units": "wt-%",
+        "mobile_phase_ratio": "68 vol-%",
+        "mobile_phase_ratio_units": "vol-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "2.0 mL/min",
+        "temperature_celsius": null,
+        "flow_rate": "0.5 mL/min",
         "pore_size": "80 Å",
-        "column_dimensions": "250 x 3 mm",
-        "detector": "density",
-        "evidence_text": "A separation of the non-polar PCL under critical conditions for the polar EO unit can only be possible on reversed phases. On typical RP columns, a CAP for EO exists in 85–95 wt-% methanol–water [60]; in acetone–water two critical points have been observed: at 26–30 wt-% and at 90–93 wt-% (the latter exists only on silica–based stationary phases) [60, 61]. In 90 wt-% methanol–water low molecular PCL samples could be reasonably separated, but higher PCLs are not soluble in such a mobile phase. PCL is also insoluble in 30% acetone, and in 90% acetone the retention of PCL is not sufficient. On RP phases, critical conditions for EO exist also in acetonitrile–water. We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
-        "notes": null,
-        "paper_doi": "10.1002/jssc.200900014",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "poly(ethylene glycol)-bpoly(e-caprolactone)",
-        "critical_component": "EO",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "mobile_phase_ratio": "69.06",
-        "mobile_phase_ratio_units": "wt-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC",
+          "critical_component": "EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "acetone–water",
+          "mobile_phase_ratio": "68 vol-%",
+          "temperature_celsius": null,
+          "pore_size": "80 Å",
+          "flow_rate": "0.5 mL/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "2.0 mL/min",
-        "pore_size": "80 Å",
-        "column_dimensions": "250 x 3 mm",
-        "detector": "density",
-        "evidence_text": "A separation of the non-polar PCL under critical conditions for the polar EO unit can only be possible on reversed phases. On typical RP columns, a CAP for EO exists in 85–95 wt-% methanol–water [60]; in acetone–water two critical points have been observed: at 26–30 wt-% and at 90–93 wt-% (the latter exists only on silica–based stationary phases) [60, 61]. In 90 wt-% methanol–water low molecular PCL samples could be reasonably separated, but higher PCLs are not soluble in such a mobile phase. PCL is also insoluble in 30% acetone, and in 90% acetone the retention of PCL is not sufficient. On RP phases, critical conditions for EO exist also in acetonitrile–water. We have found that PEG and PEG-MME elute close to the CAP in quite a wide range of mobile phase composition: in 69 wt-% acetonitrile–water PEG is sufficiently close to critical conditions (Fig. 1).",
         "notes": null,
         "paper_doi": "10.1002/jssc.200900014",
         "corresponding_author_name": "Bernd Trathnigg",
@@ -140,8 +173,8 @@
       "section": "Full Paper",
       "token_count": 10231,
       "extraction_success": true,
-      "processing_time": 36.349833250045776,
-      "extracted_count": 3
+      "processing_time": 23.75641393661499,
+      "extracted_count": 2
     }
   ]
 }

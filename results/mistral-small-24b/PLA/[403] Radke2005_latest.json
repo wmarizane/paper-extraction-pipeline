@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[403] Radke2005.pdf",
-    "extraction_date": "2026-06-07T23:55:49.690181",
+    "extraction_date": "2026-07-19T13:53:56.599891",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:53:56.591853+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[403] Radke2005.md",
+        "sha256": "6c37d3fb3a27bebfcba2a747319ad9ff88bc29ab289242917dc15950b5e3da9b",
+        "char_len": 36572,
+        "token_count": 9911
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[403] Radke2005.pdf",
-      "start_time": "2026-06-07T23:55:14.973959",
+      "start_time": "2026-07-19T13:53:16.698074",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 22.136662244796753,
+          "time_seconds": 20.28390407562256,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1139225959777832,
+          "time_seconds": 0.11185884475708008,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9911
         },
         "llm_extraction": {
-          "time_seconds": 12.46547245979309,
+          "time_seconds": 19.452423572540283,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -39,14 +85,15 @@
         "architecture": "linear",
         "critical_condition_basis": "critical conditions determined for linear PLAs",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "bare silica Nucleosil columns",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "1,4-dioxane",
           "n-hexane"
         ],
         "mobile_phase_ratio": "57.1/42.9",
-        "mobile_phase_ratio_units": null,
+        "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -54,16 +101,25 @@
           "salt_concentration": null
         },
         "temperature_celsius": "50",
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/n-hexane).",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A[˚] , 300 A[˚]",
+        "column_dimensions": "0.46!20 cm, 0.46!25 cm",
+        "detector": "UV-detector G 1314A",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions determined for linear PLAs",
+          "critical_component": "linear PLAs",
+          "column_name": "bare silica Nucleosil columns",
+          "mobile_phase_solvents": "1,4-dioxane/n-hexane",
+          "mobile_phase_ratio": "57.1/42.9 (1,4-dioxane/n-hexane)",
+          "temperature_celsius": "50 8C",
+          "pore_size": "100 A[˚] , 300 A[˚]",
+          "flow_rate": "0.5 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.polymer.2005.05.028",
-        "corresponding_author_name": "Wolfgang Radke",
-        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany",
+        "corresponding_author_name": "Wolfgang Radke; Karsten Rode; Alexander V. Gorshkov; Tadeusz Biela",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; krode@dki.tu-darmstadt.de; avgor@chph.ras.ru; tadek@bilbo.cbmm.lodz.pl",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; N.N. Semenov Institute of Chemical Physics, Russian Academy of Sciences, Kosygina 4, 119991 Moscow, Russian Federation; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
         "publication_year": "2005"
       }
     ]
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 9911,
       "extraction_success": true,
-      "processing_time": 12.451570510864258,
+      "processing_time": 19.332581758499146,
       "extracted_count": 1
     }
   ]

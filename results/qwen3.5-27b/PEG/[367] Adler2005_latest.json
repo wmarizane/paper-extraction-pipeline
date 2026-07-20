@@ -1,81 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[367] Adler2005.pdf",
-    "extraction_date": "2026-06-08T04:06:17.040093",
+    "extraction_date": "2026-07-19T20:52:25.687942",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T20:52:25.674319+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[367] Adler2005.md",
+        "sha256": "00d357731687d562297ccd929717acf1fa8857ce5bb98e0fa6a7df5f7d708c91",
+        "char_len": 35650,
+        "token_count": 10993
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[367] Adler2005.pdf",
-      "start_time": "2026-06-08T04:03:41.195768",
+      "start_time": "2026-07-19T20:17:19.776676",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 59.27564334869385,
+          "time_seconds": 55.86061072349548,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1167905330657959,
+          "time_seconds": 0.11291790008544922,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10993
         },
         "llm_extraction": {
-          "time_seconds": 96.45176982879639,
-          "success": true
+          "time_seconds": 2049.8886511325836,
+          "success": false
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "45310"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "PEG, MPEG, MPEG-MM 1, MPEG-MM 2, poly(MPEG-MM 2), copolymers of MPEG-MM and methacrylic acid",
-        "critical_component": "PEO (poly(ethylene oxide))",
-        "architecture": "linear",
-        "critical_condition_basis": "critical point of adsorption for PEG",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Knauer Nucleosil RP18-100",
-        "stationary_phase_chemistry": "RP-18 (octadecyl modified silica gel)",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "81:19",
-        "mobile_phase_ratio_units": "wt.-%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
-        "notes": "Used for separation of MPEG and macromonomer with regard to endgroups irrespective of molar mass. Also used for copolymers to compensate for PEO molar mass distribution.",
-        "paper_doi": "10.1002/macp.200500344",
-        "corresponding_author_name": "Harald Pasch",
-        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), SchloBgartenstr. 6, 64289 Darmstadt, Germany",
-        "publication_year": "2005"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
       "chunk_index": 0,
       "section": "Full Paper",
       "token_count": 10993,
-      "extraction_success": true,
-      "processing_time": 96.42942190170288,
-      "extracted_count": 1
+      "extraction_success": false,
+      "processing_time": 683.4627594947815,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\n  \"extracted_conditions\": [\n    {\n      \"analyte_polymer\": \"PEG\",\n      \"critical_component\": \"PEG\",\n      \"architecture\": \"linear\",\n      \"critical_condition_basis\": \"critical point of adsorption for PEG\",\n      \"critical_condition_confidence\": \"explicit\",\n      \"column_name\": \"Knauer Nucleosil R"
     }
   ]
 }

@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[274] Girod2009.pdf",
-    "extraction_date": "2026-06-08T01:32:09.711187",
+    "extraction_date": "2026-07-19T16:13:50.862912",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T16:13:50.849654+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[274] Girod2009.md",
+        "sha256": "8488db3ebea0d5424529bfffc1e594dad0173883a8814d5569099c64dff21a42",
+        "char_len": 21970,
+        "token_count": 6338
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[274] Girod2009.pdf",
-      "start_time": "2026-06-08T01:28:52.088441",
+      "start_time": "2026-07-19T16:09:55.655815",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 16.509032249450684,
+          "time_seconds": 18.390329122543335,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.15197467803955078,
+          "time_seconds": 0.1173086166381836,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6338
         },
         "llm_extraction": {
-          "time_seconds": 180.9616358280182,
+          "time_seconds": 216.6430778503418,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -36,11 +83,12 @@
       {
         "analyte_polymer": "poly(ethylene glycol)",
         "critical_component": "poly(ethylene glycol)",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "elution volume independent of molecular mass",
+        "architecture": "linear",
+        "critical_condition_basis": "critical composition of the MeOH–water eluent",
         "critical_condition_confidence": "explicit",
         "column_name": "EQUISIL",
-        "stationary_phase_chemistry": "octadecylsilica (C18)",
+        "stationary_phase_chemistry": "octadecylsilica",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -58,8 +106,17 @@
         "pore_size": "100 A",
         "column_dimensions": "150 x 4 mm",
         "detector": "ESI-MS",
-        "evidence_text": "Using the non-polar C18 stationary phase, the critical composition of the MeOH–water eluent, first established for PEG standards (Mw = 200 to 1000 g mol-1) using 1 mM LiCl concentration, was determined at 88.8:11.2 (%, v/v) and allows all PEG chains to have the same elution volume (Ve = 2.33 mL), independently of their molecular mass.",
-        "notes": "Critical conditions established with LiCl. Text notes that changing cation size modifies these conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "critical composition of the MeOH–water eluent, first established for PEG standards (Mw = 200 to 1000 g mol-1) using 1 mM LiCl",
+          "critical_component": "PEG standards (Mw = 200 to 1000 g mol-1)",
+          "column_name": "octadecylsilica EQUISIL",
+          "mobile_phase_solvents": "MeOH–water binary mixture",
+          "mobile_phase_ratio": "88.8:11.2 (%, v/v)",
+          "temperature_celsius": "maintained at a constant temperature of 25 C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow rate was 1 mL min-1"
+        },
+        "notes": "Critical conditions established with LiCl. The text notes that changing the cation (e.g., to Cs+) shifts the elution volume, meaning critical conditions are not maintained for other salts on this column.",
         "paper_doi": "10.1039/b9ay00118b",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -69,11 +126,12 @@
       {
         "analyte_polymer": "poly(ethylene glycol)",
         "critical_component": "poly(ethylene glycol)",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "elution volume independent of molecular mass",
+        "architecture": "linear",
+        "critical_condition_basis": "critical composition of the MeOH–water eluent",
         "critical_condition_confidence": "explicit",
         "column_name": "NUCLEOSIL",
-        "stationary_phase_chemistry": "amino-silica (NH2)",
+        "stationary_phase_chemistry": "amino-silica",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -91,8 +149,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "ESI-MS",
-        "evidence_text": "For useful comparison, the critical composition of the MeOH–water eluent was first determined for PEG standards using a 1 mM LiCl concentration. For the selected system, critical conditions were obtained with a 93.5:6.5 (%, v/v) MeOH–water eluent, as indicated by the same elution volume (Ve = 4.15 mL) measured for all PEG chains.",
-        "notes": "Critical conditions established with LiCl on polar stationary phase. Text notes that changing cation size modifies these conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions were obtained with a 93.5:6.5 (%, v/v) MeOH–water eluent",
+          "critical_component": "PEG standards",
+          "column_name": "amino-silica NUCLEOSIL",
+          "mobile_phase_solvents": "MeOH–water eluent",
+          "mobile_phase_ratio": "93.5:6.5 (%, v/v)",
+          "temperature_celsius": "maintained at a constant temperature of 25 C",
+          "pore_size": "pore diameter: 100 A",
+          "flow_rate": "flow rate was 1 mL min-1"
+        },
+        "notes": "Critical conditions established with LiCl. The text notes that changing the cation (e.g., to Cs+) shifts the elution volume, meaning critical conditions are not maintained for other salts on this column.",
         "paper_doi": "10.1039/b9ay00118b",
         "corresponding_author_name": "Laurence Charles",
         "corresponding_email_address": "laurence.charles@univ-provence.fr",
@@ -107,7 +174,7 @@
       "section": "Full Paper",
       "token_count": 6338,
       "extraction_success": true,
-      "processing_time": 180.93940997123718,
+      "processing_time": 216.587327003479,
       "extracted_count": 2
     }
   ]

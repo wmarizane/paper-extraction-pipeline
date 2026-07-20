@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[277] Malik2010.pdf",
+    "extraction_date": "2026-06-14T12:30:15.855309",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[277] Malik2010.pdf",
+      "start_time": "2026-06-14T12:25:10.704621",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 27.02384638786316,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14240264892578125,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 11136
+        },
+        "llm_extraction": {
+          "time_seconds": 277.9843239784241,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PBO",
+        "critical_component": "PBO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PBO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "Octadecyl (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "88 wt% THF–water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 mm x 10 mm",
+        "detector": "Density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "evidence_text": "Critical conditions for PBO were realized in 88 wt% THF–water... In the semipreparative LCCC system... Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å)... temperature (25.0°C for LCCC)... flow rate of 2.0 mL min−1.",
+        "notes": "Used as first dimension for separation of block copolymer from homopolymer. Although semi-preparative column dimensions are used, the text explicitly identifies this as LCCC analysis to separate components based on critical conditions.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PHO",
+        "critical_component": "PHO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PHO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Spherisorb ODS2",
+        "stationary_phase_chemistry": "Octadecyl (C18)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "mobile_phase_ratio": "92 wt% THF–water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "2.0 mL min-1",
+        "pore_size": "80 Å",
+        "column_dimensions": "250 mm x 10 mm",
+        "detector": "Density detection system DDS 70 combined with SICON LCD 201 RI detector",
+        "evidence_text": "Critical conditions for PHO in 92 wt% THF–water... In the semipreparative LCCC system... Spherisorb ODS2 (250 mm × 10 mm, 5 μm, 80 Å)... temperature (25.0°C for LCCC)... flow rate of 2.0 mL min−1.",
+        "notes": "Used as first dimension for separation of block copolymer from homopolymer.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "Critical adsorption point for PEO block",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "Silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "75.7 wt% acetone–water",
+        "mobile_phase_ratio_units": "wt%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 mL min-1",
+        "pore_size": "100 Å",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "detector": "RI 2414 or SEDEX 45 ELSD coupled with DDS 70",
+        "evidence_text": "In the analytical LCCC system (second dimension)... Critical conditions for PEO exist at 75.7 wt% acetone–water... Normal phase column used for LCCC in second dimension was Nucleosil 100-5 OH 5 μm, silica-based diol phase; 4.6 mm × 250 mm; particle diameter: 5 μm; pore diameter: 100 Å... flow rate of 0.5 mL min−1... temperature (25.0°C for LCCC).",
+        "notes": "Used as second dimension to separate block copolymer from unreacted MeO-PEO initiator.",
+        "paper_doi": "10.1016/j.aca.2009.11.017",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2010"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 11136,
+      "extraction_success": true,
+      "processing_time": 277.9613428115845,
+      "extracted_count": 3
+    }
+  ]
+}

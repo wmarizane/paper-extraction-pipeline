@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "source_pdf": "[48] Pasch1993.pdf",
+    "extraction_date": "2026-06-14T11:37:27.509872",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[48] Pasch1993.pdf",
+      "start_time": "2026-06-14T11:35:35.726078",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 35.45087742805481,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.14081716537475586,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 783
+        },
+        "llm_extraction": {
+          "time_seconds": 76.19198536872864,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "Block copolymers of decyl and methyl methacrylate",
+        "critical_component": "Poly(methyl methacrylate)",
+        "architecture": "Block copolymer",
+        "critical_condition_basis": "Chromatographic conditions resulting in a critical mode for poly(methyl methacrylate)",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
+        "mobile_phase_solvents": null,
+        "mobile_phase_ratio": null,
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Block copolymers of decyl and methyl methacrylate were analyzed by liquid chromatography at the critical point of adsorption. The molar mass and the polydispersity of the decyl methacrylate block was determined using chromatographic conditions resulting in a critical mode for poly(methyl methacrylate).",
+        "notes": "Specific experimental parameters (solvents, ratios, temperature, column type) are not provided in the text; only the concept of the critical condition for the PMMA block is described.",
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": "1993"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 783,
+      "extraction_success": true,
+      "processing_time": 76.16931414604187,
+      "extracted_count": 1
+    }
+  ]
+}

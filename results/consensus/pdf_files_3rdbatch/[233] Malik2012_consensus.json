@@ -5,212 +5,161 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:45:08.233479+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_3rdbatch/[233] Malik2012_latest.json",
+        "results/mistral-small-24b/pdf_files_3rdbatch/[233] Malik2012_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 6
+    "total_conditions": 4
   },
   "extracted_data": {
     "conditions": [
       {
-        "critical_condition_basis": "critical adsorption point",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
+          "critical_component": "PS",
+          "column_name": "Symmetry 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "18\u201382",
+          "temperature_celsius": "30[\u2022] C",
+          "pore_size": "300 A[\u02da]",
+          "flow_rate": "0.5 mL/min"
+        },
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PS",
+        "stationary_phase_chemistry": "Silica-based octadecyl phase",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "mobile_phase_ratio_units": "vol.%",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PS homopolymers.",
+        "architecture": "Linear",
+        "critical_component": "Polystyrene",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2012",
+        "pore_size": "300 A",
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "mobile_phase_ratio": "18\u201382",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "detector": "ELS",
         "corresponding_email_address": "mimran.malik@iccs.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "column_name": "Symmetry 300",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "Liquid chromatography at the critical conditions of PS allows the molar mass independent elution of PS homopolymers and the separation of the PS-b-PEO block copolymers which is governed by the PEO block irrespective of the size of the PS block.",
-        "publication_year": "2012",
-        "column_dimensions": "250 mm \u00d7 4.6 mm",
-        "mobile_phase_ratio": "18:82",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "pore_size": "300 A",
-        "mobile_phase_ratio_units": "vol.%",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
-        "mobile_phase_solvents": [
-          "THF",
-          "DMF"
-        ],
-        "analyte_polymer": "PS-b-PEO",
-        "critical_component": "PS",
-        "paper_doi": "10.1016/j.chroma.2012.04.045",
         "temperature_celsius": "30",
-        "notes": null,
-        "critical_condition_confidence": "explicit",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "flow_rate": "0.5 mL/min",
+        "detector": "UV (254 nm) and ELSD",
+        "column_name": "Symmetry 300",
+        "analyte_polymer": "Polystyrene",
+        "corresponding_author_name": "Muhammad Imran Malik",
         "model_confidences": {
-          "qwen": "missed",
+          "qwen": "explicit",
           "mistral": "explicit"
         }
       },
       {
-        "critical_condition_basis": "critical adsorption point",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil Si 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "96\u20134",
+          "temperature_celsius": "30[\u2022] C",
+          "pore_size": "300 A[\u02da]",
+          "flow_rate": "0.5 mL/min"
         },
-        "detector": "ELS",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "architecture": "linear",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "column_name": "Nucleosil Si 300",
-        "flow_rate": "0.5 mL/min",
-        "evidence_text": "The CAP of PEO was realised on a normal phase Si column in the same mobile phase system (THF\u2013DMF) which is used for the critical conditions of PS. At a mobile phase composition of 96\u20134 (THF\u2013DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
-        "publication_year": "2012",
-        "column_dimensions": "250 mm \u00d7 4.6 mm",
-        "mobile_phase_ratio": "96:4",
-        "stationary_phase_chemistry": "plain silica",
-        "pore_size": "300 A",
-        "mobile_phase_ratio_units": "vol.%",
+        "critical_condition_basis": "Liquid chromatography at critical conditions of PEO",
+        "stationary_phase_chemistry": "silica",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "mobile_phase_ratio_units": "vol.%",
         "mobile_phase_solvents": [
           "THF",
           "DMF"
         ],
-        "analyte_polymer": "PS-b-PEO",
+        "column_mode": "Normal Phase",
+        "notes": "Used for separation of PS-b-PEO block copolymers and quantification of PEO homopolymers.",
+        "architecture": "linear",
         "critical_component": "PEO",
-        "paper_doi": "10.1016/j.chroma.2012.04.045",
-        "temperature_celsius": "30",
-        "notes": null,
         "critical_condition_confidence": "explicit",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      },
-      {
-        "analyte_polymer": "Polystyrene (PS)",
-        "critical_component": "Polystyrene (PS)",
-        "architecture": "Linear homopolymer",
-        "critical_condition_basis": "Critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Symmetry 300",
-        "stationary_phase_chemistry": "Silica-based octadecyl phase (RP)",
-        "mobile_phase_solvents": [
-          "THF",
-          "DMF"
-        ],
-        "mobile_phase_ratio": "18:82",
-        "mobile_phase_ratio_units": "vol.%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "30",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "300 A",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "UV (254 nm) and ELSD",
-        "evidence_text": "The CAP of PS was realised in a DMF\u2013THF mobile phase on a RP octadecyl column... A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF\u2013DMF: 18\u201382).",
-        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
-        "paper_doi": "10.1016/j.chroma.2012.04.045",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
         "publication_year": "2012",
-        "model_confidences": {
-          "qwen": "explicit",
-          "mistral": "missed"
-        }
-      },
-      {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
-        "critical_component": "Polyethylene oxide (PEO)",
-        "architecture": "Linear homopolymer",
-        "critical_condition_basis": "Critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil Si 300",
-        "stationary_phase_chemistry": "Plain silica (Normal Phase)",
-        "mobile_phase_solvents": [
-          "THF",
-          "DMF"
-        ],
-        "mobile_phase_ratio": "96:4",
-        "mobile_phase_ratio_units": "vol.%",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "30",
-        "flow_rate": "0.5 mL/min",
         "pore_size": "300 A",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "UV (254 nm) and ELSD",
-        "evidence_text": "The CAP of PEO was realised on a normal phase Si column... At a mobile phase composition of 96\u20134 (THF\u2013DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence.",
-        "notes": "Used as first dimension for 2D-LC of PS-b-PEO copolymers.",
         "paper_doi": "10.1016/j.chroma.2012.04.045",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
-        "publication_year": "2012",
-        "model_confidences": {
-          "qwen": "explicit",
-          "mistral": "missed"
-        }
-      },
-      {
-        "analyte_polymer": "PS",
-        "critical_component": "PS",
-        "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Symmetry 300",
-        "stationary_phase_chemistry": "silica-based octadecyl phase",
-        "mobile_phase_solvents": [
-          "THF",
-          "DMF"
-        ],
-        "mobile_phase_ratio": "18:82",
-        "mobile_phase_ratio_units": "vol. %",
+        "mobile_phase_ratio": "96\u20134",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
         "temperature_celsius": "30",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "300 A",
         "column_dimensions": "250 mm \u00d7 4.6 mm",
-        "detector": "ELS",
-        "evidence_text": "The CAP of PS was realised in a DMF\u2013THF mobile phase on a RP octadecyl column [14,47]. This allowed us to extend the molar mass range up to the hundred thousands. As demonstrated in Fig. 1a, PS calibration standards adsorb in 100% DMF on a silica-based octadecyl column. The higher molar mass standards elute later than the lower molar mass standards. The elution volume decreases as the amount of THF in the mobile phase is increased. A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF\u2013DMF: 18\u201382). These conditions are called the critical conditions or the CAP of PS for the specific column, temperature and mobile phase conditions used.",
-        "notes": null,
-        "paper_doi": "10.1016/j.chroma.2012.04.045",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
-        "publication_year": "2012",
-        "model_confidences": {
-          "qwen": "missed",
-          "mistral": "explicit"
-        }
-      },
-      {
+        "flow_rate": "0.5 mL/min",
+        "detector": "UV (254 nm) and ELSD",
+        "column_name": "Nucleosil Si 300",
         "analyte_polymer": "PEO",
-        "critical_component": "PEO",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PS-b-PEO",
+        "critical_component": "PS",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
         "critical_condition_confidence": "explicit",
-        "column_name": "Nucleosil Si 300",
-        "stationary_phase_chemistry": "plain silica",
+        "column_name": "Symmetry 300",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "DMF"
         ],
-        "mobile_phase_ratio": "96:4",
-        "mobile_phase_ratio_units": "vol. %",
+        "mobile_phase_ratio": "18\u201382",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -222,12 +171,68 @@
         "pore_size": "300 A",
         "column_dimensions": "250 mm \u00d7 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "The CAP of PEO was realised on a normal phase Si column in the same mobile phase system (THF\u2013DMF) which is used for the critical conditions of PS. THF is an adsorption promoting solvent for PEOs on a normal phase Si column. The addition of DMF promotes desorption. At a mobile phase composition of 96\u20134 (THF\u2013DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence. Further increase in the DMF content in the mobile phase leads to the exclusion of PEOs from pores of the stationary phase resulting in earlier elution of higher molar mass standards than the lower molar mass standards (Fig. 10a).",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PS",
+          "critical_component": "PS",
+          "column_name": "Symmetry 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "18\u201382",
+          "temperature_celsius": "30[\u2022] C",
+          "pore_size": "300 A[\u02da]",
+          "flow_rate": "0.5 mL/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.chroma.2012.04.045",
-        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
         "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "analyte_polymer": "PS-b-PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 300",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "96\u20134",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm \u00d7 4.6 mm",
+        "detector": "ELS",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid chromatography at the critical conditions of PEO",
+          "critical_component": "PEO",
+          "column_name": "Nucleosil Si 300",
+          "mobile_phase_solvents": "THF\u2013DMF",
+          "mobile_phase_ratio": "96\u20134",
+          "temperature_celsius": "30[\u2022] C",
+          "pore_size": "300 A[\u02da]",
+          "flow_rate": "0.5 mL/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
         "publication_year": "2012",
         "model_confidences": {
           "qwen": "missed",

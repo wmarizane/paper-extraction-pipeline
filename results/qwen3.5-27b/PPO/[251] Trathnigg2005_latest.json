@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[251] Trathnigg2005.pdf",
-    "extraction_date": "2026-06-07T23:03:36.224444",
+    "extraction_date": "2026-07-19T14:50:30.989989",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:50:30.979615+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[251] Trathnigg2005.md",
+        "sha256": "86874a15c745af8eb89f0fda2999126b50c9335cce795cb3f658be49bc5a5446",
+        "char_len": 33561,
+        "token_count": 9773
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[251] Trathnigg2005.pdf",
-      "start_time": "2026-06-07T22:59:00.223369",
+      "start_time": "2026-07-19T14:45:30.324372",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 16.65232276916504,
+          "time_seconds": 17.184406518936157,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13278484344482422,
+          "time_seconds": 0.13055801391601562,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 9773
         },
         "llm_extraction": {
-          "time_seconds": 259.2158591747284,
+          "time_seconds": 283.257137298584,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -35,15 +82,16 @@
     "conditions": [
       {
         "analyte_polymer": "Poly(propylene oxide)",
-        "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "PO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for PO",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "100% poly(divinylbenzene)",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "92.42",
         "mobile_phase_ratio_units": "wt%",
@@ -58,8 +106,17 @@
         "pore_size": "500 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
-        "evidence_text": "On this column, a CAP for PO is found at about 90% acetone... At a composition close to the CAP for PO... Fig. 2. Chromatograms of PEGs, PPGs, and water, as obtained on the Jordi column in 92.42 wt% acetone (CAP for PO).",
-        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for PO is found at about 90% acetone",
+          "critical_component": "CAP for PO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "92.42 wt% acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ500 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers (EO-PO-EO and PO-EO-PO) where EO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -68,15 +125,16 @@
       },
       {
         "analyte_polymer": "Poly(propylene oxide)",
-        "critical_component": "Propylene oxide (PO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "PO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for PO",
         "critical_condition_confidence": "explicit",
         "column_name": "Discovery HS-PEG",
-        "stationary_phase_chemistry": "Silica-based PEG phase",
+        "stationary_phase_chemistry": "silica-based PEG phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "44.52",
         "mobile_phase_ratio_units": "wt%",
@@ -90,9 +148,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "120 A",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "RI",
-        "evidence_text": "As can be seen in Fig. 4, a CAP for PO was found on the Discovery HS-PEG column... in acetone–water with about 45% (w/w) acetone... Fig. 6. Chromatograms of several poloxamers and PPG 1000, as obtained on the Discovery HS-PEG column in 44.52 wt% acetone.",
-        "notes": "Used to analyze EO-PO block copolymers where EO elutes in SEC mode. Suitable for shorter PO blocks.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for PO was found on the Discovery HS-PEG column",
+          "critical_component": "CAP for PO",
+          "column_name": "Discovery HS-PEG",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "44.52 wt% acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ 120 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers with shorter PO blocks. EO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -101,15 +168,16 @@
       },
       {
         "analyte_polymer": "Poly(ethylene oxide)",
-        "critical_component": "Ethylene oxide (EO) block",
-        "architecture": "Linear homopolymer",
+        "critical_component": "EO block",
+        "architecture": "linear",
         "critical_condition_basis": "Critical adsorption point (CAP) for EO",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
-        "stationary_phase_chemistry": "Silica-based Diol phase",
+        "stationary_phase_chemistry": "silica-based Diol phase",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "78.54",
         "mobile_phase_ratio_units": "wt%",
@@ -124,8 +192,17 @@
         "pore_size": "100 A",
         "column_dimensions": "250 x 4.6 mm",
         "detector": "RI",
-        "evidence_text": "The desired conditions were now found on a Diol phase in acetone–water with about 80 wt% aetone (Fig. 8): A CAP for EO exists at 78.54% (w/w) acetone. As can be seen in Fig. 9, PPGs elute in SEC mode, and the peaks of all PEGs (from 400 to 12000) coincide precisely.",
-        "notes": "Used to analyze EO-PO block copolymers where PO elutes in SEC mode.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO exists at 78.54% (w/w) acetone",
+          "critical_component": "CAP for EO",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone water",
+          "mobile_phase_ratio": "78.54% (w/w) acetone",
+          "temperature_celsius": "temperature of 25.0 8C was maintained",
+          "pore_size": "nominal pore sizeZ100 A",
+          "flow_rate": "0.5 ml/min"
+        },
+        "notes": "Used for analysis of poloxamers where PO elutes in SEC mode.",
         "paper_doi": "10.1016/j.polymer.2005.07.048",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -140,7 +217,7 @@
       "section": "Full Paper",
       "token_count": 9773,
       "extraction_success": true,
-      "processing_time": 259.19362449645996,
+      "processing_time": 283.2022137641907,
       "extracted_count": 3
     }
   ]

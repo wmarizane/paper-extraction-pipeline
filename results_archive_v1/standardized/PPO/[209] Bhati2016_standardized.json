@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "source_pdf": "[209] Bhati2016",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.092056Z"
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "temperature_celsius": 160.0,
+        "mobile_phase_ratio": "83/17",
+        "column_name": "Hypercarb",
+        "notes": "Determined using the new method proposed in the paper.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "2-octanol",
+          "1,2-Dichlorobenzene"
+        ],
+        "evidence_text": "The LCCC for it-PP is identified as 83/17 vol.% of 2-octanol/ODCB (Fig. 2e).",
+        "corresponding_author_name": "R. Brüll",
+        "pore_size": "250 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "it-PP",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "it-PP",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol.%",
+        "mobile_phase_ratio_raw": "83/17",
+        "mobile_phase_ratio_components": [
+          83.0,
+          17.0
+        ],
+        "flow_rate_raw": "1 mL/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "250 Å",
+        "pore_size_angstrom": 250.0,
+        "architecture_raw": "Linear"
+      },
+      {
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "column_dimensions": "4.6 mm x 250 mm",
+        "temperature_celsius": 160.0,
+        "mobile_phase_ratio": "20.5/79.5",
+        "column_name": "Hypercarb[TM]",
+        "notes": "Determined using the new method proposed in the paper.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "2-octanol",
+          "1,2-Dichlorobenzene"
+        ],
+        "evidence_text": "The LCCC for PE is identified as 20.5/79.5 vol.% of 2-octanol/ODCB (Fig. 4d).",
+        "corresponding_author_name": "R. Brüll",
+        "pore_size": "250 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PE",
+        "detector": "Evaporative light scattering detector (ELSD)",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "PE",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol.%",
+        "mobile_phase_ratio_raw": "20.5/79.5",
+        "mobile_phase_ratio_components": [
+          20.5,
+          79.5
+        ],
+        "flow_rate_raw": "1 mL/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "250 Å",
+        "pore_size_angstrom": 250.0,
+        "architecture_raw": "Linear"
+      },
+      {
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "temperature_celsius": 160.0,
+        "mobile_phase_ratio": "88/12",
+        "column_name": "Hypercarb",
+        "notes": "Determined using the new method proposed in the paper; values from Table 2.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "2-ethyl-1-hexanol",
+          "1,2,4-trichlorobenzene"
+        ],
+        "evidence_text": "The critical composition of the mobile phase for it-PP in 2E1H/TCB obtained with the new method are identical with the critical composition determined using the SEC-LAC plot method.",
+        "corresponding_author_name": "R. Brüll",
+        "pore_size": "250 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "it-PP",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "it-PP",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol.%",
+        "mobile_phase_ratio_raw": "88/12",
+        "mobile_phase_ratio_components": [
+          88.0,
+          12.0
+        ],
+        "flow_rate_raw": "1 mL/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "250 Å",
+        "pore_size_angstrom": 250.0,
+        "architecture_raw": "Linear"
+      },
+      {
+        "paper_doi": "10.1016/j.chroma.2016.05.019",
+        "flow_rate": "1 mL/min",
+        "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
+        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "temperature_celsius": 160.0,
+        "mobile_phase_ratio": "52/48",
+        "column_name": "Hypercarb[TM]",
+        "notes": "Determined using the new method proposed in the paper; values from Table 2.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "n-decane",
+          "1,2,4-trichlorobenzene"
+        ],
+        "evidence_text": "The critical composition of the mobile phase for PE in n-decane/TCB obtained with the new method and Cools’ method.",
+        "corresponding_author_name": "R. Brüll",
+        "pore_size": "250 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PE",
+        "detector": "ELSD",
+        "stationary_phase_chemistry": "porous graphitic carbon",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "LCCC",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Normal Phase",
+        "critical_component": "PE",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "vol.%",
+        "mobile_phase_ratio_raw": "52/48",
+        "mobile_phase_ratio_components": [
+          52.0,
+          48.0
+        ],
+        "flow_rate_raw": "1 mL/min",
+        "flow_rate_ml_per_min": 1.0,
+        "pore_size_raw": "250 Å",
+        "pore_size_angstrom": 250.0,
+        "architecture_raw": "Linear"
+      }
+    ]
+  }
+}

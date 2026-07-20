@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[366] Pasch2006.pdf",
-    "extraction_date": "2026-06-08T01:35:28.843619",
+    "extraction_date": "2026-07-19T14:23:24.171510",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:23:24.162158+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[366] Pasch2006.md",
+        "sha256": "91a5f0b9d633dc45a1bb8fafb437608df1cb2cc46598cb3f1bb3cf6ce48cd66e",
+        "char_len": 30562,
+        "token_count": 8023
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[366] Pasch2006.pdf",
-      "start_time": "2026-06-08T01:34:42.233666",
+      "start_time": "2026-07-19T14:22:28.276038",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 28.36918830871582,
+          "time_seconds": 29.42845630645752,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10030126571655273,
+          "time_seconds": 0.10413241386413574,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8023
         },
         "llm_extraction": {
-          "time_seconds": 18.140297889709473,
+          "time_seconds": 26.31235980987549,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,10 +83,11 @@
         "analyte_polymer": "PEG-g-PMAA",
         "critical_component": "PEG",
         "architecture": "graft",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Knauer Nucleosil RP18-100",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -58,25 +105,35 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": "ELSD",
-        "evidence_text": "The reaction products PEG-g-PMAA and PMAA having a higher polarity than PEG should elute under these conditions prior the PEG peak.",
+        "field_evidence": {
+          "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
+          "critical_component": "PEG",
+          "column_name": "Knauer Nucleosil RP18-100",
+          "mobile_phase_solvents": "methanol/water 81/19 (w/w)",
+          "mobile_phase_ratio": "81/19 (w/w)",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": "10.1002/masy.200551317",
-        "corresponding_author_name": "Harald Pasch",
+        "corresponding_author_name": "Harald Pasch; Martina Adler; Daniela Knecht; Frank Rittig; Ronald Lange",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany; Polymer Standards Service GmbH, Mainz, Germany; BASF Aktiengesellschaft, Ludwigshafen, Germany",
         "publication_year": "2006"
       },
       {
         "analyte_polymer": "PEG-g-PVA",
         "critical_component": "PEG",
         "architecture": "graft",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "MeOH",
-          "H2O"
+          "methanol",
+          "water"
         ],
         "mobile_phase_ratio": "82.5:17.5",
         "mobile_phase_ratio_units": "% by volume",
@@ -91,12 +148,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "The critical point for PEO was obtained at an eluent of MeOH-water of 82.5:17.5% by volume.",
+        "field_evidence": {
+          "critical_condition_basis": "separation takes place with regard to the chemical composition of the different species and PEG elutes in one chromatographic peak irrespective of molar mass",
+          "critical_component": "PEG",
+          "column_name": "Nucleosil C18",
+          "mobile_phase_solvents": "MeOH:H2O 82.5:17.5% by volume",
+          "mobile_phase_ratio": "82.5:17.5% by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": "10.1002/masy.200551317",
-        "corresponding_author_name": "Harald Pasch",
+        "corresponding_author_name": "Harald Pasch; Martina Adler; Daniela Knecht; Frank Rittig; Ronald Lange",
         "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
-        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Darmstadt, Germany; Polymer Standards Service GmbH, Mainz, Germany; BASF Aktiengesellschaft, Ludwigshafen, Germany",
         "publication_year": "2006"
       }
     ]
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 8023,
       "extraction_success": true,
-      "processing_time": 18.1288423538208,
+      "processing_time": 26.206714630126953,
       "extracted_count": 2
     }
   ]

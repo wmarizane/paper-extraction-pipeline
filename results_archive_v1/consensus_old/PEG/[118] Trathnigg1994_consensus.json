@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[118] Trathnigg1994.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "physical_address": "Institute of Organic Chemistry, University of Graz, Graz, Austria",
+        "evidence_text": "As can be seen from Fig. 1, all PEGs eluted at the same elution volume from an ODS2 column with methanol\u2013water (80:20) as a mobile phase.",
+        "detector": "density and refractive index",
+        "pore_size": null,
+        "critical_component": "polyethylene glycol",
+        "publication_year": "1994",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "80:20",
+        "critical_condition_basis": "All PEGs eluted at the same elution volume",
+        "column_name": "ODS2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "polyethylene glycol (PEG)",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "octadecyl silica (ODS)",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "notes": "Critical conditions established for PEGs to analyze ethoxylated fatty alcohols (FAEs).",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

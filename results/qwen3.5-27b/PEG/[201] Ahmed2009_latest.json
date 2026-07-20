@@ -1,52 +1,100 @@
 {
   "metadata": {
     "source_pdf": "[201] Ahmed2009.pdf",
-    "extraction_date": "2026-06-07T23:32:49.391467",
+    "extraction_date": "2026-07-19T13:41:11.425426",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:41:11.408056+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[201] Ahmed2009.md",
+        "sha256": "94a723d96808d377b4ca23594ecbf2fc0f1a736e4f03c974dc6fb59d90288505",
+        "char_len": 40616,
+        "token_count": 11600
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[201] Ahmed2009.pdf",
-      "start_time": "2026-06-07T23:25:13.954013",
+      "start_time": "2026-07-19T13:30:35.050240",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 24.40240716934204,
+          "time_seconds": 22.732428312301636,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12318634986877441,
+          "time_seconds": 0.11613583564758301,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11600
         },
         "llm_extraction": {
-          "time_seconds": 430.9117431640625,
+          "time_seconds": 613.4468402862549,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 5
+    "total_conditions": 6
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEG-MME 2000, PEG-MME 5000, EO-CL diblock copolymers",
-        "critical_component": "EO block (PEG)",
+        "analyte_polymer": "PEG-MME 2000",
+        "critical_component": "EO block",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass for PEG-MME",
+        "critical_condition_basis": "At the CAP for PEG on a normal phase column",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
         "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "77.01",
-        "mobile_phase_ratio_units": "wt-% acetone",
+        "mobile_phase_ratio": "77.01 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -57,9 +105,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 Å",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD (SEDEX 45) coupled with density detector",
-        "evidence_text": "PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP, while PCL elutes in SEC mode. Under these conditions, CL–EO diblock copolymers with PEG-MME 2000 as initiator and different monomer-to-initiator ratios elute in SEC mode, while different PEG-MMEs elute at the same position, regardless their molar mass",
-        "notes": "LCCC measurements were performed at a temperature of 25.0 C. Mobile phase composition controlled by density measurement.",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+          "critical_component": "PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone–water mobile phases",
+          "mobile_phase_ratio": "77.01 wt-% acetone",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 100 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where EO is at CAP and CL elutes in SEC mode.",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -67,19 +124,63 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "PCL-ME (n=2, n=5, n=15, n=20), PEG-MME 2000, PEG-MME 5000, EO-CL diblock copolymers",
-        "critical_component": "CL block (PCL)",
+        "analyte_polymer": "PEG-MME 5000",
+        "critical_component": "EO block",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass for PCL-ME",
+        "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil 100-5 OH",
+        "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "77.01 wt-% acetone",
+        "mobile_phase_ratio_units": "wt-%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25.0",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "At the CAP for PEG on a normal phase column",
+          "critical_component": "PEG-monomethyl ethers elute on the Nucleosil 100-5 OH column in 77.01 wt-% acetone at the CAP",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone–water mobile phases",
+          "mobile_phase_ratio": "77.01 wt-% acetone",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 100 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where EO is at CAP and CL elutes in SEC mode.",
+        "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab–Molecular Characteristics (CePOL/MC), Heinrichstrasse 28, A-8010 Graz, Austria",
+        "publication_year": "2009"
+      },
+      {
+        "analyte_polymer": "PCL-ME",
+        "critical_component": "CL block",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "80.98",
-        "mobile_phase_ratio_units": "wt-% THF",
+        "mobile_phase_ratio": "80.98 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -90,9 +191,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD (SEDEX 45) coupled with density detector",
-        "evidence_text": "PCL-MEs elute at 2.8 mL, regardless their degree of polymerization. The peaks of PEG-MME and PCLME are well separated from each other. Obviously, PEG elutes in SEC mode",
-        "notes": "LCCC measurements were performed at a temperature of 25.0 C. Mobile phase composition controlled by density measurement.",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "find critical conditions for PCL on a reversed phase column",
+          "critical_component": "PCL-MEs elute at 2.8 mL, regardless their degree of polymerization",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.98 wt-% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where CL is at CAP and EO elutes in SEC mode.",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -100,19 +210,20 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "EO-CL block copolymers (synthesized with BF3-Et2O)",
-        "critical_component": "CL block (PCL)",
+        "analyte_polymer": "PCL-A",
+        "critical_component": "CL block",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass for CL block",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "80.92",
-        "mobile_phase_ratio_units": "wt-% THF",
+        "mobile_phase_ratio": "80.98 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -123,9 +234,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "LCCC of EO–CL block copolymers with different degree of polymerization (synthesized with BF3�Et2O as catalyst and PEG-MME 2000 as initiator), as obtained on the Jordi column in 80.92% THF",
-        "notes": "Specific composition for BF3-catalyzed samples. The text notes the block copolymer elutes just like the initiator (at the CAP).",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "find critical conditions for PCL on a reversed phase column",
+          "critical_component": "PCL-MEs elute at 2.8 mL, regardless their degree of polymerization",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.98 wt-% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze EO-CL block copolymers where CL is at CAP and EO elutes in SEC mode. PCL-A elutes at a different position than PCL-ME.",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -133,19 +253,20 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "EO-CL block copolymers (synthesized with NaH)",
-        "critical_component": "CL block (PCL)",
-        "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass for CL block",
+        "analyte_polymer": "EO-CL block copolymer (BF3 catalyst)",
+        "critical_component": "CL block",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "80.98",
-        "mobile_phase_ratio_units": "wt-% THF",
+        "mobile_phase_ratio": "80.92 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -156,9 +277,18 @@
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
         "column_dimensions": "250 x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "LCCC of EO–CL block copolymers with different monomer-toinitiator ratio (synthesized with NaH as catalyst and PEG-MME 5000 as initiator), as obtained on the Jordi column in 80.98% THF",
-        "notes": "Specific composition for NaH-catalyzed samples.",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
+          "critical_component": "block copolymer elutes just like the initiator (as it should do at the CAP)",
+          "column_name": "Jordi column",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.92% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Specific ratio 80.92% THF used for BF3-catalyzed samples (Fig 7).",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -166,19 +296,20 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "EO-CL block copolymers (semipreparative fractionation)",
-        "critical_component": "CL block (PCL)",
-        "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass for CL block",
+        "analyte_polymer": "EO-CL block copolymer (NaH catalyst)",
+        "critical_component": "CL block",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
         "critical_condition_confidence": "explicit",
-        "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "ODS2 (C18)",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "stationary_phase_chemistry": "poly(divinylbenzene)",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "80.48",
-        "mobile_phase_ratio_units": "wt-% THF",
+        "mobile_phase_ratio": "80.98 wt-% THF",
+        "mobile_phase_ratio_units": "wt-%",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -186,12 +317,21 @@
           "salt_concentration": null
         },
         "temperature_celsius": "25.0",
-        "flow_rate": "2.0 ml/min",
-        "pore_size": "80 Å",
-        "column_dimensions": "25 x 300 mm",
-        "detector": "density detector",
-        "evidence_text": "A Spherisorb ODS2 column was used at the CAP for CL, which was found to be in THF–water containing 80.48 wt-% THF as mobile phase.",
-        "notes": "Semipreparative LCCC used for fractionation prior to MALDI-TOF-MS.",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "500 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD coupled with density detector",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions for PCL on a reversed phase column",
+          "critical_component": "block copolymer elutes just like the initiator (as it should do at the CAP)",
+          "column_name": "Jordi column",
+          "mobile_phase_solvents": "THF water",
+          "mobile_phase_ratio": "80.98% THF",
+          "temperature_celsius": "LCCC measurements were performed at a temperature of 25.0 °C",
+          "pore_size": "nominal pore size = 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Specific ratio 80.98% THF used for NaH-catalyzed samples (Fig 9).",
         "paper_doi": "10.1016/j.eurpolymj.2009.05.001",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -206,8 +346,8 @@
       "section": "Full Paper",
       "token_count": 11600,
       "extraction_success": true,
-      "processing_time": 430.88930654525757,
-      "extracted_count": 5
+      "processing_time": 613.3920805454254,
+      "extracted_count": 6
     }
   ]
 }

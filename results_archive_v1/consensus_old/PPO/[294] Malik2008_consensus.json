@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[294] Malik2008.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "THF",
+          "water"
+        ],
+        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
+        "evidence_text": "All separations in LCCC were performed on a Jordi Gel DVB 500 RP column... in 80 wt% THF-water... As can be seen, the elution volumes of PPGs with the same end groups are almost independent of molar mass... which indicates, that this mobile phase composition does not exactly correspond to the critical point, but it is close enough to the CAP to allow a good separation...",
+        "detector": "ELSD",
+        "pore_size": "500 A",
+        "critical_component": "poly(propylene oxide) repeat unit",
+        "publication_year": "2008",
+        "temperature_celsius": "25.0",
+        "mobile_phase_ratio": "80 wt% THF-water",
+        "critical_condition_basis": "elution volume independent of molar mass for PPG diols and allyl-terminated PPGs",
+        "column_name": "Jordi Gel DVB 500 RP",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "wt%",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PPG",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "100% poly-divinylbenzene",
+        "paper_doi": "10.1016/j.eurpolymj.2007.10.025",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "notes": "Text states the composition is 'close enough to the CAP' but not exactly the critical point; however, it is used for LCCC separation based on end groups.",
+        "flow_rate": "0.5 ml/min",
+        "model_confidences": {
+          "qwen": "strong_inference",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

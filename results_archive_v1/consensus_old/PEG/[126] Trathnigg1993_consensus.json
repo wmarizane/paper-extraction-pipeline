@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[126] Trathnigg1993.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Institute of Organic Chemistry, University of Graz, A-8010 Graz, Heinrichstrasse 28, Austria",
+        "evidence_text": "Critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
+        "detector": "density and RI",
+        "pore_size": null,
+        "critical_component": "polyethylene glycol backbone",
+        "publication_year": "1993",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "80:20",
+        "critical_condition_basis": "critical conditions for PEG were found at a mobile phase composition of MeOH:H20 80:20, which allowed a good separation of PPG.",
+        "column_name": "ODS 2",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "V/V",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "Polyethylene glycol (PEG)",
+        "corresponding_email_address": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "C-18",
+        "paper_doi": null,
+        "corresponding_author_name": "B. Trathnigg",
+        "notes": "Under these conditions, elution volumes of diols, mono- and dimethylethers are quite similar, indicating independence from chain length for the PEG block.",
+        "flow_rate": "1.0 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

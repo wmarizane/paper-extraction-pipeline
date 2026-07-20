@@ -1,35 +1,82 @@
 {
   "metadata": {
     "source_pdf": "[321] Malik2009.pdf",
-    "extraction_date": "2026-06-07T23:25:49.081737",
+    "extraction_date": "2026-07-19T15:49:42.327845",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T15:49:42.315743+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[321] Malik2009.md",
+        "sha256": "3e529b81a370e263b3f78f1d116c7e53839054a768151ad447830c7977c350c1",
+        "char_len": 30930,
+        "token_count": 8467
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[321] Malik2009.pdf",
-      "start_time": "2026-06-07T23:19:01.681850",
+      "start_time": "2026-07-19T15:44:28.184498",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 22.80683946609497,
+          "time_seconds": 25.15995740890503,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12795782089233398,
+          "time_seconds": 0.1183013916015625,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8467
         },
         "llm_extraction": {
-          "time_seconds": 384.4649739265442,
+          "time_seconds": 288.7985146045685,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 5
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
@@ -37,15 +84,16 @@
         "analyte_polymer": "PEG-MME 1100",
         "critical_component": "EO block",
         "architecture": "block copolymer",
-        "critical_condition_basis": "CAP for EO on normal phase column",
+        "critical_condition_basis": "CAP for EO",
         "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil 100-5 OH",
         "stationary_phase_chemistry": "silica-based diol phase",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "77.93",
+        "mobile_phase_ratio": "77.93%",
         "mobile_phase_ratio_units": "w/w acetone",
         "aqueous_parameters": {
           "pH": null,
@@ -56,10 +104,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "100 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "at the CAP for block A (in this case EO) on a normal phase column (NucleoSil 100-5 OH) in an acetone–water mobile phase (78%, w/w acetone) the initiator (PEG-MME) elutes close to the void volume",
-        "notes": "Text mentions 78% in discussion and 77.93% in Fig 4 caption. Extracted specific value from caption.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for EO",
+          "critical_component": "CAP for EO",
+          "column_name": "Nucleosil 100-5 OH",
+          "mobile_phase_solvents": "acetone–water mobile phase",
+          "mobile_phase_ratio": "77.93%, w/w acetone",
+          "temperature_celsius": "temperature of 25.0[◦] C was maintained for all measurements in LCCC",
+          "pore_size": "pore diameter: 100 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze block copolymers of PEG-MME 1100 with PO, BO, and HO. The EO block is at critical condition.",
         "paper_doi": "10.1016/j.chroma.2008.12.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -67,18 +124,19 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(butene oxide)",
+        "analyte_polymer": "PEG-MME 1100",
         "critical_component": "BO block",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "CAP for BO on reversed phase column",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "CAP for BO",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "84.55",
+        "mobile_phase_ratio": "84.55%",
         "mobile_phase_ratio_units": "w/w THF",
         "aqueous_parameters": {
           "pH": null,
@@ -89,10 +147,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "a CAP for BO is observed on the Jordi column in 84.55%, w/w THF (Fig. 6)",
-        "notes": "Used to separate block copolymers from homopolymers.",
+        "field_evidence": {
+          "critical_condition_basis": "CAP for BO",
+          "critical_component": "CAP for BO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "84.55%, w/w THF",
+          "temperature_celsius": "temperature of 25.0[◦] C was maintained for all measurements in LCCC",
+          "pore_size": "pore diameter: 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
+        },
+        "notes": "Used to analyze block copolymers containing BO. The BO block is at critical condition.",
         "paper_doi": "10.1016/j.chroma.2008.12.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -100,18 +167,19 @@
         "publication_year": "2009"
       },
       {
-        "analyte_polymer": "poly(hexene oxide)",
+        "analyte_polymer": "PEG-MME 1100",
         "critical_component": "HO block",
-        "architecture": "homopolymer",
-        "critical_condition_basis": "CAP for HO on reversed phase column",
+        "architecture": "block copolymer",
+        "critical_condition_basis": "CAP for HO",
         "critical_condition_confidence": "explicit",
         "column_name": "Jordi Gel DVB 500 RP",
         "stationary_phase_chemistry": "poly-divinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "water"
         ],
-        "mobile_phase_ratio": "87.04",
+        "mobile_phase_ratio": "87.04%",
         "mobile_phase_ratio_units": "w/w THF",
         "aqueous_parameters": {
           "pH": null,
@@ -122,76 +190,19 @@
         "temperature_celsius": "25.0",
         "flow_rate": "0.5 ml/min",
         "pore_size": "500 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
+        "column_dimensions": "250 mm × 4.6 mm",
         "detector": "ELSD",
-        "evidence_text": "for HO on the same column in 87.04%, w/w THF (Fig. 7)",
-        "notes": "Used to separate block copolymers from homopolymers.",
-        "paper_doi": "10.1016/j.chroma.2008.12.067",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "PEG-MME 350-PO-BO",
-        "critical_component": "BO block",
-        "architecture": "triblock copolymer",
-        "critical_condition_basis": "CAP for BO on reversed phase column",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "84.55",
-        "mobile_phase_ratio_units": "w/w THF",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+        "field_evidence": {
+          "critical_condition_basis": "CAP for HO",
+          "critical_component": "CAP for HO",
+          "column_name": "Jordi Gel DVB 500 RP",
+          "mobile_phase_solvents": "THF–water",
+          "mobile_phase_ratio": "87.04%, w/w THF",
+          "temperature_celsius": "temperature of 25.0[◦] C was maintained for all measurements in LCCC",
+          "pore_size": "pore diameter: 500 Å",
+          "flow_rate": "flow rate of 0.5 ml/min"
         },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "at the CAP for BO, the first block (PEG-MME) and possible diblocks (PEG-MME–PO and PEG-MME–BO) are well separated from the BO homopolymer",
-        "notes": "Analysis of triblock at CAP for the third block (BO).",
-        "paper_doi": "10.1016/j.chroma.2008.12.067",
-        "corresponding_author_name": "Bernd Trathnigg",
-        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Institute of Chemistry, Karl-Franzens-University, Heinrichstrasse 28, A-8010 Graz, Austria",
-        "publication_year": "2009"
-      },
-      {
-        "analyte_polymer": "PEG-MME 350-PO-BO-HO",
-        "critical_component": "HO block",
-        "architecture": "tetrablock copolymer",
-        "critical_condition_basis": "CAP for HO on reversed phase column",
-        "critical_condition_confidence": "explicit",
-        "column_name": "Jordi Gel DVB 500 RP",
-        "stationary_phase_chemistry": "poly-divinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "water"
-        ],
-        "mobile_phase_ratio": "87.04",
-        "mobile_phase_ratio_units": "w/w THF",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 ml/min",
-        "pore_size": "500 Å",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "ELSD",
-        "evidence_text": "at the CAP for HO, all other structures elute in SEC mode and are thus clearly separated from the HO homopolymer",
-        "notes": "Analysis of tetrablock at CAP for the fourth block (HO).",
+        "notes": "Used to analyze block copolymers containing HO. The HO block is at critical condition.",
         "paper_doi": "10.1016/j.chroma.2008.12.067",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
@@ -206,8 +217,8 @@
       "section": "Full Paper",
       "token_count": 8467,
       "extraction_success": true,
-      "processing_time": 384.44227266311646,
-      "extracted_count": 5
+      "processing_time": 288.7413136959076,
+      "extracted_count": 3
     }
   ]
 }

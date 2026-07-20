@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[113] Pasch.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Acetonitrile",
+          "Water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut Schlo\u00dfgartenstra\u00dfe 6 64289 Darmstadt, Germany",
+        "evidence_text": "At a solvent composition of acetonitrile-water 46:54% by volume, the retention time does not change with molar mass, and at this 'critical point of adsorption' separation is accomplished exclusively with respect to functionality regardless of the molar mass.",
+        "detector": "Waters differential refractometer R401, Knauer u.v./vis filter photometer",
+        "pore_size": null,
+        "critical_component": "polyethylene oxide",
+        "publication_year": "1994",
+        "temperature_celsius": "25",
+        "mobile_phase_ratio": "46:54",
+        "critical_condition_basis": "critical point of adsorption",
+        "column_name": "Nucleosil RP-18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% by volume",
+        "critical_condition_confidence": "explicit",
+        "architecture": "Linear",
+        "analyte_polymer": "polyethylene oxide (PEO)",
+        "corresponding_email_address": null,
+        "column_dimensions": "60x4mm I.D.",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": null,
+        "corresponding_author_name": "H. Pasch",
+        "notes": "Used for separation of functional PEOs with different terminal groups (alkyloxy and aryloxy).",
+        "flow_rate": null,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

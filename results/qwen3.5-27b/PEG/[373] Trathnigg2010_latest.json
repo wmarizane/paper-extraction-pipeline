@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[373] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T04:32:46.822024",
+    "extraction_date": "2026-07-19T21:32:25.204336",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T21:32:25.190816+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[373] Trathnigg2010.md",
+        "sha256": "1b44878237631ee99cf2030bdff006567ff583527d2b6caffa4bb66e617c9272",
+        "char_len": 25768,
+        "token_count": 7283
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[373] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T04:29:37.745045",
+      "start_time": "2026-07-19T21:28:58.726492",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 14.571065425872803,
+          "time_seconds": 13.395548343658447,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.13503551483154297,
+          "time_seconds": 0.10737776756286621,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7283
         },
         "llm_extraction": {
-          "time_seconds": 174.37077641487122,
+          "time_seconds": 192.91604900360107,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -41,6 +88,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "Onyx C18",
         "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
@@ -58,28 +106,37 @@
         "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
         "column_dimensions": "100mm×4.6mm",
         "detector": "evaporative light scattering detector PL-ELS 2100",
-        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water, which corresponds to the CAP for PEG.",
-        "notes": "Used for analysis of fatty acid ethoxylates and PEG samples. The text states this composition corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "field_evidence": {
+          "critical_condition_basis": "90 % acetone – water, which corresponds to the CAP for PEG",
+          "critical_component": "CAP for PEG",
+          "column_name": "Onyx C18 (Phenomenex, Torrance, CA, USA)",
+          "mobile_phase_solvents": "acetone, methanol and water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+          "flow_rate": "At a flow rate of 2 ml/min"
+        },
+        "notes": "Used for LCCC separation of fatty acid ethoxylates and PEG samples. The text states this corresponds to the CAP for PEG.",
         "paper_doi": "10.1016/j.proche.2009.12.020",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
       },
       {
         "analyte_polymer": "PEG 400 monolaurate",
-        "critical_component": "PEG",
+        "critical_component": "PEG block",
         "architecture": "diblock",
         "critical_condition_basis": "LCCC in 90 % methanol",
         "critical_condition_confidence": "explicit",
         "column_name": "FAD column",
-        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
         "mobile_phase_solvents": [
-          "methanol",
-          "water"
+          "methanol"
         ],
         "mobile_phase_ratio": "90 % methanol",
-        "mobile_phase_ratio_units": "wt-%",
+        "mobile_phase_ratio_units": null,
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -91,12 +148,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "Right side: Off-line two-dimensional separation: First dimension: LCCC in 90 % methanol with focussing of fractions on a FAD column",
-        "notes": "This is the first dimension of an off-line 2D-LC setup (LCCC-LEAC). The text identifies the first dimension as LCCC in 90% methanol. The column is referred to as 'FAD column' which likely refers to the Onyx C18 monolith used in other LCCC experiments, but the text does not explicitly link the name 'FAD' to the specific column specs in this sentence. The stationary phase chemistry is inferred from the general LCCC setup described in the experimental section (Onyx C18).",
+        "field_evidence": {
+          "critical_condition_basis": "Off-line two-dimensional separation: First dimension: LCCC in 90 % methanol",
+          "critical_component": "PEG 400 monolaurate",
+          "column_name": "FAD column",
+          "mobile_phase_solvents": "methanol",
+          "mobile_phase_ratio": "90 % methanol",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": "Used in off-line 2D-LC (LCCC-LEAC) for PEG 400 monolaurate. The text mentions 'focussing of fractions on a FAD column' in the first dimension (LCCC).",
         "paper_doi": "10.1016/j.proche.2009.12.020",
         "corresponding_author_name": "Bernd Trathnigg",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
-        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
       }
     ]
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 7283,
       "extraction_success": true,
-      "processing_time": 174.34851217269897,
+      "processing_time": 192.86517119407654,
       "extracted_count": 2
     }
   ]

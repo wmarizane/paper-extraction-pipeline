@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "source_pdf": "[403] Radke2005.pdf",
+    "extraction_date": "2026-06-14T09:20:52.385109",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[403] Radke2005.pdf",
+      "start_time": "2026-06-14T09:20:09.764998",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 23.883755922317505,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13130760192871094,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9911
+        },
+        "llm_extraction": {
+          "time_seconds": 18.604904413223267,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(lactide)",
+        "critical_component": "poly(lactide)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions determined for linear PLAs",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil",
+        "stationary_phase_chemistry": "bare silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "57.1/42.9",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 A[˚] , 300 A[˚]",
+        "column_dimensions": "0.46!20 cm, 0.46!25 cm",
+        "detector": "UV-detector G 1314A, evaporative light scattering detector ELS 1000",
+        "evidence_text": "The critical conditions for linear PLAs with molar masses ranging from 4800 to 26000 g/mol were determined at 50 8C at a composition of 57.1/42.9 (1,4-dioxane/n-hexane). Despite the different molar masses, all samples elute at the same elution volume (Fig. 1).",
+        "notes": null,
+        "paper_doi": "10.1016/j.polymer.2005.05.028",
+        "corresponding_author_name": "Wolfgang Radke; Karsten Rode; Alexander V. Gorshkov; Tadeusz Biela",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de; krode@dki.tu-darmstadt.de; avgor@chph.ras.ru; tadek@bilbo.cbmm.lodz.pl",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, 64289 Darmstadt, Germany; N.N. Semenov Institute of Chemical Physics, Russian Academy of Sciences, Kosygina 4, 119991 Moscow, Russian Federation; Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland",
+        "publication_year": "2005"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9911,
+      "extraction_success": true,
+      "processing_time": 18.591055870056152,
+      "extracted_count": 1
+    }
+  ]
+}

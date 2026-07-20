@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "source_pdf": "[367] Adler2005",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.082340Z"
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEG, MPEG, MPEG-MM 1, MPEG-MM 2, poly(MPEG-MM 2), copolymers of MPEG-MM and methacrylic acid",
+        "critical_component": "PEO (poly(ethylene oxide))",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption for PEG",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "stationary_phase_chemistry": "RP-18 (octadecyl modified silica gel)",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "81:19",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
+        "notes": "Used for separation of MPEG and macromonomer with regard to endgroups irrespective of molar mass. Also used for copolymers to compensate for PEO molar mass distribution.",
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), SchloBgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": 2005,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "wt.-%",
+        "mobile_phase_ratio_raw": "81:19",
+        "mobile_phase_ratio_components": [
+          81.0,
+          19.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Knauer Nucleosil RP18-100",
+        "stationary_phase_chemistry": "octadecyl modified silica gel",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "81:19",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELSD",
+        "evidence_text": "Typical LC-CC conditions for PEO are a non-polar stationary phase of RP-18 (octadecyl modified silica gel) and a mobile phase composition of methanol-water 81:19 wt.-%. At critical conditions, PEGs of different molar masses elute at the same elution volume.",
+        "notes": null,
+        "paper_doi": "10.1002/macp.200500344",
+        "corresponding_author_name": "Harald Pasch",
+        "corresponding_email_address": "hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schloßgartenstr. 6, 64289 Darmstadt, Germany",
+        "publication_year": 2005,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "wt.-%",
+        "mobile_phase_ratio_raw": "81:19",
+        "mobile_phase_ratio_components": [
+          81.0,
+          19.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

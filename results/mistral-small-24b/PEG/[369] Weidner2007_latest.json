@@ -1,69 +1,168 @@
 {
   "metadata": {
     "source_pdf": "[369] Weidner2007.pdf",
-    "extraction_date": "2026-06-08T01:44:48.688785",
+    "extraction_date": "2026-07-19T14:30:51.879788",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:30:51.869957+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[369] Weidner2007.md",
+        "sha256": "ab93012e30c5bbe199323c318ffba47c4a9f05db848e84e0a79341b14958db5e",
+        "char_len": 29256,
+        "token_count": 8584
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[369] Weidner2007.pdf",
-      "start_time": "2026-06-08T01:39:43.500503",
+      "start_time": "2026-07-19T14:29:37.995535",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 44.01050901412964,
+          "time_seconds": 44.32732081413269,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1210019588470459,
+          "time_seconds": 0.10429739952087402,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8584
         },
         "llm_extraction": {
-          "time_seconds": 261.0566327571869,
+          "time_seconds": 29.400609970092773,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
         "analyte_polymer": "PEO-co-PPO",
         "critical_component": "PEO",
-        "architecture": "mono-n-butyl ether",
+        "architecture": "null",
         "critical_condition_basis": "critical conditions of separation of one polymer unit",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": "C18 phase",
+        "column_name": "YMC RP 2-3 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "THF",
+          "tetrahydrofuran",
           "water"
         ],
         "mobile_phase_ratio": "85:15",
         "mobile_phase_ratio_units": "v/v",
         "aqueous_parameters": {
-          "pH": null,
+          "pH": "null",
           "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
+          "salt_type": "null",
+          "salt_concentration": "null"
         },
-        "temperature_celsius": null,
-        "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "In LACCC mode a polymer elutes independently of its molar mass according to its chemical heterogeneity, e.p. end groups. This particular mode is nearly exclusively applied in the 1° dimension of the 2D chromatography. By means of a switching valve fractions are taken and transferred into the 2™ dimension, which is SEC. Using commercially available software (WINGPC™: Polymer Standard Service, Mainz, Germany) 2D plots can be created showing molar mass versus end group distribution. The analysis of copolymers can also be performed without this often Lime-consuming combination of methods. First the ‘critical’ conditions of separation of one polymer unit have to be ascertained. At these conditions separation according to the mass of the second polymer unit must be achieved. The same procedure, ie. separation at ‘critical’ conditions, has also to be performed for the second polymer unit. After calibration of SEC for both units the molar mass and molar mass distribution (MMD) of the copolymer units can be obtained within a certain mass range, which is different for various polymer systems. An example for a PEO-a-PPo mono-n-butyl ether polymer is shown in Figs. 1(a)—-1(d). Hence, one has to ascertain ‘critical’ conditions of adsorption for each single copolymer structure and, simultaneously, to ensure a separation according to molar mass for the corresponding second polymer unit. This cannot be achieved for all copolymers. Sometimes, at ‘critical’ conditions for the first unit, the second unit elutes in adsorption mode, and a SEC separation cannot be obtained. Furthermore, especially at higher masses, the solubility of one structural unit at ‘critical’ conditions of the other is limited, which results in precipitation at the top of the separation columns. Furthermore, the separation at ‘critical’ conditions of adsorption is achieved in most cases using binary (or ternary) solvent mixtures, which might contain salt to avoid aggregation. Thus, the transfer of fractions from LACCC mode to SEC mode can lead to strong additional signals in the size exclusion chromatograms. In conjunction with a drastically lower polymer concentration in the second dimension due to fractionation (up to 1M) single fractions) of the original amount of sample, clear peak detection cannot always be assured. Another important drawback is the lack of standards for calibrating the SEC. For this reason a matrix mixture as well as structure-dependent ionization completely different approach was recently presented. The probabilities in MALDI-TOF MS, the signal intensity chromatographic separation in LACCC was shifted to LAC near ‘critical’, LAC,.,,CC) mode. This resulted in a used (see Fig. 2). Therefore, after baseline subtraction, each broadening of peaks due to increased interactions of polymer MALDI spectrum was normalized in a second step to an absolute intensity of 100%. Por the construction of 2D plots separation conditions have to be very carefully adjusted, because the risk of precipitation of molecules always exists. Simultaneously, the second chromatographic dimension - (SEC) was replaced by matrix-assisted laser desorption/ionization time-of-flight mass spectrometry mass spectrometry (MALDI-TOF MS). For MALDI coupling, fractions taken from LAC).C were transferred by means ofa spray device onto the MALDI sample target. Using the new MassChrom2D software tool the copolymer composition of each fraction can be calculated from mass spectra. This software was developed to replace the inconvenient and time-consuming calculation procedure previously performed in Microsoft Excel. The practicability of the chosen mathematical procedure for the analysis of copolyesters was presented recently. The procedure is based on the assignment of observed masses by MALDI-TOF MS to calculated masses in a matrix formed by both monomer units, normalization and subsequent correction by chromatographic intensity information. Depending on the Figure 2. Evaporative light scattering detector (ELSD) signal peak resolution in MALDI-TOF MS, which can be significantly improved by a previous chromatographic separation, and total ion current (TIC) of a series of 667 MALDI mass copolymers with masses up to m/z 11000 could be investigated. Due to inhomogeneities in the solid sample/ deposition onto the MALDI target.",
-        "notes": null,
+        "temperature_celsius": "45",
+        "flow_rate": "0.5mL/min",
+        "pore_size": "125mm",
+        "column_dimensions": "250mm x 4.6mm",
+        "detector": "SEDEX 45",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of separation of one polymer unit",
+          "critical_component": "PEO",
+          "column_name": "YMC RP 2-3 18",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water",
+          "mobile_phase_ratio": "85:15v/v",
+          "temperature_celsius": "45°C",
+          "pore_size": "125mm",
+          "flow_rate": "0.5mL/min"
+        },
+        "notes": "null",
         "paper_doi": "10.1002/rom.314h",
-        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
         "corresponding_email_address": "stefien.weidner@bam.de",
-        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
+        "publication_year": "2007"
+      },
+      {
+        "analyte_polymer": "PEO-co-PPO",
+        "critical_component": "PPO",
+        "architecture": "null",
+        "critical_condition_basis": "critical conditions of separation of one polymer unit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "YMC RP 2-3 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "water"
+        ],
+        "mobile_phase_ratio": "65:35",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": "null",
+          "salt_added": false,
+          "salt_type": "null",
+          "salt_concentration": "null"
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "0.5mL/min",
+        "pore_size": "125mm",
+        "column_dimensions": "250mm x 4.6mm",
+        "detector": "SEDEX 45",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of separation of one polymer unit",
+          "critical_component": "PPO",
+          "column_name": "YMC RP 2-3 18",
+          "mobile_phase_solvents": "tetrahydrofuran (THF)/ water",
+          "mobile_phase_ratio": "65:35v/v",
+          "temperature_celsius": "45°C",
+          "pore_size": "125mm",
+          "flow_rate": "0.5mL/min"
+        },
+        "notes": "null",
+        "paper_doi": "10.1002/rom.314h",
+        "corresponding_author_name": "Steffen M. Weidner; Jana Falkenhagen; Sergey Maltsev; Volker Sauerland; Marian Rinken",
+        "corresponding_email_address": "stefien.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Dept. I ‘Analytical Chemistry, Reference Materials’, Richard-Willstactier-Strasse 11, D-12489 Berlin, Germany; Bruker Daltonik GmbH, Fahrenheitstrasse 4, D-28359 Bremen, Germany; Dow Deutschland Anlagengesellschaft mbH, Buetzflether Sand, D-21683 Stade, Germany",
         "publication_year": "2007"
       }
     ]
@@ -74,8 +173,8 @@
       "section": "Full Paper",
       "token_count": 8584,
       "extraction_success": true,
-      "processing_time": 31.005916357040405,
-      "extracted_count": 1
+      "processing_time": 29.29461979866028,
+      "extracted_count": 2
     }
   ]
 }

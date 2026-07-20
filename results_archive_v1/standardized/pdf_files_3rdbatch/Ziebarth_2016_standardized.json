@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "source_pdf": "Ziebarth_2016",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.086858Z"
+  },
+  "summary": {
+    "total_conditions": 4
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "flow_rate": "0.5 mL/min",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "column_dimensions": "250 × 4.6 mm",
+        "temperature_celsius": 17.3,
+        "mobile_phase_ratio": "58/42",
+        "column_name": "Nucleosil C18",
+        "notes": "Ring-PS refers to cyclic polystyrene. Used to establish CAP for ring polymers.",
+        "publication_year": 2016,
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 µm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Ring-PS... are measured as 17.3 °C/ 8.23 min",
+        "corresponding_author_name": "Yongmei Wang",
+        "pore_size": "100 Å",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "Ring-PS",
+        "detector": "UV absorption detector",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "Ring-PS",
+        "architecture": "cyclic",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58/42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0,
+        "architecture_raw": "ring"
+      },
+      {
+        "analyte_polymer": "Ls-PS",
+        "critical_component": "Ls-PS",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 14.8,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "UV absorption detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 µm) smaller than the preparative fractionation. The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition for the polymers of interest. TCAP and tE,CAP of Ls-PS... are measured as 14.8 °C/7.4 min",
+        "notes": "Ls-PS refers to linear PS with saturated DPE end-groups. Used to establish CAP for linear polymers.",
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58/42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0
+      },
+      {
+        "analyte_polymer": "Lu-PS",
+        "critical_component": "Lu-PS",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 14.95,
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "UV absorption detector",
+        "evidence_text": "Analytical LCCC analysis used a column (Nucleosil C18, 250 × 4.6 mm, 100 Å, 5 µm)... The eluent was CH2Cl2/CH3CN (58/42, v/v) at a flow rate of 0.5 mL/min. The column temperature was varied to achieve CAP condition... TCAP and tE,CAP of... Lu-PS... are measured as 14.95 °C/7.6 min",
+        "notes": "Lu-PS refers to linear PS with unsaturated DPE end-groups. Used to establish CAP for linear polymers with reactive end-groups.",
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58/42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "0.5 mL/min",
+        "flow_rate_ml_per_min": 0.5,
+        "pore_size_raw": "100 Å",
+        "pore_size_angstrom": 100.0
+      },
+      {
+        "analyte_polymer": "polystyrene",
+        "critical_component": "linear",
+        "architecture": "linear",
+        "critical_condition_basis": "coelution of different molecular weights",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18 bonded silica",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "CH2Cl2",
+          "CH3CN"
+        ],
+        "mobile_phase_ratio": "58/42",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": 19.0,
+        "flow_rate": "2 mL/min",
+        "pore_size": null,
+        "column_dimensions": "250 × 9.8 mm",
+        "detector": "light scattering detector",
+        "evidence_text": "For fractionation of ring PS, two C18 bonded silica columns (Nucleosil C18, 250 × 9.8 mm, 100 Å pore, 5 μm and Nucleosil C18, 250 × 9.8 mm, 300 Å pore, 5 μm) and a mixed RT eluent of CH2Cl2/CH3CN (58/42, v/v, Samchun, HPLC grade) at a FD flow rate of 2 mL/min were used. The temperature of the columns was set at 19 °C at which different molar mass linear PS precursors coelute.",
+        "notes": null,
+        "paper_doi": "10.1021/acs.macromol.6b01925",
+        "corresponding_author_name": "Yongmei Wang",
+        "corresponding_email_address": "ywang@memphis.edu",
+        "physical_address": "Department of Chemistry, The University of Memphis, Memphis, Tennessee 38154, United States",
+        "publication_year": 2016,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "v/v",
+        "mobile_phase_ratio_raw": "58/42",
+        "mobile_phase_ratio_components": [
+          58.0,
+          42.0
+        ],
+        "flow_rate_raw": "2 mL/min",
+        "flow_rate_ml_per_min": 2.0,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

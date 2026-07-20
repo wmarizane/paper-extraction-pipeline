@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[209] Bhati2016.pdf",
-    "extraction_date": "2026-06-07T23:59:59.179739",
+    "extraction_date": "2026-07-19T05:35:59.101338",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:35:59.087980+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[209] Bhati2016.md",
+        "sha256": "aea07316a13b4fc540f008829e02f658c4d28e2f9e52e0938d6f8b4a89b3c033",
+        "char_len": 33003,
+        "token_count": 8903
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[209] Bhati2016.pdf",
-      "start_time": "2026-06-07T23:57:40.384766",
+      "start_time": "2026-07-19T05:33:30.002723",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 79.44463276863098,
+          "time_seconds": 75.45729088783264,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.09754228591918945,
+          "time_seconds": 0.09991288185119629,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8903
         },
         "llm_extraction": {
-          "time_seconds": 59.252424001693726,
+          "time_seconds": 73.4853196144104,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -36,11 +82,12 @@
       {
         "analyte_polymer": "it-PP",
         "critical_component": "it-PP",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "2-octanol",
           "ODCB"
@@ -48,20 +95,29 @@
         "mobile_phase_ratio": "83/17",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "The LCCC for it-PP is identified as 83/17 vol.% of 2-octanol/ODCB (Fig. 2e).",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "it-PP[348]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "83/17 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -69,11 +125,12 @@
       {
         "analyte_polymer": "st-PP",
         "critical_component": "st-PP",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "2-octanol",
           "ODCB"
@@ -81,20 +138,29 @@
         "mobile_phase_ratio": "63/37",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "The LCCC for st-PP is identified as 63/37 vol.% of 2-octanol/ODCB (Fig. 3g).",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "st-PP[196]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "63/37 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -102,11 +168,12 @@
       {
         "analyte_polymer": "PE",
         "critical_component": "PE",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "2-octanol",
           "ODCB"
@@ -114,20 +181,29 @@
         "mobile_phase_ratio": "20.5/79.5",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "The LCCC for PE is identified as 20.5/79.5 vol.% of 2-octanol/ODCB (Fig. 4d).",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "PE[181]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "2-octanol/ODCB",
+          "mobile_phase_ratio": "20.5/79.5 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -135,11 +211,12 @@
       {
         "analyte_polymer": "it-PP",
         "critical_component": "it-PP",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "2E1H",
           "TCB"
@@ -147,20 +224,29 @@
         "mobile_phase_ratio": "88/12",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "The critical composition of the mobile phase for it-PP in 2E1H/TCB obtained with the new method are identical with the critical composition determined using the SEC-LAC plot method.",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "it-PP[348]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "2E1H/TCB",
+          "mobile_phase_ratio": "88/12 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -168,11 +254,12 @@
       {
         "analyte_polymer": "st-PP",
         "critical_component": "st-PP",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "2E1H",
           "ODCB"
@@ -180,20 +267,29 @@
         "mobile_phase_ratio": "64/36",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "Good agreement in the critical composition of the mobile phase for st-PP in 2E1H/ODCB is found between the results obtained with the new method and Cools’ method.",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "st-PP[196]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "2E1H/ODCB",
+          "mobile_phase_ratio": "64/36 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -201,11 +297,12 @@
       {
         "analyte_polymer": "PE",
         "critical_component": "PE",
-        "architecture": "null",
+        "architecture": "linear",
         "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Hypercarb[TM]",
         "stationary_phase_chemistry": "porous graphitic carbon",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
           "n-decane",
           "TCB"
@@ -213,20 +310,29 @@
         "mobile_phase_ratio": "52/48",
         "mobile_phase_ratio_units": "vol.%",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "160",
         "flow_rate": "1 mL/min",
         "pore_size": "250 Å",
-        "column_dimensions": "4.6 (mm) × 250 (mm) I.D. × L.",
+        "column_dimensions": "4.6 mm × 250 mm I.D. × L",
         "detector": "ELSD",
-        "evidence_text": "The critical composition of the mobile phase for PE in n-decane/TCB obtained with the new method and Cools’ method.",
-        "notes": "null",
+        "field_evidence": {
+          "critical_condition_basis": "The composition of the mobile phase is composition corresponding to LCCC.",
+          "critical_component": "PE[181]",
+          "column_name": "Hypercarb[TM] column 4.6 (mm) × 250 (mm) I.D. × L",
+          "mobile_phase_solvents": "n-decane/TCB",
+          "mobile_phase_ratio": "52/48 vol.%",
+          "temperature_celsius": "160[◦] C",
+          "pore_size": "pore diameter of 250 Å",
+          "flow_rate": "1 mL/min"
+        },
+        "notes": null,
         "paper_doi": "10.1016/j.chroma.2016.05.019",
-        "corresponding_author_name": "R. Brüll",
+        "corresponding_author_name": "Robert Brüll",
         "corresponding_email_address": "robert.bruell@lbf.fraunhofer.de",
         "physical_address": "Fraunhofer Institute for Structural Durability and System Reliability, Division Plastics, Group Material Analytics, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
         "publication_year": "2016"
@@ -239,7 +345,7 @@
       "section": "Full Paper",
       "token_count": 8903,
       "extraction_success": true,
-      "processing_time": 59.238259077072144,
+      "processing_time": 73.37823033332825,
       "extracted_count": 6
     }
   ]

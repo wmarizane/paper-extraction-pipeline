@@ -1,35 +1,81 @@
 {
   "metadata": {
     "source_pdf": "[256] Zdovc2022.pdf",
-    "extraction_date": "2026-06-08T00:10:52.552247",
+    "extraction_date": "2026-07-19T05:47:34.888128",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T05:47:34.873207+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[256] Zdovc2022.md",
+        "sha256": "de7cd3e76946ce6783517024d81f344a14af515a1ac57bcdc2f5ebfda8b9021a",
+        "char_len": 50057,
+        "token_count": 14590
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[256] Zdovc2022.pdf",
-      "start_time": "2026-06-08T00:09:47.687775",
+      "start_time": "2026-07-19T05:46:39.585426",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 39.92931294441223,
+          "time_seconds": 35.61994767189026,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10659003257751465,
+          "time_seconds": 0.10266804695129395,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 14590
         },
         "llm_extraction": {
-          "time_seconds": 24.82841944694519,
+          "time_seconds": 19.52114748954773,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 1
   },
   "extracted_data": {
     "conditions": [
@@ -41,6 +87,7 @@
         "critical_condition_confidence": "explicit",
         "column_name": "PS-DVB",
         "stationary_phase_chemistry": "polystyrenedivinylbenzene",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "THF",
           "ACN"
@@ -48,55 +95,31 @@
         "mobile_phase_ratio": "15.6:84.4",
         "mobile_phase_ratio_units": "vol %",
         "aqueous_parameters": {
-          "pH": "null",
+          "pH": null,
           "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+          "salt_type": null,
+          "salt_concentration": null
         },
         "temperature_celsius": "25",
-        "flow_rate": "null",
+        "flow_rate": null,
         "pore_size": "100 Å",
         "column_dimensions": "4.6 mm × 150 mm",
         "detector": "UV detector (VWD) operating at 283 nm and an evaporative light scattering (ELS) detector 1260 Infinity",
-        "evidence_text": "The critical conditions at which the P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %",
-        "notes": "null",
-        "paper_doi": "10.1021/acs.analchem.2c00193",
-        "corresponding_author_name": "Junpeng Zhao",
-        "corresponding_email_address": "msjpzhao@scut.edu.cn",
-        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China",
-        "publication_year": "2022"
-      },
-      {
-        "analyte_polymer": "P(POPA)",
-        "critical_component": "P(POPA)",
-        "architecture": "null",
-        "critical_condition_basis": "critical conditions for P(POPA)",
-        "critical_condition_confidence": "explicit",
-        "column_name": "PS-DVB",
-        "stationary_phase_chemistry": "polystyrenedivinylbenzene",
-        "mobile_phase_solvents": [
-          "THF",
-          "ACN"
-        ],
-        "mobile_phase_ratio": "15.6:84.4",
-        "mobile_phase_ratio_units": "vol %",
-        "aqueous_parameters": {
-          "pH": "null",
-          "salt_added": false,
-          "salt_type": "null",
-          "salt_concentration": "null"
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions at which the P(POPA) homopolymers with different molar masses co-eluted on the PSDVB reverse stationary phase at a temperature of 25 °C were determined to be at the THF/ACN mobile phase composition of 15.6:84.4 vol %",
+          "critical_component": "The critical conditions for the P(POPA) homopolymers",
+          "column_name": "A PLRP-S column with polystyrenedivinylbenzene (PS-DVB) as the reversed stationary phase",
+          "mobile_phase_solvents": "THF/ACN",
+          "mobile_phase_ratio": "15.6:84.4 vol %",
+          "temperature_celsius": "25 °C",
+          "pore_size": "100 Å",
+          "flow_rate": null
         },
-        "temperature_celsius": "25",
-        "flow_rate": "null",
-        "pore_size": "100 Å",
-        "column_dimensions": "4.6 mm × 150 mm",
-        "detector": "UV, MALS, and RI detectors connected in series",
-        "evidence_text": "The critical conditions for the P(POPA) were at 25 °C at the mobile phase composition of THF: ACN = 15.6:84.4 vol %",
-        "notes": "null",
+        "notes": null,
         "paper_doi": "10.1021/acs.analchem.2c00193",
-        "corresponding_author_name": "Junpeng Zhao",
-        "corresponding_email_address": "msjpzhao@scut.edu.cn",
-        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China",
+        "corresponding_author_name": "Junpeng Zhao; Ema Zagar",
+        "corresponding_email_address": "msjpzhao@scut.edu.cn; ema.zagar@ki.si",
+        "physical_address": "Faculty of Materials Science and Engineering, South China University of Technology, Guangzhou 510641, P. R. China; Department of Polymer Chemistry and Technology, National Institute of Chemistry, Ljubljana SI1000, Slovenia",
         "publication_year": "2022"
       }
     ]
@@ -107,8 +130,8 @@
       "section": "Full Paper",
       "token_count": 14590,
       "extraction_success": true,
-      "processing_time": 24.81013560295105,
-      "extracted_count": 2
+      "processing_time": 19.408942461013794,
+      "extracted_count": 1
     }
   ]
 }

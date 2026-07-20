@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source_pdf": "[373] Trathnigg2010",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "standardized_by": "pipeline/standardizer.py",
+    "standardization_date": "2026-06-27T13:49:20.068502Z"
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "flow_rate": "2 ml/min",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "column_dimensions": "100mm×4.6mm",
+        "temperature_celsius": null,
+        "mobile_phase_ratio": "90 % acetone – water",
+        "column_name": "Onyx C18",
+        "notes": "Used for analysis of fatty acid ethoxylates and PEG samples. The text states this composition corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "publication_year": 2010,
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water, which corresponds to the CAP for PEG.",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "pore_size": "Mesopore: 130µm; Macropore: 2 µm",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "analyte_polymer": "PEG",
+        "detector": "PL-ELS 2100",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "critical_condition_confidence": "explicit",
+        "critical_condition_basis": "critical adsorption point",
+        "mobile_phase_ratio_units": "v/v",
+        "column_mode": "Reversed Phase",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        },
+        "mobile_phase_ratio_units_raw": "%",
+        "mobile_phase_ratio_raw": "90 % acetone – water",
+        "mobile_phase_ratio_components": [
+          90.0,
+          10.0
+        ],
+        "flow_rate_raw": "2 ml/min",
+        "flow_rate_ml_per_min": 2.0,
+        "pore_size_raw": "Mesopore: 130µm; Macropore: 2 µm",
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "PEG 400 monolaurate",
+        "critical_component": "PEG",
+        "architecture": "diblock",
+        "critical_condition_basis": "LCCC in 90 % methanol",
+        "critical_condition_confidence": "explicit",
+        "column_name": "FAD column",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 % methanol",
+        "mobile_phase_ratio_units": "w/w",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "evidence_text": "Right side: Off-line two-dimensional separation: First dimension: LCCC in 90 % methanol with focussing of fractions on a FAD column",
+        "notes": "This is the first dimension of an off-line 2D-LC setup (LCCC-LEAC). The text identifies the first dimension as LCCC in 90% methanol. The column is referred to as 'FAD column' which likely refers to the Onyx C18 monolith used in other LCCC experiments, but the text does not explicitly link the name 'FAD' to the specific column specs in this sentence. The stationary phase chemistry is inferred from the general LCCC setup described in the experimental section (Onyx C18).",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": 2010,
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "wt-%",
+        "mobile_phase_ratio_raw": "90 % methanol",
+        "mobile_phase_ratio_components": [
+          90.0,
+          10.0
+        ],
+        "flow_rate_raw": null,
+        "flow_rate_ml_per_min": null,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      },
+      {
+        "analyte_polymer": "PEG 400 monolaurate",
+        "critical_component": "PEG",
+        "architecture": "diblock",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": null,
+        "column_dimensions": "100mm×4.6mm",
+        "detector": "PL-ELS 2100",
+        "evidence_text": "Figure 3a shows the LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water, which corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "notes": "Used for analysis of fatty acid ethoxylates and PEG samples. The text states this composition corresponds to the Critical Adsorption Point (CAP) for PEG.",
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28, Graz, Austria",
+        "publication_year": 2010,
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "missed"
+        },
+        "mobile_phase_ratio_units_raw": "%",
+        "mobile_phase_ratio_raw": "90",
+        "mobile_phase_ratio_components": [
+          90.0,
+          10.0
+        ],
+        "flow_rate_raw": "2 ml/min",
+        "flow_rate_ml_per_min": 2.0,
+        "pore_size_raw": null,
+        "pore_size_angstrom": null
+      }
+    ]
+  }
+}

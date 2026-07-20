@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "source_pdf": "[301] Tufail2017.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T23:59:08.984817+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[301] Tufail2017_latest.json",
+        "results/mistral-small-24b/PEG/[301] Tufail2017_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at critical conditions",
+          "critical_component": "PMMA",
+          "column_name": "Jupiter C18 300 A, 5 mm, 250 x 4.6 mm column (Phenomenex)",
+          "mobile_phase_solvents": "a mixture of acetonitrile (ACN), tetrahydrofuran (THF) and trimethylamine (TEA)",
+          "mobile_phase_ratio": "ACN/THF/TEA: 93/6/1 v/v",
+          "temperature_celsius": "column temperature: 30 C",
+          "pore_size": "pore size 300 A",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min^-1"
+        },
+        "critical_condition_basis": "liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP)",
+        "stationary_phase_chemistry": "C18",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "tetrahydrofuran",
+          "trimethylamine"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Used for analysis of block copolymers containing PMMA and PEO. PEO is non-critical under these conditions.",
+        "architecture": "linear",
+        "critical_component": "PMMA",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2017",
+        "pore_size": "300 A",
+        "paper_doi": "10.1039/c7ra08804c",
+        "mobile_phase_ratio": "93/6/1",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "temperature_celsius": "30",
+        "column_dimensions": "250 x 4.6 mm",
+        "flow_rate": "0.5 mL min^-1",
+        "detector": "evaporative light scattering detector",
+        "column_name": "Jupiter C18",
+        "analyte_polymer": "PMMA",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography at critical conditions",
+          "critical_component": "PEG",
+          "column_name": "PerfectSil 300 A, 250 x 4.6 mm column (MZ Analysentechnik, Germany)",
+          "mobile_phase_solvents": "a mixture of tetrahydrofuran (THF) and N,N-dimethylformamide (DMF)",
+          "mobile_phase_ratio": "THF/DMF: 97.5/2.5 (v/v)",
+          "temperature_celsius": "column temperature: 30 C",
+          "pore_size": "pore size 300 A",
+          "flow_rate": "mobile phase was delivered at 0.5 mL min^-1"
+        },
+        "critical_condition_basis": "liquid chromatography at critical conditions",
+        "stationary_phase_chemistry": "silica",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "column_mode": "Normal Phase",
+        "notes": "Used for analysis of block copolymers containing PMMA and PEO. PMMA is non-critical under these conditions.",
+        "architecture": "linear",
+        "critical_component": "PEG",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2017",
+        "pore_size": "300 A",
+        "paper_doi": "10.1039/c7ra08804c",
+        "mobile_phase_ratio": "97.5/2.5",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "temperature_celsius": "30",
+        "column_dimensions": "250 x 4.6 mm",
+        "flow_rate": "0.5 mL min^-1",
+        "detector": "evaporative light scattering detector",
+        "column_name": "PerfectSil",
+        "analyte_polymer": "PEG",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

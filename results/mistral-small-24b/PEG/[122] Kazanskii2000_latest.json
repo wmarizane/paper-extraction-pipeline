@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "source_pdf": "[122] Kazanskii2000.pdf",
+    "extraction_date": "2026-07-19T12:41:32.124860",
+    "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:41:32.116766+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[122] Kazanskii2000.md",
+        "sha256": "762bcfed31804d59d3e53e2f6d68b8f185c2b0f1071bf377782ce0970e8dbed0",
+        "char_len": 89789,
+        "token_count": 35758
+      }
+    },
+    "pipeline_metrics": {
+      "pdf_name": "[122] Kazanskii2000.pdf",
+      "start_time": "2026-07-19T12:38:37.352219",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 150.06203961372375,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.2244112491607666,
+          "success": true,
+          "num_chunks": 2,
+          "total_tokens": 35758
+        },
+        "llm_extraction": {
+          "time_seconds": 24.436596632003784,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "poly(ethylene glycol) methyl ether",
+        "critical_component": "poly(ethylene glycol) methyl ether",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography under critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Lichrosorb-10 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "60:40",
+        "mobile_phase_ratio_units": "volume",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "refractometric detector",
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions",
+          "critical_component": "poly(ethylene glycol) methyl ether",
+          "column_name": "Lichrosorb-10 RP-18",
+          "mobile_phase_solvents": "acetonitrile and water",
+          "mobile_phase_ratio": "60:40 by volume",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": "1 ml/min"
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "K. S. Kazansky; G. Lapienis",
+        "corresponding_email_address": null,
+        "physical_address": "Institute of Chemical Physics named after. N.N. Semenov Russian Academy of Sciences 117977 Moscow, st. Kosygina, 4; Center of Molecular and Macromolecular Studies Polish Academy of Sciences, Sienkiewicza 112, 90-363 Lodz, Poland",
+        "publication_year": "2000"
+      },
+      {
+        "analyte_polymer": "poly(ethylene glycol)",
+        "critical_component": "poly(ethylene glycol)",
+        "architecture": "linear",
+        "critical_condition_basis": "liquid chromatography under critical conditions",
+        "critical_condition_confidence": "explicit",
+        "column_name": null,
+        "stationary_phase_chemistry": null,
+        "column_mode": null,
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "80:20",
+        "mobile_phase_ratio_units": null,
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": null,
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": null,
+        "field_evidence": {
+          "critical_condition_basis": "liquid chromatography under critical conditions",
+          "critical_component": "poly(ethylene glycol)",
+          "column_name": null,
+          "mobile_phase_solvents": "acetonitrile and water",
+          "mobile_phase_ratio": "80:20",
+          "temperature_celsius": null,
+          "pore_size": null,
+          "flow_rate": null
+        },
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "K. S. Kazanskii; G. Lapienis; V. I. Kuznetsova; V. V. Evreinov; S. Penczek",
+        "corresponding_email_address": null,
+        "physical_address": "Semenov Institute of Chemical Physics, Russian Academy of Sciences, ul. Kosygina 4, Moscow, 117977 Russia; Center ofMolecular and Macromolecular Studies, Polish Academy of Sciences",
+        "publication_year": null
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Part 1",
+      "token_count": 23368,
+      "extraction_success": true,
+      "processing_time": 24.294337272644043,
+      "extracted_count": 1
+    },
+    {
+      "chunk_index": 1,
+      "section": "Part 2",
+      "token_count": 12390,
+      "extraction_success": true,
+      "processing_time": 24.294337272644043,
+      "extracted_count": 1
+    }
+  ]
+}

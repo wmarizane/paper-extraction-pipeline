@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[112] Pasch1995.pdf",
+    "extraction_date": "2026-06-14T09:21:38.633832",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[112] Pasch1995.pdf",
+      "start_time": "2026-06-14T09:20:29.380994",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 50.013084173202515,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12029623985290527,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 7346
+        },
+        "llm_extraction": {
+          "time_seconds": 19.119303941726685,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "70:30",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm ID",
+        "detector": "Waters R-401 differential refractometer",
+        "evidence_text": "The separation of a triblock copolymer H(EO)x(PO)y(EO)xOH with respect to the propylene oxide block by liquid chromatography at the critical point of adsorption.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch; Karsten Rode",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": "1995"
+      },
+      {
+        "analyte_polymer": "H(EO)x(PO)y(EO)xOH",
+        "critical_component": "polyethylene oxide",
+        "architecture": "triblock",
+        "critical_condition_basis": "critical point of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil-100 RP-18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "mobile_phase_ratio": "42:58",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "25",
+        "flow_rate": "1 ml/min",
+        "pore_size": null,
+        "column_dimensions": "250 x 4 mm ID",
+        "detector": "Waters R-401 differential refractometer",
+        "evidence_text": "The separation of a triblock copolymer H(EO)x(PO)y(EO)xOH with respect to the propylene oxide block by liquid chromatography at the critical point of adsorption.",
+        "notes": null,
+        "paper_doi": null,
+        "corresponding_author_name": "Harald Pasch; Karsten Rode",
+        "corresponding_email_address": null,
+        "physical_address": "Deutsches Kunststoff-Institut, Schlossgartenstrasse 6, 64289 Darmstadt, Germany",
+        "publication_year": "1995"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 7346,
+      "extraction_success": true,
+      "processing_time": 19.1077401638031,
+      "extracted_count": 2
+    }
+  ]
+}

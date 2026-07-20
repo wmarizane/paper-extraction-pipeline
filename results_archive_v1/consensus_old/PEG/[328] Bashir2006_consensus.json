@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_pdf": "[328] Bashir2006.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 1
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "Methanol",
+          "Water"
+        ],
+        "physical_address": "Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstr. 6, D-64289 Darmstadt, Germany",
+        "evidence_text": "At a MeOH content of 83% the curves for different molar masses merge. This behaviour indicates the critical conditions, where the elution time does not depend on molar mass.",
+        "detector": "UV",
+        "pore_size": "300 \u00c5",
+        "critical_component": "Poly(ethylene glycol)",
+        "publication_year": "2006",
+        "temperature_celsius": "35",
+        "mobile_phase_ratio": "83/17",
+        "critical_condition_basis": "Elution time independent of molar mass at 83% MeOH",
+        "column_name": "Nucleosil C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "% v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "Poly(ethylene glycol)",
+        "corresponding_email_address": "wradke@dki.tu-darmstadt.de",
+        "column_dimensions": "250 mm \u00d7 4.6 mm I.D.",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1016/j.chroma.2006.07.089",
+        "corresponding_author_name": "Wolfgang Radke",
+        "notes": "Critical composition determined from isocratic experiments on high molar mass PEGs (2010 to 40,000 g/mol).",
+        "flow_rate": "1 mL/min",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

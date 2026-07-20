@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source_pdf": "[376] Malik2009.pdf",
+    "extraction_date": "2026-06-14T09:55:31.464992",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[376] Malik2009.pdf",
+      "start_time": "2026-06-14T09:49:21.175359",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 26.06343936920166,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10081100463867188,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 9181
+        },
+        "llm_extraction": {
+          "time_seconds": 344.12523007392883,
+          "success": false
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 0
+  },
+  "extracted_data": {
+    "conditions": []
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 9181,
+      "extraction_success": false,
+      "processing_time": 112.77956223487854,
+      "error": "Failed to decode JSON: no valid JSON found\nRaw Response: {\"extracted_conditions\":[{\"analyte_polymer\":\"EO–PO diblock copolymer\",\"critical_component\":\"EO\",\"architecture\":\"diblock\",\"critical_condition_basis\":\"CAP\",\"critical_condition_confidence\":\"explicit\",\"column_name\":\"Chromolith RP18\",\"stationary_phase_chemistry\":\"silica-based monolith with octadecyl grou"
+    }
+  ]
+}

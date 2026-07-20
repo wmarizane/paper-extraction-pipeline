@@ -1,35 +1,81 @@
 {
   "metadata": {
     "source_pdf": "[373] Trathnigg2010.pdf",
-    "extraction_date": "2026-06-08T01:50:28.819441",
+    "extraction_date": "2026-07-19T14:40:47.772603",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T14:40:47.762634+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[373] Trathnigg2010.md",
+        "sha256": "1b44878237631ee99cf2030bdff006567ff583527d2b6caffa4bb66e617c9272",
+        "char_len": 25768,
+        "token_count": 7283
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[373] Trathnigg2010.pdf",
-      "start_time": "2026-06-08T01:49:51.903734",
+      "start_time": "2026-07-19T14:39:55.820247",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 14.539649248123169,
+          "time_seconds": 13.985875368118286,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10094714164733887,
+          "time_seconds": 0.10971784591674805,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7283
         },
         "llm_extraction": {
-          "time_seconds": 22.274946928024292,
+          "time_seconds": 37.79225182533264,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
-    "total_conditions": 2
+    "total_conditions": 3
   },
   "extracted_data": {
     "conditions": [
@@ -37,15 +83,16 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Onyx C18",
         "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio": "90 %",
         "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
@@ -55,30 +102,40 @@
         },
         "temperature_celsius": null,
         "flow_rate": "2 ml/min",
-        "pore_size": null,
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
         "column_dimensions": "100mm×4.6mm",
-        "detector": "PL-ELS 2100",
-        "evidence_text": "At a flow rate of 2 ml/min the last peak (the diester of ethylene glycol) still appears in time (i.e. before 2 min). As can be seen in Figure 3b, this is not the casewith PEG 400 monolaurate: this samples contains also diesters of higher fatty acids, which will wrap over to the next chromatogram in the second dimension.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.proche.2009.12.020",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
       },
       {
-        "analyte_polymer": "PEG",
+        "analyte_polymer": "PEG 400 monolaurate",
         "critical_component": "PEG",
         "architecture": "linear",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "LCCC",
         "critical_condition_confidence": "explicit",
         "column_name": "Onyx C18",
         "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetone",
           "water"
         ],
-        "mobile_phase_ratio": "90",
+        "mobile_phase_ratio": "90 %",
         "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": null,
@@ -88,13 +145,65 @@
         },
         "temperature_celsius": null,
         "flow_rate": "2 ml/min",
-        "pore_size": null,
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
         "column_dimensions": "100mm×4.6mm",
-        "detector": "PL-ELS 2100",
-        "evidence_text": "At a flow rate of 2 ml/min the last peak (the diester of ethylene glycol) still appears in time (i.e. before 2 min). As can be seen in Figure 3b, this is not the casewith PEG 400 monolaurate: this samples contains also diesters of higher fatty acids, which will wrap over to the next chromatogram in the second dimension.",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
         "notes": null,
         "paper_doi": "10.1016/j.proche.2009.12.020",
-        "corresponding_author_name": "Bernd Trathnigg",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
+        "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
+        "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
+        "publication_year": "2010"
+      },
+      {
+        "analyte_polymer": "PEG 600",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "LCCC",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Onyx C18",
+        "stationary_phase_chemistry": "silica-based monolith with octadecyl groups",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetone",
+          "water"
+        ],
+        "mobile_phase_ratio": "90 %",
+        "mobile_phase_ratio_units": "%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": null,
+        "flow_rate": "2 ml/min",
+        "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+        "column_dimensions": "100mm×4.6mm",
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "LCCC separation of the same samples as in Figure 2 and PEG 600 on the Onyx C18 monolith in 90 % acetone – water",
+          "critical_component": "PEG",
+          "column_name": "Onyx C18",
+          "mobile_phase_solvents": "acetone, water",
+          "mobile_phase_ratio": "90 % acetone – water",
+          "temperature_celsius": null,
+          "pore_size": "Mesopore: 130µm;  Macropore: 2 µm",
+          "flow_rate": "2 ml/min"
+        },
+        "notes": null,
+        "paper_doi": "10.1016/j.proche.2009.12.020",
+        "corresponding_author_name": "Bernd Trathnigg; Shazia Abrar",
         "corresponding_email_address": "bernd.trathnigg@uni-graz.at",
         "physical_address": "Central Polymer Lab – Molecular Characteristics (CePOL), Institute of Chemistry, Karl-Franzens University, Heinrichstrasse 28,Graz, Austria",
         "publication_year": "2010"
@@ -107,8 +216,8 @@
       "section": "Full Paper",
       "token_count": 7283,
       "extraction_success": true,
-      "processing_time": 22.264068841934204,
-      "extracted_count": 2
+      "processing_time": 37.68761396408081,
+      "extracted_count": 3
     }
   ]
 }

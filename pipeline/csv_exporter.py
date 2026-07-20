@@ -2,6 +2,8 @@
 
 import csv
 import json
+import re
+import unicodedata
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -42,9 +44,128 @@ FIELDNAMES = [
     "Consensus Confidence",
     "Qwen Confidence",
     "Mistral Confidence",
-    "Evidence Text",
+    "Evidence: Critical Condition",
+    "Evidence: Critical Component",
+    "Evidence: Column Name",
+    "Evidence: Mobile Phase Solvents",
+    "Evidence: Mobile Phase Ratio",
+    "Evidence: Temperature",
+    "Evidence: Pore Size",
+    "Evidence: Flow Rate",
     "Notes"
 ]
+
+def _select_latest_json_files(folder: Path) -> list:
+    """
+    Return exactly one JSON file per paper, preferring *_latest.json.
+
+    The results directories accumulate one timestamped file per extraction run
+    plus a *_latest.json symlink/copy.  Reading all *.json files with a plain
+    glob inflates every paper by the number of historical runs.  This helper
+    selects only the canonical file for each paper:
+
+      1. If *_latest.json files exist, use only those (ignores all timestamped
+         files and _consensus.json files in non-consensus folders).
+      2. Otherwise fall back to all *.json files but deduplicate by base name,
+         keeping the lexicographically last file (most recent timestamp).
+    """
+    import re
+
+    all_json = sorted(folder.glob("*.json"))
+    latest_files = [f for f in all_json if f.stem.endswith("_latest")]
+
+    if latest_files:
+        # Collapse Unicode NFC/NFD filename twins (e.g. "Krüger" committed from
+        # macOS as decomposed NFD vs regenerated on Linux as composed NFC) so the
+        # same paper isn't exported twice. Keep the first real on-disk path per
+        # normalized name.
+        seen: dict = {}
+        for f in latest_files:
+            seen.setdefault(unicodedata.normalize("NFC", f.name), f)
+        return list(seen.values())
+
+    # Fallback: deduplicate by stripping timestamp/consensus suffix
+    def _base(stem: str) -> str:
+        stem = re.sub(r"_latest$", "", stem)
+        stem = re.sub(r"_consensus$", "", stem)
+        stem = re.sub(r"_extracted_\d{8}_\d{6}$", "", stem)
+        return unicodedata.normalize("NFC", stem)
+
+    by_base: dict = {}
+    for f in all_json:
+        key = _base(f.stem)
+        # Keep the lexicographically last name (latest timestamp wins)
+        if key not in by_base or f.name > by_base[key].name:
+            by_base[key] = f
+    return sorted(by_base.values())
+
+
+_CANON_FN = None
+
+
+def _get_canonicalizer():
+    """Lazily fetch ConsensusJudge._canonicalize_polymer. Falls back to
+    identity when vllm isn't installed (local CSV export must keep working
+    without the cluster environment)."""
+    global _CANON_FN
+    if _CANON_FN is None:
+        try:
+            from pipeline.consensus_judge import ConsensusJudge
+            _CANON_FN = ConsensusJudge._canonicalize_polymer
+        except Exception:
+            _CANON_FN = lambda s: s
+    return _CANON_FN
+
+
+def _row_fingerprint(row: dict) -> tuple:
+    """Normalize a CSV row to a dedup fingerprint.
+
+    Deliberately conservative (includes column name, critical component,
+    AND analyte polymer) so genuinely distinct records in the same paper —
+    e.g. PIB-diol vs PIB-diallyl, or two different columns at the same
+    ratio/temperature — are never collapsed at export time."""
+    def norm(v):
+        return re.sub(r'\s+', ' ', str(v or '').lower()).strip()
+
+    def num(v):
+        m = re.search(r'(\d+\.?\d*)', str(v or ''))
+        return round(float(m.group(1))) if m else ''
+
+    canon = _get_canonicalizer()
+
+    def canon_norm(v):
+        s = norm(v)
+        return canon(s) if s else ''
+
+    return (
+        norm(row.get('Paper', '')),
+        norm(row.get('Stationary Phase Chemistry', '')),
+        norm(row.get('Column Name', '')),
+        canon_norm(row.get('Critical Component', '')),
+        canon_norm(row.get('Analyte Polymer', '')),
+        num(row.get('Mobile Phase Ratio', '')),
+        num(row.get('Temperature (°C)', '')),
+    )
+
+
+def _dedup_csv_rows(rows: list) -> list:
+    """Safety net: remove duplicate CSV rows by chromatographic fingerprint,
+    keeping the row with more non-empty fields."""
+    seen = {}
+    deduped = []
+    for row in rows:
+        fp = _row_fingerprint(row)
+        if fp in seen:
+            existing_idx = seen[fp]
+            existing_filled = sum(1 for v in deduped[existing_idx].values() if v)
+            new_filled = sum(1 for v in row.values() if v)
+            if new_filled > existing_filled:
+                deduped[existing_idx] = row
+        else:
+            seen[fp] = len(deduped)
+            deduped.append(row)
+    return deduped
+
 
 def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
     """Export all JSON files in a folder to a single summary CSV."""
@@ -53,7 +174,7 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
     
     rows = []
     
-    for json_file in folder.glob("*.json"):
+    for json_file in _select_latest_json_files(folder):
         try:
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -69,8 +190,9 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
                 aq = c.get("aqueous_parameters") or {}
                 solvents = c.get("mobile_phase_solvents") or []
                 conf = c.get("model_confidences") or {}
-                
-                rows.append({
+
+                fe = c.get("field_evidence") or {}
+                row_data = {
                     "Paper": paper_name,
                     "DOI": _clean(c.get("paper_doi")),
                     "Publication Year": _clean(c.get("publication_year")),
@@ -99,12 +221,27 @@ def export_folder_to_csv(folder_path: str, output_csv: str) -> None:
                     "Consensus Confidence": _clean(c.get("critical_condition_confidence")),
                     "Qwen Confidence": _clean(conf.get("qwen")),
                     "Mistral Confidence": _clean(conf.get("mistral")),
-                    "Evidence Text": _clean(c.get("evidence_text")),
+                    "Evidence: Critical Condition":  _clean(fe.get("critical_condition_basis")),
+                    "Evidence: Critical Component":  _clean(fe.get("critical_component")),
+                    "Evidence: Column Name":         _clean(fe.get("column_name")),
+                    "Evidence: Mobile Phase Solvents": _clean(fe.get("mobile_phase_solvents")),
+                    "Evidence: Mobile Phase Ratio":  _clean(fe.get("mobile_phase_ratio")),
+                    "Evidence: Temperature":         _clean(fe.get("temperature_celsius")),
+                    "Evidence: Pore Size":           _clean(fe.get("pore_size")),
+                    "Evidence: Flow Rate":           _clean(fe.get("flow_rate")),
                     "Notes": _clean(c.get("notes"))
-                })
+                }
+                rows.append(row_data)
+
         except Exception as e:
             print(f"Error processing {json_file}: {e}")
             
+    # Safety net: deduplicate rows by normalized chromatographic fingerprint
+    before = len(rows)
+    rows = _dedup_csv_rows(rows)
+    if len(rows) < before:
+        print(f"CSV safety-net dedup: {before} -> {len(rows)} rows ({before - len(rows)} removed)")
+
     output.parent.mkdir(parents=True, exist_ok=True)
     with open(output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)

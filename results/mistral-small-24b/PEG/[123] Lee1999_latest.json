@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[123] Lee1999.pdf",
-    "extraction_date": "2026-06-08T00:02:42.159242",
+    "extraction_date": "2026-07-19T12:42:46.554347",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:42:46.545065+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[123] Lee1999.md",
+        "sha256": "693f6c96e9ee558cc9d384fa3a4f4e376c0df8c52496d5e2ab4158089885d919",
+        "char_len": 22401,
+        "token_count": 6203
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[123] Lee1999.pdf",
-      "start_time": "2026-06-08T00:02:11.697266",
+      "start_time": "2026-07-19T12:42:09.860766",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 18.878864765167236,
+          "time_seconds": 20.950728178024292,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10188078880310059,
+          "time_seconds": 0.13168931007385254,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 6203
         },
         "llm_extraction": {
-          "time_seconds": 11.481069326400757,
+          "time_seconds": 15.546066284179688,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -36,11 +82,12 @@
       {
         "analyte_polymer": "PEO-PLLA",
         "critical_component": "PEO",
-        "architecture": "block copolymer",
-        "critical_condition_basis": "critical condition of PEG",
+        "architecture": "diblock",
+        "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption, in which the retention of a particular polymer species becomes independent of the length of the polymer chain.",
         "critical_condition_confidence": "explicit",
-        "column_name": null,
-        "stationary_phase_chemistry": null,
+        "column_name": "Phenomenex, Luna C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
@@ -55,15 +102,24 @@
         },
         "temperature_celsius": "68",
         "flow_rate": null,
-        "pore_size": null,
-        "column_dimensions": null,
-        "detector": null,
-        "evidence_text": "The critical condition of PEG is obtained empirically by monitoring the retention volume (VR) of three different molecular weight PEG standards (Mn: 1500, 3400, and 8000). At this condition, the retention of PEG is independent of molecular weight and eluted at the injection solvent peak position, the - PEO block is “invisible” in principle, and the PEO PLLA block copolymer behaves like a PLLA homopolymer of the molecular weight equivalent to the PLLA block as far as the HPLC retention behavior is concerned.",
+        "pore_size": "100 Å",
+        "column_dimensions": "250 × 4.6 mm",
+        "detector": "refractive index detector",
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption, in which the retention of a particular polymer species becomes independent of the length of the polymer chain.",
+          "critical_component": "The PEO block is “invisible” in principle,",
+          "column_name": "Phenomenex, Luna C18",
+          "mobile_phase_solvents": "acetonitrile (HPLC grade) and water (deionized and filtered with 0.45 µm membrane filter)",
+          "mobile_phase_ratio": "60/40",
+          "temperature_celsius": "68 °C",
+          "pore_size": "100 Å pore size",
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "Taihyun Chang",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784, Korea",
+        "corresponding_author_name": "Taihyun Chang; Doosung Lee",
+        "corresponding_email_address": "tc@postech.ac.kr; Doosung Lee",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, POSTECH, Pohang, 790-784, Korea; Department of Polymer Science and Engineering, Sungkyunkwan University, Suwon, 440-746, Korea",
         "publication_year": "1999"
       }
     ]
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 6203,
       "extraction_success": true,
-      "processing_time": 11.471758127212524,
+      "processing_time": 15.430289268493652,
       "extracted_count": 1
     }
   ]

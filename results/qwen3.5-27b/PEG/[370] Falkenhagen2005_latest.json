@@ -1,49 +1,97 @@
 {
   "metadata": {
     "source_pdf": "[370] Falkenhagen2005.pdf",
-    "extraction_date": "2026-06-08T04:17:58.775968",
+    "extraction_date": "2026-07-19T21:09:45.940383",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T21:09:45.923998+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[370] Falkenhagen2005.md",
+        "sha256": "cf586a6606f4a46537f3795d0c77226210dbd833187ad815f8c258c402153208",
+        "char_len": 21784,
+        "token_count": 5812
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[370] Falkenhagen2005.pdf",
-      "start_time": "2026-06-08T04:16:01.453667",
+      "start_time": "2026-07-19T21:02:50.599334",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 22.40548014640808,
+          "time_seconds": 22.4889075756073,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.14048075675964355,
+          "time_seconds": 0.11814427375793457,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5812
         },
         "llm_extraction": {
-          "time_seconds": 94.77623081207275,
+          "time_seconds": 392.6712598800659,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44752"
+      }
     }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 4
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "Polyethylene oxide (PEO)",
+        "analyte_polymer": "PEO with hydroxyl end groups",
         "critical_component": "PEO backbone",
-        "architecture": "Linear",
-        "critical_condition_basis": "Elution of polymers with same chemical composition but different molecular weight in one peak",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
         "critical_condition_confidence": "explicit",
         "column_name": "GROM ODS 120 and Zorbax SBC 18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Methanol",
-          "Water"
+          "methanol",
+          "water"
         ],
         "mobile_phase_ratio": "84:16",
         "mobile_phase_ratio_units": "wt %",
@@ -58,8 +106,146 @@
         "pore_size": null,
         "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
         "detector": "SEDEX 75 ELSD",
-        "evidence_text": "The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak. For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %. The chromatographic systems were kept at a constant temperature of 458C. The eluent flow was 20 mL/min.",
-        "notes": "System 2 (m-HPLC) used for LACCC mode. Text mentions 458C which is interpreted as 45°C based on context of typical chromatography temperatures.",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at 'critical' conditions of adsorption (LACCC mode, system 2)",
+          "critical_component": "samples with the same chemical composition, but different molecular weight, eluted in one peak",
+          "column_name": "GROM ODS 120 and Zorbax SBC 18",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "84:16 wt %",
+          "temperature_celsius": "458C",
+          "pore_size": null,
+          "flow_rate": "20 mL/min"
+        },
+        "notes": "Critical condition established for PEOs with same end groups (hydroxyl). Functionalized PEOs with different end groups elute at different times.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with methoxy end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at 'critical' conditions of adsorption (LACCC mode, system 2)",
+          "critical_component": "samples with the same chemical composition, but different molecular weight, eluted in one peak",
+          "column_name": "GROM ODS 120 and Zorbax SBC 18",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "84:16 wt %",
+          "temperature_celsius": "458C",
+          "pore_size": null,
+          "flow_rate": "20 mL/min"
+        },
+        "notes": "Critical condition established for PEOs with same end groups (methoxy). Functionalized PEOs with different end groups elute at different times.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with vinyl end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at 'critical' conditions of adsorption (LACCC mode, system 2)",
+          "critical_component": "samples with the same chemical composition, but different molecular weight, eluted in one peak",
+          "column_name": "GROM ODS 120 and Zorbax SBC 18",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "84:16 wt %",
+          "temperature_celsius": "458C",
+          "pore_size": null,
+          "flow_rate": "20 mL/min"
+        },
+        "notes": "Critical condition established for PEOs with same end groups (vinyl). Functionalized PEOs with different end groups elute at different times.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005"
+      },
+      {
+        "analyte_polymer": "PEO with isopropenyl end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at 'critical' conditions of adsorption (LACCC mode, system 2)",
+          "critical_component": "samples with the same chemical composition, but different molecular weight, eluted in one peak",
+          "column_name": "GROM ODS 120 and Zorbax SBC 18",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "84:16 wt %",
+          "temperature_celsius": "458C",
+          "pore_size": null,
+          "flow_rate": "20 mL/min"
+        },
+        "notes": "Critical condition established for PEOs with same end groups (isopropenyl). Functionalized PEOs with different end groups elute at different times.",
         "paper_doi": "10.1002/rcm.2256",
         "corresponding_author_name": "Steffen M. Weidner",
         "corresponding_email_address": "steffen.weidner@bam.de",
@@ -74,8 +260,8 @@
       "section": "Full Paper",
       "token_count": 5812,
       "extraction_success": true,
-      "processing_time": 94.75414180755615,
-      "extracted_count": 1
+      "processing_time": 392.61618280410767,
+      "extracted_count": 4
     }
   ]
 }

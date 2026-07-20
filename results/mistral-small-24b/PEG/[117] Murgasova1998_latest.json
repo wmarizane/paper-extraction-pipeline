@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[117] Murgasova1998.pdf",
-    "extraction_date": "2026-06-07T23:52:21.077405",
+    "extraction_date": "2026-07-19T12:31:08.516758",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:31:08.505234+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[117] Murgasova1998.md",
+        "sha256": "cc6595f7f4a52930755b1f14b227e2d4c0ad051539250fead575fa203426c6d2",
+        "char_len": 19679,
+        "token_count": 5672
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[117] Murgasova1998.pdf",
-      "start_time": "2026-06-07T23:51:47.932913",
+      "start_time": "2026-07-19T12:30:23.355059",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 20.62604808807373,
+          "time_seconds": 24.65166974067688,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10141992568969727,
+          "time_seconds": 0.11814403533935547,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 5672
         },
         "llm_extraction": {
-          "time_seconds": 12.416874170303345,
+          "time_seconds": 20.332571506500244,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43608"
+      }
     }
   },
   "summary": {
@@ -35,12 +81,13 @@
     "conditions": [
       {
         "analyte_polymer": "polystyrene-graft-poly(ethylene oxide)",
-        "critical_component": "polystyrene backbone",
+        "critical_component": "poly(ethylene oxide)",
         "architecture": "graft",
-        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_basis": "The data obtained by LC CAP (the apparent molecular weights of the polystyrene backbone, the number of the grafts per unit backbone and the amount of poly(ethylene oxide) in the graft copolymers) were compared with results of static light scattering (SLS), differential refractometry and conventional SEC.",
         "critical_condition_confidence": "explicit",
-        "column_name": "phenogel",
+        "column_name": "phenogel (linear)",
         "stationary_phase_chemistry": "styrene/divinylbenzene gel",
+        "column_mode": "Size Exclusion",
         "mobile_phase_solvents": [
           "THF",
           "n-hexane"
@@ -55,10 +102,19 @@
         },
         "temperature_celsius": "30",
         "flow_rate": "1 mL/min",
-        "pore_size": "10 um",
+        "pore_size": "10 m",
         "column_dimensions": "7.8 × 300 mm",
-        "detector": "ELSD",
-        "evidence_text": "The critical diagram of molar mass vs retention scattering volume for PEO-MA macromonomers is shown in Fig. 1. At hexane concentrations less than 29% by weight in the solvent mixture the retention volume decreases as the molar mass increases. The reverse behaviour is observed at hexane concentrations higher than 29% by weight, where retention volume increases with increasing molar mass. At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+        "detector": "Model DDL-21 evaporative light-scattering detector",
+        "field_evidence": {
+          "critical_condition_basis": "The data obtained by LC CAP (the apparent molecular weights of the polystyrene backbone, the number of the grafts per unit backbone and the amount of poly(ethylene oxide) in the graft copolymers) were compared with results of static light scattering (SLS), differential refractometry and conventional SEC.",
+          "critical_component": "The side chain of a graft copolymer eluted at CAP the main polystyrene chain could be characterized on the basis of the SEC mechanism.",
+          "column_name": "A chromatographic phenogel (linear, d p = 10 m, 7.8 × 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "mobile_phase_solvents": "Mixtures of analytical grade THF (Merck, Darmstadt, Germany) and n-hexane (Lachema, Brno, Czech Republic), both purified by distillation, were used as mobile phases.",
+          "mobile_phase_ratio": "At a solvent oxide) composition of THF/hexane = 71:29% by weight, 2 0 = 514 nm = 514 nm in the retention volume does not change with molar mass.",
+          "temperature_celsius": "The temperature during all experiments was maintained at 30°C with a Knauer column oven.",
+          "pore_size": "A chromatographic phenogel (linear, d p = 10 m, 7.8 × 300 mm) column was packed with the styrene/divinylbenzene gel.",
+          "flow_rate": "The data were collected on-line using a Waters PC-based data acquisition system."
+        },
         "notes": null,
         "paper_doi": null,
         "corresponding_author_name": "Dusan Berek",
@@ -74,7 +130,7 @@
       "section": "Full Paper",
       "token_count": 5672,
       "extraction_success": true,
-      "processing_time": 12.407395839691162,
+      "processing_time": 20.225370168685913,
       "extracted_count": 1
     }
   ]

@@ -1,31 +1,78 @@
 {
   "metadata": {
     "source_pdf": "[312] Malik2023.pdf",
-    "extraction_date": "2026-06-08T02:51:24.778107",
+    "extraction_date": "2026-07-19T17:47:32.477920",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T17:47:32.464696+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[312] Malik2023.md",
+        "sha256": "ae736af3a6d284a34dee81c4de9d068f1646bbbbb048f0724a8db6f43eb45c5f",
+        "char_len": 40585,
+        "token_count": 11885
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[312] Malik2023.pdf",
-      "start_time": "2026-06-08T02:47:32.936419",
+      "start_time": "2026-07-19T17:43:06.597598",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 55.39560031890869,
+          "time_seconds": 57.84623336791992,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.1265418529510498,
+          "time_seconds": 0.117523193359375,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 11885
         },
         "llm_extraction": {
-          "time_seconds": 176.3194396495819,
+          "time_seconds": 207.8663682937622,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
@@ -37,14 +84,15 @@
         "analyte_polymer": "PCL",
         "critical_component": "PCL",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "CCP of PCL established on RP ODS column",
         "critical_condition_confidence": "explicit",
         "column_name": "ZORBAX ODS",
-        "stationary_phase_chemistry": "ODS (Reverse Phase)",
+        "stationary_phase_chemistry": "ODS",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
-          "Acetonitrile",
+          "ACN",
           "THF",
-          "Triethylamine"
+          "TEA"
         ],
         "mobile_phase_ratio": "82/17/01",
         "mobile_phase_ratio_units": "V%",
@@ -57,13 +105,22 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "70 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions. Under these conditions, P(EpTEGMME) eluted in order of decreasing molar mass earlier than the void volume of the column",
-        "notes": "1% TEA added to avoid polar interactions with free silanols. Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers.",
+        "field_evidence": {
+          "critical_condition_basis": "This is indeed the case in a MP composition of ACN/ THF/TEA: 82/17/01 (V%), so-called CCP of PCL on RP column under current conditions.",
+          "critical_component": "CCP of PCL",
+          "column_name": "ZORBAX ODS",
+          "mobile_phase_solvents": "ACN/THF/TEA",
+          "mobile_phase_ratio": "82/17/01 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "pore size 70 Å",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; PCL is at critical condition.",
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       },
@@ -71,13 +128,14 @@
         "analyte_polymer": "P(Ep-TEGMME)",
         "critical_component": "P(Ep-TEGMME)",
         "architecture": "linear",
-        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_basis": "CCP of P(Ep-TEGMME) established on NP column",
         "critical_condition_confidence": "explicit",
         "column_name": "Ultisil diol",
-        "stationary_phase_chemistry": "Diol (Normal Phase)",
+        "stationary_phase_chemistry": "diol",
+        "column_mode": "Normal Phase",
         "mobile_phase_solvents": [
-          "Acetone",
-          "Water"
+          "acetone",
+          "water"
         ],
         "mobile_phase_ratio": "68/32",
         "mobile_phase_ratio_units": "V%",
@@ -90,13 +148,22 @@
         "temperature_celsius": "30",
         "flow_rate": "0.5 mL min-1",
         "pore_size": "120 Å",
-        "column_dimensions": "250 x 4.6 mm",
+        "column_dimensions": "250 × 4.6 mm",
         "detector": "ELS",
-        "evidence_text": "In between these two opposing elution orders, there is a point at 68% acetone where P(Ep-TEGMME) of a molar mass range 500–3000 eluted at the same elution volume irrespective of its molar mass. This is the CCP of P(Ep-TEGMME) under current conditions.",
-        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers to determine PCL block length and free macroinitiator content.",
+        "field_evidence": {
+          "critical_condition_basis": "This is the CCP of P(Ep-TEGMME) under current conditions.",
+          "critical_component": "CCP of P(Ep-TEGMME)",
+          "column_name": "Ultisil diol column",
+          "mobile_phase_solvents": "acetone and water",
+          "mobile_phase_ratio": "68/32 (V%)",
+          "temperature_celsius": "column temperature: 30 °C",
+          "pore_size": "120 Å",
+          "flow_rate": "0.5 mL min-1"
+        },
+        "notes": "Used to analyze P(Ep-TEGMME)2K-b-PCL block copolymers; P(Ep-TEGMME) is at critical condition.",
         "paper_doi": "10.1039/d3ra05912j",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m. imran.malik1@gmail.com",
         "physical_address": "Third World Center for Science and Technology, H. E. J. Research Institute of Chemistry, International Center for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2023"
       }
@@ -108,7 +175,7 @@
       "section": "Full Paper",
       "token_count": 11885,
       "extraction_success": true,
-      "processing_time": 176.29664254188538,
+      "processing_time": 207.8112211227417,
       "extracted_count": 2
     }
   ]

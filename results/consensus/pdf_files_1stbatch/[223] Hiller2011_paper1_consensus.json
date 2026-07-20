@@ -5,36 +5,67 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:56:26.427849+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_1stbatch/[223] Hiller2011_paper1_latest.json",
+        "results/mistral-small-24b/pdf_files_1stbatch/[223] Hiller2011_paper1_latest.json"
+      ]
+    }
   },
   "summary": {
-    "total_conditions": 1
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
-        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
-        "flow_rate": "0.5 mL min^-1",
-        "paper_doi": "10.1021/ma102750s",
-        "critical_condition_confidence": "explicit",
-        "critical_component": "1,4-PI",
-        "detector": "1H NMR",
-        "publication_year": "2011",
-        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "analyte_polymer": "1,4-polyisoprene",
+        "critical_component": "1,4-isoprene units",
         "architecture": "linear",
-        "evidence_text": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
-        "notes": "Samples contained predominantly 1,4-isoprene units (approx 94 mol%) with small amounts of 3,4-isoprene units.",
-        "column_dimensions": "250 x 4.6 mm i.d.",
+        "critical_condition_basis": "elution independent of molar mass",
+        "critical_condition_confidence": "explicit",
         "column_name": "Nucleosil C18",
-        "mobile_phase_ratio": "92:8",
-        "stationary_phase_chemistry": "reversed phase C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "butanone",
           "cyclohexane"
         ],
-        "pore_size": "100-5, 300-5, 1000-7",
+        "mobile_phase_ratio": "92/8",
         "mobile_phase_ratio_units": "vol %",
-        "corresponding_author_name": "Wolf Hiller",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
@@ -42,10 +73,75 @@
           "salt_concentration": null
         },
         "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min\u207b\u00b9",
+        "pore_size": "100-5, 300-5, 1000-7",
+        "column_dimensions": "250 x 4.6 mm i.d.",
+        "detector": "1H NMR",
+        "field_evidence": {
+          "critical_condition_basis": "If the composition of the two solvents is 92/8 vol %, these conditions are obtained for a temperature of 29 C. In this case all 1,4-PI samples elute at the same retention volume irrespective of their molar masses.",
+          "critical_component": "critical conditions of 1,4-PI",
+          "column_name": "three reversed phase Nucleosil C18 columns (100-5, 300-5, and 1000-7)",
+          "mobile_phase_solvents": "The mobile phase was a mixture of butanone and cyclohexane.",
+          "mobile_phase_ratio": "92/8 vol %",
+          "temperature_celsius": "29 C",
+          "pore_size": "100-5, 300-5, and 1000-7",
+          "flow_rate": "0.5 mL min\u207b\u00b9"
+        },
+        "notes": "The text states that 1,4-PI samples elute at the same retention volume irrespective of molar mass under these conditions. The samples are copolymers containing predominantly 1,4- and 3,4-isoprene units, but the critical condition is established for the 1,4-isoprene moiety.",
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller",
         "corresponding_email_address": "wolf.hiller@tu-dortmund.de",
-        "analyte_polymer": "polyisoprene (1,4-PI)",
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany",
+        "publication_year": "2011",
         "model_confidences": {
           "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "1,4-polyisoprene",
+        "critical_component": "1,4-polyisoprene",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of 1,4-PI",
+        "critical_condition_confidence": "explicit",
+        "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "butanone",
+          "cyclohexane"
+        ],
+        "mobile_phase_ratio": "92:8",
+        "mobile_phase_ratio_units": "vol %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "29",
+        "flow_rate": "0.5 mL min[-][1]",
+        "pore_size": null,
+        "column_dimensions": "250 4.6 mm i.d.",
+        "detector": "NMR",
+        "field_evidence": {
+          "critical_condition_basis": "critical conditions of 1,4-PI",
+          "critical_component": "1,4-PI",
+          "column_name": "three RP columns of C18 (100-5, 300-5, 1000-7)",
+          "mobile_phase_solvents": "butanone/cyclohexane",
+          "mobile_phase_ratio": "92:8 vol %",
+          "temperature_celsius": "29 C",
+          "pore_size": null,
+          "flow_rate": "0.5 mL min[-][1]"
+        },
+        "notes": null,
+        "paper_doi": "10.1021/ma102750s",
+        "corresponding_author_name": "Wolf Hiller; Harald Pasch; Thorsten Hofe",
+        "corresponding_email_address": null,
+        "physical_address": "Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany; Department of Chemistry and Polymer Science, University of Stellenbosch, Private Bag X1, 7602 Matieland, South Africa; PSS Polymer Standards Service GmbH, In der Dalheimer Wiese 5, 55120 Mainz, Germany",
+        "publication_year": "2011",
+        "model_confidences": {
+          "qwen": "missed",
           "mistral": "explicit"
         }
       }

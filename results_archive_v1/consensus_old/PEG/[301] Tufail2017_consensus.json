@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "source_pdf": "[301] Tufail2017.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ]
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "tetrahydrofuran",
+          "trimethylamine"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "In mobile phase composition of ACN/THF/TEA: 93/6/1 v/v, all PMMAs eluted at the same elution volume irrespective of large difference in their molar masses, Fig. 4C. These conditions are termed as liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP).",
+        "detector": "evaporative light scattering detector",
+        "pore_size": "300 A",
+        "critical_component": "PMMA",
+        "publication_year": "2017",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "93/6/1",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "Jupiter C18",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PMMA",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "C18",
+        "paper_doi": "10.1039/c7ra08804c",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used for analysis of block copolymers containing PMMA and PEO. PEO is non-critical under these conditions.",
+        "flow_rate": "0.5 mL min^-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      },
+      {
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "evidence_text": "Chromatographic critical conditions for PEGs are realized in a mobile phase composition THF/DMF: 97.50/2.50 (v/v), Fig. 7C. PEGs are chromatographically inseparable and whole molar mass range eluted at a sharp point (4.1 mL).",
+        "detector": "evaporative light scattering detector",
+        "pore_size": "300 A",
+        "critical_component": "PEG",
+        "publication_year": "2017",
+        "temperature_celsius": "30",
+        "mobile_phase_ratio": "97.50/2.50",
+        "critical_condition_basis": "critical adsorption point",
+        "column_name": "PerfectSil",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "mobile_phase_ratio_units": "v/v",
+        "critical_condition_confidence": "explicit",
+        "architecture": "linear",
+        "analyte_polymer": "PEG",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "column_dimensions": "250 x 4.6 mm",
+        "stationary_phase_chemistry": "silica",
+        "paper_doi": "10.1039/c7ra08804c",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "notes": "Used for analysis of block copolymers containing PEO and PMMA. PMMA is non-critical under these conditions.",
+        "flow_rate": "0.5 mL min^-1",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}

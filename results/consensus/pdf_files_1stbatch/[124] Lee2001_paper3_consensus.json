@@ -5,7 +5,46 @@
     "inputs": [
       "qwen3.5-27b",
       "mistral-small-24b"
-    ]
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T22:55:25.333067+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/pdf_files_1stbatch/[124] Lee2001_paper3_latest.json",
+        "results/mistral-small-24b/pdf_files_1stbatch/[124] Lee2001_paper3_latest.json"
+      ]
+    }
   },
   "summary": {
     "total_conditions": 3
@@ -13,111 +52,141 @@
   "extracted_data": {
     "conditions": [
       {
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption (or partition) when a porous column packing material is used for the separation of macromolecules. At the critical point of a particular polymer species, retention of that polymer becomes independent of the molecular weight.",
+          "critical_component": "the critical condition of PEO block",
+          "column_name": "a reversed-phase column (LUNA C18, 100-\u00c5 pore size, 250 \u00d7 4.6 mm)",
+          "mobile_phase_solvents": "a mixture of acetonitrile (ACN, Aldrich HPLC grade) and water (deionized and filtered with a 0.45- _\u00b5_ m filter)",
+          "mobile_phase_ratio": "an ACN/water mixture at the ratio of 60/40 (v/ v)",
+          "temperature_celsius": "a column temperature of 68 \u00b0C",
+          "pore_size": "100-\u00c5 pore size",
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical condition of PEO block",
+        "stationary_phase_chemistry": "C18",
         "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "flow_rate": null,
-        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio_units": "v/v",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "water"
+        ],
+        "column_mode": "Reversed Phase",
+        "notes": "Condition established for diblock copolymer analysis.",
+        "architecture": "triblock",
+        "critical_component": "PEO",
         "critical_condition_confidence": "explicit",
-        "critical_component": "PEO block",
-        "detector": "refractive index detector, UV-visible absorption detector",
         "publication_year": "2001",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
-        "architecture": "diblock",
-        "evidence_text": "The critical condition for the analysis of diblock copolymer was a 68 \u00b0C column temperature and an ACN/water mixture at the ratio of 60/40 (v/v).",
-        "notes": "Critical condition established using PEG standards (Mn: 1500, 3400, and 8000).",
-        "column_dimensions": "250 x 4.6 mm",
-        "column_name": "LUNA C18",
+        "pore_size": "100-\u00c5",
+        "paper_doi": "10.1021/ac001219z",
         "mobile_phase_ratio": "60/40",
-        "stationary_phase_chemistry": "C18",
-        "mobile_phase_solvents": [
-          "acetonitrile",
-          "water"
-        ],
-        "pore_size": "100-\u00c5",
-        "mobile_phase_ratio_units": "v/v",
-        "corresponding_author_name": "Taihyun Chang",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
+        "corresponding_email_address": "tc@postech.ac.kr",
         "temperature_celsius": "68",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "analyte_polymer": "PEO-b-PLLA diblock copolymer",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
         }
       },
       {
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "flow_rate": null,
-        "paper_doi": "10.1021/ac001219z",
-        "critical_condition_confidence": "explicit",
-        "critical_component": "PEO block",
-        "detector": "refractive index detector, UV-visible absorption detector",
-        "publication_year": "2001",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
-        "architecture": "triblock",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 \u00b0C, ACN:H2O 47:53 (v/v); 54 \u00b0C, ACN: H2O 54:46 (v/v)).",
-        "notes": "First condition used for triblock copolymer with shorter PLLA blocks (Figure 3).",
-        "column_dimensions": "250 x 4.6 mm",
-        "column_name": "LUNA C18",
-        "mobile_phase_ratio": "47/53",
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption (or partition) when a porous column packing material is used for the separation of macromolecules. At the critical point of a particular polymer species, retention of that polymer becomes independent of the molecular weight.",
+          "critical_component": "the critical condition of PEO block",
+          "column_name": "a reversed-phase column (LUNA C18, 100-\u00c5 pore size, 250 \u00d7 4.6 mm)",
+          "mobile_phase_solvents": "a mixture of acetonitrile (ACN, Aldrich HPLC grade) and water (deionized and filtered with a 0.45- _\u00b5_ m filter)",
+          "mobile_phase_ratio": "an ACN/water mixture (47/53, v/v)",
+          "temperature_celsius": "a column temperature of 37 \u00b0C",
+          "pore_size": "100-\u00c5 pore size",
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical condition of PEO block",
         "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "mobile_phase_ratio_units": "v/v",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
+        "column_mode": "Reversed Phase",
+        "notes": "First condition used for triblock copolymer analysis (Figure 3).",
+        "architecture": "triblock",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2001",
         "pore_size": "100-\u00c5",
-        "mobile_phase_ratio_units": "v/v",
-        "corresponding_author_name": "Taihyun Chang",
+        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio": "47:53",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
+        "corresponding_email_address": "tc@postech.ac.kr",
         "temperature_celsius": "37",
-        "corresponding_email_address": "tc@postech.ac.kr",
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"
         }
       },
       {
-        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
-        "flow_rate": null,
-        "paper_doi": "10.1021/ac001219z",
-        "critical_condition_confidence": "explicit",
-        "critical_component": "PEO block",
-        "detector": "refractive index detector, UV-visible absorption detector",
-        "publication_year": "2001",
-        "critical_condition_basis": "Retention independent of molecular weight for PEO block",
-        "architecture": "triblock",
-        "evidence_text": "In the analysis for triblock copolymer, two different critical conditions were used (37 \u00b0C, ACN:H2O 47:53 (v/v); 54 \u00b0C, ACN: H2O 54:46 (v/v)).",
-        "notes": "Second condition used for triblock copolymer with longer PLLA blocks (Figure 5).",
-        "column_dimensions": "250 x 4.6 mm",
-        "column_name": "LUNA C18",
-        "mobile_phase_ratio": "54/46",
+        "field_evidence": {
+          "critical_condition_basis": "The critical condition of liquid chromatography is the transition point of the separation mode between size exclusion and adsorption (or partition) when a porous column packing material is used for the separation of macromolecules. At the critical point of a particular polymer species, retention of that polymer becomes independent of the molecular weight.",
+          "critical_component": "the critical condition of PEO block",
+          "column_name": "a reversed-phase column (LUNA C18, 100-\u00c5 pore size, 250 \u00d7 4.6 mm)",
+          "mobile_phase_solvents": "a mixture of acetonitrile (ACN, Aldrich HPLC grade) and water (deionized and filtered with a 0.45- _\u00b5_ m filter)",
+          "mobile_phase_ratio": "an ACN/water mixture (54/46, v/v)",
+          "temperature_celsius": "a column temperature of 54 \u00b0C",
+          "pore_size": "100-\u00c5 pore size",
+          "flow_rate": null
+        },
+        "critical_condition_basis": "critical condition of PEO block",
         "stationary_phase_chemistry": "C18",
+        "physical_address": "Department of Chemistry and Polymer Research Institute, Pohang University of Science and Technology, Pohang, 790-784, Korea",
+        "mobile_phase_ratio_units": "v/v",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
+        "column_mode": "Reversed Phase",
+        "notes": "Second condition used for triblock copolymer analysis with longer PLLA blocks (Figure 5).",
+        "architecture": "triblock",
+        "critical_component": "PEO",
+        "critical_condition_confidence": "explicit",
+        "publication_year": "2001",
         "pore_size": "100-\u00c5",
-        "mobile_phase_ratio_units": "v/v",
-        "corresponding_author_name": "Taihyun Chang",
+        "paper_doi": "10.1021/ac001219z",
+        "mobile_phase_ratio": "54:46",
         "aqueous_parameters": {
           "pH": null,
           "salt_added": false,
           "salt_type": null,
           "salt_concentration": null
         },
-        "temperature_celsius": "54",
         "corresponding_email_address": "tc@postech.ac.kr",
-        "analyte_polymer": "PLLA-b-PEO-b-PLLA triblock copolymer",
+        "temperature_celsius": "54",
+        "column_dimensions": "250 \u00d7 4.6 mm",
+        "flow_rate": null,
+        "detector": "refractive index detector; UV-visible absorption detector",
+        "column_name": "LUNA C18",
+        "analyte_polymer": "PLLA-b-PEO-b-PLLA",
+        "corresponding_author_name": "Taihyun Chang",
         "model_confidences": {
           "qwen": "explicit",
           "mistral": "explicit"

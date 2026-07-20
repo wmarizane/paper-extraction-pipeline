@@ -1,79 +1,94 @@
 {
   "metadata": {
     "source_pdf": "[337] Malik2013.pdf",
-    "extraction_date": "2026-06-08T03:27:19.473996",
+    "extraction_date": "2026-07-19T19:00:14.365272",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T19:00:14.351791+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[337] Malik2013.md",
+        "sha256": "f76ed97dc53c3f2425c33d55615f67bb46149a9d7c830d26b73d541dbc5c37e0",
+        "char_len": 37350,
+        "token_count": 10346
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[337] Malik2013.pdf",
-      "start_time": "2026-06-08T03:21:59.617261",
+      "start_time": "2026-07-19T18:55:30.201084",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 72.92193984985352,
+          "time_seconds": 65.34230780601501,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.12190079689025879,
+          "time_seconds": 0.11696434020996094,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10346
         },
         "llm_extraction": {
-          "time_seconds": 246.81278324127197,
+          "time_seconds": 218.65504050254822,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 2
   },
   "extracted_data": {
     "conditions": [
       {
-        "analyte_polymer": "PEGMMEs",
-        "critical_component": "PEG",
-        "architecture": "monomethyl ether",
-        "critical_condition_basis": "elution independent of molar mass",
-        "critical_condition_confidence": "strong_inference",
-        "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
-        "mobile_phase_solvents": [
-          "methanol",
-          "water"
-        ],
-        "mobile_phase_ratio": "82 vol.% methanol",
-        "mobile_phase_ratio_units": "v/v",
-        "aqueous_parameters": {
-          "pH": null,
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": "25.0",
-        "flow_rate": "0.5 mL/min",
-        "pore_size": "80 A",
-        "column_dimensions": "250 mm x 4.6 mm",
-        "detector": "density detector DDS70 and refractive index detector",
-        "evidence_text": "Fig. 1 shows, that on a Synergi Fusion RP column a CAP for EO exists at 25 C in a methanol–water mobile phase containing 82 vol.% methanol. ... On ODS column, PEGMMEs (polyethylene glycol monomethyl ethers) show no molar mass dependence and elute at more or less the same elution volume irrespective of their molar mass",
-        "notes": "Critical condition established for PEGMMEs (EO block) used to analyze PCL diols.",
-        "paper_doi": "10.1016/j.chroma.2013.09.023",
-        "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
-        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
-        "publication_year": "2013"
-      },
-      {
-        "analyte_polymer": "PCL diols",
-        "critical_component": "PEG (EO block)",
-        "architecture": "diblock and triblock (CL-DEG-CL)",
-        "critical_condition_basis": "LCCC conditions for EO block",
+        "analyte_polymer": "PCL diols with uniform central block (diethylene glycol)",
+        "critical_component": "EO block (polyethylene oxide)",
+        "architecture": "Triblock (CL-DEG-CL) and Diblock (CL-DEG)",
+        "critical_condition_basis": "Critical adsorption point (CAP) for EO block",
         "critical_condition_confidence": "explicit",
         "column_name": "Synergi Fusion RP",
-        "stationary_phase_chemistry": "silica-based dodecyl phase",
+        "stationary_phase_chemistry": "Silica-based dodecyl phase",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "methanol",
           "water"
@@ -91,27 +106,37 @@
         "pore_size": "80 A",
         "column_dimensions": "250 mm x 4.6 mm",
         "detector": "density detector DDS70 and refractive index detector",
-        "evidence_text": "Fig. 2. LCCC of PCL-diols with a different middle block on Synergi Fusion RP in 82% methanol–water (CAP for EO).",
-        "notes": "Analysis of PCL diols under critical conditions for the EO block.",
+        "field_evidence": {
+          "critical_condition_basis": "Fig. 1 shows, that on a Synergi Fusion RP column a CAP for EO exists at 25[◦] C in a methanol–water mobile phase containing 82 vol.% methanol.",
+          "critical_component": "CAP for EO",
+          "column_name": "Synergi Fusion RP",
+          "mobile_phase_solvents": "methanol–water mobile phase",
+          "mobile_phase_ratio": "82 vol.% methanol",
+          "temperature_celsius": "25[◦] C",
+          "pore_size": "nominal pore size = 80 A",
+          "flow_rate": "flow rate of 0.5 mL/min"
+        },
+        "notes": "Used for LCCC analysis of PCL diols to separate based on architecture (diblock vs triblock).",
         "paper_doi": "10.1016/j.chroma.2013.09.023",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2013"
       },
       {
         "analyte_polymer": "PCL diol 830",
-        "critical_component": "PEG (EO block)",
-        "architecture": "diblock and triblock",
-        "critical_condition_basis": "LCCC conditions for EO block",
+        "critical_component": "PEG (polyethylene glycol)",
+        "architecture": "Triblock and Diblock",
+        "critical_condition_basis": "Critical adsorption point (CAP) for PEG",
         "critical_condition_confidence": "explicit",
         "column_name": "Spherisorb ODS2",
-        "stationary_phase_chemistry": "silica based reversed phase octadecyl",
+        "stationary_phase_chemistry": "Silica based reversed phase octadecyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
-        "mobile_phase_ratio": "69.1 wt.% acetonitrile",
+        "mobile_phase_ratio": "69.1% acetonitrile",
         "mobile_phase_ratio_units": "wt.%",
         "aqueous_parameters": {
           "pH": null,
@@ -124,11 +149,20 @@
         "pore_size": "80 A",
         "column_dimensions": "25 mm x 300 mm",
         "detector": "density detection system DDS70 and SICON LCD 201 RI detector",
-        "evidence_text": "Fig. 3. Semi-preparative LCCC of PCL-diol 830 on the Spherisorb ODS2 column in 69.1% acetonitrile.",
-        "notes": "Semi-preparative separation under LCCC conditions.",
+        "field_evidence": {
+          "critical_condition_basis": "Semi-preparative LCCC of PCL-diol 830 on the Spherisorb ODS2 column in 69.1% acetonitrile.",
+          "critical_component": "PEG",
+          "column_name": "Spherisorb ODS2",
+          "mobile_phase_solvents": "acetonitrile–water",
+          "mobile_phase_ratio": "69.1% acetonitrile",
+          "temperature_celsius": "25.0[◦] C",
+          "pore_size": "80 A",
+          "flow_rate": "flow rate of 2.0 mL/min"
+        },
+        "notes": "Semi-preparative LCCC used to fractionate PCL diol 830. The text explicitly labels this as 'Semi-preparative LCCC'.",
         "paper_doi": "10.1016/j.chroma.2013.09.023",
         "corresponding_author_name": "Muhammad Imran Malik",
-        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "corresponding_email_address": "mimran.malik@iccs.edu; m.imran.malik1@gmail.com",
         "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
         "publication_year": "2013"
       }
@@ -140,8 +174,8 @@
       "section": "Full Paper",
       "token_count": 10346,
       "extraction_success": true,
-      "processing_time": 246.78926873207092,
-      "extracted_count": 3
+      "processing_time": 218.6008448600769,
+      "extracted_count": 2
     }
   ]
 }

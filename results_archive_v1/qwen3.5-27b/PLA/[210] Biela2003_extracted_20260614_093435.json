@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[210] Biela2003.pdf",
+    "extraction_date": "2026-06-14T09:34:35.010456",
+    "model": "qwen3.5-27b",
+    "pipeline_metrics": {
+      "pdf_name": "[210] Biela2003.pdf",
+      "start_time": "2026-06-14T09:28:43.288240",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 39.29639649391174,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.12273788452148438,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 12492
+        },
+        "llm_extraction": {
+          "time_seconds": 312.3029577732086,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "linear poly(L-lactide)",
+        "critical_component": "poly(L-lactide) backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "elution volume independent of molar mass",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Si-100 and Si-300",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "56.25/43.75",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 and 300 A",
+        "column_dimensions": null,
+        "detector": "Waters 486 tunable UV detector",
+        "evidence_text": "At the critical point of adsorption, a series of linear C4H9-PLA-OH's having molar masses (Mn) in the range from 2.3 £ 10[3] to 7.4 £ 10[4] ... showed no dependence of the elution volumes on molar mass. ... LC-CC conditions have been used corresponding to silica gel as the stationary phase and a mixture of 1,4-dioxane/n-hexane (56.25/43.75 by vol%) at 50 8C as the mobile phase.",
+        "notes": "Critical conditions established for linear PLA used to analyze star-shaped PLA.",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2003"
+      },
+      {
+        "analyte_polymer": "star-shaped poly(L-lactide)",
+        "critical_component": "poly(L-lactide) backbone",
+        "architecture": "star-shaped",
+        "critical_condition_basis": "elution volume independent of molar mass (established on linear analog)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Si-100 and Si-300",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "56.25/43.75",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 and 300 A",
+        "column_dimensions": null,
+        "detector": "Waters 486 tunable UV detector",
+        "evidence_text": "The series of starshaped PLA's have been analyzed by LC-CC ... with regard to possible structural imperfections. ... Measurements were carried out at 50 8C using the critical compositions that have been established for linear PLA (i.e. 1,4-dioxane/n-hexane 56.25: 43.75 vol%).",
+        "notes": "Analysis of star-shaped PLA performed under critical conditions established for linear PLA. Separation based on number of arms (end-groups).",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2003"
+      },
+      {
+        "analyte_polymer": "acetylated star-shaped poly(L-lactide)",
+        "critical_component": "poly(L-lactide) backbone",
+        "architecture": "star-shaped",
+        "critical_condition_basis": "elution volume independent of molar mass (established on linear analog)",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Si-100 and Si-300",
+        "stationary_phase_chemistry": "silica gel",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "1,4-dioxane",
+          "n-hexane"
+        ],
+        "mobile_phase_ratio": "56.25/43.75",
+        "mobile_phase_ratio_units": "vol%",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "50",
+        "flow_rate": "0.5 ml/min",
+        "pore_size": "100 and 300 A",
+        "column_dimensions": null,
+        "detector": "Waters 486 tunable UV detector",
+        "evidence_text": "Eventually, LC-CC measurements of the elution volumes carried out for acetylated star-shaped PLA's (R(PLA-OOCCH3)x) have shown that for the interactions of the R-(PLA-OH)x macromolecules with the column packing the hydroxyl end-groups are mostly responsible.",
+        "notes": "Acetylated star-shaped PLA analyzed under the same critical conditions established for linear PLA to demonstrate end-group effect.",
+        "paper_doi": "10.1016/S0032-3861(03)00030-2",
+        "corresponding_author_name": "Andrzej Duda; Harald Pasch",
+        "corresponding_email_address": "anduda@bilbo.cbmm.lodz.pl; hpasch@dki.tu-darmstadt.de",
+        "physical_address": "Department of Polymer Chemistry, Center of Molecular and Macromolecular Studies, Polish Academy of Sciences, Sienkiewicza 112, PL-90-363 Lodz, Poland; Deutsches Kunststoff-Institut (German Institute for Polymers), Schlossgartenstrasse 6, D-64289 Darmstadt, Germany",
+        "publication_year": "2003"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 12492,
+      "extraction_success": true,
+      "processing_time": 312.28026843070984,
+      "extracted_count": 3
+    }
+  ]
+}

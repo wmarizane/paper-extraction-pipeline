@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "source_pdf": "[233] Malik2012.pdf",
+    "extraction_date": "2026-06-14T09:30:07.342344",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[233] Malik2012.pdf",
+      "start_time": "2026-06-14T09:28:39.338386",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 57.35479211807251,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.10455822944641113,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 13252
+        },
+        "llm_extraction": {
+          "time_seconds": 30.544456958770752,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PS",
+        "critical_component": "PS",
+        "architecture": "linear",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Symmetry 300",
+        "stationary_phase_chemistry": "octadecyl",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "18:82",
+        "mobile_phase_ratio_units": "vol/vol",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "UV 254 nm, ELS",
+        "evidence_text": "The CAP of PS was realised in a DMF–THF mobile phase on a RP octadecyl column. This allowed us to extend the molar mass range up to the hundred thousands. As demonstrated in Fig. 1a, PS calibration standards adsorb in 100% DMF on a silica-based octadecyl column. The higher molar mass standards elute later than the lower molar mass standards. The elution volume decreases as the amount of THF in the mobile phase is increased. A point is reached at which all PS standards elute at more or less the same elution volume irrespective of their molar masses (THF–DMF: 18–82). These conditions are called the critical conditions or the CAP of PS for the specific column, temperature and mobile phase conditions used.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012"
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "explicit",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Nucleosil Si 300",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "THF",
+          "DMF"
+        ],
+        "mobile_phase_ratio": "96:4",
+        "mobile_phase_ratio_units": "vol/vol",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL/min",
+        "pore_size": "300 A",
+        "column_dimensions": "250 mm x 4.6 mm",
+        "detector": "UV 254 nm, ELS",
+        "evidence_text": "The CAP of PEO was realised on a normal phase Si column in the same mobile phase system (THF–DMF) which is used for the critical conditions of PS. THF is an adsorption promoting solvent for PEOs on a normal phase Si column. The addition of DMF promotes desorption. At a mobile phase composition of 96–4 (THF–DMF, vol.%), all PEO standards elute at more or less the same elution volume and show no molar mass dependence. Further increase in the DMF content in the mobile phase leads to the exclusion of PEOs from pores of the stationary phase resulting in earlier elution of higher molar mass standards than the lower molar mass standards.",
+        "notes": null,
+        "paper_doi": "10.1016/j.chroma.2012.04.045",
+        "corresponding_author_name": "Muhammad Imran Malik; Gareth W. Harding; Monika Elvira Grabowsky; Harald Pasch",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "Department of Chemistry and Polymer Science, University of Stellenbosch, Stellenbosch, South Africa; H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi, Pakistan",
+        "publication_year": "2012"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 13252,
+      "extraction_success": true,
+      "processing_time": 30.52814745903015,
+      "extracted_count": 2
+    }
+  ]
+}

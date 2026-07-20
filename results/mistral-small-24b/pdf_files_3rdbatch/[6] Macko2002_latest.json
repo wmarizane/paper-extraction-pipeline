@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[6] Macko2002.pdf",
-    "extraction_date": "2026-06-08T00:08:38.389669",
+    "extraction_date": "2026-07-19T12:45:36.731713",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T12:45:36.723962+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[6] Macko2002.md",
+        "sha256": "56c274d5be00defe0ccad7d308d975a86b7f1c5aa5b4f8a215a430bedbd0b6a7",
+        "char_len": 40098,
+        "token_count": 10188
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[6] Macko2002.pdf",
-      "start_time": "2026-06-08T00:07:09.960218",
+      "start_time": "2026-07-19T12:43:27.361690",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 54.972548484802246,
+          "time_seconds": 58.177533864974976,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.10230517387390137,
+          "time_seconds": 0.12109971046447754,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 10188
         },
         "llm_extraction": {
-          "time_seconds": 33.35446071624756,
+          "time_seconds": 71.01993131637573,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -39,8 +85,9 @@
         "architecture": "null",
         "critical_condition_basis": "critical",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica C18",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile"
         ],
@@ -57,22 +104,32 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "critical_component": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "column_name": "a 250 × 6 mm column contained silica gel bonded with C18 phase, 5 _µ_ m, 30 nm, Nucleosil C18 LS ST (Macherey-Nagel, Du¨ren, Germany)",
+          "mobile_phase_solvents": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "T. Macko",
+        "corresponding_author_name": "T. Macko; D. Hunkeler; D. Berek",
         "corresponding_email_address": null,
-        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland",
+        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland, and Laboratory of Liquid Chromatography, Polymer Institute of the Slovak Academy of Sciences, 842 36 Bratislava, Slovakia",
         "publication_year": "2002"
       },
       {
         "analyte_polymer": "PnBMA",
         "critical_component": "PnBMA",
-        "architecture": "null",
+        "architecture": null,
         "critical_condition_basis": "critical",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica C18",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "dimethylformamide"
         ],
@@ -89,22 +146,32 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "critical_component": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "column_name": "a 250 × 6 mm column contained silica gel bonded with C18 phase, 5 _µ_ m, 30 nm, Nucleosil C18 LS ST (Macherey-Nagel, Du¨ren, Germany)",
+          "mobile_phase_solvents": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "T. Macko",
+        "corresponding_author_name": "T. Macko; D. Hunkeler; D. Berek",
         "corresponding_email_address": null,
-        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland",
+        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland, and Laboratory of Liquid Chromatography, Polymer Institute of the Slovak Academy of Sciences, 842 36 Bratislava, Slovakia",
         "publication_year": "2002"
       },
       {
         "analyte_polymer": "PS",
         "critical_component": "PS",
-        "architecture": "null",
+        "architecture": null,
         "critical_condition_basis": "critical",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica C18",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "dimethylformamide"
         ],
@@ -121,22 +188,32 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "critical_component": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "column_name": "a 250 × 6 mm column contained silica gel bonded with C18 phase, 5 _µ_ m, 30 nm, Nucleosil C18 LS ST (Macherey-Nagel, Du¨ren, Germany)",
+          "mobile_phase_solvents": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "The critical conditions have been identified in some single eluents which are thermodynamicaly poor solvents for polymers investigated, namely, acetonitrile for PMMA at 66 °C and dimethylformamide for PnBMA at 154 °C and for PS at 95 °Csall with C18 bonded silica gel.",
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "T. Macko",
+        "corresponding_author_name": "T. Macko; D. Hunkeler; D. Berek",
         "corresponding_email_address": null,
-        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland",
+        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland, and Laboratory of Liquid Chromatography, Polymer Institute of the Slovak Academy of Sciences, 842 36 Bratislava, Slovakia",
         "publication_year": "2002"
       },
       {
         "analyte_polymer": "PS",
         "critical_component": "PS",
-        "architecture": "null",
+        "architecture": null,
         "critical_condition_basis": "critical",
         "critical_condition_confidence": "explicit",
-        "column_name": "null",
-        "stationary_phase_chemistry": "silica C18",
+        "column_name": "Nucleosil C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "cyclohexane"
         ],
@@ -153,12 +230,21 @@
         "pore_size": null,
         "column_dimensions": null,
         "detector": null,
-        "evidence_text": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
+        "field_evidence": {
+          "critical_condition_basis": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
+          "critical_component": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
+          "column_name": "a 250 × 6 mm column contained silica gel bonded with C18 phase, 5 _µ_ m, 30 nm, Nucleosil C18 LS ST (Macherey-Nagel, Du¨ren, Germany)",
+          "mobile_phase_solvents": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
+          "mobile_phase_ratio": null,
+          "temperature_celsius": "A “criticallike” elution was also observed in cyclohexane for PS at 9 °C with silica gel C18 packing, which is well below the Θ temperature.",
+          "pore_size": null,
+          "flow_rate": null
+        },
         "notes": null,
         "paper_doi": null,
-        "corresponding_author_name": "T. Macko",
+        "corresponding_author_name": "T. Macko; D. Hunkeler; D. Berek",
         "corresponding_email_address": null,
-        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland",
+        "physical_address": "Laboratory of Polymers and Biomaterials, Department of Chemical Engineering, Swiss Federal Institute of Technology, 1015 Lausanne, Switzerland, and Laboratory of Liquid Chromatography, Polymer Institute of the Slovak Academy of Sciences, 842 36 Bratislava, Slovakia",
         "publication_year": "2002"
       }
     ]
@@ -169,7 +255,7 @@
       "section": "Full Paper",
       "token_count": 10188,
       "extraction_success": true,
-      "processing_time": 33.34051537513733,
+      "processing_time": 70.90504717826843,
       "extracted_count": 4
     }
   ]

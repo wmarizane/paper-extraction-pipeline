@@ -16,6 +16,10 @@ from pipeline.chunker import TextChunk
 
 logger = logging.getLogger(__name__)
 
+# Bump when the extraction prompt or schema changes (recorded in provenance for
+# reproducibility). "v2" = Dr. Wang's prompt approved 2026-04-17.
+PROMPT_VERSION = "extraction-v2-2026-04-17"
+
 EXTRACTION_SCHEMA = {
     "type": "object",
     "properties": {
@@ -59,7 +63,24 @@ EXTRACTION_SCHEMA = {
                     "pore_size": {"type": ["string", "null"]},
                     "column_dimensions": {"type": ["string", "null"]},
                     "detector": {"type": ["string", "null"]},
-                    "evidence_text": {"type": ["string", "null"]},
+                    "field_evidence": {
+                        "type": "object",
+                        "properties": {
+                            "critical_condition_basis":  {"type": ["string", "null"]},
+                            "critical_component":        {"type": ["string", "null"]},
+                            "column_name":               {"type": ["string", "null"]},
+                            "mobile_phase_solvents":     {"type": ["string", "null"]},
+                            "mobile_phase_ratio":        {"type": ["string", "null"]},
+                            "temperature_celsius":       {"type": ["string", "null"]},
+                            "pore_size":                 {"type": ["string", "null"]},
+                            "flow_rate":                 {"type": ["string", "null"]},
+                        },
+                        "required": [
+                            "critical_condition_basis", "critical_component", "column_name",
+                            "mobile_phase_solvents", "mobile_phase_ratio", "temperature_celsius",
+                            "pore_size", "flow_rate"
+                        ]
+                    },
                     "notes": {"type": ["string", "null"]},
                     "paper_doi": {"type": ["string", "null"]},
                     "corresponding_author_name": {"type": ["string", "null"]},
@@ -72,7 +93,7 @@ EXTRACTION_SCHEMA = {
                     "critical_condition_confidence", "column_name", "stationary_phase_chemistry", "column_mode",
                     "mobile_phase_solvents", "mobile_phase_ratio", "mobile_phase_ratio_units",
                     "aqueous_parameters", "temperature_celsius", "flow_rate", "pore_size",
-                    "column_dimensions", "detector", "evidence_text", "notes", "paper_doi",
+                    "column_dimensions", "detector", "field_evidence", "notes", "paper_doi",
                     "corresponding_author_name", "corresponding_email_address", "physical_address",
                     "publication_year"
                 ]
@@ -81,6 +102,93 @@ EXTRACTION_SCHEMA = {
     },
     "required": ["extracted_conditions"]
 }
+
+STATIC_EXTRACTION_TAIL = """
+DEFINITION OF WHAT TO EXTRACT:
+Extract a record only if the text indicates one of the following:
+1. it explicitly mentions "critical condition", "liquid chromatography at critical condition", "LCCC", "critical adsorption point", or equivalent terminology; OR
+2. it explicitly states that elution/retention is independent of molar mass for a defined polymer species/component; OR
+3. it explicitly gives a chromatography setup identified as the critical point/critical composition for a polymer, block, backbone, or end-group-defined species.
+
+DO NOT EXTRACT:
+- ordinary SEC, RPC, HPLC, adsorption, or interaction chromatography conditions unless the text clearly identifies them as critical conditions
+- general discussion of LCCC theory without an experimental setup
+- inferred values not stated in the text
+- theoretical modeling, Monte Carlo simulations, numerical simulations, lattice models, or computer simulations. ONLY extract real, physical laboratory experiments performed on physical chromatographic columns. If the text is from a simulation or theoretical modeling paper, extract nothing.
+
+EXTRACTION UNIT:
+Create one entry per distinct critical-condition setup.
+If multiple polymer species or blocks each have different critical conditions, create separate entries.
+
+IMPORTANT INTERPRETATION RULES:
+- Distinguish between the full analyte polymer and the specific component/species at critical condition.
+- If a block copolymer is analyzed under critical conditions for one block, record the analyte polymer and also the specific critical component.
+- **DEDUPLICATION**: If the exact same experimental setup is mentioned multiple times in the text (e.g. in the abstract, methods, and conclusion), merge them into a single entry. Do not create duplicate records for identical setups.
+- **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
+- **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, you MUST create a SEPARATE condition record for EACH analyte polymer, duplicating all other fields (column, ratio, temperature, etc.). NEVER comma-separate polymer names in the analyte_polymer field. The ONLY exception is when the comma is part of the polymer's chemical name itself (e.g. "H(EO)x(PO)y(EO)xOH" or "1,4-polyisoprene"). If you find yourself writing a comma between two distinct polymer names, STOP and split into separate records.
+- **CRITICAL COMPONENT & ARCHITECTURE**: If the critical condition is established using a specific polymer (e.g., linear PS) but used to analyze a different polymer (e.g., cyclic PS), the `critical_component` and `architecture` fields MUST reflect the polymer used to **establish** the condition (e.g., linear).
+- **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
+- **TEMPERATURES**: Only extract temperatures explicitly stated as the column or system temperature during the actual LCCC analysis. Do NOT extract temperatures from completely separate experimental procedures (e.g., preparative fractionation, synthesis, preliminary steps), detector temperatures, or general ambient conditions unless explicitly linked to the LCCC run.
+- **FRACTIONATION/PREPARATIVE REJECTION**: Do NOT extract conditions whose primary purpose is preparative fractionation, semi-preparative separation, or sample preparation — even if they use critical conditions. Only extract ANALYTICAL LCCC measurements. A strong signal is: (a) semi-preparative or preparative column dimensions (ID > 8mm), (b) the word "fractionation" or "preparative" describing the PURPOSE of the experiment, (c) the setup is used to isolate fractions for later analysis rather than to characterize the sample. If the paper uses a semi-preparative column specifically for LCCC analysis (not fractionation), that IS valid — include it.
+- **END-GROUPS**: If different end-groups on the same polymer architecture result in different critical conditions, extract them as separate entries and specify the end-group in the analyte_polymer or architecture field.
+- **POLYMER SPECIFICITY**: Always use the most specific polymer name from the paper. Use topology-specific names like "Ls-PS", "Ring-PS" rather than generic "polystyrene". Use stereospecific names like "it-PP" rather than generic "polypropylene". Preserve end-group distinctions when the paper makes them.
+- **COLUMN MODE**: Classify the column separation mode based on the stationary phase chemistry. C18, C8, phenyl, RP = "Reversed Phase". Bare silica, diol, NH2, CN = "Normal Phase". Report as null only if the column type cannot be determined.
+- **MULTIPLE AUTHORS**: If the paper has more than one corresponding author, list ALL of them in corresponding_author_name separated by '; '. Same for corresponding_email_address and physical_address.
+- Use null for missing information.
+- Preserve reported wording where exact normalization is not possible.
+- Do not guess units or compositions.
+- If evidence is suggestive but not explicit, mark confidence accordingly.
+- **FIELD EVIDENCE**: For each field in `field_evidence`, copy the shortest exact quote from the text (verbatim, do not paraphrase) that directly supports the extracted value. If no text supports a field, set it to null. Do NOT repeat the same long sentence for every field — find the smallest span of text that is specific to that field.
+
+OUTPUT FORMAT:
+Return ONLY valid JSON matching this schema. No markdown. No explanations. Start with {.
+
+JSON SCHEMA:
+{
+  "extracted_conditions": [
+    {
+      "analyte_polymer": "string (comma-separated if multiple) or null",
+      "critical_component": "string or null",
+      "architecture": "string or null",
+      "critical_condition_basis": "string or null",
+      "critical_condition_confidence": "explicit | strong_inference | unclear",
+      "column_name": "string or null",
+      "stationary_phase_chemistry": "string or null",
+      "column_mode": "string or null — e.g. 'Reversed Phase' (C18, C8, phenyl, RP), 'Normal Phase' (bare silica, diol, NH2, CN), 'Size Exclusion', 'Hydrophilic Interaction'",
+      "mobile_phase_solvents": "array of strings or null",
+      "mobile_phase_ratio": "string or null",
+      "mobile_phase_ratio_units": "string or null",
+      "aqueous_parameters": {
+        "pH": "string or null",
+        "salt_added": "boolean",
+        "salt_type": "string or null",
+        "salt_concentration": "string or null"
+      },
+      "temperature_celsius": "string or null",
+      "flow_rate": "string or null",
+      "pore_size": "string or null",
+      "column_dimensions": "string or null",
+      "detector": "string or null",
+      "field_evidence": {
+        "critical_condition_basis": "Direct quote from text establishing this IS a critical condition, or null",
+        "critical_component":       "Direct quote naming which polymer/block/component is at critical condition, or null",
+        "column_name":              "Direct quote stating the column name/model, or null",
+        "mobile_phase_solvents":    "Direct quote naming the solvents, or null",
+        "mobile_phase_ratio":       "Direct quote giving the mobile phase composition/ratio, or null",
+        "temperature_celsius":      "Direct quote stating the column temperature, or null",
+        "pore_size":                "Direct quote stating the column pore size, or null",
+        "flow_rate":                "Direct quote stating the flow rate, or null"
+      },
+      "notes": "string or null",
+      "paper_doi": "string or null",
+      "corresponding_author_name": "string or null — if multiple, join with '; '",
+      "corresponding_email_address": "string or null — if multiple, join with '; '",
+      "physical_address": "string or null — if multiple, join with '; '",
+      "publication_year": "string or null"
+    }
+  ]
+}
+"""
 
 
 @dataclass
@@ -93,6 +201,9 @@ class ExtractionResult:
     error_message: Optional[str] = None
     llm_calls: int = 0
     processing_time: float = 0.0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    is_retry: bool = False
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -145,10 +256,16 @@ class LLMExtractor:
         vllm_kwargs.update(self.model_config.vllm_kwargs)
 
         self.llm = LLM(**vllm_kwargs)
+        # Single source of truth for sampling config (also recorded in provenance).
+        self.sampling_config = {
+            "temperature": self.temperature,
+            "top_p": 0.9,
+            "max_tokens": settings.vllm_max_tokens,
+        }
         self.sampling_params = SamplingParams(
-            temperature=self.temperature,
-            max_tokens=settings.vllm_max_tokens,
-            top_p=0.9,
+            temperature=self.sampling_config["temperature"],
+            max_tokens=self.sampling_config["max_tokens"],
+            top_p=self.sampling_config["top_p"],
             structured_outputs=StructuredOutputsParams(json=EXTRACTION_SCHEMA)
         )
         logger.info("LLM extractor initialized.")
@@ -158,99 +275,31 @@ class LLMExtractor:
         Dr. Wang's v2 extraction prompt (approved 2026-04-17).
         19-field schema with explicit LCCC definitions and interpretation rules.
         """
-        prompt = f"""You are a scientific information extraction assistant specialized in polymer liquid chromatography.
-
-TEXT TO ANALYZE:
-{chunk.text}
-
-TASK:
-Extract all explicitly mentioned or strongly supported liquid chromatography critical conditions (LCCC) experimental setups from the text.
-"""
+        prompt = (
+            "You are a scientific information extraction assistant specialized in "
+            "polymer liquid chromatography.\n\n"
+            "TEXT TO ANALYZE:\n"
+            + chunk.text
+            + "\n\nTASK:\n"
+            "Extract all explicitly mentioned or strongly supported liquid "
+            "chromatography critical conditions (LCCC) experimental setups from the text.\n"
+        )
+        
         if self.feedback:
-            prompt += f"\nSUPERVISOR FEEDBACK FROM PREVIOUS RUN:\n{self.feedback}\nPLEASE CORRECT YOUR MISTAKES BASED ON THIS FEEDBACK.\n"
-
-        prompt += f"""
-DEFINITION OF WHAT TO EXTRACT:
-Extract a record only if the text indicates one of the following:
-1. it explicitly mentions "critical condition", "liquid chromatography at critical condition", "LCCC", "critical adsorption point", or equivalent terminology; OR
-2. it explicitly states that elution/retention is independent of molar mass for a defined polymer species/component; OR
-3. it explicitly gives a chromatography setup identified as the critical point/critical composition for a polymer, block, backbone, or end-group-defined species.
-
-DO NOT EXTRACT:
-- ordinary SEC, RPC, HPLC, adsorption, or interaction chromatography conditions unless the text clearly identifies them as critical conditions
-- general discussion of LCCC theory without an experimental setup
-- inferred values not stated in the text
-- theoretical modeling, Monte Carlo simulations, numerical simulations, lattice models, or computer simulations. ONLY extract real, physical laboratory experiments performed on physical chromatographic columns. If the text is from a simulation or theoretical modeling paper, extract nothing.
-
-EXTRACTION UNIT:
-Create one entry per distinct critical-condition setup.
-If multiple polymer species or blocks each have different critical conditions, create separate entries.
-
-IMPORTANT INTERPRETATION RULES:
-- Distinguish between the full analyte polymer and the specific component/species at critical condition.
-- If a block copolymer is analyzed under critical conditions for one block, record the analyte polymer and also the specific critical component.
-- **DEDUPLICATION**: If the exact same experimental setup is mentioned multiple times in the text (e.g. in the abstract, methods, and conclusion), merge them into a single entry. Do not create duplicate records for identical setups.
-- **LITERATURE IGNORE**: ONLY extract novel experimental conditions performed by the authors of this paper. DO NOT extract conditions that are merely referenced as background literature or previous studies.
-- **MULTIPLE ANALYTES**: If a critical condition applies to multiple analyte polymers, you MUST create a SEPARATE condition record for EACH analyte polymer, duplicating all other fields (column, ratio, temperature, etc.). NEVER comma-separate polymer names in the analyte_polymer field. The ONLY exception is when the comma is part of the polymer's chemical name itself (e.g. "H(EO)x(PO)y(EO)xOH" or "1,4-polyisoprene"). If you find yourself writing a comma between two distinct polymer names, STOP and split into separate records.
-- **CRITICAL COMPONENT & ARCHITECTURE**: If the critical condition is established using a specific polymer (e.g., linear PS) but used to analyze a different polymer (e.g., cyclic PS), the `critical_component` and `architecture` fields MUST reflect the polymer used to **establish** the condition (e.g., linear).
-- **RANGES**: If a range is mentioned (e.g., 90-95%) but a specific optimal percentage is highlighted for the experiment (e.g., 92%), extract the specific percentage. Avoid ranges if a distinct critical point is established.
-- **TEMPERATURES**: Only extract temperatures explicitly stated as the column or system temperature during the actual LCCC analysis. Do NOT extract temperatures from completely separate experimental procedures (e.g., preparative fractionation, synthesis, preliminary steps), detector temperatures, or general ambient conditions unless explicitly linked to the LCCC run.
-- **FRACTIONATION/PREPARATIVE REJECTION**: Do NOT extract conditions whose primary purpose is preparative fractionation, semi-preparative separation, or sample preparation — even if they use critical conditions. Only extract ANALYTICAL LCCC measurements. A strong signal is: (a) semi-preparative or preparative column dimensions (ID > 8mm), (b) the word "fractionation" or "preparative" describing the PURPOSE of the experiment, (c) the setup is used to isolate fractions for later analysis rather than to characterize the sample. If the paper uses a semi-preparative column specifically for LCCC analysis (not fractionation), that IS valid — include it.
-- **END-GROUPS**: If different end-groups on the same polymer architecture result in different critical conditions, extract them as separate entries and specify the end-group in the analyte_polymer or architecture field.
-- **POLYMER SPECIFICITY**: Always use the most specific polymer name from the paper. Use topology-specific names like "Ls-PS", "Ring-PS" rather than generic "polystyrene". Use stereospecific names like "it-PP" rather than generic "polypropylene". Preserve end-group distinctions when the paper makes them.
-- **COLUMN MODE**: Classify the column separation mode based on the stationary phase chemistry. C18, C8, phenyl, RP = "Reversed Phase". Bare silica, diol, NH2, CN = "Normal Phase". Report as null only if the column type cannot be determined.
-- **MULTIPLE AUTHORS**: If the paper has more than one corresponding author, list ALL of them in corresponding_author_name separated by '; '. Same for corresponding_email_address and physical_address.
-- Use null for missing information.
-- Preserve reported wording where exact normalization is not possible.
-- Do not guess units or compositions.
-- If evidence is suggestive but not explicit, mark confidence accordingly.
-
-OUTPUT FORMAT:
-Return ONLY valid JSON matching this schema. No markdown. No explanations. Start with {{.
-
-JSON SCHEMA:
-{{
-  "extracted_conditions": [
-    {{
-      "analyte_polymer": "string (comma-separated if multiple) or null",
-      "critical_component": "string or null",
-      "architecture": "string or null",
-      "critical_condition_basis": "string or null",
-      "critical_condition_confidence": "explicit | strong_inference | unclear",
-      "column_name": "string or null",
-      "stationary_phase_chemistry": "string or null",
-      "column_mode": "string or null — e.g. 'Reversed Phase' (C18, C8, phenyl, RP), 'Normal Phase' (bare silica, diol, NH2, CN), 'Size Exclusion', 'Hydrophilic Interaction'",
-      "mobile_phase_solvents": "array of strings or null",
-      "mobile_phase_ratio": "string or null",
-      "mobile_phase_ratio_units": "string or null",
-      "aqueous_parameters": {{
-        "pH": "string or null",
-        "salt_added": "boolean",
-        "salt_type": "string or null",
-        "salt_concentration": "string or null"
-      }},
-      "temperature_celsius": "string or null",
-      "flow_rate": "string or null",
-      "pore_size": "string or null",
-      "column_dimensions": "string or null",
-      "detector": "string or null",
-      "evidence_text": "string or null",
-      "notes": "string or null",
-      "paper_doi": "string or null",
-      "corresponding_author_name": "string or null — if multiple, join with '; '",
-      "corresponding_email_address": "string or null — if multiple, join with '; '",
-      "physical_address": "string or null — if multiple, join with '; '",
-      "publication_year": "string or null"
-    }}
-  ]
-}}
-"""
+            prompt += (
+                "\nSUPERVISOR FEEDBACK FROM PREVIOUS RUN:\n"
+                + self.feedback
+                + "\nPLEASE CORRECT YOUR MISTAKES BASED ON THIS FEEDBACK.\n"
+            )
+            
+        prompt += STATIC_EXTRACTION_TAIL
         return prompt
 
     def _build_retry_prompt(self, chunk: TextChunk) -> str:
         return (
-            "Your previous output was invalid JSON. You must return ONLY one valid JSON object and no text.\n\n"
-            f"{self._build_extraction_prompt(chunk)}"
+            "Your previous output was invalid JSON. You must return ONLY one valid "
+            "JSON object and no text.\n\n"
+            + self._build_extraction_prompt(chunk)
         )
 
     def _format_prompt(self, raw_prompt: str) -> str:
@@ -351,6 +400,15 @@ JSON SCHEMA:
                 response_text = outputs[i].outputs[0].text
                 
                 try:
+                    input_tok = len(outputs[i].prompt_token_ids)
+                except Exception:
+                    input_tok = 0
+                try:
+                    output_tok = len(outputs[i].outputs[0].token_ids)
+                except Exception:
+                    output_tok = 0
+                
+                try:
                     data = self._parse_llm_response(response_text)
                     results[idx] = ExtractionResult(
                         chunk_index=idx,
@@ -358,7 +416,10 @@ JSON SCHEMA:
                         extracted_data=data,
                         success=True,
                         llm_calls=llm_calls[idx],
-                        processing_time=time_taken
+                        processing_time=time_taken,
+                        input_tokens=input_tok,
+                        output_tokens=output_tok,
+                        is_retry=(attempt > 1)
                     )
                 except Exception as e:
                     if attempt < self.max_retries:
@@ -371,7 +432,10 @@ JSON SCHEMA:
                             success=False,
                             error_message=str(e),
                             llm_calls=llm_calls[idx],
-                            processing_time=time_taken
+                            processing_time=time_taken,
+                            input_tokens=input_tok,
+                            output_tokens=output_tok,
+                            is_retry=(attempt > 1)
                         )
             
             pending_indices = next_pending

@@ -1,31 +1,77 @@
 {
   "metadata": {
     "source_pdf": "[330] Wei2016.pdf",
-    "extraction_date": "2026-06-08T01:13:45.203739",
+    "extraction_date": "2026-07-19T13:56:35.249210",
     "model": "mistral-small-24b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:56:35.238529+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "mistral-small-24b",
+        "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[330] Wei2016.md",
+        "sha256": "41a4dcb1920ecdb419237793b951481641e4d25b42d7bcc191c6808989329a7a",
+        "char_len": 30485,
+        "token_count": 8885
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[330] Wei2016.pdf",
-      "start_time": "2026-06-08T01:12:40.726217",
+      "start_time": "2026-07-19T13:55:19.920322",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 45.3248028755188,
+          "time_seconds": 46.65128970146179,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.11581993103027344,
+          "time_seconds": 0.10521960258483887,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 8885
         },
         "llm_extraction": {
-          "time_seconds": 19.036731243133545,
+          "time_seconds": 28.498199462890625,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "42634",
+        "nvidia_smi_post_mb": "43658"
+      }
     }
   },
   "summary": {
@@ -37,16 +83,17 @@
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "null",
-        "critical_condition_basis": "isocratic elution",
+        "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-C18",
         "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
         "mobile_phase_ratio": "40",
-        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": true,
@@ -56,30 +103,40 @@
         "temperature_celsius": "25",
         "flow_rate": "null",
         "pore_size": "300 Å",
-        "column_dimensions": "250 mm × 4.6 mm I.D., 5 μm particle size",
+        "column_dimensions": "250 mm × 4.6 mm I.D.",
         "detector": "ELSD",
-        "evidence_text": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+          "critical_component": "null",
+          "column_name": "XB-C18 column",
+          "mobile_phase_solvents": "acetonitrile in water",
+          "mobile_phase_ratio": "40% acetonitrile in water",
+          "temperature_celsius": "25 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "null"
+        },
         "notes": "null",
         "paper_doi": "10.1039/c6py01653g",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "corresponding_author_name": "X.-L. Jiang; R.-X. Zhuo",
+        "corresponding_email_address": "xljiang@whu.edu.cn; rzhuo@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
         "publication_year": "2016"
       },
       {
         "analyte_polymer": "PEG",
         "critical_component": "PEG",
         "architecture": "null",
-        "critical_condition_basis": "isocratic elution",
+        "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
         "critical_condition_confidence": "explicit",
         "column_name": "XB-phenyl",
         "stationary_phase_chemistry": "phenyl",
+        "column_mode": "Reversed Phase",
         "mobile_phase_solvents": [
           "acetonitrile",
           "water"
         ],
         "mobile_phase_ratio": "45",
-        "mobile_phase_ratio_units": "vol%",
+        "mobile_phase_ratio_units": "%",
         "aqueous_parameters": {
           "pH": "null",
           "salt_added": false,
@@ -88,15 +145,24 @@
         },
         "temperature_celsius": "30",
         "flow_rate": "null",
-        "pore_size": "null",
-        "column_dimensions": "250 × 4.6 mm I.D., 5 μm particle size",
+        "pore_size": "300 Å",
+        "column_dimensions": "250 × 4.6 mm I.D.",
         "detector": "null",
-        "evidence_text": "The LCCC for PEGs on the XB-phenyl column was presented at 45% acetonitrile in water at 30 °C.",
+        "field_evidence": {
+          "critical_condition_basis": "The critical compositions for non-functional PEGs were obtained at 40% acetonitrile in water from an XB-C18 column at 25 °C.",
+          "critical_component": "null",
+          "column_name": "XB-phenyl column",
+          "mobile_phase_solvents": "acetonitrile : water = 45 : 55",
+          "mobile_phase_ratio": "45% acetonitrile in water",
+          "temperature_celsius": "30 °C",
+          "pore_size": "300 Å pore size",
+          "flow_rate": "null"
+        },
         "notes": "null",
         "paper_doi": "10.1039/c6py01653g",
-        "corresponding_author_name": "X.-L. Jiang",
-        "corresponding_email_address": "xljiang@whu.edu.cn",
-        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China.",
+        "corresponding_author_name": "X.-L. Jiang; R.-X. Zhuo",
+        "corresponding_email_address": "xljiang@whu.edu.cn; rzhuo@whu.edu.cn",
+        "physical_address": "Key Laboratory of Biomedical Polymers of Ministry of Education & Department of Chemistry, Wuhan University, Wuhan 430072, P. R. China; Analytical-Chemistry Group, Faculty of Science, van’t Hoff Institute for Molecular Sciences, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands",
         "publication_year": "2016"
       }
     ]
@@ -107,7 +173,7 @@
       "section": "Full Paper",
       "token_count": 8885,
       "extraction_success": true,
-      "processing_time": 19.024593353271484,
+      "processing_time": 28.392247915267944,
       "extracted_count": 2
     }
   ]

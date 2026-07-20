@@ -1,135 +1,85 @@
 {
   "metadata": {
     "source_pdf": "[125] Gorbunov1997.pdf",
-    "extraction_date": "2026-06-07T22:30:17.867066",
+    "extraction_date": "2026-07-19T13:50:41.577603",
     "model": "qwen3.5-27b",
+    "reproducibility": {
+      "generated_at_utc": "2026-07-19T13:50:41.566250+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "model": {
+        "short_name": "qwen3.5-27b",
+        "hf_id": "QuantTrio/Qwen3.5-27B-AWQ",
+        "revision": "56f41874389615226dcd849ded92261a0286ff59",
+        "quantization": "awq",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "gdn_prefill_backend": "triton",
+          "quantization": "awq"
+        }
+      },
+      "sampling": {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "max_tokens": 4096
+      },
+      "prompt_version": "extraction-v2-2026-04-17",
+      "output_schema": "polymer-lccc",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input": {
+        "parsed_markdown_path": "parsed_md/[125] Gorbunov1997.md",
+        "sha256": "c5c00fe97b7bd48c965494dd8174cbc8144b898cef9ffdf530f65338517e3727",
+        "char_len": 27875,
+        "token_count": 7866
+      }
+    },
     "pipeline_metrics": {
       "pdf_name": "[125] Gorbunov1997.pdf",
-      "start_time": "2026-06-07T22:25:30.315320",
+      "start_time": "2026-07-19T13:49:49.796290",
       "end_time": null,
       "total_time_seconds": 0,
       "stages": {
         "parsing": {
-          "time_seconds": 44.41396975517273,
+          "time_seconds": 43.99382996559143,
           "success": true
         },
         "chunking": {
-          "time_seconds": 0.16722369194030762,
+          "time_seconds": 0.11588668823242188,
           "success": true,
           "num_chunks": 1,
           "total_tokens": 7866
         },
         "llm_extraction": {
-          "time_seconds": 242.97043538093567,
+          "time_seconds": 7.621969223022461,
           "success": true
         }
       },
       "success": false,
-      "error": null
+      "error": null,
+      "gpu_memory": {
+        "pytorch_peak_gb": 0.0,
+        "nvidia_smi_pre_mb": "43018",
+        "nvidia_smi_post_mb": "44766"
+      }
     }
   },
   "summary": {
-    "total_conditions": 3
+    "total_conditions": 0
   },
   "extracted_data": {
-    "conditions": [
-      {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
-        "critical_condition_confidence": "strong_inference",
-        "column_name": "Butyl-Toyopearl 650 M",
-        "stationary_phase_chemistry": "Butyl-Toyopearl",
-        "mobile_phase_solvents": [
-          "aqueous buffer"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": "6",
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.2 ml/min",
-        "pore_size": "20-28 nm",
-        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
-        "detector": "differential refractometer",
-        "evidence_text": "These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
-        "notes": "The text describes determining critical conditions by finding where the adsorption parameter c equals zero. Specific temperature values for the critical point are not explicitly stated, only the pH (6) for the Butyl-Toyopearl system is given in the context of Figure 6.",
-        "paper_doi": "10.1016/S0032-3861(97)00282-6",
-        "corresponding_author_name": "A. A. Gorbunov",
-        "corresponding_email_address": null,
-        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
-        "publication_year": "1998"
-      },
-      {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
-        "critical_condition_confidence": "strong_inference",
-        "column_name": "SOLOZA K-0",
-        "stationary_phase_chemistry": "cross-linked copolymer of methacrylic acid and butyl methacrylate (0% butyl methacrylate)",
-        "mobile_phase_solvents": [
-          "aqueous buffer"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": "4.5",
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.2 ml/min",
-        "pore_size": "20-28 nm",
-        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
-        "detector": "differential refractometer",
-        "evidence_text": "These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
-        "notes": "Specific temperature for the critical point is not explicitly stated, only pH 4.5 is given in the context of Figure 6.",
-        "paper_doi": "10.1016/S0032-3861(97)00282-6",
-        "corresponding_author_name": "A. A. Gorbunov",
-        "corresponding_email_address": null,
-        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
-        "publication_year": "1998"
-      },
-      {
-        "analyte_polymer": "polyethylene glycol",
-        "critical_component": null,
-        "architecture": null,
-        "critical_condition_basis": "intersection of adsorption interaction parameter c vs pH and temperature curves with abscissa axis (c=0)",
-        "critical_condition_confidence": "strong_inference",
-        "column_name": "SOLOZA K-33",
-        "stationary_phase_chemistry": "cross-linked copolymer of methacrylic acid and butyl methacrylate (33% butyl methacrylate)",
-        "mobile_phase_solvents": [
-          "aqueous buffer"
-        ],
-        "mobile_phase_ratio": null,
-        "mobile_phase_ratio_units": null,
-        "aqueous_parameters": {
-          "pH": "5",
-          "salt_added": false,
-          "salt_type": null,
-          "salt_concentration": null
-        },
-        "temperature_celsius": null,
-        "flow_rate": "0.2 ml/min",
-        "pore_size": "20-28 nm",
-        "column_dimensions": "20 cm x 4 mm or 50 cm x 4 mm",
-        "detector": "differential refractometer",
-        "evidence_text": "These dependencies were used to determine the critical conditions (points of intersection between the curves and the abscissa axis).",
-        "notes": "Specific temperature for the critical point is not explicitly stated, only pH 5 is given in the context of Figure 6.",
-        "paper_doi": "10.1016/S0032-3861(97)00282-6",
-        "corresponding_author_name": "A. A. Gorbunov",
-        "corresponding_email_address": null,
-        "physical_address": "State Research Institute for Highly Pure Biopreparations, 7 Pudozhskaya, 197110 St. Petersburg, Russia",
-        "publication_year": "1998"
-      }
-    ]
+    "conditions": []
   },
   "chunk_details": [
     {
@@ -137,8 +87,8 @@
       "section": "Full Paper",
       "token_count": 7866,
       "extraction_success": true,
-      "processing_time": 242.94747877120972,
-      "extracted_count": 3
+      "processing_time": 7.5619215965271,
+      "extracted_count": 0
     }
   ]
 }

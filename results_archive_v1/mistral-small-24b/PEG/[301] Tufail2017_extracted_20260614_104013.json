@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "source_pdf": "[301] Tufail2017.pdf",
+    "extraction_date": "2026-06-14T10:40:13.438006",
+    "model": "mistral-small-24b",
+    "pipeline_metrics": {
+      "pdf_name": "[301] Tufail2017.pdf",
+      "start_time": "2026-06-14T10:37:42.439201",
+      "end_time": null,
+      "total_time_seconds": 0,
+      "stages": {
+        "parsing": {
+          "time_seconds": 83.62956595420837,
+          "success": true
+        },
+        "chunking": {
+          "time_seconds": 0.13532781600952148,
+          "success": true,
+          "num_chunks": 1,
+          "total_tokens": 14326
+        },
+        "llm_extraction": {
+          "time_seconds": 67.23374080657959,
+          "success": true
+        }
+      },
+      "success": false,
+      "error": null
+    }
+  },
+  "summary": {
+    "total_conditions": 3
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PMMA",
+        "critical_component": "PMMA",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "Jupiter C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "acetonitrile",
+          "tetrahydrofuran",
+          "trimethylamine"
+        ],
+        "mobile_phase_ratio": "93/6/1",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": "300 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELS",
+        "evidence_text": "The CAP for PMMA has been reported using different mobile phases on various stationary phases of different nature. Selection of CAP for a particular polymer depends upon the segment that needs to be analyzed under such conditions. In current study, the other block PEO is polar than PMMA. On RP column, PEOs are expected to be excluded from the stationary phase at CAP of PMMA. Another aspect that needs to be considered is the solubility of all the segments of the polymer under study in the mobile phase. Taking into account above considerations, a ternary mixture of ACN, THF, and TEA has been selected. ACN is adsorption promoting solvent under such conditions whereas THF promotes desorption. Addition of 1.0% TEA is crucial in order to avoid unwanted polar interactions of ether groups with the unmodiﬁed silanol groups of the stationary phase. PMMA41k eluted later than PMMA2k while using mobile phase composed of ACN/THF/TEA: 94/5/1 v/v, showing slight adsorption of PMMA repeat unit, Fig. 4A. Increasing relative content of THF in the mobile phase to 9% reversed the elution order, PMMA41k eluted earlier than PMMA2k, a typical size exclusion behaviour, Fig. 4B. There must be a mobile phase composition between above-mentioned compositions that should result in molar mass independent elution of PMMAs. In mobile phase composition of ACN/THF/TEA: 93/6/1 v/v, all PMMAs eluted at the same elution volume irrespective of large difference in their molar masses, Fig. 4C. These conditions are termed as liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP). Under such conditions, other polymers show their own particular elution behaviour. The other block in current study, PEO is polar than PMMA hence elute in size exclusion regime earlier than the critical point of PMMAs, Fig. 4D. The conditions can be utilized for block copolymers of PMMA with any other polymer provided the noncritical polymer is soluble in the mobile phase. The block copolymer should be separated with regard to the other block, and PMMA homopolymer should be separated from block copolymer.",
+        "notes": null,
+        "paper_doi": "10.1039/c7ra08804c",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2017"
+      },
+      {
+        "analyte_polymer": "PEG",
+        "critical_component": "PEG",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PerfectSil",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "mobile_phase_ratio": "97.5/2.5",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": "300 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELS",
+        "evidence_text": "The CAP for PMMA has been reported using different mobile phases on various stationary phases of different nature. Selection of CAP for a particular polymer depends upon the segment that needs to be analyzed under such conditions. In current study, the other block PEO is polar than PMMA. On RP column, PEOs are expected to be excluded from the stationary phase at CAP of PMMA. Another aspect that needs to be considered is the solubility of all the segments of the polymer under study in the mobile phase. Taking into account above considerations, a ternary mixture of ACN, THF, and TEA has been selected. ACN is adsorption promoting solvent under such conditions whereas THF promotes desorption. Addition of 1.0% TEA is crucial in order to avoid unwanted polar interactions of ether groups with the unmodiﬁed silanol groups of the stationary phase. PMMA41k eluted later than PMMA2k while using mobile phase composed of ACN/THF/TEA: 94/5/1 v/v, showing slight adsorption of PMMA repeat unit, Fig. 4A. Increasing relative content of THF in the mobile phase to 9% reversed the elution order, PMMA41k eluted earlier than PMMA2k, a typical size exclusion behaviour, Fig. 4B. There must be a mobile phase composition between above-mentioned compositions that should result in molar mass independent elution of PMMAs. In mobile phase composition of ACN/THF/TEA: 93/6/1 v/v, all PMMAs eluted at the same elution volume irrespective of large difference in their molar masses, Fig. 4C. These conditions are termed as liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP). Under such conditions, other polymers show their own particular elution behaviour. The other block in current study, PEO is polar than PMMA hence elute in size exclusion regime earlier than the critical point of PMMAs, Fig. 4D. The conditions can be utilized for block copolymers of PMMA with any other polymer provided the noncritical polymer is soluble in the mobile phase. The block copolymer should be separated with regard to the other block, and PMMA homopolymer should be separated from block copolymer.",
+        "notes": null,
+        "paper_doi": "10.1039/c7ra08804c",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2017"
+      },
+      {
+        "analyte_polymer": "PMMA",
+        "critical_component": "PMMA",
+        "architecture": "linear",
+        "critical_condition_basis": "critical adsorption point",
+        "critical_condition_confidence": "explicit",
+        "column_name": "PerfectSil",
+        "stationary_phase_chemistry": "silica",
+        "column_mode": "Normal Phase",
+        "mobile_phase_solvents": [
+          "tetrahydrofuran",
+          "N,N-dimethylformamide"
+        ],
+        "mobile_phase_ratio": "97.5/2.5",
+        "mobile_phase_ratio_units": "v/v",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "30",
+        "flow_rate": "0.5 mL min^-1",
+        "pore_size": "300 A",
+        "column_dimensions": "250 x 4.6 mm",
+        "detector": "ELS",
+        "evidence_text": "The CAP for PMMA has been reported using different mobile phases on various stationary phases of different nature. Selection of CAP for a particular polymer depends upon the segment that needs to be analyzed under such conditions. In current study, the other block PEO is polar than PMMA. On RP column, PEOs are expected to be excluded from the stationary phase at CAP of PMMA. Another aspect that needs to be considered is the solubility of all the segments of the polymer under study in the mobile phase. Taking into account above considerations, a ternary mixture of ACN, THF, and TEA has been selected. ACN is adsorption promoting solvent under such conditions whereas THF promotes desorption. Addition of 1.0% TEA is crucial in order to avoid unwanted polar interactions of ether groups with the unmodiﬁed silanol groups of the stationary phase. PMMA41k eluted later than PMMA2k while using mobile phase composed of ACN/THF/TEA: 94/5/1 v/v, showing slight adsorption of PMMA repeat unit, Fig. 4A. Increasing relative content of THF in the mobile phase to 9% reversed the elution order, PMMA41k eluted earlier than PMMA2k, a typical size exclusion behaviour, Fig. 4B. There must be a mobile phase composition between above-mentioned compositions that should result in molar mass independent elution of PMMAs. In mobile phase composition of ACN/THF/TEA: 93/6/1 v/v, all PMMAs eluted at the same elution volume irrespective of large difference in their molar masses, Fig. 4C. These conditions are termed as liquid chromatography at critical conditions (LCCC) or critical adsorption point (CAP). Under such conditions, other polymers show their own particular elution behaviour. The other block in current study, PEO is polar than PMMA hence elute in size exclusion regime earlier than the critical point of PMMAs, Fig. 4D. The conditions can be utilized for block copolymers of PMMA with any other polymer provided the noncritical polymer is soluble in the mobile phase. The block copolymer should be separated with regard to the other block, and PMMA homopolymer should be separated from block copolymer.",
+        "notes": null,
+        "paper_doi": "10.1039/c7ra08804c",
+        "corresponding_author_name": "Muhammad Imran Malik",
+        "corresponding_email_address": "mimran.malik@iccs.edu",
+        "physical_address": "H.E.J. Research Institute of Chemistry, International Centre for Chemical and Biological Sciences (ICCBS), University of Karachi, Karachi 75270, Pakistan",
+        "publication_year": "2017"
+      }
+    ]
+  },
+  "chunk_details": [
+    {
+      "chunk_index": 0,
+      "section": "Full Paper",
+      "token_count": 14326,
+      "extraction_success": true,
+      "processing_time": 67.21509766578674,
+      "extracted_count": 3
+    }
+  ]
+}

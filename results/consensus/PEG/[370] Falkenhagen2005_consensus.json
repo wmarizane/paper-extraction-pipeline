@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "source_pdf": "[370] Falkenhagen2005.pdf",
+    "model": "deepseek-r1-32b-consensus",
+    "inputs": [
+      "qwen3.5-27b",
+      "mistral-small-24b"
+    ],
+    "reproducibility": {
+      "generated_at_utc": "2026-07-20T00:40:22.620798+00:00",
+      "pipeline_git_commit": {
+        "sha": null,
+        "short_sha": null,
+        "dirty": null
+      },
+      "judge_model": {
+        "short_name": "deepseek-r1-32b",
+        "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "revision": "711ad2ea6aa40cfca18895e8aca02ab92df1a746",
+        "quantization": "bf16",
+        "max_model_len": 32768,
+        "vllm_kwargs": {
+          "tensor_parallel_size": 2
+        }
+      },
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "max_tokens": 8192
+      },
+      "prompt_version": "consensus-bidirectional-v1",
+      "output_schema": "polymer-lccc-consensus",
+      "library_versions": {
+        "python": "3.12.13",
+        "vllm": "0.19.0",
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "pydantic": "2.12.5",
+        "pymupdf4llm": "1.27.2.2",
+        "tiktoken": "0.12.0"
+      },
+      "input_extraction_files": [
+        "results/qwen3.5-27b/PEG/[370] Falkenhagen2005_latest.json",
+        "results/mistral-small-24b/PEG/[370] Falkenhagen2005_latest.json"
+      ]
+    }
+  },
+  "summary": {
+    "total_conditions": 2
+  },
+  "extracted_data": {
+    "conditions": [
+      {
+        "analyte_polymer": "PEO with hydroxyl end groups",
+        "critical_component": "PEO backbone",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "GROM ODS 120 and Zorbax SBC 18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20 mL/min",
+        "pore_size": null,
+        "column_dimensions": "150 x 1 mm and 150 x 0.5 mm i.d.",
+        "detector": "SEDEX 75 ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "Liquid adsorption chromatography at 'critical' conditions of adsorption (LACCC mode, system 2)",
+          "critical_component": "samples with the same chemical composition, but different molecular weight, eluted in one peak",
+          "column_name": "GROM ODS 120 and Zorbax SBC 18",
+          "mobile_phase_solvents": "methanol/water mixture",
+          "mobile_phase_ratio": "84:16 wt %",
+          "temperature_celsius": "458C",
+          "pore_size": null,
+          "flow_rate": "20 mL/min"
+        },
+        "notes": "Critical condition established for PEOs with same end groups (hydroxyl). Functionalized PEOs with different end groups elute at different times.",
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "explicit",
+          "mistral": "missed"
+        }
+      },
+      {
+        "analyte_polymer": "PEO",
+        "critical_component": "PEO",
+        "architecture": "linear",
+        "critical_condition_basis": "critical conditions of adsorption",
+        "critical_condition_confidence": "explicit",
+        "column_name": "C18",
+        "stationary_phase_chemistry": "C18",
+        "column_mode": "Reversed Phase",
+        "mobile_phase_solvents": [
+          "methanol",
+          "water"
+        ],
+        "mobile_phase_ratio": "84:16",
+        "mobile_phase_ratio_units": "wt %",
+        "aqueous_parameters": {
+          "pH": null,
+          "salt_added": false,
+          "salt_type": null,
+          "salt_concentration": null
+        },
+        "temperature_celsius": "45",
+        "flow_rate": "20",
+        "pore_size": null,
+        "column_dimensions": null,
+        "detector": "ELSD",
+        "field_evidence": {
+          "critical_condition_basis": "The determination of 'critical conditions' of adsorption was performed starting with methanol as a thermodynamically 'good' solvent. Successive addition of water as a thermodynamically 'poor' solvent resulted in a change of the chromatographic mode to adsorption mode. The 'critical conditions of adsorption' were established when samples with the same chemical composition, but different molecular weight, eluted in one peak.",
+          "critical_component": "For the investigated polymer system the 'critical solvent composition' (CSC) could be obtained by adjusting a methanol/water mixture of 84:16 wt %",
+          "column_name": "two C18 columns (150 x 1 mm and 150 x 0.5 mm i.d., GROM ODS 120 and Zorbax SBC 18)",
+          "mobile_phase_solvents": "methanol as a thermodynamically 'good' solvent. Successive addition of water as a thermodynamically 'poor' solvent",
+          "mobile_phase_ratio": "a methanol/water mixture of 84:16 wt %",
+          "temperature_celsius": "The chromatographic systems were kept at a constant temperature of 458C.",
+          "pore_size": null,
+          "flow_rate": "The eluent flow was 20 mL/min."
+        },
+        "notes": null,
+        "paper_doi": "10.1002/rcm.2256",
+        "corresponding_author_name": "Jana Falkenhagen; Steffen M. Weidner",
+        "corresponding_email_address": "steffen.weidner@bam.de",
+        "physical_address": "Federal Institute for Materials Research and Testing (BAM), Unter den Eichen 87, 12205 Berlin, Germany",
+        "publication_year": "2005",
+        "model_confidences": {
+          "qwen": "missed",
+          "mistral": "explicit"
+        }
+      }
+    ]
+  }
+}
